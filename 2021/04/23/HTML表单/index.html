@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.3.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+<meta name="description" content="重头戏！！！表单">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML表单">
+<meta property="og:url" content="https://loliconkelvin.github.io/2021/04/23/HTML%E8%A1%A8%E5%8D%95/index.html">
+<meta property="og:site_name" content="萝莉控的小窝">
+<meta property="og:description" content="重头戏！！！表单">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-23T15:23:06.000Z">
+<meta property="article:modified_time" content="2021-04-26T11:18:17.931Z">
+<meta property="article:author" content="Loliconkelvin">
+<meta property="article:tag" content="-HTML">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://loliconkelvin.github.io/2021/04/23/HTML%E8%A1%A8%E5%8D%95/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>HTML表单 | 萝莉控的小窝</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">萝莉控的小窝</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E7%88%B6%E6%A0%87%E7%AD%BE%EF%BC%88form%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">表单父标签（form）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#method%E5%B1%9E%E6%80%A7%EF%BC%88get-post%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">method属性（get&#x2F;post）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#action%E5%B1%9E%E6%80%A7"><span class="nav-number">1.2.</span> <span class="nav-text">action属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E5%AD%90%E6%A0%87%E7%AD%BE%E2%80%94%E2%80%94input%E6%A0%87%E7%AD%BE"><span class="nav-number">2.</span> <span class="nav-text">表单子标签——input标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#input%E6%A0%87%E7%AD%BE"><span class="nav-number">2.1.</span> <span class="nav-text">input标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#type%E5%B1%9E%E6%80%A7%EF%BC%88%E5%BF%85%E5%A1%AB%EF%BC%89"><span class="nav-number">2.1.1.</span> <span class="nav-text">type属性（必填）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#name%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.2.</span> <span class="nav-text">name属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#value%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.3.</span> <span class="nav-text">value属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#size%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.4.</span> <span class="nav-text">size属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxlength%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.5.</span> <span class="nav-text">maxlength属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#checked%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.6.</span> <span class="nav-text">checked属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E6%A1%86%E4%B8%8E%E5%AF%86%E7%A0%81%E6%A1%86"><span class="nav-number">2.2.</span> <span class="nav-text">文本框与密码框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E9%80%89%E6%A1%86%EF%BC%88radio%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">单选框（radio）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E9%80%89%E6%A1%86%EF%BC%88checkbox%EF%BC%89"><span class="nav-number">2.4.</span> <span class="nav-text">复选框（checkbox）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#checked%E5%B1%9E%E6%80%A7-1"><span class="nav-number">2.4.1.</span> <span class="nav-text">checked属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#label%E6%A0%87%E7%AD%BE"><span class="nav-number">2.5.</span> <span class="nav-text">label标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#for%E5%B1%9E%E6%80%A7"><span class="nav-number">2.5.1.</span> <span class="nav-text">for属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#label%E6%A0%87%E7%AD%BE%E4%B8%AD%E5%8C%85%E5%90%AB%E7%9A%84%E5%80%BC"><span class="nav-number">2.5.2.</span> <span class="nav-text">label标签中包含的值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%9F%9F%EF%BC%88file%EF%BC%89"><span class="nav-number">2.6.</span> <span class="nav-text">文件域（file）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E6%8C%89%E9%92%AE"><span class="nav-number">2.7.</span> <span class="nav-text">普通按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E6%8C%89%E9%92%AE"><span class="nav-number">2.8.</span> <span class="nav-text">图片按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E6%8C%89%E9%92%AE%E4%B8%8E%E8%A1%A8%E5%8D%95%E9%87%8D%E7%BD%AE%E6%8C%89%E9%92%AE"><span class="nav-number">2.9.</span> <span class="nav-text">表单提交按钮与表单重置按钮</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E5%AD%90%E6%A0%87%E7%AD%BE%E2%80%94%E2%80%94select%E6%A0%87%E7%AD%BE"><span class="nav-number">3.</span> <span class="nav-text">表单子标签——select标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E6%8B%89%E9%80%89%E9%A1%B9%E6%A1%86"><span class="nav-number">3.1.</span> <span class="nav-text">下拉选项框</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#name%E5%B1%9E%E6%80%A7-1"><span class="nav-number">3.1.1.</span> <span class="nav-text">name属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#option%E6%A0%87%E7%AD%BE"><span class="nav-number">3.1.2.</span> <span class="nav-text">option标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#value%E5%80%BC"><span class="nav-number">3.1.3.</span> <span class="nav-text">value值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#option%E6%A0%87%E7%AD%BE%E5%86%85%E5%8C%85%E5%90%AB%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">3.1.4.</span> <span class="nav-text">option标签内包含的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#selected%E5%80%BC%EF%BC%88%E5%BA%94%E7%94%A8%E4%BA%8Eoption%E6%A0%87%E7%AD%BE%EF%BC%89"><span class="nav-number">3.1.5.</span> <span class="nav-text">selected值（应用于option标签）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E5%AD%90%E6%A0%87%E7%AD%BE%E2%80%94%E2%80%94textarea%E6%A0%87%E7%AD%BE"><span class="nav-number">4.</span> <span class="nav-text">表单子标签——textarea标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E5%9F%9F"><span class="nav-number">4.1.</span> <span class="nav-text">文本域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#name%E5%80%BC"><span class="nav-number">4.1.1.</span> <span class="nav-text">name值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cols%E5%B1%9E%E6%80%A7%E4%B8%8Erows%E5%B1%9E%E6%80%A7"><span class="nav-number">4.1.2.</span> <span class="nav-text">cols属性与rows属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%A6%E9%AA%8C%E8%AF%81%E6%88%96%E7%89%B9%E6%AE%8A%E5%8A%9F%E8%83%BD%E7%9A%84%E8%A1%A8%E5%8D%95%E5%AD%90%E6%A0%87%E7%AD%BE%EF%BC%88%E5%8F%AA%E4%BB%8B%E7%BB%8D%E9%80%89%E5%A1%AB%E5%B1%9E%E6%80%A7%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">带验证或特殊功能的表单子标签（只介绍选填属性）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%AE%E7%AE%B1%E9%AA%8C%E8%AF%81"><span class="nav-number">5.1.</span> <span class="nav-text">邮箱验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#URL%E9%AA%8C%E8%AF%81"><span class="nav-number">5.2.</span> <span class="nav-text">URL验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E9%AA%8C%E8%AF%81"><span class="nav-number">5.3.</span> <span class="nav-text">数字验证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#max%E5%B1%9E%E6%80%A7%E4%B8%8Emin%E5%B1%9E%E6%80%A7"><span class="nav-number">5.3.1.</span> <span class="nav-text">max属性与min属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#step%E5%B1%9E%E6%80%A7"><span class="nav-number">5.3.2.</span> <span class="nav-text">step属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BB%91%E5%9D%97%E6%A0%87%E7%AD%BE"><span class="nav-number">5.4.</span> <span class="nav-text">滑块标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E6%A1%86"><span class="nav-number">5.5.</span> <span class="nav-text">搜索框</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8B%93%E5%B1%95%E4%B8%80%E4%BA%9B%E5%B1%9E%E6%80%A7"><span class="nav-number">6.</span> <span class="nav-text">拓展一些属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%90%E8%97%8F%E5%9F%9F"><span class="nav-number">6.1.</span> <span class="nav-text">隐藏域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A6%81%E7%94%A8"><span class="nav-number">6.2.</span> <span class="nav-text">禁用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AA%E8%AF%BB"><span class="nav-number">6.3.</span> <span class="nav-text">只读</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
+      src="/images/head-portrait.jpg">
+  <p class="site-author-name" itemprop="name">Loliconkelvin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:loliconkelvin@gmail.com" title="E-Mail → mailto:loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fab fa-google fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/04/23/HTML%E8%A1%A8%E5%8D%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head-portrait.jpg">
+      <meta itemprop="name" content="Loliconkelvin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萝莉控的小窝">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          HTML表单
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-23 23:23:06" itemprop="dateCreated datePublished" datetime="2021-04-23T23:23:06+08:00">2021-04-23</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-26 19:18:17" itemprop="dateModified" datetime="2021-04-26T19:18:17+08:00">2021-04-26</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><font color="red">重头戏！！！表单</font></p>
+<span id="more"></span>
+
+<h1 id="表单父标签（form）"><a href="#表单父标签（form）" class="headerlink" title="表单父标签（form）"></a>表单父标签（form）</h1><ul>
+<li><font color="red">以下所有标签必须包含在form标签内</font><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">&quot;&quot;</span> <span class="attr">action</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="method属性（get-post）"><a href="#method属性（get-post）" class="headerlink" title="method属性（get/post）"></a>method属性（get/post）</h2><ul>
+<li>定义表单的提交方式<ul>
+<li>get：可以在跳转的url中看到提交的信息，不安全，高效</li>
+<li>post：比较安全，并且可以传输大文件</li>
+</ul>
+</li>
+</ul>
+<h2 id="action属性"><a href="#action属性" class="headerlink" title="action属性"></a>action属性</h2><ul>
+<li>用于定义表单的提交位置<ul>
+<li>可以是一个网址</li>
+<li>可以是一个处理请求的地址</li>
+</ul>
+</li>
+</ul>
+<h1 id="表单子标签——input标签"><a href="#表单子标签——input标签" class="headerlink" title="表单子标签——input标签"></a>表单子标签——input标签</h1><h2 id="input标签"><a href="#input标签" class="headerlink" title="input标签"></a>input标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="type属性（必填）"><a href="#type属性（必填）" class="headerlink" title="type属性（必填）"></a>type属性（必填）</h3><ul>
+<li>type属性定义文本框的类型（作用）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type元素的值</th>
+<th>文本框作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>text（默认）</td>
+<td><a href="#textAndPassword">文本框</a></td>
+</tr>
+<tr>
+<td>password</td>
+<td><a href="#textAndPassword">密码框</a></td>
+</tr>
+<tr>
+<td>radio</td>
+<td><a href="#radio">单选框（圆形）</a></td>
+</tr>
+<tr>
+<td>checkbox</td>
+<td><a href="#checkbox">复选框（方形）</a></td>
+</tr>
+<tr>
+<td>hidden</td>
+<td></td>
+</tr>
+<tr>
+<td>file</td>
+<td>用来传文件的框</td>
+</tr>
+<tr>
+<td>button</td>
+<td><a href="#button">普通<font color="red">按钮</font></a></td>
+</tr>
+<tr>
+<td>image</td>
+<td><a href="#image">图片<font color="red">按钮</font></a></td>
+</tr>
+<tr>
+<td>submit</td>
+<td><a href="#submitAndReset">表单提交<font color="red">按钮</font></a></td>
+</tr>
+<tr>
+<td>reset</td>
+<td><a href="#submitAndReset">表单重制<font color="red">按钮</font></a></td>
+</tr>
+</tbody></table>
+<h3 id="name属性"><a href="#name属性" class="headerlink" title="name属性"></a>name属性</h3><ul>
+<li>用于表单的提交</li>
+</ul>
+<h3 id="value属性"><a href="#value属性" class="headerlink" title="value属性"></a>value属性</h3><ul>
+<li>表示元素的（初始）值（默认值）</li>
+<li><code>type=&quot;radio&quot;</code>和<code>type=&quot;checkbox&quot;</code>时必须指定一个value值，此时表示选择该单选/复选框返回的值</li>
+</ul>
+<h3 id="size属性"><a href="#size属性" class="headerlink" title="size属性"></a>size属性</h3><ul>
+<li>指定表单的初始宽度</li>
+<li><code>type=&quot;text&quot;</code>和<code>type=&quot;password&quot;</code>时，以字符数为单位</li>
+<li>其他类型时以像素为单位</li>
+</ul>
+<h3 id="maxlength属性"><a href="#maxlength属性" class="headerlink" title="maxlength属性"></a>maxlength属性</h3><ul>
+<li><code>type=&quot;text&quot;</code>和<code>type=&quot;password&quot;</code>时，指定输入的最大字符数</li>
+</ul>
+<h3 id="checked属性"><a href="#checked属性" class="headerlink" title="checked属性"></a>checked属性</h3><ul>
+<li><code>type=&quot;radio&quot;</code>和<code>type=&quot;checkbox&quot;</code>时，指定按钮是否被选中</li>
+</ul>
+<h2 id="文本框与密码框"><a href="#文本框与密码框" class="headerlink" title="文本框与密码框"></a><span id="textAndPassword">文本框与密码框</span></h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>文本框可以使用value属性指定初始值</li>
+<li>密码框也行……不会吧不会吧，不会有人给密码框一个初始值吧</li>
+</ul>
+<h2 id="单选框（radio）"><a href="#单选框（radio）" class="headerlink" title="单选框（radio）"></a><span id="radio">单选框（radio）</span></h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>单选框必须指定如下属性：<ol>
+<li>type=”radio”</li>
+<li>value: 表示单选框的返回值</li>
+<li>name: 表示单选框从属的组，用于表单提交</li>
+<li>id: 若使用label标签，该项必填，作为该单选框唯一的标识</li>
+</ol>
+</li>
+<li>同一组单选框只能同时选择一个，因此在N个值需要单选时，他们的name值必须要相同</li>
+</ul>
+<h2 id="复选框（checkbox）"><a href="#复选框（checkbox）" class="headerlink" title="复选框（checkbox）"></a><span id="checkbox">复选框（checkbox）</span></h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>单选框必须指定如下属性：<ol>
+<li>type=”checkbox”</li>
+<li>value: 表示复选框的返回值</li>
+<li>name: 表示复选框从属的组，用于表单提交</li>
+<li>id: 若使用label标签，该项必填，作为该复选框唯一的标识</li>
+</ol>
+</li>
+<li>同一组复选框的name值最好相同，相同组的复选框会以数组的形式返回</li>
+</ul>
+<h3 id="checked属性-1"><a href="#checked属性-1" class="headerlink" title="checked属性"></a>checked属性</h3><ul>
+<li>单选框与复选框可以使用checked属性对其进行默认选中</li>
+</ul>
+<h2 id="label标签"><a href="#label标签" class="headerlink" title="label标签"></a>label标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>通常在<font color="red">单选框</font>和<font color="red">复选框</font>的input标签前加入label标签</li>
+<li>效果：当鼠标指向与单选框/复选框相关的显示的值时，同样可以选到单选框/复选框，而不用刻意去点单选框/复选框</li>
+</ul>
+<h3 id="for属性"><a href="#for属性" class="headerlink" title="for属性"></a>for属性</h3><ul>
+<li>表示这个label属性是与哪个单选框/复选框相关</li>
+<li>for的值必须是一个单选框/复选框的id值</li>
+</ul>
+<h3 id="label标签中包含的值"><a href="#label标签中包含的值" class="headerlink" title="label标签中包含的值"></a>label标签中包含的值</h3><ul>
+<li>表示要显示的值</li>
+</ul>
+<h2 id="文件域（file）"><a href="#文件域（file）" class="headerlink" title="文件域（file）"></a><span id="file">文件域（file）</span></h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>文件域必须包含如下属性：<ol>
+<li>type=”file”</li>
+<li>name: 用于表单提交，一般定义为files</li>
+</ol>
+</li>
+</ul>
+<h2 id="普通按钮"><a href="#普通按钮" class="headerlink" title="普通按钮"></a><span id="button">普通按钮</span></h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>普通按钮必须包含如下属性：<ol>
+<li>type=”button”</li>
+<li>name: 用于表单提交</li>
+<li>value: 表示按钮上显示的文本</li>
+</ol>
+</li>
+</ul>
+<h2 id="图片按钮"><a href="#图片按钮" class="headerlink" title="图片按钮"></a><span id="image">图片按钮</span></h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;image&quot;</span> <span class="attr">src</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>图片按钮必须包含如下属性：<ol>
+<li>type=”image”</li>
+<li>src: 表示图片路径</li>
+</ol>
+</li>
+</ul>
+<h2 id="表单提交按钮与表单重置按钮"><a href="#表单提交按钮与表单重置按钮" class="headerlink" title="表单提交按钮与表单重置按钮"></a><span id="submitAndReset">表单提交按钮与表单重置按钮</span></h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;reset&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>表单提交按钮可以使用value属性改变其显示的值<ul>
+<li>表单提交按钮默认显示<code>提交</code></li>
+<li>表单重制按钮默认显示<code>重置</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="表单子标签——select标签"><a href="#表单子标签——select标签" class="headerlink" title="表单子标签——select标签"></a>表单子标签——select标签</h1><h2 id="下拉选项框"><a href="#下拉选项框" class="headerlink" title="下拉选项框"></a>下拉选项框</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="name属性-1"><a href="#name属性-1" class="headerlink" title="name属性"></a>name属性</h3><ul>
+<li>用于表单提交</li>
+</ul>
+<h3 id="option标签"><a href="#option标签" class="headerlink" title="option标签"></a>option标签</h3><ul>
+<li>option标签必须包含在select标签内，表示下拉框的可选选项</li>
+</ul>
+<h3 id="value值"><a href="#value值" class="headerlink" title="value值"></a>value值</h3><ul>
+<li>选择该选项时的返回值</li>
+</ul>
+<h3 id="option标签内包含的内容"><a href="#option标签内包含的内容" class="headerlink" title="option标签内包含的内容"></a>option标签内包含的内容</h3><ul>
+<li>表示该选项显示的文本</li>
+</ul>
+<h3 id="selected值（应用于option标签）"><a href="#selected值（应用于option标签）" class="headerlink" title="selected值（应用于option标签）"></a>selected值（应用于option标签）</h3><ul>
+<li>当一个option标签内有selected值时，该选项默认选中</li>
+</ul>
+<h1 id="表单子标签——textarea标签"><a href="#表单子标签——textarea标签" class="headerlink" title="表单子标签——textarea标签"></a>表单子标签——textarea标签</h1><h2 id="文本域"><a href="#文本域" class="headerlink" title="文本域"></a>文本域</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">cols</span>=<span class="string">&quot;&quot;</span> <span class="attr">rows</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>不可以用value指定初值</li>
+<li>但可以在<sextarea>标签内随便写点什么指定初值</li>
+</ul>
+<h3 id="name值"><a href="#name值" class="headerlink" title="name值"></a>name值</h3><ul>
+<li>用于表单提交</li>
+</ul>
+<h3 id="cols属性与rows属性"><a href="#cols属性与rows属性" class="headerlink" title="cols属性与rows属性"></a>cols属性与rows属性</h3><ul>
+<li>用于指定文本域的初始显示大小，文本域的显示大小可以在网页端调节</li>
+</ul>
+<h1 id="带验证或特殊功能的表单子标签（只介绍选填属性）"><a href="#带验证或特殊功能的表单子标签（只介绍选填属性）" class="headerlink" title="带验证或特殊功能的表单子标签（只介绍选填属性）"></a>带验证或特殊功能的表单子标签（只介绍选填属性）</h1><h2 id="邮箱验证"><a href="#邮箱验证" class="headerlink" title="邮箱验证"></a>邮箱验证</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;email&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>验证方式：<ul>
+<li>用户所输入的值必须要有@</li>
+<li>@后面要有值</li>
+</ul>
+</li>
+</ul>
+<h2 id="URL验证"><a href="#URL验证" class="headerlink" title="URL验证"></a>URL验证</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;url&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="数字验证"><a href="#数字验证" class="headerlink" title="数字验证"></a>数字验证</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;number&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">min</span>=<span class="string">&quot;&quot;</span> <span class="attr">max</span>=<span class="string">&quot;&quot;</span> <span class="attr">minlength</span>=<span class="string">&quot;&quot;</span> <span class="attr">maxlength</span>=<span class="string">&quot;&quot;</span> <span class="attr">step</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="max属性与min属性"><a href="#max属性与min属性" class="headerlink" title="max属性与min属性"></a>max属性与min属性</h3><ul>
+<li>规定用户输入的数字的最大和最小值</li>
+</ul>
+<h3 id="step属性"><a href="#step属性" class="headerlink" title="step属性"></a>step属性</h3><ul>
+<li>加入step属性可以使输入框右边多一个递增、递减箭头</li>
+<li>step的值指定箭头按一次增加/减少多少输入框内的值</li>
+</ul>
+<h2 id="滑块标签"><a href="#滑块标签" class="headerlink" title="滑块标签"></a>滑块标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;range&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">min</span>=<span class="string">&quot;&quot;</span> <span class="attr">max</span>=<span class="string">&quot;&quot;</span> <span class="attr">step</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="搜索框"><a href="#搜索框" class="headerlink" title="搜索框"></a>搜索框</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;search&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>搜索框会在文本框的基础上在框右边加一个可以一键清除输入内容的×</li>
+</ul>
+<h1 id="拓展一些属性"><a href="#拓展一些属性" class="headerlink" title="拓展一些属性"></a>拓展一些属性</h1><h2 id="隐藏域"><a href="#隐藏域" class="headerlink" title="隐藏域"></a>隐藏域</h2><ul>
+<li>在表单子标签内加入 <code>hidden</code> 属性</li>
+<li>可以用来传递一些不想让用户修改的默认值</li>
+</ul>
+<h2 id="禁用"><a href="#禁用" class="headerlink" title="禁用"></a>禁用</h2><ul>
+<li>在表单子标签内加入 <code>disabled</code> 属性</li>
+<li>与只读的区别：<ol>
+<li>对所有表单元素有效</li>
+<li>使用GET或POST方法提交表单时，当某表单被禁用，其值不会被提交</li>
+<li>用户不能获取表单的焦点，更不能选中其值</li>
+</ol>
+</li>
+</ul>
+<h2 id="只读"><a href="#只读" class="headerlink" title="只读"></a>只读</h2><ul>
+<li>在表单子标签内加入 <code>readonly</code> 属性</li>
+<li>与禁用的区别：<ol>
+<li><code>readonly</code> 只对<code>text</code>和<code>textarea</code>有效</li>
+<li>其值会作为form的一项进行提交</li>
+<li>用户可以获取表单焦点，可以选中其值</li>
+</ol>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/HTML/" rel="tag"># -HTML</a>
+          </div>
+
+        
+
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

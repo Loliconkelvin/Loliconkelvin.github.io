@@ -23,21 +23,23 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.3.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content="HTML表单初级验证">
+<meta name="description" content="CSS盒子模型与边框">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML表单初级验证">
-<meta property="og:url" content="https://loliconkelvin.github.io/2021/04/26/HTML%E8%A1%A8%E5%8D%95%E5%88%9D%E7%BA%A7%E9%AA%8C%E8%AF%81/index.html">
+<meta property="og:title" content="CSS盒子模型与边框">
+<meta property="og:url" content="https://loliconkelvin.github.io/2021/05/18/CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%BE%B9%E6%A1%86/index.html">
 <meta property="og:site_name" content="萝莉控的小窝">
-<meta property="og:description" content="HTML表单初级验证">
+<meta property="og:description" content="CSS盒子模型与边框">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-26T11:18:56.000Z">
-<meta property="article:modified_time" content="2021-05-17T12:13:07.147Z">
+<meta property="og:image" content="https://z3.ax1x.com/2021/05/18/ghNIsS.png">
+<meta property="article:published_time" content="2021-05-18T11:57:57.000Z">
+<meta property="article:modified_time" content="2021-05-18T14:21:50.262Z">
 <meta property="article:author" content="Loliconkelvin">
-<meta property="article:tag" content="HTML">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://z3.ax1x.com/2021/05/18/ghNIsS.png">
 
 
-<link rel="canonical" href="https://loliconkelvin.github.io/2021/04/26/HTML%E8%A1%A8%E5%8D%95%E5%88%9D%E7%BA%A7%E9%AA%8C%E8%AF%81/">
+<link rel="canonical" href="https://loliconkelvin.github.io/2021/05/18/CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%BE%B9%E6%A1%86/">
 
 
 <script class="page-configurations">
@@ -49,7 +51,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>HTML表单初级验证 | 萝莉控的小窝</title>
+<title>CSS盒子模型与边框 | 萝莉控的小窝</title>
   
 
 
@@ -157,7 +159,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E5%86%85%E6%8F%90%E7%A4%BA%E4%BF%A1%E6%81%AF"><span class="nav-number">1.</span> <span class="nav-text">表单内提示信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%9E%E7%A9%BA%E5%88%A4%E6%96%AD"><span class="nav-number">2.</span> <span class="nav-text">非空判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">正则表达式</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">盒子模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">初始化操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%EF%BC%88margin%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">外边距（margin）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD"><span class="nav-number">4.</span> <span class="nav-text">使用外边距垂直居中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%EF%BC%88border%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">边框（border）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%E5%90%88%E5%B9%B6%E5%86%99%E6%B3%95"><span class="nav-number">5.1.</span> <span class="nav-text">边框合并写法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%E6%A0%B7%E5%BC%8F%EF%BC%88style%EF%BC%89"><span class="nav-number">5.2.</span> <span class="nav-text">边框样式（style）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86%EF%BC%88radius%EF%BC%89"><span class="nav-number">5.3.</span> <span class="nav-text">圆角边框（radius）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E7%9A%84%E8%AE%A1%E7%AE%97%E6%96%B9%E5%BC%8F%EF%BC%88%E8%BF%99%E4%B8%AA%E5%85%83%E7%B4%A0%E6%80%BB%E5%85%B1%E5%A4%9A%E5%A4%A7%EF%BC%9F%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">盒子的计算方式（这个元素总共多大？）</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -231,7 +233,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/04/26/HTML%E8%A1%A8%E5%8D%95%E5%88%9D%E7%BA%A7%E9%AA%8C%E8%AF%81/">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/05/18/CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%BE%B9%E6%A1%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head-portrait.jpg">
@@ -244,7 +246,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          HTML表单初级验证
+          CSS盒子模型与边框
         </h1>
 
         <div class="post-meta-container">
@@ -254,23 +256,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-04-26 19:18:56" itemprop="dateCreated datePublished" datetime="2021-04-26T19:18:56+08:00">2021-04-26</time>
+      <time title="创建时间：2021-05-18 19:57:57 / 修改时间：22:21:50" itemprop="dateCreated datePublished" datetime="2021-05-18T19:57:57+08:00">2021-05-18</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-05-17 20:13:07" itemprop="dateModified" datetime="2021-05-17T20:13:07+08:00">2021-05-17</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
+          <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
         </span>
     </span>
 
@@ -284,18 +280,45 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>HTML表单初级验证</p>
+        <p>CSS盒子模型与边框</p>
 <span id="more"></span>
 
-<h2 id="表单内提示信息"><a href="#表单内提示信息" class="headerlink" title="表单内提示信息"></a>表单内提示信息</h2><ul>
-<li>在表单子标签（必须是输入框）内加入 <code>placeholder=&quot;&quot;</code> 属性</li>
+<h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><p><img src="https://z3.ax1x.com/2021/05/18/ghNIsS.png" alt="ghNIsS.png"></p>
+<h2 id="初始化操作"><a href="#初始化操作" class="headerlink" title="初始化操作"></a>初始化操作</h2><ul>
+<li>通常在应用样式之前，我们把内外边距和下划线全部弄没：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="非空判断"><a href="#非空判断" class="headerlink" title="非空判断"></a>非空判断</h2><ul>
-<li>在表单子标签（必须是输入框）内加入 <code>required&quot;&quot;</code> 属性</li>
+<h2 id="外边距（margin）"><a href="#外边距（margin）" class="headerlink" title="外边距（margin）"></a>外边距（margin）</h2><ul>
+<li><p>若不对body样式进行设置，body默认会有一个外边距</p>
+</li>
+<li><p>对多个边距合并设置：</p>
+<blockquote>
+<p>margin: top left bottom right;</p>
+</blockquote>
+<blockquote>
+<p>margin: top&amp;bottom left&amp;right；<br>只使用两个值的时候会将第一个值同时应用于上下，第二个值同时应用于左右</p>
+</blockquote>
+<blockquote>
+<p>margin: top left&amp;right bottom<br>只使用三个值的时候会将第二个值同时应用于左右</p>
+</blockquote>
+<blockquote>
+<p>margin: top&amp;left&amp;right&amp;bottom<br>只使用一个值的时候会将这个值同时应用于上下左右</p>
+</blockquote>
+</li>
 </ul>
-<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><ul>
-<li>在表单子标签（必须是输入框）内加入 <code>pattern=&quot;&quot;</code> 属性</li>
-<li>常用正则表达式：<br>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/ZYC88888/article/details/98479629">https://blog.csdn.net/ZYC88888/article/details/98479629</a></li>
+<h2 id="使用外边距垂直居中"><a href="#使用外边距垂直居中" class="headerlink" title="使用外边距垂直居中"></a>使用外边距垂直居中</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="边框（border）"><a href="#边框（border）" class="headerlink" title="边框（border）"></a>边框（border）</h2><h3 id="边框合并写法"><a href="#边框合并写法" class="headerlink" title="边框合并写法"></a>边框合并写法</h3><blockquote>
+<p>border(-left/-right/-top/-bottom): border-width border-style border-color</p>
+</blockquote>
+<blockquote>
+<p>border: 1px solid red</p>
+</blockquote>
+<h3 id="边框样式（style）"><a href="#边框样式（style）" class="headerlink" title="边框样式（style）"></a>边框样式（style）</h3><ul>
+<li>通常设置为solid：实线</li>
+<li>dashed：虚线</li>
+</ul>
+<h3 id="圆角边框（radius）"><a href="#圆角边框（radius）" class="headerlink" title="圆角边框（radius）"></a>圆角边框（radius）</h3><h2 id="盒子的计算方式（这个元素总共多大？）"><a href="#盒子的计算方式（这个元素总共多大？）" class="headerlink" title="盒子的计算方式（这个元素总共多大？）"></a>盒子的计算方式（这个元素总共多大？）</h2><ul>
+<li>这个元素的总大小为 外边距 + 边框宽度 + 内边距 + 内容宽度</li>
 </ul>
 
     </div>
@@ -306,7 +329,7 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/HTML/" rel="tag"># HTML</a>
+              <a href="/tags/CSS/" rel="tag"># CSS</a>
           </div>
 
         

@@ -23,23 +23,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.3.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content="CSS盒子模型与边框">
+<meta name="description" content="CSS浮动和display">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS盒子模型与边框">
-<meta property="og:url" content="https://loliconkelvin.github.io/2021/05/18/CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%BE%B9%E6%A1%86/index.html">
+<meta property="og:title" content="CSS浮动和display">
+<meta property="og:url" content="https://loliconkelvin.github.io/2021/05/21/CSS%E6%B5%AE%E5%8A%A8%E5%92%8Cdisplay/index.html">
 <meta property="og:site_name" content="萝莉控的小窝">
-<meta property="og:description" content="CSS盒子模型与边框">
+<meta property="og:description" content="CSS浮动和display">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://z3.ax1x.com/2021/05/18/ghNIsS.png">
-<meta property="article:published_time" content="2021-05-18T11:57:57.000Z">
-<meta property="article:modified_time" content="2021-05-21T11:43:49.612Z">
+<meta property="article:published_time" content="2021-05-21T12:13:48.000Z">
+<meta property="article:modified_time" content="2021-05-23T08:34:28.490Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://z3.ax1x.com/2021/05/18/ghNIsS.png">
 
 
-<link rel="canonical" href="https://loliconkelvin.github.io/2021/05/18/CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%BE%B9%E6%A1%86/">
+<link rel="canonical" href="https://loliconkelvin.github.io/2021/05/21/CSS%E6%B5%AE%E5%8A%A8%E5%92%8Cdisplay/">
 
 
 <script class="page-configurations">
@@ -51,7 +49,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>CSS盒子模型与边框 | 萝莉控的小窝</title>
+<title>CSS浮动和display | 萝莉控的小窝</title>
   
 
 
@@ -159,7 +157,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">盒子模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">初始化操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%EF%BC%88margin%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">外边距（margin）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD"><span class="nav-number">4.</span> <span class="nav-text">使用外边距垂直居中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%EF%BC%88border%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">边框（border）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%E5%90%88%E5%B9%B6%E5%86%99%E6%B3%95"><span class="nav-number">5.1.</span> <span class="nav-text">边框合并写法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%E6%A0%B7%E5%BC%8F%EF%BC%88style%EF%BC%89"><span class="nav-number">5.2.</span> <span class="nav-text">边框样式（style）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86%EF%BC%88radius%EF%BC%89"><span class="nav-number">5.3.</span> <span class="nav-text">圆角边框（radius）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%86"><span class="nav-number">5.3.1.</span> <span class="nav-text">圆</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E7%9A%84%E8%AE%A1%E7%AE%97%E6%96%B9%E5%BC%8F%EF%BC%88%E8%BF%99%E4%B8%AA%E5%85%83%E7%B4%A0%E6%80%BB%E5%85%B1%E5%A4%9A%E5%A4%A7%EF%BC%9F%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">盒子的计算方式（这个元素总共多大？）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%E9%98%B4%E5%BD%B1-%E7%9B%92%E5%AD%90%E9%98%B4%E5%BD%B1%EF%BC%88box-shadow%EF%BC%89"><span class="nav-number">7.</span> <span class="nav-text">边框阴影&#x2F;盒子阴影（box-shadow）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E9%98%B4%E5%BD%B1%E5%90%88%E5%B9%B6%E5%86%99%E6%B3%95"><span class="nav-number">7.1.</span> <span class="nav-text">盒子阴影合并写法</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#display"><span class="nav-number">1.</span> <span class="nav-text">display</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%AE%E5%8A%A8%EF%BC%88float%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">浮动（float）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%EF%BC%88clear%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">清除浮动（clear）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%88%B6%E7%BA%A7%E8%BE%B9%E6%A1%86%E5%A1%8C%E9%99%B7"><span class="nav-number">3.1.</span> <span class="nav-text">父级边框塌陷</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overflow"><span class="nav-number">4.</span> <span class="nav-text">overflow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#display%E4%B8%8Efloat%E5%AF%B9%E6%AF%94"><span class="nav-number">5.</span> <span class="nav-text">display与float对比</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -233,7 +231,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/05/18/CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%BE%B9%E6%A1%86/">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/05/21/CSS%E6%B5%AE%E5%8A%A8%E5%92%8Cdisplay/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head-portrait.jpg">
@@ -246,7 +244,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          CSS盒子模型与边框
+          CSS浮动和display
         </h1>
 
         <div class="post-meta-container">
@@ -257,14 +255,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-05-18 19:57:57" itemprop="dateCreated datePublished" datetime="2021-05-18T19:57:57+08:00">2021-05-18</time>
+      <time title="创建时间：2021-05-21 20:13:48" itemprop="dateCreated datePublished" datetime="2021-05-21T20:13:48+08:00">2021-05-21</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-05-21 19:43:49" itemprop="dateModified" datetime="2021-05-21T19:43:49+08:00">2021-05-21</time>
+        <time title="修改时间：2021-05-23 16:34:28" itemprop="dateModified" datetime="2021-05-23T16:34:28+08:00">2021-05-23</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -286,64 +284,53 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>CSS盒子模型与边框</p>
+        <p>CSS浮动和display</p>
 <span id="more"></span>
 
-<h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><p><img src="https://z3.ax1x.com/2021/05/18/ghNIsS.png" alt="ghNIsS.png"></p>
-<h2 id="初始化操作"><a href="#初始化操作" class="headerlink" title="初始化操作"></a>初始化操作</h2><ul>
-<li>通常在应用样式之前，我们把内外边距和下划线全部弄没：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<p>行内元素排列的方式</p>
+<h2 id="display"><a href="#display" class="headerlink" title="display"></a>display</h2><ul>
+<li>使用display可以改变元素的属性（行内元素/块级元素/消失）</li>
+<li>inline：行内元素</li>
+<li>block：块级元素</li>
+<li>inline-block：是块级元素但是内联（通常用于制作导航栏，再使用vertical-align: top;对其顶部，并使用line-height设置行高）</li>
+<li>none：消失</li>
 </ul>
-<h2 id="外边距（margin）"><a href="#外边距（margin）" class="headerlink" title="外边距（margin）"></a>外边距（margin）</h2><ul>
-<li><p>若不对body样式进行设置，body默认会有一个外边距</p>
-</li>
-<li><p>对多个边距合并设置：</p>
-<blockquote>
-<p>margin: top left bottom right;</p>
-</blockquote>
-<blockquote>
-<p>margin: top&amp;bottom left&amp;right；<br>只使用两个值的时候会将第一个值同时应用于上下，第二个值同时应用于左右</p>
-</blockquote>
-<blockquote>
-<p>margin: top left&amp;right bottom<br>只使用三个值的时候会将第二个值同时应用于左右</p>
-</blockquote>
-<blockquote>
-<p>margin: top&amp;left&amp;right&amp;bottom<br>只使用一个值的时候会将这个值同时应用于上下左右</p>
-</blockquote>
-</li>
+<h2 id="浮动（float）"><a href="#浮动（float）" class="headerlink" title="浮动（float）"></a>浮动（float）</h2><ul>
+<li>left:左浮动</li>
+<li>right:右浮动</li>
+<li>浮动可以使元素上移一个图层</li>
+<li>浮动的盒子可以向左浮动也可以向右浮动，直到它的外边缘碰到父级元素的范围或另一个浮动的元素为止</li>
+<li>浮动的元素会把不浮动的元素推开</li>
 </ul>
-<h2 id="使用外边距垂直居中"><a href="#使用外边距垂直居中" class="headerlink" title="使用外边距垂直居中"></a>使用外边距垂直居中</h2><ul>
-<li>行内元素不可以应用 <code>margin</code> 和 <code>padding</code></li>
-<li>想要使行内元素居中可以：<ol>
-<li>在外面套一个div，将其宽度和高度设置为行内元素的宽高，然后使用margin<br> 这个是div带着里面的元素居中</li>
-<li>在外面套一个div，然后使用 <code>text-align: center;</code><br> 这个是div不动，里面的元素全部居中</li>
-<li>对要居中的元素使用 <code>display: block;</code>,再使用 <code>margin：0 auto;</code><br> 这个是把行元素变为块元素，然后自行居中<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<h2 id="清除浮动（clear）"><a href="#清除浮动（clear）" class="headerlink" title="清除浮动（clear）"></a>清除浮动（clear）</h2><ul>
+<li>left：该元素的左侧不允许有浮动元素，若有，该元素往下走</li>
+<li>right：该元素的右侧不允许有浮动元素</li>
+<li>both：该元素的两侧不允许有浮动元素<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">clear</span>: both;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="父级边框塌陷"><a href="#父级边框塌陷" class="headerlink" title="父级边框塌陷"></a>父级边框塌陷</h3><ul>
+<li>元素浮动之后，它会脱离父级边框，无论该元素多大，父级边框的宽度和高度不会迁就该元素，如何让该元素保持在父级边框里？</li>
+</ul>
+<ol>
+<li>增加父级元素高度（不建议）</li>
+<li>在所有浮动的元素后面加一个空 的div，将该div的两侧浮动清除，则这个div会被挤到浮动元素的最后，而它自己并不浮动，相当于把父级边框撑大。（代码中应该避免空div）<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>不指定父级元素的宽度和高度，对父级使用 <code>overflow: hidden;</code></li>
+<li>对父级元素增加一个伪类 <code>::after</code>：（建议使用） <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#father</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    content= &#x27;&#x27;; </span><br><span class="line">    <span class="attribute">display</span>: block;<span class="comment">/*变为块元素*/</span></span><br><span class="line">    <span class="attribute">clear</span>: both;<span class="comment">/*清除浮动*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>::after用于给选中元素增加一个伪行内元素，作为选中元素的最后一个子元素，通常配合content来增加修饰内容</li>
+<li>::before可以用于在选中元素的前面增加一个位行内元素</li>
+</ul>
+</li>
 </ol>
-</li>
+<h2 id="overflow"><a href="#overflow" class="headerlink" title="overflow"></a>overflow</h2><ul>
+<li>overflow应被定义于一个决定了宽度和高度的父级元素，它会决定当子元素超出范围时该怎么做</li>
+<li>hidden：当子元素超出范围，隐藏超出部分</li>
+<li>scroll：当子元素超出范围，使用滚动条</li>
 </ul>
-<h2 id="边框（border）"><a href="#边框（border）" class="headerlink" title="边框（border）"></a>边框（border）</h2><h3 id="边框合并写法"><a href="#边框合并写法" class="headerlink" title="边框合并写法"></a>边框合并写法</h3><blockquote>
-<p>border(-left/-right/-top/-bottom): border-width border-style border-color</p>
-</blockquote>
-<blockquote>
-<p>border: 1px solid red</p>
-</blockquote>
-<h3 id="边框样式（style）"><a href="#边框样式（style）" class="headerlink" title="边框样式（style）"></a>边框样式（style）</h3><ul>
-<li>通常设置为solid：实线</li>
-<li>dashed：虚线</li>
+<h2 id="display与float对比"><a href="#display与float对比" class="headerlink" title="display与float对比"></a>display与float对比</h2><ul>
+<li>两者都能让元素排成一行</li>
+<li>display方向不可控，从左到右</li>
+<li>float方向可控，但是要解决父级边框塌陷问题</li>
 </ul>
-<h3 id="圆角边框（radius）"><a href="#圆角边框（radius）" class="headerlink" title="圆角边框（radius）"></a>圆角边框（radius）</h3><ul>
-<li>应用顺序为左上 右上 右下 左下（顺时针）</li>
-<li>只应用一个值时，该值会应用于四个角</li>
-<li>应用两个值时，第一个值应用于左上和右下角，第二个值应用于右上和左下角</li>
-</ul>
-<h4 id="圆"><a href="#圆" class="headerlink" title="圆"></a>圆</h4><ul>
-<li>要画一个圆，需要将边框值等于正方形边长的一半</li>
-</ul>
-<h2 id="盒子的计算方式（这个元素总共多大？）"><a href="#盒子的计算方式（这个元素总共多大？）" class="headerlink" title="盒子的计算方式（这个元素总共多大？）"></a>盒子的计算方式（这个元素总共多大？）</h2><ul>
-<li>这个元素的总大小为 外边距 + 边框宽度 + 内边距 + 内容宽度</li>
-</ul>
-<h2 id="边框阴影-盒子阴影（box-shadow）"><a href="#边框阴影-盒子阴影（box-shadow）" class="headerlink" title="边框阴影/盒子阴影（box-shadow）"></a>边框阴影/盒子阴影（box-shadow）</h2><h3 id="盒子阴影合并写法"><a href="#盒子阴影合并写法" class="headerlink" title="盒子阴影合并写法"></a>盒子阴影合并写法</h3><blockquote>
-<p>box- shadow: x y blur（模糊距离） color</p>
-</blockquote>
 
     </div>
 

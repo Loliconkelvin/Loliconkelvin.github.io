@@ -23,23 +23,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.3.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content=".package_name{         color: blue;         weight: bold;     }   点灯大师">
+<meta name="description" content="理论点灯大师（抄PPT）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="STM32笔记">
-<meta property="og:url" content="https://loliconkelvin.github.io/2021/09/04/STM32%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="STM32笔记——概念">
+<meta property="og:url" content="https://loliconkelvin.github.io/2021/09/04/STM32%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E6%A6%82%E5%BF%B5/index.html">
 <meta property="og:site_name" content="萝莉控的小窝">
-<meta property="og:description" content=".package_name{         color: blue;         weight: bold;     }   点灯大师">
+<meta property="og:description" content="理论点灯大师（抄PPT）">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://z3.ax1x.com/2021/09/04/hgMyiF.png">
-<meta property="article:published_time" content="2021-09-04T04:26:24.000Z">
-<meta property="article:modified_time" content="2021-09-04T05:13:29.637Z">
+<meta property="article:published_time" content="2021-09-04T08:48:24.000Z">
+<meta property="article:modified_time" content="2021-09-04T09:09:12.630Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="STM32">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://z3.ax1x.com/2021/09/04/hgMyiF.png">
 
 
-<link rel="canonical" href="https://loliconkelvin.github.io/2021/09/04/STM32%E7%AC%94%E8%AE%B0/">
+<link rel="canonical" href="https://loliconkelvin.github.io/2021/09/04/STM32%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E6%A6%82%E5%BF%B5/">
 
 
 <script class="page-configurations">
@@ -51,7 +49,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>STM32笔记 | 萝莉控的小窝</title>
+<title>STM32笔记——概念 | 萝莉控的小窝</title>
   
 
 
@@ -159,7 +157,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-0-%E8%8C%83%E4%BE%8B%E5%B7%A5%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">0-0 范例工程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B7%A5%E7%A8%8B%EF%BC%88%E8%AF%A6%E7%BB%86%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">新建一个工程（详细）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B7%A5%E7%A8%8B%EF%BC%88%E5%9F%BA%E4%BA%8E%E8%8C%83%E4%BE%8B%E5%B7%A5%E7%A8%8B%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">新建一个工程（基于范例工程）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#STM32%E5%AE%B9%E9%87%8F%E4%B8%8E%E5%9E%8B%E5%8F%B7"><span class="nav-number">1.3.</span> <span class="nav-text">STM32容量与型号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-GPIO"><span class="nav-number">2.</span> <span class="nav-text">1-1 GPIO</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">嵌入式系统结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%A4%84%E7%90%86%E5%99%A8%E7%BB%84%E6%88%90%EF%BC%88%E5%BE%85%E6%B1%82%E8%AF%81%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">嵌入式系统处理器组成（待求证）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E9%99%90%E5%AE%9A%E7%AC%A6-volatile%EF%BC%88%E5%BE%85%E6%B1%82%E8%AF%81%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">存储限定符 volatile（待求证）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARM%E5%A4%84%E7%90%86%E5%99%A8%E5%88%86%E7%B1%BB%E2%80%94%E2%80%94%E6%8C%89%E5%BA%94%E7%94%A8%E7%89%B9%E5%BE%81%E5%88%86%E7%B1%BB"><span class="nav-number">4.</span> <span class="nav-text">ARM处理器分类——按应用特征分类</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -174,7 +172,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -233,7 +231,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/09/04/STM32%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/09/04/STM32%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E6%A6%82%E5%BF%B5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head-portrait.jpg">
@@ -246,7 +244,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          STM32笔记
+          STM32笔记——概念
         </h1>
 
         <div class="post-meta-container">
@@ -258,7 +256,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-09-04 12:26:24 / 修改时间：13:13:29" itemprop="dateCreated datePublished" datetime="2021-09-04T12:26:24+08:00">2021-09-04</time>
+      <time title="创建时间：2021-09-04 16:48:24 / 修改时间：17:09:12" itemprop="dateCreated datePublished" datetime="2021-09-04T16:48:24+08:00">2021-09-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -280,148 +278,45 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <style>
-    .package_name{
-        color: blue;
-        weight: bold;
-    }
-</style>
-
-<p>点灯大师</p>
+        <p>理论点灯大师（抄PPT）</p>
 <span id="more"></span>
 
-<hr>
-<h2 id="0-0-范例工程"><a href="#0-0-范例工程" class="headerlink" title="0-0 范例工程"></a>0-0 范例工程</h2><hr>
-<h3 id="新建一个工程（详细）"><a href="#新建一个工程（详细）" class="headerlink" title="新建一个工程（详细）"></a>新建一个工程（详细）</h3><ol>
-<li><p>在总工程文件夹下创建子工程文件夹，文件名任意，keil工程文件名为project，子文件夹下创建 <span class="package_name">StartUp</span> <span class="package_name">User</span> <span class="package_name">Library</span> 三个文件夹</p>
-<br /></li>
-<li><p>搜索 <code>103C8</code> ，弹出界面叉掉</p>
-<br /></li>
-<li><p>编码格式改为 <code>UTF-8</code></p>
-</li>
-</ol>
-<p>———————————-User———————————–</p>
-<ol start="4">
-<li><p>在 <span class="package_name">User</span> 文件夹下创建mian.c，包含头文件，写一个main函数和一个死循环</p>
+<h3 id="嵌入式系统结构"><a href="#嵌入式系统结构" class="headerlink" title="嵌入式系统结构"></a>嵌入式系统结构</h3><p>嵌入式系统由</p>
 <ul>
-<li>（基于库函数）复制<blockquote>
-<p>E:\Keil5\STM32F10x_StdPeriph_Lib_V3.5.0\Project\STM32F10x_StdPeriph_Template</p>
+<li>微处理器</li>
+<li>外围硬件设备</li>
+<li>嵌入式操作系统（可选）</li>
+<li>用户的应用软件系统</li>
+</ul>
+<p>组成</p>
+<h3 id="嵌入式系统处理器组成（待求证）"><a href="#嵌入式系统处理器组成（待求证）" class="headerlink" title="嵌入式系统处理器组成（待求证）"></a>嵌入式系统处理器组成（待求证）</h3><p>嵌入式处理器由</p>
+<ul>
+<li>嵌入式微处理器（MCU）</li>
+<li>全如实DSP处理器（DSP）</li>
+<li>嵌入式微处理器（MPU）</li>
+<li>嵌入式片上系统（system on chip）</li>
+</ul>
+<p>组成</p>
+<h3 id="存储限定符-volatile（待求证）"><a href="#存储限定符-volatile（待求证）" class="headerlink" title="存储限定符 volatile（待求证）"></a>存储限定符 volatile（待求证）</h3><ul>
+<li>编译器优化工作的一个假设</li>
+<li>在多任务共享变量、中断与任务共享变量时，必须使用volatile限定符，强制只读取内存中的数据</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">volatile</span> <span class="keyword">int</span> *p_status;</span><br><span class="line">    <span class="keyword">int</span> *p_data;</span><br><span class="line"></span><br><span class="line">    p_status = (<span class="keyword">int</span>*) <span class="number">0x4001</span>;</span><br><span class="line">    p_data = (<span class="keyword">int</span>*) <span class="number">0x4000</span>;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;<span class="keyword">while</span>((*p_status &amp; <span class="number">0x01</span>) == <span class="number">0</span>);</span><br><span class="line">    ……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>v</p>
+<h3 id="ARM处理器分类——按应用特征分类"><a href="#ARM处理器分类——按应用特征分类" class="headerlink" title="ARM处理器分类——按应用特征分类"></a>ARM处理器分类——按应用特征分类</h3><ul>
+<li>ARM A系列 （application）<blockquote>
+<p>偏应用型、高性能、合理功耗</p>
+</blockquote>
+</li>
+<li>ARM R系列 （real-time）<blockquote>
+<p>注重实时性、较低功耗</p>
+</blockquote>
+</li>
+<li>ARM M系列 （micro）<blockquote>
+<p>注重低功耗、低成本</p>
 </blockquote>
 </li>
 </ul>
-<p> 中的 <code>stm32f10x_conf.h</code> <code>stm32f10x_it.c</code> <code>stm32f10x_it.h</code> 至 <span class="package_name">User</span></p>
-</li>
-</ol>
-<p>———————————StartUp———————————</p>
-<ol start="5">
-<li>复制<blockquote>
-<p>E:\Keil5\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm</p>
-</blockquote>
-</li>
-</ol>
-<p>中的 <code>startup_stm32f10x_md.s</code> 详见<a href="#STM32_Capacity_and_model">STM32容量与型号</a>至 <span class="package_name">StartUp</span></p>
-<ol start="6">
-<li>复制<blockquote>
-<p>E:\Keil5\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x</p>
-</blockquote>
-</li>
-</ol>
-<p>中 <code>stm32f10x.h</code> <code>system_stm32f10x.c</code> <code>system_stm32f10x.h</code> 至 <span class="package_name">StartUp</span></p>
-<ol start="7">
-<li>复制<blockquote>
-<p>E:\Keil5\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\CMSIS\CM3\CoreSupport</p>
-</blockquote>
-</li>
-</ol>
-<p>中的 <code>core_cm3.c</code> <code>core_cm3.h</code> 至 <span class="package_name">StartUp</span></p>
-<p>———————-（基于库函数）Library————————</p>
-<ol start="8">
-<li>复制<blockquote>
-<p>E:\Keil5\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc</p>
-</blockquote>
-</li>
-</ol>
-<p>中的所有文件至 <span class="package_name">Library</span></p>
-<ol start="9">
-<li>复制<blockquote>
-<p>E:\Keil5\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src</p>
-</blockquote>
-</li>
-</ol>
-<p>中的所有文件至 <span class="package_name">Library</span></p>
-<p>———————————–收尾————————————-</p>
-<ol start="10">
-<li><p>将 <span class="package_name">StartUp</span> <span class="package_name">User</span> <span class="package_name">Library</span> 三个文件夹和里面的文件包含进工程</p>
-<br /></li>
-<li><p>魔术棒 -&gt; C/C++ -&gt; Include Path加入 <span class="package_name">StartUp</span> <span class="package_name">User</span> <span class="package_name">Library</span> 三个路径</p>
-<br /></li>
-<li><blockquote>
-<p>魔术棒 -&gt; C/C++ -&gt; Define</p>
-</blockquote>
-<p>加入 <code>USE_STDPERIPH_DRIVER</code>（该字符串在头文件9301行）</p>
-<br /></li>
-<li><p>（有使用ST-link连接单片机时）</p>
-<blockquote>
-<p>魔术棒 -&gt; Debug -&gt; Use 设置为ST-link</p>
-</blockquote>
-</li>
-</ol>
-<br />
-
-<ol start="14">
-<li><p>（有使用ST-link连接单片机时）</p>
-<blockquote>
-<p>Use旁边的Settings -&gt; Flash Download</p>
-</blockquote>
-<p>勾选Reset and Run</p>
-<br /></li>
-<li><blockquote>
-<p>工具栏 -&gt; 箱子</p>
-</blockquote>
-<p>把User移到最下面</p>
-<br /></li>
-<li><p>尝试编译</p>
-</li>
-</ol>
-<h3 id="新建一个工程（基于范例工程）"><a href="#新建一个工程（基于范例工程）" class="headerlink" title="新建一个工程（基于范例工程）"></a>新建一个工程（基于范例工程）</h3><ol>
-<li><p>在总工程文件夹下创建子工程文件夹，文件名为任意，keil工程文件名为project</p>
-<br /></li>
-<li><p>搜索103C8，弹出界面叉掉</p>
-<br /></li>
-<li><p>编码格式改为UTF-8</p>
-<br /></li>
-<li><p>从范例工程复制 <span class="package_name">StartUp</span> <span class="package_name">User</span> <span class="package_name">Library</span> 三个文件夹至子工程文件夹</p>
-<br /></li>
-<li><p>将 <span class="package_name">StartUp</span> <span class="package_name">User</span> <span class="package_name">Library</span> 三个文件夹和里面的文件包含进工程</p>
-<br /></li>
-<li><p>魔术棒 -&gt; C/C++ -&gt; Include Path加入 <span class="package_name">StartUp</span> <span class="package_name">User</span> <span class="package_name">Library</span> 三个路径</p>
-<br /></li>
-<li><blockquote>
-<p>魔术棒 -&gt; C/C++ -&gt; Define</p>
-</blockquote>
-<p> 加入 <code>USE_STDPERIPH_DRIVER</code>（该字符串在头文件9301行）</p>
-<br /></li>
-<li><p>（有使用ST-link连接单片机时）</p>
-<blockquote>
-<p>魔术棒 -&gt; Debug -&gt; Use 设置为ST-link</p>
-</blockquote>
-</li>
-</ol>
-<br />
-
-<ol start="9">
-<li><p>（有使用ST-link连接单片机时）</p>
-<blockquote>
-<p>Use旁边的Settings -&gt; Flash Download</p>
-</blockquote>
-<p> 勾选Reset and Run</p>
-<br /></li>
-<li><p>尝试编译</p>
-</li>
-</ol>
-<h3 id="STM32容量与型号"><a href="#STM32容量与型号" class="headerlink" title="STM32容量与型号"></a>STM32容量与型号</h3><p><span id="STM32_Capacity_and_model"> &nbsp; </span><br><img src="https://z3.ax1x.com/2021/09/04/hgMyiF.png" alt="hgMyiF.png"></p>
-<hr>
-<h2 id="1-1-GPIO"><a href="#1-1-GPIO" class="headerlink" title="1-1 GPIO"></a>1-1 GPIO</h2><hr>
 
     </div>
 

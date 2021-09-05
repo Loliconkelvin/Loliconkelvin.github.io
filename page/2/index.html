@@ -166,7 +166,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -215,6 +215,93 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/04/26/CSS%E8%A7%84%E8%8C%83%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%A0%BC%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head-portrait.jpg">
+      <meta itemprop="name" content="Loliconkelvin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萝莉控的小窝">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/26/CSS%E8%A7%84%E8%8C%83%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%A0%BC%E5%BC%8F/" class="post-title-link" itemprop="url">CSS规范与基本格式</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-26 20:44:15" itemprop="dateCreated datePublished" datetime="2021-04-26T20:44:15+08:00">2021-04-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-05-17 20:12:29" itemprop="dateModified" datetime="2021-05-17T20:12:29+08:00">2021-05-17</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>CSS规范与基本格式</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/26/CSS%E8%A7%84%E8%8C%83%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%A0%BC%E5%BC%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -690,7 +777,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-06-02 22:23:52" itemprop="dateModified" datetime="2021-06-02T22:23:52+08:00">2021-06-02</time>
+        <time title="修改时间：2021-09-05 23:06:29" itemprop="dateModified" datetime="2021-09-05T23:06:29+08:00">2021-09-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -869,7 +956,7 @@
 <li>数据类型容量从高转到低需要强制类型转换</li>
 <li>注意：<ul>
 <li><span class=red>禁止</span>对布尔值进行转换</li>
-<li>注意内存溢出与精度问题</li>
+<li>注意内存溢出（浮点数转换为整数时、大数字存储）与精度问题（转换为浮点数时）</li>
 </ul>
 </li>
 </ol>
@@ -879,6 +966,101 @@
 <li>类</li>
 <li>接口</li>
 <li>数组</li>
+</ul>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ol>
+<li>说明</li>
+</ol>
+<ul>
+<li>变量即变化的量，可以改变的量</li>
+<li>变量分为三种类型：<ol>
+<li>局部变量<ul>
+<li>即写在函数里面的变量，其作用域为函数范围，随函数出现而出现，随函数消失而消失</li>
+</ul>
+</li>
+<li>实例变量（面向对象）<ul>
+<li>写在类里面，指在一个类里面 <code>某个或多个对象（实例）拥有但值不一定的变量（属性）</code> ：</li>
+<li>在“人”类里面，有sex实例变量，我为man，我的wife为woman。</li>
+</ul>
+</li>
+<li>类变量（面向对象）<ul>
+<li>写在类里面，指整个类的属性，需要使用类.类变量的方式提取或赋值。</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>实例变量和类变量的默认值：<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>整型</td>
+<td>0</td>
+</tr>
+<tr>
+<td>浮点型</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>布尔类型</td>
+<td>false</td>
+</tr>
+<tr>
+<td>其他类型</td>
+<td>null</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>代码规范<ul>
+<li>局部变量命名为首字母小写的驼峰原则v</li>
+</ul>
+</li>
+</ol>
+<h2 id="常量（final）"><a href="#常量（final）" class="headerlink" title="常量（final）"></a>常量（final）</h2><ol>
+<li><p>说明：</p>
+<ul>
+<li>常量声明时即赋值，是一旦声明就不可以改变的量</li>
+</ul>
+</li>
+<li><p>代码规范：</p>
+<ul>
+<li>常量名必须全大写</li>
+<li>多单词使用下划线分隔开</li>
+</ul>
+</li>
+</ol>
+<h2 id="包机制"><a href="#包机制" class="headerlink" title="包机制"></a>包机制</h2><ul>
+<li>包就是文件夹</li>
+<li>一般使用公司（个人）域名的倒置作为包名</li>
+<li>每个类文件第一句就是这个类的路径，表示这个类包含在哪些包里面：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.google.demo</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;halo world&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h3><ul>
+<li>若要使用其他包里面的类，则需要用到导包操作：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.google.demo</span><br><span class="line"></span><br><span class="line"><span class="comment">//包含包com.google.demo02下面的Family类</span></span><br><span class="line"><span class="keyword">import</span> com.google.demo02.Family</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;halo world&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="导包——我全都要"><a href="#导包——我全都要" class="headerlink" title="导包——我全都要"></a>导包——我全都要</h3><ul>
+<li>若要包含某个包里面的所有类，可以使用通配符“ * ”：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.google.demo</span><br><span class="line"></span><br><span class="line"><span class="comment">//包含包com.google.demo02下面的所有类</span></span><br><span class="line"><span class="keyword">import</span> com.google.demo02.*</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="JavaDoc帮助文档"><a href="#JavaDoc帮助文档" class="headerlink" title="JavaDoc帮助文档"></a>JavaDoc帮助文档</h2><ul>
+<li><p>JavaDoc帮助文档可以让其他人快速了解大到一个类小到一个方法的功能</p>
+</li>
+<li><p>使用cmd生成某个类的JavaDoc：</p>
+<ol>
+<li>在该类文件路径下打开cmd（在资源管理器路径栏的路径前加入 <code>cmd + 空格</code> 即可再次路径打开cmd）</li>
+<li>使用下面的指令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javadoc -encoding UTF-8 -charset UTF-8 xxx.java</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>使用IDEA生成类的JavaDoc：</p>
+<blockquote>
+<p>工具栏 -&gt; Tool -&gt; Generate JAVADoc…</p>
+</blockquote>
+<p>  详见<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_29347295/article/details/78635861">Intellij IDEA生成JavaDoc</a></p>
+</li>
 </ul>
 
       
@@ -1142,89 +1324,6 @@
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/04/19/HTML%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA%E8%A7%84%E8%8C%83/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/head-portrait.jpg">
-      <meta itemprop="name" content="Loliconkelvin">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="萝莉控的小窝">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/19/HTML%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA%E8%A7%84%E8%8C%83/" class="post-title-link" itemprop="url">HTML目录创建规范</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-04-19 22:49:00" itemprop="dateCreated datePublished" datetime="2021-04-19T22:49:00+08:00">2021-04-19</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-05-17 20:13:15" itemprop="dateModified" datetime="2021-05-17T20:13:15+08:00">2021-05-17</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="资源目录"><a href="#资源目录" class="headerlink" title="资源目录"></a>资源目录</h2><ul>
-<li>项目目录\rescources\资源分类</li>
-<li>图片：<code>image</code></li>
-</ul>
-
       
     </div>
 

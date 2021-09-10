@@ -23,16 +23,16 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.3.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content=".package_name{         color: blue;         weight: bold;     }   点灯大师">
+<meta name="description" content=".package_name{         color: blue;         weight: bold;     }      .keyword{         color: red;     }   点灯大师">
 <meta property="og:type" content="article">
 <meta property="og:title" content="STM32笔记——单片机">
 <meta property="og:url" content="https://loliconkelvin.github.io/2021/09/04/STM32%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%8D%95%E7%89%87%E6%9C%BA/index.html">
 <meta property="og:site_name" content="萝莉控的小窝">
-<meta property="og:description" content=".package_name{         color: blue;         weight: bold;     }   点灯大师">
+<meta property="og:description" content=".package_name{         color: blue;         weight: bold;     }      .keyword{         color: red;     }   点灯大师">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://z3.ax1x.com/2021/09/04/hgMyiF.png">
 <meta property="article:published_time" content="2021-09-04T04:26:24.000Z">
-<meta property="article:modified_time" content="2021-09-07T13:05:39.762Z">
+<meta property="article:modified_time" content="2021-09-08T15:01:11.975Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="STM32">
 <meta name="twitter:card" content="summary">
@@ -159,7 +159,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-0-%E8%8C%83%E4%BE%8B%E5%B7%A5%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">0-0 范例工程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B7%A5%E7%A8%8B%EF%BC%88%E8%AF%A6%E7%BB%86%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">新建一个工程（详细）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B7%A5%E7%A8%8B%EF%BC%88%E5%9F%BA%E4%BA%8E%E8%8C%83%E4%BE%8B%E5%B7%A5%E7%A8%8B%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">新建一个工程（基于范例工程）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#STM32%E5%AE%B9%E9%87%8F%E4%B8%8E%E5%9E%8B%E5%8F%B7"><span class="nav-number">1.3.</span> <span class="nav-text">STM32容量与型号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0-1-%E7%94%A8USB-TTL%E7%83%A7%E5%BD%95%E8%BD%AF%E4%BB%B6-F103C8T6"><span class="nav-number">2.</span> <span class="nav-text">0-1 用USB-TTL烧录软件(F103C8T6)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-GPIO"><span class="nav-number">3.</span> <span class="nav-text">1-1 GPIO</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-0-%E8%8C%83%E4%BE%8B%E5%B7%A5%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">0-0 范例工程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B7%A5%E7%A8%8B%EF%BC%88%E8%AF%A6%E7%BB%86%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">新建一个工程（详细）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B7%A5%E7%A8%8B%EF%BC%88%E5%9F%BA%E4%BA%8E%E8%8C%83%E4%BE%8B%E5%B7%A5%E7%A8%8B%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">新建一个工程（基于范例工程）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#STM32%E5%AE%B9%E9%87%8F%E4%B8%8E%E5%9E%8B%E5%8F%B7"><span class="nav-number">1.3.</span> <span class="nav-text">STM32容量与型号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0-1-%E7%94%A8USB-TTL%E7%83%A7%E5%BD%95%E8%BD%AF%E4%BB%B6-F103C8T6"><span class="nav-number">2.</span> <span class="nav-text">0-1 用USB-TTL烧录软件(F103C8T6)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-GPIO%E2%80%94%E2%80%94LED%E9%97%AA%E7%83%81"><span class="nav-number">3.</span> <span class="nav-text">1-1 GPIO——LED闪烁</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-LED%E9%97%AA%E7%83%81"><span class="nav-number">3.1.</span> <span class="nav-text">1-1-1 LED闪烁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-%E6%B5%81%E6%B0%B4%E7%81%AF"><span class="nav-number">3.2.</span> <span class="nav-text">1-1-2 流水灯</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-%E8%9C%82%E9%B8%A3%E5%99%A8"><span class="nav-number">3.3.</span> <span class="nav-text">1-1-3 蜂鸣器</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -264,7 +264,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-07 21:05:39" itemprop="dateModified" datetime="2021-09-07T21:05:39+08:00">2021-09-07</time>
+        <time title="修改时间：2021-09-08 23:01:11" itemprop="dateModified" datetime="2021-09-08T23:01:11+08:00">2021-09-08</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -290,6 +290,10 @@
     .package_name{
         color: blue;
         weight: bold;
+    }
+
+    .keyword{
+        color: red;
     }
 </style>
 
@@ -484,8 +488,117 @@
 </li>
 </ol>
 <hr>
-<h2 id="1-1-GPIO"><a href="#1-1-GPIO" class="headerlink" title="1-1 GPIO"></a>1-1 GPIO</h2><hr>
-
+<h2 id="1-1-GPIO——LED闪烁"><a href="#1-1-GPIO——LED闪烁" class="headerlink" title="1-1 GPIO——LED闪烁"></a>1-1 GPIO——LED闪烁</h2><hr>
+<h3 id="1-1-1-LED闪烁"><a href="#1-1-1-LED闪烁" class="headerlink" title="1-1-1 LED闪烁"></a>1-1-1 LED闪烁</h3><ol>
+<li><p>使能IO口时钟</p>
+<ul>
+<li>找到RCC_APB2时钟控制函数（stm32f10x_rcc.h拉到最下面，找693行RCC_APB2PeriphClockCmd）并使用</li>
+<li>右键函数，Go to the definition of the…… 跳转到函数定义</li>
+<li>往上滚动，选择外设（如点亮PA0口则需要使能GPIOA，选择RCC_APB2Periph_GPIOA），放到第一个参数</li>
+<li>第二个参数也可以在定义上方找到，选择Enable，放到第二个参数<br /></li>
+</ul>
+</li>
+<li><p>初始化GPIO</p>
+<ul>
+<li>找到GPIO_init函数（stm32f10x_gpio.h拉到最下面，找351行GPIO_Init）并使用</li>
+<li>右键函数跳转到定义</li>
+<li>第一个参数是GPIOx，x可以是A-G</li>
+<li>第二个参数是一个结构体，先把结构体数据类型复制，粘贴指代码（注意<span class="keyword">不要</span>把指针的星号复制过去）<br /></li>
+<li>定义一个名为GPIO_InitStructure的结构体，将其<span class="keyword">地址</span>作为GPIO_init的第二个参数（<span class="keyword">取地址符&amp;</span>）<ul>
+<li>用“.”引出结构体成员 <code>GPIO_Mode</code> <code>GPIO_Pin</code> <code>GPIO_Speed</code></li>
+</ul>
+</li>
+<li>右键成员跳转到定义，可以看到成员右边的注释：该成员可以是 xxxx_typedef 中的一个值，选中 xxxx_typedef 按 ctrl + f 搜索 -&gt; find next<ul>
+<li>若找到多个定义，选择 class为menber 的结果</li>
+</ul>
+</li>
+<li>上滚找到枚举，复制其中一个作为成员的值<br /></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>GPIO_Mode</p>
+<table>
+<thead>
+<tr>
+<th>成员值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GPIO_Mode_AIN</td>
+<td>模拟输入（Analog In）</td>
+</tr>
+<tr>
+<td>GPIO_Mode_IN_FLOATING</td>
+<td>浮空输入</td>
+</tr>
+<tr>
+<td>GPIO_Mode_IPD</td>
+<td>下拉输入（In Pull Down）</td>
+</tr>
+<tr>
+<td>GPIO_Mode_IPU</td>
+<td>上拉输入（In Pull Up）</td>
+</tr>
+<tr>
+<td>GPIO_Mode_Out_OD</td>
+<td>开漏输出（Out Open Drain）</td>
+</tr>
+<tr>
+<td>GPIO_Mode_Out_PP</td>
+<td>推挽输出（Out Push Pull）</td>
+</tr>
+<tr>
+<td>GPIO_Mode_AF_OD</td>
+<td>复用开漏（Atl Open Drian）</td>
+</tr>
+<tr>
+<td>GPIO_Mode_AF_PP</td>
+<td>复用推挽（Atl Push Pull）</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<ul>
+<li><p>GPIO_Pin<br>  对应想要控制的引脚号，或全部引脚</p>
+</li>
+<li><p>GPIO_Speed<br>  对应速度，一般选择50MHz的</p>
+</li>
+</ul>
+<ol start="3">
+<li><p>GPIO输出函数</p>
+<ul>
+<li><p>GPIO_SetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);<br>  可以将指定组的指定引脚设定为高电平<br>  第一个参数是GPIOx，x可以是A-G<br>  第二个参数是GPIO_Pin_x，n可以是0-15</p>
+<br /></li>
+<li><p>GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);<br>  可以将指定组的指定引脚设定为低电平</p>
+<br /></li>
+<li><p>GPIO_WriteBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, BitAction BitVal);<br>  可以将指定组的指定引脚设定为高/低电平（取决于第三个参数）<br>  第三个参数可以通过赚转到函数定义查看，可以是下面两个值：</p>
+<table>
+<thead>
+<tr>
+<th align="center">值</th>
+<th align="center">电平</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Bit_SET</td>
+<td align="center">高电平</td>
+</tr>
+<tr>
+<td align="center">Bit_RESET</td>
+<td align="center">低电平</td>
+</tr>
+<tr>
+<td align="center"><br /></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="1-1-2-流水灯"><a href="#1-1-2-流水灯" class="headerlink" title="1-1-2 流水灯"></a>1-1-2 流水灯</h3><h3 id="1-1-3-蜂鸣器"><a href="#1-1-3-蜂鸣器" class="headerlink" title="1-1-3 蜂鸣器"></a>1-1-3 蜂鸣器</h3>
     </div>
 
     

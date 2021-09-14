@@ -429,7 +429,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-05-15 12:02:24" itemprop="dateModified" datetime="2021-05-15T12:02:24+08:00">2021-05-15</time>
+        <time title="修改时间：2021-09-12 09:21:11" itemprop="dateModified" datetime="2021-09-12T09:21:11+08:00">2021-09-12</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -777,7 +777,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-07 00:01:47" itemprop="dateModified" datetime="2021-09-07T00:01:47+08:00">2021-09-07</time>
+        <time title="修改时间：2021-09-14 21:53:01" itemprop="dateModified" datetime="2021-09-14T21:53:01+08:00">2021-09-14</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -813,7 +813,8 @@
 <li>说明：<br> 行注释对一行进行注释，适合注释字数少的时候使用</li>
 <li>快速输入：<br> 无</li>
 <li>代码规范：<ul>
-<li>方法内部单行注释，在被注释语句上方另起一行，使用<code>//</code>注释。方法内部 多行注释使用<code>/* */</code>注释，注意与代码对齐。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这里写行注释</span></span><br></pre></td></tr></table></figure></li>
+<li>方法内部单行注释，在被注释语句上方另起一行，使用<code>//</code>注释。方法内部 多行注释使用<code>/* */</code>注释，注意与代码对齐。</li>
+<li>注释后面跟一个空格<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这里写行注释</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ol>
@@ -1038,13 +1039,13 @@
 <h2 id="包机制"><a href="#包机制" class="headerlink" title="包机制"></a>包机制</h2><ul>
 <li>包就是文件夹</li>
 <li>一般使用公司（个人）域名的倒置作为包名</li>
-<li>每个类文件第一句就是这个类的路径，表示这个类包含在哪些包里面：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.google.demo</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;halo world&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>每个类文件第一句就是这个类的路径，表示这个类包含在哪些包里面：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.google.demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;halo world&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h3><ul>
-<li>若要使用其他包里面的类，则需要用到导包操作：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.google.demo</span><br><span class="line"></span><br><span class="line"><span class="comment">//包含包com.google.demo02下面的Family类</span></span><br><span class="line"><span class="keyword">import</span> com.google.demo02.Family</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;halo world&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>若要使用其他包里面的类，则需要用到导包操作：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.google.demo;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 包含包com.google.demo02下面的Family类</span></span><br><span class="line"><span class="keyword">import</span> com.google.demo02.Family;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;halo world&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="导包——我全都要"><a href="#导包——我全都要" class="headerlink" title="导包——我全都要"></a>导包——我全都要</h3><ul>
-<li>若要包含某个包里面的所有类，可以使用通配符“ * ”：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.google.demo</span><br><span class="line"></span><br><span class="line"><span class="comment">//包含包com.google.demo02下面的所有类</span></span><br><span class="line"><span class="keyword">import</span> com.google.demo02.*</span><br></pre></td></tr></table></figure></li>
+<li>若要包含某个包里面的所有类，可以使用通配符“ * ”：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.google.demo;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 包含包com.google.demo02下面的所有类</span></span><br><span class="line"><span class="keyword">import</span> com.google.demo02.*;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="JavaDoc帮助文档"><a href="#JavaDoc帮助文档" class="headerlink" title="JavaDoc帮助文档"></a>JavaDoc帮助文档</h2><ul>
 <li><p>JavaDoc帮助文档可以让其他人快速了解大到一个类小到一个方法的功能</p>
@@ -1063,31 +1064,184 @@
 </li>
 </ul>
 <h2 id="获取输入（Scanner）"><a href="#获取输入（Scanner）" class="headerlink" title="获取输入（Scanner）"></a>获取输入（Scanner）</h2><ol>
-<li>新建Scanner对象以接收输入的数据<ul>
-<li>直接通过补全输入以下语句后会自动包含java.util.Scanner工具包<br><font color = red>新建了一个对象用于接收用户的输入，若有用户输入，则将输入装载进scan对象里</font><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//scan对象会接收用户的输入内容</span></span><br><span class="line">Scanner scan = <span class="keyword">new</span> Scanner(System.in);</span><br></pre></td></tr></table></figure>
+<li><p>新建Scanner对象以接收输入的数据</p>
+<ul>
+<li>直接通过补全输入以下语句后会自动包含java.util.Scanner工具包<br><span class="red">新建了一个对象用于接收用户的输入，若有用户输入，则将输入装载进scan对象里</span><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// scan对象会接收用户的输入内容</span></span><br><span class="line">Scanner scan = <span class="keyword">new</span> Scanner(System.in);</span><br></pre></td></tr></table></figure>
 <br /></li>
 </ul>
 </li>
+<li><p>关闭Scanner（<span class="red">重要</span>）</p>
+</li>
 </ol>
 <ul>
-<li><p>判断是否有输入——hasNext()（非必须）</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(scan.hasNext())&#123;</span><br><span class="line">    <span class="comment">//do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>hasNext()方法会<font color = red>检测scan对象是否为非空字符，但并不会将scan里面的内容提取出来</font><br>若scan里面不是非空字符，则返回true<br>若scan里面是非空字符，则阻塞方法，等待用户输入</li>
-<li><font color = red>注意：<br>  使用检测之后一定要用提取将scan对象里的内容拿出来，否则hasNext会一直返回true</font><br /></li>
-</ul>
+<li><p><span class="red">每次使用完Scanner后请关闭Scanner</span></p>
 </li>
-<li><p>判断是否有输入——hasNextLine() （非必须）</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(scan.hasNextLine())&#123;</span><br><span class="line">    <span class="comment">//do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>hasNext()方法会<font color = red>检测scan对象是否有一行（包括空行），但并不会将scan里面的内容提取出来</font></li>
-</ul>
-</li>
+<li><p>可以在新建好Scanner的对象之后先写上关闭，然后在新建和关闭中间写操作</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scan.close();</span><br></pre></td></tr></table></figure>
+<br /></li>
 </ul>
 <ol start="3">
+<li>判断是否有输入（非必须）</li>
+</ol>
+<ul>
+<li><p>hasNext()</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(scan.hasNext())&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>hasNext()方法会<span class="red">检测scan对象是否为非空字符，但并不会将scan里面的内容提取出来</span><br>若scan里面不是非空字符，则返回true<br>若scan里面是非空字符，则阻塞方法，等待用户输入</li>
+<li><span class="red">注意：<br>  使用检测之后一定要用提取将scan对象里的内容拿出来，否则hasNext会一直返回true</span><br /></li>
+</ul>
+</li>
+<li><p>hasNextLine()</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(scan.hasNextLine())&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>hasNext()方法会<span class="red">检测scan对象是否有一行（包括空行），但并不会将scan里面的内容提取出来</span><br /></li>
+</ul>
+</li>
+</ul>
+<ol start="4">
 <li>提取（使用）输入的数据</li>
 </ol>
+<ul>
+<li><p>使用 Scan（Scanner对象）.next() 即可提取里面的内容，里面的值可以直接使用也可以赋给一个变量</p>
+<ul>
+<li>注意：next在遇到空格（包括Tab）的时候会视为结束符，并且会把有效字符前面的空格过滤掉<br>  （或许可以用来接收一个字符之类的，只需要规定字符后面有空格，如接收2 + 3的“ + ”）</li>
+</ul>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company.demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner scan = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;你输入的是：&quot;</span> + scan.next());</span><br><span class="line">        scan.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输入：   hahah hhhhhh（前面有空格）</span></span><br><span class="line"><span class="comment">// 输出：你输入的是hahah</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 输入：hahahah hhhhhhh</span></span><br><span class="line"><span class="comment">// 输出：你输入的是hahahah</span></span><br></pre></td></tr></table></figure></li>
+<li><p>使用 Scan（Scanner对象）.nextLine() 即可提取Scan中的一整行内容</p>
+<ul>
+<li>注意：nextLine的结束符只能是Enter，因此他会把回车前面的内容全部提取，它可以接收空格</li>
+</ul>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company.demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner scan = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;你输入的是：&quot;</span> + scan.nextLine());</span><br><span class="line">        scan.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输入：   hahah hhhhhh（前面有空格）</span></span><br><span class="line"><span class="comment">// 输出：你输入的是   hahah hhhhhh</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="带有判断性的检测-只接收指定格式的提取"><a href="#带有判断性的检测-只接收指定格式的提取" class="headerlink" title="带有判断性的检测/只接收指定格式的提取"></a>带有判断性的检测/只接收指定格式的提取</h3><ul>
+<li><p>整型：</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company.demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner scan = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> num01;</span><br><span class="line">        <span class="keyword">float</span> num02;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;请输入整数：&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (scan.hasNextInt()) &#123;</span><br><span class="line">            num01 = scan.nextInt();</span><br><span class="line">            System.out.println(<span class="string">&quot;你输入的是：&quot;</span> + num01);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        scan.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>同样支持hasNextxxx与nextxxx的有：<br>  Float byte short double等，但String没有，因为它不是基本数据类型<br>  其中double和float可以兼容检测int</p>
+</li>
+<li><p>hasNextxxx的判断：hasNextxxx与hasNext不同，它检测到了不同类型的值不会等待用户输入一个正确的值，而是返回false</p>
+</li>
+<li><p>一个接收数据并求平均数的程序：</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company.demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner scan = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> i;</span><br><span class="line">        <span class="keyword">double</span> total = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">double</span> result;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; scan.hasNextDouble(); i++) &#123;</span><br><span class="line">            total += scan.nextDouble();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">0</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;未输入数字&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        result = total / i;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;result = &quot;</span> + result);</span><br><span class="line"></span><br><span class="line">        scan.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="避免死循环"><a href="#避免死循环" class="headerlink" title="避免死循环"></a>避免死循环</h3><p>当遇到scan（Scanner对象）造成的死循环时，多数是因为scan里面的数据没有被提取出来，只需要使用<code>scan.next();</code>提取但不使用里面的内容即可。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="方法的组成"><a href="#方法的组成" class="headerlink" title="方法的组成"></a>方法的组成</h3><ul>
+<li>方法，就是函数<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">修饰符 返回值类型 方法名(参数类型 参数名) &#123;</span><br><span class="line">    </span><br><span class="line">    方法体</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> 返回值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h3><ul>
+<li>Java允许同名但<ol>
+<li>不同参数个数<br>或</li>
+<li>参数类型不同<br>的函数</li>
+</ol>
+<ul>
+<li>返回值类型没有要求，可以同可以不同</li>
+</ul>
+</li>
+</ul>
+<h3 id="命令行传参（了解）-CMD编译-执行操作"><a href="#命令行传参（了解）-CMD编译-执行操作" class="headerlink" title="命令行传参（了解） + CMD编译 + 执行操作"></a>命令行传参（了解） + CMD编译 + 执行操作</h3><ul>
+<li>命令行传参就是使用CMD等终端控制java虚拟机运行程序时在命令行后面加入的参数，如：  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java com.google.demo.xxx hi hello</span><br><span class="line">hi hello会被传入args数组</span><br></pre></td></tr></table></figure></li>
+<li>传入的参数会保存在main方法的参数String[] args数组里，可以通过遍历数组等方法对其进行处理</li>
+</ul>
+<h4 id="CMD编译"><a href="#CMD编译" class="headerlink" title="CMD编译"></a>CMD编译</h4><ul>
+<li>在.java文件的同一文件夹下：（文件名与后缀不能错，大小写区分）<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javac xxx.java</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="CMD执行"><a href="#CMD执行" class="headerlink" title="CMD执行"></a>CMD执行</h4><ul>
+<li>在src文件夹下：（文件名和包名不能错，无后缀，如有需要可在后面加参数）<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java com.google.demo.xxx</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="可变参"><a href="#可变参" class="headerlink" title="可变参"></a>可变参</h3><h4 id="可变参的声明"><a href="#可变参的声明" class="headerlink" title="可变参的声明"></a>可变参的声明</h4><ul>
+<li><p>要实现可变参数，需要在参数类型后加三个点</p>
+</li>
+<li><p><span class="red">注意：</span>一个方法只能有一个可变参数，并且要放在普通参数的最后</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">methodName</span><span class="params">(<span class="keyword">int</span> number0, <span class="keyword">double</span>... number)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// TODO</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>传入至可变参的值会存入一个与可变参的参数名一样的数组里面，可以通过数组遍历等方法提取</p>
+</li>
+</ul>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="数组的特点"><a href="#数组的特点" class="headerlink" title="数组的特点"></a>数组的特点</h3><ol>
+<li>长度确定，一旦分配了内存就不可以改变长度</li>
+<li>其成员必须是相同类型（物以群分，这就是数组啊）</li>
+<li>数组的类型可以是任何类型，包括基本类型和引用类型（自己创建的类咯）</li>
+<li>数组本身就是对象，Java的对象是在堆中的（因为是new出来的），因此无论是原始类型还是引用类型，<span class="red">数组对象是保存在堆中的</span><ul>
+<li>这里关于数组对象保存在堆中，下面又说numbers是变量需要进栈怎么理解呢：<br>只能是说numbers是一个变量，其指向的是一个在堆中占用了内存的数组对象，因此下面地址=0x0011那个框才是数组对象</li>
+</ul>
+</li>
+</ol>
+<h3 id="数组的创建"><a href="#数组的创建" class="headerlink" title="数组的创建"></a>数组的创建</h3><ul>
+<li>关于动态/静态初始化：<br>  动态初始化数组就是先分配内存（指定长度）（并且自动给每个成员赋默认值），然后再给每个成员赋值<br>  静态初始化数组就是一开始就往数组里面塞成员，塞多少个，长度就是多少</li>
+</ul>
+<ol>
+<li>声明 -&gt; 分配空间 -&gt; 赋值（动态初始化）</li>
+</ol>
+<ul>
+<li>没有赋值的元素默认为0或者null</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明数组</span></span><br><span class="line"><span class="keyword">int</span>[] numbers;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 分配空间</span></span><br><span class="line">numbers = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 赋值</span></span><br><span class="line"><span class="comment">// write code here</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>声明并分配空间 -&gt; 赋值（动态初始化）<span class="red">（常用）</span></li>
+</ol>
+<ul>
+<li>没有赋值的元素默认为0或者null</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明并分配空间 new int[10].var</span></span><br><span class="line"><span class="keyword">int</span>[] number = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 赋值</span></span><br><span class="line"><span class="comment">// write code here</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>声明、分配空间并赋值（静态初始化）</li>
+</ol>
+<ul>
+<li>给了多少值就分配多少空间，并且在给了值的情况下不能再指定数组长度</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明并分配空间并赋值</span></span><br><span class="line"><span class="keyword">int</span>[] number = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">10</span> ,<span class="number">20</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>C语言的遗产（静态初始化）（效果一样但不建议使用）</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] number = &#123;<span class="number">10</span>, <span class="number">30</span>, <span class="number">23</span>&#125;;</span><br><span class="line"><span class="comment">// 或</span></span><br><span class="line"><span class="keyword">int</span> number2[] = &#123;<span class="number">10</span>, <span class="number">30</span>, <span class="number">23</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="关于数组创建的内存分析"><a href="#关于数组创建的内存分析" class="headerlink" title="关于数组创建的内存分析"></a>关于数组创建的内存分析</h3><h4 id="堆与栈"><a href="#堆与栈" class="headerlink" title="堆与栈"></a>堆与栈</h4><ul>
+<li>栈<br>  存储局部变量（如定义在方法内的变量、for循环的变量），更新速度快（局部变量生命周期短，一旦变量在栈的生命周期结束即马上被释放）</li>
+<li>堆<br>  存放对象（如String类型、用到new创建的任何对象），当一个实体没有被 引用数据类型（详见<a href="#AllocateSpace">分配空间</a> 指向的时候即视为垃圾，会不定时被Java垃圾回收机制回收</li>
+</ul>
+<h4 id="数组在内存中被创建的过程"><a href="#数组在内存中被创建的过程" class="headerlink" title="数组在内存中被创建的过程"></a>数组在内存中被创建的过程</h4><ul>
+<li>当我们执行下面一串代码时：  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] number;</span><br><span class="line">        number = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">        number = <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol>
+<li><p>进栈<br> 当执行 <code>int[] number;</code> 时，即新增了一个局部变量，因此需要将局部变量进栈</p>
+ <br />
+
+<p> 要存储局部变量，要先将包含该局部变量的方法线进栈,然后将局部变量进栈。</p>
+</li>
+</ol>
+<p><img src="https://z3.ax1x.com/2021/09/14/4Ah7He.png" alt="4Ah7He.png"></p>
+<ol start="2">
+<li><span id="AllocateSpace">分配空间</span><br> 当执行 <code>number = new int[10];</code> 时，即确定了数组的长度，该语句为new语句，意思是需要在堆中给new出来的对象分配一块内存。而局部变量number则是指向这块内存的一个引用数据类型（是你！指针！）</li>
+</ol>
+<p><img src="https://z3.ax1x.com/2021/09/14/4AhbAH.png" alt="4AhbAH.png"></p>
+<ul>
+<li>所以 <code>int[] number = new number[10];</code> 只是将这两句话缩写一下罢了<br /></li>
+</ul>
+<ol start="3">
+<li>取消指向<br> 当执行 <code>number = null;</code> 时，引用数据类型number被置空，指向虚无，则原来被number指向的堆中地址为0x0011的空间已经没有变量指向它，因此它无法被引用，无法再被使用，也就成为了垃圾，会被Java垃圾回收机制回收。</li>
+</ol>
+<p><img src="https://z3.ax1x.com/2021/09/14/4A5Nzq.png" alt="4A5Nzq.png"></p>
+<h3 id="数组常见异常"><a href="#数组常见异常" class="headerlink" title="数组常见异常"></a>数组常见异常</h3><p>ArrayIndexOutOfBoundsException:数组下标越界<br>意思是某处出租下标搞错了，如一个数组num有9个成员，代码确有一句 <code>num[9] = 10;</code> （因为数组从0开始数，因此9个元素应该是0-8，不存在下标为9的元素）</p>
+<h3 id="几种基本的数组的使用"><a href="#几种基本的数组的使用" class="headerlink" title="几种基本的数组的使用"></a>几种基本的数组的使用</h3><h4 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 声明 + 定义</span></span><br><span class="line">    <span class="keyword">int</span>[] numbers = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 赋值</span></span><br><span class="line">    <span class="comment">// write code here</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历 numbers.fori 不过编译器一般会建议使用增强型for</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numbers.length; i++) &#123;</span><br><span class="line">        System.out.println(numbers[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 声明 + 定义</span></span><br><span class="line">    <span class="keyword">int</span>[] numbers = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 赋值</span></span><br><span class="line">    <span class="comment">// write code here</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i :</span><br><span class="line">            numbers) &#123;</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="数组求和"><a href="#数组求和" class="headerlink" title="数组求和"></a>数组求和</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组求和</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numbers.length; i++) &#123;</span><br><span class="line">    sum += numbers[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出</span></span><br><span class="line">System.out.println(sum);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组求和</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i :</span><br><span class="line">        numbers) &#123;</span><br><span class="line">    sum += i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出</span></span><br><span class="line">System.out.println(sum);</span><br></pre></td></tr></table></figure>
+
+<h4 id="找最大值（打擂台大法好）"><a href="#找最大值（打擂台大法好）" class="headerlink" title="找最大值（打擂台大法好）"></a>找最大值（打擂台大法好）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> max = numbers[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 找最大值</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> num :</span><br><span class="line">        numbers) &#123;</span><br><span class="line">    <span class="keyword">if</span> (num &gt; max)&#123;</span><br><span class="line">        max = num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">System.out.println(max);</span><br></pre></td></tr></table></figure>
+
+<h4 id="数组作为参数传递"><a href="#数组作为参数传递" class="headerlink" title="数组作为参数传递"></a>数组作为参数传递</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">arraysPrint</span><span class="params">(<span class="keyword">int</span>[] arrays)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arrays.length; i++) &#123;</span><br><span class="line">        System.out.println(arrays[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="数组作为返回值（反转数组）"><a href="#数组作为返回值（反转数组）" class="headerlink" title="数组作为返回值（反转数组）"></a>数组作为返回值（反转数组）</h4><ul>
+<li><p>我写出来的智障</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] arraysReversal(<span class="keyword">int</span>[] arrays) &#123;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">if</span> (arrays.length % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (arrays.length / <span class="number">2</span>) - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            temp = arrays[i];</span><br><span class="line">            arrays[i] = arrays[arrays.length - <span class="number">1</span> - i];</span><br><span class="line">            arrays[arrays.length - <span class="number">1</span> - i] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ((arrays.length - <span class="number">1</span>) / <span class="number">2</span>) - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            temp = arrays[i];</span><br><span class="line">            arrays[i] = arrays[arrays.length - <span class="number">1</span> - i];</span><br><span class="line">            arrays[arrays.length - <span class="number">1</span> -i] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arrays;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>为什么要执着于在原数组里面改呢？新建一个数组不挺好？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] arraysReversal(<span class="keyword">int</span>[] arrays) &#123;</span><br><span class="line">    <span class="keyword">int</span>[] tempArray = <span class="keyword">new</span> <span class="keyword">int</span>[arrays.length];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = tempArray.length - <span class="number">1</span>; i &lt; arrays.length; i++, j--) &#123;</span><br><span class="line">        tempArray[j] = arrays[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> tempArray;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
 
       
     </div>

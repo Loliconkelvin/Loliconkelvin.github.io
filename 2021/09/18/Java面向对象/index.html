@@ -23,18 +23,23 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.3.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content=".blue{     color:blue; }  .red{     color:red; }   Java面向对象">
+<meta name="description" content=".red{     color:red; }   Java面向对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java面向对象">
 <meta property="og:url" content="https://loliconkelvin.github.io/2021/09/18/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="萝莉控的小窝">
-<meta property="og:description" content=".blue{     color:blue; }  .red{     color:red; }   Java面向对象">
+<meta property="og:description" content=".red{     color:red; }   Java面向对象">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/21/4YElbq.png">
+<meta property="og:image" content="https://iknow-pic.cdn.bcebos.com/cdbf6c81800a19d865fd770a3efa828ba71e46c7">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/21/4tut9P.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2013/12/exception-hierarchy.png">
 <meta property="article:published_time" content="2021-09-18T12:29:38.000Z">
-<meta property="article:modified_time" content="2021-09-19T14:15:13.485Z">
+<meta property="article:modified_time" content="2021-09-24T02:24:28.237Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://z3.ax1x.com/2021/09/21/4YElbq.png">
 
 
 <link rel="canonical" href="https://loliconkelvin.github.io/2021/09/18/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
@@ -157,7 +162,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">面向对象的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Static%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">Static静态方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%80%BC%E4%BC%A0%E9%80%92%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92%EF%BC%88%E4%BC%A0%E6%8C%87%E9%92%88%EF%BC%9F%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">值传递和引用传递（传指针？）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="nav-number">4.</span> <span class="nav-text">对象的创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">构造器（重要）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">5.1.</span> <span class="nav-text">构造方法的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">5.2.</span> <span class="nav-text">构造方法的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%8F%82%E6%95%B0%E6%9E%84%E9%80%A0%E5%99%A8%EF%BC%88%E6%9E%84%E9%80%A0%E5%99%A8%E9%87%8D%E8%BD%BD%EF%BC%89%EF%BC%88%E6%9C%89%E5%8F%82%E6%9E%84%E9%80%A0%EF%BC%89"><span class="nav-number">5.3.</span> <span class="nav-text">有参数构造器（构造器重载）（有参构造）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90%E6%9C%89%E5%8F%82-%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8"><span class="nav-number">5.4.</span> <span class="nav-text">快速生成有参&#x2F;无参构造器</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">面向对象的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Static%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">Static静态方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%80%BC%E4%BC%A0%E9%80%92%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92%EF%BC%88%E4%BC%A0%E6%8C%87%E9%92%88%EF%BC%9F%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">值传递和引用传递（传指针？）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="nav-number">4.</span> <span class="nav-text">对象的创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83"><span class="nav-number">5.</span> <span class="nav-text">类与对象创建的命名规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">构造器（重要）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">6.1.</span> <span class="nav-text">构造方法的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">6.2.</span> <span class="nav-text">构造方法的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%8F%82%E6%95%B0%E6%9E%84%E9%80%A0%E5%99%A8%EF%BC%88%E6%9E%84%E9%80%A0%E5%99%A8%E9%87%8D%E8%BD%BD%EF%BC%89%EF%BC%88%E6%9C%89%E5%8F%82%E6%9E%84%E9%80%A0%EF%BC%89"><span class="nav-number">6.3.</span> <span class="nav-text">有参数构造器（构造器重载）（有参构造）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90%E6%9C%89%E5%8F%82-%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8"><span class="nav-number">6.4.</span> <span class="nav-text">快速生成有参&#x2F;无参构造器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%81%E8%A3%85"><span class="nav-number">7.</span> <span class="nav-text">封装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%81%E6%9C%89"><span class="nav-number">7.1.</span> <span class="nav-text">私有</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#get-set"><span class="nav-number">7.2.</span> <span class="nav-text">get&#x2F;set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Getter"><span class="nav-number">7.3.</span> <span class="nav-text">Getter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Setter"><span class="nav-number">7.4.</span> <span class="nav-text">Setter</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">8.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E7%BB%A7%E6%89%BF%E6%A0%91"><span class="nav-number">8.1.</span> <span class="nav-text">打开继承树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A3%9F%E7%89%A9%E9%93%BE%E7%9A%84%E9%A1%B6%E7%AB%AFObject%E7%B1%BB"><span class="nav-number">8.2.</span> <span class="nav-text">食物链的顶端Object类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Super"><span class="nav-number">9.</span> <span class="nav-text">Super</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E7%94%A8%E7%88%B6%E7%B1%BB%E7%9A%84%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8"><span class="nav-number">9.1.</span> <span class="nav-text">调用父类的无参构造器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E7%94%A8%E7%88%B6%E7%B1%BB%E7%9A%84%E6%9C%89%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8"><span class="nav-number">9.2.</span> <span class="nav-text">调用父类的有参构造器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#this"><span class="nav-number">10.</span> <span class="nav-text">this</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E5%86%99"><span class="nav-number">11.</span> <span class="nav-text">方法的重写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99%E7%9A%84%E8%A6%81%E6%B1%82"><span class="nav-number">11.1.</span> <span class="nav-text">方法重写的要求</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%91%E4%B8%8A%E8%BD%AC%E5%9E%8B%E2%80%94%E2%80%94%E6%9F%90%E7%A7%8D%E8%9B%8B%E7%96%BC%E7%9A%84%E5%86%99%E6%B3%95%EF%BC%88%E8%BF%99%E9%87%8C%E5%85%88%E6%8F%90%E4%B8%80%E4%B8%8B%EF%BC%89"><span class="nav-number">11.1.1.</span> <span class="nav-text">向上转型——某种蛋疼的写法（这里先提一下）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E6%80%81%EF%BC%88%E5%90%8C%E4%B8%80%E4%B8%AA%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%A4%9A%E7%A7%8D%E4%B8%8D%E5%90%8C%E8%A1%A8%E7%8E%B0%E5%BD%A2%E5%BC%8F%EF%BC%89"><span class="nav-number">12.</span> <span class="nav-text">多态（同一个行为的多种不同表现形式）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#instanceof%EF%BC%88%E5%88%A4%E6%96%AD%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%BB%8E%E5%B1%9E%E4%BA%8E%E6%9F%90%E4%B8%AA%E7%B1%BB%EF%BC%89"><span class="nav-number">13.</span> <span class="nav-text">instanceof（判断对象是否从属于某个类）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E4%B8%8D%E9%80%9A%E8%BF%87"><span class="nav-number">13.1.</span> <span class="nav-text">编译不通过</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%BB%A5%E4%BD%BF%E7%94%A8%E5%AD%90%E7%B1%BB%E7%89%B9%E6%9C%89%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%88%E7%88%B6%E4%BA%B2%E8%A3%85%E5%84%BF%E5%AD%90%EF%BC%89%EF%BC%88%E5%AE%89%E5%85%A8%E6%93%8D%E4%BD%9C%EF%BC%89"><span class="nav-number">14.</span> <span class="nav-text">强制类型转换以使用子类特有的方法（父亲装儿子）（安全操作）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%EF%BC%88%E5%8D%B1%E9%99%A9%E6%93%8D%E4%BD%9C%EF%BC%89"><span class="nav-number">15.</span> <span class="nav-text">自动类型转换（危险操作）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%BB%A3%E7%A0%81%E5%9D%97%EF%BC%88%E5%A4%84%E5%A5%B3%E4%BB%A3%E7%A0%81%E5%9D%97%EF%BC%88bushi%EF%BC%89%EF%BC%89"><span class="nav-number">16.</span> <span class="nav-text">静态代码块（处女代码块（bushi））</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BF%E5%90%8D%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">17.</span> <span class="nav-text">匿名代码块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%EF%BC%88abstract%EF%BC%89%EF%BC%88%E9%9D%9E%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">18.</span> <span class="nav-text">抽象类和抽象方法（abstract）（非重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="nav-number">18.1.</span> <span class="nav-text">抽象类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%AD%E7%9A%84%E6%9E%84%E9%80%A0%E5%99%A8"><span class="nav-number">18.1.1.</span> <span class="nav-text">抽象类中的构造器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="nav-number">18.2.</span> <span class="nav-text">抽象方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3"><span class="nav-number">19.</span> <span class="nav-text">接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E9%87%8C%E7%9A%84%E5%B8%B8%E9%87%8F%EF%BC%88%E4%B8%8D%E5%BB%BA%E8%AE%AE%E8%BF%99%E4%B9%88%E5%81%9A%EF%BC%89"><span class="nav-number">19.1.</span> <span class="nav-text">接口里的常量（不建议这么做）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E7%B1%BB"><span class="nav-number">20.</span> <span class="nav-text">实现类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%A4%9A%E4%B8%AA%E6%8E%A5%E5%8F%A3%E4%BB%A5%E5%AE%9E%E7%8E%B0%E5%A4%9A%E7%BB%A7%E6%89%BF"><span class="nav-number">20.1.</span> <span class="nav-text">实现多个接口以实现多继承</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB%EF%BC%88%E7%B1%BB%E7%9A%84%E5%A5%97%E5%A8%83%EF%BC%89"><span class="nav-number">21.</span> <span class="nav-text">内部类（类的套娃）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E5%91%98%E5%86%85%E9%83%A8%E7%B1%BB"><span class="nav-number">21.1.</span> <span class="nav-text">成员内部类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB%E5%AE%9E%E4%BE%8B%E5%8C%96"><span class="nav-number">21.2.</span> <span class="nav-text">内部类实例化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%86%85%E9%83%A8%E7%B1%BB"><span class="nav-number">21.3.</span> <span class="nav-text">静态内部类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E5%86%85%E9%83%A8%E7%B1%BB"><span class="nav-number">21.4.</span> <span class="nav-text">局部内部类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BF%E5%90%8D%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="nav-number">21.5.</span> <span class="nav-text">匿名对象的创建</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8"><span class="nav-number">22.</span> <span class="nav-text">异常</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#try%EF%BC%88%E8%AF%95%E8%BF%90%E8%A1%8C-%E7%9B%91%E8%A7%86%E5%99%A8%EF%BC%89"><span class="nav-number">22.1.</span> <span class="nav-text">try（试运行&#x2F;监视器）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#catch%EF%BC%88%E5%BC%82%E5%B8%B8%E6%8D%95%E8%8E%B7%EF%BC%89"><span class="nav-number">22.2.</span> <span class="nav-text">catch（异常捕获）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E9%87%8D%E6%8D%95%E8%8E%B7"><span class="nav-number">22.2.1.</span> <span class="nav-text">多重捕获</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E8%8C%83%E5%9B%B4"><span class="nav-number">22.2.2.</span> <span class="nav-text">异常的范围</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#finally%EF%BC%88%E5%96%84%E5%90%8E%E5%B7%A5%E4%BD%9C%EF%BC%89"><span class="nav-number">22.3.</span> <span class="nav-text">finally（善后工作）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#throw%EF%BC%88%E4%B8%BB%E5%8A%A8%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8%E5%AF%B9%E8%B1%A1%E5%B9%B6%E5%9C%A8%E6%96%B9%E6%B3%95%E9%87%8C%E5%A4%84%E7%90%86%EF%BC%89"><span class="nav-number">22.4.</span> <span class="nav-text">throw（主动抛出异常对象并在方法里处理）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#throws%EF%BC%88%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8%E5%AF%B9%E8%B1%A1%E5%88%B0%E6%96%B9%E6%B3%95%E5%A4%96%EF%BC%89"><span class="nav-number">22.5.</span> <span class="nav-text">throws（抛出异常对象到方法外）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8"><span class="nav-number">22.6.</span> <span class="nav-text">自定义异常</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -172,7 +177,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -262,7 +267,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-19 22:15:13" itemprop="dateModified" datetime="2021-09-19T22:15:13+08:00">2021-09-19</time>
+        <time title="修改时间：2021-09-24 10:24:28" itemprop="dateModified" datetime="2021-09-24T10:24:28+08:00">2021-09-24</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -285,10 +290,6 @@
     
     <div class="post-body" itemprop="articleBody">
         <style>
-.blue{
-    color:blue;
-}
-
 .red{
     color:red;
 }
@@ -354,6 +355,11 @@
 <h2 id="对象的创建"><a href="#对象的创建" class="headerlink" title="对象的创建"></a>对象的创建</h2><ul>
 <li>使用 <code>new + 类名()</code> 创建一个类的实例，会返回一个对象。</li>
 </ul>
+<h2 id="类与对象创建的命名规范"><a href="#类与对象创建的命名规范" class="headerlink" title="类与对象创建的命名规范"></a>类与对象创建的命名规范</h2><ul>
+<li><span class="red">类名使用 首字母大写 的驼峰命名规则</span></li>
+<li><span class="red">成员变量、局部变量使用 首字母小写 的驼峰命名规则</span></li>
+<li><span class="red">方法名、形式参数名使用 首字母小写 的驼峰命名规则</span></li>
+</ul>
 <h2 id="构造器（重要）"><a href="#构造器（重要）" class="headerlink" title="构造器（重要）"></a>构造器（重要）</h2><ul>
 <li>一个类即使什么都不写，也会默认有一个构造方法</li>
 </ul>
@@ -365,10 +371,14 @@
 <li>使用 <code>new</code> 关键字新建对象，本质就是在调用构造方法</li>
 </ul>
 <ol>
-<li>设定初始值。与一个程序中的Main方法一样，进入一个类并new一个对象之后，马上就会执行这个方法，因此可以在这里设定一些属性的初始值</li>
+<li><s>设定初始值。与一个程序中的Main方法一样，进入一个类并new一个对象之后，马上就会执行这个方法，因此可以在这里设定一些属性的初始值</s></li>
 </ol>
+<ul>
+<li><span class="red">构造方法内禁止放入任何业务逻辑，若有初始化值，放入Init方法中</span></li>
+</ul>
 <h3 id="有参数构造器（构造器重载）（有参构造）"><a href="#有参数构造器（构造器重载）（有参构造）" class="headerlink" title="有参数构造器（构造器重载）（有参构造）"></a>有参数构造器（构造器重载）（有参构造）</h3><ul>
 <li><span class="red">一旦定义了有参构造，无参构造也必须写上，而且无参构造要在有参构造前面</span></li>
+<li><span class="red">若定义了有参构造，不写无参构造，则无参构造失效</span></li>
 <li>定义了有参构造之后，可以在new对象的时候传入参数</li>
 </ul>
 <h3 id="快速生成有参-无参构造器"><a href="#快速生成有参-无参构造器" class="headerlink" title="快速生成有参/无参构造器"></a>快速生成有参/无参构造器</h3><ul>
@@ -379,6 +389,309 @@
 </ol>
 </li>
 </ul>
+<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><ul>
+<li><p>接口往往是分享，而参数却常常隐藏。 ——8848钛合金代码</p>
+</li>
+<li><p>程序编写追求“高内聚，低耦合”，指类内部的细节操作应该由类自己完成，不允许外部干涉，只暴露少量的方法供外部使用</p>
+</li>
+</ul>
+<h3 id="私有"><a href="#私有" class="headerlink" title="私有"></a>私有</h3><ul>
+<li>使用 <code>private</code> 修饰符给 属性 或 方法 设置为私有</li>
+</ul>
+<h3 id="get-set"><a href="#get-set" class="headerlink" title="get/set"></a>get/set</h3><ul>
+<li>get/set的意义在于给外部提供一些可以操作这个属性的方法，这个方法肯定为public</li>
+<li>getter和setter就专心做取值和设定值的工作，<span class="red">不建议在getter和setter里面加入逻辑语句（如if else，switch等）</span></li>
+</ul>
+<h3 id="Getter"><a href="#Getter" class="headerlink" title="Getter"></a>Getter</h3><ul>
+<li><p>获取该对象私有属性的值</p>
+</li>
+<li><p>注意点：</p>
+<ol>
+<li>该方法一定为public</li>
+<li>你都叫Getter了，怎么能没有返回值呢？</li>
+<li>方法的命名应该是 <code>get + 变量名</code> ，并且遵循驼峰命名</li>
+<li>若不是静态变量的Getter，返回值那边要加this</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Setter"><a href="#Setter" class="headerlink" title="Setter"></a>Setter</h3><ul>
+<li><p>设定该对象私有属性的值</p>
+</li>
+<li><p>注意点：</p>
+<ol>
+<li>该方法一定为public</li>
+<li>你都叫Setter了，不传个参数过去你set个寂寞？</li>
+<li>没有返回值</li>
+<li>方法的命名应该是 <code>set + 变量名</code> ，并遵循驼峰命名</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ul>
+<li><p>使用：<code>子类 extends 父类</code> 以继承（复制）父类的所有 <span class="red">public</span> 属性和方法</p>
+</li>
+<li><p>一般属性都是private的，因为封装</p>
+</li>
+<li><p>Java使能单继承，不可以多继承（一个儿子一个爸，但一个爸不一定只有一个儿子）</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Daughter</span> <span class="keyword">extends</span> <span class="title">Wife</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="打开继承树"><a href="#打开继承树" class="headerlink" title="打开继承树"></a>打开继承树</h3><ul>
+<li><p>使用 <code>ctrl + H</code> 打开继承树<br><img src="https://z3.ax1x.com/2021/09/21/4YElbq.png" alt="4YElbq.png"></p>
+</li>
+<li><p>注意点：</p>
+<ol>
+<li>继承树并非实时刷新，修改继承关系后可以点击Scope：All右边的刷新按钮刷新</li>
+</ol>
+</li>
+</ul>
+<h3 id="食物链的顶端Object类"><a href="#食物链的顶端Object类" class="headerlink" title="食物链的顶端Object类"></a>食物链的顶端Object类</h3><ul>
+<li>在Java中所有的类都默认直接或间接地继承Object类</li>
+</ul>
+<h2 id="Super"><a href="#Super" class="headerlink" title="Super"></a>Super</h2><ul>
+<li>使用 <code>super.属性</code> 或 <code>super.方法名</code> 可以调用父类的 <span class="red">公共</span> 属性和方法</li>
+</ul>
+<h3 id="调用父类的无参构造器"><a href="#调用父类的无参构造器" class="headerlink" title="调用父类的无参构造器"></a>调用父类的无参构造器</h3><ul>
+<li><p>在new子类的时候，默认会执行子类的构造器，而在子类的构造器中，默认隐藏了一句 super() 来调用父类的构造器</p>
+</li>
+<li><p><span class="red">若要在子类构造器中写上 super() ，必须写在子类构造器的第一行</span></p>
+</li>
+</ul>
+<h3 id="调用父类的有参构造器"><a href="#调用父类的有参构造器" class="headerlink" title="调用父类的有参构造器"></a>调用父类的有参构造器</h3><ul>
+<li>在子类的有参构造第一行使用 <code>super(参数);</code>， super中的参数 和 子类的有参构造的参数 必须要和 父类构造的形参 相同</li>
+</ul>
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><ul>
+<li>使用 <code>this.属性</code> 或 <code>this.方法名</code> 可以调用本类的属性和方法（无论公共或私有）</li>
+</ul>
+<h2 id="方法的重写"><a href="#方法的重写" class="headerlink" title="方法的重写"></a>方法的重写</h2><ul>
+<li><p>可以重写的方法是：</p>
+<ol>
+<li>公有的/保护的（如果是私有，连继承都继承不过来）</li>
+<li>非静态的</li>
+<li>非常量方法（final）</li>
+</ol>
+</li>
+<li><p>若子类有方法要和父类的方法相似，但又有新的功能或不需要的功能时，则可以复制父类的方法并重写</p>
+</li>
+</ul>
+<h3 id="方法重写的要求"><a href="#方法重写的要求" class="headerlink" title="方法重写的要求"></a>方法重写的要求</h3><ol>
+<li><p><span class="red" id="override">方法名 方法参数 返回值</span>要和父类的方法<span class="red">完全相同</span></p>
+</li>
+<li><p><span class="red">必须要在重写后的方法（子类的方法，不是父类）上一行写注解 <code>@Override</code></span></p>
+</li>
+<li><p>方法体要和父类的<span class="red">不同</span></p>
+</li>
+<li><p>修饰符范围可以扩大，但不能缩小：</p>
+<ul>
+<li>修饰符范围：public &gt; protected &gt; default(friendly) &gt; private<br><img src="https://iknow-pic.cdn.bcebos.com/cdbf6c81800a19d865fd770a3efa828ba71e46c7"></li>
+</ul>
+</li>
+<li><p>抛出的异常可以缩小但不能扩大：（这波是弃其糟粕）</p>
+</li>
+</ol>
+<h4 id="向上转型——某种蛋疼的写法（这里先提一下）"><a href="#向上转型——某种蛋疼的写法（这里先提一下）" class="headerlink" title="向上转型——某种蛋疼的写法（这里先提一下）"></a>向上转型——某种蛋疼的写法（这里先提一下）</h4><ul>
+<li><p><span class="red">IDEA2021中已无法通过对象调用静态方法（点不出来），但实在要写也可以，会报一个警告</span></p>
+</li>
+<li><p>现在有：</p>
+<ul>
+<li>父类有一个公有的say静态方法  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Wife</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">say</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;你的老婆说了一句话&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>子类有一个公有的say静态方法  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Daughter</span> <span class="keyword">extends</span> <span class="title">Wife</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">say</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;你的女儿说了一句话&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>在Main方法中：  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 向上转型</span></span><br><span class="line">        <span class="comment">// Wife类关于Daughter的对象</span></span><br><span class="line">        Wife wife = <span class="keyword">new</span> Daughter();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Daughter类关于Daughter的对象</span></span><br><span class="line">        Daughter daughter = <span class="keyword">new</span> Daughter();</span><br><span class="line"></span><br><span class="line">        wife.say();</span><br><span class="line"></span><br><span class="line">        daughter.say();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出：</span></span><br><span class="line"><span class="comment">你的老婆说了一句话</span></span><br><span class="line"><span class="comment">你的女儿说了一句话</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>说到类，那联系最大的就是类型了，像String类，String也作为引用数据类型（不是普通数据类型！！！）出现在代码中供我们新建一个值。</p>
+</li>
+<li><p>这里既然是静态方法，也就是关于类的方法（在类被加载的时候加载），那么这个wife和daughter调用哪个方法肯定是根据他们的<span class="red">类型</span>来的</p>
+</li>
+</ul>
+<br />
+
+<ul>
+<li>现在两个类的say方法都去掉static，改为非静态方法，那么就是对象的方法，并且子类的say重写了父类的say方法（静态方法禁止重写，不存在重写这么一说，上面只是两个类都有个say方法罢了）</li>
+<li>对象的方法这边涉及到两个问题：<ol>
+<li>能用什么方法<ul>
+<li>能用的方法取决于类型（对象名左边的），该类型里面有的方法，即可以使用，不可调用子类独有的方法</li>
+</ul>
+</li>
+<li>用哪个方法<ul>
+<li>用那个方法取决于对象（new右边的），默认会调用重写后的方法（当然啦，没有重写也就是父类的公有方法照抄过来，也算是一种没有重写的重写吧？）</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="多态（同一个行为的多种不同表现形式）"><a href="#多态（同一个行为的多种不同表现形式）" class="headerlink" title="多态（同一个行为的多种不同表现形式）"></a>多态（同一个行为的多种不同表现形式）</h2><ul>
+<li>同一方法可以根据发送对象的不同采用多种不同的行为方式（<a target="_blank" rel="noopener" href="https://www.cnblogs.com/scyq/p/11667881.html">浅谈Java多态</a>）</li>
+</ul>
+<br />
+
+<ul>
+<li><p>现在你要操作一个物体，你只知道这个物体属于Animals类，Animals下有3个子类，他们有着重写父类但是不同方法体的say方法。</p>
+<ul>
+<li>于是你就可以我全都要，将Animals下面的三个类都分别创建一个对象，但他们都是Animals类型</li>
+</ul>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Animals dog = <span class="keyword">new</span> dog();</span><br><span class="line">Animals cat = <span class="keyword">new</span> cat();</span><br><span class="line">Animals fish = <span class="keyword">new</span> fish();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这样当他们点方法名的时候就会调用各自重写的方法了，如果没有重写，那就调用父类的</li>
+</ul>
+</li>
+</ul>
+<h2 id="instanceof（判断对象是否从属于某个类）"><a href="#instanceof（判断对象是否从属于某个类）" class="headerlink" title="instanceof（判断对象是否从属于某个类）"></a>instanceof（判断对象是否从属于某个类）</h2><ul>
+<li>使用 <code>对象名 instanceof 类名</code> 判断 <span class="red">对象</span> 是否从属于 类</li>
+<li>继承他爸叫继承，继承他爷也叫继承，继承他祖宗（object）也是继承</li>
+<li>但是这个类的兄弟就不算了<br><img src="https://z3.ax1x.com/2021/09/21/4tut9P.png" alt="4tut9P.png"></li>
+</ul>
+<h3 id="编译不通过"><a href="#编译不通过" class="headerlink" title="编译不通过"></a>编译不通过</h3><ul>
+<li><code>X instanceof Y</code> 要求X的 <span class="red">类型</span> 与Y的 <span class="red">类型</span> 为父子关系</li>
+</ul>
+<h2 id="强制类型转换以使用子类特有的方法（父亲装儿子）（安全操作）"><a href="#强制类型转换以使用子类特有的方法（父亲装儿子）（安全操作）" class="headerlink" title="强制类型转换以使用子类特有的方法（父亲装儿子）（安全操作）"></a>强制类型转换以使用子类特有的方法（父亲装儿子）（安全操作）</h2><ul>
+<li><p>上面说过能用什么方法取决于类型，若要使用子类特有的方法，则需要强制类型转换（如果是重写的方法，说明父类也有这个方法，不然怎么叫重写呢？只不过使用的时候是根据对象（new后面的）来使用的）</p>
+</li>
+<li><p>父类就是高一级类型，子类就是低一级类型，高转低就需强制类型转换</p>
+</li>
+</ul>
+<h2 id="自动类型转换（危险操作）"><a href="#自动类型转换（危险操作）" class="headerlink" title="自动类型转换（危险操作）"></a>自动类型转换（危险操作）</h2><ul>
+<li><p>当低转高的时候，就可以使用自动类型转换，让我们回顾一下基本类型的自动类型转换：</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> num01 = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">double</span> num02 = num01;</span><br></pre></td></tr></table></figure>
+<p>  直接用一个搞基的变量接收数据就可以自己转过去了</p>
+</li>
+<li><p>那么引用类型的自动类型转换也一样：</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Daughter继承Wife，Wife为父类</span></span><br><span class="line">Daughter member = <span class="keyword">new</span> Daughter();</span><br><span class="line">Wife wife = member;</span><br></pre></td></tr></table></figure></li>
+<li><p>注意：<br>  <span class="red">低转高会丢失子类独有的方法</span></p>
+</li>
+</ul>
+<h2 id="静态代码块（处女代码块（bushi））"><a href="#静态代码块（处女代码块（bushi））" class="headerlink" title="静态代码块（处女代码块（bushi））"></a>静态代码块（处女代码块（bushi））</h2><ul>
+<li>类中可以写入多个静态代码块</li>
+<li><span class="red">静态代码块只在 第一次 new对象的时候执行一次</span></li>
+<li><span class="red">在构造方法和匿名代码块之前</span>执行，优先级最高<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> class <span class="title">Test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        <span class="comment">// 这是一个静态代码块</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="匿名代码块"><a href="#匿名代码块" class="headerlink" title="匿名代码块"></a>匿名代码块</h2><ul>
+<li>类中可以写入多个匿名代码块</li>
+<li><span class="red">静态代码块在 每一次 new对象的时候执行一次</span></li>
+<li>在构造方法之前执行<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> class <span class="title">Test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 这是一个匿名代码块</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>匿名代码块的作用：<ol>
+<li>赋初值</li>
+</ol>
+</li>
+</ul>
+<h2 id="抽象类和抽象方法（abstract）（非重点）"><a href="#抽象类和抽象方法（abstract）（非重点）" class="headerlink" title="抽象类和抽象方法（abstract）（非重点）"></a>抽象类和抽象方法（abstract）（非重点）</h2><h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><ul>
+<li>在class前加入 <code>abstract</code> 将该类定义为抽象类</li>
+<li><span class="red">该类不能被new，只能被继承</span></li>
+<li>抽象类中可以写抽象方法也可以写普通的方法，还可以写成员变量</li>
+</ul>
+<h4 id="抽象类中的构造器"><a href="#抽象类中的构造器" class="headerlink" title="抽象类中的构造器"></a>抽象类中的构造器</h4><ul>
+<li>没想到吧，它不能被new，但却还可以写无参构造和有参构造（默认还是会有一个无参构造）</li>
+<li>在 <code>继承 -&gt; 调用父类的无参构造</code> 中写道：<blockquote>
+<p>在子类的构造器中，默认隐藏了一句 super() 来调用父类的构造器</p>
+</blockquote>
+</li>
+</ul>
+<p>因此抽象类的子类需要调用父类的构造器，抽象类也要有构造器</p>
+<h3 id="抽象方法"><a href="#抽象方法" class="headerlink" title="抽象方法"></a>抽象方法</h3><ul>
+<li>在返回值类型前加入  <code>abstract</code> 将该方法定义为抽象方法</li>
+<li><span class="red">抽象方法必须写在抽象类中</span></li>
+<li><span class="red">抽象方法不可以有方法体</span>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure></li>
+<li><span class="red">在子类继承抽象类时，会被要求必须重写抽象方法里面的抽象类</span></li>
+</ul>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ul>
+<li>接口里只有抽象方法，不能写正常的方法（只定义方法，跟C的声明方法一样）</li>
+<li>接口肯定不能被实例化，他甚至连构造方法都没有</li>
+<li>接口里的方法默认就是public abstract，这两个可以不写</li>
+<li>接口就是个框架，定义一些规则</li>
+</ul>
+<br />
+
+<ul>
+<li>正常写接口的格式：<ol>
+<li>返回值</li>
+<li>方法名</li>
+<li>形式参数</li>
+<li>分号结尾<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">(String name)</span></span>;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<h3 id="接口里的常量（不建议这么做）"><a href="#接口里的常量（不建议这么做）" class="headerlink" title="接口里的常量（不建议这么做）"></a>接口里的常量（不建议这么做）</h3><ul>
+<li>接口里面定义的量默认是 public static final<br>  因此量名全部大写，每个单词用下划线分隔开</li>
+</ul>
+<h2 id="实现类"><a href="#实现类" class="headerlink" title="实现类"></a>实现类</h2><ul>
+<li><p>接口都必须要有实现类（你造房子只画图纸不搬砖？）</p>
+</li>
+<li><p><span class="red">实现类的命名：<code>接口名（服务名） + Impl</code> </span></p>
+</li>
+<li><p>必须重写接口中的方法（可以用Alt + Enter在报错的类中使用建议implement methods重写接口中的方法）</p>
+</li>
+<li><p>实现类的创建：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> class TimerServiceImpl implements <span class="title">TimerService</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="实现多个接口以实现多继承"><a href="#实现多个接口以实现多继承" class="headerlink" title="实现多个接口以实现多继承"></a>实现多个接口以实现多继承</h3><ul>
+<li>在 impletments 后写多个接口，并用逗号将继承的接口隔开即可一个类实现多个接口<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ServiceImpl</span> <span class="keyword">implements</span> <span class="title">TimerService</span>, <span class="title">UserService</span>() </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="内部类（类的套娃）"><a href="#内部类（类的套娃）" class="headerlink" title="内部类（类的套娃）"></a>内部类（类的套娃）</h2><h3 id="成员内部类"><a href="#成员内部类" class="headerlink" title="成员内部类"></a>成员内部类</h3><ul>
+<li>在类里面再写一个类，即成员内部类</li>
+<li>可以访问外部类的 <span class="red">所有私有属性 和 方法</span><br>  （在<a href="#override">方法的重写-&gt;方法重写的要求</a>中有图，所有的公有私有保护修饰符对当前类是公开的，内部类属于当前类，因此能获取）<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这是外部类</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> class <span class="title">Outer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 这是内部类</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Inner</span>() </span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="内部类实例化"><a href="#内部类实例化" class="headerlink" title="内部类实例化"></a>内部类实例化</h3><ul>
+<li>需要通过 <code>外部类.new</code> 来创建对象,可以理解为外部类里面藏了一个new方法</li>
+<li>内部类实例化后的对象的数据类型是 外部类名.内部类名<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 外部类实例化</span></span><br><span class="line">Outer outer = <span class="keyword">new</span> Outer();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 内部类实例化</span></span><br><span class="line">Outer.Inner Inner = Outer.<span class="function">new <span class="title">Inner</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><ul>
+<li>在内部类的基础上加上static修饰符以变为静态内部类</li>
+<li>可以访问外部类的 <span class="red">静态属性 和 静态方法</span><br>  （因为非静态属性和方法需要在new对象后出现，静态的存在早于非静态，不能访问虚空）</li>
+</ul>
+<h3 id="局部内部类"><a href="#局部内部类" class="headerlink" title="局部内部类"></a>局部内部类</h3><ul>
+<li>在方法体里面写类，即为局部内部类</li>
+</ul>
+<h3 id="匿名对象的创建"><a href="#匿名对象的创建" class="headerlink" title="匿名对象的创建"></a>匿名对象的创建</h3><ul>
+<li>不使用对象名接收对象，直接new出来之后使用类里面的方法。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建了一个匿名对象并使用了类里面的方法</span></span><br><span class="line"><span class="keyword">new</span> Outer().say();</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><ul>
+<li>可以通过 选中可能发生错误的代码 <code>Ctrl + Alt + T</code> 快速生成try/catch/finally</li>
+</ul>
+<h3 id="try（试运行-监视器）"><a href="#try（试运行-监视器）" class="headerlink" title="try（试运行/监视器）"></a>try（试运行/监视器）</h3><ul>
+<li>try可以监控其代码块，<span class="red">必须与 <code>catch</code> 或 <code>finally</code> 连用</span><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    </span><br><span class="line">&#125; <span class="keyword">catch</span>() &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="catch（异常捕获）"><a href="#catch（异常捕获）" class="headerlink" title="catch（异常捕获）"></a>catch（异常捕获）</h3><ul>
+<li>使用：  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125; <span class="keyword">catch</span> (<span class="comment">// 异常类型 异常变量名) &#123;</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  捕获异常</li>
+<li>当捕获到监视器里有异常时，就会检查该异常是否包含于要catch异常类型，若包含，则异常会传给异常变量，并执行相应catch的代码块</li>
+</ul>
+<h4 id="多重捕获"><a href="#多重捕获" class="headerlink" title="多重捕获"></a>多重捕获</h4><ul>
+<li>可以使用多个catch<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125; <span class="keyword">catch</span> () &#123;</span><br><span class="line"></span><br><span class="line">&#125; <span class="keyword">catch</span> () &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>上面的多个catch最后只会生效一个，因此从小到大捕获异常，一旦范围小的放在了范围大的后面就会报错</li>
+</ul>
+<h4 id="异常的范围"><a href="#异常的范围" class="headerlink" title="异常的范围"></a>异常的范围</h4><ul>
+<li>上面范围大下面范围小<br><img src="https://www.runoob.com/wp-content/uploads/2013/12/exception-hierarchy.png" alt="异常的范围"></li>
+</ul>
+<h3 id="finally（善后工作）"><a href="#finally（善后工作）" class="headerlink" title="finally（善后工作）"></a>finally（善后工作）</h3><ul>
+<li>无论try中代码有没有异常，最后都会执行finally，<span class="red">因此他需要被放在catch代码之后</span>（除非没有catch）</li>
+<li>通常用于关闭一些东西（比如Scanner）<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125; <span class="keyword">catch</span> () &#123;</span><br><span class="line"></span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="throw（主动抛出异常对象并在方法里处理）"><a href="#throw（主动抛出异常对象并在方法里处理）" class="headerlink" title="throw（主动抛出异常对象并在方法里处理）"></a>throw（主动抛出异常对象并在方法里处理）</h3><ul>
+<li>一般在方法体里使用</li>
+<li><span class="red">throw抛出的是实例，需要new</span></li>
+<li>在抛出该异常时，程序自动跳转到该异常的对应的catch代码块进行处理，Exception后面的内容会给异常变量<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> num01 = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> num02 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (num02 == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">&quot;分母不能为零&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(num01/num02);</span><br><span class="line">            <span class="comment">// 必须有一个和new出来的异常相同的catch以处理异常</span></span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            System.out.println(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="throws（抛出异常对象到方法外）"><a href="#throws（抛出异常对象到方法外）" class="headerlink" title="throws（抛出异常对象到方法外）"></a>throws（抛出异常对象到方法外）</h3><ul>
+<li>用于将异常抛出方法，给执行方法的高一级方法来处理<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            div(<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">div</span><span class="params">(<span class="keyword">int</span> num01, <span class="keyword">int</span> num02)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (num02 == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">&quot;分母不能为零&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(num01 / num02);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h3><ol>
+<li>创建一个异常类 并 继承Exception类<ol>
+<li>加入构造方法</li>
+<li>重写toString</li>
+</ol>
+</li>
+<li>在一个有可能出现异常的方法中加入条件判断（什么时候抛出自定义异常？），使用throw抛出异常，现在在throw语句这里你有两种选择 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(num &gt; <span class="number">10</span>) &#123;</span><br><span class="line">    <span class="comment">// 这里有无参数取决于自定义异常的构造方法</span></span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> myException();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>就地捕获并处理，选择该throw语句，并使用try-catch包围</li>
+<li>使用throws甩给方法调用者处理</li>
+</ol>
+</li>
+</ol>
 
     </div>
 

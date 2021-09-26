@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 <meta name="description" content="CSS盒子模型与边框">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS盒子模型与边框">
@@ -127,7 +127,7 @@
           <div class="site-overview">
             <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
-      src="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      src="/uploads/avatar.png">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -135,7 +135,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -197,7 +197,7 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/05/18/CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%BE%B9%E6%A1%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      <meta itemprop="image" content="/uploads/avatar.png">
       <meta itemprop="name" content="Loliconkelvin">
       <meta itemprop="description" content="">
     </span>
@@ -252,7 +252,11 @@
 
 <h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><p><img src="https://z3.ax1x.com/2021/05/18/ghNIsS.png" alt="ghNIsS.png"></p>
 <h2 id="初始化操作"><a href="#初始化操作" class="headerlink" title="初始化操作"></a>初始化操作</h2><ul>
-<li>通常在应用样式之前，我们把内外边距和下划线全部弄没：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>通常在应用样式之前，我们把内外边距和下划线全部弄没：<pre class="line-numbers language-CSS" data-language="CSS"><code class="language-CSS">*&#123;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+&#125;</code></pre></li>
 </ul>
 <h2 id="外边距（margin）"><a href="#外边距（margin）" class="headerlink" title="外边距（margin）"></a>外边距（margin）</h2><ul>
 <li><p>若不对body样式进行设置，body默认会有一个外边距</p>
@@ -277,7 +281,9 @@
 <li>想要使行内元素居中可以：<ol>
 <li>在外面套一个div，将其宽度和高度设置为行内元素的宽高，然后使用margin<br> 这个是div带着里面的元素居中</li>
 <li>在外面套一个div，然后使用 <code>text-align: center;</code><br> 这个是div不动，里面的元素全部居中</li>
-<li>对要居中的元素使用 <code>display: block;</code>,再使用 <code>margin：0 auto;</code><br> 这个是把行元素变为块元素，然后自行居中<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>对要居中的元素使用 <code>display: block;</code>,再使用 <code>margin：0 auto;</code><br> 这个是把行元素变为块元素，然后自行居中<pre class="line-numbers language-CSS" data-language="CSS"><code class="language-CSS">div&#123;
+    margin:0 auto;
+&#125;</code></pre></li>
 </ol>
 </li>
 </ul>
@@ -363,6 +369,9 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   

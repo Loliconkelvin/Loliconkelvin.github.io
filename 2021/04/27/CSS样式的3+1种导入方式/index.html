@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 <meta name="description" content="CSS的3+1种导入方式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS样式的3+1种导入方式">
@@ -125,7 +125,7 @@
           <div class="site-overview">
             <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
-      src="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      src="/uploads/avatar.png">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -133,7 +133,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -195,7 +195,7 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/04/27/CSS%E6%A0%B7%E5%BC%8F%E7%9A%843+1%E7%A7%8D%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      <meta itemprop="image" content="/uploads/avatar.png">
       <meta itemprop="name" content="Loliconkelvin">
       <meta itemprop="description" content="">
     </span>
@@ -250,23 +250,31 @@
 
 <h2 id="行内样式（样式优先级最高）"><a href="#行内样式（样式优先级最高）" class="headerlink" title="行内样式（样式优先级最高）"></a>行内样式（样式优先级最高）</h2><ul>
 <li>所谓行内样式，即直接在HTML标签中设置样式</li>
-<li>不建议使用，建议只在测试时使用<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">style</span>=<span class="string">&quot;color: red;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>不建议使用，建议只在测试时使用<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;h1 style&#x3D;&quot;color: red;&quot;&gt;&lt;&#x2F;h1&gt;</code></pre></li>
 </ul>
 <h2 id="内部样式表（优先级：就近原则）"><a href="#内部样式表（优先级：就近原则）" class="headerlink" title="内部样式表（优先级：就近原则）"></a>内部样式表（优先级：就近原则）</h2><ul>
-<li>在HTML文件的head标签包含范围内写style标签，style标签内写CSS代码<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">h1</span>&#123;</span></span><br><span class="line"><span class="css">            <span class="attribute">color</span>: red;</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>在HTML文件的head标签包含范围内写style标签，style标签内写CSS代码<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;head&gt;
+    &lt;style&gt;
+        h1&#123;
+            color: red;
+        &#125;
+    &lt;&#x2F;style&gt;
+&lt;&#x2F;head&gt;</code></pre></li>
 </ul>
 <h2 id="外部样式表（优先级：就近原则）"><a href="#外部样式表（优先级：就近原则）" class="headerlink" title="外部样式表（优先级：就近原则）"></a>外部样式表（优先级：就近原则）</h2><ul>
 <li>在HTML文件外创建CSS文件，再于HTML文件内使用语句导入CSS文件<h3 id="链接式"><a href="#链接式" class="headerlink" title="链接式"></a>链接式</h3></li>
 <li>使用link标签</li>
 <li>与导入式的区别：<ul>
-<li>载入网页时优先加载CSS文件至页面<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">herf</span>=<span class="string">&quot;路径&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>载入网页时优先加载CSS文件至页面<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;link rel&#x3D;&quot;stylesheet&quot; herf&#x3D;&quot;路径&quot;&#x2F;&gt;</code></pre></li>
 </ul>
 </li>
 </ul>
 <h3 id="导入式（不建议使用）"><a href="#导入式（不建议使用）" class="headerlink" title="导入式（不建议使用）"></a>导入式（不建议使用）</h3><ul>
 <li>使用style标签与@import</li>
 <li>与链接式的区别：<ul>
-<li>载入网页时先加载HTML文件再载入CSS文件<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="keyword">@import</span> url(<span class="string">&quot;路径&quot;</span>);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>载入网页时先加载HTML文件再载入CSS文件<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;
+    @import url(&quot;路径&quot;);
+&lt;&#x2F;style&gt;</code></pre></li>
 </ul>
 </li>
 </ul>
@@ -335,6 +343,9 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   

@@ -360,111 +360,168 @@ td {
   transform: rotate(-45deg);
 }
 /**
- * nnfx dark - a theme inspired by Netscape Navigator/Firefox
- *
- * @version 1.0.0
- * @author (c) 2020 Jim Mason <jmason@ibinx.com>
- * @license https://creativecommons.org/licenses/by-sa/4.0  CC BY-SA 4.0
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
  */
 
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: #333;
-  color: #fff;
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #ccc;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
 }
 
-.xml .hljs-meta {
-  font-weight: bold;
-  font-style: italic;
-  color: #69f;
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
 }
 
-.hljs-comment,
-.hljs-quote {
-  font-style: italic;
-  color: #9c6;
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2d2d2d;
 }
 
-.hljs-name,
-.hljs-keyword {
-  color: #a7a;
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
 }
 
-.hljs-name,
-.hljs-attr {
-  font-weight: bold;
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999;
 }
 
-.hljs-string {
-  font-weight: normal;
+.token.punctuation {
+	color: #ccc;
 }
 
-.hljs-variable,
-.hljs-template-variable {
-  color: #588;
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: #e2777a;
 }
 
-.hljs-code,
-.hljs-string,
-.hljs-meta-string,
-.hljs-number,
-.hljs-regexp,
-.hljs-link {
-  color: #bce;
+.token.function-name {
+	color: #6196cc;
 }
 
-.hljs-title,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-built_in,
-.hljs-builtin-name {
-  color: #d40;
+.token.boolean,
+.token.number,
+.token.function {
+	color: #f08d49;
 }
 
-.hljs-section,
-.hljs-meta {
-  color: #a85;
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
 }
 
-.hljs-class .hljs-title,
-.hljs-type {
-  color: #96c;
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
 }
 
-.hljs-function .hljs-title,
-.hljs-attr,
-.hljs-subst {
-  color: #fff;
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
 }
 
-.hljs-formula {
-  background-color: #eee;
-  font-style: italic;
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
 }
 
-.hljs-addition {
-  background-color: #797;
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
 }
 
-.hljs-deletion {
-  background-color: #c99;
+.token.entity {
+	cursor: help;
 }
 
-.hljs-selector-id,
-.hljs-selector-class {
-  color: #964;
+.token.inserted {
+	color: green;
 }
 
-.hljs-doctag,
-.hljs-strong {
-  font-weight: bold;
+pre[class*="language-"].line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
 }
 
-.hljs-emphasis {
-  font-style: italic;
+pre[class*="language-"].line-numbers > code {
+	position: relative;
+	white-space: inherit;
 }
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
 
 code,
 kbd,

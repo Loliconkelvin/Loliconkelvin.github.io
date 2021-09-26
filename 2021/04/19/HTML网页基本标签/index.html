@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 <meta name="description" content="HTML网页基本标签">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML网页基本标签">
@@ -125,7 +125,7 @@
           <div class="site-overview">
             <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
-      src="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      src="/uploads/avatar.png">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -133,7 +133,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -195,7 +195,7 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/04/19/HTML%E7%BD%91%E9%A1%B5%E5%9F%BA%E6%9C%AC%E6%A0%87%E7%AD%BE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      <meta itemprop="image" content="/uploads/avatar.png">
       <meta itemprop="name" content="Loliconkelvin">
       <meta itemprop="description" content="">
     </span>
@@ -249,16 +249,22 @@
 <span id="more"></span>
 
 <h1 id="元素标签"><a href="#元素标签" class="headerlink" title="元素标签"></a>元素标签</h1><h2 id="标题标签"><a href="#标题标签" class="headerlink" title="标题标签"></a>标题标签</h2><ul>
-<li>可用 <code>hx + tab/enter</code> 快速输入<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>一级标签<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>二级标签<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>三级标签<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span>四级标签<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h5</span>&gt;</span>五级标签<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h6</span>&gt;</span>六级标签<span class="tag">&lt;/<span class="name">h6</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>可用 <code>hx + tab/enter</code> 快速输入<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;h1&gt;一级标签&lt;&#x2F;h1&gt;
+&lt;h2&gt;二级标签&lt;&#x2F;h2&gt;
+&lt;h3&gt;三级标签&lt;&#x2F;h3&gt;
+&lt;h4&gt;四级标签&lt;&#x2F;h4&gt;
+&lt;h5&gt;五级标签&lt;&#x2F;h5&gt;
+&lt;h6&gt;六级标签&lt;&#x2F;h6&gt;</code></pre></li>
 </ul>
 <h2 id="段落标签"><a href="#段落标签" class="headerlink" title="段落标签"></a>段落标签</h2><ul>
 <li>可以使用 <code>p + tab/enter</code> 快速输入</li>
-<li>段落标签有行距<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>段落标签有行距<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;p&gt;&lt;&#x2F;p&gt;</code></pre></li>
 </ul>
 <h2 id="span标签（独立行内元素）"><a href="#span标签（独立行内元素）" class="headerlink" title="span标签（独立行内元素）"></a>span标签（独立行内元素）</h2><ul>
 <li>span标签用于将某些元素从行元素中独立出来以使其与行元素中的其他元素应用不同的风格</li>
 <li>若不使用style属性，虽然span标签包围的元素确实从行元素中独立了出来，但是在显示时与不加span标签没有任何区别</li>
-<li>span标签因为其本身不起任何效果而经常用来定义锚点（因为使用a标签字体会变蓝）<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我是一个<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color:blue&quot;</span>&gt;</span>男生<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;urlInPage&quot;</span>&gt;</span>我是锚点<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>span标签因为其本身不起任何效果而经常用来定义锚点（因为使用a标签字体会变蓝）<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;p&gt;我是一个&lt;span style&#x3D;&quot;color:blue&quot;&gt;男生&lt;&#x2F;span&gt;&lt;&#x2F;p&gt;
+&lt;span id&#x3D;&quot;urlInPage&quot;&gt;我是锚点&lt;&#x2F;span&gt;</code></pre></li>
 </ul>
 <h2 id="div标签（整合多个元素）"><a href="#div标签（整合多个元素）" class="headerlink" title="div标签（整合多个元素）"></a>div标签（整合多个元素）</h2><ul>
 <li>div标签会自动换行</li>
@@ -267,13 +273,17 @@
 </ul>
 <h2 id="换行标签"><a href="#换行标签" class="headerlink" title="换行标签"></a>换行标签</h2><ul>
 <li>可以使用 <code>br + tab/enter</code> 快速输入（注意快速输入后不带 <code>/</code> 结束）</li>
-<li>换行标签没有行距<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>换行标签没有行距<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;br&#x2F;&gt;</code></pre></li>
 </ul>
 <h2 id="水平线标签"><a href="#水平线标签" class="headerlink" title="水平线标签"></a>水平线标签</h2><ul>
-<li>可以使用 <code>hr + tab/enter</code> 快速输入（注意快速输入后不带 <code>/</code> 结束）<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hr</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>可以使用 <code>hr + tab/enter</code> 快速输入（注意快速输入后不带 <code>/</code> 结束）<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;hr&#x2F;&gt;</code></pre></li>
 </ul>
 <h2 id="字体样式标签"><a href="#字体样式标签" class="headerlink" title="字体样式标签"></a>字体样式标签</h2><ul>
-<li>可以使用 <code>strong + tab/enter</code> <code>em + tab/enter</code> 快速输入<br>记粗体和斜体即可，其他可以用CSS写<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">em</span>&gt;</span></span><br><span class="line">或</span><br><span class="line"><span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>可以使用 <code>strong + tab/enter</code> <code>em + tab/enter</code> 快速输入<br>记粗体和斜体即可，其他可以用CSS写<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;strong&gt;&lt;&#x2F;strong&gt;
+&lt;em&gt;&lt;&#x2F;em&gt;
+或
+&lt;b&gt;&lt;&#x2F;b&gt;
+&lt;i&gt;&lt;&#x2F;i&gt;</code></pre></li>
 </ul>
 <h2 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h2><table>
 <thead>
@@ -304,9 +314,14 @@
 <li>常用图像标签<blockquote>
 <p>jpg gif png bmp ……</p>
 </blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> <span class="attr">title</span>=<span class="string">&quot;&quot;</span> <span class="attr">width</span>=<span class="string">&quot;&quot;</span> <span class="attr">height</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;img src&#x3D;&quot;&quot; alt&#x3D;&quot;&quot; title&#x3D;&quot;&quot; width&#x3D;&quot;&quot; height&#x3D;&quot;&quot;&#x2F;&gt;</code></pre>
 <h3 id="src属性（必填）"><a href="#src属性（必填）" class="headerlink" title="src属性（必填）"></a>src属性（必填）</h3>图片路径</li>
-<li>相对路径<br>相对于本HTML文件路径<font color=blue>（推荐使用）</font><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;../resources/image/1.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;头像&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">    .. 回到HTML文件的上级目录，即工程目录</span></span><br><span class="line"><span class="comment">    resources 资源文件夹</span></span><br><span class="line"><span class="comment">    image 图片文件夹</span></span><br><span class="line"><span class="comment"> --&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>相对路径<br>相对于本HTML文件路径<font color=blue>（推荐使用）</font><pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;img src&#x3D;&quot;..&#x2F;resources&#x2F;image&#x2F;1.jpg&quot; alt&#x3D;&quot;头像&quot;&gt;
+&lt;!-- 
+    .. 回到HTML文件的上级目录，即工程目录
+    resources 资源文件夹
+    image 图片文件夹
+ --&gt;</code></pre></li>
 <li>绝对路径<br><font color=red>不推荐使用</font></li>
 </ul>
 <h3 id="alt属性（必填）"><a href="#alt属性（必填）" class="headerlink" title="alt属性（必填）"></a>alt属性（必填）</h3><ul>
@@ -320,7 +335,7 @@
 </ul>
 <h1 id="链接标签"><a href="#链接标签" class="headerlink" title="链接标签"></a>链接标签</h1><h2 id="超链接（页面间跳转）"><a href="#超链接（页面间跳转）" class="headerlink" title="超链接（页面间跳转）"></a>超链接（页面间跳转）</h2><ul>
 <li>可使用 <code>a + tab/enter</code> 快速输入</li>
-<li>使用 <code>&lt;a&gt;显示的内容&lt;/a&gt;</code> 来表示超链接<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">herf</span>=<span class="string">&quot;http://www.baidu.com&quot;</span> <span class="attr">target</span>=<span class="string">&quot;&quot;</span>&gt;</span>点击我跳转到百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>使用 <code>&lt;a&gt;显示的内容&lt;/a&gt;</code> 来表示超链接<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;a herf&#x3D;&quot;http:&#x2F;&#x2F;www.baidu.com&quot; target&#x3D;&quot;&quot;&gt;点击我跳转到百度&lt;&#x2F;a&gt;</code></pre></li>
 </ul>
 <h3 id="a标签内包含的内容"><a href="#a标签内包含的内容" class="headerlink" title="a标签内包含的内容"></a>a标签内包含的内容</h3><ul>
 <li>要显示的文字</li>
@@ -363,24 +378,24 @@
 </li>
 </ul>
 <h3 id="定义锚点"><a href="#定义锚点" class="headerlink" title="定义锚点"></a>定义锚点</h3><ul>
-<li>使用a标签中的name属性设定标签<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">&quot;top&quot;</span>&gt;</span>我是顶部<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>使用a标签中的name属性设定标签<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;a name&#x3D;&quot;top&quot;&gt;我是顶部&lt;&#x2F;a&gt;</code></pre></li>
 </ul>
 <h3 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h3><ul>
-<li>把 <code># + 锚点名</code> 应用到herf属性即可跳转<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">herf</span>=<span class="string">&quot;#top&quot;</span>&gt;</span>点我回到顶部<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>把 <code># + 锚点名</code> 应用到herf属性即可跳转<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;a herf&#x3D;&quot;#top&quot;&gt;点我回到顶部&lt;&#x2F;a&gt;</code></pre></li>
 </ul>
 <h2 id="超链接-锚链接（跳转到某页面的指定位置）"><a href="#超链接-锚链接（跳转到某页面的指定位置）" class="headerlink" title="超链接+锚链接（跳转到某页面的指定位置）"></a>超链接+锚链接（跳转到某页面的指定位置）</h2><ul>
-<li>把 <code>URL + # + 锚点名</code> 应用到herf属性即可<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">herf</span>=<span class="string">&quot;xxxxx.html#top&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>把 <code>URL + # + 锚点名</code> 应用到herf属性即可<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;a herf&#x3D;&quot;xxxxx.html#top&quot;&gt;&lt;&#x2F;a&gt;</code></pre></li>
 </ul>
 <h2 id="功能性链接"><a href="#功能性链接" class="headerlink" title="功能性链接"></a>功能性链接</h2><h3 id="邮件链接"><a href="#邮件链接" class="headerlink" title="邮件链接"></a>邮件链接</h3><ul>
-<li>把 <code>mailto: + 邮箱地址</code> 应用到herf属性即可<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">herf</span>=<span class="string">&quot;mailto:1551107036@qq.com&quot;</span>&gt;</span>点击联系我<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<li>把 <code>mailto: + 邮箱地址</code> 应用到herf属性即可<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;a herf&#x3D;&quot;mailto:1551107036@qq.com&quot;&gt;点击联系我&lt;&#x2F;a&gt;</code></pre>
 <h3 id="QQ链接"><a href="#QQ链接" class="headerlink" title="QQ链接"></a>QQ链接</h3></li>
 <li>QQ推广→推广工具→复制代码</li>
 </ul>
-<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h2 id="style标签"><a href="#style标签" class="headerlink" title="style标签"></a>style标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h2 id="style标签"><a href="#style标签" class="headerlink" title="style标签"></a>style标签</h2><pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;style&gt;&lt;&#x2F;style&gt;</code></pre>
 <ul>
 <li>style标签内主要存放css语句</li>
 </ul>
-<h2 id="link标签"><a href="#link标签" class="headerlink" title="link标签"></a>link标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">herf</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="link标签"><a href="#link标签" class="headerlink" title="link标签"></a>link标签</h2><pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;link rel&#x3D;&quot;stylesheet&quot; herf&#x3D;&quot;&quot;&#x2F;&gt;</code></pre>
 
 <h3 id="herf属性"><a href="#herf属性" class="headerlink" title="herf属性"></a>herf属性</h3><ul>
 <li>其值为css文件的路径</li>
@@ -443,6 +458,9 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   

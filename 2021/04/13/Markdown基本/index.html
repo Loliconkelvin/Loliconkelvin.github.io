@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 <meta name="description" content="Markdown基本用法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Markdown基本">
@@ -130,7 +130,7 @@
           <div class="site-overview">
             <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
-      src="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      src="/uploads/avatar.png">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -138,7 +138,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -200,7 +200,7 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/04/13/Markdown%E5%9F%BA%E6%9C%AC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      <meta itemprop="image" content="/uploads/avatar.png">
       <meta itemprop="name" content="Loliconkelvin">
       <meta itemprop="description" content="">
     </span>
@@ -262,7 +262,12 @@
 </li>
 <li>源码</li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Markdown" data-language="Markdown"><code class="language-Markdown"># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题</code></pre>
 
 <hr>
 <h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p><em>hello world</em><br><strong>hello world</strong><br><em><strong>hello world</strong></em><br><del>hello world</del><br><u>hello world</u></p>
@@ -300,7 +305,11 @@
 <ul>
 <li>源码</li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*hello world*</span></span><br><span class="line"><span class="strong">**hello world**</span></span><br><span class="line"><span class="strong">**<span class="emphasis">*hello world<span class="strong">**<span class="emphasis">*</span></span></span></span></span><br><span class="line"><span class="strong"><span class="emphasis"><span class="strong"><span class="emphasis">~~hello world~~</span></span></span></span></span><br><span class="line"><span class="strong"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="xml"><span class="tag">&lt;<span class="name">u</span>&gt;</span></span>hello world<span class="xml"><span class="tag">&lt;/<span class="name">u</span>&gt;</span></span></span></span></span></span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Markdown" data-language="Markdown"><code class="language-Markdown">*hello world*
+**hello world**
+***hello world***
+~~hello world~~
+&lt;u&gt;hello world&lt;&#x2F;u&gt;</code></pre>
 
 <hr>
 <h2 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h2><blockquote>
@@ -315,7 +324,7 @@
 <ul>
 <li>源码</li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 嗯哼？</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Markdown" data-language="Markdown"><code class="language-Markdown">&gt; 嗯哼？</code></pre>
 
 <hr>
 <h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><hr>
@@ -327,7 +336,8 @@
 <ul>
 <li>源码</li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="strong">**<span class="emphasis">*</span></span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Markdown" data-language="Markdown"><code class="language-Markdown">---
+***</code></pre>
 
 <hr>
 <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="https://gss3.bdstatic.com/84oSdTum2Q5BphGlnYG/timg?wapp&quality=80&size=b150_150&subsize=20480&cut_x=0&cut_w=0&cut_y=0&cut_h=0&sec=1369815402&srctrace&di=f208ea84a1ed8e5f710a89f3f67cd3b3&wh_rate=null&src=http://imgsrc.baidu.com/forum/pic/item/aa64034f78f0f736a4a890f80955b319eac413f0.jpg" alt="百度图片吧" title="百度图片吧"></p>
@@ -340,7 +350,7 @@
 <ul>
 <li>源码</li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">百度图片吧</span>](<span class="link">https://gss3.bdstatic.com/84oSdTum2Q5BphGlnYG/timg?wapp&amp;quality=80&amp;size=b150_150&amp;subsize=20480&amp;cut_x=0&amp;cut_w=0&amp;cut_y=0&amp;cut_h=0&amp;sec=1369815402&amp;srctrace&amp;di=f208ea84a1ed8e5f710a89f3f67cd3b3&amp;wh_rate=null&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fpic%2Fitem%2Faa64034f78f0f736a4a890f80955b319eac413f0.jpg &quot;百度图片吧&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Markdown" data-language="Markdown"><code class="language-Markdown">![百度图片吧](https:&#x2F;&#x2F;gss3.bdstatic.com&#x2F;84oSdTum2Q5BphGlnYG&#x2F;timg?wapp&amp;quality&#x3D;80&amp;size&#x3D;b150_150&amp;subsize&#x3D;20480&amp;cut_x&#x3D;0&amp;cut_w&#x3D;0&amp;cut_y&#x3D;0&amp;cut_h&#x3D;0&amp;sec&#x3D;1369815402&amp;srctrace&amp;di&#x3D;f208ea84a1ed8e5f710a89f3f67cd3b3&amp;wh_rate&#x3D;null&amp;src&#x3D;http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fpic%2Fitem%2Faa64034f78f0f736a4a890f80955b319eac413f0.jpg &quot;百度图片吧&quot;)</code></pre>
 
 <font color="red">
 注意：hexo上传博客文件时不会上传图片与放置图片的文件夹，因此上传博客后会出现看不到图片的情况，因此不建议博客文件使用相对路径甚至绝对路径，应该使用URL（图床）
@@ -355,7 +365,8 @@
 </li>
 <li>源码</li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">点击跳转到百度</span>](<span class="link">https://www.baidu.com</span>)</span><br><span class="line"><span class="xml">&lt;https://www.baidu.com&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Markdown" data-language="Markdown"><code class="language-Markdown">[点击跳转到百度](https:&#x2F;&#x2F;www.baidu.com)
+&lt;https:&#x2F;&#x2F;www.baidu.com&gt;</code></pre>
 
 <h3 id="图片超链接"><a href="#图片超链接" class="headerlink" title="图片超链接"></a>图片超链接</h3><p>是的你甚至可以在超链接里面塞一张图<br><a target="_blank" rel="noopener" href="https://tieba.baidu.com/f?ie=utf-8&kw=%E5%9B%BE%E7%89%87"><img src="https://gss3.bdstatic.com/84oSdTum2Q5BphGlnYG/timg?wapp&quality=80&size=b150_150&subsize=20480&cut_x=0&cut_w=0&cut_y=0&cut_h=0&sec=1369815402&srctrace&di=f208ea84a1ed8e5f710a89f3f67cd3b3&wh_rate=null&src=http://imgsrc.baidu.com/forum/pic/item/aa64034f78f0f736a4a890f80955b319eac413f0.jpg" alt="百度图片吧" title="百度图片吧"></a></p>
 <ul>
@@ -363,7 +374,7 @@
 <p>[![图片名](图片url)](跳转url)</p>
 </blockquote>
 </li>
-<li>源码<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[![百度图片吧](https://gss3.bdstatic.com/84oSdTum2Q5BphGlnYG/timg?wapp&amp;quality=80&amp;size=b150_150&amp;subsize=20480&amp;cut_x=0&amp;cut_w=0&amp;cut_y=0&amp;cut_h=0&amp;sec=1369815402&amp;srctrace&amp;di=f208ea84a1ed8e5f710a89f3f67cd3b3&amp;wh_rate=null&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fpic%2Fitem%2Faa64034f78f0f736a4a890f80955b319eac413f0.jpg &quot;百度图片吧&quot;)](https://tieba.baidu.com/f?ie=utf-8&amp;kw=%E5%9B%BE%E7%89%87)</span><br></pre></td></tr></table></figure></li>
+<li>源码<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">[![百度图片吧](https:&#x2F;&#x2F;gss3.bdstatic.com&#x2F;84oSdTum2Q5BphGlnYG&#x2F;timg?wapp&amp;quality&#x3D;80&amp;size&#x3D;b150_150&amp;subsize&#x3D;20480&amp;cut_x&#x3D;0&amp;cut_w&#x3D;0&amp;cut_y&#x3D;0&amp;cut_h&#x3D;0&amp;sec&#x3D;1369815402&amp;srctrace&amp;di&#x3D;f208ea84a1ed8e5f710a89f3f67cd3b3&amp;wh_rate&#x3D;null&amp;src&#x3D;http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fpic%2Fitem%2Faa64034f78f0f736a4a890f80955b319eac413f0.jpg &quot;百度图片吧&quot;)](https:&#x2F;&#x2F;tieba.baidu.com&#x2F;f?ie&#x3D;utf-8&amp;kw&#x3D;%E5%9B%BE%E7%89%87)</code></pre></li>
 </ul>
 <h3 id="使用变量定义超链接"><a href="#使用变量定义超链接" class="headerlink" title="使用变量定义超链接"></a>使用变量定义超链接</h3><pre><code>所有网址都可以用变量来定义（包括图片和超链接）
 但使用变量要讲小括号改为中括号
@@ -372,7 +383,8 @@
 <ul>
 <li>源码</li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">google</span>][<span class="symbol">1</span>]</span><br><span class="line">[<span class="symbol">1</span>]:<span class="link">http://www.baidu.com</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Markdown" data-language="Markdown"><code class="language-Markdown">[google][1]
+[1]:http:&#x2F;&#x2F;www.baidu.com</code></pre>
 
 <h3 id="页面内超链接"><a href="#页面内超链接" class="headerlink" title="页面内超链接"></a>页面内超链接</h3><pre><code>依然可以使用markdown超链接的格式来定义一个超链接&lt;/br&gt;
 但是锚点依然要使用html格式定义&lt;/br&gt;
@@ -381,7 +393,8 @@
 <ul>
 <li>源码</li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">点我跳转</span>](<span class="link">#urlInPage</span>)</span><br><span class="line"><span class="bullet">-</span> <span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;urlInPage&quot;</span>&gt;</span></span>页面内超链接<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Markdown" data-language="Markdown"><code class="language-Markdown">[点我跳转](#urlInPage)
+- &lt;span id&#x3D;&quot;urlInPage&quot;&gt;页面内超链接&lt;&#x2F;span&gt;</code></pre>
 
 <hr>
 <h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ol>
@@ -413,7 +426,12 @@
 <ul>
 <li>源码</li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 嗯哼？</span><br><span class="line"><span class="bullet">-</span> 嗯</span><br><span class="line"><span class="bullet">-</span> 哼</span><br><span class="line"><span class="bullet">2.</span> 啊哈！</span><br><span class="line"><span class="bullet">    -</span> 啊</span><br><span class="line"><span class="bullet">    -</span> 哈</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Markdown" data-language="Markdown"><code class="language-Markdown">1. 嗯哼？
+- 嗯
+- 哼
+2. 啊哈！
+    - 啊
+    - 哈</code></pre>
 
 <hr>
 <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
@@ -455,10 +473,15 @@
 <ul>
 <li>源码</li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">| 姓名 | 生日 |</span><br><span class="line">| -- | -- |</span><br><span class="line">| 张三 | 1997.1.2 |</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-Markdown" data-language="Markdown"><code class="language-Markdown">| 姓名 | 生日 |
+| -- | -- |
+| 张三 | 1997.1.2 |</code></pre>
 
 <hr>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">include&lt;stdio.h&gt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-C" data-language="C"><code class="language-C">include&lt;stdio.h&gt;
+int main(void)&#123;
+    return 0;
+&#125;</code></pre>
 
 <p><code>include&lt;stdio.h&gt;</code></p>
 <ul>
@@ -561,6 +584,9 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   

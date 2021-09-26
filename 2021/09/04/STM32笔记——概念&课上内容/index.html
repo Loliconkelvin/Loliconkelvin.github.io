@@ -19,13 +19,13 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="理论点灯大师（抄PPT）">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content=".red{     color: red; }   理论点灯大师（抄PPT）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="STM32笔记——概念&amp;课上内容">
 <meta property="og:url" content="https://loliconkelvin.github.io/2021/09/04/STM32%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E6%A6%82%E5%BF%B5&%E8%AF%BE%E4%B8%8A%E5%86%85%E5%AE%B9/index.html">
 <meta property="og:site_name" content="萝莉控的小窝">
-<meta property="og:description" content="理论点灯大师（抄PPT）">
+<meta property="og:description" content=".red{     color: red; }   理论点灯大师（抄PPT）">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://z3.ax1x.com/2021/09/08/hTHI7d.png">
 <meta property="og:image" content="https://z3.ax1x.com/2021/09/08/hTH50H.png">
@@ -36,8 +36,9 @@
 <meta property="og:image" content="https://z3.ax1x.com/2021/09/10/hXuRSg.png">
 <meta property="og:image" content="https://z3.ax1x.com/2021/09/10/hXucY8.png">
 <meta property="og:image" content="https://z3.ax1x.com/2021/09/10/hXugfS.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/25/4sHObt.png">
 <meta property="article:published_time" content="2021-09-04T08:48:24.000Z">
-<meta property="article:modified_time" content="2021-09-10T04:02:52.105Z">
+<meta property="article:modified_time" content="2021-09-25T14:07:22.802Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="STM32">
 <meta name="twitter:card" content="summary">
@@ -127,7 +128,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">嵌入式系统结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E9%99%90%E5%AE%9A%E7%AC%A6-volatile%EF%BC%88%E5%BE%85%E6%B1%82%E8%AF%81%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">存储限定符 volatile（待求证）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARM%E5%A4%84%E7%90%86%E5%99%A8%E5%88%86%E7%B1%BB%E2%80%94%E2%80%94%E6%8C%89%E5%BA%94%E7%94%A8%E7%89%B9%E5%BE%81%E5%88%86%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">ARM处理器分类——按应用特征分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GPIO%EF%BC%88Kinetis-KL25%EF%BC%89%EF%BC%88%E5%9F%BA%E4%BA%8E%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">GPIO（Kinetis KL25）（基于寄存器）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84C%E8%AF%AD%E8%A8%80"><span class="nav-number">5.</span> <span class="nav-text">嵌入式系统中的C语言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">5.1.</span> <span class="nav-text">数据类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%82%B9%E7%81%AF%E5%A4%A7%E5%B8%88%EF%BC%88STMF103CXXXX%EF%BC%89%EF%BC%88%E5%9F%BA%E4%BA%8E%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">点灯大师（STMF103CXXXX）（基于寄存器）</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">嵌入式系统结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E9%99%90%E5%AE%9A%E7%AC%A6-volatile%EF%BC%88%E5%BE%85%E6%B1%82%E8%AF%81%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">存储限定符 volatile（待求证）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARM%E5%A4%84%E7%90%86%E5%99%A8%E5%88%86%E7%B1%BB%E2%80%94%E2%80%94%E6%8C%89%E5%BA%94%E7%94%A8%E7%89%B9%E5%BE%81%E5%88%86%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">ARM处理器分类——按应用特征分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GPIO%EF%BC%88Kinetis-KL25%EF%BC%89%EF%BC%88%E5%9F%BA%E4%BA%8E%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">GPIO（Kinetis KL25）（基于寄存器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84C%E8%AF%AD%E8%A8%80"><span class="nav-number">5.</span> <span class="nav-text">嵌入式系统中的C语言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">5.1.</span> <span class="nav-text">数据类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9%E7%81%AF%E5%A4%A7%E5%B8%88%EF%BC%88STMF103CXXXX%EF%BC%89%EF%BC%88%E5%9F%BA%E4%BA%8E%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">点灯大师（STMF103CXXXX）（基于寄存器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%AE%AF"><span class="nav-number">7.</span> <span class="nav-text">通讯</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%AE%AF%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">7.1.</span> <span class="nav-text">通讯的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UART%EF%BC%88%E9%80%9A%E7%94%A8%E5%BC%82%E6%AD%A5%E6%94%B6%E5%8F%91%E5%99%A8%EF%BC%89"><span class="nav-number">7.2.</span> <span class="nav-text">UART（通用异步收发器）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SPI%EF%BC%88%E5%85%A8%E5%8F%8C%E5%B7%A5%E5%90%8C%E6%AD%A5%E4%B8%B2%E8%A1%8C%E9%80%9A%E8%AE%AF%E6%80%BB%E7%BA%BF%EF%BC%89"><span class="nav-number">7.3.</span> <span class="nav-text">SPI（全双工同步串行通讯总线）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SS%EF%BC%88CS%EF%BC%89%E7%89%87%E9%80%89%E4%BF%A1%E5%8F%B7"><span class="nav-number">7.3.1.</span> <span class="nav-text">SS（CS）片选信号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SCLK%E6%97%B6%E9%92%9F%E4%BF%A1%E5%8F%B7"><span class="nav-number">7.3.2.</span> <span class="nav-text">SCLK时钟信号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MISO%E4%B8%BB%E6%9C%BA%E6%8E%A5%E6%94%B6%E4%BB%8E%E6%9C%BA%E5%8F%91%E9%80%81"><span class="nav-number">7.3.3.</span> <span class="nav-text">MISO主机接收从机发送</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MOSI%E4%B8%BB%E6%9C%BA%E5%8F%91%E9%80%81%E4%BB%8E%E6%9C%BA%E6%8E%A5%E6%94%B6"><span class="nav-number">7.3.4.</span> <span class="nav-text">MOSI主机发送从机接收</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -135,7 +136,7 @@
           <div class="site-overview">
             <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
-      src="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      src="/uploads/avatar.png">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -143,7 +144,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -205,7 +206,7 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/09/04/STM32%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E6%A6%82%E5%BF%B5&%E8%AF%BE%E4%B8%8A%E5%86%85%E5%AE%B9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      <meta itemprop="image" content="/uploads/avatar.png">
       <meta itemprop="name" content="Loliconkelvin">
       <meta itemprop="description" content="">
     </span>
@@ -233,7 +234,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-10 12:02:52" itemprop="dateModified" datetime="2021-09-10T12:02:52+08:00">2021-09-10</time>
+        <time title="修改时间：2021-09-25 22:07:22" itemprop="dateModified" datetime="2021-09-25T22:07:22+08:00">2021-09-25</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -255,10 +256,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>理论点灯大师（抄PPT）</p>
+        <style>
+.red{
+    color: red;
+}
+</style>
+
+<p>理论点灯大师（抄PPT）</p>
 <span id="more"></span>
 
-<h3 id="嵌入式系统结构"><a href="#嵌入式系统结构" class="headerlink" title="嵌入式系统结构"></a>嵌入式系统结构</h3><p>嵌入式系统由</p>
+<h2 id="嵌入式系统结构"><a href="#嵌入式系统结构" class="headerlink" title="嵌入式系统结构"></a>嵌入式系统结构</h2><p>嵌入式系统由</p>
 <ul>
 <li>微处理器</li>
 <li>外围硬件设备</li>
@@ -266,13 +273,23 @@
 <li>用户的应用软件系统</li>
 </ul>
 <p>组成</p>
-<h3 id="存储限定符-volatile（待求证）"><a href="#存储限定符-volatile（待求证）" class="headerlink" title="存储限定符 volatile（待求证）"></a>存储限定符 volatile（待求证）</h3><ul>
+<h2 id="存储限定符-volatile（待求证）"><a href="#存储限定符-volatile（待求证）" class="headerlink" title="存储限定符 volatile（待求证）"></a>存储限定符 volatile（待求证）</h2><ul>
 <li>编译器优化工作的一个假设</li>
 <li>在多任务共享变量、中断与任务共享变量时，必须使用volatile限定符，强制只读取内存中的数据</li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">volatile</span> <span class="keyword">int</span> *p_status;</span><br><span class="line">    <span class="keyword">int</span> *p_data;</span><br><span class="line"></span><br><span class="line">    p_status = (<span class="keyword">int</span>*) <span class="number">0x4001</span>;</span><br><span class="line">    p_data = (<span class="keyword">int</span>*) <span class="number">0x4000</span>;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;<span class="keyword">while</span>((*p_status &amp; <span class="number">0x01</span>) == <span class="number">0</span>);</span><br><span class="line">    ……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">void main(void)&#123;
+    volatile int *p_status;
+    int *p_data;
 
-<h3 id="ARM处理器分类——按应用特征分类"><a href="#ARM处理器分类——按应用特征分类" class="headerlink" title="ARM处理器分类——按应用特征分类"></a>ARM处理器分类——按应用特征分类</h3><ul>
+    p_status &#x3D; (int*) 0x4001;
+    p_data &#x3D; (int*) 0x4000;
+    do &#123;
+
+    &#125;while((*p_status &amp; 0x01) &#x3D;&#x3D; 0);
+    ……
+&#125;</code></pre>
+
+<h2 id="ARM处理器分类——按应用特征分类"><a href="#ARM处理器分类——按应用特征分类" class="headerlink" title="ARM处理器分类——按应用特征分类"></a>ARM处理器分类——按应用特征分类</h2><ul>
 <li>ARM A系列 （application）<blockquote>
 <p>偏应用型、高性能、合理功耗</p>
 </blockquote>
@@ -286,7 +303,7 @@
 </blockquote>
 </li>
 </ul>
-<h3 id="GPIO（Kinetis-KL25）（基于寄存器）"><a href="#GPIO（Kinetis-KL25）（基于寄存器）" class="headerlink" title="GPIO（Kinetis KL25）（基于寄存器）"></a>GPIO（Kinetis KL25）（基于寄存器）</h3><ul>
+<h2 id="GPIO（Kinetis-KL25）（基于寄存器）"><a href="#GPIO（Kinetis-KL25）（基于寄存器）" class="headerlink" title="GPIO（Kinetis KL25）（基于寄存器）"></a>GPIO（Kinetis KL25）（基于寄存器）</h2><ul>
 <li>点灯总攻略<ol>
 <li>配置时钟</li>
 <li>IO口模式选择</li>
@@ -303,14 +320,30 @@
 <ul>
 <li>SIM_SCGC5的9-13位分别控制A-E五组引脚的时钟开关，为它们置一以开启他们的时钟</li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*使用或运算将某一位置一，左移操作控制将哪一位置一</span></span><br><span class="line"><span class="comment">语义清除，比直接写16进制数更容易理解</span></span><br><span class="line"><span class="comment">如果是需要将两位置一的话，或许可以将0x03左移？</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">SIM_SCGC5 |= (<span class="number">1</span> &lt;&lt; n);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;*使用或运算将某一位置一，左移操作控制将哪一位置一
+语义清除，比直接写16进制数更容易理解
+如果是需要将两位置一的话，或许可以将0x03左移？
+*&#x2F;
+SIM_SCGC5 |&#x3D; (1 &lt;&lt; n);</code></pre>
 <hr>
 <ol start="2">
 <li>IO口模式选择（MUX）<br><img src="https://z3.ax1x.com/2021/09/08/hTjwX6.png" alt="hTjwX6.png"></li>
 </ol>
 <ul>
 <li>MUX寄存器（8-10位）控制指定引脚的工作模式（作为IO口还是用作其他功能？）</li>
-<li>因为一句只能控制一个引脚，所以往往需要写很多句<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">x为引脚组编号（A-E）</span></span><br><span class="line"><span class="comment">n为该组编号的引脚号（0-15）</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">将指定组的指定引脚控制为GPIO模式</span></span><br><span class="line"><span class="comment">即将10-8位置为001，那么11-0位就是</span></span><br><span class="line"><span class="comment">x001 xxxx xxxx。</span></span><br><span class="line"><span class="comment">只需要将原值与0001 0000 0000求与即可</span></span><br><span class="line"><span class="comment">16进制就是0x100</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">PORTx_PCRn |= <span class="number">0x100</span>;</span><br></pre></td></tr></table></figure></li>
+<li>因为一句只能控制一个引脚，所以往往需要写很多句<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;*
+x为引脚组编号（A-E）
+n为该组编号的引脚号（0-15）
+*&#x2F;
+
+&#x2F;*
+将指定组的指定引脚控制为GPIO模式
+即将10-8位置为001，那么11-0位就是
+x001 xxxx xxxx。
+只需要将原值与0001 0000 0000求与即可
+16进制就是0x100
+*&#x2F;
+PORTx_PCRn |&#x3D; 0x100;</code></pre></li>
 </ul>
 <hr>
 <ol start="3">
@@ -319,7 +352,10 @@
 <ul>
 <li>PDDR寄存器的0-31号引脚分别控制指定组的32个引脚的方向<br>  置0则指定引脚为输入模式<br>  置1则指定引脚为输出模式</li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*x为引脚组编号（A-E）</span></span><br><span class="line"><span class="comment">将该组0-7号引脚设置为输出模式</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">GPIOx_PDDR |= <span class="number">0xFF</span>;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;*x为引脚组编号（A-E）
+将该组0-7号引脚设置为输出模式
+*&#x2F;
+GPIOx_PDDR |&#x3D; 0xFF;</code></pre>
 <hr>
 <ol start="4">
 <li>输出（PDOR）<br><img src="https://z3.ax1x.com/2021/09/08/hTOZDS.png" alt="hTOZDS.png"></li>
@@ -327,7 +363,10 @@
 <ul>
 <li>当引脚为GPIO输出模式时，PDOR控制指定组的32个引脚的逻辑输出电平</li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*x为引脚组编号（A-E）</span></span><br><span class="line"><span class="comment">设置该组0-7号引脚输出低电平</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">GPIOx_GPIO &amp;= (~<span class="number">0xFF</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;*x为引脚组编号（A-E）
+设置该组0-7号引脚输出低电平
+*&#x2F;
+GPIOx_GPIO &amp;&#x3D; (~0xFF);</code></pre>
 <hr>
 <ol start="5">
 <li>点灯总程序</li>
@@ -335,9 +374,31 @@
 <ul>
 <li>将D组0-7连接的LED灯点亮</li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">mian</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    <span class="comment">//开启时钟</span></span><br><span class="line">    SIM_SCGC5 |= (<span class="number">1</span> &lt;&lt; <span class="number">12</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//配置为GPIO模式</span></span><br><span class="line">    PORTD_PCR0 |= <span class="number">0x100</span>;</span><br><span class="line">    PORTD_PCR1 |= <span class="number">0x100</span>;</span><br><span class="line">    PORTD_PCR2 |= <span class="number">0x100</span>;</span><br><span class="line">    PORTD_PCR3 |= <span class="number">0x100</span>;</span><br><span class="line">    PORTD_PCR4 |= <span class="number">0x100</span>;</span><br><span class="line">    PORTD_PCR5 |= <span class="number">0x100</span>;</span><br><span class="line">    PORTD_PCR6 |= <span class="number">0x100</span>;</span><br><span class="line">    PORTD_PCR7 |= <span class="number">0x100</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//配置为输出模式</span></span><br><span class="line">    GPIOx_PDDR |= <span class="number">0xFF</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//配置为输出低电平</span></span><br><span class="line">    GPIOx_GPIO &amp;= (~<span class="number">0xFF</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">int mian(void)&#123;
+    &#x2F;&#x2F;开启时钟
+    SIM_SCGC5 |&#x3D; (1 &lt;&lt; 12);
 
-<h3 id="嵌入式系统中的C语言"><a href="#嵌入式系统中的C语言" class="headerlink" title="嵌入式系统中的C语言"></a>嵌入式系统中的C语言</h3><h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><ul>
+    &#x2F;&#x2F;配置为GPIO模式
+    PORTD_PCR0 |&#x3D; 0x100;
+    PORTD_PCR1 |&#x3D; 0x100;
+    PORTD_PCR2 |&#x3D; 0x100;
+    PORTD_PCR3 |&#x3D; 0x100;
+    PORTD_PCR4 |&#x3D; 0x100;
+    PORTD_PCR5 |&#x3D; 0x100;
+    PORTD_PCR6 |&#x3D; 0x100;
+    PORTD_PCR7 |&#x3D; 0x100;
+    
+    &#x2F;&#x2F;配置为输出模式
+    GPIOx_PDDR |&#x3D; 0xFF;
+
+    &#x2F;&#x2F;配置为输出低电平
+    GPIOx_GPIO &amp;&#x3D; (~0xFF);
+
+    while(1);
+&#125;
+</code></pre>
+
+<h2 id="嵌入式系统中的C语言"><a href="#嵌入式系统中的C语言" class="headerlink" title="嵌入式系统中的C语言"></a>嵌入式系统中的C语言</h2><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><ul>
 <li>单片机编程独有代码规范：<ul>
 <li>尽量使用满足要求的最小数据类型</li>
 <li>避免浮点数</li>
@@ -345,11 +406,21 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//For 8 Bit Machine</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="keyword">uint8_t</span>;<span class="comment">//8位 1字节数据类型</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> <span class="keyword">int16_t</span>;<span class="comment">//16位 2字节数据类型</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">uint32_t</span>;<span class="comment">//32位 4字节数据类型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//For 32 Bit Machine</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="keyword">uint8_t</span>;<span class="comment">//8位 1字节数据类型</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">short</span> <span class="keyword">int16_t</span>;<span class="comment">//16位 2字节数据类型</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">int</span> <span class="keyword">uint32_t</span>;<span class="comment">//32位 4字节数据类型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//注意，上面两段根据机器位数取一段使用</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;&#x2F;For 8 Bit Machine
+typedef unsigned char uint8_t;&#x2F;&#x2F;8位 1字节数据类型
+typedef int int16_t;&#x2F;&#x2F;16位 2字节数据类型
+typedef unsigned long uint32_t;&#x2F;&#x2F;32位 4字节数据类型
+
+&#x2F;&#x2F;For 32 Bit Machine
+typedef unsigned char uint8_t;&#x2F;&#x2F;8位 1字节数据类型
+typedef short int16_t;&#x2F;&#x2F;16位 2字节数据类型
+typedef unsigned int uint32_t;&#x2F;&#x2F;32位 4字节数据类型
+
+&#x2F;&#x2F;注意，上面两段根据机器位数取一段使用</code></pre>
 <ul>
 <li>在定义变量时使用重命名好的数据类型名（数据类型没有颜色，莫得灵魂）</li>
 </ul>
-<h3 id="点灯大师（STMF103CXXXX）（基于寄存器）"><a href="#点灯大师（STMF103CXXXX）（基于寄存器）" class="headerlink" title="点灯大师（STMF103CXXXX）（基于寄存器）"></a>点灯大师（STMF103CXXXX）（基于寄存器）</h3><ul>
+<h2 id="点灯大师（STMF103CXXXX）（基于寄存器）"><a href="#点灯大师（STMF103CXXXX）（基于寄存器）" class="headerlink" title="点灯大师（STMF103CXXXX）（基于寄存器）"></a>点灯大师（STMF103CXXXX）（基于寄存器）</h2><ul>
 <li>还是那四步<ol>
 <li>开启时钟</li>
 <li>配置IO口工作模式</li>
@@ -392,17 +463,176 @@
 </blockquote>
 <hr>
 <ol start="4">
-<li>范例程序——点亮PA5口LED<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//配置时钟</span></span><br><span class="line">    RCC_APB2ENR |= (<span class="number">0x01</span> &lt;&lt; <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//配置方向和模式(推挽输出 50MHz)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//配置CNF5 = 00</span></span><br><span class="line">    GPIO_CRL &amp;= ~(<span class="number">0x0C</span> &lt;&lt; (<span class="number">5</span>*<span class="number">4</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//配置MODE5 = 11</span></span><br><span class="line">    GPIO_CRL |= (<span class="number">0x03</span> &lt;&lt; (<span class="number">5</span>*<span class="number">4</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//写输出内容（与置零 或置一）</span></span><br><span class="line">    GPIOA_ODR &amp;= ~(<span class="number">0x01</span> &lt;&lt; <span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>范例程序——点亮PA5口LED<pre class="line-numbers language-C" data-language="C"><code class="language-C">int main(void)&#123;
+    
+    &#x2F;&#x2F;配置时钟
+    RCC_APB2ENR |&#x3D; (0x01 &lt;&lt; 2);
+
+    &#x2F;&#x2F;配置方向和模式(推挽输出 50MHz)
+
+    &#x2F;&#x2F;配置CNF5 &#x3D; 00
+    GPIO_CRL &amp;&#x3D; ~(0x0C &lt;&lt; (5*4));
+
+    &#x2F;&#x2F;配置MODE5 &#x3D; 11
+    GPIO_CRL |&#x3D; (0x03 &lt;&lt; (5*4));
+
+    &#x2F;&#x2F;写输出内容（与置零 或置一）
+    GPIOA_ODR &amp;&#x3D; ~(0x01 &lt;&lt; 5);
+
+    while(1)&#123;
+
+    &#125;
+&#125;
+</code></pre></li>
 </ol>
 <ul>
 <li>注意点：<ol>
 <li>配置GPIO_CRL或GPIO_CRH寄存器时要注意它是四个位一组控制一个IO口，因此在按位移动的时候需要移动 <code>IO口编号 * 4</code> 个位数</li>
-<li>用于置零的取反要最后进行<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">//配置CNF5 = 00</span></span><br><span class="line">    GPIO_CRL &amp;= ~(<span class="number">0x0C</span> &lt;&lt; (<span class="number">5</span>*<span class="number">4</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    右移：</span></span><br><span class="line"><span class="comment">        0000 1100 0000 0000…… 右移至目标位置</span></span><br><span class="line"><span class="comment">    取反：</span></span><br><span class="line"><span class="comment">        1111 0011 1111 1111…… 将CNF5置为00</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">若改为：</span><br><span class="line"></span><br><span class="line">    <span class="comment">//配置CNF5 = 00</span></span><br><span class="line">    GPIO_CRL &amp;= (~<span class="number">0x0C</span> &lt;&lt; (<span class="number">5</span>*<span class="number">4</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    取反：</span></span><br><span class="line"><span class="comment">        1111 0011</span></span><br><span class="line"><span class="comment">    右移：（右边补0！！！）</span></span><br><span class="line"><span class="comment">        1111 0011 0000 0000 ……</span></span><br><span class="line"><span class="comment">不仅CNF5被置为00，低位的MODE4 CNF4 …… MODE0 CNF0 也被置零</span></span><br><span class="line"><span class="comment">    */</span></span><br></pre></td></tr></table></figure></li>
+<li>用于置零的取反要最后进行<pre class="line-numbers language-C" data-language="C"><code class="language-C">    &#x2F;&#x2F;配置CNF5 &#x3D; 00
+    GPIO_CRL &amp;&#x3D; ~(0x0C &lt;&lt; (5*4));
+
+    &#x2F;*
+    右移：
+        0000 1100 0000 0000…… 右移至目标位置
+    取反：
+        1111 0011 1111 1111…… 将CNF5置为00
+    *&#x2F;
+
+若改为：
+
+    &#x2F;&#x2F;配置CNF5 &#x3D; 00
+    GPIO_CRL &amp;&#x3D; (~0x0C &lt;&lt; (5*4));
+
+    &#x2F;*
+    取反：
+        1111 0011
+    右移：（右边补0！！！）
+        1111 0011 0000 0000 ……
+不仅CNF5被置为00，低位的MODE4 CNF4 …… MODE0 CNF0 也被置零
+    *&#x2F;</code></pre></li>
 <li>与置零，或置一</li>
 </ol>
 </li>
 </ul>
-
+<h2 id="通讯"><a href="#通讯" class="headerlink" title="通讯"></a>通讯</h2><h3 id="通讯的类型"><a href="#通讯的类型" class="headerlink" title="通讯的类型"></a>通讯的类型</h3><ul>
+<li><p>串行/并行<br>  串行一条线：一次发一位<br>  并行多条线：一次发多位</p>
+<br /></li>
+<li><p>同步/异步<br>  同步：使用同一个时钟<br>  异步：分别使用各自时钟</p>
+<br /></li>
+<li><p>点对点/总线<br>  点对点：只能存在两部通讯设备，不需要设备地址<br>  总线：多设备，需要设备地址</p>
+<br /></li>
+<li><p>半双工/全双工<br>  半双工：线路允许双向传送资料，但同一时刻智能单向传输<br>  全双工：线路允许同时双向传送资料</p>
+<br /></li>
+<li><p>主从/对等<br>  主从：仅主机可以开启通讯，客机需要请求通讯（如：你和迅雷服务器）<br>  对等：众生平等，谁都可以开启通讯（如：BT传输）</p>
+<br /></li>
+<li><p>单端/差分<br>  单端：一个信号一条线<br>  差分：一个信号使用两条线传输（两线相位相同振幅相反），接收端比较两个电压的电压差来判断发送的逻辑状态，高度免疫外界电磁干扰</p>
+</li>
+</ul>
+<h3 id="UART（通用异步收发器）"><a href="#UART（通用异步收发器）" class="headerlink" title="UART（通用异步收发器）"></a>UART（通用异步收发器）</h3><ul>
+<li><p>书上的USART为 通用同步异步收发器</p>
+</li>
+<li><p>使用UART通讯，<span class="red">除共地引脚之外，还需要至少两个引脚（RX TX）</span></p>
+<br /></li>
+<li><p>空闲状态、开始位和停止位</p>
+<ol>
+<li>当空闲状态时，TX总为 高电平</li>
+<li>开始位固定为 低电平</li>
+<li>停止位固定为 高电平，且停止位占用位数可调<br /></li>
+</ol>
+</li>
+<li><p>数据的传输</p>
+<ul>
+<li>数据从最低位（LSB）开始发送，最后发送最高位（MSB）<br><img src="https://z3.ax1x.com/2021/09/25/4sHObt.png" alt="4sHObt.png"><br /></li>
+</ul>
+</li>
+<li><p>波特率（b/s）</p>
+<ul>
+<li>看单位就知道，指的是每秒传输的数据位<br /></li>
+</ul>
+</li>
+<li><p>校验位</p>
+<ul>
+<li>奇校验<br>  奇校验会把数据位中1的个数<span class="red">变为奇数</span>，而不是判断是否为奇数</li>
+<li>偶校验<br>  奇校验会把数据位中1的个数<span class="red">变为偶数</span>，而不是判断是否为偶数<br /></li>
+</ul>
+</li>
+<li><p>通讯协议</p>
+<ul>
+<li>通讯协议的写法为：<br>  <code>波特率，数据位数 有无校验位 停止位占用位数</code></li>
+<li>如PPT写法：9600,8N1<br>  代表波特率9600，八位数据位，无校验位，停止位占用一位</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">有无校验位</th>
+<th align="center">写法</th>
+<th align="center">对应</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">无校验位</td>
+<td align="center">N</td>
+<td align="center">null</td>
+</tr>
+<tr>
+<td align="center">奇校验</td>
+<td align="center">O</td>
+<td align="center">odd</td>
+</tr>
+<tr>
+<td align="center">偶校验</td>
+<td align="center">E</td>
+<td align="center">even</td>
+</tr>
+</tbody></table>
+<h3 id="SPI（全双工同步串行通讯总线）"><a href="#SPI（全双工同步串行通讯总线）" class="headerlink" title="SPI（全双工同步串行通讯总线）"></a>SPI（全双工同步串行通讯总线）</h3><ul>
+<li>使用SPI通讯，<span class="red">需要4个引脚</span></li>
+</ul>
+<h4 id="SS（CS）片选信号"><a href="#SS（CS）片选信号" class="headerlink" title="SS（CS）片选信号"></a>SS（CS）片选信号</h4><ul>
+<li>固定空闲状态为高电平，当变为低电平时即开始传输数据</li>
+</ul>
+<h4 id="SCLK时钟信号"><a href="#SCLK时钟信号" class="headerlink" title="SCLK时钟信号"></a>SCLK时钟信号</h4><ul>
+<li><p>由主设备产生，有两个参数可调，对应四种模式</p>
+</li>
+<li><p>CPOL空闲电平对传输协议没有重大影响，只是决定空闲状态的电平，无论空闲状态是什么电平，开始传输的时候都是高低电平交替</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">SPI时钟模式</th>
+<th align="center">CPOL空闲电平</th>
+<th align="center">CPHA采样时刻</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">空闲低电平 第一个时钟边沿采样</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">空闲低电平 第二个时钟边沿采样</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">空闲高电平 第一个时钟边沿采样</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">空闲高电平 第二个时钟边沿采样</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+</tbody></table>
+<ul>
+<li>当使用第一时钟边沿采样，当发送下一次数据时，SS必须先变高电平</li>
+<li>当使用第二时钟边沿采样，当发送下一次数据时，SS可以不跳变</li>
+</ul>
+<h4 id="MISO主机接收从机发送"><a href="#MISO主机接收从机发送" class="headerlink" title="MISO主机接收从机发送"></a>MISO主机接收从机发送</h4><h4 id="MOSI主机发送从机接收"><a href="#MOSI主机发送从机接收" class="headerlink" title="MOSI主机发送从机接收"></a>MOSI主机发送从机接收</h4>
     </div>
 
     
@@ -460,6 +690,9 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   

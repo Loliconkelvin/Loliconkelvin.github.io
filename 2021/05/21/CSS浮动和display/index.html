@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 <meta name="description" content="CSS浮动和display">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS浮动和display">
@@ -125,7 +125,7 @@
           <div class="site-overview">
             <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
-      src="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      src="/uploads/avatar.png">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -133,7 +133,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -195,7 +195,7 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/05/21/CSS%E6%B5%AE%E5%8A%A8%E5%92%8Cdisplay/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      <meta itemprop="image" content="/uploads/avatar.png">
       <meta itemprop="name" content="Loliconkelvin">
       <meta itemprop="description" content="">
     </span>
@@ -266,16 +266,24 @@
 <h2 id="清除浮动（clear）"><a href="#清除浮动（clear）" class="headerlink" title="清除浮动（clear）"></a>清除浮动（clear）</h2><ul>
 <li>left：该元素的左侧不允许有浮动元素，若有，该元素往下走</li>
 <li>right：该元素的右侧不允许有浮动元素</li>
-<li>both：该元素的两侧不允许有浮动元素<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">clear</span>: both;</span><br></pre></td></tr></table></figure></li>
+<li>both：该元素的两侧不允许有浮动元素<pre class="line-numbers language-CSS" data-language="CSS"><code class="language-CSS">clear: both;</code></pre></li>
 </ul>
 <h3 id="父级边框塌陷"><a href="#父级边框塌陷" class="headerlink" title="父级边框塌陷"></a>父级边框塌陷</h3><ul>
 <li>元素浮动之后，它会脱离父级边框，无论该元素多大，父级边框的宽度和高度不会迁就该元素，如何让该元素保持在父级边框里？</li>
 </ul>
 <ol>
 <li>增加父级元素高度（不建议）</li>
-<li>在所有浮动的元素后面加一个空 的div，将该div的两侧浮动清除，则这个div会被挤到浮动元素的最后，而它自己并不浮动，相当于把父级边框撑大。（代码中应该避免空div）<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>在所有浮动的元素后面加一个空 的div，将该div的两侧浮动清除，则这个div会被挤到浮动元素的最后，而它自己并不浮动，相当于把父级边框撑大。（代码中应该避免空div）<pre class="line-numbers language-CSS" data-language="CSS"><code class="language-CSS">div&#123;
+    clear: both;
+    padding: 0;
+    margin: 0;
+&#125;</code></pre></li>
 <li>不指定父级元素的宽度和高度，对父级使用 <code>overflow: hidden;</code></li>
-<li>对父级元素增加一个伪类 <code>::after</code>：（建议使用） <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#father</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    content= &#x27;&#x27;; </span><br><span class="line">    <span class="attribute">display</span>: block;<span class="comment">/*变为块元素*/</span></span><br><span class="line">    <span class="attribute">clear</span>: both;<span class="comment">/*清除浮动*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>对父级元素增加一个伪类 <code>::after</code>：（建议使用） <pre class="line-numbers language-CSS" data-language="CSS"><code class="language-CSS">#father::after&#123;
+    content&#x3D; &#39;&#39;; 
+    display: block;&#x2F;*变为块元素*&#x2F;
+    clear: both;&#x2F;*清除浮动*&#x2F;
+&#125;</code></pre>
 <ul>
 <li>::after用于给选中元素增加一个伪行内元素，作为选中元素的最后一个子元素，通常配合content来增加修饰内容</li>
 <li>::before可以用于在选中元素的前面增加一个位行内元素</li>
@@ -350,6 +358,9 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   

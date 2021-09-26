@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 <meta name="description" content=".package_name{         color: blue;         weight: bold;     }      .keyword{         color: red;     }   点灯大师">
 <meta property="og:type" content="article">
 <meta property="og:title" content="STM32笔记——单片机">
@@ -129,7 +129,7 @@
           <div class="site-overview">
             <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
-      src="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      src="/uploads/avatar.png">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -137,7 +137,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -199,7 +199,7 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/09/04/STM32%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%8D%95%E7%89%87%E6%9C%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      <meta itemprop="image" content="/uploads/avatar.png">
       <meta itemprop="name" content="Loliconkelvin">
       <meta itemprop="description" content="">
     </span>
@@ -610,9 +610,41 @@
 </li>
 <li><p>循环逻辑</p>
 <ol>
-<li>无脑写数(最无脑 最安全 不担心出错) <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    GPIO_Write(GPIOA, ~<span class="number">0x0001</span>);</span><br><span class="line">    Delay_ms(<span class="number">500</span>);</span><br><span class="line">    GPIO_Write(GPIOA, ~<span class="number">0x0002</span>);</span><br><span class="line">    Delay_ms(<span class="number">500</span>);</span><br><span class="line">    GPIO_Write(GPIOA, ~<span class="number">0x0004</span>);</span><br><span class="line">    Delay_ms(<span class="number">500</span>);</span><br><span class="line">    GPIO_Write(GPIOA, ~<span class="number">0x0008</span>);</span><br><span class="line">    Delay_ms(<span class="number">500</span>);</span><br><span class="line">    GPIO_Write(GPIOA, ~<span class="number">0x0010</span>);</span><br><span class="line">    Delay_ms(<span class="number">500</span>);</span><br><span class="line">    GPIO_Write(GPIOA, ~<span class="number">0x0020</span>);</span><br><span class="line">    Delay_ms(<span class="number">500</span>);</span><br><span class="line">    GPIO_Write(GPIOA, ~<span class="number">0x0040</span>);</span><br><span class="line">    Delay_ms(<span class="number">500</span>);</span><br><span class="line">    GPIO_Write(GPIOA, ~<span class="number">0x0080</span>);</span><br><span class="line">    Delay_ms(<span class="number">500</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>数组写数（比较无脑 for循环变量要考虑） <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> gpioValue[<span class="number">8</span>] = &#123;</span><br><span class="line">    <span class="number">0x0001</span>, <span class="number">0x0002</span>, <span class="number">0x0004</span>, <span class="number">0x0008</span>,</span><br><span class="line">    <span class="number">0x0010</span>, <span class="number">0x0020</span>, <span class="number">0x0040</span>, <span class="number">0x0080</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">char</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++)&#123;</span><br><span class="line">        GPIO_Write(GPIOA, ~gpioValue[i]);</span><br><span class="line">        Delay_ms(<span class="number">500</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>循环写数（需要点逻辑 for循环变量要考虑） <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">char</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++)&#123;</span><br><span class="line">        GPIO_Write(GPIOA, ~(<span class="number">0x0001</span> &lt;&lt; i));</span><br><span class="line">        Delay_ms(<span class="number">500</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>无脑写数(最无脑 最安全 不担心出错) <pre class="line-numbers language-C" data-language="C"><code class="language-C">while(1)&#123;
+    GPIO_Write(GPIOA, ~0x0001);
+    Delay_ms(500);
+    GPIO_Write(GPIOA, ~0x0002);
+    Delay_ms(500);
+    GPIO_Write(GPIOA, ~0x0004);
+    Delay_ms(500);
+    GPIO_Write(GPIOA, ~0x0008);
+    Delay_ms(500);
+    GPIO_Write(GPIOA, ~0x0010);
+    Delay_ms(500);
+    GPIO_Write(GPIOA, ~0x0020);
+    Delay_ms(500);
+    GPIO_Write(GPIOA, ~0x0040);
+    Delay_ms(500);
+    GPIO_Write(GPIOA, ~0x0080);
+    Delay_ms(500);
+&#125;</code></pre></li>
+<li>数组写数（比较无脑 for循环变量要考虑） <pre class="line-numbers language-C" data-language="C"><code class="language-C">char gpioValue[8] &#x3D; &#123;
+    0x0001, 0x0002, 0x0004, 0x0008,
+    0x0010, 0x0020, 0x0040, 0x0080,
+&#125;;
+
+while(1)&#123;
+    for(char i &#x3D; 0; i &lt; 8; i++)&#123;
+        GPIO_Write(GPIOA, ~gpioValue[i]);
+        Delay_ms(500);
+    &#125;
+&#125;</code></pre></li>
+<li>循环写数（需要点逻辑 for循环变量要考虑） <pre class="line-numbers language-C" data-language="C"><code class="language-C">while(1)&#123;
+    for(char i &#x3D; 0; i &lt; 8; i++)&#123;
+        GPIO_Write(GPIOA, ~(0x0001 &lt;&lt; i));
+        Delay_ms(500);
+    &#125;
+&#125;</code></pre></li>
 </ol>
 <ul>
 <li>注意点灯是低电平，最后别忘记取反</li>
@@ -623,7 +655,29 @@
 <li><p>给PB12输出低电平</p>
 </li>
 <li><p>完整代码：</p>
-  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;stm32f10x.h&quot;</span>                  <span class="comment">// Device header</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;Delay.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    <span class="comment">//使能时钟    </span></span><br><span class="line">    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//初始化IO口    </span></span><br><span class="line">    GPIO_InitTypeDef GPIO_InitStructure;</span><br><span class="line">    GPIO_InitStructure.GPIO_Mode =GPIO_Mode_Out_PP;</span><br><span class="line">    GPIO_InitStructure.GPIO_Pin =GPIO_Pin_12;</span><br><span class="line">    GPIO_InitStructure.GPIO_Speed =GPIO_Speed_50MHz;</span><br><span class="line">    GPIO_Init(GPIOB, &amp;GPIO_InitStructure);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//写IO口    </span></span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        GPIO_WriteBit(GPIOB, GPIO_Pin_12,Bit_RESET);</span><br><span class="line">        Delay_ms(<span class="number">500</span>);</span><br><span class="line">        GPIO_WriteBit(GPIOB, GPIO_Pin_12,Bit_SET);</span><br><span class="line">        Delay_ms(<span class="number">500</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+  <pre class="line-numbers language-C" data-language="C"><code class="language-C">#include &quot;stm32f10x.h&quot;                  &#x2F;&#x2F; Device header
+#include &quot;Delay.h&quot;
+
+int main(void)&#123;
+    &#x2F;&#x2F;使能时钟    
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+
+    &#x2F;&#x2F;初始化IO口    
+    GPIO_InitTypeDef GPIO_InitStructure;
+    GPIO_InitStructure.GPIO_Mode &#x3D;GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Pin &#x3D;GPIO_Pin_12;
+    GPIO_InitStructure.GPIO_Speed &#x3D;GPIO_Speed_50MHz;
+    GPIO_Init(GPIOB, &amp;GPIO_InitStructure);
+
+    &#x2F;&#x2F;写IO口    
+    while(1)&#123;
+        GPIO_WriteBit(GPIOB, GPIO_Pin_12,Bit_RESET);
+        Delay_ms(500);
+        GPIO_WriteBit(GPIOB, GPIO_Pin_12,Bit_SET);
+        Delay_ms(500);
+    &#125;
+&#125;
+</code></pre></li>
 </ul>
 <h3 id="1-1-4-GPIO输出"><a href="#1-1-4-GPIO输出" class="headerlink" title="1-1-4 GPIO输出"></a>1-1-4 GPIO输出</h3><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><h3 id="某些慎用IO口"><a href="#某些慎用IO口" class="headerlink" title="某些慎用IO口"></a>某些慎用IO口</h3><ul>
 <li>A15 B3 B4端口尽量别用做输出，这三个口默认为JTEG调试端口，若要用作IO口，需要另外配置</li>
@@ -686,6 +740,9 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   

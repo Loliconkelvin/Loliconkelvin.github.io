@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 <meta name="description" content=".keynote{     color:red; }    CSS文本与列表样式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS文本与列表样式">
@@ -127,7 +127,7 @@
           <div class="site-overview">
             <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
-      src="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      src="/uploads/avatar.png">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -135,7 +135,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -197,7 +197,7 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/05/17/CSS%E6%96%87%E6%9C%AC%E4%B8%8E%E5%88%97%E8%A1%A8%E6%A0%B7%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://z3.ax1x.com/2021/09/24/4BepdS.jpg">
+      <meta itemprop="image" content="/uploads/avatar.png">
       <meta itemprop="name" content="Loliconkelvin">
       <meta itemprop="description" content="">
     </span>
@@ -275,7 +275,9 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">font</span>:bolder <span class="number">12px</span> Verdana;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-CSS" data-language="CSS"><code class="language-CSS">body&#123;
+    font:bolder 12px Verdana;
+&#125;</code></pre>
 
 <h2 id="字体风格（style）"><a href="#字体风格（style）" class="headerlink" title="字体风格（style）"></a>字体风格（style）</h2><ul>
 <li>normal:默认</li>
@@ -325,7 +327,9 @@
 <li>注意：<ul>
 <li>设置多字体时，每个字体名用逗号隔开</li>
 <li>字体名称包含空格、#、$等符号需要用双引号包含整个字体名称</li>
-<li>当需要设置英文字体时，<span class="keynote">英文字体需要位于中文字体之前</span><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&quot;Arial Black&quot;</span>, 楷体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>当需要设置英文字体时，<span class="keynote">英文字体需要位于中文字体之前</span><pre class="line-numbers language-CSS" data-language="CSS"><code class="language-CSS">body&#123;
+    font-family: &quot;Arial Black&quot;, 楷体;
+&#125;</code></pre></li>
 </ul>
 </li>
 </ul>
@@ -335,12 +339,17 @@
 <li>right：右对齐</li>
 </ul>
 <h2 id="首行缩进（indent）"><a href="#首行缩进（indent）" class="headerlink" title="首行缩进（indent）"></a>首行缩进（indent）</h2><p>缩进2字符（em表示字符数 px表示像素）</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.h1</span>&#123;</span><br><span class="line">    <span class="attribute">text-indent</span>:<span class="number">2em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-CSS" data-language="CSS"><code class="language-CSS">.h1&#123;
+    text-indent:2em;
+&#125;</code></pre>
 
 <h2 id="装饰线（decoration）"><a href="#装饰线（decoration）" class="headerlink" title="装饰线（decoration）"></a>装饰线（decoration）</h2><p>underline:下划线<br>line-through:删除线（中划线）<br>overline:上划线<br>none:无（通常用于超链接去下划线）</p>
 <h2 id="文本阴影（shadow）"><a href="#文本阴影（shadow）" class="headerlink" title="文本阴影（shadow）"></a>文本阴影（shadow）</h2><ul>
 <li>用于指定文本阴影</li>
-<li>四个值分别对应水平阴影，垂直阴影，模糊距离，阴影颜色<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">text-shadow</span>: <span class="number">5px</span> <span class="number">5px</span> <span class="number">5px</span> <span class="number">#FF0000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>四个值分别对应水平阴影，垂直阴影，模糊距离，阴影颜色<pre class="line-numbers language-CSS" data-language="CSS"><code class="language-CSS">h1
+&#123;
+    text-shadow: 5px 5px 5px #FF0000;
+&#125;</code></pre></li>
 </ul>
 <h1 id="不隶属于任何组"><a href="#不隶属于任何组" class="headerlink" title="不隶属于任何组"></a>不隶属于任何组</h1><h2 id="文本颜色（color）"><a href="#文本颜色（color）" class="headerlink" title="文本颜色（color）"></a>文本颜色（color）</h2><ul>
 <li>直接使用color即可设定字体颜色，他不隶属于font</li>
@@ -371,11 +380,15 @@
 <li>正方形：square</li>
 </ul>
 <h1 id="设置元素透明度（opacity）"><a href="#设置元素透明度（opacity）" class="headerlink" title="设置元素透明度（opacity）"></a>设置元素透明度（opacity）</h1><ul>
-<li>取值0~1<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">opacity</span>:<span class="number">0.5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>取值0~1<pre class="line-numbers language-CSS" data-language="CSS"><code class="language-CSS">div&#123;
+    opacity:0.5;
+&#125;</code></pre></li>
 </ul>
 <h2 id="IE8以前的方式（filter）"><a href="#IE8以前的方式（filter）" class="headerlink" title="IE8以前的方式（filter）"></a>IE8以前的方式（filter）</h2><ul>
 <li>取值0~100</li>
-<li>这是IE专用属性，为了正常显示建议在调节透明度的时候两个都写<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">alpha</span>(opacity=<span class="number">50</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>这是IE专用属性，为了正常显示建议在调节透明度的时候两个都写<pre class="line-numbers language-CSS" data-language="CSS"><code class="language-CSS">div&#123;
+    filter: alpha(opacity&#x3D;50);
+&#125;</code></pre></li>
 </ul>
 
     </div>
@@ -435,6 +448,9 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   

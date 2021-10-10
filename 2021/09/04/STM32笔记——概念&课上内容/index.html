@@ -37,8 +37,20 @@
 <meta property="og:image" content="https://z3.ax1x.com/2021/09/10/hXucY8.png">
 <meta property="og:image" content="https://z3.ax1x.com/2021/09/10/hXugfS.png">
 <meta property="og:image" content="https://z3.ax1x.com/2021/09/25/4sHObt.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/29/45Z2Wj.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/29/45ZgYQ.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/29/453gb9.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/08/hTH50H.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/29/45NCAH.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/29/45Nw59.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/29/456w3F.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/09/29/456d9U.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/10/05/4jH7Tg.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/10/05/4jHbkQ.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/10/07/5pO1yQ.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/10/07/5pzXLD.png">
 <meta property="article:published_time" content="2021-09-04T08:48:24.000Z">
-<meta property="article:modified_time" content="2021-09-25T14:07:22.802Z">
+<meta property="article:modified_time" content="2021-10-10T11:18:24.028Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="STM32">
 <meta name="twitter:card" content="summary">
@@ -128,7 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">嵌入式系统结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E9%99%90%E5%AE%9A%E7%AC%A6-volatile%EF%BC%88%E5%BE%85%E6%B1%82%E8%AF%81%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">存储限定符 volatile（待求证）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARM%E5%A4%84%E7%90%86%E5%99%A8%E5%88%86%E7%B1%BB%E2%80%94%E2%80%94%E6%8C%89%E5%BA%94%E7%94%A8%E7%89%B9%E5%BE%81%E5%88%86%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">ARM处理器分类——按应用特征分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GPIO%EF%BC%88Kinetis-KL25%EF%BC%89%EF%BC%88%E5%9F%BA%E4%BA%8E%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">GPIO（Kinetis KL25）（基于寄存器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84C%E8%AF%AD%E8%A8%80"><span class="nav-number">5.</span> <span class="nav-text">嵌入式系统中的C语言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">5.1.</span> <span class="nav-text">数据类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9%E7%81%AF%E5%A4%A7%E5%B8%88%EF%BC%88STMF103CXXXX%EF%BC%89%EF%BC%88%E5%9F%BA%E4%BA%8E%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">点灯大师（STMF103CXXXX）（基于寄存器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%AE%AF"><span class="nav-number">7.</span> <span class="nav-text">通讯</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%AE%AF%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">7.1.</span> <span class="nav-text">通讯的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UART%EF%BC%88%E9%80%9A%E7%94%A8%E5%BC%82%E6%AD%A5%E6%94%B6%E5%8F%91%E5%99%A8%EF%BC%89"><span class="nav-number">7.2.</span> <span class="nav-text">UART（通用异步收发器）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SPI%EF%BC%88%E5%85%A8%E5%8F%8C%E5%B7%A5%E5%90%8C%E6%AD%A5%E4%B8%B2%E8%A1%8C%E9%80%9A%E8%AE%AF%E6%80%BB%E7%BA%BF%EF%BC%89"><span class="nav-number">7.3.</span> <span class="nav-text">SPI（全双工同步串行通讯总线）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SS%EF%BC%88CS%EF%BC%89%E7%89%87%E9%80%89%E4%BF%A1%E5%8F%B7"><span class="nav-number">7.3.1.</span> <span class="nav-text">SS（CS）片选信号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SCLK%E6%97%B6%E9%92%9F%E4%BF%A1%E5%8F%B7"><span class="nav-number">7.3.2.</span> <span class="nav-text">SCLK时钟信号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MISO%E4%B8%BB%E6%9C%BA%E6%8E%A5%E6%94%B6%E4%BB%8E%E6%9C%BA%E5%8F%91%E9%80%81"><span class="nav-number">7.3.3.</span> <span class="nav-text">MISO主机接收从机发送</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MOSI%E4%B8%BB%E6%9C%BA%E5%8F%91%E9%80%81%E4%BB%8E%E6%9C%BA%E6%8E%A5%E6%94%B6"><span class="nav-number">7.3.4.</span> <span class="nav-text">MOSI主机发送从机接收</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">嵌入式系统结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E9%99%90%E5%AE%9A%E7%AC%A6-volatile%EF%BC%88%E5%BE%85%E6%B1%82%E8%AF%81%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">存储限定符 volatile（待求证）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARM%E5%A4%84%E7%90%86%E5%99%A8%E5%88%86%E7%B1%BB%E2%80%94%E2%80%94%E6%8C%89%E5%BA%94%E7%94%A8%E7%89%B9%E5%BE%81%E5%88%86%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">ARM处理器分类——按应用特征分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GPIO%EF%BC%88Kinetis-KL25%EF%BC%89%EF%BC%88%E5%9F%BA%E4%BA%8E%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">GPIO（Kinetis KL25）（基于寄存器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84C%E8%AF%AD%E8%A8%80"><span class="nav-number">5.</span> <span class="nav-text">嵌入式系统中的C语言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">5.1.</span> <span class="nav-text">数据类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9%E7%81%AF%E5%A4%A7%E5%B8%88%EF%BC%88STMF103CXXXX%EF%BC%89%EF%BC%88%E5%9F%BA%E4%BA%8E%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">点灯大师（STMF103CXXXX）（基于寄存器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%AE%AF"><span class="nav-number">7.</span> <span class="nav-text">通讯</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%AE%AF%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">7.1.</span> <span class="nav-text">通讯的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UART%EF%BC%88%E9%80%9A%E7%94%A8%E5%BC%82%E6%AD%A5%E6%94%B6%E5%8F%91%E5%99%A8%EF%BC%89"><span class="nav-number">7.2.</span> <span class="nav-text">UART（通用异步收发器）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SPI%EF%BC%88%E5%85%A8%E5%8F%8C%E5%B7%A5%E5%90%8C%E6%AD%A5%E4%B8%B2%E8%A1%8C%E9%80%9A%E8%AE%AF%E6%80%BB%E7%BA%BF%EF%BC%89"><span class="nav-number">7.3.</span> <span class="nav-text">SPI（全双工同步串行通讯总线）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SS%EF%BC%88CS%EF%BC%89%E7%89%87%E9%80%89%E4%BF%A1%E5%8F%B7"><span class="nav-number">7.3.1.</span> <span class="nav-text">SS（CS）片选信号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SCLK%E6%97%B6%E9%92%9F%E4%BF%A1%E5%8F%B7"><span class="nav-number">7.3.2.</span> <span class="nav-text">SCLK时钟信号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MISO%E4%B8%8EMOSI"><span class="nav-number">7.3.3.</span> <span class="nav-text">MISO与MOSI</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UART%E9%80%9A%E8%AE%AF%E7%BC%96%E7%A8%8B%EF%BC%88Kinetis-KL25%EF%BC%89%EF%BC%88%E5%9F%BA%E4%BA%8E%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%89"><span class="nav-number">7.4.</span> <span class="nav-text">UART通讯编程（Kinetis KL25）（基于寄存器）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#USART%E5%AF%84%E5%AD%98%E5%99%A8%E7%BC%96%E7%A8%8B%EF%BC%88STMF103CXXXX%EF%BC%89"><span class="nav-number">7.5.</span> <span class="nav-text">USART寄存器编程（STMF103CXXXX）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%AD"><span class="nav-number">8.</span> <span class="nav-text">中断</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -234,7 +246,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-25 22:07:22" itemprop="dateModified" datetime="2021-09-25T22:07:22+08:00">2021-09-25</time>
+        <time title="修改时间：2021-10-10 19:18:24" itemprop="dateModified" datetime="2021-10-10T19:18:24+08:00">2021-10-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -628,11 +640,303 @@ typedef unsigned int uint32_t;&#x2F;&#x2F;32位 4字节数据类型
 <td align="center">1</td>
 </tr>
 </tbody></table>
+<br />
+
 <ul>
-<li>当使用第一时钟边沿采样，当发送下一次数据时，SS必须先变高电平</li>
-<li>当使用第二时钟边沿采样，当发送下一次数据时，SS可以不跳变</li>
+<li><p>当使用第一时钟边沿采样，当发送下一次数据时，SS必须先跳变至高电平再拉低，原因：</p>
+<ul>
+<li><p>可以从图中看到，在使用第一时钟边沿采样的情况下，<span class="red">SS被拉低时MOSI就已经加载第一个传输位 BIT7 并等待传输（等待对面的通讯机读取），第一个时钟传来意味着开始传输</span>。</p>
+<br />
+
+<p>  若SS不跳变而时钟紧接着运作，则意味着没有第一个加载信号，MOSI将在第一个时钟的下降沿加载第一位，那第一个时钟的上升沿传输了个什么呢？可能是上一次传输的BIT0，这就有可能发生错误。<br><img src="https://z3.ax1x.com/2021/09/29/45Z2Wj.png" alt="45Z2Wj.png"></p>
+</li>
 </ul>
-<h4 id="MISO主机接收从机发送"><a href="#MISO主机接收从机发送" class="headerlink" title="MISO主机接收从机发送"></a>MISO主机接收从机发送</h4><h4 id="MOSI主机发送从机接收"><a href="#MOSI主机发送从机接收" class="headerlink" title="MOSI主机发送从机接收"></a>MOSI主机发送从机接收</h4>
+</li>
+</ul>
+<br />
+
+<ul>
+<li>当使用第二时钟边沿采样，当发送下一次数据时，SS可以不跳变，原因：<ul>
+<li>可以从图中看到，在使用第二时钟边沿采样的情况下，<span class="red">SS被拉低时，并没有加载要传输的数据，而在时钟的第一边沿加载了第一个数据位 BIT7，第二个时钟边沿传输，这意味着加载和发送都由时钟控制，不受SS干涉</span>，所以这时传输完毕就把时钟关掉，传输第二组数据就把时钟开启，完全不用管SS</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://z3.ax1x.com/2021/09/29/45ZgYQ.png" alt="45ZgYQ.png"></p>
+<h4 id="MISO与MOSI"><a href="#MISO与MOSI" class="headerlink" title="MISO与MOSI"></a>MISO与MOSI</h4><ul>
+<li><p>MISO：主机接收从机发送</p>
+</li>
+<li><p>MOSI：主机发送从机接收</p>
+<br /></li>
+<li><p>其实这就是一个数据交换的过程：<br><img src="https://z3.ax1x.com/2021/09/29/453gb9.png" alt="453gb9.png"></p>
+</li>
+</ul>
+<h3 id="UART通讯编程（Kinetis-KL25）（基于寄存器）"><a href="#UART通讯编程（Kinetis-KL25）（基于寄存器）" class="headerlink" title="UART通讯编程（Kinetis KL25）（基于寄存器）"></a>UART通讯编程（Kinetis KL25）（基于寄存器）</h3><ul>
+<li><p>通讯总攻略：</p>
+<ol>
+<li>开启端口时钟</li>
+<li>开启UART模块时钟</li>
+<li>设置IO口功能为UART通讯</li>
+<li>配置UART相关寄存器<br /></li>
+</ol>
+</li>
+<li><p>这里使用的是PORTC3与PORTC4号端口，UART1</p>
+</li>
+</ul>
+<hr>
+<ol>
+<li>端口时钟配置（SIM）<br><img src="https://z3.ax1x.com/2021/09/08/hTH50H.png" alt="hTH50H.png"></li>
+</ol>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;&#x2F; 开启C组端口时钟
+SIM_SCGC5 |&#x3D; (1 &lt;&lt; 11);</code></pre>
+<hr>
+<ol start="2">
+<li>配置UARTx模块时钟（SIM）<br><img src="https://z3.ax1x.com/2021/09/29/45NCAH.png" alt="45NCAH.png"></li>
+</ol>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;&#x2F; 开启UART1模块时钟
+SIM_SCGC |&#x3D; (1 &lt;&lt; 11);</code></pre>
+<hr>
+<ol start="3">
+<li>设置IO口功能为UART通讯（PORTx_PCRn）<br><img src="https://z3.ax1x.com/2021/09/29/45Nw59.png" alt="45Nw59.png"></li>
+</ol>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;&#x2F; 设置端口功能为UART通讯，选择3号功能即给MUX赋值011
+PORTC_PCR3 &amp;&#x3D; ~(1 &lt;&lt; 10);
+PORTC_PCR3 |&#x3D; (0x03 &lt;&lt; 8);
+
+PORTC_PCR4 &amp;&#x3D; ~(1 &lt;&lt; 10);
+PORTC_PCR4 |&#x3D; (0x03 &lt;&lt; 8);</code></pre>
+<hr>
+<ol start="4">
+<li><p>配置UART相关寄存器（UARTx）</p>
+<ol>
+<li><p>配置UART波特率（UARTx_BDL UARTx_BDH）</p>
+<ul>
+<li><p>总线时钟</p>
+<ul>
+<li>PPT用单片机的总线时钟为：<code>20.97 / 2MHz = 10.485MHz = 10485KHz = 10485e3Hz</code></li>
+<li>兆赫兹、千赫兹、赫兹的转换比为1000</li>
+<li>配置锁相环PLL可以超频总线时钟<br /></li>
+</ul>
+</li>
+<li><p>波特率的计算<br>波特率寄存器里面存的数的计算公式为：</p>
+  <pre class="line-numbers language-none"><code class="language-none">波特率寄存器内数(10进制 取整) &#x3D; 总线时钟(Hz) &#x2F; (设置的波特率 * 16)</code></pre>
+<p>  如：<br>  配置为9600，则波特率寄存器内的数为：</p>
+  <pre class="line-numbers language-none"><code class="language-none">10485e3 &#x2F; (9600 * 16) ≈ 68</code></pre>
+<p>  转为十六进制,即可应用至UARTx_BDL和UARTx_BDH：</p>
+  <pre class="line-numbers language-none"><code class="language-none">0x44</code></pre>
+<ul>
+<li><span class="red">写入寄存器的值再换算回波特率肯定不等于9600，但是波特率误差在5%以内是可以接受的</span></li>
+</ul>
+</li>
+</ul>
+ <br />
+
+<ul>
+<li><p>配置UART波特率</p>
+<ul>
+<li><span class="red">BDL和BDH都要写入值，没有就写0，不能只写其中一个</span><pre class="line-numbers language-C" data-language="C"><code class="language-C">UART1_BDL &#x3D; 0x44;
+UART1_BDH &#x3D; 0x00;</code></pre></li>
+</ul>
+</li>
+<li><p>UART波特率计算函数</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;&#x2F; 定义使用的UART模块
+#define UARTL UART1_BDL
+#define UARTH UART1_BDH
+
+&#x2F;&#x2F; 定义总线时钟 设定的波特率 要写入的数
+unsigned char busClock_khz &#x3D; 10485;
+unsigned char baudRate &#x3D; 9600;
+unsigned char sbr;
+
+sbr &#x3D; (unsigned short)((busClock_khz * 1000) &#x2F; (baudRate &#x2F; 16));
+
+&#x2F;&#x2F; 提取计算结果高八位 并 应用到UARTx_BDH
+UARTH &#x3D; (unsigned char)((sbr &amp; 0x1F00) &gt;&gt; 8);
+&#x2F;&#x2F; 提取计算结果低八位 并 应用到UARTx_BDL
+UARTL &#x3D; (unsigned char)(sbr &amp; 0x00FF);</code></pre>
+<br /></li>
+</ul>
+</li>
+<li><p>配置UART控制寄存器（UARTx_C1 UARTx_C2）</p>
+<ul>
+<li>配置UART1_C1<br><img src="https://z3.ax1x.com/2021/09/29/456w3F.png" alt="456w3F.png"></li>
+</ul>
+ <pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;*
+主要是配置：
+M：数据位位数（0：8位 1：9位）
+PE：是否开启校验位（0：关闭 1：开启）
+PT：校验位类型（0：奇校验 1：偶校验）
+*&#x2F;
+UART1_C1 &#x3D; 0;</code></pre>
+
+<ul>
+<li>配置UART1_C2<br><img src="https://z3.ax1x.com/2021/09/29/456d9U.png" alt="456d9U.png"></li>
+</ul>
+ <pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;*
+主要配置：
+TE：使能传输
+RE：使能接收
+*&#x2F;
+#define UART_C2_TE_MASK 0x08
+#define UART_C2_RE_MASK 0x04
+
+UART1_C2 |&#x3D; (UART_C2_TE_MASK | UART_C2_RE_MASK);</code></pre>
+<br /></li>
+<li><p>配置UART状态寄存器——写入（传出）<br><img src="https://z3.ax1x.com/2021/10/05/4jH7Tg.png" alt="4jH7Tg.png"></p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">#define UART_S1_TDRE_MASK 0x80
+
+void UART1_PutChar(unsigned char data) &#123;
+    &#x2F;&#x2F; 当TDRE为0，循环检查等待
+    while(!(UART1_S1 &amp; UART_S1_TDRE_MASK));
+
+    &#x2F;&#x2F; 当TDRE为1，上一批数据传输完成，写入目前需要传输的数据
+    UART1_D &#x3D; data;
+&#125;</code></pre>
+<br /></li>
+<li><p>配置UART状态寄存器——读取<br><img src="https://z3.ax1x.com/2021/10/05/4jHbkQ.png" alt="4jHbkQ.png"></p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">#define UART_S1_RDRF_MASK 0x20
+
+unsigned char UART1_GetChar(void) &#123;
+    &#x2F;&#x2F; 当RDRF为0，循环检查等待
+    while(!(UART1_S1 &amp; UART_S1_RDRF_MASK));
+
+    &#x2F;&#x2F; 当RDRF为1，数据已经全部到达，读取该数据
+    return UART1_D;
+&#125;</code></pre>
+<br /></li>
+<li><p>三个传输所需函数</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;&#x2F; 初始化
+void uart1_init() &#123;
+    &#x2F;&#x2F; 开启某组端口时钟
+    SIM_SCGC5 |&#x3D; (1 &lt;&lt; 11);
+    &#x2F;&#x2F; 开启UART1时钟
+    SIM_SCGC4 |&#x3D; (1 &lt;&lt; 11);
+
+    &#x2F;&#x2F; 配置端口功能为UART
+    PORTC_PCR3 |&#x3D; (3 &lt;&lt; 8);
+    PORTC_PCR4 |&#x3D; (3 &lt;&lt; 8);
+
+    &#x2F;&#x2F; 开启发送和接收
+    UART1_C2 |&#x3D; ((1 &lt;&lt; 3) | (1 &lt;&lt; 2))
+
+    &#x2F;&#x2F; 设置波特率9600
+    UART_BDH |&#x3D; 0x00;
+    UART_BDL |&#x3D; 0x44;
+&#125;
+
+&#x2F;&#x2F; 读入
+unsigned char UART1_GetChar(void) &#123;
+    &#x2F;&#x2F; 当RDRF为0，循环检查等待
+    while(!(UART1_S1 &amp; UART_S1_RDRF_MASK));
+
+    &#x2F;&#x2F; 当RDRF为1，数据已经全部到达，读取该数据
+    return UART1_D;
+&#125;
+
+&#x2F;&#x2F; 传出
+void UART1_PutChar(unsigned char data) &#123;
+    &#x2F;&#x2F; 当TDRE为0，循环检查等待
+    while(!(UART1_S1 &amp; UART_S1_TDRE_MASK));
+
+    &#x2F;&#x2F; 当TDRE为1，上一批数据传输完成，写入目前需要传输的数据
+    UART1_D &#x3D; data;
+&#125;
+</code></pre></li>
+</ol>
+</li>
+</ol>
+<h3 id="USART寄存器编程（STMF103CXXXX）"><a href="#USART寄存器编程（STMF103CXXXX）" class="headerlink" title="USART寄存器编程（STMF103CXXXX）"></a>USART寄存器编程（STMF103CXXXX）</h3><ol>
+<li><p>波特率设置（USART_BRR）</p>
+<ol>
+<li><p>波特率计算</p>
+<ul>
+<li>STM32波特率计算遵循以下公式：<pre class="line-numbers language-none"><code class="language-none">波特率寄存器内存的数（十进制浮点数） &#x3D; 总线时钟（Hz） &#x2F; ( 16 * 波特率（b&#x2F;s） )</code></pre></li>
+</ul>
+<p> 如：已知fck总线时钟为72MHz，要得到115200波特率，USART_BRR寄存器内的值应该设置为多少？</p>
+ <pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 根据公式
+波特率寄存器内存的数 &#x3D; 72000000 &#x2F; (16 * 115200)
+波特率寄存器内存的数 &#x3D; 39.0625
+
+整数部分 十进制39 十六进制27
+小数部分 十进制0.0625 十六进制0.0625 * 16 &#x3D; 1
+
+因此 寄存器内写入的数为 0x271</code></pre></li>
+</ol>
+<ul>
+<li>波特率计算函数<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;*
+* 方法名: setUsartBaudRate
+* 作用: 设置USART_BRR波特率寄存器
+* 形参: clk 传入总线时钟，单位为MHz
+* 形参: baudRate 传入要设置的波特率
+*&#x2F;
+void setUsartBaudRate(u32 clk, u32 baudRate) &#123;
+    &#x2F;&#x2F; 定义要存在寄存器里的十进制数，整数部分，小数部分
+    float hexNumber;
+    u16 divMantissa;
+    u16 divFraction;
+    
+    &#x2F;&#x2F; 根据公式得到要存在寄存器里面的十进制数
+    hexNumber &#x3D; (float)(clk * 1000000) &#x2F; (16 * baudRate);
+
+    &#x2F;&#x2F; 提取整数部分
+    divMantissa &#x3D; (u16)hexNumber;
+
+    &#x2F;&#x2F; 提取小数部分，并转换为十六进制格式
+    divFraction &#x3D; (hexNumber - divMantissa) * 16;
+
+    &#x2F;&#x2F; 将整数部分左移四位，给小数部分留位置
+    divMantissa &lt;&lt;&#x3D; 4;
+
+    &#x2F;&#x2F; 将值写入到寄存器
+    USART1_BBR &#x3D; divMantissa + divFraction;
+&#125;</code></pre></li>
+</ul>
+<ol start="2">
+<li>波特率的写入（USART_BRR） <img src="https://z3.ax1x.com/2021/10/07/5pO1yQ.png" alt="5pO1yQ.png"><ul>
+<li>STMF103需要配置USART_BRR波特率寄存器来设定波特率，其中，该寄存器的15~4位存放波特率整数，3~0位存放波特率小数</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li><p>配置USART控制寄存器（USART_CR1）<br> <img src="https://z3.ax1x.com/2021/10/07/5pzXLD.png" alt="5pzXLD.png"></p>
+<ul>
+<li>主要需要配置：<ol>
+<li>EE：使能USART（0：禁用 1：启用）</li>
+<li>M：数据位长度（0：8个数据位 1:9个数据位）</li>
+<li>PCE：校验位开关（0：禁用 1：启用）</li>
+<li>PS：校验位类型（0：偶校验 1： 奇校验）</li>
+<li>TE：发送使能（0：禁用 1：启用）</li>
+<li>RE：接收使能（0：禁用 1：启用）<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;&#x2F; 配置为：USART启用 8数据位 禁用校验位 发送使能 接收使能
+USART1_BRR |&#x3D; 0x200C;</code></pre></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>一个完整的USART初始化函数</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">void usart1_init(u32 baudRate) &#123;
+    &#x2F;&#x2F; 使能某组GPIO口时钟 和 USART1时钟
+    RCC_APB2ENR |&#x3D; ((1 &lt;&lt; 2) | (1 &lt;&lt; 14));
+
+    &#x2F;&#x2F; 配置GPIO口功能
+    GPIOA_CRH &amp;&#x3D; ~(0x110);
+    GPIOA_CRH |&#x3D; 0x4B0;
+
+    &#x2F;&#x2F; 配置波特率
+    USART1_BRR &#x3D; 0x1D4C;
+
+    &#x2F;&#x2F; 配置传输格式与使能
+    USART1_CR1 |&#x3D; 0x200C;
+
+    &#x2F;&#x2F; 配置PE中断使能
+    USART1_CR1 |&#x3D; (1 &lt;&lt; 8);
+
+    &#x2F;&#x2F; 配置接收缓冲区非空中断使能
+    USART1_CR1 |&#x3D; (1 &lt;&lt; 5);
+&#125;</code></pre></li>
+</ol>
+<h2 id="中断"><a href="#中断" class="headerlink" title="中断"></a>中断</h2>
     </div>
 
     
@@ -689,6 +993,7 @@ typedef unsigned int uint32_t;&#x2F;&#x2F;32位 4字节数据类型
   </footer>
 
   
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>

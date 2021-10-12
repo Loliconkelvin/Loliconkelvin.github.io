@@ -20,16 +20,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content=".red {     color: red; }   Java多线程">
+<meta name="description" content=".red {     color: red; }  .blue {     color: blue; }   Java多线程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java多线程">
 <meta property="og:url" content="https://loliconkelvin.github.io/2021/09/25/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/index.html">
 <meta property="og:site_name" content="萝莉控的小窝">
-<meta property="og:description" content=".red {     color: red; }   Java多线程">
+<meta property="og:description" content=".red {     color: red; }  .blue {     color: blue; }   Java多线程">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://z3.ax1x.com/2021/09/28/4fgqPS.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/10/12/5nMCp8.png">
 <meta property="article:published_time" content="2021-09-25T01:44:45.000Z">
-<meta property="article:modified_time" content="2021-10-08T15:13:41.193Z">
+<meta property="article:modified_time" content="2021-10-12T12:44:16.730Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -119,7 +120,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">多线程的一些概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E4%B8%89%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">线程三种创建方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%A7%E6%89%BFThread%E7%B1%BB%EF%BC%88%E4%B8%8D%E5%BB%BA%E8%AE%AE%E4%BD%BF%E7%94%A8%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">继承Thread类（不建议使用）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94%E7%BD%91%E5%9B%BE%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.1.1.</span> <span class="nav-text">应用——网图下载</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0Runnable%E6%8E%A5%E5%8F%A3%EF%BC%88%E5%BB%BA%E8%AE%AE%E4%BD%BF%E7%94%A8%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">实现Runnable接口（建议使用）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91%EF%BC%88%E7%BA%BF%E7%A8%8B%E5%90%8D%E5%9C%A8%E8%BF%99%E9%87%8C%EF%BC%89%E4%B8%8E%E5%B9%B6%E5%8F%91%E9%97%AE%E9%A2%98"><span class="nav-number">2.3.</span> <span class="nav-text">并发（线程名在这里）与并发问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94%E9%BE%9F%E5%85%94%E8%B5%9B%E8%B7%91"><span class="nav-number">2.3.1.</span> <span class="nav-text">应用——龟兔赛跑</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0Callable%E6%8E%A5%E5%8F%A3%EF%BC%88%E4%BA%86%E8%A7%A3%E5%8D%B3%E5%8F%AF-%E7%BA%BF%E7%A8%8B%E6%B1%A0%EF%BC%89"><span class="nav-number">2.4.</span> <span class="nav-text">实现Callable接口（了解即可 线程池）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%EF%BC%88Lamda%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%8C%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3%E5%9C%A8%E8%BF%99%E9%87%8C%EF%BC%89"><span class="nav-number">2.5.</span> <span class="nav-text">静态代理（Lamda表达式，函数式接口在这里）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3"><span class="nav-number">2.5.1.</span> <span class="nav-text">函数式接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Lamda%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E7%AE%80%E5%8C%96%EF%BC%89"><span class="nav-number">2.5.2.</span> <span class="nav-text">Lamda表达式（匿名内部类的简化）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E7%AE%80%E5%8C%96"><span class="nav-number">2.5.3.</span> <span class="nav-text">Lambda表达式的简化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%E4%BE%8B%E5%AD%90%E2%80%94%E2%80%94%E7%94%B5%E5%BD%B1%E4%B8%8E%E5%B9%BF%E5%91%8A"><span class="nav-number">2.5.4.</span> <span class="nav-text">静态代理例子——电影与广告</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%E4%BE%8B%E5%AD%90%E2%80%94%E2%80%94%E7%BB%93%E5%A9%9A%E8%80%85%E4%B8%8E%E5%A9%9A%E5%BA%86%E5%85%AC%E5%8F%B8%EF%BC%88%E8%BF%99%E4%B8%AA%E4%BE%8B%E5%AD%90%E6%9B%B4%E7%9B%B4%E8%A7%82%EF%BC%89"><span class="nav-number">2.5.5.</span> <span class="nav-text">静态代理例子——结婚者与婚庆公司（这个例子更直观）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%E4%B8%8E%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="nav-number">2.5.6.</span> <span class="nav-text">静态代理与多线程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81"><span class="nav-number">3.</span> <span class="nav-text">线程状态</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">多线程的一些概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E4%B8%89%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">线程三种创建方式（重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%A7%E6%89%BFThread%E7%B1%BB%EF%BC%88%E4%B8%8D%E5%BB%BA%E8%AE%AE%E4%BD%BF%E7%94%A8%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">继承Thread类（不建议使用）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94%E7%BD%91%E5%9B%BE%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.1.1.</span> <span class="nav-text">应用——网图下载</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0Runnable%E6%8E%A5%E5%8F%A3%EF%BC%88%E5%BB%BA%E8%AE%AE%E4%BD%BF%E7%94%A8%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">实现Runnable接口（建议使用）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E8%AF%86%E5%B9%B6%E5%8F%91%EF%BC%88%E7%BA%BF%E7%A8%8B%E5%90%8D%E5%9C%A8%E8%BF%99%E9%87%8C%EF%BC%89%E4%B8%8E%E5%B9%B6%E5%8F%91%E9%97%AE%E9%A2%98"><span class="nav-number">2.3.</span> <span class="nav-text">初识并发（线程名在这里）与并发问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94%E7%81%AB%E8%BD%A6%E7%A5%A8"><span class="nav-number">2.3.1.</span> <span class="nav-text">应用——火车票</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94%E9%BE%9F%E5%85%94%E8%B5%9B%E8%B7%91"><span class="nav-number">2.3.2.</span> <span class="nav-text">应用——龟兔赛跑</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0Callable%E6%8E%A5%E5%8F%A3%EF%BC%88%E4%BA%86%E8%A7%A3%E5%8D%B3%E5%8F%AF-%E7%BA%BF%E7%A8%8B%E6%B1%A0%EF%BC%89"><span class="nav-number">2.4.</span> <span class="nav-text">实现Callable接口（了解即可 线程池）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%EF%BC%88Lamda%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%8C%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3%E5%9C%A8%E8%BF%99%E9%87%8C%EF%BC%89"><span class="nav-number">2.5.</span> <span class="nav-text">静态代理（Lamda表达式，函数式接口在这里）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3"><span class="nav-number">2.5.1.</span> <span class="nav-text">函数式接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Lamda%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E7%AE%80%E5%8C%96%EF%BC%89"><span class="nav-number">2.5.2.</span> <span class="nav-text">Lamda表达式（匿名内部类的简化）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E7%AE%80%E5%8C%96"><span class="nav-number">2.5.3.</span> <span class="nav-text">Lambda表达式的简化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%E4%BE%8B%E5%AD%90%E2%80%94%E2%80%94%E7%94%B5%E5%BD%B1%E4%B8%8E%E5%B9%BF%E5%91%8A"><span class="nav-number">2.5.4.</span> <span class="nav-text">静态代理例子——电影与广告</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%E4%BE%8B%E5%AD%90%E2%80%94%E2%80%94%E7%BB%93%E5%A9%9A%E8%80%85%E4%B8%8E%E5%A9%9A%E5%BA%86%E5%85%AC%E5%8F%B8%EF%BC%88%E8%BF%99%E4%B8%AA%E4%BE%8B%E5%AD%90%E6%9B%B4%E7%9B%B4%E8%A7%82%EF%BC%89"><span class="nav-number">2.5.5.</span> <span class="nav-text">静态代理例子——结婚者与婚庆公司（这个例子更直观）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%E4%B8%8E%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="nav-number">2.5.6.</span> <span class="nav-text">静态代理与多线程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81"><span class="nav-number">3.</span> <span class="nav-text">线程状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Thread-currentThread"><span class="nav-number">4.</span> <span class="nav-text">Thread.currentThread()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E6%96%B9%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">线程方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%88%E6%AD%A2%E7%BA%BF%E7%A8%8B"><span class="nav-number">5.1.</span> <span class="nav-text">终止线程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E4%BC%91%E7%9C%A0%EF%BC%88sleep%EF%BC%89"><span class="nav-number">5.2.</span> <span class="nav-text">线程休眠（sleep）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A8%A1%E6%8B%9F%E7%BD%91%E7%BB%9C%E5%BB%B6%E6%97%B6"><span class="nav-number">5.2.1.</span> <span class="nav-text">模拟网络延时</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A8%A1%E6%8B%9F%E5%80%92%E8%AE%A1%E6%97%B6"><span class="nav-number">5.2.2.</span> <span class="nav-text">模拟倒计时</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E7%A4%BC%E8%AE%A9%EF%BC%88yield%EF%BC%89"><span class="nav-number">5.3.</span> <span class="nav-text">线程礼让（yield）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E5%88%B6%E7%BA%BF%E7%A8%8B%E5%8A%A0%E5%85%A5%E6%89%A7%E8%A1%8C%EF%BC%88join%EF%BC%89"><span class="nav-number">5.4.</span> <span class="nav-text">强制线程加入执行（join）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%EF%BC%88state%EF%BC%89"><span class="nav-number">5.5.</span> <span class="nav-text">检测线程状态（state）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E4%BC%98%E5%85%88%E7%BA%A7%EF%BC%88priority%EF%BC%89"><span class="nav-number">5.6.</span> <span class="nav-text">线程优先级（priority）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B%EF%BC%88daemon%EF%BC%89"><span class="nav-number">5.7.</span> <span class="nav-text">守护线程（daemon）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5-%E5%B9%B6%E5%8F%91%EF%BC%88%E9%87%8D%E7%82%B9-%E9%9A%BE%E7%82%B9%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">线程同步 并发（重点 难点）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%9F%E5%88%97"><span class="nav-number">6.1.</span> <span class="nav-text">队列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%81%EF%BC%88synchronize%EF%BC%89"><span class="nav-number">6.2.</span> <span class="nav-text">锁（synchronize）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E6%96%B9%E6%B3%95%EF%BC%88synchronize%E6%96%B9%E6%B3%95%EF%BC%89"><span class="nav-number">6.3.</span> <span class="nav-text">同步方法（synchronize方法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E5%9D%97%EF%BC%88synchronize%E5%9D%97%EF%BC%89"><span class="nav-number">6.4.</span> <span class="nav-text">同步块（synchronize块）</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -225,7 +226,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-10-08 23:13:41" itemprop="dateModified" datetime="2021-10-08T23:13:41+08:00">2021-10-08</time>
+        <time title="修改时间：2021-10-12 20:44:16" itemprop="dateModified" datetime="2021-10-12T20:44:16+08:00">2021-10-12</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -251,6 +252,10 @@
 .red {
     color: red;
 }
+
+.blue {
+    color: blue;
+}
 </style>
 
 <p>Java多线程</p>
@@ -265,7 +270,7 @@
 <li>多线程会带来额外的开销（如CPU调度时间），可以用并发控制开销</li>
 <li>每个线程在自己的工作内存交互，内存控制不当会导致数据不一致</li>
 </ul>
-<h2 id="线程三种创建方式"><a href="#线程三种创建方式" class="headerlink" title="线程三种创建方式"></a>线程三种创建方式</h2><h3 id="继承Thread类（不建议使用）"><a href="#继承Thread类（不建议使用）" class="headerlink" title="继承Thread类（不建议使用）"></a>继承Thread类（不建议使用）</h3><ul>
+<h2 id="线程三种创建方式（重点）"><a href="#线程三种创建方式（重点）" class="headerlink" title="线程三种创建方式（重点）"></a>线程三种创建方式（重点）</h2><h3 id="继承Thread类（不建议使用）"><a href="#继承Thread类（不建议使用）" class="headerlink" title="继承Thread类（不建议使用）"></a>继承Thread类（不建议使用）</h3><ul>
 <li><p>创建步骤：</p>
 <ol>
 <li>创建一个类 并且 继承Thread类</li>
@@ -373,9 +378,10 @@ new Thread(testThread).start();</code></pre></li>
 <li><p>好处：避免单继承的局限性，接口可以多继承，可以实现一个多线程对象被多个线程调用（详见下一标题）</p>
 </li>
 </ul>
-<h3 id="并发（线程名在这里）与并发问题"><a href="#并发（线程名在这里）与并发问题" class="headerlink" title="并发（线程名在这里）与并发问题"></a>并发（线程名在这里）与并发问题</h3><ul>
+<h3 id="初识并发（线程名在这里）与并发问题"><a href="#初识并发（线程名在这里）与并发问题" class="headerlink" title="初识并发（线程名在这里）与并发问题"></a>初识并发（线程名在这里）与并发问题</h3><ul>
 <li>并发是指多线程操作一个对象，他们共享对象里的变量</li>
 </ul>
+<h4 id="应用——火车票"><a href="#应用——火车票" class="headerlink" title="应用——火车票"></a>应用——火车票</h4><p><span id="ticket">&nbsp;</span></p>
 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">package com.company.demo;
 
 public class TrainTickets implements Runnable&#123;
@@ -739,7 +745,270 @@ public class Main &#123;
 <h4 id="静态代理与多线程"><a href="#静态代理与多线程" class="headerlink" title="静态代理与多线程"></a>静态代理与多线程</h4><ul>
 <li>在实现Runnable接口方法中，需要创建一个类实现Runnable接口并重写方法，然后创建该类的实例，将实例丢给Thread后由Thread执行start，这就是一个代理：Thread类代理了我们创建的类</li>
 </ul>
-<h2 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h2>
+<h2 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h2><ul>
+<li><p>线程的五大状态：</p>
+<ol>
+<li>创建状态：new出来了</li>
+<li>就绪状态：执行了start()但还没有被CPU调度</li>
+<li>运行状态：被CPU调度了</li>
+<li>阻塞状态：遇到等待输入，线程休眠等</li>
+<li>死亡状态：线程自然自行完毕或外部终止线程，<span class="red">线程一旦进入死亡状态就不能再启动</span><br /></li>
+</ol>
+</li>
+<li><p>在Thread类中有定义State枚举变量来反映线程状态，其枚举成员有：</p>
+<ol>
+<li>NEW: 新生状态</li>
+<li>RUNNABLE: 就绪状态</li>
+<li>BLOCKED:</li>
+<li>WAITING:</li>
+<li>TIMED_WAITING:</li>
+<li>TERMINATED: 死亡状态<br /></li>
+</ol>
+<ul>
+<li>关于BLOCKED、WAITING、TIMED_WAITING的说法参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/liweiminlining/article/details/102490259">BLOCKED,WAITING,TIMED_WAITING有什么区别？</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Thread-currentThread"><a href="#Thread-currentThread" class="headerlink" title="Thread.currentThread()"></a>Thread.currentThread()</h2><ul>
+<li>该函数会返回一个当前线程的Thread类成员，可以应用于任何需要填入 Thread类成员 的方法中，如：Thread.currentThread().getName();</li>
+</ul>
+<h2 id="线程方法"><a href="#线程方法" class="headerlink" title="线程方法"></a>线程方法</h2><p>设定线程优先级 setPrioriry(int new Priority)<br>指定毫秒数让线程休眠 sleep(long millis)<br>等待该线程终止 join()<br>暂停当前正在执行的线程对象，执行其他线程 yield()<br>中断线程（不建议使用） interrupt()<br>测试线程是否活动 isAlive()</p>
+<h3 id="终止线程"><a href="#终止线程" class="headerlink" title="终止线程"></a>终止线程</h3><ul>
+<li><p><span class="red">不推荐使用JDK提供的stop().destroy等过期方法</span></p>
+<br /></li>
+<li><p><span class="red">使用一个私有标志位，并对外提供改变标志位的方法，让线程自己检测标志位为特定条件时自行停止</span></p>
+<br /></li>
+<li><p>如何让线程自己停止：</p>
+<ol>
+<li>有次数的循环/非死循环</li>
+<li>设置标志位，通过外部改变标志位</li>
+<li>不使用过时方法</li>
+</ol>
+</li>
+</ul>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class ThreadStopTest implements Runnable &#123;
+    private boolean flag &#x3D; true;
+
+    @Override
+    public void run() &#123;
+        int i &#x3D; 0;
+        while (flag) &#123;
+            System.out.println(&quot;Running&quot; + i++);
+        &#125;
+    &#125;
+
+    public void threadStop() &#123;
+        this.flag &#x3D; false;
+    &#125;
+&#125;</code></pre>
+<pre><code>* 在main方法中决定什么条件执行threadStop()方法以结束线程
+</code></pre>
+<h3 id="线程休眠（sleep）"><a href="#线程休眠（sleep）" class="headerlink" title="线程休眠（sleep）"></a>线程休眠（sleep）</h3><ul>
+<li>使用 <code>Thread.sleep(毫秒数);</code> 指定当前线程的阻塞毫秒数</li>
+<li>注意：<code>sleep();</code> 方法抛出一个异常</li>
+<li>时间到后线程进入就绪状态</li>
+<li><span class="red">每个线程对象都有一个锁，sleep不会释放锁</span></li>
+<li>一般用于模拟网络延时、倒计时</li>
+</ul>
+<h4 id="模拟网络延时"><a href="#模拟网络延时" class="headerlink" title="模拟网络延时"></a>模拟网络延时</h4><ul>
+<li>见 <a href="#ticket">应用——火车票</a></li>
+</ul>
+<h4 id="模拟倒计时"><a href="#模拟倒计时" class="headerlink" title="模拟倒计时"></a>模拟倒计时</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Main &#123;
+    public static void main(String[] args) &#123;
+        &#x2F;&#x2F; 定义时间变量
+        Date time;
+
+        while(true) &#123;
+            try &#123;
+                &#x2F;&#x2F; 获取系统当前时间
+                time &#x3D; new Date(System.currentTimeMillis());
+                &#x2F;&#x2F; 打印当前时间
+                System.out.println(new SimpleDateFormat(&quot;HH:mm:ss&quot;).format(time));
+                &#x2F;&#x2F; 主线程休眠一秒
+                Thread.sleep(1000);
+            &#125; catch (InterruptedException e) &#123;
+                e.printStackTrace();
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
+
+<h3 id="线程礼让（yield）"><a href="#线程礼让（yield）" class="headerlink" title="线程礼让（yield）"></a>线程礼让（yield）</h3><ul>
+<li><span class="red">让当前线程从运行状态转为就绪状态，但线程礼让不一定成功</span>，因为线程被转换为就绪状态之后，CPU没事做，要找一个线程执行，可能还是会选择执行被转为就绪状态的线程</li>
+</ul>
+<ol>
+<li><p>写一个线程类</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 礼让不一定成功，看CPU心情
+public class YieldTest implements Runnable &#123;
+    @Override
+    public void run() &#123;
+        System.out.println(Thread.currentThread().getName() + &quot;线程开始&quot;);
+        &#x2F;&#x2F; 线程1礼让
+        if (Thread.currentThread().getName().equals(&quot;线程1&quot;)) &#123;
+            Thread.yield();
+        &#125;
+        System.out.println(Thread.currentThread().getName() + &quot;线程结束&quot;);
+    &#125;
+&#125;</code></pre></li>
+<li><p>在main方法开启两个线程</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Main &#123;
+    public static void main(String[] args) &#123;
+        YieldTest yieldTest &#x3D; new YieldTest();
+
+        new Thread(yieldTest, &quot;线程1&quot;).start();
+        new Thread(yieldTest, &quot;线程2&quot;).start();
+    &#125;
+&#125;</code></pre></li>
+<li><p>得到如下结果：<br> 线程1礼让成功</p>
+ <pre class="line-numbers language-none"><code class="language-none">线程1线程开始
+线程2线程开始
+线程1线程结束
+线程2线程结束</code></pre>
+
+<p> 另一种是线程1礼让失败，刷不出来，结果应该是这样的</p>
+ <pre class="line-numbers language-none"><code class="language-none">线程1线程开始
+线程1线程结束
+线程2线程开始
+线程2线程结束</code></pre></li>
+</ol>
+<h3 id="强制线程加入执行（join）"><a href="#强制线程加入执行（join）" class="headerlink" title="强制线程加入执行（join）"></a>强制线程加入执行（join）</h3><ul>
+<li>使用 <code>Thread类成员.join();</code> 即可插队</li>
+<li><span class="red">插队之后，其他线程为阻塞状态，需要等待插队的线程死亡后，才能继续执行</span></li>
+</ul>
+<ol>
+<li><p>创建一个线程类</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class JoinTest implements Runnable &#123;
+    @Override
+    public void run() &#123;
+        for (int i &#x3D; 1; i &lt;&#x3D; 50; i++) &#123;
+            System.out.println(&quot;开水 开水 让一让 &quot; + i);
+        &#125;
+    &#125;
+&#125;</code></pre></li>
+<li><p>在主函数写一个主线程，并且决定什么时候子线程强制插队</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Main &#123;
+    public static void main(String[] args) &#123;
+        JoinTest joinTest &#x3D; new JoinTest();
+
+        &#x2F;&#x2F;
+        Thread thread &#x3D; new Thread(joinTest);
+        thread.start();
+
+        &#x2F;&#x2F; 主线程
+        for (int i &#x3D; 1; i &lt;&#x3D; 50; i++) &#123;
+            &#x2F;&#x2F; 当主线程进行到第20次时，子线程强制插队
+            if (i &#x3D;&#x3D; 20) &#123;
+                try &#123;
+                    thread.join();
+                &#125; catch (InterruptedException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+            System.out.println(&quot;主线程：&quot; + i);
+        &#125;
+    &#125;
+&#125;</code></pre></li>
+<li><p>结果</p>
+<blockquote>
+<p>主线程在执行到第20次之前，两个线程执行顺序随机，20次时，子线程一直执行到结束，然后再轮到主线程执行至结束</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="检测线程状态（state）"><a href="#检测线程状态（state）" class="headerlink" title="检测线程状态（state）"></a>检测线程状态（state）</h3><ul>
+<li>使用 <code>Thread类成员.getState();</code> 获取线程状态，返回值为一个Thread.State类型的值，是Thread类里面的一个枚举类型</li>
+</ul>
+<h3 id="线程优先级（priority）"><a href="#线程优先级（priority）" class="headerlink" title="线程优先级（priority）"></a>线程优先级（priority）</h3><ul>
+<li><span class="red">先设置优先级，再启动</span></li>
+<li>线程优先级用数字表示，范围从1~10（默认为5），但线程优先级高不一定先跑，只是先跑的机会比较大</li>
+<li>使用 <code>Thread类成员.getPriority();</code> 获取指定线程优先级</li>
+<li>使用 <code>Thread类成员.setPriority(int i);</code> 设定线程优先级</li>
+</ul>
+<h3 id="守护线程（daemon）"><a href="#守护线程（daemon）" class="headerlink" title="守护线程（daemon）"></a>守护线程（daemon）</h3><ul>
+<li><p>线程分为 <span class="red">用户线程</span> 和 <span class="red">守护线程</span></p>
+</li>
+<li><p><span class="red">虚拟机必须确保用户线程执行完毕，但不需要等待守护线程执行完毕，用户线程全部执行完毕，守护线程也就停止</span>，守护线程就是天使，天使守护人类，若人类灭绝，则天使也没有了存在的必要</p>
+</li>
+<li><p>功能：后台记录操作日志，监控内存，垃圾回收等</p>
+</li>
+<li><p>默认线程为用户线程，使用 <code>thread类成员.setDaemon(true);</code> 设定线程为守护线程</p>
+</li>
+<li><p><span class="red">若要设置守护线程，先设定，再启动</span></p>
+</li>
+</ul>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class God implements Runnable &#123;
+    @Override
+    public void run() &#123;
+        while (true) &#123;
+            System.out.println(&quot;众神之父今天会庇佑我们&quot;);
+        &#125;
+    &#125;
+&#125;
+
+public class You implements Runnable &#123;
+    @Override
+    public void run() &#123;
+        &#x2F;&#x2F; 狗子扫描了365次
+        for (int i &#x3D; 0; i &lt; 365; i++) &#123;
+            System.out.println(&quot;正在检查这片区域&quot;);
+        &#125;
+        &#x2F;&#x2F; 直接送走
+        System.out.println(&quot;我重伤倒地&quot;);
+    &#125;
+&#125;
+
+public class Main &#123;
+    public static void main(String[] args) &#123;
+        God god &#x3D; new God();
+        You you &#x3D; new You();
+
+        &#x2F;&#x2F; 把众神之父扔进代理
+        Thread thread &#x3D; new Thread(god);
+        &#x2F;&#x2F; 他是守护线程
+        thread.setDaemon(true);
+
+        &#x2F;&#x2F; 众神之父起来干活
+        thread.start();
+
+        &#x2F;&#x2F; 把狗子扔进代理，狗子干活
+        new Thread(you).start();
+    &#125;
+&#125;</code></pre>
+
+<h2 id="线程同步-并发（重点-难点）"><a href="#线程同步-并发（重点-难点）" class="headerlink" title="线程同步 并发（重点 难点）"></a>线程同步 并发（重点 难点）</h2><ul>
+<li>多个线程需要同时操作同一个资源</li>
+</ul>
+<h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><ul>
+<li>处理多线程问题时，多个线程访问同一个对象，并且某些线程还想修改这个对象，这时候我们就需要一种等待机制，即线程同步，多个需要同时访问此对象的线程进入 这个对象的等待池 ，让线程形成队列，等待前面的线程使用完毕，下一个线程再使用</li>
+</ul>
+<h3 id="锁（synchronize）"><a href="#锁（synchronize）" class="headerlink" title="锁（synchronize）"></a>锁（synchronize）</h3><ul>
+<li><p>经典厕所问题：100个人<span class="blue">（线程）</span>要使用<span class="blue">（操作）</span>1个厕所<span class="blue">（对象）</span><br>  若线程已经形成队列，却没有锁，仍然会出现问题：不安全，一个人进厕所之后没有把厕所锁上，其他人也能进</p>
+</li>
+<li><p>锁，用于保证目前只会有一个人使用这个厕所<span class="blue">（只会有一个线程操作对象）</span></p>
+</li>
+<li><p><span class="red">每个线程对象都有一把 排他锁 ，独占资源，其他线程必须等待</span></p>
+</li>
+</ul>
+<p><img src="https://z3.ax1x.com/2021/10/12/5nMCp8.png" alt="5nMCp8.png"></p>
+<ul>
+<li>牺牲性能问题：<ol>
+<li>一个线程持有锁会导致其他所有需要此锁的线程挂起</li>
+<li>在多线程竞争下，加锁，释放锁会导致比较多的上下文切换和调度延时，引起性能问题</li>
+<li>若一个优先级高的线程等待一个优先级低的线程释放锁，就会导致性能倒置问题</li>
+</ol>
+</li>
+</ul>
+<h3 id="同步方法（synchronize方法）"><a href="#同步方法（synchronize方法）" class="headerlink" title="同步方法（synchronize方法）"></a>同步方法（synchronize方法）</h3><ul>
+<li>在方法前加入 <code>synchronize</code> 修饰符，即可将方法变为同步方法。</li>
+<li>同步方法一旦执行，就独占该锁，直到该方法返回才释放锁，后面被堵塞的线程才能获得这个锁，继续执行</li>
+<li>缺陷：将一个功能强大的方法声明为 <code>synchronize</code> 会影响效率</li>
+</ul>
+<h3 id="同步块（synchronize块）"><a href="#同步块（synchronize块）" class="headerlink" title="同步块（synchronize块）"></a>同步块（synchronize块）</h3><ul>
+<li>方法里面需要修改的内容才需要锁，锁得太多会浪费资源，这时候就用到了同步块</li>
+</ul>
+
     </div>
 
     

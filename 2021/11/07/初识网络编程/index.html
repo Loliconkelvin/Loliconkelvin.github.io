@@ -20,23 +20,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="萝莉控的小窝">
-<meta property="og:url" content="https://loliconkelvin.github.io/archives/2021/page/3/index.html">
+<meta name="description" content="初识网络编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初识网络编程">
+<meta property="og:url" content="https://loliconkelvin.github.io/2021/11/07/%E5%88%9D%E8%AF%86%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/index.html">
 <meta property="og:site_name" content="萝莉控的小窝">
+<meta property="og:description" content="初识网络编程">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-11-07T05:35:04.000Z">
+<meta property="article:modified_time" content="2021-11-08T13:31:42.540Z">
 <meta property="article:author" content="Loliconkelvin">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://loliconkelvin.github.io/archives/2021/page/3/">
+<link rel="canonical" href="https://loliconkelvin.github.io/2021/11/07/%E5%88%9D%E8%AF%86%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2021/page/3/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://loliconkelvin.github.io/2021/11/07/%E5%88%9D%E8%AF%86%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/","path":"2021/11/07/初识网络编程/","title":"初识网络编程"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | 萝莉控的小窝</title>
+<title>初识网络编程 | 萝莉控的小窝</title>
   
 
 
@@ -99,7 +104,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -112,6 +117,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E8%AF%86%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%EF%BC%88TCP%E4%B8%8EUDP%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">初识通信协议（TCP与UDP）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E8%A6%81%E7%B4%A0"><span class="nav-number">2.</span> <span class="nav-text">网络通信要素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP%E5%9C%B0%E5%9D%80%E7%B1%BB%EF%BC%88InetAddress%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">IP地址类（InetAddress）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5"><span class="nav-number">3.1.</span> <span class="nav-text">一些概念</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -175,233 +181,153 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/11/07/%E5%88%9D%E8%AF%86%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="Loliconkelvin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萝莉控的小窝">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          初识网络编程
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-11-07 13:35:04" itemprop="dateCreated datePublished" datetime="2021-11-07T13:35:04+08:00">2021-11-07</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-11-08 21:31:42" itemprop="dateModified" datetime="2021-11-08T21:31:42+08:00">2021-11-08</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>初识网络编程</p>
+<span id="more"></span>
+
+<h2 id="初识通信协议（TCP与UDP）"><a href="#初识通信协议（TCP与UDP）" class="headerlink" title="初识通信协议（TCP与UDP）"></a>初识通信协议（TCP与UDP）</h2><ul>
+<li>TCP：形如打电话，双方必须建立连接，才能实现交流</li>
+<li>UDP：形如发短信，双方不需要建立连接，发送方只管发送，可能出现接收方收不到的情况</li>
+</ul>
+<h2 id="网络通信要素"><a href="#网络通信要素" class="headerlink" title="网络通信要素"></a>网络通信要素</h2><ol>
+<li><p>通信双方的地址：</p>
+<ul>
+<li>IP</li>
+<li>端口号</li>
+</ul>
+</li>
+<li><p>通信双方需要建立通信规则（通信协议）：</p>
+<ul>
+<li>如http ftp smtp tcp udp等</li>
+</ul>
+</li>
+<li><p>Java在网络通信中：</p>
+<ul>
+<li>万物皆对象，有要素就肯定有其对应的类，IP类、通信协议类等</li>
+</ul>
+</li>
+</ol>
+<h2 id="IP地址类（InetAddress）"><a href="#IP地址类（InetAddress）" class="headerlink" title="IP地址类（InetAddress）"></a>IP地址类（InetAddress）</h2><h3 id="一些概念"><a href="#一些概念" class="headerlink" title="一些概念"></a>一些概念</h3><ul>
+<li><p>IP地址的用途：IP地址具有唯一性，用于定位网络上的一台或多台计算机</p>
+<br /></li>
+<li><p><span class="red">一个特殊的IP地址：127.0.0.1 localhost 指本机</span></p>
+<br /></li>
+<li><p>IP地址的分类：（两种分类方式）</p>
+<ol>
+<li><p>通过IP地址分类</p>
+<ul>
+<li>IPV4：由四个字节组成（每个数字可取0~255）共32位，形如 <code>127.0.0.1</code></li>
+<li>IPV6：由八个16位无符号整数组成（每组数字可取0000~FFFF），共128位，形如 <code>6562:8652:0aff:91cb:3d4e:1307:0000:abcd</code></li>
+</ul>
+</li>
+<li><p>通过公/私网分类<br> 公网：互联网，还下分ABCD类地址，他们的网段</p>
+<p> 私网：局域网（192.168.xxx.xxx）</p>
+<br /></li>
+</ol>
+</li>
+<li><p>域名</p>
+<ul>
+<li>域名的意义：为解决IP地址难记的问题，相当于给IP地址起一个名字</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+          </div>
+
         
-        <span class="collection-header">还行! 目前共计 33 篇日志。 继续努力。</span>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-23T23:09:21+08:00"
-              content="2021-04-23">
-          04-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/23/HTML%20iframe%E5%86%85%E8%81%94%E6%A1%86%E6%9E%B6/" itemprop="url">
-            <span itemprop="name">iframe内联框架</span>
-          </a>
-      </div>
-
-      
-    </header>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/09/25/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="prev" title="Java多线程">
+                  <i class="fa fa-chevron-left"></i> Java多线程
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/11/10/ZEMAX%E8%87%AA%E5%88%B6%E5%A4%8D%E4%B9%A0%E9%A2%98/" rel="next" title="ZEMAX自制复习题">
+                  ZEMAX自制复习题 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-22T23:13:24+08:00"
-              content="2021-04-22">
-          04-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/22/HTML%E9%A1%B5%E9%9D%A2%E7%BB%93%E6%9E%84/" itemprop="url">
-            <span itemprop="name">HTML页面结构</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-22T23:13:24+08:00"
-              content="2021-04-22">
-          04-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/22/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" itemprop="url">
-            <span itemprop="name">Java基本语法</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-22T22:55:57+08:00"
-              content="2021-04-22">
-          04-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/22/HTML%E5%AA%92%E4%BD%93%E6%A0%87%E7%AD%BE/" itemprop="url">
-            <span itemprop="name">HTML媒体标签</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-21T22:30:34+08:00"
-              content="2021-04-21">
-          04-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/21/HTML%E5%88%97%E8%A1%A8%E4%B8%8E%E8%A1%A8%E6%A0%BC/" itemprop="url">
-            <span itemprop="name">列表与表格</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-21T22:08:35+08:00"
-              content="2021-04-21">
-          04-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/21/HTML%E8%A1%8C%E5%85%83%E7%B4%A0%E4%B8%8E%E5%9D%97%E5%85%83%E7%B4%A0/" itemprop="url">
-            <span itemprop="name">行元素与块元素</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-19T22:49:00+08:00"
-              content="2021-04-19">
-          04-19
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/19/HTML%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA%E8%A7%84%E8%8C%83/" itemprop="url">
-            <span itemprop="name">HTML目录创建规范</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-19T22:15:13+08:00"
-              content="2021-04-19">
-          04-19
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/19/HTML%E7%BD%91%E9%A1%B5%E5%9F%BA%E6%9C%AC%E6%A0%87%E7%AD%BE/" itemprop="url">
-            <span itemprop="name">HTML网页基本标签</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-19T21:49:14+08:00"
-              content="2021-04-19">
-          04-19
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/19/HTML%E7%BD%91%E9%A1%B5%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/" itemprop="url">
-            <span itemprop="name">HTML网页基本信息</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-16T23:01:39+08:00"
-              content="2021-04-16">
-          04-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/16/%E5%B8%B8%E7%94%A8DOS%E5%91%BD%E4%BB%A4/" itemprop="url">
-            <span itemprop="name">常用DOS命令</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2021/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/archives/2021/">1</a><a class="page-number" href="/archives/2021/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/2021/page/4/">4</a><a class="extend next" rel="next" href="/archives/2021/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
+
+
+
 
 </div>
   </main>

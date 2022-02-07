@@ -20,14 +20,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content=".keyword{     color: red; }   计算机二级——JAVA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机二级——JAVA">
 <meta property="og:url" content="https://loliconkelvin.github.io/2022/01/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BA%8C%E7%BA%A7%E2%80%94%E2%80%94JAVA/index.html">
 <meta property="og:site_name" content="萝莉控的小窝">
+<meta property="og:description" content=".keyword{     color: red; }   计算机二级——JAVA">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-18T06:16:38.000Z">
-<meta property="article:modified_time" content="2022-01-18T06:16:38.820Z">
+<meta property="article:modified_time" content="2022-01-29T12:33:45.181Z">
 <meta property="article:author" content="Loliconkelvin">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
 
 
@@ -101,7 +104,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -114,6 +117,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JAVA%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">JAVA的特点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JAVA%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">2.</span> <span class="nav-text">JAVA虚拟机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JDK%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">JDK控制台常用指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JAVA%E6%BA%90%E6%96%87%E4%BB%B6%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="nav-number">4.</span> <span class="nav-text">JAVA源文件的命名规则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JAVA%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%B8%8EJAVA-Applet"><span class="nav-number">5.</span> <span class="nav-text">JAVA应用程序与JAVA Applet</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JAVA%E6%A0%87%E8%AF%86%E7%AC%A6%E4%B8%8E%E5%85%B6%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="nav-number">6.</span> <span class="nav-text">JAVA标识符与其命名规则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JAVA%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">7.</span> <span class="nav-text">JAVA关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JAVA%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">8.</span> <span class="nav-text">JAVA数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JAVA%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">9.</span> <span class="nav-text">JAVA运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="nav-number">10.</span> <span class="nav-text">流程控制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="nav-number">11.</span> <span class="nav-text">面向对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81"><span class="nav-number">12.</span> <span class="nav-text">继承与多态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E7%B1%BB%E7%89%B9%E6%80%A7"><span class="nav-number">13.</span> <span class="nav-text">高级类特性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">14.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E5%92%8C%E6%96%AD%E8%A8%80"><span class="nav-number">15.</span> <span class="nav-text">异常和断言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81"><span class="nav-number">16.</span> <span class="nav-text">输入输出流</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -214,6 +218,22 @@
 
       <time title="创建时间：2022-01-18 14:16:38" itemprop="dateCreated datePublished" datetime="2022-01-18T14:16:38+08:00">2022-01-18</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-01-29 20:33:45" itemprop="dateModified" datetime="2022-01-29T20:33:45+08:00">2022-01-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+    </span>
 
   
 </div>
@@ -225,7 +245,782 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        
+        <style>
+.keyword{
+    color: red;
+}
+</style>
+
+<p>计算机二级——JAVA</p>
+<span id="more"></span>
+
+<h1 id="JAVA的特点"><a href="#JAVA的特点" class="headerlink" title="JAVA的特点"></a>JAVA的特点</h1><hr>
+<ol>
+<li><span class="keyword">简单性</span></li>
+<li><span class="keyword">面向对象</span></li>
+<li><span class="keyword">分布式处理</span></li>
+<li><span class="keyword">可靠性与安全性</span></li>
+<li><span class="keyword">平台无关性</span></li>
+<li><span class="keyword">可移植性</span></li>
+<li><span class="keyword">高性能</span></li>
+<li><span class="keyword">多线程</span></li>
+<li><span class="keyword">动态性</span></li>
+</ol>
+<h1 id="JAVA虚拟机"><a href="#JAVA虚拟机" class="headerlink" title="JAVA虚拟机"></a>JAVA虚拟机</h1><hr>
+<ul>
+<li>JAVA虚拟机运行代码时会执行的操作有：<ol>
+<li><span class="keyword">加载代码</span></li>
+<li><span class="keyword">校验代码</span></li>
+<li><span class="keyword">执行代码</span></li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>tips: JAVA的编译并不在虚拟机下执行，而在ide（集成开发环境）中执行，编译的过程为：JAVA源程序(.JAVA) → 字节码文件(.class)</p>
+</blockquote>
+<ul>
+<li>JAVA的字节码文件再不同的操作系统下会经过不同的JAVA虚拟机进行字节码解释，因此<span class="keyword">JAVA的字节码文件与操作系统分离</span></li>
+</ul>
+<h1 id="JDK控制台常用指令"><a href="#JDK控制台常用指令" class="headerlink" title="JDK控制台常用指令"></a>JDK控制台常用指令</h1><hr>
+<ol>
+<li>javac：JAVA编译器，将JAVA源文件(.java)编译成字节码文件(.class)</li>
+<li>java: JAVA解释器，执行字节码文件</li>
+<li>jdb：JAVA调试器，用于调试JAVA程序</li>
+<li>javap：JAVA反编译器，将字节码文件(.class)还原回方法和变量</li>
+<li>javadoc：文档生成器，用于生成该类的帮助文档</li>
+<li>appletviewer：applet解释器，用于解释已经转换为字节码文件(.class)的JAVA小应用程序</li>
+</ol>
+<h1 id="JAVA源文件的命名规则"><a href="#JAVA源文件的命名规则" class="headerlink" title="JAVA源文件的命名规则"></a>JAVA源文件的命名规则</h1><hr>
+<ol>
+<li>源文件仅一个类：取该类名</li>
+<li>源文件有多个类且无public类：取任一类名</li>
+<li>源文件有多个类且有一个public类：取public类名</li>
+<li>源文件有多个public类：<span class="keyword">源文件不允许有多个public类</span></li>
+</ol>
+<h1 id="JAVA应用程序与JAVA-Applet"><a href="#JAVA应用程序与JAVA-Applet" class="headerlink" title="JAVA应用程序与JAVA Applet"></a>JAVA应用程序与JAVA Applet</h1><hr>
+<ul>
+<li><p>JAVA应用程序</p>
+<ol>
+<li>是一个完整的应用程序</li>
+<li>可以独立运行</li>
+<li>运行于JVM（JAVA虚拟机）上</li>
+<li>必须有main方法</li>
+</ol>
+</li>
+<li><p>JAVA applet</p>
+<ol>
+<li>不是一个完整的应用程序，是一个框架程序中的一个模块</li>
+<li>运行于浏览器上</li>
+<li>可以没有main方法</li>
+</ol>
+</li>
+</ul>
+<h1 id="JAVA标识符与其命名规则"><a href="#JAVA标识符与其命名规则" class="headerlink" title="JAVA标识符与其命名规则"></a>JAVA标识符与其命名规则</h1><hr>
+<ul>
+<li><p>什么是标识符：<br>  变量名、类名、方法名和接口名等都称为标识符</p>
+<br /></li>
+<li><p><span class="keyword">标识符的命名规则：<br>  字母、下划线和美元符号$开头，后接字母、数字、下划线、数字</span><br>  <strong>禁止数字开头</strong></p>
+<br /></li>
+<li><p>标识符命名约定:</p>
+<ol>
+<li>常量：全大写，下滑线分割单词</li>
+<li>变量用首字母大写的驼峰命名法</li>
+<li>类名用首字母大写的驼峰命名法</li>
+</ol>
+</li>
+</ul>
+<h1 id="JAVA关键字"><a href="#JAVA关键字" class="headerlink" title="JAVA关键字"></a>JAVA关键字</h1><hr>
+<ul>
+<li>什么是关键字：<br>  JAVA自身所使用的标识符，他们不能被用户所使用</li>
+</ul>
+<h1 id="JAVA数据类型"><a href="#JAVA数据类型" class="headerlink" title="JAVA数据类型"></a>JAVA数据类型</h1><hr>
+<ul>
+<li>对于不同操作系统，JAVA各基本数据类型所占的位固定</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">数据类型</th>
+<th align="center">位长</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">boolean</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">byte</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">char</td>
+<td align="center">16</td>
+</tr>
+<tr>
+<td align="center">short</td>
+<td align="center">16</td>
+</tr>
+<tr>
+<td align="center">int</td>
+<td align="center">32</td>
+</tr>
+<tr>
+<td align="center">long</td>
+<td align="center">64</td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center">32</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">64</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>浮点型常量的表示：<br>    1. 可以使用数字+小数点<br>    2. 可以使用科学计数法，如23e-2，表示23*(10^-2) </p>
+</blockquote>
+<blockquote>
+<p>计算当中涉及byte，char，short，会自动转换为int进行计算，结果也必定为int，若需将结果赋回给byte，char，short类型的变量，使用强制类型转换</p>
+</blockquote>
+<h1 id="JAVA运算符"><a href="#JAVA运算符" class="headerlink" title="JAVA运算符"></a>JAVA运算符</h1><hr>
+<p>考点：</p>
+<ul>
+<li><p>自增自减的前置后置用法</p>
+<ol>
+<li>前置：先自增/自减再取值</li>
+<li>先将值取出给另一变量或表达式，再自增/自减</li>
+</ol>
+</li>
+<li><p>字符型数据的运算（char要转为int计算，结果为int）</p>
+</li>
+<li><p>逻辑运算符：与(&amp;&amp;)或(||)非(!)</p>
+</li>
+<li><p>唯一运算符的计算（左移乘2，右移除2） </p>
+</li>
+<li><p>优先级</p>
+<blockquote>
+<p>如：int x = 1, y= 2, n = 10则<br>  x+y+(–n)*(x&gt;y&amp;&amp;x&gt;0?(x+1):y)</p>
+  <br />
+  是等效于 x+y+(--n)*((x>y && x>0)?(x+1):y)
+  因此结果为17
+</blockquote>
+<blockquote>
+<p>又如：下面运算符优先级最高的是（）<br>  A.+=<br>  B.==<br>  C.&amp;&amp;<br>  D.++</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><hr>
+<ul>
+<li><p>流程控制的三种基本结构：</p>
+<ol>
+<li>顺序结构</li>
+<li>分支（选择）结构</li>
+<li>循环结构</li>
+</ol>
+</li>
+<li><p>判断语句常用例：闰年的判断（该年份可以整除4，但不可以整除100，或 该年份可以整除400）</p>
+</li>
+<li><p>分支选择语句：case后面的值不能相等，break的作用</p>
+</li>
+<li><p>三个跳转语句：break continue return</p>
+</li>
+<li><p>带标号的break语句</p>
+<pre class="line-numbers language-JAVA" data-language="JAVA"><code class="language-JAVA">loop: for(int i &#x3D; 0; i &lt; 4; i++) &#123;
+    for(int j &#x3D; 0; j &lt; 4; j++) &#123;
+        if(n &#x3D;&#x3D; 10) &#123;
+            break loop;
+        &#125;
+    &#125;
+&#125;
+&#x2F;&#x2F; 带标号的break会直接跳出标记的层次
+&#x2F;&#x2F; 该break会直接结束这两个互相嵌套的循环</code></pre></li>
+<li><p>带标号的continue语句：表示结束被标记嵌套循环的本轮循环，开始被标记嵌套的下一轮循环</p>
+</li>
+</ul>
+<h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><hr>
+<ul>
+<li>类修饰符：<ol>
+<li>public：公共类，若不写public，则为包访问</li>
+<li>abstract：抽象类，没有实例，只能用于被子类继承</li>
+<li>final：最后类，禁止被继承<blockquote>
+<p>Object类是所有类的父类</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li>接口的格式：（可实现多个接口）  <pre class="line-numbers language-JAVA" data-language="JAVA"><code class="language-JAVA">public class dog implements animal, pet &#123;
+
+&#125;</code></pre></li>
+<li>类的命名规则：首字母大写的驼峰命名法<br /></li>
+</ul>
+<hr>
+<ul>
+<li><p>成员变量 修饰符</p>
+<ul>
+<li><p>访问范围：</p>
+<ol>
+<li>public：任何类都可以访问</li>
+<li>protected：本类与同包的类可访问，其所有子类（不管是否同包）都可以访问</li>
+<li>无修饰符（default）：同一个包的类可以访问</li>
+<li>private：仅本类可访问<blockquote>
+<p>属性与方法的访问范围不可超过类的访问范围，若一个类访问范围是default，则其成员变量与方法即使为public也仅为包访问</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>作用域：</p>
+<ol>
+<li>无修饰符：成员变量，是实例的属性<blockquote>
+<p>生存期：依赖于实例，实例被创建后才有该变量/方法</p>
+</blockquote>
+</li>
+<li>static：类变量，是整个类的属性，可以以类名为前缀调用<blockquote>
+<p>生存期：不依赖于实例，只要类被加载，static变量/方法就会被生成</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>常量：</p>
+<ol>
+<li>final：常量<br /></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>方法 修饰符</p>
+<ul>
+<li><p>访问范围：</p>
+<ol>
+<li>public</li>
+<li>protected</li>
+<li>private</li>
+</ol>
+</li>
+<li><p>作用域：</p>
+<ol>
+<li>无</li>
+<li>static：静态方法，独立于对象<blockquote>
+<p>静态方法可以调用其他静态方法<br>静态方法只能访问静态变量<br>静态方法内不能出现this（表示该对象）与super（表示该对象的父类对象）</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>禁止重写：</p>
+<ol>
+<li>final：该方法不能被子类重写（@override）</li>
+</ol>
+</li>
+<li><p>抽象的：</p>
+<ol>
+<li>abstract：该方法为抽象方法，无方法体，子类必须重写该方法<blockquote>
+<p>抽象方法必须在抽象类中<br>抽象方法中禁止出现this与super，抽象方法存在时，实例不一定存在</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>本地方法：</p>
+<ol>
+<li>native：用其他语言编写的方法在Java中成为本地方法</li>
+</ol>
+</li>
+<li><p>同步的：</p>
+<ol>
+<li>synchronized：该方法为同步方法<br /></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>方法的重载：指多个同名不同参的方法（返回值与方法名也可不同但不作为方法重载的特点）</p>
+<blockquote>
+<p>注意：重载的方法的访问范围修饰符可以扩大但不能缩小</p>
+</blockquote>
+</li>
+<li><p>方法的参数：方法的参数可以与成员变量名相同，若出现这种情况，而在方法中又出现这个参数名，则该名字表示的是参数而不是成员变量</p>
+<blockquote>
+<p>若要使用成员变量，使用this.成员变量</p>
+</blockquote>
+</li>
+<li><p>方法体内的变量：</p>
+<ol>
+<li>null变量：空变量必须指代一个对象的实例为空（还没new出来）<blockquote>
+<p>如: Stack stack = null</p>
+</blockquote>
+</li>
+<li>this.变量：指当前实例的成员变量</li>
+<li>super.变量：指当前实例的父类实例的成员变量</li>
+<li>局部变量：仅能在方法内部使用<br /></li>
+</ol>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>包</p>
+<ul>
+<li>java.lang包会在程序运行时自动引入</li>
+<li>导包：import</li>
+</ul>
+</li>
+<li><p>构造方法</p>
+<ul>
+<li>用于给实例初始化</li>
+<li>构造方法必须满足以下条件：<ol>
+<li>名称与类名完全相同</li>
+<li>无返回值类型（这里的无指的是不写返回值修饰符，而不是void）</li>
+<li>用new关键字调用</li>
+</ol>
+</li>
+<li>允许一个类有多个构造方法（方法重载）<blockquote>
+<p>注意：若用户自行定义了一个有参构造方法，则磨人的无参构造会失效，需要再写一个无参构造，并且无参的代码通常在有参的前面</p>
+</blockquote>
+</li>
+<li>调用重载的构造方法：使用this调用：  <pre class="line-numbers language-JAVA" data-language="JAVA"><code class="language-JAVA">RunDemo() &#123;
+
+&#125;
+
+RunDemo(String name) &#123;
+    this.username &#x3D; name;
+&#125;
+
+RunDemo(String name, String pwd) &#123;
+    &#x2F;&#x2F; 调用含有一个参数的构造方法，传入参数name
+    this(name);
+    this.password &#x3D; pwd;
+&#125;</code></pre></li>
+</ul>
+</li>
+</ul>
+<br />
+---
+
+<ul>
+<li>Object类常用方法<ol>
+<li>toString()：返回值为代表这个实例信息的字符串，形如：：类名@代表实例的数字序列</li>
+<li>equals(Object obj)：用于比较当前对象和形参对象是否相同<blockquote>
+<p>注意：比较字符串内容是否相同必须使用到这个方法，否则系统将比较两个字符串的指针，结果必为false</p>
+</blockquote>
+</li>
+<li>hashcode()：返回当前实例的哈希值</li>
+<li>getClass()：返回当前对象所对应的Class对象</li>
+<li>clone()：产生一个当前对象的复制，并返回复制的对象</li>
+<li>finalize()：把对象从内存中清除，由垃圾回收机制自动调用</li>
+</ol>
+</li>
+</ul>
+<br />
+---
+
+<ul>
+<li><p>Class类</p>
+<ul>
+<li>每个类的加载都伴随着一个Class类的对象，隐藏在字节码文件中，用于描述该类的属性，由JAVA编译器自动生成</li>
+<li>作用：实现动态性，在程序执行期间动态加载新的类</li>
+</ul>
+</li>
+<li><p>Class类常用方法</p>
+<ol>
+<li>Class.forName(String className)：该方法为静态方法，使用类名Class直接调用，返回被加载的类所对应的Class对象（看上面，每个类被加载的时候会自动产生一个对应的Class对象），如<code>Class t = Class.forName(&quot;java.lang.Thread&quot;);</code></li>
+</ol>
+</li>
+</ul>
+<br />
+---
+
+<ul>
+<li><p>String类（字符串常量）</p>
+<ul>
+<li>使用java.lang包中的String类来创建的一个字符串变量  <pre class="line-numbers language-JAVA" data-language="JAVA"><code class="language-JAVA">String s &#x3D; new String(&quot;Hello&quot;);</code></pre></li>
+</ul>
+</li>
+<li><p>String类除正常创建外的两种常用构造方法</p>
+<ol>
+<li>String(char a[])：用字符数组创建<br> String(char a[], int startIndex, iont count)：提取字符串数组a中以编号startIndex开头的总共count个字符<blockquote>
+<p>如：</p>
+<pre><code> char c[] = &#123;&#39;s&#39;, &#39;t&#39;, &#39;b&#39;, &#39;u&#39;, &#39;s&#39;, &#39;n&#39;&#125;;
+ String s = new String(c, 2, 3);
+ // 则字符串s为bus
+</code></pre>
+</blockquote>
+</li>
+<li><code>String s = &quot;Hello&quot;;</code> 引用字符串常量对象</li>
+</ol>
+</li>
+<li><p>注意：用 <code>==</code> 比较两个字符串时，使用正常方法会导致两个字符串的对象不一样，而使用 引用字符串常量对象 则两个字符串对象相同：</p>
+  <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">String s1 &#x3D; new String(&quot;Hello&quot;);
+String s2 &#x3D; new String(&quot;Hello&quot;);
+system.out.println(s1 &#x3D;&#x3D; s2);
+&#x2F;&#x2F; 输出为假，因为s1与s2是两个不同的实例（在内存中不同位置），即使其内容相同
+system.out.println(s1.equals(s2));
+&#x2F;&#x2F; 输出为真，equals用于比较两个字符串的内容
+
+String s3 &#x3D; &quot;Hello&quot;;
+String s4 &#x3D; &quot;Hello&quot;;
+system.out.println(s3 &#x3D;&#x3D; s4);
+&#x2F;&#x2F; 输出为真，因为s3与s4指向同一个字符串常量（在内存中相同位置）</code></pre></li>
+<li><p>String类常用方法</p>
+<ol>
+<li>length()：返回字符串长度</li>
+<li>indexOf(String s)：在调用该方法的字符串中从头开始检索字符串s，返回首次出现字符串s的位置，没有出现返回-1<br> indexOf(String s, int startIndex)：从第startIndex位开始检索<br> lastIndexOf(String s)：返回最后出现字符串s的位置</li>
+<li>charAt(int index)：返回调用该方法的字符串的第index位的字符</li>
+<li>replace(char oldChar, cahr newChar)：使调用该方法的字符串中的oldChar字符替换为newChar字符</li>
+<li>getChars(int start, int end, char c[], int offset)：将调用该方法的字符串从start开始至(end-1)结束的字符复制到字符数组c中，复制时，会以字符数组c的第offset位开始放</li>
+<li>toCharArray()：将调用该方法的字符串转换为字符数组</li>
+<li>getBytes()：将调用该字符串的数组转换为字节数组，每个字符都存储为字节编码</li>
+<li>equals(String s)：比较两个字符串的内容</li>
+<li>equalsIgnoreCase()：比较两个字符串的内容，忽略大小写</li>
+<li>startWith(String s)：判断调用该方法的字符串是否含有字符串s作为前缀<br>endWith(String s)：判断调用该方法的字符串是否含有字符串s作为后缀</li>
+<li>subString(int start)：将该字符串从第start位开始截取到最后<br>subString(int Start, int end)：将字符串从start处截取到(end-1)处</li>
+<li>toUpperCase()：返回该字符串的大写形式<br>toLowerCase()：返回该字符串的小写形式</li>
+<li>trim()：去掉字符串开头与结尾的空格</li>
+</ol>
+</li>
+</ul>
+<br />
+---
+
+<ul>
+<li><p>StringBuffer类（字符串变量）</p>
+<ul>
+<li>StringBuffer类提供一个可变的字符串序列</li>
+</ul>
+</li>
+<li><p>StringBuffer类常用构造方法</p>
+<ol>
+<li>StringBuffer()：无参构造，创建一个空的StringBuffer对象，初始容量为16个字符</li>
+<li>StringBuffer(String s)：构造一个拷贝字符串s的StringBuffer对象</li>
+</ol>
+</li>
+<li><p>StringBuffer常用方法</p>
+<ol>
+<li>append(…)：在字符串变量尾部添加内容，内容可以为字符串常量/变量、数字等</li>
+<li>insert(int offset，…)：在字符串变量的offset位置开始添加内容，内容不限</li>
+<li>delete(int start, int end)：删除字符串变量从start开始至(end-1)位置的内容</li>
+<li>reverse()：倒序排列字符串变量</li>
+</ol>
+</li>
+</ul>
+<h1 id="继承与多态"><a href="#继承与多态" class="headerlink" title="继承与多态"></a>继承与多态</h1><hr>
+<ul>
+<li>继承<ul>
+<li>子类会继承父类的状态（成员变量）和行为（方法），并根据需要增加一些新的状态和行为，<span class="keyword">有利于代码的重复利用</span>（概念考点）<blockquote>
+<p>注意：Java不支持多继承，一个子类只能有一个父类</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>变量的隐藏<ul>
+<li>若子类重新定义了一个与从父类继承过来的变量完全相同的变量，则当子类执行父类的方法时，使用的是父类的变量，当子类执行的是自己的方法时，操作的是子类重新定义的变量</li>
+<li>方法的重写（@Override）<ul>
+<li>子类可以创建一个与父类完全相同（返回值、参数、方法名完全相同）的方法，覆盖父类的方法<blockquote>
+<p>注意：子类的实例默认调用子类重写后的方法，若要调用父来的方法，使用super</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br />
+---
+
+<ul>
+<li><p>多态</p>
+<ul>
+<li>多态指程序中同一个符号早不同情况下有不同的解释的现象</li>
+<li>多态的三种体现：<ol>
+<li>方法的重写(@Override)</li>
+<li>方法的重载(不同参数的同名方法)</li>
+<li>引用</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>引用</p>
+<ul>
+<li>子类对象可以视为父类对象（向上转型），如：  <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Employee &#123;
+
+&#125;
+
+public class Manager extends Employee &#123;
+
+&#125;
+&#x2F;&#x2F; 则：
+Employee e &#x3D; new Manager(); &#x2F;&#x2F; 为合法使用方式
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h1 id="高级类特性"><a href="#高级类特性" class="headerlink" title="高级类特性"></a>高级类特性</h1><ul>
+<li>final关键字：<ol>
+<li>用于修饰类：表示该类不能被继承</li>
+<li>用于修饰方法：表示该方法不能被重写</li>
+<li>用于修饰变量：表示常量</li>
+</ol>
+</li>
+</ul>
+<hr>
+<ul>
+<li>枚举类型：<ul>
+<li>是一个特殊的类，一组常量的集合，可以视为常量数组，枚举数据的序号从零开始，依次递增</li>
+<li>枚举的定义格式：  <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public enum Season &#123;
+    spring,
+    summer,
+    autumn,
+    winter;
+&#125;
+&#x2F;&#x2F; 枚举定义后，其值的提取方法为：
+int s1 &#x3D; Season.spring;
+int s2 &#x3D; Season.summer;
+...</code></pre></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>抽象类（abstract）</p>
+<ul>
+<li>不能实例化，只能被子类继承并重写抽象方法的类</li>
+<li><span class="keyword">可以有非抽象方法和抽象方法</span></li>
+</ul>
+</li>
+<li><p>抽象方法（abstract）</p>
+<ul>
+<li>抽象方法写在抽象类里</li>
+<li>抽象方法只需声明，不需要方法体</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>接口</p>
+<ul>
+<li>Java不支持多继承，但是支持一个类实现多个接口</li>
+<li>使用关键字interface来定义一个接口</li>
+<li>接口可以继承父接口</li>
+<li>注意：<span class="keyword">接口体中只能有常量定义和抽象方法定义</span></li>
+</ul>
+</li>
+<li><p>接口里面的方法</p>
+<ul>
+<li>接口理默认都是抽象方法，因此接口里的方法不需要任何的修饰符和abstract：  <pre class="line-numbers language-java" data-language="java"><code class="language-java">void run(String name);</code></pre></li>
+</ul>
+</li>
+<li><p>接口的实现</p>
+<ul>
+<li>接口必须有其实现类，使用以下格式将该类用于实现一个或多个接口：  <pre class="line-numbers language-java" data-language="java"><code class="language-java">class A implements Printable, Addable &#123;
+
+&#125;</code></pre>
+<blockquote>
+<p>若父类实现了某个接口，其子类也会实现这个接口</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>接口可以作为数据类型使用</p>
+<ul>
+<li>（向上转型）定义一个接口类型的变量，则一定要某个实现了该接口的类的实例才能赋给接口变量  <pre class="line-numbers language-JAVA" data-language="JAVA"><code class="language-JAVA">interface A &#123;
+
+&#125;
+
+class B implements A &#123;
+
+&#125;
+
+&#x2F;&#x2F; 则：
+A a &#x3D; new B(); &#x2F;&#x2F; 为合法使用</code></pre></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>接口与abstract类的比较：<ol>
+<li>两个都可以有抽象方法</li>
+<li>接口理允许常量，不允许变量<br> abstract类里允许常量与变量</li>
+<li>接口不允许非抽象方法<br> abstract类允许非抽象方法</li>
+</ol>
+</li>
+</ul>
+<br />
+---
+
+<ul>
+<li><p>内部类</p>
+<ul>
+<li>一个类除了可以有成员变量和方法外，还可以有另一种成员——内部类（嵌套类），外部类成员和方法可以在内部类中使用</li>
+<li>内部类中不能声明静态变量和方法</li>
+<li>内部类不能与外部类同名</li>
+<li>内部类可以在其他类被调用</li>
+<li>修饰符可以定义为抽象的，私有的，保护的</li>
+</ul>
+</li>
+<li><p>匿名类</p>
+<ul>
+<li>一般用于创建一个只用一次的类<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">new Hello() &#123;
+    &#x2F;&#x2F; 匿名类类体
+&#125;</code></pre></li>
+<li>匿名类必然是在某个类中创建的，因此他一定是内部类，因此匿名类可以访问外部类中的成员变量和方法，不能声明静态变量和静态方法</li>
+</ul>
+</li>
+<li><p>与接口有关的匿名类</p>
+<ul>
+<li>Java允许直接用接口名和类体创建一个实现接口的匿名对象，如：  <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; Computable是一个接口，则：
+new Computable() &#123;
+    &#x2F;&#x2F; 实现接口匿名类的类体
+&#125;</code></pre></li>
+</ul>
+</li>
+</ul>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><hr>
+<ul>
+<li>指一组有序，同数据类型的数据集合</li>
+<li>数组的长度：数组中元素的个数</li>
+<li>数组的下标：数组在元素中的位置<blockquote>
+<p>注意：数组下标从0 开始到 长度-1</p>
+</blockquote>
+</li>
+<li>数组的维数：数组下标的个数</li>
+</ul>
+<blockquote>
+<p>数组是引用类型，属于一个类的实例</p>
+</blockquote>
+<hr>
+<ul>
+<li><p>数组的声明：</p>
+  <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">int[] array;</code></pre>
+<blockquote>
+<p>注意：声明数组不分配内存，因此在这里指定长度是不可取的</p>
+</blockquote>
+</li>
+<li><p>数组的创建：（分配空间）</p>
+  <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">array &#x3D; new int[100];
+&#x2F;&#x2F; 可以将数组的声明与创建合在一起，即：
+int[] array &#x3D; new int[100];</code></pre></li>
+<li><p>静态初始化：（C语言遗产，不建议使用）</p>
+  <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 在创建数组的同时给数组元素赋值（不用new）
+int[] array &#x3D; &#123;1, 2, 3&#125;;</code></pre></li>
+<li><p>动态初始化（推荐）</p>
+<ul>
+<li>指数组的定义与元素值的分配分开进行，如：<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">int[] array &#x3D; new int[3];
+array[0] &#x3D; 12;
+array[1] &#x3D; 5;
+array[2] &#x3D; 10;</code></pre></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Array类常用方法<ol>
+<li>arraycopy(Object src, int srcPos, Object dest, int destPos, int length)：从源数组src的srcPos处复制length个值到目标数组dest的destPos处<table>
+<thead>
+<tr>
+<th align="center">src</th>
+<th align="center">→</th>
+<th align="center">dest</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">……</td>
+<td align="center"></td>
+<td align="center">……</td>
+</tr>
+<tr>
+<td align="center">srcPos</td>
+<td align="center">→</td>
+<td align="center">destPos</td>
+</tr>
+<tr>
+<td align="center">……</td>
+<td align="center">→</td>
+<td align="center">……</td>
+</tr>
+<tr>
+<td align="center">srcPos + length - 1</td>
+<td align="center">→</td>
+<td align="center">destPos + length - 1</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="异常和断言"><a href="#异常和断言" class="headerlink" title="异常和断言"></a>异常和断言</h1><hr>
+<ul>
+<li>Java中的所有错误或不正常执行都被称为异常</li>
+<li>Java提供了一个Throwable类，所有异常对象都必须是Throwable类的实例或其子类的实例</li>
+<li><span class="keyword">Throwable类是所有异常类的父类</span></li>
+</ul>
+<hr>
+<ul>
+<li><p>Exception类</p>
+<ul>
+<li>是Throwable的子类，也是所有异常类的父类</li>
+</ul>
+</li>
+<li><p>RuntimeException类</p>
+<ul>
+<li>是Exception类的子类，包含了如下标越界，算数异常等异常，这类异常由系统自动捕获并抛出</li>
+</ul>
+</li>
+<li><p>Throwable类常用方法</p>
+<ol>
+<li>getMessage()：返回异常原因</li>
+<li>getStackTrace()：返回堆栈跟踪情况</li>
+<li>printStackTrace()：打印堆栈标准错误流</li>
+<li>fillStackTrace(PrintStream s)：对重新抛出异常的跟踪</li>
+<li>toString()：返回简单描述</li>
+</ol>
+</li>
+<li><p>异常处理语句</p>
+  <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">try &#123;
+    &#x2F;&#x2F; 被监视的语句，一旦出现异常，在该句结束并将异常交给其后面的catch代码段处理
+&#125;
+catch (异常类名 异常对象名) &#123;
+    &#x2F;&#x2F; 异常处理语句，该catch捕获到异常之后，下面的catch都失效，直接跳到finally
+&#125;
+catch (异常类名 异常对象名) &#123;
+    &#x2F;&#x2F; 异常处理语句
+&#125;
+&#x2F;&#x2F; ...
+finally &#123;
+    &#x2F;&#x2F; 最终处理，执行完异常处理后都要执行finally
+&#125;</code></pre></li>
+<li><p>finally语句块</p>
+<ul>
+<li>在结束try或try…catch语句之后一定会执行fianlly语句块，<span class="keyword">即使try语句块正常执行</span>，如：<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 即使try语句块里有return，返回前也要执行finally语句块
+try &#123;
+    &#x2F;&#x2F; do something
+    return;
+&#125;
+finally &#123;
+    &#x2F;&#x2F; do something
+&#125;</code></pre></li>
+</ul>
+</li>
+<li><p>自定义异常类</p>
+<ul>
+<li>自定义异常类必须继承Exception类</li>
+<li>抛出自定义异常类：  <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">throw new 异常类名();</code></pre></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>断言<ul>
+<li>断言是程序在开发阶段用于调试程序的手段</li>
+<li>JDK4.0引入新关键字assert</li>
+<li>使用方法：  <pre class="line-numbers language-JAVA" data-language="JAVA"><code class="language-JAVA">assert(布尔表达式);
+assert(布尔表达式):&quot;表达式&quot;;</code></pre></li>
+<li>当布尔表达式为假时，抛出AssertError异常，冒号后的表达式用于生成描述异常的说明</li>
+</ul>
+</li>
+</ul>
+<h1 id="输入输出流"><a href="#输入输出流" class="headerlink" title="输入输出流"></a>输入输出流</h1>
     </div>
 
     
@@ -233,6 +1028,9 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+          </div>
 
         
 

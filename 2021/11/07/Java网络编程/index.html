@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="初识网络编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java网络编程">
+<meta property="og:url" content="https://loliconkelvin.github.io/2021/11/07/Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/index.html">
+<meta property="og:site_name" content="萝莉控的小窝">
+<meta property="og:description" content="初识网络编程">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-11-07T05:35:04.000Z">
+<meta property="article:modified_time" content="2022-02-26T15:10:21.679Z">
+<meta property="article:author" content="Loliconkelvin">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://loliconkelvin.github.io/2021/11/07/Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://loliconkelvin.github.io/2021/11/07/Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/","path":"2021/11/07/Java网络编程/","title":"Java网络编程"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Java网络编程 | 萝莉控的小窝</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">萝莉控的小窝</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E8%AF%86%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%EF%BC%88TCP%E4%B8%8EUDP%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">初识通信协议（TCP与UDP）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E8%A6%81%E7%B4%A0"><span class="nav-number">2.</span> <span class="nav-text">网络通信要素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP%E5%9C%B0%E5%9D%80%E7%B1%BB%EF%BC%88InetAddress%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">IP地址类（InetAddress）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP%E5%A5%97%E6%8E%A5%E5%AD%97%E5%9C%B0%E5%9D%80%E7%B1%BB%EF%BC%88InetSocketAddress%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">IP套接字地址类（InetSocketAddress）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE"><span class="nav-number">5.</span> <span class="nav-text">通信协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP"><span class="nav-number">6.</span> <span class="nav-text">TCP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP%E5%AE%9E%E7%8E%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E2%80%94%E2%80%94%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%91%E9%80%81%E4%BF%A1%E6%81%AF"><span class="nav-number">6.1.</span> <span class="nav-text">TCP实现客户端——服务端发送信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">6.1.1.</span> <span class="nav-text">客户端</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-number">6.1.2.</span> <span class="nav-text">服务端</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP%E5%AE%9E%E7%8E%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E2%80%94%E2%80%94%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%91%E9%80%81%E6%96%87%E4%BB%B6"><span class="nav-number">6.2.</span> <span class="nav-text">TCP实现客户端——服务端发送文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF-1"><span class="nav-number">6.2.1.</span> <span class="nav-text">客户端</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF-1"><span class="nav-number">6.2.2.</span> <span class="nav-text">服务端</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%93%E5%B1%95%E2%80%94%E2%80%94%E8%8B%A5%E5%A4%9A%E6%AC%A1%E4%BC%A0%E8%BE%93"><span class="nav-number">6.3.</span> <span class="nav-text">拓展——若多次传输</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF-2"><span class="nav-number">6.3.1.</span> <span class="nav-text">客户端</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF-2"><span class="nav-number">6.3.2.</span> <span class="nav-text">服务端</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="nav-number">6.3.3.</span> <span class="nav-text">解析</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
+      src="/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">Loliconkelvin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:loliconkelvin@gmail.com" title="E-Mail → mailto:loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/11/07/Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="Loliconkelvin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萝莉控的小窝">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java网络编程
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-11-07 13:35:04" itemprop="dateCreated datePublished" datetime="2021-11-07T13:35:04+08:00">2021-11-07</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-02-26 23:10:21" itemprop="dateModified" datetime="2022-02-26T23:10:21+08:00">2022-02-26</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>初识网络编程</p>
+<span id="more"></span>
+
+<h2 id="初识通信协议（TCP与UDP）"><a href="#初识通信协议（TCP与UDP）" class="headerlink" title="初识通信协议（TCP与UDP）"></a>初识通信协议（TCP与UDP）</h2><ul>
+<li>TCP：形如打电话，双方必须建立连接，才能实现交流</li>
+<li>UDP：形如发短信，双方不需要建立连接，发送方只管发送，可能出现接收方收不到的情况</li>
+</ul>
+<h2 id="网络通信要素"><a href="#网络通信要素" class="headerlink" title="网络通信要素"></a>网络通信要素</h2><ol>
+<li><p>通信双方的地址：</p>
+<ul>
+<li>IP</li>
+<li>端口号</li>
+</ul>
+</li>
+<li><p>通信双方需要建立通信规则（通信协议）：</p>
+<ul>
+<li>如http ftp smtp tcp udp等</li>
+</ul>
+</li>
+<li><p>Java在网络通信中：</p>
+<ul>
+<li>万物皆对象，有要素就肯定有其对应的类，IP类、通信协议类等</li>
+</ul>
+</li>
+</ol>
+<h2 id="IP地址类（InetAddress）"><a href="#IP地址类（InetAddress）" class="headerlink" title="IP地址类（InetAddress）"></a>IP地址类（InetAddress）</h2><ul>
+<li><p>IP地址的用途：IP地址具有唯一性，用于定位网络上的一台或多台计算机</p>
+<br /></li>
+<li><p><span class="red">一个特殊的IP地址：127.0.0.1 localhost 指本机</span></p>
+<br /></li>
+<li><p>IP地址的分类：（两种分类方式）</p>
+<ol>
+<li><p>通过IP地址分类</p>
+<ul>
+<li>IPV4：由四个字节组成（每个数字可取0~255）共32位，形如 <code>127.0.0.1</code></li>
+<li>IPV6：由八个16位无符号整数组成（每组数字可取0000~FFFF），共128位，形如 <code>6562:8652:0aff:91cb:3d4e:1307:0000:abcd</code></li>
+</ul>
+</li>
+<li><p>通过公/私网分类<br> 公网：互联网，还下分ABCD类地址，他们的网段</p>
+<p> 私网：局域网（192.168.xxx.xxx）</p>
+<br /></li>
+</ol>
+</li>
+<li><p>域名</p>
+<ul>
+<li>域名的意义：为解决IP地址难记的问题，相当于给IP地址起一个名字</li>
+</ul>
+</li>
+</ul>
+<h2 id="IP套接字地址类（InetSocketAddress）"><a href="#IP套接字地址类（InetSocketAddress）" class="headerlink" title="IP套接字地址类（InetSocketAddress）"></a>IP套接字地址类（InetSocketAddress）</h2><ul>
+<li>端口<ul>
+<li>表示计算机上的一个程序的进程</li>
+<li>端口号被规定取值为0~65535</li>
+<li>TCP协议与UDP协议各有65536个端口号可供分配，允许有程序使用不同协议但端口号相同，但单个协议下端口号不可冲突</li>
+<li>端口分类：<ul>
+<li>公有端口：（0~1023）（以下是默认端口）<blockquote>
+<p>用于内置进程或服务器，最好不要占用</p>
+</blockquote>
+<ul>
+<li>HTTP：80</li>
+<li>HTTPS：443</li>
+<li>FTP：21</li>
+<li>Telent：23</li>
+</ul>
+</li>
+<li>程序注册端口：（1024~49151）（以下是默认端口）<blockquote>
+<p>用于给程序和用户使用</p>
+</blockquote>
+<ul>
+<li>Tomcat：8080</li>
+<li>MySQL：3306</li>
+<li>Oracle：1521</li>
+</ul>
+</li>
+<li>动态端口/私有端口：（49152~65535）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="通信协议"><a href="#通信协议" class="headerlink" title="通信协议"></a>通信协议</h2><ul>
+<li><p>TCP/IP协议层</p>
+<ol>
+<li><p>TCP：用户传输协议</p>
+<ul>
+<li>连接</li>
+<li>三次握手 四次挥手<blockquote>
+<p>A:在？<br>B:在！<br>A:连！</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>A:走了<br>B:？<br>B:确定？<br>A:确定！</p>
+</blockquote>
+<ul>
+<li>客户端与服务端连接</li>
+<li>传输完成就释放连接，效率低（射完就跑（bushi</li>
+</ul>
+</li>
+<li><p>UDP：用户数据报协议</p>
+<ul>
+<li>不连接</li>
+<li>客户端与服务端没有明确界限</li>
+<li>不管接收方有没有准备好接收都会发送</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><h3 id="TCP实现客户端——服务端发送信息"><a href="#TCP实现客户端——服务端发送信息" class="headerlink" title="TCP实现客户端——服务端发送信息"></a>TCP实现客户端——服务端发送信息</h3><h4 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h4><ul>
+<li>服务端需要负责：<ol>
+<li>连接客户端（Socket）<ul>
+<li>知道服务端的IP地址和端口</li>
+</ul>
+</li>
+<li>发送信息<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 客户端
+public class TcpClient &#123;
+    public static void main(String[] args) &#123;
+        OutputStream os &#x3D; null;
+        Socket socket &#x3D; null;
+
+        &#x2F;&#x2F; 需要知道服务端地址
+        &#x2F;&#x2F; 需要连接服务端
+        try &#123;
+            InetAddress server &#x3D; InetAddress.getByName(&quot;127.0.0.1&quot;);
+
+            &#x2F;&#x2F; 需要端口号
+            int port &#x3D; 1145;
+
+            &#x2F;&#x2F; 创建socket连接
+            socket &#x3D; new Socket(server, port
+            );
+
+            &#x2F;&#x2F; 发送消息 （IO流
+            os &#x3D; socket.getOutputStream();
+
+            os.write(&quot;牛哇&quot;.getBytes());
+
+        &#125; catch (IOException e) &#123;
+            e.printStackTrace();
+        &#125; finally &#123;
+            &#x2F;&#x2F; 关闭服务
+            if (os !&#x3D; null) &#123;
+                try &#123;
+                    os.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+            if (socket !&#x3D; null) &#123;
+                try &#123;
+                    socket.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre></li>
+</ol>
+</li>
+</ul>
+<h4 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h4><ul>
+<li>客户端需要负责：<ul>
+<li>拥有自己的IP地址和端口</li>
+</ul>
+<ol>
+<li>等待客户端连接（ServerSocket）</li>
+<li>接收信息</li>
+<li>使用管道流处理并输出信息<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class TcpServer &#123;
+    public static void main(String[] args) &#123;
+        ServerSocket serverSocket &#x3D; null;
+        Socket socket &#x3D; null;
+        InputStream is &#x3D; null;
+        ByteArrayOutputStream baos &#x3D; null;
+
+        &#x2F;&#x2F; 需要有一个地址
+        try &#123;
+            serverSocket &#x3D; new ServerSocket(1145);
+            &#x2F;&#x2F; 等待客户端连接
+            socket &#x3D; serverSocket.accept();
+            &#x2F;&#x2F; 读取客户端消息
+            is &#x3D; socket.getInputStream();
+
+            &#x2F;*
+            &#x2F;&#x2F; 输出（String接收）
+            byte[] buffer &#x3D; new byte[1024];
+            int length;
+            while ((length &#x3D; is.read(buffer)) !&#x3D; -1) &#123;
+                String msg &#x3D; new String(buffer, 0, length);
+                System.out.println(msg);
+            &#125;
+            *&#x2F;
+
+            &#x2F;&#x2F; 输出（流接收）
+            baos &#x3D; new ByteArrayOutputStream();
+            byte[] buffer &#x3D; new byte[1024];
+            int length;
+            while ((length &#x3D; is.read(buffer)) !&#x3D; -1) &#123;
+                baos.write(buffer, 0, length);
+                System.out.println(baos);
+            &#125;
+        &#125; catch (IOException e) &#123;
+            e.printStackTrace();
+        &#125; finally &#123;
+            &#x2F;&#x2F; 关闭流和连接
+            if (baos !&#x3D; null) &#123;
+                try &#123;
+                    baos.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+            if (is !&#x3D; null) &#123;
+                try &#123;
+                    is.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+            if (socket !&#x3D; null) &#123;
+                try &#123;
+                    socket.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+            if (serverSocket !&#x3D; null) &#123;
+                try &#123;
+                    serverSocket.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre></li>
+</ol>
+</li>
+</ul>
+<h3 id="TCP实现客户端——服务端发送文件"><a href="#TCP实现客户端——服务端发送文件" class="headerlink" title="TCP实现客户端——服务端发送文件"></a>TCP实现客户端——服务端发送文件</h3><h4 id="客户端-1"><a href="#客户端-1" class="headerlink" title="客户端"></a>客户端</h4><ul>
+<li>思路和发送信息一样，客户端需要完成的：<ol>
+<li>需要知道服务端IP和端口（Socket）</li>
+<li>发送文件<ul>
+<li>将文件传入流<ul>
+<li>实现 文件 -&gt; 文件输入流 -&gt; 输出流 的转换<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class TcpFileClient &#123;
+    public static void main(String[] args) &#123;
+        OutputStream os &#x3D; null;
+        FileInputStream fis &#x3D; null;
+
+        &#x2F;&#x2F; 连接服务端
+        int port &#x3D; 4433;
+        try &#123;
+            Socket socket &#x3D; new Socket(&quot;localhost&quot;, port);
+            &#x2F;&#x2F; 定位文件
+            File file &#x3D; new File(&quot;test.txt&quot;);
+            &#x2F;&#x2F; 准备输出流
+            os &#x3D; socket.getOutputStream();
+            &#x2F;&#x2F; 设置文件输入流(可以直接使用文件名而非File对象)
+            fis &#x3D; new FileInputStream(file);
+
+            &#x2F;&#x2F; 将文件写入缓冲区
+            byte[] buffer &#x3D; new byte[1024];
+            int length;
+            while ((length &#x3D; fis.read(buffer)) !&#x3D; -1) &#123;
+                &#x2F;&#x2F; 从缓冲区提取到输出流
+                os.write(buffer, 0, length);
+            &#125;
+
+        &#125; catch (IOException e) &#123;
+            e.printStackTrace();
+        &#125; finally &#123;
+            &#x2F;&#x2F; 关闭服务
+            if (fis !&#x3D; null) &#123;
+                try &#123;
+                    fis.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+            if (os !&#x3D; null) &#123;
+                try &#123;
+                    os.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+        &#125;
+
+    &#125;
+&#125;</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="服务端-1"><a href="#服务端-1" class="headerlink" title="服务端"></a>服务端</h4><ul>
+<li>服务端需要做的事：<ol>
+<li>拥有自己的IP和端口（SocketServer）</li>
+<li>监听客户端接入</li>
+<li>接收文件（接收什么就用什么管道流）<ul>
+<li>实现 输入流 -&gt; 文件输出流 -&gt; 文件 的转换<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class TcpFileServer &#123;
+    public static void main(String[] args) &#123;
+        ServerSocket server &#x3D; null;
+        Socket client &#x3D; null;
+        InputStream is &#x3D; null;
+        FileOutputStream fos &#x3D; null;
+        &#x2F;&#x2F; 拥有自己的端口
+        InetSocketAddress port &#x3D; new InetSocketAddress(4433);
+        &#x2F;&#x2F; 开启服务器
+        try &#123;
+            server &#x3D; new ServerSocket(4433);
+            &#x2F;&#x2F; 等待客户端接入
+            client &#x3D; server.accept();
+            &#x2F;&#x2F; 接收客户端文件
+            is &#x3D; client.getInputStream();
+            &#x2F;&#x2F; 将文件写入缓冲区
+            fos &#x3D; new FileOutputStream(&quot;test_re.txt&quot;);
+            byte[] buffer &#x3D; new byte[1024];
+            int length;
+            while ((length &#x3D; is.read(buffer)) !&#x3D; -1) &#123;
+                &#x2F;&#x2F; 将文件写到本地
+                fos.write(buffer, 0, length);
+            &#125;
+        &#125; catch (IOException e) &#123;
+            e.printStackTrace();
+        &#125; finally &#123;
+            &#x2F;&#x2F; 关闭服务
+            if (fos !&#x3D; null) &#123;
+                try &#123;
+                    fos.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+            if (is !&#x3D; null) &#123;
+                try &#123;
+                    is.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+            if (client !&#x3D; null) &#123;
+                try &#123;
+                    client.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+            if (server !&#x3D; null) &#123;
+                try &#123;
+                    server.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="拓展——若多次传输"><a href="#拓展——若多次传输" class="headerlink" title="拓展——若多次传输"></a>拓展——若多次传输</h3><ul>
+<li>下面是一段有服务端确认传输完毕的TCP文件传输<h4 id="客户端-2"><a href="#客户端-2" class="headerlink" title="客户端"></a>客户端</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class TcpFileClient &#123;
+    public static void main(String[] args) &#123;
+        OutputStream os &#x3D; null;
+        FileInputStream fis &#x3D; null;
+
+        &#x2F;&#x2F; 连接服务端
+        int port &#x3D; 4433;
+        try &#123;
+            Socket socket &#x3D; new Socket(&quot;localhost&quot;, port);
+            &#x2F;&#x2F; 定位文件
+            File file &#x3D; new File(&quot;test.txt&quot;);
+            &#x2F;&#x2F; 准备输出流
+            os &#x3D; socket.getOutputStream();
+            &#x2F;&#x2F; 设置文件输入流(可以直接使用文件名而非File对象)
+            fis &#x3D; new FileInputStream(file);
+
+            &#x2F;&#x2F; 将文件写入缓冲区
+            byte[] buffer &#x3D; new byte[1024];
+            int length;
+            while ((length &#x3D; fis.read(buffer)) !&#x3D; -1) &#123;
+                &#x2F;&#x2F; 从缓冲区提取到输出流
+                os.write(buffer, 0, length);
+            &#125;
+
+            &#x2F;&#x2F; 传输结束，不关闭可能会两边都不会结束
+            socket.shutdownOutput();
+
+            &#x2F;&#x2F; 接收服务端的确认信息，确认接收完毕
+            InputStream is &#x3D; socket.getInputStream();
+            ByteArrayOutputStream baos &#x3D; new ByteArrayOutputStream();
+            while ((length &#x3D; is.read(buffer)) !&#x3D; -1) &#123;
+                baos.write(buffer, 0, length);
+            &#125;
+            System.out.println(baos.toString());
+        &#125; catch (IOException e) &#123;
+            e.printStackTrace();
+        &#125;
+    &#125;
+&#125;</code></pre></li>
+</ul>
+<h4 id="服务端-2"><a href="#服务端-2" class="headerlink" title="服务端"></a>服务端</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class TcpFileServer &#123;
+    public static void main(String[] args) &#123;
+        ServerSocket server &#x3D; null;
+        Socket client &#x3D; null;
+        InputStream is &#x3D; null;
+        FileOutputStream fos &#x3D; null;
+        &#x2F;&#x2F; 拥有自己的端口
+        InetSocketAddress port &#x3D; new InetSocketAddress(4433);
+        &#x2F;&#x2F; 开启服务器
+        try &#123;
+            server &#x3D; new ServerSocket(4433);
+            &#x2F;&#x2F; 等待客户端接入
+            client &#x3D; server.accept();
+            &#x2F;&#x2F; 接收客户端文件
+            is &#x3D; client.getInputStream();
+            &#x2F;&#x2F; 将文件写入缓冲区
+            fos &#x3D; new FileOutputStream(&quot;test_re.txt&quot;);
+            byte[] buffer &#x3D; new byte[1024];
+            int length;
+            while ((length &#x3D; is.read(buffer)) !&#x3D; -1) &#123;
+                &#x2F;&#x2F; 将文件写到本地
+                fos.write(buffer, 0, length);
+            &#125;
+
+            &#x2F;&#x2F; 告诉客户端接收完毕
+            OutputStream os &#x3D; client.getOutputStream();
+            os.write(&quot;接收完毕&quot;.getBytes());
+        &#125; catch (IOException e) &#123;
+            e.printStackTrace();
+        &#125; finally &#123;
+            if (fos !&#x3D; null) &#123;
+                try &#123;
+                    fos.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+            if (is !&#x3D; null) &#123;
+                try &#123;
+                    is.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+            if (client !&#x3D; null) &#123;
+                try &#123;
+                    client.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+            if (server !&#x3D; null) &#123;
+                try &#123;
+                    server.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
+<h4 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h4><ul>
+<li>要点：<ol>
+<li>接收什么内容就用什么流接收</li>
+<li>若客户端/服务端在socket的流中传输完没有直接执行下面的close关闭流而是还有事要干，这时候接收方会因为流还存在而一直等待传输方，因此需要传输方调用<code>shutdownOutput()</code>关闭传输</li>
+</ol>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/09/25/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="prev" title="Java多线程">
+                  <i class="fa fa-chevron-left"></i> Java多线程
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/01/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BA%8C%E7%BA%A7%E2%80%94%E2%80%94JAVA/" rel="next" title="计算机二级——JAVA">
+                  计算机二级——JAVA <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

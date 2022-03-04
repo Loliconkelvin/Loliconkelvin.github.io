@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content=".red {     color: red; }  .blue {     color: blue; }   图书管理系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java小项目——图书管理系统">
+<meta property="og:url" content="https://loliconkelvin.github.io/2022/02/28/Java%E5%B0%8F%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:site_name" content="萝莉控的小窝">
+<meta property="og:description" content=".red {     color: red; }  .blue {     color: blue; }   图书管理系统">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s4.ax1x.com/2022/03/01/bQ8fO0.png">
+<meta property="og:image" content="https://s4.ax1x.com/2022/03/01/bQgfjP.png">
+<meta property="article:published_time" content="2022-02-28T01:40:17.000Z">
+<meta property="article:modified_time" content="2022-03-04T12:50:11.787Z">
+<meta property="article:author" content="Loliconkelvin">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s4.ax1x.com/2022/03/01/bQ8fO0.png">
+
+
+<link rel="canonical" href="https://loliconkelvin.github.io/2022/02/28/Java%E5%B0%8F%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://loliconkelvin.github.io/2022/02/28/Java%E5%B0%8F%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/","path":"2022/02/28/Java小项目——图书管理系统/","title":"Java小项目——图书管理系统"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Java小项目——图书管理系统 | 萝莉控的小窝</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">萝莉控的小窝</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#22-02-28"><span class="nav-number">1.</span> <span class="nav-text">22&#x2F;02&#x2F;28</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-01"><span class="nav-number">2.</span> <span class="nav-text">22&#x2F;03&#x2F;01</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8D%89%E6%8B%9F%E5%90%97idea%E5%9D%91%E4%BA%86%E6%88%91%E4%B8%A4%E4%B8%AA%E6%99%9A%E4%B8%8A%EF%BC%88%E6%96%B0%E7%89%88idea%E5%88%9B%E5%BB%BAweb%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">草拟吗idea坑了我两个晚上（新版idea创建web项目的方法）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-02"><span class="nav-number">3.</span> <span class="nav-text">22&#x2F;03&#x2F;02</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-03"><span class="nav-number">4.</span> <span class="nav-text">22&#x2F;03&#x2F;03</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-04"><span class="nav-number">5.</span> <span class="nav-text">22&#x2F;03&#x2F;04</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
+      src="/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">Loliconkelvin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:loliconkelvin@gmail.com" title="E-Mail → mailto:loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2022/02/28/Java%E5%B0%8F%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="Loliconkelvin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萝莉控的小窝">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java小项目——图书管理系统
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-02-28 09:40:17" itemprop="dateCreated datePublished" datetime="2022-02-28T09:40:17+08:00">2022-02-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-03-04 20:50:11" itemprop="dateModified" datetime="2022-03-04T20:50:11+08:00">2022-03-04</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <style>
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+</style>
+
+<p>图书管理系统</p>
+<span id="more"></span>
+
+<h2 id="22-02-28"><a href="#22-02-28" class="headerlink" title="22/02/28"></a>22/02/28</h2><ul>
+<li><p>预选jar包</p>
+<ul>
+<li>c3p0-0.9.1.2</li>
+<li>commons-beanutils-1.8.0</li>
+<li>commons-beanutils-1.8.3</li>
+<li>commons-collections-3.2.1</li>
+<li>commons-dbutils-1.6</li>
+<li>commons-fileupload-1.2.1</li>
+<li>commons-io-1.4</li>
+<li>commons-lang-2.5</li>
+<li>commons-logging</li>
+<li>commons-logging-1.1.1</li>
+<li>ezmorph-1.0.6</li>
+<li>fastjson-1.1.34</li>
+<li>FileLoad</li>
+<li>json-lib-2.3-jdk15</li>
+<li>jsonplugin-0.34</li>
+<li>jstl</li>
+<li>morph-1.1.1</li>
+<li>morph-sandbox-1.1.1</li>
+<li>mysql-connector-java-5.1.7-bin</li>
+<li>poi-3.8-20120326</li>
+<li>poi-excelant-3.8-20120326</li>
+<li>poi-ooxml-3.8-20120326</li>
+<li>poi-scratchpad-3.8-20120326</li>
+<li>standard<br /></li>
+</ul>
+</li>
+<li><p>定下前端所使用的模板(支出 10)</p>
+<br /></li>
+<li><p>主页编辑</p>
+<ul>
+<li>确定index.jsp运行成功</li>
+<li>确定index重定向到login成功</li>
+</ul>
+</li>
+<li><p>主页素材相关：</p>
+<ul>
+<li>登录界面左蓝色色块 -》 style/style.css:1850</li>
+<li>蓝色色块处应有背景图，但无法显示（路径问题？）1851行（已注释）</li>
+<li>src=”xxx?method=xxxxx()”<br /></li>
+</ul>
+</li>
+<li><p>已创建编辑404 500错误页面（<span class="red">页面素材未确定</span>）</p>
+<br /></li>
+<li><p>编辑index.jsp</p>
+<br /></li>
+<li><p>初试登录认证(LoginServlet.java)</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/http/HttpServlet.html">官方说明文档？</a></li>
+<li>serialVersionUID不知道有没有用 先留着</li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41007534/article/details/99696559">相关教程</a><br /></li>
+</ul>
+<ol>
+<li>创建HttpServlet<br> 重写HttpServlet的doGet(),doPost()方法</li>
+<li>……</li>
+</ol>
+</li>
+<li><p>22/02/28 22:24 推倒重做</p>
+</li>
+</ul>
+<h2 id="22-03-01"><a href="#22-03-01" class="headerlink" title="22/03/01"></a>22/03/01</h2><ul>
+<li><p>新建数据库<br>  <a target="_blank" rel="noopener" href="https://imgtu.com/i/bQ8fO0"><img src="https://s4.ax1x.com/2022/03/01/bQ8fO0.png" alt="bQ8fO0.png"></a></p>
+  <br />
+  * 新建表：
+      1. <span class="blue">(已与视频同步)</span>user（用户表）：
+          * id
+          * name
+          * pwd
+          * state(目前用于表示账号状态 1激活 0封禁)(<span class="blue">后期可能更改为 1管理员 0用户</span>)
+      2. <span class="blue">(已与视频同步)</span>type（书籍类型表）：
+          * id
+          * name
+          * parentid(表示该类型的父类型)
+      3. <span class="blue">(已与视频同步)</span>book（书籍信息表）：
+          * id
+          * typeId
+          * name
+          * price
+          * desc(表示书籍介绍)
+          * publish(表示出版社)
+          * author
+          * stock(表示库存)
+      4. memberType（用户类型表）
+          * name
+          * amount
+          * discount
+          * recharge（<span class="red">后期可以删除</span>）
+          * keepDay
+      5. member（特殊用户信息表？）
+          * name
+          * psw
+          * type
+          * balance（<span class="red">后期可以删除</span>）
+          * regdate
+          * tel
+          * idNumber
+      6. record（记录表）
+          * memberid
+          * bookid
+          * rentDate
+          * backDate
+          * depost
+          * userid
+          * isbn
+<br /></li>
+<li><p>新建idea-javaweb项目</p>
+<ul>
+<li>LibraryManagementSys</li>
+<li>Java 11.0.10</li>
+<li>Tomcat 10.0.16</li>
+</ul>
+</li>
+<li><p>导入第三方jar（c3p0，mysql连接包）</p>
+</li>
+<li><p>放入c3p0配置文件（需要与包位于同一层次）</p>
+</li>
+<li><p>（13:11）已经成功通过java访问数据库</p>
+<ul>
+<li>数据库测试用代码：<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">import java.sql.*;
+
+public class Main &#123;
+    public static void main(String[] args)&#123;
+        getConnection();
+    &#125;
+
+    public static Connection getConnection() &#123;
+
+        Connection con &#x3D; null;
+        try &#123;
+            System.out.println(&quot;begin.&quot;);
+            Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);
+            &#x2F;&#x2F; 数据库地址 用户名 密码在此 根据需要更改
+            con &#x3D; DriverManager.getConnection(&quot;jdbc:mysql:&#x2F;&#x2F;127.0.0.1:3306&#x2F;bookdb?&amp;useSSL&#x3D;false&amp;serverTimezone&#x3D;UTC&quot;,&quot;root&quot;,&quot;123456&quot;);
+            &#x2F;&#x2F; 输出end即为连接成功
+            System.out.println(&quot;end.&quot;);
+        &#125;
+        catch (Exception e) &#123;
+            System.out.println(e);
+        &#125;
+        return con;
+    &#125;
+&#125;</code></pre>
+<br /></li>
+</ul>
+</li>
+<li><p>成功将模板部署到Tomcat，目前未见元素丢失</p>
+<br /></li>
+<li><p>通过idea连接数据库生成表实体类</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jpfss/p/11122023.html">相关教程</a></p>
+</li>
+<li><p>不同点：<br><img src="https://s4.ax1x.com/2022/03/01/bQgfjP.png" alt="bQgfjP.png"></p>
+</li>
+<li><p>JavaBean要求</p>
+<ol>
+<li>继承Serializable</li>
+<li>私有属性</li>
+<li>getter/setter</li>
+<li>默认构造方法<br /></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>实体类UserDao的编写（Data Access Objects数据库访问层）</p>
+<ul>
+<li>该类主要通过连接mysql的user表查询是否存在这样的数据</li>
+</ul>
+<ol>
+<li>连接mysql<ul>
+<li>注意：使用到的dbhelper连接数据库方法如下：<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 指定sql地址，密码，用户名
+DBHelper.init(&quot;jdbc:mysql:&#x2F;&#x2F;127.0.0.1:3306&#x2F;bookdb?&amp;useSSL&#x3D;false&amp;serverTimezone&#x3D;UTC&quot;,&quot;123456&quot;,&quot;root&quot;);
+&#x2F;&#x2F; dbhelper的构造方法中含有连接mysql的方法，new对象即为连接
+DBHelper con &#x3D; new DBHelper();
+
+&#x2F;&#x2F; 取得connection对象的方法为：
+con.conn</code></pre></li>
+</ul>
+</li>
+<li>调用查询方法（<span class="red">涉及反射</span>）<ul>
+<li><a target="_blank" rel="noopener" href="https://commons.apache.org/proper/commons-dbutils/apidocs/org/apache/commons/dbutils/QueryRunner.html">QueryRunner官方说明文档</a></li>
+<li>通过调用QueryRunner中的<code>runner.query(connertion对象, 要执行的sql语句, 接收类（涉及反射）, 向sql语句传入的参数);</code>向数据裤查询，成功则返回对象，无结果则返回null<blockquote>
+<p>注意：传入的参数要与sql语句中?所对应的接收变量顺序相同</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>关闭连接<ul>
+<li>使用dbhelper中的<code>close()</code>方法关闭连接</li>
+</ul>
+</li>
+<li>返回查询到的对象<br /></li>
+</ol>
+</li>
+<li><p>UserBiz类的编写（业务层）</p>
+<ul>
+<li>该类用于调用UserDao中的getUser方法，处理其抛出的错误，并且将获取到的User返回给网页</li>
+<li>其实就是用于处理”我能不能从数据库中拿出来信息”,”我拿出来了什么信息”,”遇到这些情况我要怎么做”</li>
+<li>在此处出现的错误信息，我们可以在日志中看到<br /></li>
+</ul>
+</li>
+<li><p>UserServlet类的编写（处理页面请求）</p>
+<ul>
+<li>该类主要用于处理jsp页面发送过来的请求</li>
+<li>虚拟地址：（web3.0之后）<ul>
+<li>使用<code>@WebServlet()</code>注解完成该类的虚拟地址定义，定义过后，不需要在web.xml中指定servlet，如：<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 在web项目下‘&#x2F;’表示项目的根目录，指webapp目录
+@WebServlet(&quot;&#x2F;user.let&quot;)</code></pre></li>
+</ul>
+</li>
+<li>servlet类必须继承自HttpServlet，并且重写<code>dopost()</code>和<code>doGet()</code>方法<ul>
+<li>关于<code>doPost()</code><blockquote>
+<p>当jsp发送post请求至该servlet时，执行该方法</p>
+</blockquote>
+<ol>
+<li>地址栏的请求</li>
+<li>超链接</li>
+<li>&lt;form method=’get’&gt;</li>
+<li>跳转</li>
+<li>重定向</li>
+</ol>
+</li>
+<li>关于<code>doGet()</code><blockquote>
+<p>当jsp发送get请求至该servlet时，执行该方法</p>
+</blockquote>
+<ul>
+<li>&lt;form method=’post’&gt;<br /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>判断用户的请求类型为login<ul>
+<li>调用该servlet的用户请求会以<code>/user.let?type=xxx</code>的格式进入，因此需要判断type的值</li>
+<li>使用<code>getParameter(参数名);</code>根据参数名获取其参数值</li>
+</ul>
+</li>
+<li>获取用户名和密码<ul>
+<li><span class="red">前端请注意表单提交数据：<ol>
+<li>用户名表单组件 必须指明 name=”username”</li>
+<li>密码表单组件 必须指明 name=”password”</span></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>调用UserBiz的getUser方法，并传入用户名和密码</li>
+<li>判断返回的对象是否为null<ul>
+<li>null-&gt;用户名密码不正确<ol>
+<li>使用<code>resp.getWriter()</code>获取到网页响应的输出流，该输出流对象中的<code>println()</code>或<code>print()</code>方法可以向前端写入信息，甚至可以写html代码</li>
+</ol>
+</li>
+<li>对象-&gt;登陆成功，保存登录日志操作，跳转页面</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="草拟吗idea坑了我两个晚上（新版idea创建web项目的方法）"><a href="#草拟吗idea坑了我两个晚上（新版idea创建web项目的方法）" class="headerlink" title="草拟吗idea坑了我两个晚上（新版idea创建web项目的方法）"></a>草拟吗idea坑了我两个晚上（新版idea创建web项目的方法）</h3><ul>
+<li>创建一个普通的java项目，在左边目录右键项目名，选第二个添加框架，选择web application 4.0</li>
+<li>配置tomcat，添加deployment，加号选第一个</li>
+</ul>
+<br />
+<br />
+
+<ul>
+<li><p>用户登录补充：</p>
+<ul>
+<li>使用<code>req.getSession();</code>获取当前会话，返回会话对象</li>
+<li>使用<code>会话对象.setAttribute();</code>方法为当前会话增加指定的属性并附上指定的值，用于保存用户登录信息</li>
+</ul>
+</li>
+<li><p>（22:54）已确定实现用户登录</p>
+</li>
+</ul>
+<br />
+
+<ul>
+<li>欢迎语实时改变用户名已实现<ul>
+<li>在jsp页面使用EL表达式中的变量占位符<code>$&#123;user.name&#125;</code>获取用户名</li>
+</ul>
+</li>
+<li>用户登出已实现<ul>
+<li>原理与登入相同</li>
+</ul>
+</li>
+</ul>
+<h2 id="22-03-02"><a href="#22-03-02" class="headerlink" title="22/03/02"></a>22/03/02</h2><ul>
+<li>导入个人资料页面，准备完成修改密码功能<ul>
+<li><span class="red">前端注意：需要做一个js 实现新旧密码不能相同，新密码与密码的重复输入需要相同，密码不能为空（密码为空时仍有返回值 返回不是null<br>而是””）</span></li>
+</ul>
+</li>
+<li>用户修改密码Dao的编写<ol>
+<li>连接数据库</li>
+<li>拿到当前用户id和新密码</li>
+<li>准备sql语句</li>
+<li>执行sql语句（密码修改成功会返回修改数据的行数，修改失败返回0）</li>
+<li>返回密码修改行数并关闭连接</li>
+</ol>
+</li>
+<li>用户修改密码biz的编写<ul>
+<li>调用修改密码Dao</li>
+<li>返回面修改行数</li>
+</ul>
+</li>
+<li>用户修改密码servlet的编写<ol>
+<li>获取当前用户id和新密码</li>
+<li>调用修改密码biz</li>
+<li>验证修改密码是否成功<ul>
+<li>成功：<span class="blue">（新增：清空当前会话）</span>返回登录页面</li>
+<li>失败：返回个人资料页面</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="22-03-03"><a href="#22-03-03" class="headerlink" title="22/03/03"></a>22/03/03</h2><ul>
+<li><p>图书类型bean已生成</p>
+</li>
+<li><p>图书类型Dao的编写：</p>
+<ul>
+<li><p>思路是一样的（后续不再写，只写要点）：</p>
+<ol>
+<li>连接数据库</li>
+<li>准备sql语句</li>
+<li>运行sql语句</li>
+<li>关闭连接</li>
+<li>返回值</li>
+</ol>
+</li>
+<li><p>要点：</p>
+<ol>
+<li>连接数据库应该需要用时才连接，而不是连接一次占用很久，因此将连接数据库放在方法内而不是类里面</li>
+<li>sql插入语句<code>INSERT INTO type VALUES(值1, 值2, ...)</code><ul>
+<li>保证一个最大id的行被删除之后,下一个焙增加的行的id为最大id+1,需要使用:<blockquote>
+<p>这条语句可以保证新增的行id紧跟目前的最大id</p>
+</blockquote>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">ALTER TABLE type auto_increment &#x3D; 1;</code></pre></li>
+</ul>
+</li>
+<li>对于设置了自增的列, 不传入该列的值,但要传入null占位,否则后面列的数据会传到前面的列</li>
+<li>增删改都可以用<code>runner.update();</code>方法,它不需要将修改的内容用一个handler接收<br /></li>
+</ol>
+</li>
+<li><p>自创方法–解决删除元素之后,新增加的元素id断层问题–在每次删除元素之后设置主键从最大数开始自增</p>
+</li>
+<li><p><span class="red">目前一条runner的方法执行一条语句,要执行多条可以将sql语句分开多次执行</span></p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">ALTER TABLE type auto_increment &#x3D; 1</code></pre></li>
+</ul>
+</li>
+<li><p>图书类型Biz类型的编写:</p>
+<ul>
+<li><p>都是调用Dao中的方法,捕获其错误,若有错误则返回null或0</p>
+</li>
+<li><p>唯一特殊的地方是:<span class="red">我们不能删除有书籍信息的类型</span></p>
+<br /></li>
+<li><p>实现不能删除含有书籍的类型信息:</p>
+<ul>
+<li><span class="blue">基本思路是当我们删除一个书籍类型的时候,需要先根据书籍类型id去book数据库表查询一下有没有这个类型id的书</span></li>
+</ul>
+<ol>
+<li><p>因为涉及到书本库表,提前将book导出到Bean</p>
+</li>
+<li><p>建立BookDao</p>
+</li>
+<li><p>根据思路,创建根据类型id查询书籍的方法,相关sql语句:</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">SELECT * FROM book WHERE typeId&#x3D;1;</code></pre>
+<blockquote>
+<p>查询结果:</p>
+</blockquote>
+<ul>
+<li><p>会输出一个Book类型的集合</p>
+</li>
+<li><p>有数据则这样输出:books = [Book{id=1, typeId=1, name=’呐喊’, price=114514.0, desc=’哼哼啊啊啊啊啊啊啊啊’, pic=’c://‘, publish=’恶臭出版社’, author=’野兽先辈’}]</p>
+</li>
+<li><p>即使没有数据,也会这样输出(此时集合不为null但长度为0):[]</p>
+</li>
+<li><p>突破点:books.size()</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>在Type的Biz层(<span class="red">Biz层的功能现在体现</span>)调用该方法,并且判断返回的集合长度是否为0,若是则向上抛出异常提示不能删除,若否则执行删除</p>
+<br /></li>
+</ul>
+</li>
+<li><p>TypeServlet的编写</p>
+<ul>
+<li><p>TypeServlet需要处理的业务:</p>
+<ol>
+<li>类型的增加(有表单)</li>
+<li>类型的修改(有表单)<ul>
+<li>类型修改准备页面(无表单 保存至req 转发至修改页面)</li>
+</ul>
+</li>
+<li>类型的删除(从地址栏获取删除的类型id)</li>
+</ol>
+</li>
+<li><p>(<span class="blue">特殊</span>)类型查询:</p>
+<ul>
+<li>转至一个表单(表格)页面,当项目运行时(<span class="red">涉及监听器</span>),数据库中数据会保存到application对象中</li>
+<li><span class="red">servlet中可以存放数据的对象</span><ol>
+<li>request(同一个请求中传输信息)</li>
+<li>session(同一个会话中传输信息)</li>
+<li>application(同一个项目中传输信息)(通常用于存放一个项目中不太经常变化的数据)<br /></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>监听器(@WebListener)</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhizhuodewo6/article/details/82019409">监听器注解</a></li>
+<li>定义<code>@WebListener</code>,将该类注册为一个Application监听器, 当项目开始运行时,该类会自动执行<br /></li>
+<li>要实现监听器,该类需要实现ServletContextListener接口,重写里面的两个方法</li>
+<li>contextInitialized是当项目部署时执行的方法<br>  通过其参数ServletContextEvent.getServletContext可以获得servlet运行环境信息application</li>
+<li>contextDestroyed是当项目摧毁时执行的方法</li>
+</ul>
+</li>
+<li><p>jstl(标准标签库)</p>
+<ul>
+<li>要展示一个动态的表格,需要很多表格标签,jstl可以帮我们完成这个工作</li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/jsp/jsp-jstl.html">jspl标准标签库</a><br /></li>
+</ul>
+</li>
+<li><p><span class="red">前端注意,此处增加图书类型,不做额外的页面,效果为在图书类型列表中弹出添加类型的悬浮框</span></p>
+</li>
+<li><p>书籍类型添加功能</p>
+<ul>
+<li><p>前端</p>
+<ul>
+<li><p>使用jspl+EL表达式实现以表单的方式输出数据库内容</p>
+</li>
+<li><p>要点:</p>
+<ol>
+<li>要使用jspl,需要在jsp头下声明<pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;%@taglib prefix&#x3D;&quot;jspl&quot; uri&#x3D;&quot;http:&#x2F;&#x2F;java.sun.com&#x2F;jsp&#x2F;jstl&#x2F;core&quot; %&gt;</code></pre></li>
+<li>实现根据读取到的数据行数重复输出各种标签,使用forEach<br> items表示取到的对象名,可以通过’.’取到对象里面的某个属性的值<br> var表示取到的每个对象的名称,例如下面意思是,取到的每个对象都叫type,也可以通过’.’来取得对象的属性</li>
+</ol>
+  <pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;jspl:forEach items&#x3D;&quot;$&#123;types&#125;&quot; var&#x3D;&quot;type&quot;&gt;
+          &lt;option value&#x3D;&quot;$&#123;type.id&#125;&quot;&gt;$&#123;type.name&#125;&lt;&#x2F;option&gt;
+&lt;&#x2F;jspl:forEach&gt;</code></pre></li>
+</ul>
+</li>
+<li><p>后端</p>
+<ol>
+<li>获取表单元素:<ul>
+<li>要点:<ul>
+<li>取过来的都是string类型,可以使用每个类型对应的类的<code>parseXXX</code>方法进行转换</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>执行Biz层方法</li>
+<li>更新application<ul>
+<li>要点:<ul>
+<li>使用<code>setAttribute();</code>方法将最新的数据库内容覆盖过去</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>返回结果</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>书籍类型删除功能已实现</p>
+</li>
+<li><p>书籍类型修改功能</p>
+<h2 id="22-03-04"><a href="#22-03-04" class="headerlink" title="22/03/04"></a>22/03/04</h2></li>
+</ul>
+</li>
+<li><p>出现错误<br>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/RonaldMH/article/details/116675297">java.lang.NoClassDefFoundError: javax/servlet/jsp/tagext/TagLibraryValidator</a></p>
+<ul>
+<li>原因:Tomcat10之后不支持导入javax包</li>
+</ul>
+</li>
+<li><p><span class="red">前端注意:图书类型刷新功能没有按钮(刷新列表) 图书类型添加页面没有按钮 图书类型重排列没有按钮</span></p>
+</li>
+<li><p>图书类型后端已完成</p>
+</li>
+<li><p><span class="red">后端注意:突然想到可以增加一个方法 防止用户重名</span></p>
+</li>
+<li><p>图书类型前端:</p>
+<ul>
+<li><span class="red">前端注意:目前包含bookList bookAdd bookChange三个页面,但是之后要做图书类型添加和图书类型修改都以悬浮窗的形式展现</span></li>
+<li>在这之后(图书类型管理和图书管理)前端使用到了jspl(图书类型管理页面每个页面有一两个吧),详细原理请看源码</li>
+<li>关于转发与重定向<br>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/h2503652646/article/details/83661347">转发与重定向</a><br /></li>
+</ul>
+</li>
+<li><p>书籍Dao的编写</p>
+<ul>
+<li>书籍Dao需要完成<ol>
+<li>添加书籍</li>
+<li>修改书籍内容</li>
+<li>删除书籍</li>
+<li>通过ID获取一本书籍</li>
+<li>分页获取<ul>
+<li>sql语句：<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- 查询(分页)
+&#x2F;*语法:SELECT * FROM LIMIT [OFFSET,] ROW
+LIMIT可以被用于强制select语句返回指定的记录数
+若给定两个参数,第一个参数为偏移量,第二个参数为返回记录行的最大数量
+初始记录行的偏移量是0
+*&#x2F;
+-- OFFSET计算方式(若每页2行)
+&#x2F;*第一页 0
+    第二页 2
+    第三页 4
+    也就是 每页显示行数*(当前页码-1)
+*&#x2F;
+SELECT * FROM book LIMIT 0,2;</code></pre></li>
+</ul>
+</li>
+<li>获取书籍总数，分页时使用<ul>
+<li>sql语句：<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">SELECT COUNT(id) FROM book;</code></pre></li>
+<li>该方法主要为前端分页做准备</li>
+<li>因为该查询语句只会返回一行一列，因此可以使用<a target="_blank" rel="noopener" href="https://blog.csdn.net/boss_way/article/details/78407781">ScalarHandler</a>封装单个值，该数据以Object类型返回<ol>
+<li>并且返回的一定是数字，是一个<span class="blue">Long类</span>的值,可以将其强制转换为long类型并转为int类型</li>
+<li>也可以直接使用Number类接收，然后使用里面的方法转换为int类型</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><span class="blue">删除类型ID重排列方法，重排列后会导致ID与类型配对与原来不同，书籍属性中的类型会改变</span></p>
+<br /></li>
+<li><p>书籍Biz的编写<br>  * </p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/02/22/Java%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84/" rel="prev" title="Java注解与反射">
+                  <i class="fa fa-chevron-left"></i> Java注解与反射
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

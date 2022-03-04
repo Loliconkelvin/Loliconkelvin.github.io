@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://s4.ax1x.com/2022/03/01/bQ8fO0.png">
 <meta property="og:image" content="https://s4.ax1x.com/2022/03/01/bQgfjP.png">
 <meta property="article:published_time" content="2022-02-28T01:40:17.000Z">
-<meta property="article:modified_time" content="2022-03-04T12:50:11.787Z">
+<meta property="article:modified_time" content="2022-03-04T14:09:46.229Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -226,7 +226,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-03-04 20:50:11" itemprop="dateModified" datetime="2022-03-04T20:50:11+08:00">2022-03-04</time>
+        <time title="修改时间：2022-03-04 22:09:46" itemprop="dateModified" datetime="2022-03-04T22:09:46+08:00">2022-03-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -326,48 +326,76 @@
 <h2 id="22-03-01"><a href="#22-03-01" class="headerlink" title="22/03/01"></a>22/03/01</h2><ul>
 <li><p>新建数据库<br>  <a target="_blank" rel="noopener" href="https://imgtu.com/i/bQ8fO0"><img src="https://s4.ax1x.com/2022/03/01/bQ8fO0.png" alt="bQ8fO0.png"></a></p>
   <br />
-  * 新建表：
-      1. <span class="blue">(已与视频同步)</span>user（用户表）：
-          * id
-          * name
-          * pwd
-          * state(目前用于表示账号状态 1激活 0封禁)(<span class="blue">后期可能更改为 1管理员 0用户</span>)
-      2. <span class="blue">(已与视频同步)</span>type（书籍类型表）：
-          * id
-          * name
-          * parentid(表示该类型的父类型)
-      3. <span class="blue">(已与视频同步)</span>book（书籍信息表）：
-          * id
-          * typeId
-          * name
-          * price
-          * desc(表示书籍介绍)
-          * publish(表示出版社)
-          * author
-          * stock(表示库存)
-      4. memberType（用户类型表）
-          * name
-          * amount
-          * discount
-          * recharge（<span class="red">后期可以删除</span>）
-          * keepDay
-      5. member（特殊用户信息表？）
-          * name
-          * psw
-          * type
-          * balance（<span class="red">后期可以删除</span>）
-          * regdate
-          * tel
-          * idNumber
-      6. record（记录表）
-          * memberid
-          * bookid
-          * rentDate
-          * backDate
-          * depost
-          * userid
-          * isbn
-<br /></li>
+
+<ul>
+<li><p>新建表：</p>
+<ol>
+<li><p><span class="blue">(已与视频同步)</span>user（用户表）：</p>
+<ul>
+<li>id</li>
+<li>name</li>
+<li>pwd</li>
+<li>state(目前用于表示账号状态 1激活 0封禁)(<span class="blue">后期可能更改为 1管理员 0用户</span>)</li>
+</ul>
+</li>
+<li><p><span class="blue">(已与视频同步)</span>type（书籍类型表）：</p>
+<ul>
+<li>id</li>
+<li>name</li>
+<li>parentid(表示该类型的父类型)</li>
+</ul>
+</li>
+<li><p><span class="blue">(已与视频同步)</span>book（书籍信息表）：</p>
+<ul>
+<li>id</li>
+<li>typeId</li>
+<li>name</li>
+<li>price</li>
+<li>desc(表示书籍介绍)</li>
+<li>publish(表示出版社)</li>
+<li>author</li>
+<li>stock(表示库存)</li>
+</ul>
+</li>
+<li><p>memberType（用户类型表）</p>
+<ul>
+<li>name</li>
+<li>amount</li>
+<li>discount</li>
+<li>recharge（<span class="red">后期可以删除</span>）</li>
+<li>keepDay</li>
+</ul>
+</li>
+<li><p>member（特殊用户信息表？）</p>
+<ul>
+<li>name</li>
+<li>psw</li>
+<li>type</li>
+<li>balance（<span class="red">后期可以删除</span>）</li>
+<li>regdate</li>
+<li>tel</li>
+<li>idNumber</li>
+</ul>
+</li>
+<li><p>record（记录表）</p>
+<ul>
+<li>memberid</li>
+<li>bookid</li>
+<li>rentDate</li>
+<li>backDate</li>
+<li>depost</li>
+<li>userid</li>
+<li>isbn</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<br />
+
+<ul>
 <li><p>新建idea-javaweb项目</p>
 <ul>
 <li>LibraryManagementSys</li>

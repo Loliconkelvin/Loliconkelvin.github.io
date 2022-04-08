@@ -20,18 +20,26 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="Java注解与反射">
+<meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java注解与反射">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java注解与反射">
 <meta property="og:url" content="https://loliconkelvin.github.io/2022/02/22/Java%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84/index.html">
 <meta property="og:site_name" content="萝莉控的小窝">
-<meta property="og:description" content="Java注解与反射">
+<meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java注解与反射">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/05/qLUs0g.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/07/qxYRs0.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/07/qxRdaQ.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/07/qxRw5j.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/07/qxhE2n.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/07/LSQl1x.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/07/LSUsWF.md.png">
 <meta property="article:published_time" content="2022-02-22T05:39:11.000Z">
-<meta property="article:modified_time" content="2022-03-26T06:06:03.343Z">
+<meta property="article:modified_time" content="2022-04-08T04:27:28.345Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/04/05/qLUs0g.md.png">
 
 
 <link rel="canonical" href="https://loliconkelvin.github.io/2022/02/22/Java%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84/">
@@ -104,7 +112,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -117,6 +125,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E8%A7%A3%EF%BC%88Annotation%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">注解（Annotation）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D%E5%B0%84"><span class="nav-number">2.</span> <span class="nav-text">反射</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -222,7 +231,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-03-26 14:06:03" itemprop="dateModified" datetime="2022-03-26T14:06:03+08:00">2022-03-26</time>
+        <time title="修改时间：2022-04-08 12:27:28" itemprop="dateModified" datetime="2022-04-08T12:27:28+08:00">2022-04-08</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -244,9 +253,496 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Java注解与反射</p>
+        <style>
+    .red {
+        color: red;
+    }
+    .bold {
+        font-weight: bold;
+    }
+</style>
+
+<p>Java注解与反射</p>
 <span id="more"></span>
 
+<h2 id="注解（Annotation）"><a href="#注解（Annotation）" class="headerlink" title="注解（Annotation）"></a>注解（Annotation）</h2><p><strong>什么是注解</strong></p>
+<ul>
+<li><p>注解是框架的底层实现</p>
+</li>
+<li><p><span class="red bold">作用：</span></p>
+<ol>
+<li>注解不是程序但可以对程序做出解释（该功能与注释相同）</li>
+<li>注解可以被编译器读取，可以起到限制和检查代码的作用</li>
+</ol>
+</li>
+<li><p><span class="red bold">格式：</span>@注解名(参数)</p>
+</li>
+</ul>
+<hr>
+<p><strong>内置注解</strong></p>
+<pre class="line-numbers language-@Override```：定义于java.lang.Override中，用于修饰方法，表明方法打算重写一个超类方法" data-language="@Override```：定义于java.lang.Override中，用于修饰方法，表明方法打算重写一个超类方法"><code class="language-@Override```：定义于java.lang.Override中，用于修饰方法，表明方法打算重写一个超类方法">
+&#96;&#96;&#96;@Deprecated&#96;&#96;&#96;：定义于java.lang.Deprecated中，用于修饰方法、属性、类，表示不鼓励使用该元素，通常表示该元素存在问题或已经过时
+
+&#96;&#96;&#96;@SuppressWarnings()&#96;&#96;&#96;：抑制警告，该注解需要传入参数
+
+---
+**元注解**
+
+元注解是用于解释其他注解的注解
+
+|                             元注解                             |
+| :------------------------------------------------------------: |
+| ![qq4GLQ.md.png](https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2022&#x2F;04&#x2F;04&#x2F;qq4GLQ.md.png) |
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;四个元注解：&lt;&#x2F;span&gt;
+
+Java在java.lang.annotation定义了4个meta-annotation类型用于对其他annotation类型做说明
+
+&#96;&#96;&#96;@Target&#96;&#96;&#96;：用于描述注解的适用对象，即作用域，其参数可取得值可以通过看查枚举类型ElementType的值获得
+
+&#96;&#96;&#96;@Retention&#96;&#96;&#96;：表示该注释信息在什么时候生效，用于描述注解的生命周期，它有三个可选择的值 &lt;span class&#x3D;&quot;red&quot;&gt;SOURCE（源码时期） &lt; CLASS（字节码时期） &lt; &lt;&#x2F;span&gt;&lt;span class&#x3D;&quot;red bold&quot;&gt;RUNTIME（运行时）（常用）&lt;&#x2F;span&gt;
+
+    定义于大于号后面的生命周期会包含大于号前面的声明周期：比如定义Runtime运行时有效，则源码时期和字节码时期也会有效
+
+&#96;&#96;&#96;@Documented&#96;&#96;&#96;：说明该注解将会生成在JavaDoc中
+
+&#96;&#96;&#96;@Inherited&#96;&#96;&#96;：说明该注解会在子类可以继承父类时顺带继承
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;传入多个值：&lt;&#x2F;span&gt;如果想在元注解中一个参数传入多个值，使用“&#123;&#125;”将这些值括起来，逗号隔开
+
+---
+**自定义注解**
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;格式：&lt;&#x2F;span&gt;
+&#96;&#96;&#96;Java
+[public] @interface 注解名&#123;
+    定义内容
+&#125;</code></pre>
+
+<p><span class="red bold">参数的设定格式：</span></p>
+<pre class="line-numbers language-none"><code class="language-none">参数类型 参数名() [default 默认值];</code></pre>
+
+<p><span class="red bold">注意：</span></p>
+<ol>
+<li>参数类型只能是基本类型、Class、String和enum</li>
+<li>可以通过default来声明该参数的默认值，不传入参数则为默认值</li>
+<li>若只有一个参数成员，建议将参数名为value，在只有一个参数成员并且名字是value时，传入参数时可以将“value = ”省略</li>
+<li>参数赋值没有顺序</li>
+</ol>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Main &#123;
+
+    &#x2F;&#x2F; 显式赋值（注解的赋值没有顺序）
+    @MyAnnotation(name &#x3D; &quot;haha&quot;, schools &#x3D; &quot;hh&quot;)
+    @MyAnnotation1(&quot;12&quot;)
+    public static void main(String[] args) &#123;
+
+    &#125;
+
+    @Target(&#123;ElementType.TYPE,ElementType.METHOD&#125;)
+    @Retention(RetentionPolicy.RUNTIME)
+    @interface MyAnnotation &#123;
+        &#x2F;&#x2F; 注解的参数 ：参数类型 参数名 ()
+        &#x2F;&#x2F; 默认赋值
+        String name() default &quot;hello&quot;;
+        int age() default 0;
+        &#x2F;&#x2F; 若默认值为-1，代表不存在
+        int id() default -1;
+
+        String[] schools();
+    &#125;
+
+    @Target(ElementType.METHOD)
+    @Retention(RetentionPolicy.RUNTIME)
+    @interface MyAnnotation1 &#123;
+        String value();
+    &#125;
+&#125;</code></pre>
+
+<h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p><strong>静态与动态语言</strong></p>
+<p><span class="red bold">动态语言：</span>可以在运行时改变自身代码</p>
+<p><span class="red bold">静态语言：</span>运行时结构不可变的语言</p>
+<p><strong>什么是反射</strong><br>利用反射机制，Java可以实现程序在运行时获取任何类的内部信息，并可直接操作其任意对象的内部属性和方法</p>
+<p>一个类在加载完之后，堆内存中的方法区就产生了一个Class类型的对象<span class="red">（一个类只有一个对应的Class对象，尽管他可能有多个实例）</span>，该对象包含了完整的类的结构信息</p>
+<table>
+<thead>
+<tr>
+<th align="center">反射</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/05/qLUs0g.md.png" alt="qLUs0g.md.png"></td>
+</tr>
+</tbody></table>
+<p><span class="red bold">反射的作用：</span></p>
+<ol>
+<li>在运行时判断一个对象所属的类</li>
+<li>在运行时构造任意一个类的对象</li>
+<li>在运行时判断任意一个类所具有的成员变量和方法</li>
+<li>在运行时获取泛型信息</li>
+<li>在运行时调用任意一个对象的成员变量和方法</li>
+<li>运行时处理注解</li>
+<li>生成动态代理（AOP面向切面编程）</li>
+</ol>
+<hr>
+<p><strong>获得反射对象</strong></p>
+<ol>
+<li><p>若已知具体的类名，可以通过class属性获取，此方法最安全，程序性能高</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Class c &#x3D; Person.class;</code></pre></li>
+<li><p>若已知某个类的实例，调用该实例的<code>getClass()</code>方法获取Class对象</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Class c &#x3D; person.getClass();</code></pre></li>
+<li><p>若已知一个类的全类名，且该类在类路径下，可通过Class类的静态方法<code>forNmae()</code>获取，可能抛出找不到类异常</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Class c &#x3D; Class.forName(&quot;demo.Student&quot;);</code></pre></li>
+<li><p>若为内置基本类型，可直接用类名.TYPE</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Class&lt;Integer&gt; type &#x3D; Integer.TYPE;</code></pre></li>
+<li><p>还可以利用ClassLoader</p>
+</li>
+</ol>
+<hr>
+<p><strong>那些类可以有Class对象</strong></p>
+<ol>
+<li>外部类、成员（成员内部类、静态内部类）、局部内部类、匿名内部类</li>
+<li>接口</li>
+<li>数组（<span class="red">一维数组的和二维数组的Class不同，但相同维度不同长度的数组的Class相同</span>）</li>
+<li>枚举</li>
+<li>注解</li>
+<li>基本数据类型</li>
+<li>void</li>
+</ol>
+<hr>
+<p><strong>Class类常用方法</strong></p>
+<p>static Class forName(String name)：返回指定类名name的Class对象</p>
+<p>Object newInstance()：调用缺省构造函数，返回Class对象的一个实例</p>
+<p>getName()：返回此Class对象所表示的实体名</p>
+<p>Class getSuperClass()：返回当前Class对象的父类的Class对象</p>
+<p>Class[] getInterfaces()：返回当前Class对象的接口</p>
+<p>ClassLoader getClassLoader()：返回该类的加载器</p>
+<p>Constructor[] getConstructors()：返回一个包含这些Constructor对象的数组</p>
+<p>Method getMethod(String name, Class.. T)：返回一个Method对象，此对象的形参类型为paramType</p>
+<p>Field[] getDeclaredFields()：返回Field对象的一个数组</p>
+<hr>
+<p><strong>内存分析</strong></p>
+<p><span class="red bold">堆：</span>用于存放new出的对象和数组 可以被所有线程共享，不会存放别的对象引用</p>
+<p><span class="red bold">栈：</span>存放基本变量类型和其值 引用对象的变量和其在堆里面的具体地址</p>
+<p><span class="red bold">方法区（特殊的堆    ）：</span>可以被所有的线程共享，包含所有的class和statci变量、常量</p>
+<table>
+<thead>
+<tr>
+<th align="center">类的加载过程</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/07/qxYRs0.png" alt="qxYRs0.png"></td>
+</tr>
+</tbody></table>
+<p><span class="red">类的加载：</span>将Class文件字节码内容加载到内存中，并将这些静态数据转换成方法区的运行时数据结构，然后生成一个代表这个类的java.lang.Class对象</p>
+<p><span class="red">链接：</span>将Java类的二进制代码合并到JVM的运行状态中的过程</p>
+<ul>
+<li>验证：确保加载的类信息符合JVM规范，没有安全方面的问题</li>
+<li>准备：正式为类变量分配内存并设置类变量默认初始值，这些内存在方法区中进行分配</li>
+<li>解析：虚拟机常量池呢内的符号引用（常量名）替换为直接引用（地址）</li>
+</ul>
+<p><span class="red">初始化：</span>执行类构造器中的&lt;clinit&gt;()方法</p>
+<br />
+
+<p><span class="red bold">例子：</span><br>现有一个Test类：</p>
+<table>
+<thead>
+<tr>
+<th align="center">（加载过程）当类被加载时，会将Class文件中该类的信息加载到方法区</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/07/qxRdaQ.md.png" alt="qxRdaQ.md.png"></td>
+</tr>
+<tr>
+<td align="center">然后在栈里面生成一个与之对应的Class对象</td>
+</tr>
+<tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/07/qxRw5j.md.png" alt="qxRw5j.md.png"></td>
+</tr>
+</tbody></table>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="center">（链接过程）在验证代码无误后，在方法区为静态变量分配内存并设置默认初值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/07/qxhE2n.md.png" alt="qxhE2n.md.png"></td>
+</tr>
+</tbody></table>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="center">（初始化过程）将该类代码中的静态代码块和静态变量定义语句搬到&lt;clinit&gt;()方法中，并执行&lt;clinit&gt;()方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><span class="red">注意：</span>静态代码块与静态变量搬到clinit中并不分顺序，谁写在前面谁先执行，因此后面覆盖前面的情况是有的</td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 初始完成时m为300
+static int m &#x3D; 100;
+
+static &#123;
+    m &#x3D; 300;
+&#125;</code></pre>
+
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 初始完成时m为100
+static &#123;
+    m &#x3D; 300;
+&#125;
+
+static int m &#x3D; 100;</code></pre>
+
+<hr>
+<p><strong>什么时候会发生类的初始化</strong></p>
+<p><span class="red bold">主动引用（会发生初始化）：</span></p>
+<ol>
+<li>当虚拟机启动后，会先初始化main方法所在的类</li>
+<li>new一个类的对象前<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Main &#123;
+    static &#123;
+        System.out.println(&quot;main被加载&quot;);
+    &#125;
+
+    public static void main(String[] args) &#123;
+        &#x2F;&#x2F; new一个类的对象会保证其父类被加载的情况下初始化该类
+        new Son();
+    &#125;
+&#125;
+
+class Father &#123;
+    static &#123;
+        System.out.println(&quot;父类被加载&quot;);
+    &#125;
+&#125;
+
+class Son extends Father &#123;
+    static &#123;
+        System.out.println(&quot;子类被加载&quot;);
+    &#125;
+&#125;</code></pre></li>
+<li>调用了类的静态成员和静态方法（<span class="red">注意：调用常量不会发生初始化</span>）</li>
+<li>通过forName()对类进行反射调用（<span class="red">注意：类名.class不会初始化类</span>）<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static void main(String[] args) throws ClassNotFoundException &#123;
+    Class.forName(&quot;com.company.demo.Son&quot;);
+&#125;</code></pre></li>
+<li>初始化一个类，其父类没有被初始化，则先初始化其父类</li>
+</ol>
+<p><span class="red bold">类的被动引用（不会发生初始化）：</span></p>
+<ol>
+<li>当访问一个静态域时，只有真正声明这个域的类才会被初始化，如：当通过子类引用父类的静态变量，不会导致子类初始化<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Main &#123;
+    static &#123;
+        System.out.println(&quot;main被加载&quot;);
+    &#125;
+
+    public static void main(String[] args) &#123;
+        &#x2F;&#x2F; 不会导致Son初始化，会导致Father初始化
+        System.out.println(Son.b);
+    &#125;
+&#125;
+
+class Father &#123;
+    static int b &#x3D; 2;
+
+    static &#123;
+        System.out.println(&quot;父类被加载&quot;);
+    &#125;
+&#125;</code></pre></li>
+<li>通过数组定义类应用，不会发生此类的初始化（<span class="red">数组只是开辟了一片用于存储Son类实例的空间并给空间命名,并没有发生类的实例化</span>）<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static void main(String[] args) &#123;
+    &#x2F;&#x2F; 不会导致Son类初始化
+    Son[] array &#x3D; new Son[5];
+&#125;</code></pre></li>
+<li>引用常量不会发生类的初始化（<span class="red">常量在链接阶段已经存入调用类的常量池中</span>）</li>
+</ol>
+<p><span class="red bold">总的来说，只要不涉及本类的静态常量/方法的调用、没有产生本类的实例，没有被forName，就不会初始化该类</span></p>
+<hr>
+<p><strong>类加载器</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">类加载器用于将类加载进内存，Java定义了如下类型的类加载器</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/07/LSQl1x.md.png" alt="LSQl1x.md.png"></td>
+</tr>
+</tbody></table>
+<p>他们分别是：</p>
+<ol>
+<li>根加载器BootstrapClassLoader（<span class="red">根加载器由C++编写，Java虚拟机并不能读取，因此并不能获取到根加载器</span>）<ul>
+<li>根加载器用于加载JRE核心类库，如JAVA_HOME/lib目录下的rt.jar等（<span class="red">注意：rt.jar在JDK9之后已经被拆分</span>）</li>
+<li>详见 <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/10/migrate/toc.htm#JSMIG-GUID-A78CC891-701D-4549-AA4E-B8DD90228B4B">Java 平台标准版 Oracle JDK 迁移指南</a></li>
+</ul>
+</li>
+<li>扩展加载器ExtClassLoader -&gt; 平台类加载器PlatformClassLoader<ul>
+<li>扩展加载器用于加载JAVA_HOME/lib/ext目录下的jar包（<span class="red">注意：JDK9之后已经不支持扩展机制但扩展加载器被保留，更名为平台类加载器PlatformClassLoader</span>）</li>
+</ul>
+</li>
+<li>系统类加载器AppClassLoader<ul>
+<li>用于加载用户路径下的类包</li>
+</ul>
+</li>
+<li>用户自定义加载器UserClassLoader</li>
+</ol>
+<p><span class="red bold">双亲委派机制：</span>若我们想自己创建一个java.lang.String，是不允许的。<br><span class="red">用于加载用户自己写的类的系统类加载器会向上级询问这个包名的类是否被加载过。<br></span></p>
+<p><img src="https://s1.ax1x.com/2022/04/07/LSUsWF.md.png" alt="LSUsWF.md.png"></p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static void main(String[] args) throws ClassNotFoundException &#123;
+
+    &#x2F;&#x2F; 获取系统类加载器
+    ClassLoader systemClassLoader &#x3D; ClassLoader.getSystemClassLoader();
+    System.out.println(systemClassLoader);
+
+    &#x2F;&#x2F; 获取系统类加载器的父类加载器——扩展加载器
+    ClassLoader parent &#x3D; systemClassLoader.getParent();
+    System.out.println(parent);
+
+    &#x2F;&#x2F; 获取扩展类加载器的父类加载器——根加载器
+    &#x2F;&#x2F; C++编写，读取不到
+    ClassLoader parent1 &#x3D; parent.getParent();
+    System.out.println(parent1);
+
+    &#x2F;&#x2F; 测试当前类是哪个加载器加载的
+    &#x2F;&#x2F; 是由系统类加载器加载的
+    ClassLoader loader &#x3D; Class.forName(&quot;com.company.demo.Main&quot;).getClassLoader();
+    System.out.println(loader);
+
+    &#x2F;&#x2F; 测试JDK内置的类是由哪个加载器加载的
+    &#x2F;&#x2F; 是由根加载器加载的，因此读取不出来
+    ClassLoader loader1 &#x3D; Class.forName(&quot;java.lang.Object&quot;).getClassLoader();
+    System.out.println(loader1);
+
+    &#x2F;&#x2F; 系统类加载器可以加载的路径
+    System.out.println(System.getProperty(&quot;java.class.path&quot;));
+&#125;</code></pre>
+
+<hr>
+<p><strong>利用反射在运行时创建类的对象</strong></p>
+<p>前面已经介绍过几种获得Class对象的方法，这里直接假定我们已经获得了class对象，那么我们就可以获得这个类里面的信息</p>
+<p><span class="red bold">获取类的属性：</span>可以通过Class对象的方法</p>
+<ol>
+<li><code>getFields()</code>：获取该类的所有<span class="red">公共</span>类属性，可以传入</li>
+<li><code>getDeclaredFields()</code>：获取该类的所有类属性</li>
+<li><code>getField(属性名)</code>：传入一个字符串，获取该类中名为该字符串的<span class="red">公共</span>类属性</li>
+<li><code>getDeclaredField(属性名)</code>：传入一个字符串，获取该类中名为该字符串的类属性</li>
+</ol>
+<p><span class="red bold">获取该类的方法：</span></p>
+<ol>
+<li><code>getMethods()</code>：获取<span class="red">本类和其父类</span>的所有<span class="red">公共</span>方法</li>
+<li><code>getDeclaredMethods()</code>：获取本类的所有方法</li>
+<li><code>getMethod(方法名, 参数类型)</code>：传入一个字符串和多个（不确定）参数类型，获取<span class="red">本类和其父类</span>中指定的<span class="red">公共</span>方法</li>
+<li><code>getDeclaredMethod(方法名, 参数类型)</code>：传入一个字符串和多个（不确定）参数类型，获取本列中的指定方法</li>
+</ol>
+<p><span class="red bold">获取该类的构造器：</span></p>
+<ol>
+<li><code>getConstructors()</code>：获取本类的所有<span class="red">公共</span>构造器</li>
+<li><code>getDeclaredConstructors()</code>：获取本类所有构造器</li>
+<li><code>getConstructor(参数类型)</code>：获取本类中指定参数类型的<span class="red">公共</span>构造方法</li>
+<li><code>getDeclaredConstructor(参数类型)</code>：获取本类中指定参数类型的构造方法</li>
+</ol>
+<p><span class="red bold">获取方法的参数/异常/返回值信息：</span></p>
+<ol>
+<li><code>getGenericParameterTypes()</code>：获取方法的参数类型信息</li>
+<li><code>genericReturnType()</code>：获取方法的返回值类型信息</li>
+<li><code>getGenericExceptionTypes()</code>：获取方法的异常抛出信息</li>
+</ol>
+<hr>
+<p><strong>对象/方法从获取到执行</strong></p>
+<p><span class="red bold">通过Class对象构建对象：</span></p>
+<ol>
+<li>（已过时的）通过Class对象的方法<code>newInstance()</code>构建对象</li>
+<li>通过Class对象的方法<code>getDeclaredConstructor(可选参数类型)</code>获得指定构造器后，通过构造器对象的方法<code>newInstance(传入参数)</code>构建对象<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 构造一个对象
+Constructor&lt;?&gt; constructor &#x3D; c1.getDeclaredConstructor(int.class, int.class);
+&#x2F;&#x2F; 若获取到的是私有构造器，还需要设置可访问
+constructor.setAccessible(true);
+User user &#x3D; (User)constructor.newInstance(2, 3);</code></pre></li>
+</ol>
+<p><span class="red bold">通过Class对象执行里面的方法：</span></p>
+<p>在获取到相应的方法之后，使用Method对象的方法<code>invoke(执行该方法的对象, 参数)</code>对该对象执行方法</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 使User的对象user执行setJ方法
+Method setJ &#x3D; c1.getMethod(&quot;setJ&quot;, int.class);
+setJ.invoke(user, 5);</code></pre>
+
+<p><span class="red bold">通过Class对象操作属性：</span></p>
+<p>在获取到相应的属性之后，使用Field对象方法<code>set(要修改的对象, 值)</code>修改该对象的属性</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Field j &#x3D; c1.getDeclaredField(&quot;j&quot;);
+&#x2F;&#x2F; 若为私有属性，则需要关闭权限检测
+j.setAccessible(true);
+j.set(user, 10);</code></pre>
+
+<p><span class="red bold">权限检查开关：</span></p>
+<p>无论是在执行私有方法还是在修改私有变量时，系统都会检查方法和属性的访问权限，我们可以通过Method对象/Field对象的方法<code>setAccessible(true)</code>来关闭访问权限的检查</p>
+<p>除此之外，关闭访问权限检查还有助于缩短程序运行时间，但总体来说，通过反射来做某件事都比直接使用对象要慢</p>
+<hr>
+<p><strong>获取泛型信息</strong></p>
+<p>Java中的泛型进京是给编译器使用，确保数据安全性和免去强制转换的问题，但是一旦编译完成，所有和泛型有关的类型全部擦除</p>
+<p>为了通过反射操作泛型，Java新增了ParameterizedType、GenericArrayType、TypeVariable、WildcardType几种类型来代表不能被归一到Class类中但又和原始类型齐名的类型</p>
+<ul>
+<li>ParameterizedType代表一种参数化类型，如Collection&lt;String&gt;</li>
+</ul>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 获得方法的参数信息
+Type[] parameterTypes &#x3D; test01.getGenericParameterTypes();
+for (Type parameterType : parameterTypes) &#123;
+    System.out.println(parameterType);
+    &#x2F;&#x2F; 若该参数属于参数化类型
+    if (parameterType instanceof ParameterizedType) &#123;
+        Type[] actualTypeArguments &#x3D; ((ParameterizedType)parameterType).getActualTypeArguments();
+        for (Type actualTypeArgument : actualTypeArguments) &#123;
+            System.out.println(actualTypeArgument);
+        &#125;
+    &#125;
+&#125;</code></pre>
+
+<hr>
+<p><strong>获取注解信息</strong></p>
+<p>可以通过Class对象/Field对象的方法<code>getAnnotation(注解类名)</code>分别获取类的/属性的注解</p>
+<p>使用<code>注解对象.注解参数名()</code>可以获取当前注解对应参数的值（<span class="red">注意：注解对象的类型必须是对应的注解类名而不是Annotation，否则点不出参数名</span>）</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Main &#123;
+
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException &#123;
+        Class&lt;?&gt; c1 &#x3D; Class.forName(&quot;com.company.demo.Student&quot;);
+        
+        &#x2F;&#x2F; 获得注解的值
+        Table table &#x3D; c1.getAnnotation(Table.class);
+        &#x2F;&#x2F; 注意：这里的name()会随着注解定义的参数名而改变
+        String name &#x3D; table.name();
+        System.out.println(name);
+
+        &#x2F;&#x2F; 获取属性上的注解
+        java.lang.reflect.Field name1 &#x3D; c1.getDeclaredField(&quot;name&quot;);
+        Field field &#x3D; name1.getAnnotation(Field.class);
+        System.out.println(field.columnName());
+        System.out.println(field.type());
+        System.out.println(field.length());
+    &#125;
+&#125;
+
+@Table(name &#x3D; &quot;db_student&quot;)
+class Student &#123;
+    @Field(columnName &#x3D; &quot;db_id&quot;, type &#x3D; &quot;long&quot;, length &#x3D; 10)
+    private long id;
+    @Field(columnName &#x3D; &quot;db_age&quot;, type &#x3D; &quot;long&quot;, length &#x3D; 10)
+    private long age;
+    @Field(columnName &#x3D; &quot;db_name&quot;, type &#x3D; &quot;varchar&quot;, length &#x3D; 10)
+    private String name;
+&#125;
+
+&#x2F;&#x2F; 类名的注解
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@interface Table &#123;
+    String name();
+&#125;
+
+&#x2F;&#x2F; 属性的注解
+@Target(ElementType.FIELD)
+@Retention(RetentionPolicy.RUNTIME)
+@interface Field &#123;
+    String columnName();
+    String type();
+    int length();
+&#125;</code></pre>
     </div>
 
     

@@ -28,14 +28,10 @@
 <meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java注解与反射">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/05/qLUs0g.md.png">
-<meta property="og:image" content="https://s1.ax1x.com/2022/04/07/qxYRs0.png">
-<meta property="og:image" content="https://s1.ax1x.com/2022/04/07/qxRdaQ.md.png">
-<meta property="og:image" content="https://s1.ax1x.com/2022/04/07/qxRw5j.md.png">
-<meta property="og:image" content="https://s1.ax1x.com/2022/04/07/qxhE2n.md.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/07/LSQl1x.md.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/07/LSUsWF.md.png">
 <meta property="article:published_time" content="2022-02-22T05:39:11.000Z">
-<meta property="article:modified_time" content="2022-04-08T04:27:28.345Z">
+<meta property="article:modified_time" content="2022-04-10T02:19:46.324Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -141,7 +137,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -231,7 +227,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-04-08 12:27:28" itemprop="dateModified" datetime="2022-04-08T12:27:28+08:00">2022-04-08</time>
+        <time title="修改时间：2022-04-10 10:19:46" itemprop="dateModified" datetime="2022-04-10T10:19:46+08:00">2022-04-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -410,85 +406,71 @@ Java在java.lang.annotation定义了4个meta-annotation类型用于对其他anno
 </ol>
 <hr>
 <p><strong>Class类常用方法</strong></p>
-<p>static Class forName(String name)：返回指定类名name的Class对象</p>
-<p>Object newInstance()：调用缺省构造函数，返回Class对象的一个实例</p>
-<p>getName()：返回此Class对象所表示的实体名</p>
-<p>Class getSuperClass()：返回当前Class对象的父类的Class对象</p>
-<p>Class[] getInterfaces()：返回当前Class对象的接口</p>
-<p>ClassLoader getClassLoader()：返回该类的加载器</p>
-<p>Constructor[] getConstructors()：返回一个包含这些Constructor对象的数组</p>
-<p>Method getMethod(String name, Class.. T)：返回一个Method对象，此对象的形参类型为paramType</p>
-<p>Field[] getDeclaredFields()：返回Field对象的一个数组</p>
-<hr>
-<p><strong>内存分析</strong></p>
-<p><span class="red bold">堆：</span>用于存放new出的对象和数组 可以被所有线程共享，不会存放别的对象引用</p>
-<p><span class="red bold">栈：</span>存放基本变量类型和其值 引用对象的变量和其在堆里面的具体地址</p>
-<p><span class="red bold">方法区（特殊的堆    ）：</span>可以被所有的线程共享，包含所有的class和statci变量、常量</p>
-<table>
-<thead>
-<tr>
-<th align="center">类的加载过程</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><img src="https://s1.ax1x.com/2022/04/07/qxYRs0.png" alt="qxYRs0.png"></td>
-</tr>
-</tbody></table>
-<p><span class="red">类的加载：</span>将Class文件字节码内容加载到内存中，并将这些静态数据转换成方法区的运行时数据结构，然后生成一个代表这个类的java.lang.Class对象</p>
-<p><span class="red">链接：</span>将Java类的二进制代码合并到JVM的运行状态中的过程</p>
-<ul>
-<li>验证：确保加载的类信息符合JVM规范，没有安全方面的问题</li>
-<li>准备：正式为类变量分配内存并设置类变量默认初始值，这些内存在方法区中进行分配</li>
-<li>解析：虚拟机常量池呢内的符号引用（常量名）替换为直接引用（地址）</li>
-</ul>
-<p><span class="red">初始化：</span>执行类构造器中的&lt;clinit&gt;()方法</p>
-<br />
+<pre class="line-numbers language-static" data-language="static"><div class="caption"><span>Class forName(String name)```：返回指定类名name的Class对象</span></div><code class="language-static">
+&#96;&#96;&#96;Object newInstance()&#96;&#96;&#96;：调用缺省构造函数，返回Class对象的一个实例
 
-<p><span class="red bold">例子：</span><br>现有一个Test类：</p>
-<table>
-<thead>
-<tr>
-<th align="center">（加载过程）当类被加载时，会将Class文件中该类的信息加载到方法区</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><img src="https://s1.ax1x.com/2022/04/07/qxRdaQ.md.png" alt="qxRdaQ.md.png"></td>
-</tr>
-<tr>
-<td align="center">然后在栈里面生成一个与之对应的Class对象</td>
-</tr>
-<tr>
-<td align="center"><img src="https://s1.ax1x.com/2022/04/07/qxRw5j.md.png" alt="qxRw5j.md.png"></td>
-</tr>
-</tbody></table>
-<hr>
-<table>
-<thead>
-<tr>
-<th align="center">（链接过程）在验证代码无误后，在方法区为静态变量分配内存并设置默认初值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><img src="https://s1.ax1x.com/2022/04/07/qxhE2n.md.png" alt="qxhE2n.md.png"></td>
-</tr>
-</tbody></table>
-<hr>
-<table>
-<thead>
-<tr>
-<th align="center">（初始化过程）将该类代码中的静态代码块和静态变量定义语句搬到&lt;clinit&gt;()方法中，并执行&lt;clinit&gt;()方法</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><span class="red">注意：</span>静态代码块与静态变量搬到clinit中并不分顺序，谁写在前面谁先执行，因此后面覆盖前面的情况是有的</td>
-</tr>
-</tbody></table>
-<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 初始完成时m为300
-static int m &#x3D; 100;
+&#96;&#96;getName()&#96;&#96;：返回此Class对象所表示的实体名
 
-static &#123;
-    m &#x3D; 300;
-&#125;</code></pre>
+&#96;&#96;Class getSuperClass()&#96;&#96;：返回当前Class对象的父类的Class对象
+
+&#96;&#96;Class[] getInterfaces()&#96;&#96;：返回当前Class对象的接口
+
+&#96;&#96;ClassLoader getClassLoader()&#96;&#96;：返回该类的加载器
+
+&#96;&#96;Constructor[] getConstructors()&#96;&#96;：返回一个包含这些Constructor对象的数组
+
+&#96;&#96;Method getMethod(String name, Class.. T)&#96;&#96;：返回一个Method对象，此对象的形参类型为paramType
+
+&#96;&#96;&#96;Field[] getDeclaredFields()&#96;&#96;&#96;：返回Field对象的一个数组
+
+---
+**内存分析**
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;堆：&lt;&#x2F;span&gt;用于存放new出的对象和数组 可以被所有线程共享，不会存放别的对象引用
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;栈：&lt;&#x2F;span&gt;存放基本变量类型和其值 引用对象的变量和其在堆里面的具体地址
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;方法区（特殊的堆    ）：&lt;&#x2F;span&gt;可以被所有的线程共享，包含所有的class和statci变量、常量
+
+|                       类的加载过程                       |
+| :------------------------------------------------------: |
+| ![qxYRs0.png](https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2022&#x2F;04&#x2F;07&#x2F;qxYRs0.png) |
+
+&lt;span class&#x3D;&quot;red&quot;&gt;类的加载：&lt;&#x2F;span&gt;将Class文件字节码内容加载到内存中，并将这些静态数据转换成方法区的运行时数据结构，然后生成一个代表这个类的java.lang.Class对象
+
+&lt;span class&#x3D;&quot;red&quot;&gt;链接：&lt;&#x2F;span&gt;将Java类的二进制代码合并到JVM的运行状态中的过程
+    
+* 验证：确保加载的类信息符合JVM规范，没有安全方面的问题
+* 准备：正式为类变量分配内存并设置类变量默认初始值，这些内存在方法区中进行分配
+* 解析：虚拟机常量池呢内的符号引用（常量名）替换为直接引用（地址）
+
+&lt;span class&#x3D;&quot;red&quot;&gt;初始化：&lt;&#x2F;span&gt;执行类构造器中的\&lt;clinit&gt;()方法
+
+&lt;br &#x2F;&gt;
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;例子：&lt;&#x2F;span&gt;
+现有一个Test类：
+
+| （加载过程）当类被加载时，会将Class文件中该类的信息加载到方法区 |
+| :-------------------------------------------------------------: |
+| ![qxRdaQ.md.png](https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2022&#x2F;04&#x2F;07&#x2F;qxRdaQ.md.png)  |
+|            然后在堆 里面生成一个与之对应的Class对象             |
+| ![LiC6JK.md.png](https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2022&#x2F;04&#x2F;09&#x2F;LiC6JK.md.png)  |
+---
+| （链接过程）在验证代码无误后，在方法区为静态变量分配内存并设置默认初值 |
+| :--------------------------------------------------------------------: |
+|     ![LiCcRO.md.png](https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2022&#x2F;04&#x2F;09&#x2F;LiCcRO.md.png)     |
+---
+|            （初始化过程）将该类代码中的静态代码块和静态变量定义语句搬到\&lt;clinit&gt;()方法中，并执行\&lt;clinit&gt;()方法             |
+| :-------------------------------------------------------------------------------------------------------------------------: |
+| &lt;span class&#x3D;&quot;red&quot;&gt;注意：&lt;&#x2F;span&gt;静态代码块与静态变量搬到clinit中并不分顺序，谁写在前面谁先执行，因此后面覆盖前面的情况是有的 |
+&#96;&#96;&#96;Java
+    &#x2F;&#x2F; 初始完成时m为300
+    static int m &#x3D; 100;
+
+    static &#123;
+        m &#x3D; 300;
+    &#125;</code></pre>
 
 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 初始完成时m为100
 static &#123;
@@ -529,6 +511,7 @@ class Son extends Father &#123;
     Class.forName(&quot;com.company.demo.Son&quot;);
 &#125;</code></pre></li>
 <li>初始化一个类，其父类没有被初始化，则先初始化其父类</li>
+<li>调用了类的静态数组</li>
 </ol>
 <p><span class="red bold">类的被动引用（不会发生初始化）：</span></p>
 <ol>

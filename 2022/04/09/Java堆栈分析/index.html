@@ -20,31 +20,38 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="在Markdown重复输入某些固定格式的html标签是一件很烦的事，这时候可以使用到vscode用户自定义代码块功能">
+<meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java堆栈分析">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vscode用户自定义代码块">
-<meta property="og:url" content="https://loliconkelvin.github.io/2021/04/24/vscode%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E5%9D%97/index.html">
+<meta property="og:title" content="Java堆栈分析">
+<meta property="og:url" content="https://loliconkelvin.github.io/2022/04/09/Java%E5%A0%86%E6%A0%88%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="萝莉控的小窝">
-<meta property="og:description" content="在Markdown重复输入某些固定格式的html标签是一件很烦的事，这时候可以使用到vscode用户自定义代码块功能">
+<meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java堆栈分析">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s1.ax1x.com/2022/03/26/qaabo4.png">
-<meta property="og:image" content="https://s1.ax1x.com/2022/03/26/qaaLFJ.png">
-<meta property="article:published_time" content="2021-04-24T02:41:42.000Z">
-<meta property="article:modified_time" content="2022-03-26T06:19:32.242Z">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/09/LiYfC6.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/09/Li7O2t.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/09/LiH9aQ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/09/LiHsQP.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/09/LiLFGd.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/09/LiXS4e.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/09/LivFTf.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/09/LivfBt.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/09/LivIN8.png">
+<meta property="article:published_time" content="2022-04-09T08:20:20.000Z">
+<meta property="article:modified_time" content="2022-04-09T13:13:33.719Z">
 <meta property="article:author" content="Loliconkelvin">
-<meta property="article:tag" content="vscode">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s1.ax1x.com/2022/03/26/qaabo4.png">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/04/09/LiYfC6.png">
 
 
-<link rel="canonical" href="https://loliconkelvin.github.io/2021/04/24/vscode%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E5%9D%97/">
+<link rel="canonical" href="https://loliconkelvin.github.io/2022/04/09/Java%E5%A0%86%E6%A0%88%E5%88%86%E6%9E%90/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://loliconkelvin.github.io/2021/04/24/vscode%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E5%9D%97/","path":"2021/04/24/vscode用户自定义代码块/","title":"vscode用户自定义代码块"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://loliconkelvin.github.io/2022/04/09/Java%E5%A0%86%E6%A0%88%E5%88%86%E6%9E%90/","path":"2022/04/09/Java堆栈分析/","title":"Java堆栈分析"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>vscode用户自定义代码块 | 萝莉控的小窝</title>
+<title>Java堆栈分析 | 萝莉控的小窝</title>
   
 
 
@@ -107,7 +114,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -120,7 +127,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E5%9D%97%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">一、自定义代码块的创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E5%9D%97%E7%9A%84%E7%BC%96%E8%BE%91"><span class="nav-number">2.</span> <span class="nav-text">二、代码块的编辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%90%AF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8F%90%E7%A4%BA"><span class="nav-number">3.</span> <span class="nav-text">三、启用自定义代码块提示</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -195,7 +201,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/04/24/vscode%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E5%9D%97/">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2022/04/09/Java%E5%A0%86%E6%A0%88%E5%88%86%E6%9E%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.png">
@@ -208,7 +214,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          vscode用户自定义代码块
+          Java堆栈分析
         </h1>
 
         <div class="post-meta-container">
@@ -218,23 +224,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-04-24 10:41:42" itemprop="dateCreated datePublished" datetime="2021-04-24T10:41:42+08:00">2021-04-24</time>
+      <time title="创建时间：2022-04-09 16:20:20 / 修改时间：21:13:33" itemprop="dateCreated datePublished" datetime="2022-04-09T16:20:20+08:00">2022-04-09</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-03-26 14:19:32" itemprop="dateModified" datetime="2022-03-26T14:19:32+08:00">2022-03-26</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/vscode/" itemprop="url" rel="index"><span itemprop="name">vscode</span></a>
+          <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
         </span>
     </span>
 
@@ -248,62 +248,130 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>在Markdown重复输入某些固定格式的html标签是一件很烦的事，这时候可以使用到vscode用户自定义代码块功能</p>
+        <style>
+    .red {
+        color: red;
+    }
+    .bold {
+        font-weight: bold;
+    }
+</style>
+
+<p>Java堆栈分析</p>
 <span id="more"></span>
 
-<h2 id="一、自定义代码块的创建"><a href="#一、自定义代码块的创建" class="headerlink" title="一、自定义代码块的创建"></a>一、自定义代码块的创建</h2><table>
+<p><span class="red bold">堆：</span>用于存储new出的<span class="red">引用数据类型本体及其属性（包括类加载产生的Class对象）</span>和<span class="red">数组本体</span></p>
+<p><span class="red bold">栈：</span>用于存储<span class="red">需要执行的方法</span>、<span class="red">基本数据类型</span>和<span class="red">引用数据类型地址（变量名）</span></p>
+<p><span class="red bold">方法区（特殊的堆）：</span>用于存放所有的<span class="red">Class及其静态变量</span>、<span class="red">常量池</span></p>
+<p><img src="https://s1.ax1x.com/2022/04/09/LiYfC6.png" alt="LiYfC6.png"></p>
+<hr>
+<p><strong>关于静态常量</strong></p>
+<p>访问一个类的静态常量并不会使类加载，并且当该常量在代码中被访问时，常量才会在编译时放入常量池，否则不放入</p>
+<p>并且，把常量放入常量池是指把其值放入常量池，在访问时直接访问常量池</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/dhaiuda/article/details/79202160">常量在什么时候被放入常量池？</a></p>
+<hr>
+<p><strong>关于成员常量</strong></p>
+<p>成员常量随对象出现，因此基本类型的常量会出现于堆中，引用类型的常量本体会出现于栈中</p>
+<hr>
+<p><strong>关于常量池</strong></p>
+<p>常量池每个类都会有一个</p>
+<hr>
+<p><strong>分析案例</strong></p>
+<p>接下来对下面的代码进行内存分析</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Test &#123;
+    public static void main(String[] args) &#123;
+        int num &#x3D; 10;
+        char[] chars &#x3D; new char[]&#123;&#39;a&#39;, &#39;b&#39;&#125;;
+
+        HeapTest heapTest &#x3D; new HeapTest();
+        int num03 &#x3D; heapTest.function(heapTest.classVariableNum01, heapTest.classVariableNum02);
+
+        System.out.println(HeapTest.A);
+        System.out.println(heapTest.B);
+        System.out.println(num03);
+    &#125;
+&#125;
+
+class HeapTest &#123;
+    int classVariableNum01 &#x3D; 3;
+    int classVariableNum02 &#x3D; 5;
+
+    static &#123;
+        int staticVariableNum;
+    &#125;
+
+    static final char A &#x3D; &#39;a&#39;;
+    final char B &#x3D; &#39;b&#39;;
+
+    public int function(int num01, int num02) &#123;
+        return num01 + num02;
+    &#125;
+&#125;</code></pre>
+<br />
+
+<p><span class="red bold">类加载：</span></p>
+<ol>
+<li>有两个类需要被加载，在类加载过程中，有两个Class的信息被收集于方法区</li>
+<li>紧接着有两个对应的Class对象被创建于堆空间</li>
+</ol>
+<ul>
+<li><span class="red">常量池位置错误，忽略</span></li>
+</ul>
+<table>
 <thead>
 <tr>
-<th align="center"><strong>设置-&gt;用户代码片段</strong></th>
+<th align="center"><img src="https://s1.ax1x.com/2022/04/09/Li7O2t.png" alt="Li7O2t.png"></th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center"><img src="https://s1.ax1x.com/2022/03/26/qaabo4.png" alt="qaabo4.png"></td>
-</tr>
-<tr>
-<td align="center"><strong>选择一种语言</strong></td>
-</tr>
-<tr>
-<td align="center"><img src="https://s1.ax1x.com/2022/03/26/qaaLFJ.png" alt="qaaLFJ.png"></td>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/09/LiH9aQ.png" alt="LiH9aQ.png"></td>
 </tr>
 </tbody></table>
-<p>按照以下格式写一个自定义代码块</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json">&quot;sheet&quot;: &#123;
-	&quot;prefix&quot;: &quot;sheet&quot;,
-	&quot;body&quot;: [
-		&quot;| $1 |&quot;,
-		&quot;| :--: |&quot;,
-		&quot;| $2 |&quot;
-	],
-	&quot;description&quot;: &quot;创建表格&quot;
-&#125;</code></pre>
-<p><strong>注意：</strong></p>
-<p><strong>1. “sheet”: {}  外面的sheet表示代码块名</strong></p>
-<p><strong>2. prefix后的值表示输入代码块所需要的触发前缀</strong></p>
-<p><strong>3. body后的值为代码块</strong></p>
-<p><strong>4. description后的值为代码片段说明</strong></p>
-<hr>
-<h2 id="二、代码块的编辑"><a href="#二、代码块的编辑" class="headerlink" title="二、代码块的编辑"></a>二、代码块的编辑</h2><p><strong>代码块一行一句，每句用逗号结尾</strong></p>
-<p><strong>转义字符</strong></p>
+<br />
+
+<p><span class="red bold">链接阶段：</span></p>
 <ul>
-<li>使用转义字符<code>\t</code>实现tab缩进</li>
-<li>使用转义字符<code>\n</code>实现换行</li>
-<li>遇到需要输入双引号时需要转义<code>\&quot;</code></li>
-<li>空格可以直接打</li>
+<li><p>为静态变量分配内存并设定初值</p>
+</li>
+<li><p><span class="red">常量池位置错误，忽略</span></p>
+<p>  <img src="https://s1.ax1x.com/2022/04/09/LiHsQP.png" alt="LiHsQP.png"></p>
+</li>
 </ul>
-<p><strong>预设光标位置</strong></p>
+<p><span class="red bold">初始化阶段：</span></p>
 <ul>
-<li>使用<code>$1</code> <code>$2</code> <code>$3</code> <code>$0</code>等可以预设光标的位置</li>
-<li><code>$0</code>是光标的最后位置</li>
-<li>在快速输入后，使用tab可以在光标预设位置之间跳转</li>
+<li><p>将静态代码块和静态变量赋值语句扔进<code>&lt;clinit&gt;()</code>方法内并执行，完成静态变量的赋值</p>
+<p>  <img src="https://s1.ax1x.com/2022/04/09/LiLFGd.png" alt="LiLFGd.png"></p>
+</li>
 </ul>
 <hr>
-<h2 id="三、启用自定义代码块提示"><a href="#三、启用自定义代码块提示" class="headerlink" title="三、启用自定义代码块提示"></a>三、启用自定义代码块提示</h2><p>进入vscode设置（代码模式）</p>
-<p>加入以下代码：</p>
-<p><strong>若不是加在最后，注意要在}后加一个逗号</strong></p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json">&quot;[markdown]&quot;:&#123;
- &quot;editor.quickSuggestions&quot;: true
-&#125;</code></pre>
+<p><span class="red bold">main方法：</span></p>
+<ul>
+<li><p>要执行main方法，先将main()方法压入栈中，并且按顺序生成方法内的局部变量</p>
+<p>  <img src="https://s1.ax1x.com/2022/04/09/LiXS4e.png" alt="LiXS4e.png"></p>
+</li>
+</ul>
+<p><span class="red bold">调用function方法：</span></p>
+<ul>
+<li><p>要调用function方法，需要先将function方法从方法区压入栈中、生成局部变量并赋值</p>
+<p>  <img src="https://s1.ax1x.com/2022/04/09/LivFTf.png" alt="LivFTf.png"></p>
+</li>
+</ul>
+<p><span class="red bold">方法执行完毕被释放：</span></p>
+<ol>
+<li>方法执行完毕返回，在main方法中生成一个局部变量接收返回值</li>
+<li>方法及其内部的局部变量被释放</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center"><img src="https://s1.ax1x.com/2022/04/09/LivfBt.png" alt="LivfBt.png"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/09/LivIN8.png" alt="LivIN8.png"></td>
+</tr>
+</tbody></table>
+
     </div>
 
     
@@ -312,21 +380,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/vscode/" rel="tag"># vscode</a>
+              <a href="/tags/Java/" rel="tag"># Java</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/04/23/HTML%E8%A1%A8%E5%8D%95/" rel="prev" title="HTML表单">
-                  <i class="fa fa-chevron-left"></i> HTML表单
+                <a href="/2022/04/08/Java%E5%B8%B8%E7%94%A8%E7%B1%BB/" rel="prev" title="Java常用类">
+                  <i class="fa fa-chevron-left"></i> Java常用类
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/04/24/vscode%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" rel="next" title="vscode常用快捷键">
-                  vscode常用快捷键 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>

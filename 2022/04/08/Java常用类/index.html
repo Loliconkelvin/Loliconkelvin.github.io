@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java常用类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java常用类">
+<meta property="og:url" content="https://loliconkelvin.github.io/2022/04/08/Java%E5%B8%B8%E7%94%A8%E7%B1%BB/index.html">
+<meta property="og:site_name" content="萝莉控的小窝">
+<meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java常用类">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/08/LCZlEd.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/10/Lk23WT.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/10/LkRT4x.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/10/LkW5QS.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/10/LkIy59.md.png">
+<meta property="article:published_time" content="2022-04-08T12:37:49.000Z">
+<meta property="article:modified_time" content="2022-04-11T14:03:50.686Z">
+<meta property="article:author" content="Loliconkelvin">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/04/08/LCZlEd.md.png">
+
+
+<link rel="canonical" href="https://loliconkelvin.github.io/2022/04/08/Java%E5%B8%B8%E7%94%A8%E7%B1%BB/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://loliconkelvin.github.io/2022/04/08/Java%E5%B8%B8%E7%94%A8%E7%B1%BB/","path":"2022/04/08/Java常用类/","title":"Java常用类"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Java常用类 | 萝莉控的小窝</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">萝莉控的小窝</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB"><span class="nav-number">1.</span> <span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">Object类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">String类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String%E7%B1%BB%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">String类常用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">5.</span> <span class="nav-text">可变字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System%E7%B1%BB"><span class="nav-number">6.</span> <span class="nav-text">System类</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
+      src="/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">Loliconkelvin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:loliconkelvin@gmail.com" title="E-Mail → mailto:loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2022/04/08/Java%E5%B8%B8%E7%94%A8%E7%B1%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="Loliconkelvin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萝莉控的小窝">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java常用类
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-08 20:37:49" itemprop="dateCreated datePublished" datetime="2022-04-08T20:37:49+08:00">2022-04-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-04-11 22:03:50" itemprop="dateModified" datetime="2022-04-11T22:03:50+08:00">2022-04-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <style>
+    .red {
+        color: red;
+    }
+    .bold {
+        font-weight: bold;
+    }
+</style>
+
+<p>Java常用类</p>
+<span id="more"></span>
+
+<h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><table>
+<thead>
+<tr>
+<th align="center">内部类分类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/08/LCZlEd.md.png" alt="LCZlEd.md.png"></td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>内部类特点</strong></p>
+<ol>
+<li>编译之后可生成独立的字节码文件</li>
+<li>内部类可直接访问外部类的私有成员，不会破坏封装</li>
+<li>可为外部类提供必要的功能组件</li>
+</ol>
+<hr>
+<p><strong>成员内部类</strong><br>成员内部类在类的内部定义，为与实例变量、实例方法同级别的类</p>
+<ul>
+<li>在创建内部类对象时，必须依赖外部类对象<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Outer outer &#x3D; new Outer();
+Outer.Inner inner &#x3D; outer.new Inner();</code></pre></li>
+</ul>
+<p><span class="red">注意：</span>当内部类和外部类有属性重名时，在内部类的方法会优先访问内部类的属性，要实现在内部类方法访问外部类属性，可以使用<code>外部类.this.属性名</code></p>
+<p>可以在内部类访问属性的时候在属性前面加上<code>this</code>更有条理性</p>
+<p><span class="red">成员内部类内不可以包含静态属性，但可以包含静态常量</span></p>
+<hr>
+<p><strong>静态内部类</strong></p>
+<p>静态内部类可以看成是一个外部类，外部类能包含什么，它就能包含什么，外部类怎么操作它就怎么操作，<span class="red">因此静态内部类可以直接被new出而不依赖外部类</span></p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Outer.Inner inner &#x3D; new Outer.Inner();</code></pre>
+
+<p><span class="red bold">静态内部类访问外部类属性：</span>因为静态内部类可以看成是外部类，所以要访问外部类的属性就要new出外部类</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public void show() &#123;
+    &#x2F;&#x2F; 访问外部变量
+    Outer outer &#x3D; new Outer();
+    System.out.println(outer.name);
+&#125;</code></pre>
+
+<hr>
+<p><strong>局部内部类</strong></p>
+<p>定义在外部类的方法中，作用域和创建对象的范围仅限于方法中，且局部内部类不能添加任何修饰符（友情提醒：不是调用方法就可以把局部内部类生成出来的，还是要在方法里new出局部内部类才可使用）</p>
+<p><span class="red bold">局部内部类访问外部类属性：</span>因为局部内部类和方法是是同级别的，方法可以直接访问外部类的属性，内部类也可以</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">System.out.println(Outer.this.name);</code></pre>
+
+<p><span class="red bold">静态方法下的局部内部类访问外部属性：</span>zszz，静态方法内不能直接调用非静态属性和方法，因此需要把外部类先new出</p>
+<p><span class="red bold">局部内部类访问方法内的属性：</span></p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public void show() &#123;
+    &#x2F;&#x2F; 定义局部变量
+    final String address &#x3D; &quot;深圳&quot;;
+
+    class Inner &#123;
+
+        &#x2F;&#x2F; 方法
+        public void show2() &#123;
+            &#x2F;&#x2F; 访问外部类属性（因为局部内部类和其所在的方法级别相同，方法能访问到的局部内部类可以访问到）
+            &#x2F;&#x2F; (但是若方法为静态方法，则不能访问，因为静态方法不能访问非静态属性)，要访问，则需要把外部类new出：
+            &#x2F;&#x2F; System.out.println(new Outer().name);
+            System.out.println(Outer.this.name);
+
+            &#x2F;&#x2F; 访问局部变量,JDK1.7时要求若要访问方法体内的属性，该属性必须是常量
+            &#x2F;&#x2F; JDK1.8之后可以省略，但是要求该变量的值在方法中不能再改变（其实就是默认加了final）
+            System.out.println(address);
+        &#125;
+    &#125;
+&#125;</code></pre>
+
+<ul>
+<li><span class="red">内部类中访问的局部变量必须是常量</span></li>
+<li>若不为常量，局部变量在方法执行完后随之消失，但是由于Java的垃圾回收机制（只有在内存不够的时候虚拟机才进行垃圾回收）存放在堆内存里面的Inner类并不会立刻消失，因此会出现Inner类突然没了个数据</li>
+</ul>
+<hr>
+<p><strong>匿名内部类</strong></p>
+<p>对于只使用一次的局部内部类（通常是实现类或继承某个类，如监听器），可以使用匿名内部类简化代码</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">MouseListener mouseListener &#x3D; new MouseListener() &#123;
+
+    @Override
+    public void mouseClicked(MouseEvent e) &#123;
+        
+    &#125;
+
+    @Override
+    public void mousePressed(MouseEvent e) &#123;
+
+    &#125;
+    &#x2F;&#x2F; ......
+&#125;;</code></pre>
+
+<p><span class="red bold">Lambda表达式：</span>对于实现只有一个方法的接口，可以使用Lambda表达式进一步简化</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;*(参数名, ...) -&gt; &#123;实现方法体&#125;*&#x2F;
+ActionListener actionListener &#x3D; (e) -&gt; &#123;
+  
+&#125;;</code></pre>
+
+<h2 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h2><p>Object类是所有类的直接或间接父类，所有对象都含有Object类中的方法，Object类可以存储任何对象</p>
+<p><span class="red bold">Object类常用方法：</span></p>
+<pre class="line-numbers language-getClass()```：获取一个对象的Class类对象，用于反射" data-language="getClass()```：获取一个对象的Class类对象，用于反射"><code class="language-getClass()```：获取一个对象的Class类对象，用于反射">
+&#96;&#96;&#96;hashCode()&#96;&#96;&#96;：返回该对象的哈希值
+* 哈希值是根据对象的地址或字符串或数字通过哈希算法计算出的int类型数值（&lt;span class&#x3D;&quot;red&quot;&gt;一般情况下相同对象返回相同的哈希值&lt;&#x2F;span&gt;）
+
+&#96;&#96;&#96;toString()&#96;&#96;&#96;：返回对象的字符串表示形式（想要一个类的对象展示他的属性值，需要重写toString方法）
+
+&#96;&#96;&#96;equals(Object obj)&#96;&#96;&#96;：在Object类中用于比较两个对象的地址是否相同（在String类中进行了重写，用于比较两个对象内容是否相同）
+
+&#96;&#96;&#96;finalize()&#96;&#96;&#96;：当对象被判定为垃圾对象时，由JVM自动调用此方法，用以标记该对象为垃圾对象，进入垃圾回收队列
+* 垃圾对象：没有有效引用指向此对象时，该对象视为垃圾对象
+* 垃圾回收：由gc销毁垃圾对象，释放存储空间
+* 手动垃圾回收：可以通过调用&#96;&#96;&#96;System.gc()&#96;&#96;&#96;方法通知JVM进行垃圾回收，但实际上回不回收要看虚拟机
+
+## 包装类
+为了扩展八个基本数据类型，Java提供了包装类，使基本数据类型可以使用方法
+
+使用包装类会使基本类型变为引用类型，在内存中存放地址从栈变为堆
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;默认值：&lt;&#x2F;span&gt;因为包装类是引用数据类型，因此声明为静态时默认值为null
+
+---
+**装箱与拆箱**
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;装箱与拆箱：&lt;&#x2F;span&gt;使用包装类把栈中的基本数据类型变为堆中的引用数据类型，称为装箱，反之称为拆箱
+
+在JDK1.5之前需要程序员显式地装箱与拆箱：
+&#96;&#96;&#96;Java
+int num01 &#x3D; 18;
+&#x2F;&#x2F; 装箱
+Integer integer1 &#x3D; new Integer(num01);
+Integer integer2 &#x3D; Integer.valueOf(num01);
+
+&#x2F;&#x2F; 拆箱
+int i &#x3D; integer1.intValue();</code></pre>
+
+<p>而在JDK1.5之后则可以自动装箱与拆箱</p>
+<ul>
+<li>这一操作由编译器完成，编译器在编译Class文件时会在代码里加上<code>valueOf()</code> <code>intValue()</code>等方法进行装箱和拆箱</li>
+</ul>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">int num01 &#x3D; 18;
+&#x2F;&#x2F; JDK1.5之后自动装箱
+Integer integer &#x3D; num01;
+&#x2F;&#x2F; 自动拆箱
+int i &#x3D; integer;</code></pre>
+
+<hr>
+<p><strong>基本类型与字符串之间转换</strong></p>
+<p><span class="red bold">基本类型转字符串：</span></p>
+<ol>
+<li>使用加号：<code>String s1 = &quot;&quot; + num;</code></li>
+<li>使用String静态方法：<code>String s2 = String.valueOf(num);</code></li>
+<li>使用包装类静态方法：<code>String s3 = Integer.toString(num);</code></li>
+</ol>
+<p>除此之外包装类方法还支持根据进制转换为字符串：</p>
+<ol>
+<li><code>static toString(num, 进制数);</code>：将该数以指定进制转换为字符串</li>
+<li><code>static toHexString(num)</code>：将该数以十六进制转换为字符串</li>
+<li><code>static toOctalString(num)</code>：将该数以八进制转换为字符串</li>
+<li><code>static toBinaryString(num)</code>：将该数以二进制转换为字符串</li>
+</ol>
+<p><span class="red bold">字符串转基本类型：</span></p>
+<ul>
+<li><code>Integer.parseInt(num)</code>：将字符串转换为int类型变量</li>
+</ul>
+<br />
+
+<p><span class="red bold">转换异常：</span>在转换时应该注意类型兼容（如 parseInt参数不能出现非数字字符），否则会抛出异常</p>
+<p><span class="red bold">布尔类型：</span>在字符串转换为布尔类型时，所有 非”true” 的字符变量都会转换为false</p>
+<hr>
+<p><strong>整数缓冲区</strong></p>
+<p>对于所有存放数字的包装类（short int long），Java预先创建了从-127~128，256个常用的整数包装类对象</p>
+<p>对于下面的代码，一个返回true，一个返回false，为什么？</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; true
+Integer integer1 &#x3D; 100;
+Integer integer2 &#x3D; 100;
+System.out.println(integer1 &#x3D;&#x3D; integer2);
+
+&#x2F;&#x2F; false
+Integer integer3 &#x3D; 200;
+Integer integer4 &#x3D; 200;
+System.out.println(integer3 &#x3D;&#x3D; integer4);</code></pre>
+
+<p><span class="red bold">（前菜）调用静态数组引起初始化：</span>调用一个静态内部类的静态数组会导致类的初始化，下面的代码证明了这一点，这也说明为什么IntegerCache类在没有new的情况下会被初始化</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Main &#123;
+    static &#123;
+        System.out.println(&quot;Outer初始化&quot;);
+    &#125;
+    public static void main(String[] args) &#123;
+        System.out.println(Inner1.CACHE[1]);
+
+        System.out.println(Inner2.CACHE[0]);
+    &#125;
+
+    private static class Inner1 &#123;
+        static final Integer CACHE[];
+
+        static &#123;
+            System.out.println(&quot;Inner1初始化&quot;);
+            CACHE &#x3D; new Integer[5];
+
+            for (int i &#x3D; 0; i &lt; 5; i++) &#123;
+                CACHE[i] &#x3D; new Integer(i);
+            &#125;
+        &#125;
+    &#125;
+
+    private static class Inner2 &#123;
+        static final int CACHE[];
+
+        static &#123;
+            System.out.println(&quot;Inner2初始化&quot;);
+            CACHE &#x3D; new int[5];
+
+            for (int i &#x3D; 0; i &lt; 5; i++) &#123;
+                CACHE[i] &#x3D; i;
+            &#125;
+        &#125;
+    &#125;
+&#125;
+
+&#x2F;*----------
+输出结果：
+Outer初始化
+Inner1初始化
+1
+Inner2初始化
+0
+----------*&#x2F;</code></pre>
+
+<hr>
+<p><span class="red bold">缓冲区分析：</span>回到缓冲区，同样都是编译器调用<code>valueOf()</code>方法自动装箱，在<code>valueOf()</code>源码中我们可以看到：</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static Integer valueOf(int i) &#123;
+    if (i &gt;&#x3D; IntegerCache.low &amp;&amp; i &lt;&#x3D; IntegerCache.high)
+        return IntegerCache.cache[i + (-IntegerCache.low)];
+    return new Integer(i);
+&#125;</code></pre>
+
+<p>在上述四种包装类中我们可以看到IntegerCache静态内部类：</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">private static class IntegerCache &#123;
+    static final int low &#x3D; -128;
+    static final int high;
+    static final Integer cache[];
+
+    static &#123;
+        &#x2F;&#x2F; high value may be configured by property
+        int h &#x3D; 127;
+        &#x2F;&#x2F; ......
+        high &#x3D; h;
+
+        cache &#x3D; new Integer[(high - low) + 1];
+        int j &#x3D; low;
+        for(int k &#x3D; 0; k &lt; cache.length; k++)
+            cache[k] &#x3D; new Integer(j++);
+
+        &#x2F;&#x2F; range [-128, 127] must be interned (JLS7 5.1.7)
+        assert IntegerCache.high &gt;&#x3D; 127;
+    &#125;
+
+    private IntegerCache() &#123;&#125;
+&#125;</code></pre>
+
+<ol>
+<li>在调用<code>valueOf()</code>方法时，因为访问了IntegerCache静态内部类中的数组，引起IntegerCache初始化</li>
+<li>IntegerCache初始化时，会创建一个cache数组用于存放 <code>new Integer(-128)</code>至<code>new Integer(127)</code>共256个Integer对象</li>
+<li>若自动装箱时传入的参数在-128~127内，则会直接返回cache数组中对应值的地址</li>
+<li>若参数在这个范围外，则另外new出Integer对象</li>
+</ol>
+<p><span class="red bold">所以：</span></p>
+<ul>
+<li><code>Integer integer1 = 100;</code>和<code>Integer integer2 = 100;</code>保存的都是cache数组中的同一个地址，使用“==”判断返回true</li>
+<li><code>Integer integer3 = 200;</code>和<code>Integer integer4 = 200;</code>都是另外new出的对象，两者指向地址自然不相同，使用“==”判断返回false</li>
+</ul>
+<h2 id="String类"><a href="#String类" class="headerlink" title="String类"></a>String类</h2><p>字符串是常量，创建之后不可改变</p>
+<p>字符串字面值保存在字符串池中，可以共享</p>
+<hr>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Main &#123;
+    public static void main(String[] args) &#123;
+        String name &#x3D; &quot;张三&quot;;
+    &#125;
+&#125;</code></pre>
+<p>在执行上面这段代码时，内存中发生了如下变化</p>
+<p><img src="https://s1.ax1x.com/2022/04/10/Lk23WT.md.png" alt="Lk23WT.md.png"></p>
+<ol>
+<li>main入栈并且创建局部变量name</li>
+<li>在字符串池新增一个字符串值“张三”</li>
+<li>栈中的name指向字符串池的“张三”</li>
+</ol>
+<p><span class="red bold">字符串池：</span>在JDK1.7之后字符串池是保存于堆中，并且<span class="red">字符串池和常量池没有任何联系</span></p>
+<hr>
+<p><span class="red bold">不可变性：</span>当再执行下面的代码时，内存中发生了如下变化</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">name &#x3D; &quot;李四&quot;;</code></pre>
+
+<p><img src="https://s1.ax1x.com/2022/04/10/LkRT4x.md.png" alt="LkRT4x.md.png"></p>
+<ol>
+<li>在字符串池新增一个字符串值“李四”</li>
+<li>将栈中的name指向“李四”</li>
+<li>若“张三”没有被指向，则被JVM标记为垃圾</li>
+</ol>
+<p>因此修改String类型的值并不是直接修改源空间的值，而是重新开辟了一块空间，重新定义变量的指向</p>
+<p><span class="red bold">字符串池减少内存开销的体现：</span>当再执行下面的代码时，内存中发生了如下变化</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">String name2 &#x3D; &quot;李四&quot;;</code></pre>
+
+<p><img src="https://s1.ax1x.com/2022/04/10/LkW5QS.md.png" alt="LkW5QS.md.png"></p>
+<ul>
+<li>当再创建一个字符串时，JVM会在字符串池找有没有这样的字符串，若有，则新的变量也指向该字符串的地址</li>
+</ul>
+<hr>
+<p><strong>new与直接赋值</strong></p>
+<p><span class="red bold">直接赋值：</span>上面的例子演示的是直接赋值的情况，<span class="red">直接赋值会产生一个对象，在字符串池中存储，局部变量负责指向它</span></p>
+<p><span class="red bold">new出对象：</span>而使用<code>new String()</code>的情况下，则会产生两个对象，一个存储在字符串池中，一个存储在堆的其他空间中，局部变量的指向也不再是直接指向常量池中的对象</p>
+<p>当再执行下面的代码时，内存中发生了如下变化</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Main &#123;
+    public static void main(String[] args) &#123;
+        String s1 &#x3D; new String(&quot;张三&quot;);
+        String s2 &#x3D; new String(&quot;张三&quot;);
+        System.out.println(s1 &#x3D;&#x3D; s2);
+    &#125;
+&#125;</code></pre>
+
+<p><img src="https://s1.ax1x.com/2022/04/10/LkIy59.md.png" alt="LkIy59.md.png"></p>
+<ol>
+<li>在字符串池中增加一个对象“张三”</li>
+<li>在堆中增加一个对象“张三”</li>
+<li>栈中局部变量s1指向<span class="red">堆中的“张三”</span></li>
+<li>检查字符串池中有无重复字符串常量<ol>
+<li>若有，在堆中创建对象“张三”</li>
+<li>若无，在字符串池中创建一个对象，并在堆中也创建一个对象</li>
+</ol>
+</li>
+<li>另局部变量s2指向新的<span class="red">堆中的“张三”</span></li>
+</ol>
+<p><span class="red bold">结论：</span>这也解释了为什么使用直接赋值创建的两个对象使用“==”判断返回true，因为他们的地址都是在字符串池的同一个地址。<br /><br>而使用new创建出来的对象使用“==”判断返回false，因为他们都在堆中各自生成对象，地址不同</p>
+<h2 id="String类常用方法"><a href="#String类常用方法" class="headerlink" title="String类常用方法"></a>String类常用方法</h2><pre class="line-numbers language-length()```：返回字符串的长度" data-language="length()```：返回字符串的长度"><code class="language-length()```：返回字符串的长度">
+&#96;&#96;&#96;charAt(int index)&#96;&#96;&#96;：根据传入的下标获取相应位置的字符
+
+&#96;&#96;&#96;contains(String str)&#96;&#96;&#96;：判断当前字符串中是否包含str
+
+&#96;&#96;&#96;toCharArray()&#96;&#96;&#96;：将字符串转换成字符数组
+
+&#96;&#96;&#96;indexOf(String str)&#96;&#96;&#96;：查找str首次出现的下标，存在的返回该下标，不存在则返回-1
+
+&#96;&#96;&#96;indexOf(String str, int fromIndex)&#96;&#96;&#96;：从fromIndex下标开始查找str首次出现的下标，不存在则返回-1
+
+&#96;&#96;&#96;lastIndexOf(String str)&#96;&#96;&#96;：查找str在当前字符串中最后一次出现的下标，不存在则返回-1
+
+&#96;&#96;&#96;trim()&#96;&#96;&#96;：去掉字符串前后的空格
+
+&#96;&#96;&#96;toUpperCase()&#96;&#96;&#96;：将所有字符转换为大写
+
+&#96;&#96;&#96;toLowerCase()&#96;&#96;&#96;：将所有字符转换为小写
+
+&#96;&#96;&#96;endsWith(String str)&#96;&#96;&#96;：判断字符串是否以str结尾
+
+&#96;&#96;&#96;startsWith(String str)&#96;&#96;&#96;；判断字符串是否以str开头
+
+&#96;&#96;&#96;replace(char oldChar, char newChar)&#96;&#96;&#96;：将字符串内的所有oldChar替换为newChar
+
+* 正则表达式：
+    1. []：表示或
+    2. +：表示可以出现多个
+
+&#96;&#96;&#96;split(String str)&#96;&#96;&#96;：根据str对字符串做拆分
+
+&#96;&#96;&#96;equals(String str)&#96;&#96;&#96;：对比两个字符串的内容
+
+&#96;&#96;&#96;equalsIgnoreCase()&#96;&#96;&#96;：忽略大小写比较两个字符串的内容
+
+&#96;&#96;&#96;compareTo(String str)&#96;&#96;&#96;：对两个字符串比较其在字典表里的大小，若在相同下标下有字符不相同，返回调用该方法的字符串该下标的字符 减去 str字符串该下标的字符 &lt;br &#x2F;&gt;
+若前面的字符都相同，但某个字符串多出一截，则比较长度（如 abc 与 abcde）。返回调用该方法的字符串长度 减去 str长度 &lt;br &#x2F;&gt;
+完全相同返回0
+
+---
+**小案例**
+
+* 现有一个个字符串：&quot;this is a text&quot;
+   
+    1. 将字符串中的每个单词分割
+    2. 将text替换为practice
+    3. 在text前增加一个easy
+    4. 将所有单词的首字母变为大写
+
+&#96;&#96;&#96;Java
+public static void main(String[] args) &#123;
+    String str &#x3D; &quot;this is a text&quot;;
+
+    &#x2F;&#x2F;1.
+    String[] s &#x3D; str.split(&quot; &quot;);
+    for (String s1 : s) &#123;
+        System.out.println(s1);
+    &#125;
+    &#x2F;&#x2F; 2.
+    System.out.println(str.replace(&quot;text&quot;, &quot;practice&quot;));
+    &#x2F;&#x2F; 3.
+    System.out.println(str.replace(&quot;text&quot;, &quot;easy text&quot;));
+    &#x2F;&#x2F; 4.将所有单词的首字母变为大写
+    String str2 &#x3D; &quot;&quot;;
+    for (String s1 : s) &#123;
+        &#x2F;&#x2F; this
+        &#x2F;&#x2F; is
+        &#x2F;&#x2F; a
+        &#x2F;&#x2F; text
+        Character c &#x3D; Character.toUpperCase(s1.charAt(0));
+        s1 &#x3D; c + s1.substring(1);
+        str2 &#x3D; str2 + s1 + &quot; &quot;;
+    &#125;
+
+    System.out.println(str2);
+&#125;</code></pre>
+
+<h2 id="可变字符串"><a href="#可变字符串" class="headerlink" title="可变字符串"></a>可变字符串</h2><p><span class="red bold">StringBuffer：</span>JDK1.0提供，运行效率比StringBuilder慢，线程安全</p>
+<p><span class="red bold">StringBuilder：</span>JDK5.0提供，运行效率比StringBuufer快，线程不安全（<span class="red">单线程下建议使用</span>）</p>
+<ul>
+<li>两个可变字符串类的效率都要比String类高，并且比String类节省内存</li>
+</ul>
+<p><span class="red bold">可变字符串常用方法：</span></p>
+<pre class="line-numbers language-append(Object" data-language="append(Object"><div class="caption"><span>obj)```：在当前缓冲区最后追加元素</span></div><code class="language-append(Object">
+&#96;&#96;&#96;insert(int offset, Object obj)&#96;&#96;&#96;：指定偏移量增加元素
+
+&#96;&#96;&#96;replace(int start, int end, Object obj)&#96;&#96;&#96;：使用指定元素替换缓冲区中&lt;span class&#x3D;&quot;red&quot;&gt;start至end-1&lt;&#x2F;span&gt;位置的字符串
+
+## BigDecimal
+先来看一个案例：
+&#96;&#96;&#96;Java
+public static void main(String[] args) &#123;
+    double d1 &#x3D; 1.0;
+    double d2 &#x3D; 0.9;
+    System.out.println(d1 - d2);
+
+    double result &#x3D; (1.4 - 0.5) &#x2F; 0.9;
+    System.out.println(result);
+
+    float f1 &#x3D; 1.0f;
+    float f2 &#x3D; 0.9f;
+    System.out.println(f1 - f2);
+
+    float result2 &#x3D; (1.4f - 0.5f) &#x2F; 0.9f;
+    System.out.println(result2);
+&#125;
+&#x2F;*输出：
+0.09999999999999998
+0.9999999999999999
+0.100000024
+1.0
+*&#x2F;</code></pre>
+<p>很多实际应用中需要熟知的精确存储，而浮点类型double和float都是近似值存储，计算会产生误差，因此需要借助精确存储java.math.BigDecimal</p>
+<p><span class="red bold">创建BigDecimal对象：</span>每增加一个运算数，就需要new一个BigDecimal对象</p>
+<hr>
+<p><strong>BigDecimal类常用方法</strong></p>
+<p>使用了BigDecimal类的运算数不能使用运算符进行计算，需要使用类里面的方法</p>
+<pre class="line-numbers language-add(BigDecimal" data-language="add(BigDecimal"><div class="caption"><span>augend)```：实现两个高精度运算数的加法</span></div><code class="language-add(BigDecimal">
+&#96;&#96;&#96;subtract(BigDecimal subtrahend)&#96;&#96;&#96;：实现两个高精度运算数的减法
+
+&#96;&#96;&#96;multiply(BigDecimal multiplicand)&#96;&#96;&#96;：实现两个高精度运算数的乘法
+
+&#96;&#96;&#96;divide(BigDecimal divisor [, int scale, RoundingMode roundingMode])&#96;&#96;&#96;：实现两个高精度运算数的除法
+* &lt;span class&#x3D;&quot;red&quot;&gt;注意：&lt;&#x2F;span&gt;除法运算在两个数能除尽时可以只传入divisor参数 &lt;br &#x2F;&gt;
+在两数除不尽时只传入divisor参数会报错 &lt;br &#x2F;&gt;
+需要传入scale参数以指定保留几位小数 &lt;br &#x2F;&gt;
+还需要传入roundingMode参数指定近似方法
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;roundingMode：&lt;&#x2F;span&gt;用于指定近似方法，常用的近似方法有（存储于RoundingMode类RoundingMode枚举变量中）：
+
+1. &#96;&#96;&#96;UP&#96;&#96;&#96;：向0远离
+2. &#96;&#96;&#96;DOWN&#96;&#96;&#96;：向0靠近
+3. &#96;&#96;&#96;CEILING&#96;&#96;&#96;：向上取整
+4. &#96;&#96;&#96;FLOOR&#96;&#96;&#96;：向下取整
+5. &#96;&#96;&#96;HALF_UP&#96;&#96;&#96;：四舍五入
+6. &#96;&#96;&#96;HALF_DOWN&#96;&#96;&#96;：五舍六入
+7. &#96;&#96;&#96;HALF_EVEN&#96;&#96;&#96;：银行家算法（四舍六入五考虑 -&gt; 五后非零就进一，五后为零看奇偶，五前为偶应舍去，五前为奇要进一）
+
+## Date类
+Date类表示一个指定的瞬间，精确到毫秒，从JDK1.1开始Date中的大部分方法已经被Calendar类中的方法取代
+
+---
+**构造方法**
+
+目前没有过时的构造方法有以下两个：
+
+&#96;&#96;&#96;Date()&#96;&#96;&#96;：返回当前时间精确到毫秒
+
+&#96;&#96;&#96;Date(long date)&#96;&#96;&#96;：传入一个毫秒数，该毫秒数表示1970年1月1日00:00:00至某个时间的毫秒数
+
+---
+**Date类常用方法**
+
+&#96;&#96;&#96;after(Date date)&#96;&#96;&#96;：返回调用该方法的Date对象是否在date之后
+
+&#96;&#96;&#96;before(Date date)&#96;&#96;&#96;：返回调用该方法的Date对象是否在date之前
+
+&#96;&#96;&#96;compareTo(Date date)&#96;&#96;&#96;：比较两个日期
+
+&#96;&#96;&#96;equals(Date date)&#96;&#96;&#96;：比较两个日期是否相等
+
+## Calender类
+Calender类提供了获取或设置各种日历字段的方法
+
+---
+**构造Calender对象**
+
+Calender类被设定为抽象类，无法被new出。Calender类提供了静态方法&#96;&#96;&#96;getInstance()&#96;&#96;&#96;用以获取Calender对象，该对象包含当前事件，精确到毫秒
+
+---
+**Calender类常用方法**
+
+&#96;&#96;&#96;getTime()&#96;&#96;&#96;：获取对象中存储的时间
+
+&#96;&#96;&#96;getTimeInMillis()&#96;&#96;&#96;：获取对象中存储的时间的毫秒数表示形式
+
+&#96;&#96;&#96;get(int field)&#96;&#96;&#96;：根据传入的参数获取时间的一部分
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;field参数：&lt;&#x2F;span&gt;
+Calender类中定义了常量用于field参数
+
+1. &#96;&#96;&#96;YEAR&#96;&#96;&#96;
+2. &#96;&#96;&#96;MONTH&#96;&#96;&#96;：&lt;span class&#x3D;&quot;red&quot;&gt;注意月的取值为0~11，输出时可以手动+1&lt;&#x2F;span&gt;
+3. &#96;&#96;&#96;DAY_OF_MONTH&#96;&#96;&#96;：返回对象中存储的天数
+4. &#96;&#96;&#96;DATE&#96;&#96;&#96;：返回对象中存储的天数（这两个功能一样）
+5. &#96;&#96;&#96;HOUR&#96;&#96;&#96;：返回对象中存储的小时数（12小时制）
+6. &#96;&#96;&#96;HOUR_OF_DAY&#96;&#96;&#96;：返回对象中存储的小时数（24小时制）
+7. &#96;&#96;&#96;MINUTE&#96;&#96;&#96;
+8. &#96;&#96;&#96;SECOND&#96;&#96;&#96;
+
+&#96;&#96;&#96;set()&#96;&#96;&#96;：该方法有多个重载方法，可以传入field参数修改对象存储时间的指定内容（如年月日等），也可以直接传入年月日参数
+
+&#96;&#96;&#96;add(int field, int amount)&#96;&#96;&#96;：可以该对象的指定内容进行加减操作（如年份+1）
+
+&#96;&#96;&#96;getActualMinimum(int field)&#96;&#96;&#96;：获取指定内容的最大值（如获取当前月份的天数最大值，则传入DAY_OF_MONTH）
+
+&#96;&#96;&#96;getActualMaximum(int field)&#96;&#96;&#96;：获取指定内容的最小值
+
+## SimpleDateFormat类
+java.text.SimpleDateFormat类可以格式化和解析日期类 &lt;br &#x2F;&gt;
+
+他可以将日期对象转换为某种格式的字符串，反之已知某种格式的日期字符串转换为日期对象亦可
+
+---
+**常用时间模式字母**
+| 字母  |           意义           |
+| :---: | :----------------------: |
+|   Y   |            年            |
+|   M   |         年中月份         |
+|   d   |         月中天数         |
+|   H   | 一天中小时数（24小时制） |
+|   h   | 一天中小时数（12小时制） |
+|   m   |           分钟           |
+|   s   |            秒            |
+|   S   |           毫秒           |
+
+---
+**构造SimpleDateFormat对象**
+
+尽管SimpleDateFormat类提供一个无参构造，但使用无参构造之后还要设置一次时间格式，因此我们使用有参构造
+
+&#96;&#96;&#96;SimpleDateFormat(String patten)&#96;&#96;&#96;：传入一个时间格式（如：&#96;&#96;&#96;yyyy&#x2F;MM&#x2F;dd HH:mm:ss&#96;&#96;&#96; 或&#96;&#96;&#96; yyyy年MM月dd日 HH:mm:ss&#96;&#96;&#96; 等）
+
+---
+**格式化时间对象**
+使用SimpleDateFormat对象的方法&#96;&#96;&#96;format(Date date)&#96;&#96;&#96;可以以当前对象设定的时间格式对date进行字符串格式化
+
+下面的代码实现对一个当前时间的Date对象进行字符串格式化
+&#96;&#96;&#96;Java
+public static void main(String[] args) &#123;
+  &#x2F;&#x2F; SimpleDateFormat format &#x3D; new SimpleDateFormat(&quot;yyyy年MM月dd日 HH:mm:ss&quot;);
+  SimpleDateFormat format &#x3D; new SimpleDateFormat(&quot;yyyy&#x2F;MM&#x2F;dd HH:mm:ss&quot;);
+
+  &#x2F;&#x2F; 要格式化日期，那么首先需要一个日期
+  Date date &#x3D; new Date();
+
+  String s &#x3D; format.format(date);
+  System.out.println(s);
+&#125;
+&#x2F;*输出：
+2022&#x2F;04&#x2F;11 21:08:55
+*&#x2F;</code></pre>
+
+<hr>
+<p><strong>复原时间对象</strong></p>
+<p>使用SimpleDateFormat对象的方法<code>parse(String source)</code>方法对传入的source按照当前SimpleDateFormat对象指定格式复原为Date对象</p>
+<ul>
+<li><span class="red">注意1：</span>使用<code>parse(String source)</code>方法时，若不按照调用该方法的SimpleDateFormat对象所设定的时间格式传入字符串，则会抛出异常</li>
+<li><span class="red">注意2：</span>使用SimpleDateFormat对象的方法<code>parse(String source)</code>方法时，传入了什么类型的字符串，复原出来的Date对象就有多少数据（如：传入”2012/5/13”对应yyyy/MM/dd，则复原出来的对象 日期为2012年5月13日 时间会为00:00:00）</li>
+</ul>
+<h2 id="System类"><a href="#System类" class="headerlink" title="System类"></a>System类</h2><p>Sytem系统类，主要用于获取系统属性数据和其他操作，该类禁止被new出（构造方法私有）</p>
+<p>System类内的可用方法都是静态公开的</p>
+<hr>
+<p><strong>System类常用方法</strong><br><code>static arraycopy(Object src, int srcPos, Object dest, int destPos, int length)</code>：复制src数组，从srcPos开始复制，复制到dest数组的destPos开始，复制length长度</p>
+<ul>
+<li><code>src</code>：源数组</li>
+<li><code>srcPos</code>：从源数组哪里开始复制</li>
+<li><code>dest</code>：目标数组</li>
+<li><code>destPos</code>：复制到目标数组的哪个位置开始</li>
+<li><code>length</code>：复制的长度</li>
+</ul>
+<p><code>static currentTimeMills()</code>：返回当前时间距离1970年1月1日 00:00:00的毫秒数（long）</p>
+<p><code>static gc()</code>：建议JVM尽快气动垃圾回收器回收垃圾（回不回收看JVM）</p>
+<p><code>static exit(int status)</code>：退出JVM，若参数为0表示正常退出，非0表示异常退出</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/03/25/JavaGUI%E7%BC%96%E7%A8%8B/" rel="prev" title="JavaGUI编程">
+                  <i class="fa fa-chevron-left"></i> JavaGUI编程
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/04/09/Java%E5%A0%86%E6%A0%88%E5%88%86%E6%9E%90/" rel="next" title="Java堆栈分析">
+                  Java堆栈分析 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

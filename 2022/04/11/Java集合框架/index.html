@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java集合框架">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java集合框架">
+<meta property="og:url" content="https://loliconkelvin.github.io/2022/04/11/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/index.html">
+<meta property="og:site_name" content="萝莉控的小窝">
+<meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java集合框架">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/12/LedjFf.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/16/LtYwD0.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/16/Lt0LY6.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/16/Lt0zOH.png">
+<meta property="article:published_time" content="2022-04-11T14:20:27.000Z">
+<meta property="article:modified_time" content="2022-04-16T14:44:39.170Z">
+<meta property="article:author" content="Loliconkelvin">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/04/12/LedjFf.png">
+
+
+<link rel="canonical" href="https://loliconkelvin.github.io/2022/04/11/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://loliconkelvin.github.io/2022/04/11/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/","path":"2022/04/11/Java集合框架/","title":"Java集合框架"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Java集合框架 | 萝莉控的小窝</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">萝莉控的小窝</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">集合是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88"><span class="nav-number">2.</span> <span class="nav-text">Collection体系集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection%E7%88%B6%E6%8E%A5%E5%8F%A3"><span class="nav-number">3.</span> <span class="nav-text">Collection父接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List%E5%AD%90%E6%8E%A5%E5%8F%A3"><span class="nav-number">4.</span> <span class="nav-text">List子接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List%E5%AE%9E%E7%8E%B0%E7%B1%BB%E6%A6%82%E6%8B%AC"><span class="nav-number">5.</span> <span class="nav-text">List实现类概括</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AE%B9%E7%9B%B8%E5%90%8C%E7%A7%BB%E9%99%A4%E6%96%B9%E6%B3%95"><span class="nav-number">6.</span> <span class="nav-text">实现对象内容相同移除方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList"><span class="nav-number">7.</span> <span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vector"><span class="nav-number">8.</span> <span class="nav-text">Vector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%9B%E5%9E%8B"><span class="nav-number">9.</span> <span class="nav-text">泛型</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
+      src="/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">Loliconkelvin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:loliconkelvin@gmail.com" title="E-Mail → mailto:loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2022/04/11/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="Loliconkelvin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萝莉控的小窝">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java集合框架
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-11 22:20:27" itemprop="dateCreated datePublished" datetime="2022-04-11T22:20:27+08:00">2022-04-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-04-16 22:44:39" itemprop="dateModified" datetime="2022-04-16T22:44:39+08:00">2022-04-16</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <style>
+    .red {
+        color: red;
+    }
+    .bold {
+        font-weight: bold;
+    }
+</style>
+
+<p>Java集合框架</p>
+<span id="more"></span>
+
+<h2 id="集合是什么"><a href="#集合是什么" class="headerlink" title="集合是什么"></a>集合是什么</h2><p>（java.util.*）集合类似于数组，数组是单个对象的容器，集合是多个对象的容器</p>
+<ul>
+<li>集合和数组的区别：<ol>
+<li>数组长度固定，集合的长度不固定</li>
+<li>数组可以存储基本数据类型和引用类型（要存储基本类型可以使用装箱）</li>
+</ol>
+</li>
+</ul>
+<h2 id="Collection体系集合"><a href="#Collection体系集合" class="headerlink" title="Collection体系集合"></a>Collection体系集合</h2><table>
+<thead>
+<tr>
+<th align="center">Collection体系集合</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/12/LedjFf.png" alt="LedjFf.png"></td>
+</tr>
+</tbody></table>
+<h2 id="Collection父接口"><a href="#Collection父接口" class="headerlink" title="Collection父接口"></a>Collection父接口</h2><p>代表一组任意类型的对象</p>
+<p>特点：有序，无下标，元素可重复</p>
+<hr>
+<p><strong>Collection接口常用方法</strong></p>
+<pre class="line-numbers language-add(Object" data-language="add(Object"><div class="caption"><span>obj)```：向集合中增加一个对象</span></div><code class="language-add(Object">
+* 添加方法是将元素的地址存储到集合中
+
+    ![LnYW0x.md.png](https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2022&#x2F;04&#x2F;12&#x2F;LnYW0x.md.png)
+
+&#96;&#96;&#96;addAll(Collection c)&#96;&#96;&#96;：将集合c中的所有对象增加到调用该方法的集合中
+
+&#96;&#96;&#96;clear()&#96;&#96;&#96;：清空集合中的所有对象
+
+&#96;&#96;&#96;contains(Object obj)&#96;&#96;&#96;：检查此集合中是否含有此对象
+
+&#96;&#96;&#96;containsAll(Collection c)&#96;&#96;&#96;：若调用该方法的集合包含集合c内的所有对象，返回true
+
+&#96;&#96;&#96;equals(Object obj)&#96;&#96;&#96;：比较此集合是否与指定对象相等
+
+&#96;&#96;&#96;iterator()&#96;&#96;&#96;：返回在此集合元素上进行迭代的迭代器
+
+&#96;&#96;&#96;isEmpty()&#96;&#96;&#96;：判断此集合是否为空
+
+&#96;&#96;&#96;remove(Object obj)&#96;&#96;&#96;：在集合中移除obj对象
+
+&#96;&#96;&#96;removeAll(Collection c)&#96;&#96;&#96;：在调用该方法的集合中移除集合c里的所有对象
+
+&#96;&#96;&#96;retainAll(Collection c)&#96;&#96;&#96;：仅保留集合c中的元素
+
+&#96;&#96;&#96;size()&#96;&#96;&#96;：返回该集合的元素个数
+
+&#96;&#96;&#96;toArray()&#96;&#96;&#96;：将此集合转换成数组
+
+---
+**遍历集合**
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;增强for：&lt;&#x2F;span&gt;
+
+&#96;&#96;&#96;Java
+for (Object o : collection) &#123;
+           System.out.println(o);
+&#125;</code></pre>
+
+<p><span class="red bold">Iterator迭代器：</span>迭代器是专门用来遍历集合的工具</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Iterator iterator &#x3D; collection.iterator();
+
+while (iterator.hasNext()) &#123;
+    Object next &#x3D; iterator.next();
+    System.out.println(next);
+&#125;</code></pre>
+
+<hr>
+<p><strong>Iterator迭代器</strong></p>
+<p>迭代器是专门用来遍历集合的工具，可以通过<code>Conlection及其子类对象.Interator()</code>获取对象的迭代器</p>
+<p><span class="red bold">Iterator迭代器方法：</span></p>
+<p>迭代器被创建时会指向第一个元素</p>
+<ol>
+<li><p><code>hasNext()</code>：若当前指向有元素，返回true</p>
+</li>
+<li><p><code>Next()</code>：返回迭代器现在指向的元素，并将指向往后移</p>
+</li>
+<li><p><code>remove()</code>：从迭代器指向的conllection对象中移除迭代器返回的最后一个元素</p>
+<ul>
+<li><span class="red">注意1：</span>每执行一次Next之后，只能执行一次remove</li>
+<li><span class="red">注意2（重要）：</span>在迭代过程中不能使用集合对象中的移除方法，只能使用迭代器的移除方法，否则迭代器会停止迭代并抛出并发修改异常</li>
+</ul>
+ <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">while (iterator.hasNext()) &#123;
+    String next &#x3D; (String)iterator.next();
+    System.out.println(next);
+    if (next.equals(&quot;茄子&quot;)) &#123;
+        &#x2F;&#x2F; 错误用法：collection.remove(next);
+        iterator.remove();
+    &#125;
+&#125;</code></pre></li>
+</ol>
+<h2 id="List子接口"><a href="#List子接口" class="headerlink" title="List子接口"></a>List子接口</h2><p>特点：有序、有下标、元素可以重复</p>
+<hr>
+<p><strong>List常用方法</strong></p>
+<p>除了Collection自带的方法外，List还有一些拓展的方法</p>
+<pre class="line-numbers language-add(int" data-language="add(int"><div class="caption"><span>index, Object obj)``：在制定下标index位置插入对象</span></div><code class="language-add(int">
+&#96;&#96;&#96;addAll（int index, Collection c）&#96;&#96;&#96;：将集合c中的所有对象增加到调用该方法的集合中的index位置
+
+&#96;&#96;&#96;get(int index)&#96;&#96;&#96;：返回集合中指定位置的元素
+
+&#96;&#96;&#96;set(int index, Object obj)&#96;&#96;&#96;：用指定元素obj替换集合中的index位置元素
+
+&#96;&#96;&#96;remove(int index)&#96;&#96;&#96;：移除集合中指定位置的元素
+
+&#96;&#96;&#96;indexOf(Object obj)&#96;&#96;&#96;：返回集合中第一次出现指定元素的索引，不包含元素则返回-1
+
+&#96;&#96;&#96;ListIterator()&#96;&#96;&#96;：返回此合集的列表迭代器
+
+&#96;&#96;&#96;ListIterator(int index)&#96;&#96;&#96;：返回此合集的列表迭代器，从合集指定位置开始
+
+&#96;&#96;&#96;subList(int fromIndex, int toIndex)&#96;&#96;&#96;：返回fromIndex和toIndex-1之间的集合元素
+
+---
+**遍历集合**
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;普通for：&lt;&#x2F;span&gt;
+因为List有下标，所以可以使用普通for并使用&#96;&#96;&#96;get(int index)&#96;&#96;&#96;方法遍历元素
+
+&#96;&#96;&#96;Java
+for (int i &#x3D; 0; i &lt; list.size(); i++) &#123;
+    System.out.println(list.get(i));
+&#125;</code></pre>
+
+<p><span class="red bold">增强for：</span></p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">for (Object s : list) &#123;
+    System.out.println(s);
+&#125;</code></pre>
+
+<p><span class="red bold">Iterator迭代器：</span></p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Iterator&lt;Object&gt; iterator &#x3D; list.iterator();
+while (iterator.hasNext()) &#123;
+    System.out.println(iterator.next());
+&#125;</code></pre>
+
+<p><span class="red bold">ListIterator迭代器：</span></p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">ListIterator&lt;Object&gt; listIterator &#x3D; list.listIterator();
+while (listIterator.hasNext()) &#123;
+   System.out.println(listIterator.nextIndex() + &quot;:&quot; + listIterator.next());
+&#125;</code></pre>
+
+<hr>
+<p><strong>ListIterator迭代器</strong></p>
+<p>ListIterator迭代器是Iterator迭代器的子类，并且拥有更强大的功能， 它可以：</p>
+<ol>
+<li>从前往后遍历，从后往前遍历</li>
+<li>在迭代的过程中对集合元素进行增加、替换和移除</li>
+</ol>
+<p><span class="red bold">ListIterator迭代器方法：</span></p>
+<p>除了Iterator自带的方法外，ListIterator迭代器还有以下方法</p>
+<pre class="line-numbers language-hasPrevious()```：若当前指向存在元素则返回true（当然需要先使用```next()```方法把指针移到最后）" data-language="hasPrevious()```：若当前指向存在元素则返回true（当然需要先使用```next()```方法把指针移到最后）"><code class="language-hasPrevious()```：若当前指向存在元素则返回true（当然需要先使用```next()```方法把指针移到最后）">&#96;&#96;&#96;Java
+while (listIterator.hasNext()) &#123;
+    listIterator.next();
+&#125;</code></pre>
+
+<pre class="line-numbers language-previous()```：返回当前元素并且指针向前移动" data-language="previous()```：返回当前元素并且指针向前移动"><code class="language-previous()```：返回当前元素并且指针向前移动">
+&#96;&#96;&#96;nextIndex()&#96;&#96;&#96; &#96;&#96;&#96;previousIndex()&#96;&#96;&#96;：返回返回后续调用&#96;&#96;&#96;next()&#96;&#96;&#96;或&#96;&#96;&#96;previous()&#96;&#96;&#96;方法将返回的元素的索引，查询下标不会移动指针（&lt;span class&#x3D;&quot;red&quot;&gt;所以查询下标总是在查询元素之前，否则下标不是当前元素的下标&lt;&#x2F;span&gt;）
+
+&#96;&#96;&#96;remove()&#96;&#96;&#96;：移除&#96;&#96;&#96;next()&#96;&#96;&#96;或&#96;&#96;&#96;previous()&#96;&#96;&#96;方法上一次返回的元素
+
+&#96;&#96;&#96;add(Object obj)&#96;&#96;&#96;：
+
+* 若前一次调用的是&#96;&#96;&#96;next()&#96;&#96;&#96;方法，则在目前指针位置的前面插入元素
+
+    ![LuOijK.png](https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2022&#x2F;04&#x2F;13&#x2F;LuOijK.png)
+
+* 若前一次调用的是&#96;&#96;&#96;previous()&#96;&#96;&#96;方法，则在目前指针位置的后面插入元素
+
+    ![LuOZAH.png](https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2022&#x2F;04&#x2F;13&#x2F;LuOZAH.png)
+
+&#96;&#96;&#96;set(Object obj)&#96;&#96;&#96;：用指定元素替换&#96;&#96;&#96;next()&#96;&#96;&#96;或&#96;&#96;&#96;previous()&#96;&#96;&#96;方法上一次返回的元素
+
+---
+**当集合存储数字数据时**
+
+当集合存储数字数据（int）时，会进行自动装箱
+
+并且由于List支持下标操作，在调用一些可以传入下标或Obj参数的方法时要注意调用的是哪个方法，默认传入int类型的值会认为传入的是下标而不是对象，要传入对象，有两种方法：
+
+1. 使用装箱
+2. 使用强制类型转换
+
+&#96;&#96;&#96;Java
+&#x2F;&#x2F; 移除下标为20的元素
+list.remove(20);
+
+&#x2F;&#x2F; 移除值为20的元素
+list.remove(Integer.valueOf(20));
+list.remove((Object)20);</code></pre>
+
+<h2 id="List实现类概括"><a href="#List实现类概括" class="headerlink" title="List实现类概括"></a>List实现类概括</h2><p><span class="red bold">ArrayList：</span></p>
+<ul>
+<li>数组结构实现（是连续的空间），查询快，增删慢（增删会导致部分元素前后移动）</li>
+<li>JDK1.2引入，效率快，线程不安全</li>
+</ul>
+<p><span class="red bold">Vector：</span></p>
+<ul>
+<li>数组结构实现，查询快增删慢</li>
+<li>JDK1.0引入， 效率慢，线程安全</li>
+</ul>
+<p><span class="red bold">LinkedList：</span></p>
+<ul>
+<li>链表结构实现（非连续空间），查询慢，增删快 </li>
+</ul>
+<h2 id="实现对象内容相同移除方法"><a href="#实现对象内容相同移除方法" class="headerlink" title="实现对象内容相同移除方法"></a>实现对象内容相同移除方法</h2><p>在调用remove方法时实际上是先调用<code>传入参数的类里的equals方法</code>来遍历比较参数与集合对象的地址是否相同，并且移除第一个equals方法返回true的地方</p>
+<p>于是我们只需要在<code>传入的参数的类中</code>重写equals方法即可改变remove方法的判断条件</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">@Override
+public boolean equals(Object obj) &#123;
+    if (this &#x3D;&#x3D; obj) &#123;
+        return true;
+    &#125;
+    if (obj &#x3D;&#x3D; null) &#123;
+        return false;
+    &#125;
+    if (obj instanceof Student) &#123;
+        Student student &#x3D; (Student)obj;
+        &#x2F;&#x2F; 对主键值进行比较
+        if (this.name.equals(student.getName())) &#123;
+            return true;
+        &#125;
+    &#125;
+    return false;
+&#125;</code></pre>
+
+<h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><p>ArrayList与List操作基本一致</p>
+<hr>
+<p><strong>ArrayList源码分析</strong></p>
+<p><span class="red bold">常量：</span></p>
+<ol>
+<li><code>DEFAULT_CAPACITY = 10</code>：默认容量</li>
+<li><code>elementData</code>：存放元素的数组</li>
+</ol>
+<p><span class="red bold">实例变量：</span></p>
+<ol>
+<li><code>size</code>：实际元素个数（实例变量，实例被new出时初始化为0）（非局部变量都会被初始化）</li>
+</ol>
+<p><span class="red bold">方法：</span></p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public ArrayList() &#123;
+    &#x2F;&#x2F; 初始化存放元素的数组（this.elementData &#x3D; &#123;&#125;）
+    this.elementData &#x3D; DEFAULTCAPACITY_EMPTY_ELEMENTDATA;
+&#125;
+
+public boolean add(E e) &#123;
+    &#x2F;&#x2F; modCount++;
+    add(e, elementData, size);
+    return true;
+&#125;
+
+private void add(E e, Object[] elementData, int s) &#123;
+    &#x2F;&#x2F; 当前需要存储的元素将会存储在下标为s的位置上
+    &#x2F;&#x2F; 若需要存储的下标 与 数组的长度相同，扩展数组
+    if (s &#x3D;&#x3D; elementData.length)
+        elementData &#x3D; grow();
+    &#x2F;&#x2F; 若需要存储的下标 与 数组的长度不相同，则表明数组在该元素增加后还有空位置，直接将元素赋给对应下标的值，下标 + 1
+    elementData[s] &#x3D; e;
+    size &#x3D; s + 1;
+&#125;
+
+private Object[] grow() &#123;
+    &#x2F;&#x2F; 传入（再往数组里传一个对象所）需求的最小容量（下标 + 1：数组的长度 &#x3D; 最大下标 + 1）
+    return grow(size + 1);
+&#125;
+
+private Object[] grow(int minCapacity) &#123;
+    &#x2F;&#x2F; 对数组进行扩容，扩容量由newCapacity()决定
+    return elementData &#x3D; Arrays.copyOf(elementData,
+                                  newCapacity(minCapacity));
+&#125;
+
+private int newCapacity(int minCapacity) &#123;
+    &#x2F;&#x2F; 旧容量 &#x3D; 当前数组长度
+    int oldCapacity &#x3D; elementData.length;
+    &#x2F;&#x2F; 新容量 &#x3D; 旧容量 * 1.5（向下取整）
+    int newCapacity &#x3D; oldCapacity + (oldCapacity &gt;&gt; 1);
+    &#x2F;&#x2F; 若 新容量 - 最小容量 &lt;&#x3D; 0, 旧容量的1.5倍居然不够用或刚好够用
+    if (newCapacity - minCapacity &lt;&#x3D; 0) &#123;
+        &#x2F;&#x2F; 若数组是空数组，返回DEFAULT_CAPACITY &#x3D; 10（此时将直接将数组扩容10个单位）
+        if (elementData &#x3D;&#x3D; DEFAULTCAPACITY_EMPTY_ELEMENTDATA)
+            return Math.max(DEFAULT_CAPACITY, minCapacity);
+        &#x2F;&#x2F; 不可能的值
+        if (minCapacity &lt; 0) &#x2F;&#x2F; overflow
+            throw new OutOfMemoryError();
+        &#x2F;&#x2F; 返回需求的最小容量（什么时候才会用到这个？）
+        return minCapacity;
+&#125;
+    &#x2F;&#x2F; 返回newCapacity新容量（因为MAX_ARRAY_SIZE非常大，基本上判断条件为true）
+    return (newCapacity - MAX_ARRAY_SIZE &lt;&#x3D; 0)
+        ? newCapacity
+        : hugeCapacity(minCapacity);
+&#125;</code></pre>
+
+<hr>
+<p><strong>解析</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">又长又臭？一图流解析马上就来</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/16/LtYwD0.png" alt="LtYwD0.png"></td>
+</tr>
+</tbody></table>
+<p><span class="red bold">结论：</span>当使用无参构造创建ArrayList时，创建一个空数组 <br /><br>当增加第一个元素时，扩容10 <br /><br>当每次当前要添加的元素的下标触碰到数组长度时，扩容为原数组长度的1.5倍</p>
+<h2 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h2><p>Vector与List操作基本一致，由于Vector比较老，他会多出一种特有的遍历方法——枚举器（JDK1.2前使用 ）</p>
+<hr>
+<p><strong>Vecor部分特有方法</strong></p>
+<pre class="line-numbers language-firstElement()```：返回第一个元素" data-language="firstElement()```：返回第一个元素"><code class="language-firstElement()```：返回第一个元素">
+&#96;&#96;&#96;lastElement()&#96;&#96;&#96;：返回最后一个元素
+
+&#96;&#96;&#96;elementAt(int index)&#96;&#96;&#96;：返回第index个元素
+
+&#96;&#96;&#96;setElementAt(E obj, int index)&#96;&#96;&#96;：功能与&#96;&#96;&#96;set()&#96;&#96;&#96;方法相同，不同点是Vector中的&#96;&#96;&#96;set()&#96;&#96;&#96;方法会返回被替代的元素值
+
+---
+**Elements枚举器**
+
+使用方法与迭代器相同，并且功能更弱
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;枚举器方法：&lt;&#x2F;span&gt;
+
+1. &#96;&#96;&#96;hasMoreElements()&#96;&#96;&#96;：测试此枚举是否包含更多元素
+2. &#96;&#96;&#96;nextElement()&#96;&#96;&#96;：如果此枚举对象至少还有一个要提供的元素，则返回此枚举的下一个元素
+
+## LinkedList
+
+LinkedList通过双向链表实现数据存储
+
+LinkedList使用方法与List基本相同
+
+---
+**LinkedList源码分析**
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;实例变量：&lt;&#x2F;span&gt;
+
+1. &#96;&#96;&#96;size&#96;&#96;&#96;：链表长度
+2. &#96;&#96;&#96;first&#96;&#96;&#96;：第一个元素指针
+3. &#96;&#96;&#96;last&#96;&#96;&#96;：最后一个元素指针
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;方法：&lt;&#x2F;span&gt;
+
+&#96;&#96;&#96;Java
+private static class Node&lt;E&gt; &#123;
+    &#x2F;&#x2F; 存储的元素
+    E item;
+    &#x2F;&#x2F; 该数据在链表中的后一个元素
+    Node&lt;E&gt; next;
+    &#x2F;&#x2F; 该数据在链表中的前一个元素
+    Node&lt;E&gt; prev;
+
+    Node(Node&lt;E&gt; prev, E element, Node&lt;E&gt; next) &#123;
+        this.item &#x3D; element;
+        this.next &#x3D; next;
+        this.prev &#x3D; prev;
+    &#125;
+&#125;
+
+public LinkedList() &#123;
+&#125;
+
+public boolean add(E e) &#123;
+    linkLast(e);
+    return true;
+&#125;
+
+void linkLast(E e) &#123;
+    &#x2F;&#x2F; 定义局部变量 l &#x3D; 末指针元素
+    final Node&lt;E&gt; l &#x3D; last;
+    &#x2F;&#x2F; 新建Node对象，其数据为传入的元素
+    &#x2F;&#x2F; 其前一个元素为l（last）
+    &#x2F;&#x2F; 其后一个元素为空（因此它是链表中最后一个元素）
+    final Node&lt;E&gt; newNode &#x3D; new Node&lt;&gt;(l, e, null);
+    &#x2F;&#x2F; 定义新元素为链表的最后一个元素（将末指针指向它）
+    last &#x3D; newNode;
+    &#x2F;&#x2F; 若新增的元素前面没有元素，将头指针也指向它
+    if (l &#x3D;&#x3D; null)
+        first &#x3D; newNode;
+    &#x2F;&#x2F; 否则将之前的最后一个元素的next指针指向新增元素
+    else
+        l.next &#x3D; newNode;
+    &#x2F;&#x2F; 增加链表长度
+    size++;
+    &#x2F;&#x2F; modCount++;
+&#125;</code></pre>
+
+<hr>
+<p><strong>解析</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">当LinkedList链表中存在单个或多个元素的情况</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/16/Lt0LY6.png" alt="Lt0LY6.png"></td>
+</tr>
+<tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/16/Lt0zOH.png" alt="Lt0zOH.png"></td>
+</tr>
+</tbody></table>
+<h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><p>Java泛型是JDK1.5中引入的新特性，泛型的本质是参数化类型，把类型作为参数传递</p>
+<p>常见的形式有泛型类、泛型接口、泛型方法</p>
+<p><span class="red bold">语法：</span></p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; T为类型占位符，表示一种引用类型
+&lt;T&gt;</code></pre>
+
+<hr>
+<p><strong>泛型类</strong></p>
+<p>使用以下格式创建一个泛型类，并且创建一个泛型变量</p>
+<p><span class="red">注意：</span>泛型在没有给予指定类型之前不能被实例化</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Test&lt;T&gt; &#123;
+    T t;
+
+    public void showT() &#123;
+        System.out.println(t);
+    &#125;
+&#125;</code></pre>
+
+<p>使用一下格式创建一个泛型类对象</p>
+<p><span class="red">注意：</span>泛型仅允许传入引用类型，要传入基本类型可以使用包装类</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static void main(String[] args) &#123;
+    Test&lt;String&gt; stringTest &#x3D; new Test&lt;&gt;();
+
+    stringTest.t &#x3D; &quot;123&quot;;
+    stringTest.showT();
+&#125;</code></pre>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/09/Java%E5%A0%86%E6%A0%88%E5%88%86%E6%9E%90/" rel="prev" title="Java堆栈分析">
+                  <i class="fa fa-chevron-left"></i> Java堆栈分析
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

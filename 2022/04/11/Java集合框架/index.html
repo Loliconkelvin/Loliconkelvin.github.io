@@ -31,8 +31,10 @@
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/16/LtYwD0.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/16/Lt0LY6.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/16/Lt0zOH.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/18/Ld6Aw8.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/19/L0hmU1.md.png">
 <meta property="article:published_time" content="2022-04-11T14:20:27.000Z">
-<meta property="article:modified_time" content="2022-04-17T14:18:58.203Z">
+<meta property="article:modified_time" content="2022-04-20T05:32:39.536Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -122,7 +124,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">集合是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88"><span class="nav-number">2.</span> <span class="nav-text">Collection体系集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection%E7%88%B6%E6%8E%A5%E5%8F%A3"><span class="nav-number">3.</span> <span class="nav-text">Collection父接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List%E5%AD%90%E6%8E%A5%E5%8F%A3"><span class="nav-number">4.</span> <span class="nav-text">List子接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List%E5%AE%9E%E7%8E%B0%E7%B1%BB%E6%A6%82%E6%8B%AC"><span class="nav-number">5.</span> <span class="nav-text">List实现类概括</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AE%B9%E7%9B%B8%E5%90%8C%E7%A7%BB%E9%99%A4%E6%96%B9%E6%B3%95"><span class="nav-number">6.</span> <span class="nav-text">实现对象内容相同移除方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList"><span class="nav-number">7.</span> <span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vector"><span class="nav-number">8.</span> <span class="nav-text">Vector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%9B%E5%9E%8B"><span class="nav-number">9.</span> <span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set%E5%AD%90%E6%8E%A5%E5%8F%A3"><span class="nav-number">10.</span> <span class="nav-text">Set子接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hashSet%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">11.</span> <span class="nav-text">hashSet（重点）</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">集合是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88"><span class="nav-number">2.</span> <span class="nav-text">Collection体系集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection%E7%88%B6%E6%8E%A5%E5%8F%A3"><span class="nav-number">3.</span> <span class="nav-text">Collection父接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List%E5%AD%90%E6%8E%A5%E5%8F%A3"><span class="nav-number">4.</span> <span class="nav-text">List子接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List%E5%AE%9E%E7%8E%B0%E7%B1%BB%E6%A6%82%E6%8B%AC"><span class="nav-number">5.</span> <span class="nav-text">List实现类概括</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AE%B9%E7%9B%B8%E5%90%8C%E7%A7%BB%E9%99%A4%E6%96%B9%E6%B3%95%EF%BC%88List%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">实现对象内容相同移除方法（List）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList"><span class="nav-number">7.</span> <span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vector"><span class="nav-number">8.</span> <span class="nav-text">Vector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%9B%E5%9E%8B"><span class="nav-number">9.</span> <span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set%E5%AD%90%E6%8E%A5%E5%8F%A3"><span class="nav-number">10.</span> <span class="nav-text">Set子接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashSet%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">11.</span> <span class="nav-text">HashSet（重点）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TreeSet"><span class="nav-number">12.</span> <span class="nav-text">TreeSet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map%E7%88%B6%E6%8E%A5%E5%8F%A3"><span class="nav-number">13.</span> <span class="nav-text">Map父接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap"><span class="nav-number">14.</span> <span class="nav-text">HashMap</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -228,7 +230,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-04-17 22:18:58" itemprop="dateModified" datetime="2022-04-17T22:18:58+08:00">2022-04-17</time>
+        <time title="修改时间：2022-04-20 13:32:39" itemprop="dateModified" datetime="2022-04-20T13:32:39+08:00">2022-04-20</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -423,7 +425,11 @@ while (listIterator.hasNext()) &#123;
 
 &#96;&#96;&#96;remove()&#96;&#96;&#96;：移除&#96;&#96;&#96;next()&#96;&#96;&#96;或&#96;&#96;&#96;previous()&#96;&#96;&#96;方法上一次返回的元素
 
-&#96;&#96;&#96;add(Object obj)&#96;&#96;&#96;：
+&#96;&#96;&#96;add(Object obj将对象存入到集合中，关联键值，key重复则覆盖原值
+
+&#96;&#96;&#96;get(Object key)&#96;&#96;&#96;：根据键获取对应的值
+
+&#96;&#96;&#96;Set&#96;&#96;&#96;)&#96;&#96;&#96;：
 
 * 若前一次调用的是&#96;&#96;&#96;next()&#96;&#96;&#96;方法，则在目前指针位置的前面插入元素
 
@@ -467,7 +473,7 @@ list.remove((Object)20);</code></pre>
 <ul>
 <li>链表结构实现（非连续空间），查询慢，增删快 </li>
 </ul>
-<h2 id="实现对象内容相同移除方法"><a href="#实现对象内容相同移除方法" class="headerlink" title="实现对象内容相同移除方法"></a>实现对象内容相同移除方法</h2><p>在调用remove方法时实际上是先调用<code>传入参数的类里的equals方法</code>来遍历比较参数与集合对象的地址是否相同，并且移除第一个equals方法返回true的地方</p>
+<h2 id="实现对象内容相同移除方法（List）"><a href="#实现对象内容相同移除方法（List）" class="headerlink" title="实现对象内容相同移除方法（List）"></a>实现对象内容相同移除方法（List）</h2><p>在调用remove方法时实际上是先调用<code>传入参数的类里的equals方法</code>来遍历比较参数与集合对象的地址是否相同，并且移除第一个equals方法返回true的地方</p>
 <p>于是我们只需要在<code>传入的参数的类中</code>重写equals方法即可改变remove方法的判断条件</p>
 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">@Override
 public boolean equals(Object obj) &#123;
@@ -745,7 +751,8 @@ public &lt;T&gt; T show(T t) &#123;
 <p>反省好处之二：防止类型转换异常，提高代码安全性</p>
 <h2 id="Set子接口"><a href="#Set子接口" class="headerlink" title="Set子接口"></a>Set子接口</h2><p><span class="red bold">特点：</span>无序（添加数据的顺序与遍历数据的顺序不一样），无下标，元素不可重复</p>
 <p>Set接口的方法和Collection方法完全一致</p>
-<h2 id="hashSet（重点）"><a href="#hashSet（重点）" class="headerlink" title="hashSet（重点）"></a>hashSet（重点）</h2><p><span class="red bold">存储结构：</span>哈希表（JDK1.7前：数组 + 链表 JDK1.7后：数组 + 链表 + 红黑树）</p>
+<h2 id="HashSet（重点）"><a href="#HashSet（重点）" class="headerlink" title="HashSet（重点）"></a>HashSet（重点）</h2><p><span class="red bold">存储结构：</span>哈希表（JDK1.7前：数组 + 链表 JDK1.7后：数组 + （单向）链表 + 红黑树）</p>
+<p>（HashSet的存储是基于HashMap类的，查阅HashMap类的add方法可以发现存储的对象视为HashMap的key，而value为new Object()，详见HashMap的存储结构）</p>
 <p><span class="red bold">特点：</span></p>
 <p>基于HashCode计算元素存放位置</p>
 <ul>
@@ -845,9 +852,318 @@ public int hashCode() &#123;
 <p>自动生成的根据对象的值计算hashcode的方法使用到了31这个数，并且用这个数做了一些乘法，这是因为：</p>
 <ol>
 <li>31 是一个质数，可以减少散列冲突（哈希冲突），可以尽量让数据存储在不同的位置</li>
-<li>31 可以提高运行效率，因为 <code>31*i = (i &lt;&lt; 5) - i</code></li>
+<li>31 可以提高运行效率，因为 <code>31 * i = (i &lt;&lt; 5) - i</code></li>
 </ol>
+<h2 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h2><p><span class="red bold">存储结构：</span>红黑树</p>
+<p>TreeSet基于排列顺序实现元素不重复</p>
+<p>实现了SortedSet接口，对集合元素自动排序</p>
+<p>元素对象的类型必须实现Comparable接口，指定排序规则</p>
+<p>通过CompareTo方法确定是否为重复元素</p>
+<hr>
+<p><strong>红黑树</strong></p>
+<p><span class="red bold">二叉查找树：</span><br>左子树的值必须小于根节点的值，右子树的值必须大于根节点的值</p>
+<p><img src="https://s1.ax1x.com/2022/04/18/Ld6Aw8.png" alt="Ld6Aw8.png"></p>
+<p><span class="red bold">红黑树：</span>红黑树是一种自平衡二叉查找树，规定最顶部的根节点必须为黑色，其可以通过旋转和变色来达到防止一棵树过长的效果，查找效率高</p>
+<hr>
+<p><strong>TreeSet常用方法</strong></p>
+<p>还是那一堆东西，跟前面的一样</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static void main(String[] args) &#123;
+    &#x2F;&#x2F; 创建
+    TreeSet&lt;String&gt; strings &#x3D; new TreeSet&lt;&gt;();
 
+    &#x2F;&#x2F; 增加
+    strings.add(&quot;姓名&quot;);
+    strings.add(&quot;学号&quot;);
+    strings.add(&quot;班级&quot;);
+    strings.add(&quot;性别&quot;);
+    System.out.println(strings);
+
+    &#x2F;&#x2F; 删除
+    strings.remove(&quot;性别&quot;);
+
+    &#x2F;&#x2F; 遍历(增强for&#x2F;迭代器)
+    for (String s : strings) &#123;
+        System.out.println(s);
+    &#125;
+
+    Iterator&lt;String&gt; iterator &#x3D; strings.iterator();
+    while (iterator.hasNext()) &#123;
+        System.out.println(iterator.next());
+    &#125;
+
+    &#x2F;&#x2F; 查询
+    System.out.println(strings.contains(&quot;学号&quot;));
+    System.out.println(strings.isEmpty());
+&#125;</code></pre>
+
+<hr>
+<p><strong>TreeSet集合中添加类元素</strong></p>
+<p><span class="red bold">注意：</span>要在TreeSet中添加类元素，<span class="red">该类要实现comparable接口</span>（<span style="color: blue">或使用比较器，在下面有讲到</span>）<span class="red">并且重写接口内的比较方法</span>，否则该类是不能被比较（排序  ）的，也因此不能被添加至TreeSet中</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Student implements Comparable&lt;Student&gt; &#123;
+    private String name;
+    private int age;
+
+    public Student() &#123;
+    &#125;
+
+    public Student(String name, int age) &#123;
+        this.name &#x3D; name;
+        this.age &#x3D; age;
+    &#125;
+
+    &#x2F;&#x2F; 通常，比较的方法就是将类里面的实例变量进行逐个比较，可以返回它们的和，也可以返回单个比较结果等等比较方法
+    @Override
+    public int compareTo(Student o) &#123;
+        int n1 &#x3D; this.name.compareTo(o.name);
+        int n2 &#x3D; this.age - o.age;
+
+        return n1 &#x3D;&#x3D; 0 ? n2 : n1;
+    &#125;
+&#125;</code></pre>
+
+<p><span class="red bold">结论：</span>TreeSet判断两个元素重复的基准就是传入类中的<code>compareTo()</code>方法，该方法返回0，则表示元素相同，阻止后来元素存入</p>
+<hr>
+<p><strong>Comparator比较器</strong></p>
+<p>上面提到除了保存到TreeSet中的类要实现Comparable接口外，还可以通过Comparator比较器的方式</p>
+<p><span class="red bold">使用Comparator比较器是指：</span>在实例化TreeSet时传入一个实现了Comparator比较器的类作为参数，以定制该TreeSet的排序方法，看代码：</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static void main(String[] args) &#123;
+  TreeSet&lt;Student&gt; students &#x3D; new TreeSet&lt;&gt;(new Comparator&lt;Student&gt;() &#123;
+      @Override
+      public int compare(Student o1, Student o2) &#123;
+          int n1 &#x3D; o1.getName().compareTo(o2.getName());
+          int n2 &#x3D; o1.getAge() - o2.getAge();
+          return n1 &#x3D;&#x3D; 0 ? n2 : n1;
+      &#125;
+  &#125;);
+&#125;</code></pre>
+
+<p><span class="red bold">结论：</span>这两种方法都可以让类存储到TreeSet对象中，但是很明显两种方法针对的情况不同</p>
+<ol>
+<li>实现Comparable：是指定这个类被存储到集合中的排序方式，存储到任何一个TreeSet中都遵循这种排序方式</li>
+<li>传入Comparator实现类：是指定该TreeSet针对该类的排序方式，而该类存储到其他TreeSet中就需要重新指定排序方式</li>
+</ol>
+<hr>
+<p><strong>TreeSet小案例</strong></p>
+<p>使用TreeSet对传入的字符串进行排序，要求按照字符串的长度进行排序，若字符串长度想相等，则按照字母表进行排序</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Main &#123;
+    public static void main(String[] args) &#123;
+        TreeSet&lt;String&gt; strings &#x3D; new TreeSet&lt;String&gt;((o1, o2) -&gt; &#123;
+            int length &#x3D; o1.length() - o2.length();
+            int compare &#x3D; o1.compareTo(o2);
+            return length &#x3D;&#x3D; 0 ? compare : length;
+        &#125;);
+
+        strings.add(&quot;helloworld&quot;);
+        strings.add(&quot;zhang&quot;);
+        strings.add(&quot;lisi&quot;);
+        strings.add(&quot;wangwu&quot;);
+        strings.add(&quot;beijing&quot;);
+        strings.add(&quot;xian&quot;);
+        strings.add(&quot;nanjing&quot;);
+
+        for (String s : strings) &#123;
+            System.out.println(s);
+        &#125;
+    &#125;
+&#125;</code></pre>
+
+<h2 id="Map父接口"><a href="#Map父接口" class="headerlink" title="Map父接口"></a>Map父接口</h2><p><span class="red bold">特点：</span></p>
+<ol>
+<li>用于存储键值对（Key-Value）</li>
+<li>键：无序、无下标、<span class="red">不允许重复</span></li>
+<li>值：无序、无下标、<span class="red">允许重复</span></li>
+</ol>
+<hr>
+<p><strong>Map基本方法</strong></p>
+<p><span class="red bold">注意：</span>这里开始就和Collection有点不同了，Map并不属于Collection，Map是一个单独的体系</p>
+<pre class="line-numbers language-put(K" data-language="put(K"><div class="caption"><span>key, V value)```：向Map对象中增加键值对，若key重复，则新的值会替代原值</span></div><code class="language-put(K">
+&#96;&#96;&#96;get(Object key)&#96;&#96;&#96;：根据键获取对应的值
+
+&#96;&#96;&#96;remove(Object key)&#96;&#96;&#96;：通过传入的键删除键值对
+
+&#96;&#96;&#96;size()&#96;&#96;&#96;：返回Map中的键值对数量
+
+&#96;&#96;&#96;containsKey(Object key)&#96;&#96;&#96;：判断Map内是否存在该键
+
+&#96;&#96;&#96;containsValue(Object value)&#96;&#96;&#96;：判断Map内是否存在该值
+
+&#96;&#96;&#96;values()&#96;&#96;&#96;：返回包含所有值的Collection集合
+
+---
+**Map遍历方法**
+
+Map有两种遍历方法，分别是提取Map中所有的键 和 提取Map中所有的键值对并包装成entry
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;提取Map中所有的键&lt;&#x2F;span&gt;
+
+&#96;&#96;&#96;keySet()&#96;&#96;&#96;：该方法返回一个包含该对象所有&lt;span class&#x3D;&quot;red&quot;&gt;键值&lt;&#x2F;span&gt;的Set集合
+
+* 获取到所有键值之后可以通过增强for遍历，也可以通过迭代器遍历
+* 要获取对应的值，还需要在遍历过程中通过&#96;&#96;&#96;get()&#96;&#96;&#96;方法获取
+
+&#96;&#96;&#96;Java
+Set&lt;String&gt; set &#x3D; map.keySet();
+for (String s : set) &#123;
+    System.out.println(s + &quot;----------&quot; + map.get(s));
+&#125;</code></pre>
+
+<p><span class="red bold">提取Map中所有的映射对（键值对）</span></p>
+<p><span class="red">相比于获取全部键，获取键值对的效率更高</span>（因为获取键之后要获取值还是要回去Map里根据键取到相应的值）</p>
+<pre class="line-numbers language-entrySet()```：该方法返回一个包含该对象所有键值对的Entry类型Set集合对象" data-language="entrySet()```：该方法返回一个包含该对象所有键值对的Entry类型Set集合对象"><code class="language-entrySet()```：该方法返回一个包含该对象所有键值对的Entry类型Set集合对象">
+* Entry类：Entry是Map接口中的一个内部接口，它是键值对的一种封装
+* Entry类方法：
+  
+    &#96;&#96;&#96;getKey()&#96;&#96;&#96;：获取当前entry的键
+
+    &#96;&#96;&#96;getValue()&#96;&#96;&#96;：获取当前entry的值
+
+&#96;&#96;&#96;Java
+Set&lt;Map.Entry&lt;String, String&gt;&gt; entries &#x3D; map.entrySet();
+for (Map.Entry&lt;String, String&gt; entry : entries) &#123;
+    System.out.println(entry.getKey() + &quot;---------&quot; + entry.getValue());
+&#125;</code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="center">keySet与entrySet的区别</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/19/L0hmU1.md.png" alt="L0hmU1.md.png"></td>
+</tr>
+</tbody></table>
+<h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2><p>hashMap在JDK1.2版本引入，线程不安全，运行效率快</p>
+<p><span class="red bold">存储结构：</span>数组 + （单向）链表 + 红黑树（详见源码分析）</p>
+<p><span class="red bold">特点：</span></p>
+<ul>
+<li>hashMap允许null键和null值</li>
+<li>初始容量为16，加载因子为0.75<ul>
+<li>加载因子：指当数据达到容量的0.75倍时开始扩容</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>HashMap类方法</strong></p>
+<p>HashMap类方法与Map接口中方法相同</p>
+<hr>
+<p><strong>实现对象内容相同移除方法</strong></p>
+<p>HashMap不允许相同的键，并且是基于哈希码计算存储位置，<span class="red">因此HashMap是通过判断key的hashcode和equals返回值判断键是否相同</span></p>
+<p>要实现同键值不同对象判定为相同，则需要重写key的类的hashcode和equals方法</p>
+<p><span class="red">该判断条件适用于移除与判断方法</span></p>
+<hr>
+<p><strong>HashMap源码分析</strong></p>
+<p><span class="red bold">常量：</span> </p>
+<pre class="line-numbers language-DEFAULT_INITIAL_CAPACITY```：默认最小容量（当HashMap对象实例化时，创建的容量）" data-language="DEFAULT_INITIAL_CAPACITY```：默认最小容量（当HashMap对象实例化时，创建的容量）"><code class="language-DEFAULT_INITIAL_CAPACITY```：默认最小容量（当HashMap对象实例化时，创建的容量）">
+&#96;&#96;&#96;MAXIMUM_CAPACITY&#96;&#96;&#96;：最大容量
+
+&#96;&#96;&#96;DEFAULT_LOAD_FACTOR&#96;&#96;&#96;：加载因子（当存入的元素数量达到当前容量的0.75倍时开始扩容）
+
+---
+
+&#96;&#96;&#96;TREEIFY_THRESHOLD&#96;&#96;&#96; &#x3D; 8 
+
+&#96;&#96;&#96;UNTREEIFY_THRESHOLD&#96;&#96;&#96; &#x3D; 6 
+
+&#96;&#96;&#96;MIN_TREEIFY_CAPACITY&#96;&#96;&#96; &#x3D; 64
+
+HashMap的红黑树存储方法并不是一开始就出现的，需要达到一定的数据存储量，才会将链表转换为红黑树，这三个变量就是转换为红黑树的条件，条件是：
+1. 该链表长度 &gt; 8
+2. 数组长度 &gt; 64
+
+当链表长度 &lt; 6 时，会将红黑树转换回链表
+
+|                        HashMap存储结构                         |
+| :------------------------------------------------------------: |
+| ![Lrp7TA.md.png](https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2022&#x2F;04&#x2F;20&#x2F;Lrp7TA.md.png) |
+| ![LrpYon.md.png](https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2022&#x2F;04&#x2F;20&#x2F;LrpYon.md.png) |
+
+---
+
+HashMap和HashSet中存储的链表为单向链表，可查阅HashMap类的Node内部类，它只有向后一个元素指向的指针
+&#96;&#96;&#96;Java
+    static class Node&lt;K,V&gt; implements Map.Entry&lt;K,V&gt; &#123;
+        final int hash;
+        final K key;
+        V value;
+        Node&lt;K,V&gt; next;
+    &#125;</code></pre>
+
+<p><span class="red bold">构造方法：</span></p>
+<p>HashMap的构造方法中并不创建数组，只是设定了加载因子，在实例化对象之后，只会得到：</p>
+<ul>
+<li>tabel = null</li>
+<li>size = 0</li>
+</ul>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public HashMap() &#123;
+  this.loadFactor &#x3D; DEFAULT_LOAD_FACTOR;
+&#125;</code></pre>
+
+<p><span class="red bold">put方法：</span>put方法内只有一句调用putVal方法的语句，传入kay与value</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
+                boolean evict) &#123;
+    Node&lt;K,V&gt;[] tab; Node&lt;K,V&gt; p; int n, i;
+    &#x2F;&#x2F; 若table为null（table长度为0），调用resize()方法
+    if ((tab &#x3D; table) &#x3D;&#x3D; null || (n &#x3D; tab.length) &#x3D;&#x3D; 0)
+        n &#x3D; (tab &#x3D; resize()).length;
+    &#x2F;&#x2F; 根据HashCode计算在数组中的存储位置
+    &#x2F;&#x2F; 若该位置为空，将键值对封装为Node，装入该位置
+    if ((p &#x3D; tab[i &#x3D; (n - 1) &amp; hash]) &#x3D;&#x3D; null)
+        tab[i] &#x3D; newNode(hash, key, value, null);
+    else &#123;
+        &#x2F;&#x2F; ...
+    &#125;
+    &#x2F;&#x2F; 若增加元素后储存的元素数量超过阈值，进行扩容
+    if (++size &gt; threshold)
+        resize();
+    return null;
+&#125;</code></pre>
+
+<p><span class="red">resize方法：</span>resize方法用于扩容</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">final Node&lt;K,V&gt;[] resize() &#123;
+    &#x2F;&#x2F; 定义旧数组空间
+    Node&lt;K,V&gt;[] oldTab &#x3D; table;
+    &#x2F;&#x2F; 定义旧数组空间长度
+    int oldCap &#x3D; (oldTab &#x3D;&#x3D; null) ? 0 : oldTab.length;
+    &#x2F;&#x2F; 定义旧扩容阈值
+    int oldThr &#x3D; threshold;
+    &#x2F;&#x2F; 定义新数组空间和长度
+    int newCap, newThr &#x3D; 0;
+    &#x2F;&#x2F; 第n次触发扩容时，会走这里
+    if (oldCap &gt; 0) &#123;
+        if (oldCap &gt;&#x3D; MAXIMUM_CAPACITY) &#123;
+            threshold &#x3D; Integer.MAX_VALUE;
+            return oldTab;
+        &#125;
+        &#x2F;&#x2F; 每次扩容会将容量变为原来的两倍
+        else if ((newCap &#x3D; oldCap &lt;&lt; 1) &lt; MAXIMUM_CAPACITY &amp;&amp;
+                 oldCap &gt;&#x3D; DEFAULT_INITIAL_CAPACITY)
+            newThr &#x3D; oldThr &lt;&lt; 1; &#x2F;&#x2F; double threshold
+    &#125;
+    else if (oldThr &gt; 0)
+        newCap &#x3D; oldThr;
+    &#x2F;&#x2F; 第一次增加元素时（第一次扩容时）还没有设定阈值，会走这里
+    else &#123;
+        &#x2F;&#x2F; 新的空间长度会等于默认初始化长度（16）
+        newCap &#x3D; DEFAULT_INITIAL_CAPACITY;
+        &#x2F;&#x2F; 新的阈值会等于0.75 * 默认初始化长度（16）
+        newThr &#x3D; (int)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);
+    &#125;
+    &#x2F;&#x2F; 设定新阈值
+    threshold &#x3D; newThr;
+
+    @SuppressWarnings(&#123;&quot;rawtypes&quot;,&quot;unchecked&quot;&#125;)
+    &#x2F;&#x2F; 根据设置的容量创建新用于存储元素的数组
+    Node&lt;K,V&gt;[] newTab &#x3D; (Node&lt;K,V&gt;[])new Node[newCap];
+    &#x2F;&#x2F; 将该数组给变量table
+    table &#x3D; newTab;
+    if (oldTab !&#x3D; null) &#123;
+        for (int j &#x3D; 0; j &lt; oldCap; ++j) &#123;
+            &#x2F;&#x2F; 转存数据到新的数组 ...
+        &#125;
+    &#125;
+    return newTab;
+&#125;</code></pre>
     </div>
 
     

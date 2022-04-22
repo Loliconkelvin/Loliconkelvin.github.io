@@ -20,28 +20,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="CSS的3+1种导入方式">
+<meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java-IO流">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS样式的3+1种导入方式">
-<meta property="og:url" content="https://loliconkelvin.github.io/2021/04/27/CSS%E6%A0%B7%E5%BC%8F%E7%9A%843+1%E7%A7%8D%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F/index.html">
+<meta property="og:title" content="Java IO流">
+<meta property="og:url" content="https://loliconkelvin.github.io/2022/04/22/Java-IO%E6%B5%81/index.html">
 <meta property="og:site_name" content="萝莉控的小窝">
-<meta property="og:description" content="CSS的3+1种导入方式">
+<meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java-IO流">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-27T11:27:56.000Z">
-<meta property="article:modified_time" content="2021-05-17T12:12:52.784Z">
+<meta property="article:published_time" content="2022-04-22T01:02:43.000Z">
+<meta property="article:modified_time" content="2022-04-22T01:03:20.834Z">
 <meta property="article:author" content="Loliconkelvin">
-<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://loliconkelvin.github.io/2021/04/27/CSS%E6%A0%B7%E5%BC%8F%E7%9A%843+1%E7%A7%8D%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F/">
+<link rel="canonical" href="https://loliconkelvin.github.io/2022/04/22/Java-IO%E6%B5%81/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://loliconkelvin.github.io/2021/04/27/CSS%E6%A0%B7%E5%BC%8F%E7%9A%843+1%E7%A7%8D%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F/","path":"2021/04/27/CSS样式的3+1种导入方式/","title":"CSS样式的3+1种导入方式"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://loliconkelvin.github.io/2022/04/22/Java-IO%E6%B5%81/","path":"2022/04/22/Java-IO流/","title":"Java IO流"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>CSS样式的3+1种导入方式 | 萝莉控的小窝</title>
+<title>Java IO流 | 萝莉控的小窝</title>
   
 
 
@@ -104,7 +104,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -117,7 +117,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E6%A0%B7%E5%BC%8F%EF%BC%88%E6%A0%B7%E5%BC%8F%E4%BC%98%E5%85%88%E7%BA%A7%E6%9C%80%E9%AB%98%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">行内样式（样式优先级最高）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%88%E4%BC%98%E5%85%88%E7%BA%A7%EF%BC%9A%E5%B0%B1%E8%BF%91%E5%8E%9F%E5%88%99%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">内部样式表（优先级：就近原则）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%88%E4%BC%98%E5%85%88%E7%BA%A7%EF%BC%9A%E5%B0%B1%E8%BF%91%E5%8E%9F%E5%88%99%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">外部样式表（优先级：就近原则）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E6%8E%A5%E5%BC%8F"><span class="nav-number">3.1.</span> <span class="nav-text">链接式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%BC%8F%EF%BC%88%E4%B8%8D%E5%BB%BA%E8%AE%AE%E4%BD%BF%E7%94%A8%EF%BC%89"><span class="nav-number">3.2.</span> <span class="nav-text">导入式（不建议使用）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E5%BC%8F%E4%BC%98%E5%85%88%E7%BA%A7"><span class="nav-number">4.</span> <span class="nav-text">样式优先级</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -192,7 +191,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/04/27/CSS%E6%A0%B7%E5%BC%8F%E7%9A%843+1%E7%A7%8D%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F/">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2022/04/22/Java-IO%E6%B5%81/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.png">
@@ -205,7 +204,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          CSS样式的3+1种导入方式
+          Java IO流
         </h1>
 
         <div class="post-meta-container">
@@ -215,23 +214,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-04-27 19:27:56" itemprop="dateCreated datePublished" datetime="2021-04-27T19:27:56+08:00">2021-04-27</time>
+      <time title="创建时间：2022-04-22 09:02:43 / 修改时间：09:03:20" itemprop="dateCreated datePublished" datetime="2022-04-22T09:02:43+08:00">2022-04-22</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-05-17 20:12:52" itemprop="dateModified" datetime="2021-05-17T20:12:52+08:00">2021-05-17</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+          <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
         </span>
     </span>
 
@@ -245,46 +238,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>CSS的3+1种导入方式</p>
-<span id="more"></span>
+        <style>
+    .red {
+        color: red;
+    }
+    .bold {
+        font-weight: bold;
+    }
+</style>
 
-<h2 id="行内样式（样式优先级最高）"><a href="#行内样式（样式优先级最高）" class="headerlink" title="行内样式（样式优先级最高）"></a>行内样式（样式优先级最高）</h2><ul>
-<li>所谓行内样式，即直接在HTML标签中设置样式</li>
-<li>不建议使用，建议只在测试时使用<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;h1 style&#x3D;&quot;color: red;&quot;&gt;&lt;&#x2F;h1&gt;</code></pre></li>
-</ul>
-<h2 id="内部样式表（优先级：就近原则）"><a href="#内部样式表（优先级：就近原则）" class="headerlink" title="内部样式表（优先级：就近原则）"></a>内部样式表（优先级：就近原则）</h2><ul>
-<li>在HTML文件的head标签包含范围内写style标签，style标签内写CSS代码<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;head&gt;
-    &lt;style&gt;
-        h1&#123;
-            color: red;
-        &#125;
-    &lt;&#x2F;style&gt;
-&lt;&#x2F;head&gt;</code></pre></li>
-</ul>
-<h2 id="外部样式表（优先级：就近原则）"><a href="#外部样式表（优先级：就近原则）" class="headerlink" title="外部样式表（优先级：就近原则）"></a>外部样式表（优先级：就近原则）</h2><ul>
-<li>在HTML文件外创建CSS文件，再于HTML文件内使用语句导入CSS文件<h3 id="链接式"><a href="#链接式" class="headerlink" title="链接式"></a>链接式</h3></li>
-<li>使用link标签</li>
-<li>与导入式的区别：<ul>
-<li>载入网页时优先加载CSS文件至页面<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;link rel&#x3D;&quot;stylesheet&quot; herf&#x3D;&quot;路径&quot;&#x2F;&gt;</code></pre></li>
-</ul>
-</li>
-</ul>
-<h3 id="导入式（不建议使用）"><a href="#导入式（不建议使用）" class="headerlink" title="导入式（不建议使用）"></a>导入式（不建议使用）</h3><ul>
-<li>使用style标签与@import</li>
-<li>与链接式的区别：<ul>
-<li>载入网页时先加载HTML文件再载入CSS文件<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;
-    @import url(&quot;路径&quot;);
-&lt;&#x2F;style&gt;</code></pre></li>
-</ul>
-</li>
-</ul>
-<h2 id="样式优先级"><a href="#样式优先级" class="headerlink" title="样式优先级"></a>样式优先级</h2><ul>
-<li>行内样式优先级最高</li>
-<li>内部样式与外部样式：<ul>
-<li>看style标签与link标签哪个相比于正文（相比于body）近</li>
-</ul>
-</li>
-</ul>
+<p>Java-IO流</p>
+<span id="more"></span>
 
     </div>
 
@@ -294,21 +258,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/CSS/" rel="tag"># CSS</a>
+              <a href="/tags/Java/" rel="tag"># Java</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/04/26/CSS%E8%A7%84%E8%8C%83%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%A0%BC%E5%BC%8F/" rel="prev" title="CSS规范与基本格式">
-                  <i class="fa fa-chevron-left"></i> CSS规范与基本格式
+                <a href="/2022/04/11/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" rel="prev" title="Java集合框架">
+                  <i class="fa fa-chevron-left"></i> Java集合框架
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/04/27/CSS%E9%80%89%E6%8B%A9%E5%99%A8/" rel="next" title="CSS选择器">
-                  CSS选择器 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>

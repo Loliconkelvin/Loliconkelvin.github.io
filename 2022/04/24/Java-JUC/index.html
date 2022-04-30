@@ -27,11 +27,20 @@
 <meta property="og:site_name" content="萝莉控的小窝">
 <meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java-JUC">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/25/LIDpTK.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/25/LT3PrF.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/26/LbE66H.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/26/LbE4tf.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/26/LbVS9U.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/26/LbVEAx.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/26/LbVm9O.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/26/LbVKjH.md.png">
 <meta property="article:published_time" content="2022-04-24T08:28:50.000Z">
-<meta property="article:modified_time" content="2022-04-24T08:29:36.817Z">
+<meta property="article:modified_time" content="2022-04-30T08:27:19.153Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/04/25/LIDpTK.png">
 
 
 <link rel="canonical" href="https://loliconkelvin.github.io/2022/04/24/Java-JUC/">
@@ -104,7 +113,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -117,6 +126,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFJUC"><span class="nav-number">1.</span> <span class="nav-text">什么是JUC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%92%8C%E8%BF%9B%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">线程和进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C"><span class="nav-number">3.</span> <span class="nav-text">并发和并行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9E%E9%A1%BE%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8Esynchronized%E5%90%8C%E6%AD%A5"><span class="nav-number">4.</span> <span class="nav-text">回顾多线程与synchronized同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lock"><span class="nav-number">5.</span> <span class="nav-text">Lock</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synchronized%E5%92%8CLock%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">6.</span> <span class="nav-text">synchronized和Lock的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98"><span class="nav-number">7.</span> <span class="nav-text">生产者消费者问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8%E9%94%81%E7%8E%B0%E8%B1%A1%E7%90%86%E8%A7%A3%E9%94%81"><span class="nav-number">8.</span> <span class="nav-text">8锁现象理解锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E9%9B%86%E5%90%88%E7%B1%BB"><span class="nav-number">9.</span> <span class="nav-text">不安全的集合类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Callable"><span class="nav-number">10.</span> <span class="nav-text">Callable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JUC%E4%B8%89%E4%B8%AA%E5%B8%B8%E7%94%A8%E8%BE%85%E5%8A%A9%E7%B1%BB%E2%80%94%E2%80%94CountDownLatch"><span class="nav-number">11.</span> <span class="nav-text">JUC三个常用辅助类——CountDownLatch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JUC%E4%B8%89%E4%B8%AA%E5%B8%B8%E7%94%A8%E8%BE%85%E5%8A%A9%E7%B1%BB%E2%80%94%E2%80%94CyclicBarrier"><span class="nav-number">12.</span> <span class="nav-text">JUC三个常用辅助类——CyclicBarrier</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JUC%E4%B8%89%E4%B8%AA%E5%B8%B8%E7%94%A8%E8%BE%85%E5%8A%A9%E7%B1%BB%E2%80%94%E2%80%94Semaphore"><span class="nav-number">13.</span> <span class="nav-text">JUC三个常用辅助类——Semaphore</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ReadWriteLock%E8%AF%BB%E5%86%99%E9%94%81"><span class="nav-number">14.</span> <span class="nav-text">ReadWriteLock读写锁</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -214,10 +224,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-04-24 16:28:50 / 修改时间：16:29:36" itemprop="dateCreated datePublished" datetime="2022-04-24T16:28:50+08:00">2022-04-24</time>
+      <time title="创建时间：2022-04-24 16:28:50" itemprop="dateCreated datePublished" datetime="2022-04-24T16:28:50+08:00">2022-04-24</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-04-30 16:27:19" itemprop="dateModified" datetime="2022-04-30T16:27:19+08:00">2022-04-30</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -249,6 +265,582 @@
 
 <p>Java-JUC</p>
 <span id="more"></span>
+
+<h2 id="什么是JUC"><a href="#什么是JUC" class="headerlink" title="什么是JUC"></a>什么是JUC</h2><p>JUC指 java.util.concurrent 包，还包括 java.util.concurrent.atomic java.util.concurrent.locks</p>
+<h2 id="线程和进程"><a href="#线程和进程" class="headerlink" title="线程和进程"></a>线程和进程</h2><p><span class="red bold">进程：</span>指一个程序，一个进程会包含至少一个线程（Java默认有两个线程：main、gc）</p>
+<p><span class="red bold">线程：</span>指一个程序里的一些同步进行的功能，它们可能是通过线程实现的</p>
+<p>Java本身不能开启线程，因为Java运行在虚拟机中，无法直接操作硬件，它是通过调用底层C++来开启线程</p>
+<hr>
+<p><strong>回顾线程的状态</strong></p>
+<p>理论上：创建、就绪、运行、死亡、阻塞</p>
+<p>源码指定的：</p>
+<ol>
+<li>NEW：创建</li>
+<li>RUNNABLE：就绪</li>
+<li>BLOCKED：阻塞</li>
+<li>WAITING：无限期等待</li>
+<li>TIMED_WAITING：超时等待（有时间限制）</li>
+<li>TERMINATED：消亡</li>
+</ol>
+<hr>
+<p><strong>wait和sleep的区别</strong></p>
+<ol>
+<li>来自不同的类<ul>
+<li>wait在Object里</li>
+<li>sleep在Thread里</li>
+</ul>
+</li>
+<li>锁<ul>
+<li>wait会释放锁</li>
+<li>sleep抱着锁睡觉</li>
+</ul>
+</li>
+<li>适用范围不同<ul>
+<li>wait必须在同步代码块中</li>
+<li>任何线程都可以sleep</li>
+</ul>
+</li>
+</ol>
+<h2 id="并发和并行"><a href="#并发和并行" class="headerlink" title="并发和并行"></a>并发和并行</h2><p><span class="red bold">并发：</span>指多个线程操作一个资源。并发的本质是一个CPU在多个程序之间切换运行。</p>
+<p><span class="red bold">并行：</span>指多个线程可以同时被多个CPU执行</p>
+<h2 id="回顾多线程与synchronized同步"><a href="#回顾多线程与synchronized同步" class="headerlink" title="回顾多线程与synchronized同步"></a>回顾多线程与synchronized同步</h2><hr>
+<p><strong>面向对象的多线程编写</strong></p>
+<p>以前写多线程时，经常一个类继承Thread类或实现Runnable接口，但是这都不够面向对象</p>
+<p><span class="red bold">资源类：</span>专类专用，在真正的线程开发中，线城市一个单独的资源类，只有属性和方法，如：</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">class Ticket &#123;
+    &#x2F;&#x2F; 票数
+    private static int number &#x3D; 50;
+
+    &#x2F;&#x2F; 卖票方法
+    public synchronized void sale() &#123;
+        if (number &gt; 0) &#123;
+            System.out.println(Thread.currentThread().getName() + &quot;卖出了第&quot; + number-- + &quot;张票，&quot; + &quot;剩余&quot; + number + &quot;张&quot;);
+            try &#123;
+                Thread.sleep(100);
+            &#125; catch (InterruptedException e) &#123;
+                e.printStackTrace();
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
+
+<p><span class="red bold">线程操作：</span>那么如何实现线程对资源类的操作？只需要想办法将资源类丢到线程里即可，基本思路是：<code>Thread里丢Runnable，Runnable里丢run方法，run方法里丢资源类方法</code>，如：</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 首先需要一个被操作的资源类
+Ticket ticket &#x3D; new Ticket();
+
+&#x2F;&#x2F; 然后需要一个线程，然后把资源类扔进线程里
+new Thread(() -&gt; &#123;
+   for (int i &#x3D; 0; i &lt; 60; i++) &#123;
+       ticket.sale();
+   &#125;
+&#125;, &quot;A&quot;).start();</code></pre>
+
+<p><span class="red bold">实现同步：</span>针对synchronized同步，就是在方法里面加上synchronized修饰（或使用synchronized代码块）</p>
+<p><span class="red">关于锁：</span>锁会锁定两个东西，一个是对象，一个是class</p>
+<h2 id="Lock"><a href="#Lock" class="headerlink" title="Lock"></a>Lock</h2><p>Lock指java.util.concurrent.locks中的lock接口，它有三个实现类，分别是：</p>
+<ol>
+<li>ReentrantLock：可重入锁（常用）</li>
+<li>ReentrantReadWriteLock.ReadLock：读锁（内部类）</li>
+<li>ReentrantReadWriteLock.WriteLock：写锁（内部类）</li>
+</ol>
+<p>我们先使用可重入锁，根据官方文档，使用可重入锁分为三步：</p>
+<ol>
+<li>创建锁对象（Lock lock = new …）</li>
+<li>加锁（Lock.lock() try { // 同步代码块}）</li>
+<li>解锁（ finally {lock.unlock()} ）</li>
+</ol>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">class Ticket2 &#123;
+    &#x2F;&#x2F; 票数
+    private static int number &#x3D; 50;
+
+    &#x2F;&#x2F; 创建锁对象
+    Lock lock &#x3D; new ReentrantLock();
+
+    &#x2F;&#x2F; 卖票方法
+    public void sale() &#123;
+        &#x2F;&#x2F; 加锁
+        lock.lock();
+
+        try &#123;
+            if (number &gt; 0) &#123;
+                System.out.println(Thread.currentThread().getName() + &quot;卖出了第&quot; + number-- + &quot;张票，&quot; + &quot;剩余&quot; + number + &quot;张&quot;);
+                try &#123;
+                    Thread.sleep(100);
+                &#125; catch (InterruptedException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+        &#125; finally &#123;
+            &#x2F;&#x2F; 解锁
+            lock.unlock();
+        &#125;
+    &#125;
+&#125;</code></pre>
+
+<h2 id="synchronized和Lock的区别"><a href="#synchronized和Lock的区别" class="headerlink" title="synchronized和Lock的区别"></a>synchronized和Lock的区别</h2><table>
+<thead>
+<tr>
+<th align="center">synchronized</th>
+<th align="center">Lock</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">关键字</td>
+<td align="center">类</td>
+</tr>
+<tr>
+<td align="center">自动加锁解锁</td>
+<td align="center">手动加锁解锁</td>
+</tr>
+<tr>
+<td align="center">无法判断锁的状态</td>
+<td align="center">可以判断锁的状态</td>
+</tr>
+<tr>
+<td align="center">一直等待</td>
+<td align="center">可以设置超时</td>
+</tr>
+<tr>
+<td align="center">非公平锁</td>
+<td align="center">可以自定义是否公平</td>
+</tr>
+<tr>
+<td align="center">少量同步代码</td>
+<td align="center">大量同步代码</td>
+</tr>
+</tbody></table>
+<ol>
+<li>synchronized是一个Java内置关键字；Lock是一个类</li>
+<li>synchronized自动隐式加锁；Lock手动显式加锁</li>
+<li>synchronized无法判断获取锁的状态；Lock可以判断是否获取到了锁</li>
+<li>synchronized会自动释放锁；Lock需要手动释放，若不释放会造成死锁</li>
+<li>synchronized在一个线程阻塞的时候，另一个线程会一直等；Lock锁时则另一个线程不一定会一直等（tryLock()）</li>
+<li>synchronized为可重入锁，不可以中断的，非公平锁；Lock为可重入锁，可以判断锁的状态，可以自定义是否公平</li>
+<li>synchronized适合少量代码同步问题；Lock适合锁大量同步代码</li>
+</ol>
+<h2 id="生产者消费者问题"><a href="#生产者消费者问题" class="headerlink" title="生产者消费者问题"></a>生产者消费者问题</h2><p>PC（ProducerConsumer）问题三部曲：<span class="red">判断等待-&gt;业务-&gt;唤醒</span></p>
+<hr>
+<p><strong>回顾synchronized版生产者消费者问题</strong></p>
+<p>根据PC问题三部曲并且根据上面资源类的格式，可以得到以下代码：</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class ProducerConsumer &#123;
+    public static void main(String[] args) &#123;
+        Buffer buffer &#x3D; new Buffer();
+
+        new Thread(() -&gt; &#123;
+            for (int i &#x3D; 0; i &lt; 10; i++) &#123;
+                buffer.put(i);
+            &#125;
+        &#125;, &quot;Producer1&quot;).start();
+
+        new Thread(() -&gt; &#123;
+            for (int i &#x3D; 0; i &lt; 10; i++) &#123;
+                buffer.get();
+            &#125;
+        &#125;, &quot;Consumer1&quot;).start();
+    &#125;
+&#125;
+
+class Buffer &#123;
+    private int buffer;
+    private boolean updated &#x3D; false;
+
+    &#x2F;&#x2F; 生产者将调用该方法
+    public synchronized void put(int num) &#123;
+        &#x2F;&#x2F; 判断等待（使用while防止虚假唤醒）
+        if (updated) &#123;
+            try &#123;
+                this.wait();
+            &#125; catch (InterruptedException e) &#123;
+                e.printStackTrace();
+            &#125;
+        &#125;
+        &#x2F;&#x2F; 操作
+        buffer &#x3D; num;
+        System.out.println(Thread.currentThread().getName() + &quot;放入&quot; + buffer);
+        updated &#x3D; true;
+
+        &#x2F;&#x2F; 唤醒
+        notifyAll();
+    &#125;
+
+    &#x2F;&#x2F; 消费者将调用该方法
+    public synchronized void get() &#123;
+        &#x2F;&#x2F; 判断等待
+        if (!updated) &#123;
+            try &#123;
+                this.wait();
+            &#125; catch (InterruptedException e) &#123;
+                e.printStackTrace();
+            &#125;
+        &#125;
+        &#x2F;&#x2F; 业务
+        System.out.println(Thread.currentThread().getName() + &quot;取出&quot; + buffer);
+        updated &#x3D; false;
+
+        &#x2F;&#x2F; 通知
+        notifyAll();
+    &#125;
+&#125;</code></pre>
+
+<hr>
+<p><strong>虚假唤醒问题</strong></p>
+<p>虚假唤醒指多个线程被唤醒，但有些线程是有效的，有些线程是无效或会造成错误的</p>
+<p><span class="red bold">问题：</span></p>
+<p>注意上面在同步方法在中使用了if来判断，这在两个线程操作一个对象的时候没有问题，但是在两个以上操作线程时就会出现问题</p>
+<p><img src="https://s1.ax1x.com/2022/04/25/LIDpTK.png" alt="LIDpTK.png"></p>
+<p><span class="red bold">问题分析：</span></p>
+<p>当有两个消费者（消费者同理）时</p>
+<ol>
+<li>在上一次两个生产者被同时notify唤醒后，有一个生产者（假设是生产者1）执行完了方法，而另一个（假设是生产者2）来不及执行，停在了this.wait()方法处</li>
+<li>而当两个生产者再次被notify唤醒时，碰巧生产者1抢占到了资源并执行完毕，然后生产者2紧接着占到资源，从wait处继续往下执行，就造成了两个生产者都操作了资源的问题<br><img src="https://s1.ax1x.com/2022/04/25/LT3PrF.md.png" alt="LT3PrF.md.png"></li>
+</ol>
+<blockquote>
+<p>实例分析（应用于对数据进行+1和-1）：线程1进入方法，++后释放，线程2进入方法，！=被wait，线程3进入方法，–后释放，释放的瞬间线程1拿到了锁，进入后++，线程2从wait中被唤醒，向下执行后++，出现了2这样的数字</p>
+</blockquote>
+<p><span class="red bold">解决：</span>将判断等待部分使用while判断，使wait结束之后不能马上进入业务，还要再判断一遍</p>
+<hr>
+<p><strong>JUC版生产者消费者问题</strong></p>
+<p>synchronized有wait和notify，Lock接口本身并没有可以代替这两个方法的方法，但另一个接口Condition有</p>
+<p><span class="red bold">构造方法：</span>需要通过Lock对象的<code>newCondition()</code>方法将Condition对象new出，该Condition对象会与对应的Lock对象绑定</p>
+<p><span class="red bold">方法：</span></p>
+<pre class="line-numbers language-await()```：当前线程等待，直到发出信号或中断" data-language="await()```：当前线程等待，直到发出信号或中断"><code class="language-await()```：当前线程等待，直到发出信号或中断">
+&#96;&#96;&#96;signal()&#96;&#96;&#96;：唤醒一个等待线程
+
+&#96;&#96;&#96;signalAll()&#96;&#96;&#96;：唤醒所有等待线程
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;使用格式：&lt;&#x2F;span&gt;
+
+&#96;&#96;&#96;Java
+private final Lock lock &#x3D; new Lock();
+println final Condition put &#x3D; lock.newCondition();
+println final Condition get &#x3D; lock.newCondition();
+
+public void put(int num) &#123;
+    lock.lock();
+    try &#123;
+        while(updated) &#123;
+            put.await();
+        &#125;
+
+        &#x2F;&#x2F; ......
+
+        get.signalAll();
+    &#125; finally &#123;
+        lock.unlock;
+    &#125;
+&#125;</code></pre>
+
+<hr>
+<p><strong>Condition精准通知某个线程</strong></p>
+<p>Condition的特点在于：<span class="red">一个Lock锁可以与多个监视器绑定，一个监视器监视一个线程，则可以实现精准通知某个监视器（线程）</span></p>
+<h2 id="8锁现象理解锁"><a href="#8锁现象理解锁" class="headerlink" title="8锁现象理解锁"></a>8锁现象理解锁</h2><p>现有以下程序：</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class LockTest &#123;
+    public static void main(String[] args) &#123;
+        Phone phone &#x3D; new Phone();
+        new Thread(phone::sendMsg, &quot;A&quot;).start();
+
+        new Thread(phone::call, &quot;B&quot;).start();
+    &#125;
+&#125;
+
+class Phone &#123;
+    public synchronized void sendMsg() &#123;
+        System.out.println(&quot;发短信&quot;);
+    &#125;
+
+    public synchronized void call() &#123;
+        System.out.println(&quot;打电话&quot;);
+    &#125;
+&#125;</code></pre>
+
+<hr>
+<ol>
+<li><strong>main线程延时（对象锁）</strong></li>
+</ol>
+<p><span class="red bold">问题：</span>若在main线程中的两个线程开启之间延时4s，发短信和打电话谁先执行？</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Phone phone &#x3D; new Phone();
+new Thread(phone::sendMsg, &quot;A&quot;).start();
+
+try &#123;
+   TimeUnit.SECONDS.sleep(4);
+&#125; catch (InterruptedException e) &#123;
+   e.printStackTrace();
+&#125;
+
+new Thread(phone::call, &quot;B&quot;).start();</code></pre>
+
+<p><span class="red bold">解答：</span>发短息先执行 <br /><br>因为发短信在主线程中先被开启，拿到了锁，打电话在4s后被开启，得到锁</p>
+<p><img src="https://s1.ax1x.com/2022/04/26/LbE66H.md.png" alt="LbE66H.md.png"></p>
+<hr>
+<ol start="2">
+<li><strong>main线程 + 同步方法延时</strong></li>
+</ol>
+<p><span class="red bold">问题：</span>若发短信方法延时4s，main线程延时2s，谁先执行？</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public synchronized void sendMsg() &#123;
+  try &#123;
+      TimeUnit.SECONDS.sleep(4);
+  &#125; catch (InterruptedException e) &#123;
+      e.printStackTrace();
+  &#125;
+  System.out.println(&quot;发短信&quot;);
+&#125;</code></pre>
+
+<p><span class="red bold">解答：</span>发短信先执行 <br /><br>因为还是发短息先得到了锁，并且发短信会在4s后</p>
+<p><img src="https://s1.ax1x.com/2022/04/26/LbE4tf.md.png" alt="LbE4tf.md.png"></p>
+<p><span class="red bold">对象锁：</span>这里锁的是phone对象，因为两个线程使用用一个对象，因此使用同一把锁</p>
+<hr>
+<ol start="3">
+<li><strong>同步方法 + 不同步方法</strong></li>
+</ol>
+<p><span class="red bold">问题：</span>将打电话改为不同步方法，延时条件不变（main延时2s，发短信延时4s），谁先执行？</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public void call() &#123;
+        System.out.println(&quot;打电话&quot;);
+    &#125;</code></pre>
+
+<p><span class="red bold">解答：</span>打电话先执行，因为打电话不是同步方法，不受锁的影响，因此只需要看时间延时决定谁先执行。</p>
+<p><img src="https://s1.ax1x.com/2022/04/26/LbVS9U.md.png" alt="LbVS9U.md.png"></p>
+<hr>
+<ol start="4">
+<li><strong>两个对象</strong></li>
+</ol>
+<p><span class="red bold">问题：</span>将new一个对象变为new两个对象，两个线程分别调用两个对象的发短信和打电话方法，延时条件不变（main延时2s，发短信延时4s），谁先执行？</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class LockTest1 &#123;
+    public static void main(String[] args) &#123;
+        Phone1 phone1 &#x3D; new Phone1();
+        Phone1 phone2 &#x3D; new Phone1();
+        new Thread(phone1::sendMsg, &quot;A&quot;).start();
+
+        try &#123;
+            TimeUnit.SECONDS.sleep(2);
+        &#125; catch (InterruptedException e) &#123;
+            e.printStackTrace();
+        &#125;
+
+        new Thread(phone2::call, &quot;B&quot;).start();
+    &#125;
+&#125;</code></pre>
+
+<p><span class="red bold">解答：</span>打电话先执行，因为是两个不同的对象，因此是两把锁互不干涉，看时间延时来决定谁先执行</p>
+<p><img src="https://s1.ax1x.com/2022/04/26/LbVEAx.md.png" alt="LbVEAx.md.png"></p>
+<hr>
+<ol start="5">
+<li><strong>静态同步方法（Class锁）</strong></li>
+</ol>
+<p><span class="red bold">问题：</span>将两个同步方法都变为静态同步方法，只有一个对象，延时条件不变（main延时2s，发短信延时4s），谁先执行？</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static synchronized void sendMsg() &#123;
+  try &#123;
+      TimeUnit.SECONDS.sleep(4);
+  &#125; catch (InterruptedException e) &#123;
+      e.printStackTrace();
+  &#125;
+  System.out.println(&quot;发短信&quot;);
+&#125;
+
+public static synchronized void call() &#123;
+  System.out.println(&quot;打电话&quot;);
+&#125;</code></pre>
+
+<p><span class="red bold">解答：</span>发短信先执行，静态方法锁的是该类的Class对象，Class对象一个类只对应一个，谁先拿到谁先执行</p>
+<p><img src="https://s1.ax1x.com/2022/04/26/LbVm9O.md.png" alt="LbVm9O.md.png"></p>
+<p><span class="red bold">Class锁：</span>Class锁会在调用该类静态方法时用到，只要是调用该类的静态方法，都要请求到这个Class对象锁，相当于是<span class="red">Class锁会将该类的静态方法全部锁定</span></p>
+<hr>
+<ol start="6">
+<li><strong>静态方法 + 两个对象</strong></li>
+</ol>
+<p><span class="red bold">问题：</span>两个对象，谁先执行？</p>
+<p><span class="red bold">解答：</span>结果和上面一样，发短信先执行，本来静态方法的调用就和对象没关系，并且Class锁并不是根据对象来锁的，也跟对象没关系</p>
+<hr>
+<ol start="7">
+<li><strong>静态方法 + 非静态方法</strong></li>
+</ol>
+<p><span class="red bold">问题：</span>发短信是静态同步方法，打电话是普通同步方法，延时条件不变（main延时2s，发短信延时4s），谁先执行？</p>
+<p><span class="red bold">解答：</span>打电话先执行，这是两把锁互不干涉，看时间延时来决定谁先执行</p>
+<p><img src="https://s1.ax1x.com/2022/04/26/LbVKjH.md.png" alt="LbVKjH.md.png"></p>
+<hr>
+<ol start="8">
+<li><strong>静态方法 + 非静态方法 + 两个对象</strong></li>
+</ol>
+<p><span class="red bold">问题：</span>在第7问的基础上将对象变为两个，谁先执行？</p>
+<p><span class="red bold">解答：</span>打电话先执行，这里有两把锁互不干涉，看时间延时来决定谁先执行</p>
+<h2 id="不安全的集合类"><a href="#不安全的集合类" class="headerlink" title="不安全的集合类"></a>不安全的集合类</h2><hr>
+<p><strong>并发修改异常</strong></p>
+<p>zszz，ArrayList只在单线程的时候会爆并发修改异常，而解决方法有以下几种：</p>
+<ol>
+<li>改用Vector（但还是会爆……）</li>
+<li>使用工具类Collections静态方法<code>synchronizedList(List&lt;T&gt; list)</code>将集合变为同步集合</li>
+<li>使用java.util.concurrent包下的CopyOnWriteArrayList（<span class="red">好处在于该类只在写入的时候加锁，读取的时候不加锁，提高效率</span>）</li>
+</ol>
+<br />
+
+<p>Set同理，也会爆并发修改异常：</p>
+<ol>
+<li>使用工具类Collections静态方法<code>synchronizedSet(Set&lt;T&gt; s)</code>将集合变为同步集合</li>
+<li>使用java.util.concurrent包下的CopyOnWriteArraySet</li>
+</ol>
+<p>Map同理：</p>
+<ol>
+<li>改用HashTable</li>
+<li>使用工具类Collections静态方法<code>synchronizedMap(Map&lt;K,V&gt; m)</code>将集合变为同步集合</li>
+<li>使用java.util.concurrent包下的<span class="red">ConcurrentHashMap</span></li>
+</ol>
+<h2 id="Callable"><a href="#Callable" class="headerlink" title="Callable"></a>Callable</h2><p>有返回值、可抛出异常、需要重写call()方法</p>
+<hr>
+<p><strong>启动Callable</strong></p>
+<p><span class="red bold">问题：</span>Thread只能接收Runnable，如何启动Callable？</p>
+<p><span class="red bold">解决：</span>使用适配器类FutureTask。</p>
+<hr>
+<p><strong>FutureTask</strong></p>
+<p>FutureTask是Runnable的一个实现类，可以将Callable进行封装</p>
+<p><span class="red bold">注意：</span></p>
+<ol>
+<li><p>被丢进FutureTask的线程<span class="red">只会执行一次</span>，再次执行时，Callable线程的状态已经改变</p>
+<ul>
+<li>线程状态：<br>FutureTask内定义了多个线程状态</li>
+</ul>
+<ol>
+<li>当一个线程被丢进FutureTask构造方法时，状态被定义为NEW</li>
+<li>在执行FutureTask的run()方法时，<span class="red">先检查线程状态，若线程状态不为NEW，则不会调用Callable的call()方法</span>，若为NEW，则会调用Callable的call()方法，call()方法执行完毕后，会接收call()方法的返回值并保留，此时线程状态被设置为COMPLETING</li>
+<li>保留完返回值后，线程状态被设置为NORMAL</li>
+</ol>
+</li>
+<li><p>使用FutureTask对象的方法<code>get()</code>，以获取存储在FutureTask对象中的Call()方法返回值</p>
+</li>
+<li><p><code>get()</code>方法会阻塞，当线程状态在NEW或COMPLETING时，get()方法会等待线程执行完毕</p>
+</li>
+</ol>
+<h2 id="JUC三个常用辅助类——CountDownLatch"><a href="#JUC三个常用辅助类——CountDownLatch" class="headerlink" title="JUC三个常用辅助类——CountDownLatch"></a>JUC三个常用辅助类——CountDownLatch</h2><p>CountDownLatch是一个减法计数器，使用在 当某个事件需要发生在其他几个事件都完成后 的情况下</p>
+<p><span class="red bold">构造方法：</span></p>
+<pre class="line-numbers language-CountDownLatch​(int" data-language="CountDownLatch​(int"><div class="caption"><span>count)```：给定一个计数器初值</span></div><code class="language-CountDownLatch​(int">
+&lt;span class&#x3D;&quot;red bold&quot;&gt;方法：&lt;&#x2F;span&gt;
+
+&#96;&#96;&#96;await()&#96;&#96;&#96;：使当前线程在计数器归零前等待
+
+&#96;&#96;&#96;await​(long timeout, TimeUnit unit)&#96;&#96;&#96;：使当前线程在计数器归零前进行超时等待（timeout：时间数字；unit：时间单位），返回当前计数器是否已经归零
+
+&#96;&#96;&#96;	countDown()&#96;&#96;&#96;：使计数器-1
+
+&#96;&#96;&#96;	getCount()&#96;&#96;&#96;：返回当前计数器的值
+
+下面的例子实现main线程的最后一句输出始终会在线程输出完之后执行
+
+&#96;&#96;&#96;Java
+public static void main(String[] args) throws InterruptedException &#123;
+  CountDownLatch endSignal &#x3D; new CountDownLatch(3);
+
+  for (int i &#x3D; 0; i &lt; 3; i++) &#123;
+      new Thread(() -&gt; &#123;
+          System.out.println(&quot;创建线程&quot;);
+          endSignal.countDown();
+      &#125;, String.valueOf(i)).start();
+  &#125;
+
+  endSignal.await();
+
+  System.out.println(&quot;这将最后执行&quot;);
+&#125;</code></pre>
+
+<h2 id="JUC三个常用辅助类——CyclicBarrier"><a href="#JUC三个常用辅助类——CyclicBarrier" class="headerlink" title="JUC三个常用辅助类——CyclicBarrier"></a>JUC三个常用辅助类——CyclicBarrier</h2><p>CyclicBarrier是一个加法计数器，其计数依据不是数字，而是等待的线程数，当等待的线程数达到阈值时，他会唤醒所有等待线程</p>
+<p>官方把它称作一个屏障，当有指定数量的线程到达屏障处等待时，屏障将消失，允许线程继续执行</p>
+<p><span class="red bold">构造方法：</span></p>
+<pre class="line-numbers language-CyclicBarrier​(int" data-language="CyclicBarrier​(int"><div class="caption"><span>parties)```：指定触发所需要的等待线程数</span></div><code class="language-CyclicBarrier​(int">
+&#96;&#96;&#96;CyclicBarrier​(int parties, Runnable barrierAction)&#96;&#96;&#96;：指定触发所需要的等待线程数，屏障触发后会执行barrierAction线程
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;方法：&lt;&#x2F;span&gt;
+
+&#96;&#96;&#96;await()&#96;&#96;&#96;：使当前线程在屏障消失前等待
+
+&#96;&#96;&#96;	await​(long timeout, TimeUnit unit)&#96;&#96;&#96;：使当前线程在屏障消失前进行超时等待（timeout：时间数字；unit：时间单位）
+
+&#96;&#96;&#96;getNumberWaiting()&#96;&#96;&#96;：返回当前正在等待的线程数量
+
+&#96;&#96;&#96;	getParties()&#96;&#96;&#96;：返回触发屏障消失所需的等待线程数
+
+&#96;&#96;&#96;isBroken()&#96;&#96;&#96;：此屏障是否已经触发
+
+&#96;&#96;&#96;reset()&#96;&#96;&#96;：重置屏障状态
+
+下面的例子实现传入CyclicBarrier对象的线程会在下面五个线程都为等待状态时触发屏障而执行
+
+&#96;&#96;&#96;Java
+public static void main(String[] args) &#123;
+  CyclicBarrier barrier &#x3D; new CyclicBarrier(5, () -&gt; System.out.println(&quot;屏障击破&quot;));
+
+
+  for (int i &#x3D; 0; i &lt; 5; i++) &#123;
+      new Thread(() -&gt; &#123;
+          System.out.println(&quot;创建线程&quot;);
+          try &#123;
+              barrier.await();
+          &#125; catch (InterruptedException e) &#123;
+              e.printStackTrace();
+          &#125; catch (BrokenBarrierException e) &#123;
+              e.printStackTrace();
+          &#125;
+      &#125;).start();
+  &#125;
+&#125;</code></pre>
+
+<h2 id="JUC三个常用辅助类——Semaphore"><a href="#JUC三个常用辅助类——Semaphore" class="headerlink" title="JUC三个常用辅助类——Semaphore"></a>JUC三个常用辅助类——Semaphore</h2><p>Semaphore类与上面两个计数器不同，Semaphore称为信号量，用于同一时间只能有指定数量的线程执行，执行完之后再把位置让给其他线程执行（像去茶餐厅吃饭找位置一样，同一个位置，别人吃完，你才能坐上去），通常用于限流</p>
+<p><span class="red bold">构造方法：</span></p>
+<pre class="line-numbers language-Semaphore​(int" data-language="Semaphore​(int"><div class="caption"><span>permits)```：指定可被申请的位置数，默认非公平</span></div><code class="language-Semaphore​(int">
+&#96;&#96;&#96;Semaphore(int permits, boolean fair)&#96;&#96;&#96;：指定可被申请的位置数，并指定是否公平
+
+&lt;span class&#x3D;&quot;red bold&quot;&gt;方法：&lt;&#x2F;span&gt;
+
+&#96;&#96;&#96;acquire()&#96;&#96;&#96;：使该线程从此信号量获得许可，或未获取到许可则阻塞
+
+&#96;&#96;&#96;acquire​(int permits)&#96;&#96;&#96;：使该线程从此信号量获得给定数量的许可，或未获取到许可则阻塞
+
+&#96;&#96;&#96;release()&#96;&#96;&#96;：使该线程释放获取到的许可
+
+&#96;&#96;&#96;release​(int permits)&#96;&#96;&#96;：使该线程释放给定数量的许可
+
+&#96;&#96;&#96;	tryAcquire()&#96;&#96;&#96;：尝试申请许可，若申请不到则直接返回false
+
+&#96;&#96;&#96;Java
+public static void main(String[] args) &#123;
+  Semaphore semaphore &#x3D; new Semaphore(3, true);
+
+  for (int i &#x3D; 0; i &lt; 6; i++) &#123;
+      final int temp &#x3D; i;
+      new Thread(() -&gt; &#123;
+          try &#123;
+              semaphore.acquire();
+              System.out.println(Thread.currentThread().getName() + &quot;请求到位置&quot;);
+              Thread.sleep(temp * 1000);
+              System.out.println(Thread.currentThread().getName() + &quot;释放位置&quot;);
+              semaphore.release();
+          &#125; catch (InterruptedException e) &#123;
+              e.printStackTrace();
+          &#125;
+      &#125;).start();
+  &#125;
+&#125;</code></pre>
+
+<h2 id="ReadWriteLock读写锁"><a href="#ReadWriteLock读写锁" class="headerlink" title="ReadWriteLock读写锁"></a>ReadWriteLock读写锁</h2><p>ReadWriteLock用于维护一对关联的锁，一个用于读取，一个用于写入，其中：</p>
+<ul>
+<li>读-读不互斥：读锁可被多个线程执行</li>
+<li>写-写互斥：写锁不可以被多个线程执行</li>
+</ul>
+<p>规则：</p>
+<ul>
+<li>在非公平的情况下，允许读锁和写锁插队，但读锁能插队的条件是队列头结点不是想获取写锁的线程</li>
+<li>读-写互斥：在任意线程获取到读锁时，不能有其他线程获取到写锁（防止读脏数据：指读到写过程中的中间状态），在任意线程获取到写锁时，不能再有线程获取到读锁</li>
+</ul>
+<p><span class="red bold">方法：</span></p>
+<p><code>readLock()</code>：返回读锁</p>
+<p><code>writeLock()</code>：返回写锁</p>
+<p>获取到读写锁之后，使用方法与ReentrantLock一样</p>
+<p><code>lock()</code>：加锁</p>
+<p><code>unlock()</code>：解锁</p>
+<p><span class="red bold">关于共享锁和独占锁：</span></p>
+<ul>
+<li><p>共享锁：共享锁就是读锁，可以有多个线程获取读锁</p>
+</li>
+<li><p>独占锁：独占锁就是写锁，写锁是排它锁</p>
+</li>
+</ul>
+
     </div>
 
     

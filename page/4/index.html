@@ -216,7 +216,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-04-16 20:12:25" itemprop="dateModified" datetime="2022-04-16T20:12:25+08:00">2022-04-16</time>
+        <time title="修改时间：2022-05-05 21:00:39" itemprop="dateModified" datetime="2022-05-05T21:00:39+08:00">2022-05-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -947,7 +947,51 @@ Arrays.sort(numbers);
 &#x2F;&#x2F; 输出
 System.out.println(Arrays.toString(numbers));</code></pre></li>
 </ul>
+<h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><p>枚举的作用在于限制用于使用该类的对象</p>
+<p>在JDK5之前，要限制某个类的对象，只能通过自定义类的方式：</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Week &#123;
+    &#x2F;&#x2F; 私有构造器，使用户不能随意创建该类的对象
+    private Week() &#123;
 
+    &#125;
+
+    &#x2F;&#x2F; 定义用户可以使用的对象
+    public static final Week SUN &#x3D; new Week();
+    public static final Week Mon &#x3D; new Week();
+    public static final Week TUE &#x3D; new Week();
+    public static final Week WED &#x3D; new Week();
+    public static final Week THU &#x3D; new Week();
+    public static final Week FRI &#x3D; new Week();
+    public static final Week SAT &#x3D; new Week();
+&#125;
+
+class Test &#123;
+    public static void show(Week week) &#123;
+        System.out.println(week);
+    &#125;
+
+    public static void main(String[] args) &#123;
+        &#x2F;&#x2F; 达到限定的效果
+        show(Week.FRI);
+    &#125;
+&#125;</code></pre>
+
+<p>而在JDK5之后，可以使用枚举：</p>
+<p><span class="red bold">注意：</span></p>
+<ul>
+<li>在枚举里面写的每一个名称，<span class="red">都是枚举类的一个静态对象</span></li>
+<li>枚举本身也是一个class，可以写方法</li>
+</ul>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public enum Week &#123;
+    &#x2F;&#x2F; 定义用户可以使用的对象
+    SUN,
+    Mon,
+    TUE,
+    WED,
+    THU,
+    FRI,
+    SAT;
+&#125;</code></pre>
       
     </div>
 

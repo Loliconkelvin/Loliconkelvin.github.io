@@ -1,0 +1,2473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   MySQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL">
+<meta property="og:url" content="https://loliconkelvin.github.io/2022/05/10/MySQL/index.html">
+<meta property="og:site_name" content="萝莉控的小窝">
+<meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   MySQL">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/10/ON1DoR.md.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/13/Os1aPU.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/13/OsY4b9.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/13/OySRA0.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/13/OyigYt.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/13/Oyi2fP.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/13/OykhZQ.png">
+<meta property="og:image" content="https://bkimg.cdn.bcebos.com/pic/8c1001e93901213f5a0febf15fe736d12f2e95db?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2U4MA==,g_7,xp_5,yp_5/format,f_auto">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/13/OyMwlj.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/13/OyMy7V.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/13/OyMhc9.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/13/OyMvjA.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/13/OyQeun.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/13/OyQbbq.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/13/OyGEmd.png">
+<meta property="article:published_time" content="2022-05-10T01:42:26.000Z">
+<meta property="article:modified_time" content="2022-05-22T14:25:29.247Z">
+<meta property="article:author" content="Loliconkelvin">
+<meta property="article:tag" content="MySQL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/05/10/ON1DoR.md.jpg">
+
+
+<link rel="canonical" href="https://loliconkelvin.github.io/2022/05/10/MySQL/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://loliconkelvin.github.io/2022/05/10/MySQL/","path":"2022/05/10/MySQL/","title":"MySQL"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>MySQL | 萝莉控的小窝</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">萝莉控的小窝</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">一些概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1%E8%A7%84%E5%88%99"><span class="nav-number">2.</span> <span class="nav-text">关系型数据库的设计规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E8%81%94%E7%B3%BB%E5%85%B3%E7%B3%BB"><span class="nav-number">3.</span> <span class="nav-text">表之间的联系关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%91%BD%E4%BB%A4%E8%A1%8C%EF%BC%89%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%EF%BC%88%E9%9D%9E%E6%8C%87%E4%BB%A4%E7%BB%86%E5%88%99%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">（命令行）数据库基本操作（非指令细则）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9B%BE%E5%BD%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="nav-number">5.</span> <span class="nav-text">数据库图形管理工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E8%AF%AD%E8%A8%80%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">6.</span> <span class="nav-text">MySQL语言的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E4%BD%BF%E7%94%A8%E8%A7%84%E5%88%99%E4%B8%8E%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83"><span class="nav-number">7.</span> <span class="nav-text">SQL使用规则与格式规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E6%B3%A8%E9%87%8A"><span class="nav-number">8.</span> <span class="nav-text">SQL注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">9.</span> <span class="nav-text">SQL基本查询（重要）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E8%BF%87%E6%BB%A4%E6%9D%A1%E4%BB%B6%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">10.</span> <span class="nav-text">SQL过滤条件与运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E6%8E%92%E5%BA%8F%EF%BC%88ORDER-BY%EF%BC%89"><span class="nav-number">11.</span> <span class="nav-text">SQL排序（ORDER BY）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E5%88%86%E9%A1%B5%EF%BC%88LIMIT-OFFSET%EF%BC%89"><span class="nav-number">12.</span> <span class="nav-text">SQL分页（LIMIT OFFSET）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2%EF%BC%88SQL92%EF%BC%89"><span class="nav-number">13.</span> <span class="nav-text">SQL多表查询（SQL92）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2%EF%BC%88SQL99%EF%BC%89"><span class="nav-number">14.</span> <span class="nav-text">SQL多表查询（SQL99）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%EF%BC%88UNION-ALL%EF%BC%89"><span class="nav-number">15.</span> <span class="nav-text">SQL联合查询结果（UNION ALL）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%AE%9E%E7%8E%B07%E7%A7%8DJOIN%E6%9F%A5%E8%AF%A2%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">16.</span> <span class="nav-text">MySQL实现7种JOIN查询（重要）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL99%E6%96%B0%E7%89%B9%E6%80%A7-%E8%87%AA%E7%84%B6%E8%BF%9E%E6%8E%A5%EF%BC%88NATURAL-JOIN%EF%BC%89"><span class="nav-number">17.</span> <span class="nav-text">SQL99新特性-自然连接（NATURAL JOIN）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL99%E6%96%B0%E7%89%B9%E6%80%A7-%E6%8C%87%E5%AE%9A%E7%AD%89%E5%80%BC%E8%BF%9E%E6%8E%A5%E5%AD%97%E6%AE%B5%EF%BC%88USING%EF%BC%89"><span class="nav-number">18.</span> <span class="nav-text">SQL99新特性-指定等值连接字段（USING）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E6%97%B6%E9%97%B4"><span class="nav-number">19.</span> <span class="nav-text">MySQL单行函数——基本、字符串、时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%87%BD%E6%95%B0"><span class="nav-number">20.</span> <span class="nav-text">MySQL单行函数——流程控制函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86"><span class="nav-number">21.</span> <span class="nav-text">MySQL单行函数——加密与解密</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94MySQL%E5%BD%93%E5%89%8D%E4%BF%A1%E6%81%AF%E5%87%BD%E6%95%B0"><span class="nav-number">22.</span> <span class="nav-text">MySQL单行函数——MySQL当前信息函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E5%85%B6%E5%AE%83%E5%87%BD%E6%95%B0"><span class="nav-number">23.</span> <span class="nav-text">MySQL单行函数——其它函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0%EF%BC%88%E5%A4%9A%E8%A1%8C%E5%87%BD%E6%95%B0%EF%BC%89"><span class="nav-number">24.</span> <span class="nav-text">MySQL聚合函数（多行函数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%88%86%E7%BB%84%EF%BC%88GROUP-BY%EF%BC%89"><span class="nav-number">25.</span> <span class="nav-text">MySQL分组（GROUP BY）</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
+      src="/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">Loliconkelvin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:loliconkelvin@gmail.com" title="E-Mail → mailto:loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2022/05/10/MySQL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="Loliconkelvin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萝莉控的小窝">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          MySQL
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-05-10 09:42:26" itemprop="dateCreated datePublished" datetime="2022-05-10T09:42:26+08:00">2022-05-10</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-05-22 22:25:29" itemprop="dateModified" datetime="2022-05-22T22:25:29+08:00">2022-05-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/MySQL/" itemprop="url" rel="index"><span itemprop="name">MySQL</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <style>
+    .red {
+        color: red;
+    }
+    .bold {
+        font-weight: bold;
+    }
+</style>
+
+<p>MySQL</p>
+<span id="more"></span>
+
+<h2 id="一些概念"><a href="#一些概念" class="headerlink" title="一些概念"></a>一些概念</h2><hr>
+<p><strong>为什么需要数据库</strong></p>
+<p>数据库可以使存入的数据持久化，数据库存储数据量大</p>
+<hr>
+<p><strong>数据库与数据管理系统</strong></p>
+<p><span class="red bold">数据库（DB）：</span>指存储数据的仓库，其本质是文件系统，它保存一系列有组织的数据</p>
+<p><span class="red bold">数据库管理系统（DBMS）：</span>是一种操作和管理数据库的软件，用于建立、使用和维护数据库，用户可以通过数据库管理系统访问数据库中表内的数据（MySQL是一种数据库管理系统）</p>
+<p><span class="red bold">结构化查询语言（SQL）</span>：专门用于与数据库管理系统通信的语言，指定数据库管理系统对数据库的操作</p>
+<hr>
+<p><strong>关系型数据库与非关系型数据库</strong></p>
+<p><span class="red bold">关系型数据库（RDBMS）：</span>指数据库将复杂的数据结构归结为简单的二元关系（即表格）的形式</p>
+<ul>
+<li>关系型数据库以<code>行（row）</code>和<code>列（column）</code>的形式存储数据，这些行和列组合被称为<code>表</code>，一个表就组成一个数据库</li>
+<li>表与表之间的数据记录有关系，现实中的各种实体和实体之间的联系均使用<code>关系模型</code>来表示</li>
+<li>关系型数据库就是建立在<code>关系模型</code>基础上的数据库</li>
+</ul>
+<blockquote>
+<p>优势：</p>
+<ol>
+<li><p>复杂查询： 可以使用SQL语句在一个表和多个表之间做复杂的数据查询</p>
+</li>
+<li><p>事务支持：当多个事务同时访问数据时，数据安全有保证</p>
+</li>
+</ol>
+</blockquote>
+<p><span class="red bold">非关系型数据库：</span>基于键值对存储数据，性能比关系型数据库高，非关系型数据库又分为以下几种：</p>
+<ul>
+<li><span class="red bold">键值型数据库：</span>基于像map一样的键值对存储数据，查找速度快，缺点是无法像关系型数据库一样使用条件过滤（如 WHERE）.键值型数据库常用于内存缓存。Radis是最流行的键值型数据库</li>
+<li><span class="red bold">文档型数据库：</span>可以存放和获取文档，常见于XML、JSON格式文档，它是将键值型数据库的值变成了文档。MongoDB是最流行的文档型数据库</li>
+<li><span class="red bold">搜索引擎数据库：</span>尽管关系型数据库采用了索引提升检索效率，关系型数据库对于全文索引的效率还是很低。搜索引擎数据库是应用于搜索引擎领域的数据存储形式。由于搜索引擎会爬取大量数据，并以特定格式存储，这样在检索的时候才能保证性能最优。核心原理：“倒排索引”。</li>
+<li><span class="red bold">列式数据库：</span>Oracle、MySQL和SQL server采用的都是<span class="red">行式存储</span>列式数据库是将数据按照列存储到数据库中，这样做可以大幅度降低IO，适用于分布文件系统，但功能有限 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%88%97%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93/4884515?fr=aladdin">（列式数据库（百科））</a></li>
+<li><span class="red bold">图形数据库：</span>利用图片存储实体之间的关系，以节点和边来实现</li>
+</ul>
+<h2 id="关系型数据库的设计规则"><a href="#关系型数据库的设计规则" class="headerlink" title="关系型数据库的设计规则"></a>关系型数据库的设计规则</h2><ul>
+<li>关系型数据库的典型数结构就是数据表，这些表的组成都是结构化的</li>
+<li>将数据放到表中，再将表放到库中</li>
+<li>一个数据库中可以有多个表，每个表都有一个名字，用来标识自己，<code>表名具有唯一性</code></li>
+<li>表即有一些特性，这些特性定义了数据在表中如何存储，类似Java中“类”的设计</li>
+</ul>
+<hr>
+<p><strong>表、记录、字段与ORM思想</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">表、记录、字段</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/05/10/ON1DoR.md.jpg" alt="ON1DoR.md.jpg"></td>
+</tr>
+</tbody></table>
+<p><span class="red bold">E-R（entity-relationship）模型：</span>即实体-联系模型，其中的三个主要概念是：<code>实体集</code>、<code>属性</code>、<code>联系集</code></p>
+<p><span class="red bold">ORM思想：</span>Object Relational Mapping, 即对象关系映射思想，指数据库中的元素与Java中的一些元素一一对应</p>
+<p><span class="red bold">表：</span>上图就是一张表，表是数据的集合，对应于Java中的类</p>
+<p><span class="red bold">记录：</span>表中的一行即为一个记录，对应Java中的对象（实例）</p>
+<p><span class="red bold">字段：</span>表中的任意一列的名称即为字段，字段规定这一列应该填什么，对应Java中的属性</p>
+<table>
+<thead>
+<tr>
+<th align="center">数据库</th>
+<th align="center">Java</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">表</td>
+<td align="center">类</td>
+</tr>
+<tr>
+<td align="center">记录</td>
+<td align="center">对象（实例）</td>
+</tr>
+<tr>
+<td align="center">字段</td>
+<td align="center">属性</td>
+</tr>
+</tbody></table>
+<h2 id="表之间的联系关系"><a href="#表之间的联系关系" class="headerlink" title="表之间的联系关系"></a>表之间的联系关系</h2><hr>
+<p><strong>一对一联系</strong></p>
+<p>用得并不多，因为一对一关系可以做成一张表，但将一张表拆分也有优点，下面会说。</p>
+<p><span class="red bold">一对一联系：</span>指一张表中的一行信息对应另一张表中的一行信息，如：</p>
+<table>
+<thead>
+<tr>
+<th align="center">学号</th>
+<th align="center">姓名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1581156</td>
+<td align="center">张三</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">学号</th>
+<th align="center">邮箱</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1581156</td>
+<td align="center">xxx</td>
+</tr>
+</tbody></table>
+<ul>
+<li>一张表拆成多张表：当一张表中的字段很多时，查询该表一行数据中的某一两个字段会造成大量冗余，因为其他字段的数据我不需要。</li>
+<li>把一些经常要查询的字段做成一张表，不怎么需要查询的字段做成另外一张表，就可以减少查询冗余</li>
+<li>缺点是当查询的字段同时涉及两个表时，多表查询的SQL语句会复杂</li>
+</ul>
+<p><span class="red bold">一对一建表规则：</span></p>
+<ul>
+<li>外键唯一：主表的主键和从表的外键（唯一）形成主外键关系。外键唯一</li>
+<li>外键是主键：主表的主键和从表的主键形成主外键关系</li>
+</ul>
+<hr>
+<p><strong>一对多联系</strong></p>
+<p><span class="red bold">一对多联系：</span>指一张表中的一行信息对应另一张表中的多行信息，常见于“用户表与订单表”、“分类表与商品表”</p>
+<p><span class="red bold">一对多建表规则：</span></p>
+<ul>
+<li>在从表（多方）创建一个字段，字段作为外键指向主表</li>
+</ul>
+<hr>
+<p><strong>多对多联系</strong></p>
+<p><span class="red bold">多对多联系：</span>多对多联系必须在两张表之间创建第三张表，称<code>联系表</code>，多对多联系实际上是由两个一对多联系组成，而多对多的联系往往在联系表中体现出来，如：</p>
+<ul>
+<li>学生与课程：一位学生可以选择多门课程。一门课程可以被多个学生选择，此时应该建立：“学生信息表”、“课程信息表”和“选课信息表”（联系表）</li>
+</ul>
+<hr>
+<p><strong>自我联系</strong></p>
+<p><span class="red bold">自我联系：</span>指一张表中的一行或多行信息会与另一行或多行信息相关联，通常用于一些归属的情况，如：学生信息表中班长字段，多个学生对应一个班长，同时班长也是一个学生</p>
+<h2 id="（命令行）数据库基本操作（非指令细则）"><a href="#（命令行）数据库基本操作（非指令细则）" class="headerlink" title="（命令行）数据库基本操作（非指令细则）"></a>（命令行）数据库基本操作（非指令细则）</h2><hr>
+<p><strong>启动数据库</strong></p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">net start MySQL服务名</code></pre>
+
+<hr>
+<p><strong>登录数据库</strong></p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">mysql -u 用户名 -h 主机地址 -P 端口号 -p密码</code></pre>
+
+<ul>
+<li>主机地址和端口号用于远程访问数据库</li>
+<li>端口号也适用于访问本机中占用不同端口号的mysql（一台机装有多个mysql）</li>
+</ul>
+<hr>
+<p><strong>显示现有数据库</strong></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">show databases;</code></pre>
+
+<p><span class="red bold">自带数据库：</span></p>
+<p>MySQL自带四个数据库，其中有一个不显示在文件中</p>
+<ul>
+<li><code>information_schema</code>：保存数据库服务器的系统信息（字段名、表名、存储权限）</li>
+<li><code>mysql</code>：MySQL运行时所需系统信息（输出文件夹、当前使用的字符集）</li>
+<li><code>performance_schema</code>：存储当前MySQL性能指标</li>
+<li><code>sys</code>：存储当前MySQL性能指标</li>
+</ul>
+<hr>
+<p><strong>创建数据库</strong></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">create database 数据库名;</code></pre>
+
+<hr>
+<p><strong>导入数据库</strong></p>
+<p>向MySQL导入一个备份数据库文件，<span class="red">该命令仅限于命令行使用</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">source 文件的绝对路径;</code></pre>
+
+<hr>
+<p><strong>删除一个数据库</strong></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">drop 数据库名;</code></pre>
+
+<hr>
+<p><strong>连接数据库</strong></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">use 数据库名;</code></pre>
+
+<hr>
+<p><strong>显示当前数据库中的表</strong></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">show tables;</code></pre>
+
+<hr>
+<p><strong>创建一个表</strong></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">create table 表名(字段名 字段类型, 字段名 字段类型);</code></pre>
+
+<hr>
+<p><strong>筛选全部操作</strong></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT * FROM 表名;</code></pre>
+
+<hr>
+<p><strong>插入一条记录</strong></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">insert into 表名 values(值, 值);</code></pre>
+
+<p><span class="red bold">版本差异：</span></p>
+<ul>
+<li>在5.7版本中，数据库默认字符集为latin1，导致输入字符串的列不能输入中文</li>
+<li>在8.0版本中，数据库默认字符集为utf8mb4</li>
+</ul>
+<p><span class="red bold">5.7版本修复方法：</span></p>
+<p>配置my.ini，做如下修改：</p>
+<pre class="line-numbers language-ini" data-language="ini"><code class="language-ini">[mysql] # 在其下面增加一句
+...
+default-charactor-set&#x3D;utf8 #默认字符集
+
+[mysqld] # 在其下面增加
+...
+character-set-server&#x3D;utf8
+collation-server&#x3D;utf8_general_ci</code></pre>
+
+<h2 id="数据库图形管理工具"><a href="#数据库图形管理工具" class="headerlink" title="数据库图形管理工具"></a>数据库图形管理工具</h2><p>这里不对图形化管理工具做说明，只说一个错误</p>
+<hr>
+<p><strong>图形化管理工具连接SQL失败</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">Plugin caching_sha2_password could not be loaded</code></pre>
+
+<p>由于8.0mysql增加了通过sha算法的加密规则，某些软件不支持这样的规则，解决方案：</p>
+<ul>
+<li>将图形化管理工具升级为最新版或专业版</li>
+<li>将mysql的加密方式更改为原始加密方式，下面是方法：</li>
+</ul>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">&#x2F;* 依次执行以下三条指令 *&#x2F;
+use mysql;
+
+ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;123456&#39;;
+
+FLUSH PRIVILEGES;</code></pre>
+
+<h2 id="MySQL语言的分类"><a href="#MySQL语言的分类" class="headerlink" title="MySQL语言的分类"></a>MySQL语言的分类</h2><p>SQL语句在功能上主要分为以下3类</p>
+<p><span class="red bold">DDL（数据定义[define]语言）：</span>定义了不用的数据库、表、视图、索引等数据库对象，还可以用于创建、删除、修改数据库和数据表结构</p>
+<ul>
+<li>主要包括<code>CREATE</code>、<code>DROP</code>、<code>ALTER</code>等</li>
+</ul>
+<p><span class="red bold">DML（数据操作[manipulation]语言）（重要 ）：</span>用于添加、删除、更新和查询<span class="red">数据库记录</span>，并检查数据完整性</p>
+<ul>
+<li>主要包括<code>INSERT</code>、<code>DELETE</code>、<code>SELECT</code>等</li>
+</ul>
+<p><span class="red bold">DCL（数据控制[control]语言）：</span>主要用于定义数据库、表、字段、用户的访问权限和安全级别</p>
+<ul>
+<li>主要的语句关键字包括<code>GRANT</code>、<code>REVOKE</code>、<code>COMMIT</code>、<code>ROLLBACK</code>、<code>SAVEPOINT</code>等</li>
+</ul>
+<h2 id="SQL使用规则与格式规范"><a href="#SQL使用规则与格式规范" class="headerlink" title="SQL使用规则与格式规范"></a>SQL使用规则与格式规范</h2><hr>
+<p><strong>语句规则</strong></p>
+<ul>
+<li>SQL语句可以写在一行或多行。为提高可读性，各子句进行分行，必要时缩进</li>
+<li>每条命令以“;”或“\g”或“\G”结束（<span class="red">注意：</span>“\G”和“\g”在控制台使用，不要在图形化管理系统使用）</li>
+<li>关键字不能被缩写和被分行</li>
+<li>关于标点符号：<ul>
+<li>所有的括号和引号必须成对</li>
+<li>必须使用英文状态下的半角输入方式</li>
+<li>字符串和日期类型数据使用<span class="red">单引号</span>括住</li>
+<li>列的别名，使用<span class="red">双引号</span>括住，并且不建议省略 <code>AS</code> 关键字</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>命名规则</strong></p>
+<ul>
+<li>数据库名、表名不得超过30个字符、变量名不得超过29个</li>
+<li>只能包含：<code>A-Z</code> <code>a-z</code> <code>0-9</code> 和 <code>_</code></li>
+<li>数据库名、表名、字段名等对象名中不能包含空格</li>
+<li>在同一个MySQL软件中，数据库不得重名；</li>
+<li>同一个数据库中，表不得重名</li>
+<li>同一个表中、字段不得重名</li>
+<li>保证用户字段与SQL保留字、常用方法没有冲突。若坚持使用该用户字段，将该字段在SQL语句中使用 着重号 括住</li>
+<li>保证字段名和类型的一致性，当一个字段名存在于多张表中时，注意其在多张表中的类型应该是一致的</li>
+</ul>
+<hr>
+<p><strong>语句规范</strong></p>
+<ul>
+<li><p>关于大小写：</p>
+<ul>
+<li>由于windows本身不对大小写作区分（即视A.txt和a.txt为同名文件），所以<span class="red">在windows环境下MySQL大小写不敏感</span></li>
+<li>同理由于linux严格区分大小写，<span class="red">在linux环境下MySQL大小写敏感</span>，但也分情况：<ul>
+<li>数据库名、表名、表的别名、变量名严格区分</li>
+<li>关键字、函数名、字段名、字段的别名不区分</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>大小写书写规范：</p>
+<ul>
+<li>关键字、函数名、绑定变量为<span class="red">大写</span></li>
+<li>数据库名、表名、表别名、字段名、字段别名等为<span class="red">小写</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="SQL注释"><a href="#SQL注释" class="headerlink" title="SQL注释"></a>SQL注释</h2><hr>
+<p><strong>单行注释（通用）</strong></p>
+<p>这种单行注释是数据库关系统通用的方式</p>
+<p><span class="red">注意：</span>使用“–”作为单行注释时，“–”后面必须跟一个空格</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 这是一行注释</code></pre>
+
+<hr>
+<p><strong>单行注释（特有）</strong></p>
+<p>这种单行注释是MySQL通用的方式</p>
+<p><span class="red">注意：</span>使用“#”作为单行注释时，后面不需要跟空格</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL"># 这也是一行注释</code></pre>
+
+<hr>
+<p><strong>多行注释</strong></p>
+<p><span class="red">注意：</span>多行注释不可嵌套</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">&#x2F;*
+这是
+多行
+注释
+*&#x2F;</code></pre>
+
+<h2 id="SQL基本查询（重要）"><a href="#SQL基本查询（重要）" class="headerlink" title="SQL基本查询（重要）"></a>SQL基本查询（重要）</h2><hr>
+<p><strong>基本SQL查询语句</strong></p>
+<p>字段可以是单纯的字段名，也可以规定一些运算（见列的别名例子）</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 其中，若字段中写 * ，则表示所有字段
+SELECT 字段1（列）, 字段2, ... FROM 表名;</code></pre>
+
+<p><span class="red bold">结果集：</span>使用查询语句查询出来的结果称为结果集</p>
+<hr>
+<p><strong>列的别名（字段的别名）</strong></p>
+<p><span class="red">意义：</span>指给选择的列再起一个另外的名称，该语句可以穿插在各种语句中，可以使用中文</p>
+<p><span class="red bold">规范：</span></p>
+<ul>
+<li>不建议常略AS（alias）</li>
+<li>别名使用 双引号 引起</li>
+</ul>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 格式
+字段（列）名 AS &quot;别名&quot;;
+
+-- 可穿插在语句中
+SELECT book_name AS &quot;bname&quot; FROM book;
+
+-- 可用于一些需要运算的场景
+SELECT price AS &quot;价格&quot;, price * 12 AS &quot;十二倍价格&quot; FROM book;</code></pre>
+
+<hr>
+<p><strong>取去除重复行（DISTINCT）</strong></p>
+<p><span class="red">意义：</span>用于筛选出一列中有哪几种数据（如：在学生表中查询一共有几门课程，一门课程可以被很多学生选择，如果将该列全部查询出来就会有很多重复数据）</p>
+<p><span class="red bold">格式：</span>在<code>SELECT</code>后加上<code>DISTINCT</code>关键字</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 若后面指定了多个字段。则当这几个字段都相同时才视为重复行
+SELECT DISTINCT &#96;name&#96;, pwd FROM &#96;user&#96;;</code></pre>
+
+<hr>
+<p><strong>空值参与运算</strong></p>
+<p><span class="red bold">空值：</span>即为NULL，需要注意的是空值并不等同于 数字0 或 空字符串’’</p>
+<ul>
+<li><span class="red">NULL值参与任何运算，结果都会为NULL</span></li>
+</ul>
+<p><span class="red bold">解决方法：</span>涉及单行函数<code>IFNULL(字段, 替换值)</code>，若当前行的该字段为NULL，则该函数会将其替换为后面的值</p>
+<hr>
+<p><strong>着重号</strong></p>
+<p>若出现字段名和表名与SQL的保留字（或称关键字）、函数名重名，则需要将字段名和表名使用 着重号 引起。着重号是数字键1左边那个“`”</p>
+<ul>
+<li><span class="red">注意：</span>若别名带有空格，在排序或其他场景再被引用时，应该使用<span class="red">着重号</span>将别名引起</li>
+</ul>
+<hr>
+<p><strong>查询常数</strong></p>
+<p><span class="red bold">常数：</span>也就是不变的数，放到数据库里面的意思就是每一行都是这个数，用于结果集里加上一列或多列常数</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 在查询出的结果的每一行都在前面加上一列字符串，内容为“学生”
+SELECT &#39;学生&#39;, &#96;name&#96;, &#96;age&#96; FROM student;</code></pre>
+
+<hr>
+<p><strong>查询表结构</strong></p>
+<p>用于查询该表中字段的详细信息（如该字段的类型，是否允许空值等）</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">DESCRIBE 表名;
+
+-- 缩写也行
+DESC 表名;</code></pre>
+
+<h2 id="SQL过滤条件与运算符"><a href="#SQL过滤条件与运算符" class="headerlink" title="SQL过滤条件与运算符"></a>SQL过滤条件与运算符</h2><hr>
+<p><strong>过滤</strong></p>
+<p>要在表中过滤出满足某个条件的数据集，使用以下方法：</p>
+<p><span class="red bold">注意：</span></p>
+<ul>
+<li>在筛选条件中的字符串（如 <code>name</code> = ‘Jeb’ 中的jeb）是区分大小写的（在MySQL中）</li>
+<li>WHERE语句 必须在 FROM语句 之后</li>
+<li><span class="red">字段的别名不能在过滤条件中出现（详见基本SQL语句的执行顺序）</span></li>
+</ul>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT * FROM student
+-- 筛选条件
+WHERE 条件（如：&#96;name&#96; &#x3D; &#39;张三&#39;）;</code></pre>
+
+<hr>
+<p><strong>运算符</strong></p>
+<p><span class="red bold">算术运算符：</span></p>
+<table>
+<thead>
+<tr>
+<th align="center">算术运算符</th>
+<th align="center">第二种表示方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">+</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">/（带4位小数）</td>
+<td align="center">div（整除）</td>
+</tr>
+<tr>
+<td align="center">%</td>
+<td align="center">mod</td>
+</tr>
+</tbody></table>
+<p><span class="red">注意：</span></p>
+<ul>
+<li>在SQL中，加号“+”只有相加的功能，没有连接的功能，因此 100 + ‘1’ 会将’1’转换为数值，其结果为101，而不是Java中的”1001”</li>
+<li>并且，若该值不能转换为数值，则视为0，因此 100 + ‘A’ 的结果是100。’A’ + ‘B’ 的结果也为 0。若要实现字符串拼接，涉及单行函数<code>CONCAT()</code></li>
+<li>并且*2，上面已经说过NULL参与任何运算结果都是NULL，因此 100 + NULL 结果为NULL</li>
+</ul>
+<p><span class="red">结果的类型转换：</span></p>
+<ul>
+<li>加减乘：整型与整型计算-&gt;整型；浮点型与任何类型计算-&gt;浮点型</li>
+<li>除：当分母为0时，结果为NULL</li>
+<li>取模：取模的结果的正负与运算符左边的数一致</li>
+</ul>
+<p><span class="red bold">比较运算符——符号：</span></p>
+<p>比较运算符用于对表达式左边的操作数和表达式右边的操作数进行比较，结果为真返回1，结果为假返回0，其他情况返回NULL</p>
+<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">含义（只写出新的）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">=</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">&lt;=&gt;</td>
+<td align="center">安全等于运算符</td>
+</tr>
+<tr>
+<td align="center">!=</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">&lt;&gt;</td>
+<td align="center">这个也是不等于运算符</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">&lt;=</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">&gt;=</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><span class="red">安全等于：</span>安全等于专门用于解决“=”无法对比NULL值的问题。</p>
+<ul>
+<li>在没有NULL参与运算时，“=”与“&lt;=&gt;”的效果一样</li>
+<li>在有NULL参与运算时：<ul>
+<li>“=”会返回NULL</li>
+<li>“&lt;=&gt;”会对比两边是否都为NULL，是则返回1，否则返回0（因此：NULL &lt;=&gt; NULL 的结果为1）</li>
+</ul>
+</li>
+</ul>
+<p><span class="red">注意：</span></p>
+<ul>
+<li>对于字符串与数值，SQL同样是会尝试把它转换成数值再进行比较，若转换不成功则视字符串为0</li>
+<li>对于字符串与字符串比较，那就是比较他们的ASCII码了，<span class="red">并且与长度无关</span>（如 ‘BC’ &gt; ‘BBC’ 的结果为 1）</li>
+<li>有NULL参与的运算，结果都为NULL<span class="red">（有个例外：安全等于）</span>（特别注意不要尝试使用<code>WHERE 字段 = NULL</code>的方法查询出字段为NULL的行，因为只有比较结果为1的行才会被过滤出来，结果为NULL的会被舍弃）</li>
+</ul>
+<p><span class="red bold">比较运算符——关键字</span></p>
+<table>
+<thead>
+<tr>
+<th align="center">关键字</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">字段名 IS NULL</td>
+<td align="center">为空关键字</td>
+</tr>
+<tr>
+<td align="center">字段名 IS NOT NULL</td>
+<td align="center">非空关键字</td>
+</tr>
+<tr>
+<td align="center">LEAST(…)</td>
+<td align="center">取最小函数</td>
+</tr>
+<tr>
+<td align="center">GREATEST(…)</td>
+<td align="center">取最大函数</td>
+</tr>
+<tr>
+<td align="center">字段名 BETWEEN 下限 AND 上限</td>
+<td align="center">取区间关键字（包含边界）</td>
+</tr>
+<tr>
+<td align="center">ISNULL(字段名)</td>
+<td align="center">为空函数</td>
+</tr>
+<tr>
+<td align="center">字段名 IN()</td>
+<td align="center">取离散值函数</td>
+</tr>
+<tr>
+<td align="center">字段名 NOT IN()</td>
+<td align="center">取非离散值函数</td>
+</tr>
+<tr>
+<td align="center">LIKE</td>
+<td align="center">模糊查询关键字（需要使用通配符，详见下面通配符）</td>
+</tr>
+<tr>
+<td align="center">REGEXP</td>
+<td align="center">正则表达式匹配关键字（需要使用正则表达式）</td>
+</tr>
+<tr>
+<td align="center">RLIKE</td>
+<td align="center">正则表达式模糊关键字（需要使用正则表达式）</td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-LEAST(...)```：（```GREATEST(...)```同理）" data-language="LEAST(...)```：（```GREATEST(...)```同理）"><code class="language-LEAST(...)```：（```GREATEST(...)```同理）">* 对于常数比较，写成：&#96;&#96;&#96;LEAST(值1, 值2, ...)&#96;&#96;&#96;
+* 对于字段之间的比较，写成：&#96;&#96;&#96;LEAST(字段名1, 字段名2)&#96;&#96;&#96;
+
+&#96;&#96;&#96;IN(值1, 值2, ...)&#96;&#96;&#96;：
+* 用于筛选出指定字段的值为括号内的值的行
+* 括号内的值是 或 的关系
+
+&#96;&#96;&#96;SQL
+SELECT last_name FROM employees WHERE last_name LIKE &#39;%a%&#39; AND last_name LIKE &#39;%e%&#39;;</code></pre>
+
+<p><span class="red bold">逻辑运算符：</span></p>
+<table>
+<thead>
+<tr>
+<th align="center">逻辑运算符</th>
+<th align="center">第二种写法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">!</td>
+<td align="center">NOT</td>
+</tr>
+<tr>
+<td align="center">&amp;&amp;</td>
+<td align="center">AND</td>
+</tr>
+<tr>
+<td align="center">||</td>
+<td align="center">OR</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">XOR</td>
+</tr>
+</tbody></table>
+<p><span class="red">注意：</span></p>
+<ul>
+<li><code>AND</code>和<code>OR</code>可以一起使用，<code>AND</code>的优先级比<code>OR</code>高</li>
+<li><code>NOT</code>加在任意完整语句前会有非/取反的效果  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">id NOT BETWEEN </code></pre></li>
+<li>任何双目运算符如<code>AND</code>、<code>OR</code>和<code>XOR</code>及其符号表示，它们左右的表达式必须是完整的  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 错误写法
+id &#x3D; 10 OR 20;
+
+-- 正确写法
+id &#x3D; 10 OR id &#x3D; 20;</code></pre></li>
+</ul>
+<p><span class="red bold">位运算符：</span></p>
+<p>位运算符使用频率不高，位运算符有：<code>&amp;</code> <code>|</code> <code>~</code> <code>^</code> <code>&lt;&lt;</code> <code>&gt;&gt;</code></p>
+<hr>
+<p><strong>通配符</strong></p>
+<p>通配符用于与<code>LIKE</code>一起使用以模糊查询</p>
+<table>
+<thead>
+<tr>
+<th align="center">通配符</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">%</td>
+<td align="center">代表多个不确定字符</td>
+</tr>
+<tr>
+<td align="center">_</td>
+<td align="center">代表一个不确定字符</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>转义符与指定转义符</strong></p>
+<p>若在查询条件中有字符与通配符冲突，则需要使用转义字符</p>
+<p>通常转义字符为“\”</p>
+<p><span class="red bold">指定转义字符：</span><br>在通配符语句后加上以下语句可以指定该语句使用的转义字符：</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 指定转义字符
+ESCAPE &#39;$&#39;;
+
+-- 查询名字中带有下划线的人名，并指定$为转义字符
+SELECT &#96;name&#96; FROM employees WHERE &#96;name&#96; LIKE &#39;$_&#39; ESCAPE &#39;$&#39;;</code></pre>
+
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT &#96;name&#96;, 工资 FROM employees WHERE 工资 NOT BETWEEN 5000 AND 12000;
+
+SELECT &#96;name&#96; 部门号 FROM employees WHERE 部门 &#x3D; 20 OR &#96;部门&#96; &#x3D; 50;
+
+SELECT &#96;name&#96; job_id FROM employees WHERE 管理者 IS  NULL; -- &lt;&#x3D;&gt; NULL
+
+SELECT 工资, 奖金级别 FROM employees WHERE 奖金 IS NOT NULL;
+
+SELECT &#96;name&#96; FROM employees WHERE &#96;name&#96; LIKE &#39;__a%&#39;;
+
+SELECT &#96;name&#96; FROM employees WHERE &#96;name&#96; LIKE &#39;%a%&#39; OR &#96;name&#96; LIKE &#39;%k%&#39;;
+
+SELECT first_name FROM employees WHERE first_name REGEXP &#39;e$&#39;; -- LIKE &#39;%e&#39;
+
+SELECT 姓名, 工种 FROM employees WHERE 部门编号 BETWEEN 80 AND 100;
+
+SELECT 姓名, 工资, 管理者ID FROM employees WHERE manager_id IN (100,101,110);</code></pre>
+
+<h2 id="SQL排序（ORDER-BY）"><a href="#SQL排序（ORDER-BY）" class="headerlink" title="SQL排序（ORDER BY）"></a>SQL排序（ORDER BY）</h2><hr>
+<p><strong>一级排序</strong></p>
+<p><span class="red bold">注意：</span></p>
+<ul>
+<li>若不显式指定排序，结果集将按照数据加入到数据库的时间先后顺序进行排序</li>
+<li>排序必须在过滤之后（若存在过滤）</li>
+<li><span class="red">字段的别名可以在排序中使用</span></li>
+<li>虽然字段的别名在Navicat中不会提示，但别名在排序语句中<span class="red">不需要加任何引号</span>，字段的别名应该避免空格</li>
+</ul>
+<p><span class="red bold">排序：</span>通过<code>ORDER BY 字段名</code>指定通过某字段的默认字典进行 <span class="red">升序（默认）</span> 排序</p>
+<p><span class="red bold">指定排序顺序：</span>通过在字段名后添加升序（ascend）或降序（descend）关键字，指定排序顺序</p>
+<table>
+<thead>
+<tr>
+<th align="center">关键字</th>
+<th align="center">排序方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ASC</td>
+<td align="center">升序（默认）</td>
+</tr>
+<tr>
+<td align="center">DESC</td>
+<td align="center">降序</td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 别名在排序
+SELECT &#96;name&#96;, salary * 12 AS &quot;annual_salary&quot;
+FROM employees 
+WHERE manager_id IN (100,101,110)
+ORDER BY annual_salary DESC;</code></pre>
+
+<hr>
+<p><strong>多级排序</strong></p>
+<p>当一级排序中某些行的指定字段出现相同时，默认还是按照数据插入到数据库的时间先后进行排序，若想指定此时的排序，需要在一级排序的语句后再加一条（或多条）规则：</p>
+<p><span class="red">注意：</span>不加排序规则，默认升序，建议写明规则</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 先按照ten_type降序，ten_type相同，则按照id降序
+SELECT id
+, typeId * 10 AS &quot;ten_type&quot; FROM book 
+ORDER BY ten_type DESC, id DESC;</code></pre>
+
+<h2 id="SQL分页（LIMIT-OFFSET）"><a href="#SQL分页（LIMIT-OFFSET）" class="headerlink" title="SQL分页（LIMIT OFFSET）"></a>SQL分页（LIMIT OFFSET）</h2><p>通常用户不需要一次性浏览太多的记录，因此实际上分页不必不可少的，使用<code>LIMIT 偏移量, 每页数据量</code>进行分页</p>
+<p><span class="red bold">注意：</span></p>
+<ul>
+<li><code>LIMIT</code>必须在排序之后</li>
+<li><code>LIMIT</code>还有取前x条数据的功能，<code>LIMIT 0, x</code> 可以写成 <code>LIMIT x</code></li>
+<li><code>LIMIT</code>关键字不适用于SQL server、DB2、Oracle</li>
+</ul>
+<p><span class="red bold">公式：</span>当每页显示size条记录，此时显示第page页时，语句为：</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">LIMIT (page - 1) * size, size;</code></pre>
+
+<hr>
+<p><strong>MySQL8.0新排序关键字</strong></p>
+<p>加入<code>OFFSET</code>关键字，现在排序语句可以写成：</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">LIMIT 每页数据量 OFFSET 偏移量</code></pre>
+
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT salary FROM employees
+ORDER BY salary DESC
+LIMIT 1;</code></pre>
+
+<h2 id="SQL多表查询（SQL92）"><a href="#SQL多表查询（SQL92）" class="headerlink" title="SQL多表查询（SQL92）"></a>SQL多表查询（SQL92）</h2><table>
+<thead>
+<tr>
+<th align="center">多表查询</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/05/13/Os1aPU.md.png" alt="Os1aPU.md.png"></td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>为什么需要多表查询</strong></p>
+<p>下面四点根据这个网址的内容总结：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_57001006/article/details/123391618">为什么要使用多表查询</a></p>
+<ul>
+<li>减少数据冗余——原因1</li>
+<li>减少IO（将数据加载到内存的次数）——原因2</li>
+<li>减少维护难度</li>
+<li>减少同步查询冲突——原因4</li>
+</ul>
+<hr>
+<p><strong>多表查询——笛卡尔积错误</strong></p>
+<p><span class="red bold">笛卡尔积错误：</span></p>
+<p>使用以下方法可以实现多表查询，但结果不对：</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT employee_id, department_name
+FROM employees, departments;</code></pre>
+
+<p><span class="red bold">注意：</span>这种方式会将一个表中的<span class="red">每一行都分别与另一个表的每一行</span>合并，这种合并方式称为两个表的笛卡尔积连接（CROSS JOIN），上面的代码还可以写成下面这样：</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 两表的指定两个字段做笛卡尔积连接
+SELECT employee_id, department_name
+FROM employees CROSS JOIN departments;</code></pre>
+
+<p><span class="red bold">笛卡尔积错误的产生条件：</span></p>
+<ul>
+<li>缺少连接条件</li>
+<li>连接条件无效</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">笛卡尔积错误</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/05/13/OsY4b9.png" alt="OsY4b9.png"></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>显然这种请示我们想要的，那么该如何正确地进行多表查询呢？</p>
+</blockquote>
+<hr>
+<p><strong>基本多表查询的正确打开方式</strong></p>
+<p>上面写到，我们使用了错误的两表连接方式，因此我们只需要指定正确的连接方式即可</p>
+<p><span class="red bold">连接条件：</span></p>
+<p>连接条件其实也是过滤条件的一种，因此用的是<code>WHERE</code>，如：</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 连接条件为employees表中的外键要与departments表中的主键的值相同
+
+-- 如无特殊符号，关键字冲突，着重号可以不加
+SELECT employee_id, department_name
+FROM employees, departments
+WHERE employees.&#96;department_id&#96; &#x3D; departments.&#96;department_id&#96;</code></pre>
+
+<p><span class="red">注意：</span>若有n个表需要连接，则至少存在n-1个连接条件</p>
+<hr>
+<p><strong>多表查询注意事项</strong></p>
+<p><span class="red bold">模棱两可的字段：</span></p>
+<p>指当在使用了多表查询时，查询的字段正好存在于多个表中时，该字段成为模棱两可的字段，<span class="red">数据库不知道去哪个表中查这个字段</span></p>
+<ul>
+<li>因此在多表查询时，建议给所有的字段都指定表</li>
+</ul>
+<p><span class="red bold">表的别名：</span></p>
+<p>当然，给所有字段名指定表，在需要查询的字段多时，代码的可读性就会变差，此时可以使用表的别名降低代码长度，<span class="red">需要注意的是在指定了表的别名之后，不允许再使用表的原名</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT emp.employee_id, dept.department_name, dept.department_id
+FROM employees AS emp, departments AS dept
+WHERE emp.&#96;department_id&#96; &#x3D; dept.&#96;department_id&#96;;</code></pre>
+
+<hr>
+<p><strong>多表查询的分类</strong></p>
+<p><span class="red bold">从连接条件上：</span>等值连接 非等值连接</p>
+<ul>
+<li>非等值连接就是所有涉及比较的连接，通常另一张表中会有一些阈值</li>
+</ul>
+<p><span class="red bold">从连接的字段之间的关系上：</span>自连接 非自连接</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 自连接例子：查询员工的管理人（管理人也算员工）
+
+-- 在自连接时，最好把一张表复制一份看成是两张表之间的连接（取个不同的别名）会很好理解
+SELECT emp.employee_id, emp.last_name, mgr.manager_id, mgr.last_name
+FROM employees emp, employees mgr
+WHERE emp.manager_id &#x3D; mgr.employee_id;</code></pre>
+
+<p><span class="red bold">从获取的结果上：</span>内连接 外连接</p>
+<hr>
+<p><strong>内连接 与 外连接</strong></p>
+<p>在连接的时候我们要指定连接条件，连接条件中左边的表称为左表，右边的表称为右表</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 假设前面的语句是多表查询
+-- 则在下面的例子中a表为左表，b表为右表
+
+WHERE a.name &#x3D; b.name;
+
+WHERE a.age BETWEEN b.lower_limit AND b.upper_limit</code></pre>
+
+<p>并且只有满足连接条件的记录才会被选出，如下图所示：</p>
+<p><img src="https://s1.ax1x.com/2022/05/13/OySRA0.png" alt="OySRA0.png"></p>
+<p><span class="red bold">内连接：</span>如上图，内连接指查询到的结果只有左表与右表匹配连接条件的记录</p>
+<p><span class="red bold">外连接：</span>外连接对立于内连接，就是指查到的结果不止左表与右表的匹配条件记录</p>
+<ul>
+<li>还包括了左表中不与连接条件匹配的记录，则称<span class="red">左外连接</span></li>
+<li>还包括了右表中不与连接条件匹配的记录，则称<span class="red">右外连接</span></li>
+<li>还包括了左表和右表中不与连接条件匹配的记录，则称<span class="red">满外连接</span></li>
+</ul>
+<p><span class="red">注意：</span>SQL92和SQL99语法分别有两种方式实现外连接</p>
+<hr>
+<p><strong>SQL92语法实现外连接</strong></p>
+<p><span class="red">注意：</span>MySQL不支持SQL92中外连接写法（Oracle支持）</p>
+<p>SQL92的语法为“谁数据少，就给谁加点数据”</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 这是个左外连接，它给右表增加了数据，完善了左表的链接匹配
+SELECT employee_id, department_name
+FROM employees e, departments database
+WHERE e.department_id &#x3D; d.department_id(+);</code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="center">左外连接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/05/13/OyigYt.md.png" alt="OyigYt.md.png"></td>
+</tr>
+<tr>
+<td align="center">右外连接</td>
+</tr>
+<tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/05/13/Oyi2fP.md.png" alt="Oyi2fP.md.png"></td>
+</tr>
+</tbody></table>
+<h2 id="SQL多表查询（SQL99）"><a href="#SQL多表查询（SQL99）" class="headerlink" title="SQL多表查询（SQL99）"></a>SQL多表查询（SQL99）</h2><hr>
+<p><strong>SQL99语法实现内连接</strong></p>
+<p><span class="red bold">规范和建议：</span></p>
+<ul>
+<li>超过三个表连接的情况，禁止使用<code>JOIN</code></li>
+<li>尽量使用左外连接</li>
+<li>一张表加入时使用了左外连接，后面加入的表也要使用左外连接</li>
+</ul>
+<p>使用<code>JOIN 表名 ON 连接条件</code>实现内连接，<br>或<code>INNER JOIN 表名 ON 连接条件</code>如下：</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 两张表连接
+SELECT last_name, department_name
+FROM employees e JOIN departments d
+ON e.department_id &#x3D; d.department_id;</code></pre>
+
+<p>这个就可以看成是一种合体（？）departments表要连接到employees表，并且声明一个条件，因此多表连接就是：每个要连接的表都对应一对<code>JOIN ... ON ...</code>，如下：</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 多表连接
+SELECT last_name, department_name
+FROM employees e 
+JOIN departments d ON e.department_id &#x3D; d.department_id
+JOIN locations l ON d.location_id &#x3D; l.location_id;</code></pre>
+
+<p><span class="red">另一种有趣的理解：</span>一个表要加入（JOIN）到原表的团队中，他需要有一个联系人（指与原表有某种联系，对应 ON + 连接条件）</p>
+<p><img src="https://s1.ax1x.com/2022/05/13/OykhZQ.png" alt="OykhZQ.png"></p>
+<hr>
+<p><strong>SQL99语法实现外连接</strong></p>
+<p>左外连接就是<code>LEFT OUTER JOIN</code>或<code>LEFT JOIN</code></p>
+<p>右外连接就是<code>RIGHT OUTER JOIN</code>或<code>RIGHT JOIN</code></p>
+<p>满外连接肯定就是<code>FULL OUTER JOIN</code>或<code>FULL JOIN</code>啦，戳啦，MySQL又不支持嘛，焯！</p>
+<p><span class="red">注意：</span>Oracle支持上面六条（包括省略了<code>OUTER</code>的）连接语句</p>
+<h2 id="SQL联合查询结果（UNION-ALL）"><a href="#SQL联合查询结果（UNION-ALL）" class="headerlink" title="SQL联合查询结果（UNION ALL）"></a>SQL联合查询结果（UNION ALL）</h2><p><span class="red bold">联合查询结果：</span>使用<code>UNION ALL</code>将该关键字两边的查询结果取并集</p>
+<p><span class="red bold">联合查询结果并去重：</span>使用<code>UNION</code>将该关键字两边的查询结果取并集<span class="red">并且去除重复记录</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT * FROM employees WHERE email LIKE &#39;%a%&#39;
+UNION
+SELECT * FROM employees WHERE department_id &gt; 90;</code></pre>
+
+<p><span class="red">注意：</span>因为<code>UNION</code>需要进行去重，因此其效率会比<code>UNION ALL</code>要慢，能用<code>UNION ALL</code>的地方不会使用<code>UNION</code>，通常会在定下过滤条件时避免两个结果有重复</p>
+<h2 id="MySQL实现7种JOIN查询（重要）"><a href="#MySQL实现7种JOIN查询（重要）" class="headerlink" title="MySQL实现7种JOIN查询（重要）"></a>MySQL实现7种JOIN查询（重要）</h2><p><img src="https://bkimg.cdn.bcebos.com/pic/8c1001e93901213f5a0febf15fe736d12f2e95db?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2U4MA==,g_7,xp_5,yp_5/format,f_auto" alt="SQL joins"></p>
+<hr>
+<p><strong>中图实现</strong></p>
+<p><img src="https://s1.ax1x.com/2022/05/13/OyMwlj.png" alt="OyMwlj.png"></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 内连接
+SELECT employee_id, department_id
+FROM employees e
+JOIN departments d ON e.department_id &#x3D; d.department_id;</code></pre>
+
+<hr>
+<p><strong>左上图实现</strong></p>
+<p><img src="https://s1.ax1x.com/2022/05/13/OyMy7V.png" alt="OyMy7V.png"></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 左外连接
+SELECT employee_id, department_id
+FROM employees e
+LEFT JOIN departments d ON e.department_id &#x3D; d.department_id;</code></pre>
+
+<hr>
+<p><strong>右上图实现</strong></p>
+<p><img src="https://s1.ax1x.com/2022/05/13/OyMhc9.png" alt="OyMhc9.png"></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 右外连接
+SELECT employee_id, department_id
+FROM employees e
+RIGHT JOIN departments d ON e.department_id &#x3D; d.department_id;</code></pre>
+
+<hr>
+<p><strong>左下图实现</strong></p>
+<p><img src="https://s1.ax1x.com/2022/05/13/OyMvjA.png" alt="OyMvjA.png"></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 左外连接并去除满足条件的
+SELECT employee_id, department_id
+FROM employees e
+LEFT JOIN departments d ON e.department_id &#x3D; d.department_id
+WHERE NOT d.department_id IS NULL;</code></pre>
+
+<hr>
+<p><strong>右下图实现</strong></p>
+<p><img src="https://s1.ax1x.com/2022/05/13/OyQeun.png" alt="OyQeun.png"></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 右外连接并去除满足匹配条件
+SELECT employee_id, department_id
+FROM employees e
+RIGHT JOIN departments d ON e.department_id &#x3D; d.department_id
+WHERE NOT e.department_id IS NULL;</code></pre>
+
+<hr>
+<p><strong>满外连接实现</strong></p>
+<p><img src="https://s1.ax1x.com/2022/05/13/OyQbbq.png" alt="OyQbbq.png"></p>
+<p>对啦，就是：</p>
+<ol>
+<li>左上 + 右下</li>
+<li>右上 + 左下</li>
+</ol>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT employee_id, department_id
+FROM employees e
+RIGHT JOIN departments d ON e.department_id &#x3D; d.department_id
+
+UNION ALL
+
+SELECT employee_id, department_id
+FROM employees e
+RIGHT JOIN departments d ON e.department_id &#x3D; d.department_id
+WHERE e.department_id IS NULL;</code></pre>
+
+<hr>
+<p><strong>满外连接并去除满足匹配条件</strong></p>
+<p><img src="https://s1.ax1x.com/2022/05/13/OyGEmd.png" alt="OyGEmd.png"></p>
+<p>然后这个就是 左下 + 右下 啦</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 满外连接并去除满足匹配条件
+
+SELECT employee_id, department_id
+FROM employees e
+RIGHT JOIN departments d ON e.department_id &#x3D; d.department_id
+WHERE e.department_id IS NULL
+
+UNION ALL
+
+SELECT employee_id, department_id
+FROM employees e
+LEFT JOIN departments d ON e.department_id &#x3D; d.department_id
+WHERE d.department_id IS NULL;</code></pre>
+
+<h2 id="SQL99新特性-自然连接（NATURAL-JOIN）"><a href="#SQL99新特性-自然连接（NATURAL-JOIN）" class="headerlink" title="SQL99新特性-自然连接（NATURAL JOIN）"></a>SQL99新特性-自然连接（NATURAL JOIN）</h2><p>使用<code>NATURAL JOIN</code>，则SQL将自动寻找两个表中的相同字段作为连接条件进行连接，从而可以不写连接条件</p>
+<p><span class="red">注意：</span>因为这是自动的，因此有几个相同的字段就会使用几个连接条件，在某些时候效率还是不如<code>JOIN ON</code>，因此不建议使用</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT employee_id, department_id
+FROM employees e
+NATURAL JOIN departments d</code></pre>
+
+<h2 id="SQL99新特性-指定等值连接字段（USING）"><a href="#SQL99新特性-指定等值连接字段（USING）" class="headerlink" title="SQL99新特性-指定等值连接字段（USING）"></a>SQL99新特性-指定等值连接字段（USING）</h2><p><span class="red">注意：</span><code>USING</code>不适用于自连接</p>
+<p>若两个表中存在相同的字段时，使用<code>USING (字段名)</code>指定等值连接字段</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT employee_id, department_id
+FROM employees e
+LEFT JOIN departments d USING (department_id);</code></pre>
+
+<h2 id="MySQL单行函数——基本、字符串、时间"><a href="#MySQL单行函数——基本、字符串、时间" class="headerlink" title="MySQL单行函数——基本、字符串、时间"></a>MySQL单行函数——基本、字符串、时间</h2><p>不同DBMS之间的函数差异很大，大部分DBMS都有自己特定的函数，因此在使用不同DBMS时需要注意，这里写的是<span class="red">MySQL用函数</span></p>
+<p><span class="red bold">单行函数：</span>单行函数指的是该函数仅作用于一行（或一个）数据，<span class="red">一行（或一个）数据返回一个值</span>，并且当参数指定为一个字段名时，MySQL会将该函数循环作用于每一行的该字段，并不是指这个函数占一行</p>
+<hr>
+<p><strong>数值函数——基本函数</strong></p>
+<p><span class="red bold">注意：</span>（包括所有数值函数）这些函数只用在字符串就太可惜了，这里的参数可以传入字段名，这是当然的</p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ABS(x)</td>
+<td align="center">取绝对值</td>
+</tr>
+<tr>
+<td align="center">SIGN(x)</td>
+<td align="center">符号函数</td>
+</tr>
+<tr>
+<td align="center">PI()</td>
+<td align="center">π</td>
+</tr>
+<tr>
+<td align="center">CEIL(x)</td>
+<td align="center">天花板函数，将传入的值向上取整</td>
+</tr>
+<tr>
+<td align="center">CEILING(x)</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">FLOOR(x)</td>
+<td align="center">地板函数，将传入的值向下取整</td>
+</tr>
+<tr>
+<td align="center">MOD(a, b)</td>
+<td align="center">取模函数，a MOD b</td>
+</tr>
+<tr>
+<td align="center">RAND()</td>
+<td align="center">返回0~1之间的随机数</td>
+</tr>
+<tr>
+<td align="center">RAND(x)</td>
+<td align="center">返回0~1之间的随机数，x作为种子值<br />相同的x产生的随机数相同</td>
+</tr>
+<tr>
+<td align="center">ROUND(x)</td>
+<td align="center">将传入的值四舍五入取整</td>
+</tr>
+<tr>
+<td align="center">ROUND(a, b)</td>
+<td align="center">将传入的a四舍五入并保留b位小数<br />（b可以是负数）</td>
+</tr>
+<tr>
+<td align="center">FORMAT(a, b)</td>
+<td align="center">同上（但若b&lt;=0，则只保留整数位）</td>
+</tr>
+<tr>
+<td align="center">TRUNCATE(a,b)</td>
+<td align="center">截断函数，将传入的a不作任何舍入保留b位小数</td>
+</tr>
+<tr>
+<td align="center">SQRT(X)</td>
+<td align="center">开平方函数</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>数值函数——三角函数</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">RADIANS(x)</td>
+<td align="center">将角度转换为弧度</td>
+</tr>
+<tr>
+<td align="center">DEGREES(S)</td>
+<td align="center">将弧度转换为角度</td>
+</tr>
+</tbody></table>
+<p><span class="red bold">注意：</span>以下三角函数参数</p>
+<ul>
+<li>rad表示弧度</li>
+<li>deg表示角度</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">SIN(rad)</td>
+<td align="center">正弦函数</td>
+</tr>
+<tr>
+<td align="center">ASIN(x)</td>
+<td align="center">反正弦函数，x∈[-1, 1]</td>
+</tr>
+<tr>
+<td align="center">COS(rad)</td>
+<td align="center">余弦函数</td>
+</tr>
+<tr>
+<td align="center">ACOS(x)</td>
+<td align="center">反余弦函数，x∈[-1, 1]</td>
+</tr>
+<tr>
+<td align="center">TAN(rad)</td>
+<td align="center">正切函数</td>
+</tr>
+<tr>
+<td align="center">ATAN(x)</td>
+<td align="center">反正切函数</td>
+</tr>
+<tr>
+<td align="center">ATAN2(a,b)</td>
+<td align="center">返回两个值的反正切值</td>
+</tr>
+<tr>
+<td align="center">COT(rad)</td>
+<td align="center">余切函数</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>数值函数——指数与对数</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">POW(a,b)</td>
+<td align="center">返回a的b次方</td>
+</tr>
+<tr>
+<td align="center">POWER(a, b)</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">EXP(x)</td>
+<td align="center">返回e的x次方</td>
+</tr>
+<tr>
+<td align="center">LN(x)</td>
+<td align="center">返回以e为底x的对数</td>
+</tr>
+<tr>
+<td align="center">LOG(x)</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">LOG10(x)</td>
+<td align="center">返回以10为底x的对数</td>
+</tr>
+<tr>
+<td align="center">LOG2(x)</td>
+<td align="center">返回以2为底x的对数</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>数值函数——进制转换</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">BIN(x)</td>
+<td align="center">二进制</td>
+</tr>
+<tr>
+<td align="center">HEX(x)</td>
+<td align="center">十六进制</td>
+</tr>
+<tr>
+<td align="center">OCT(x)</td>
+<td align="center">八进制</td>
+</tr>
+<tr>
+<td align="center">CONV(x, a, b)</td>
+<td align="center">返回x在a进制的情况下转换为b进制的结果</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>字符串函数</strong></p>
+<p><span class="red bold">注意：</span>（包括所有字符串函数）这些函数只用在字符串就太可惜了，这里的参数可以传入字段名，这是当然的</p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">CONVERT(str USING encoding)</td>
+<td align="center">将str的编码格式变为encoding</td>
+</tr>
+<tr>
+<td align="center">ASCII(str)</td>
+<td align="center">返回字符串第一个字符的ASCII码</td>
+</tr>
+<tr>
+<td align="center">CHAR_LENGTH(str)</td>
+<td align="center">返回字符串的<span class="red">字符个数</span></td>
+</tr>
+<tr>
+<td align="center">LENGTH(str)</td>
+<td align="center">返回字符串占用的<span class="red">字节个数</span><br />（utf8里面每个汉字占3个字节）</td>
+</tr>
+<tr>
+<td align="center">CONCAT(str1, str2, …)</td>
+<td align="center">字符串连接函数</td>
+</tr>
+<tr>
+<td align="center">CONCAT_WS(s, str1, str2, …)</td>
+<td align="center">字符串分隔连接函数<br />并且使用分隔符s将他们隔开</td>
+</tr>
+<tr>
+<td align="center">INSERT(str, index, len, replacestr)</td>
+<td align="center">字符串插入型替换函数<br />将str中从第index个字符开始的len个字符<br />替换为replacestr</td>
+</tr>
+</tbody></table>
+<p><span class="red bold">注意！：</span>SQL的字符索引从1开始算，如：</p>
+<pre><code>INSERT(&#39;hello&#39;, 2, 3, uuuuu)
+的结果为
+huuuuuo
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">REPLACE(str, a, b)</td>
+<td align="center">将字符串中所有a字符串替换为b字符串<br />若没有a字符串则不替换</td>
+</tr>
+<tr>
+<td align="center">UPPER(str)</td>
+<td align="center">大写转换</td>
+</tr>
+<tr>
+<td align="center">UCASE(str)</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">LOWER(str)</td>
+<td align="center">小写转换<br />一个巧妙的用法：<br />LOWER(last_name) = ‘king’</td>
+</tr>
+<tr>
+<td align="center">LCASE(str)</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">LEFT(str, n)</td>
+<td align="center">从str左边取n个字符</td>
+</tr>
+<tr>
+<td align="center">RIGHT(str, n)</td>
+<td align="center">从str右边取n个字符</td>
+</tr>
+<tr>
+<td align="center">LPAD(str, len, pad)</td>
+<td align="center">左补齐函数<br />右对齐效果<br />若str不足len个字符，则在其左侧使用pad补齐</td>
+</tr>
+<tr>
+<td align="center">RPAD(str, len, pad)</td>
+<td align="center">右补齐函数<br />左对齐效果<br />若str不足len个字符，则在其右侧使用pad补齐</td>
+</tr>
+<tr>
+<td align="center">TRIM(str)</td>
+<td align="center">去除首尾空格</td>
+</tr>
+<tr>
+<td align="center">LTRIM(str)</td>
+<td align="center">去除字符串左侧空格</td>
+</tr>
+<tr>
+<td align="center">RTRIM(str)</td>
+<td align="center">去除字符串右侧空格</td>
+</tr>
+<tr>
+<td align="center">TRIM(s FROM str)</td>
+<td align="center">去除str首尾的s字符</td>
+</tr>
+<tr>
+<td align="center">TRIM(LEAIDNG s FROM str)</td>
+<td align="center">去除str开始处的s字符</td>
+</tr>
+<tr>
+<td align="center">TRIM(TRAILING s FROM str)</td>
+<td align="center">去除str结尾处的s字符</td>
+</tr>
+<tr>
+<td align="center">REPEAT(str, n)</td>
+<td align="center">把str重复n次</td>
+</tr>
+<tr>
+<td align="center">SPACE(n)</td>
+<td align="center">返回n个空格</td>
+</tr>
+<tr>
+<td align="center">STRCMP(s1, s2)</td>
+<td align="center">比较两个字符串</td>
+</tr>
+<tr>
+<td align="center">SUBSTR(str, index, len)</td>
+<td align="center">返回str从index开始共len个字符<br /><span class="red">注意index从1开始</span></td>
+</tr>
+<tr>
+<td align="center">LOCAT(substr, str)</td>
+<td align="center">返回substr首次在str中出现的位置<br />未找到返回0</td>
+</tr>
+<tr>
+<td align="center">ELT(n, s1, s2, …)</td>
+<td align="center">返回参数中后面的第n个字符串<br />即返回sn</td>
+</tr>
+<tr>
+<td align="center">FIELD(s, s1, s2, …)</td>
+<td align="center">返回s在参数中后面的字符串中首次出现的位置<br /><span class="red">注意位置从1开始</span></td>
+</tr>
+<tr>
+<td align="center">FIND_IN_SET(s1, s2)</td>
+<td align="center">返回s1在s2中首次出现的位置<br />其中s2是以逗号分隔的字符串集<br />（如’11,22,33,44,55’）</td>
+</tr>
+<tr>
+<td align="center">REVERSE(str)</td>
+<td align="center">返回反转后的字符串</td>
+</tr>
+<tr>
+<td align="center">NULLIF(str1, str2)</td>
+<td align="center">比较两个字符串<br />若相等返回NULL，否则返回str1</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>日期与时间函数——获取时间</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><span class="red">CURDATE()</span></td>
+<td align="center">返回当前日期，包括年、月、日</td>
+</tr>
+<tr>
+<td align="center">CURRENT_DATE()</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center"><span class="red">CURTIME()</span></td>
+<td align="center">返回当前时间，包括时、分、秒</td>
+</tr>
+<tr>
+<td align="center">CURRENT_TIME()</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center"><span class="red">NOW()</span></td>
+<td align="center">返回当前系统日期和时间</td>
+</tr>
+<tr>
+<td align="center"><span class="red">SYSDATE()</span></td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">CURRENT_TIMESTAMP()</td>
+<td align="center">同上（这个返回的确实是时间而不是时间戳）</td>
+</tr>
+<tr>
+<td align="center">LOCALTIME()</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">LOCALTIMESTAMP()</td>
+<td align="center">同上（这个返回的确实是时间而不是时间戳）</td>
+</tr>
+<tr>
+<td align="center">UTC_DATE()</td>
+<td align="center">返回UTC（世界标准时间）日期</td>
+</tr>
+<tr>
+<td align="center">UTC_TIME()</td>
+<td align="center">返回UTC（世界标准时间）时间</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>日期与时间函数——日期与时间戳转换</strong></p>
+<p><span class="red bold">注意：</span>这里的时间戳与Java中的不同，Java中的时间戳返回的是毫秒数，这里只返回秒数</p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">UNIX_TIMESTAMP()</td>
+<td align="center">以UNIX时间戳的形式返回当前时间</td>
+</tr>
+<tr>
+<td align="center">UNIX_TIMESTAMP(DATE)</td>
+<td align="center">将DATE转换为时间戳</td>
+</tr>
+<tr>
+<td align="center">FROM_UNIXTIME(timestamp)</td>
+<td align="center">将timestamp时间戳转换为日期和时间</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>日期与时间函数——获取月份、星期、星期数、天数</strong></p>
+<p><span class="red bold">注意：</span>日期和时间在SQL中的表现形式默认是 <code>YYYY-MM-dd HH-mm-ss</code>，若传入的字符串符合这种格式，SQL会将字符串隐式转换为日期和时间</p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">YEAR(date)</td>
+<td align="center">返回传入日期的年份</td>
+</tr>
+<tr>
+<td align="center">MONTH(date)</td>
+<td align="center">返回传入日期的月份</td>
+</tr>
+<tr>
+<td align="center">DAY(date)</td>
+<td align="center">返回传入日期的天</td>
+</tr>
+<tr>
+<td align="center">HOUR(date/time)</td>
+<td align="center">返回传入日期或时间的小时数</td>
+</tr>
+<tr>
+<td align="center">MINUTE(date/time)</td>
+<td align="center">返回传入日期或时间的分钟数</td>
+</tr>
+<tr>
+<td align="center">SECOND(date/time)</td>
+<td align="center">返回传入日期或时间的秒数</td>
+</tr>
+<tr>
+<td align="center">MONTHNAME(date)</td>
+<td align="center">以名称的形式返回传入的日期的月份</td>
+</tr>
+<tr>
+<td align="center">DAYNAME(date)</td>
+<td align="center">以名称的形式返回传入日期为星期几</td>
+</tr>
+<tr>
+<td align="center">WEEKDAY(date)</td>
+<td align="center">返回传入的日期为星期几<br /><span class="red">周一为0, …周日为6 </span></td>
+</tr>
+<tr>
+<td align="center">QUARTER(date)</td>
+<td align="center">返回传入日期为所在年的第几季度<br /><span class="red">范围为1~4</span></td>
+</tr>
+<tr>
+<td align="center">WEEK(date)</td>
+<td align="center">返回传入日期位于所在年的第几周</td>
+</tr>
+<tr>
+<td align="center">WEEKOFYEAR(date)</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">DAYOFYEAR(date)</td>
+<td align="center">返回传入日期位于所在年的第几天</td>
+</tr>
+<tr>
+<td align="center">DAYOFMONTH(date)</td>
+<td align="center">返回传入日期位于所在月份的第几天</td>
+</tr>
+<tr>
+<td align="center">DAYOFWEEK(date)</td>
+<td align="center">返回传入日期为星期几<br /><span class="red">周日为1, … 周六为7</span></td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>日期与时间函数——获取特定的一部分</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">EXTRACT(type FROM date)</td>
+<td align="center">获取date日期中的type部分</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">type可用值</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">MICROSECOND</td>
+<td align="center">微秒数</td>
+</tr>
+<tr>
+<td align="center">SECOND</td>
+<td align="center">秒数</td>
+</tr>
+<tr>
+<td align="center">MINUTE</td>
+<td align="center">分钟数</td>
+</tr>
+<tr>
+<td align="center">HOUR</td>
+<td align="center">小时数</td>
+</tr>
+<tr>
+<td align="center">DAY</td>
+<td align="center">天数</td>
+</tr>
+<tr>
+<td align="center">WEEK</td>
+<td align="center">星期</td>
+</tr>
+<tr>
+<td align="center">MONTH</td>
+<td align="center">月份</td>
+</tr>
+<tr>
+<td align="center">QUARTER</td>
+<td align="center">季度</td>
+</tr>
+<tr>
+<td align="center">YEAR</td>
+<td align="center">年份</td>
+</tr>
+<tr>
+<td align="center">SECOND_MICROSECOND</td>
+<td align="center">秒和毫秒</td>
+</tr>
+<tr>
+<td align="center">MINUTE_SECOND</td>
+<td align="center">分钟和秒</td>
+</tr>
+<tr>
+<td align="center">HOUR_MICROSECOND</td>
+<td align="center">小时和毫秒</td>
+</tr>
+<tr>
+<td align="center">HOUR_SECOND</td>
+<td align="center">小时和秒</td>
+</tr>
+<tr>
+<td align="center">HOUR_MINUTE</td>
+<td align="center">小时和分钟</td>
+</tr>
+<tr>
+<td align="center">DAY_MICROSECOND</td>
+<td align="center">天数和毫秒</td>
+</tr>
+<tr>
+<td align="center">DAY_SECOND</td>
+<td align="center">天数和秒</td>
+</tr>
+<tr>
+<td align="center">DAY_MINUTE</td>
+<td align="center">天数和分钟</td>
+</tr>
+<tr>
+<td align="center">DAY_HOUR</td>
+<td align="center">天数和小时</td>
+</tr>
+<tr>
+<td align="center">YEAR_MONTH</td>
+<td align="center">年和月</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>日期与时间函数——时间转换为秒数</strong></p>
+<p><span class="red bold">注意：</span>这里的秒数并不是时间戳，而是一天中的秒数</p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">TIME_TO_SEC(date/time)</td>
+<td align="center">将传入的日期或时间转换为一天中的秒数</td>
+</tr>
+<tr>
+<td align="center">SEC_TO_TIME(second)</td>
+<td align="center">将传入的秒数转换为一天中的时间</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>日期与时间函数——日期计算函数</strong></p>
+<p><span class="red bold">注意：</span></p>
+<ol>
+<li><code>INTERVAL</code>是关键字</li>
+<li>type是值expr的类型（如增加一年就是<code>INTERVAL 1 YEAR</code>）</li>
+<li>expr可以为负数</li>
+<li>若要操作两个参数，要注意expr传入的是字符串，并且两个参数之间要加上下划线（如增加1分钟和1秒就是<code>INTERVAL &#39;1_1&#39; MINUTE_SECOND</code>）</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">DATE_ADD(date, INTERVAL expr type)</td>
+<td align="center">返回date增加指定值的日期和时间</td>
+</tr>
+<tr>
+<td align="center">ADDDATE(date, INTERVAL expr type)</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">DATE_SUB(date, INTERVAL expr type)</td>
+<td align="center">返回date减少指定值的日期和时间</td>
+</tr>
+<tr>
+<td align="center">SUBDATE(date, INTERVAL expr type)</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">DATEDIFF(date1, date2)</td>
+<td align="center">返回date2-date1的绝对值，精确到天</td>
+</tr>
+<tr>
+<td align="center">FROM_DAYS(n)</td>
+<td align="center">返回从0000-01-01起，n天后的日期</td>
+</tr>
+<tr>
+<td align="center">TO_DAYS(date)</td>
+<td align="center">返回date距离0000-01-01的天数</td>
+</tr>
+<tr>
+<td align="center">LAST_DAY(date)</td>
+<td align="center">返回date所在月份的最后一天的日期</td>
+</tr>
+<tr>
+<td align="center">MAKEDATE(year, day)</td>
+<td align="center">返回year年中的第day天的日期</td>
+</tr>
+<tr>
+<td align="center">PERIOD_ADD(time, n)</td>
+<td align="center">返回time加上n月后的时间<br /><span class="red">注意参数time的传入格式为YYYYMM，且传入的是数值</span></td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT PERIOD_ADD(202205,2) FROM DUAL;</code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="center">type</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">HOUR</td>
+<td align="center">小时</td>
+</tr>
+<tr>
+<td align="center">MINUTE</td>
+<td align="center">分钟</td>
+</tr>
+<tr>
+<td align="center">SECOND</td>
+<td align="center">秒</td>
+</tr>
+<tr>
+<td align="center">YEAR</td>
+<td align="center">年</td>
+</tr>
+<tr>
+<td align="center">MONTH</td>
+<td align="center">月</td>
+</tr>
+<tr>
+<td align="center">DAY</td>
+<td align="center">日</td>
+</tr>
+<tr>
+<td align="center">YEAR_MONTH</td>
+<td align="center">年和月</td>
+</tr>
+<tr>
+<td align="center">DAY_HOUR</td>
+<td align="center">天数和小时</td>
+</tr>
+<tr>
+<td align="center">DAY_MINUTE</td>
+<td align="center">天数和分钟</td>
+</tr>
+<tr>
+<td align="center">DAY_SECOND</td>
+<td align="center">天数和秒</td>
+</tr>
+<tr>
+<td align="center">HOUR_SECOND</td>
+<td align="center">小时和秒</td>
+</tr>
+<tr>
+<td align="center">MINUTE_SECOND</td>
+<td align="center">分钟和秒</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>日期与时间函数——时间计算函数</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ADDTIME(time1, time2)</td>
+<td align="center">返回time1加上time2的时间<br />当time2只有一个数字时，默认代表秒<br />可以为负数</td>
+</tr>
+<tr>
+<td align="center">SUBTIME(time1, time2)</td>
+<td align="center">返回time1减去time2的时间<br />当time2只有一个数字时，默认代表秒<br />可以为负数</td>
+</tr>
+<tr>
+<td align="center">TIMEDIFF(date1/time1, date2/time2)</td>
+<td align="center">返回time2-time1的绝对值，返回的格式为时间</td>
+</tr>
+<tr>
+<td align="center">MAKETIME(hour, minute, second)</td>
+<td align="center">将给定的小时、分钟和秒数组合成一个时间</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>日期的格式化与解析</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">DATE_FORMAT(date fmt)</td>
+<td align="center"><span class="red">（格式化）</span>按照字符串fmt格式化日期date值</td>
+</tr>
+<tr>
+<td align="center">TIME_FORMAT(time, fmt)</td>
+<td align="center"><span class="red">（格式化）</span>按照字符串fmt格式化时间time值</td>
+</tr>
+<tr>
+<td align="center">STR_TO_DATE(str, fmt)</td>
+<td align="center"><span class="red">（解析）</span>按照字符串fmt将str解析为一个日期</td>
+</tr>
+<tr>
+<td align="center">GET_FORMAT(date_type, format_type)</td>
+<td align="center">返回以format_type标准表示的date_type的fmt格式</td>
+</tr>
+</tbody></table>
+<p><span class="red bold">fmt—格式化形式的填写：</span></p>
+<table>
+<thead>
+<tr>
+<th align="center">格式符</th>
+<th align="center">含义</th>
+<th align="center">格式符</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&nbsp;</td>
+<td align="center"><span class="red">年</span></td>
+<td align="center"><span class="red">份</span></td>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center">%Y</td>
+<td align="center">四位数字年份</td>
+<td align="center">%y</td>
+<td align="center">后两位数字年份</td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+<td align="center"><span class="red">月</span></td>
+<td align="center"><span class="red">份</span></td>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center">%M</td>
+<td align="center">英文完整名称月份</td>
+<td align="center">%b</td>
+<td align="center">英文缩写名称月份</td>
+</tr>
+<tr>
+<td align="center">%m</td>
+<td align="center">两位数字月份<br />（1月显示01）</td>
+<td align="center">%c</td>
+<td align="center">最短个数数字月份<br />（1月显示1）</td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+<td align="center"><span class="red">天</span></td>
+<td align="center"><span class="red">数</span></td>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center">%D</td>
+<td align="center">数字+英文后缀天数</td>
+<td align="center">%d</td>
+<td align="center">两位数字天数</td>
+</tr>
+<tr>
+<td align="center">%e</td>
+<td align="center">最短数字数字天数</td>
+<td align="center">&nbsp;</td>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+<td align="center"><span class="red">小</span></td>
+<td align="center"><span class="red">时</span></td>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center">%H</td>
+<td align="center">两位数字小时<br />24小时制</td>
+<td align="center">&nbsp;</td>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center">%h</td>
+<td align="center">两位数字小时<br />12小时制</td>
+<td align="center">%I（i大写）</td>
+<td align="center">两位数字小时<br />12小时制</td>
+</tr>
+<tr>
+<td align="center">%k</td>
+<td align="center">最短数字小时<br />24小时制</td>
+<td align="center">%l（L小写）</td>
+<td align="center">最短数字数字小时<br />12小时制</td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+<td align="center"><span class="red">分</span></td>
+<td align="center"><span class="red">钟</span></td>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center">%i</td>
+<td align="center">两位数字分钟</td>
+<td align="center">&nbsp;</td>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+<td align="center"><span class="red">秒</span></td>
+<td align="center"><span class="red">钟</span></td>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center">%S</td>
+<td align="center">两位数字表示秒</td>
+<td align="center">%s</td>
+<td align="center">两位数字表示秒<br />（没错这两个一样）</td>
+</tr>
+<tr>
+<td align="center"><span class="red">完</span></td>
+<td align="center"><span class="red">整</span></td>
+<td align="center"><span class="red">时</span></td>
+<td align="center"><span class="red">间</span></td>
+</tr>
+<tr>
+<td align="center">%T</td>
+<td align="center">24小时制完整时间<br />（使用默认格式 00:00:00）</td>
+<td align="center">%r</td>
+<td align="center">12小时制完整时间<br />（使用默认格式 00:00:00）</td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+<td align="center"><span class="red">星</span></td>
+<td align="center"><span class="red">期</span></td>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center">%W</td>
+<td align="center">英文完整名称星期</td>
+<td align="center">%a</td>
+<td align="center">英文缩写名称星期</td>
+</tr>
+<tr>
+<td align="center">%w</td>
+<td align="center">数字星期<br />（周日为0, …, 周六为6）</td>
+<td align="center">&nbsp;</td>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center"><span class="red">年</span></td>
+<td align="center"><span class="red">中</span></td>
+<td align="center"><span class="red">参</span></td>
+<td align="center"><span class="red">数</span></td>
+</tr>
+<tr>
+<td align="center">%j</td>
+<td align="center">三位数字年中天数</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">%U</td>
+<td align="center">最短数字表示年中周数<br />（定义周日为每周第一天）</td>
+<td align="center">%u</td>
+<td align="center">最短数字表示年中周数<br />（定义周一为每周第一天）</td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+<td align="center"><span class="red">特</span></td>
+<td align="center"><span class="red">殊</span></td>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center">%p</td>
+<td align="center">AM或PM</td>
+<td align="center">%%</td>
+<td align="center">表示百分号</td>
+</tr>
+</tbody></table>
+<p><span class="red bold">date_type与format_type的填写：</span></p>
+<ul>
+<li>每个date_type都可以对应五个format_type</li>
+<li>GET_FORMAT返回的是一个fmt（如%H:%i:%s）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">date_type<br />格式化内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">DATE</td>
+</tr>
+<tr>
+<td align="center">TIME</td>
+</tr>
+<tr>
+<td align="center">DATETIME</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">format_type<br />格式化标准</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">USA</td>
+</tr>
+<tr>
+<td align="center">JIS</td>
+</tr>
+<tr>
+<td align="center">ISO</td>
+</tr>
+<tr>
+<td align="center">EUR</td>
+</tr>
+<tr>
+<td align="center">INTERNAL</td>
+</tr>
+</tbody></table>
+<p><span class="red bold">使用例：</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">DATE_FORMAT(hire_date, &#39;%Y-%m-%d&#39;) &gt;&#x3D; &#39;1997-01-01&#39;
+DATE_FORMAT(hire_date, &#39;%Y&#39;) &gt;&#x3D; &#39;1997&#39;
+hire_date &gt;&#x3D; STR_TO_DATE(&#39;1997-01-01&#39;, &#39;%Y-%m-%d&#39;)</code></pre>
+
+<h2 id="MySQL单行函数——流程控制函数"><a href="#MySQL单行函数——流程控制函数" class="headerlink" title="MySQL单行函数——流程控制函数"></a>MySQL单行函数——流程控制函数</h2><p><span class="red bold">注意：</span>最下面两个流程控制的ELSE都是可选的</p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">IF(expr, value1, value2)</td>
+<td align="center">expr?value1:value2</td>
+</tr>
+<tr>
+<td align="center">IFNULL(value1, value2)</td>
+<td align="center">value1 == NULL?value2:value1</td>
+</tr>
+<tr>
+<td align="center">CASE<br />WHEN 条件1 THEN 结果1<br />WHEN 条件2 THEN 结果2<br />[ELSE 结果n]<br />END</td>
+<td align="center">if(条件1){结果1}<br />else if(条件2){结果2}<br />else{结果n}</td>
+</tr>
+<tr>
+<td align="center">CASE 字段名<br />WHEN 常量1 THEN 结果1<br />WHEN 常量2 THEN 结果2<br />[ELSE 结果n]<br />END</td>
+<td align="center">switch() {<br />case 常量1: 结果1<br />case 常量2: 结果2<br />default: 结果n }</td>
+</tr>
+</tbody></table>
+<h2 id="MySQL单行函数——加密与解密"><a href="#MySQL单行函数——加密与解密" class="headerlink" title="MySQL单行函数——加密与解密"></a>MySQL单行函数——加密与解密</h2><table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">PASSWORD(str)</td>
+<td align="center">返回字符串的41位长加密版本，该过程不可逆<br /><span class="red">在MySQL8.0中失效</span></td>
+</tr>
+<tr>
+<td align="center">MD5(str)</td>
+<td align="center">返回字符串经过md5加密算法加密后的值<br />该过程不可逆<br />若参数NULL，返回为NULL</td>
+</tr>
+<tr>
+<td align="center">SHA(str)</td>
+<td align="center">返回字符串经过SHA加密算法加密后的值<br />该过程不可逆<br />若参数NULL，返回为NULL</td>
+</tr>
+<tr>
+<td align="center">ENCODE(value, password_seed)</td>
+<td align="center">使用指定种子加密value<br /><span class="red">在MySQL8.0中失效</span></td>
+</tr>
+<tr>
+<td align="center">DECODE(value, password_seed)</td>
+<td align="center">使用指定种子解密value<br /><span class="red">在MySQL8.0中失效</span></td>
+</tr>
+</tbody></table>
+<h2 id="MySQL单行函数——MySQL当前信息函数"><a href="#MySQL单行函数——MySQL当前信息函数" class="headerlink" title="MySQL单行函数——MySQL当前信息函数"></a>MySQL单行函数——MySQL当前信息函数</h2><table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">VERSION()</td>
+<td align="center">返回MySQL版本号</td>
+</tr>
+<tr>
+<td align="center">CONNECTION_ID()</td>
+<td align="center">返回当前客户端与MySQL服务器的连接ID</td>
+</tr>
+<tr>
+<td align="center">DATABASE()</td>
+<td align="center">返回MySQL命令行所在的数据库</td>
+</tr>
+<tr>
+<td align="center">SCHEMA()</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">USER()</td>
+<td align="center">返回当前连接MySQL的用户名<br />返回格式为“用户名@IP地址”</td>
+</tr>
+<tr>
+<td align="center">CURRENT_USER()</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">SYSTEM_USER()</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">SESSION_USER()</td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">CHARSET(value)</td>
+<td align="center">返回字符串value的字符集</td>
+</tr>
+<tr>
+<td align="center">COLLATION(value)</td>
+<td align="center">返回字符串value的比较规则</td>
+</tr>
+</tbody></table>
+<h2 id="MySQL单行函数——其它函数"><a href="#MySQL单行函数——其它函数" class="headerlink" title="MySQL单行函数——其它函数"></a>MySQL单行函数——其它函数</h2><table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">INET_ATON(ipstr)</td>
+<td align="center">将一个ip地址字符串转换为一个数字</td>
+</tr>
+<tr>
+<td align="center">INET_NTOA(value)</td>
+<td align="center">将一个数字转换为IP地址</td>
+</tr>
+<tr>
+<td align="center">BENCHMARK(n, expr)</td>
+<td align="center">将表达式expr重复执行n次<br />用于测试MySQL处理expr表达式所耗费的时间</td>
+</tr>
+</tbody></table>
+<h2 id="MySQL聚合函数（多行函数）"><a href="#MySQL聚合函数（多行函数）" class="headerlink" title="MySQL聚合函数（多行函数）"></a>MySQL聚合函数（多行函数）</h2><p><span class="red bold">聚合函数：</span>也称多行函数，是指该函数作用于一组数据，<span class="red bold">多个数据返回一个值</span></p>
+<hr>
+<p><strong>五个常用聚合函数</strong></p>
+<p><span class="red bold">注意：</span>所有聚合函数都会受到<code>GROUP BY</code>分组影响</p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">AVG(field)</td>
+<td align="center">返回该字段所有<span class="red">非空数值</span>的平均值<br /><span class="red">仅适用于数值</span></td>
+</tr>
+<tr>
+<td align="center">SUM(field)</td>
+<td align="center">返回该字段所有<span class="red">非空数值</span>的和<br /><span class="red">仅适用于数值</span></td>
+</tr>
+<tr>
+<td align="center">MAX(field)</td>
+<td align="center">返回该字段的最大值</td>
+</tr>
+<tr>
+<td align="center">MIN(field)</td>
+<td align="center">返回该字段的最小值</td>
+</tr>
+<tr>
+<td align="center">COUNT(field)</td>
+<td align="center">返回该字段在查询结构下数据的个数<br /><span class="red">（非NULL）</span></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span class="red bold">AVG/SUM：</span>可以实现a+b的都可以使用AVG和SUM，因此AVG和SUM仅适用于数值类型</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><span class="red bold">MAX/MIN：</span>可以实现对比或排序的都可以使用MAX/MIN，因此MAX和MIN可以适用于数值、字符串和日期</p>
+<p><span class="red bold">COUNT：</span></p>
+<ul>
+<li><p><span class="red">COUNT(字段名)不会将NULL值计入</span></p>
+</li>
+<li><p><span class="red">COUNT会受到WHERE筛选的影响</span></p>
+</li>
+<li><p>若COUNT()中写了一个常量，因为常量会分配给表中的每一行，所以在筛选条件下有多少行就有多少个常量被挑选出来</p>
+</li>
+<li><p>COUNT(*)和COUNT(常量)都可以用于统计表中的记录个数</p>
+<ul>
+<li><span class="red">在字段非空的情况下</span>，<code>COUNT(*)</code>、<code>COUNT(常量)</code>和<code>COUNT(字段名)</code>都可以用于统计表中的记录个数（行数），在效率方面，他们有这样的关系：<ul>
+<li>若数据库使用MyISAM存储引擎，每个表都有一个隐藏字段记录数据行数，因此三者效率相同</li>
+<li>若数据库使用InnoDB存储引擎，则三者效率关系为：<code>COUNT(*)</code>=<code>COUNT(常量)</code>&gt;<code>COUNT(字段名)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="MySQL分组（GROUP-BY）"><a href="#MySQL分组（GROUP-BY）" class="headerlink" title="MySQL分组（GROUP BY）"></a>MySQL分组（GROUP BY）</h2><p>对于聚合函数，它是作用于多行的函数，而通常我们需要根据某个字段的内容分批执行多行函数（如统计每个部门的平均工资），这时就需要分组</p>
+<p><span class="red bold">注意：</span>聚合函数会受到分组的影响（正因如此分组才有意义）</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/24/Java-JUC/" rel="prev" title="Java JUC">
+                  <i class="fa fa-chevron-left"></i> Java JUC
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

@@ -48,7 +48,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2022/05/27/Xemf91.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/06/07/XD9Wlt.png">
 <meta property="article:published_time" content="2022-05-10T01:42:26.000Z">
-<meta property="article:modified_time" content="2022-06-07T14:27:24.437Z">
+<meta property="article:modified_time" content="2022-06-08T14:29:43.983Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
@@ -244,7 +244,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-06-07 22:27:24" itemprop="dateModified" datetime="2022-06-07T22:27:24+08:00">2022-06-07</time>
+        <time title="修改时间：2022-06-08 22:29:43" itemprop="dateModified" datetime="2022-06-08T22:29:43+08:00">2022-06-08</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -3593,8 +3593,10 @@ FROM json_test;</code></pre>
 <li>修改表时 <code>ALTER TABLE</code></li>
 </ol>
 <p><span class="red bold">查看表中的约束：</span></p>
-<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT * FROM information_schema.table_constraints
-WHERE table_name &#x3D; &#39;表名&#39;;</code></pre>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT * FROM information_schema.TABLE_CONSTRAINTS
+WHERE TABLE_NAME &#x3D; &#39;表名&#39;;
+
+SHOW INDEX FROM 表名 [FROM 数据库名];</code></pre>
 
 <hr>
 <p><strong>非空约束（NOT NULL）</strong></p>
@@ -3663,8 +3665,10 @@ ADD [CONSTRAINT 约束名] UNIQUE(字段名[, 字段名, ...]);</code></pre>
 </ul>
 <p><span class="red bold">删除索引：</span></p>
 <p>回顾：如何查看索引：</p>
-<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT * FROM information_schema.table_constraints
-WHERE table_name &#x3D; &#39;表名&#39;;</code></pre>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT * FROM information_schema.TABLE_CONSTRAINTS
+WHERE TABLE_NAME &#x3D; &#39;表名&#39;;
+
+SHOW INDEX FROM 表名 [FROM 数据库名];</code></pre>
 
 <p>使用以下代码删除索引：</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">ALTER TABLE 表名
@@ -3707,6 +3711,176 @@ ADD PRIMARY KEY(字段名);</code></pre>
 <p><span class="red">注意：该操作危险！！！</span></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">ALTER TABLE 表名
 DROP PRIMARY KEY;</code></pre>
+
+<hr>
+<p><strong>自增列（AUTO_INCREMENT）</strong></p>
+<p>使某个字段的值自动增长</p>
+<p><span class="red">注意：</span></p>
+<ul>
+<li>一个表最多只能有一个自增列</li>
+<li>当需要产生唯一标识符或顺序值时，可以设置自增长</li>
+<li>自增长约束的列必须是键列（主键/唯一键）</li>
+<li>自增字段的数据类型必须为整型</li>
+<li>若自增列在插入数据时指定了0和NULL，则会在当前最大值基础上自增<br />若设置了具体值则直接使用该值</li>
+<li>在开发中，一旦字段上声明了自增，就不要再给该字段赋值</li>
+</ul>
+<p><span class="red bold">定义约束：</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">CREATE TABLE 表名(
+    字段名 数据类型 [UNIQUE&#x2F;PRIMARY KEY] AUTO_INCREMENT
+);</code></pre>
+
+<p><span class="red bold">修改约束：</span></p>
+<p>一般不会这么做</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">ALTER TABLE 表名
+MODIFY 字段名 数据类型 AUTO_INCREMENT;</code></pre>
+
+<p><span class="red bold">修改自增值：</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">ALTER TABLE 表名
+AUTO_INCREMENT &#x3D; 值;</code></pre>
+
+<p><span class="red bold">删除约束：</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">ALTER TABLE 表名
+MODIFY 字段名 数据类型;</code></pre>
+
+<p><span class="red bold">MySQL8.0新特性——自增值持久化：</span></p>
+<p>在MySQL5.7中，表的自增值保存在内存中，一旦重启MySQL服务，内存中的自增值就会消失，在启动MySQL服务时，会重新使用表中的最大值作为自增值。</p>
+<p>而在MySQL8.0中，自增值放在日志中，每次计数器改变都会更新日志，重启MySQL服务后，InnoDB会从日志中重新读取自增值</p>
+<hr>
+<p><strong>外键约束（FOREIGN KEY）</strong></p>
+<p><span class="red">注意：</span>开发中基本不使用外键，数据耦合性过高</p>
+<ul>
+<li>从表（引用别人的表）的外键列必须引用主表（被引用的表）的主键会唯一性约束的列</li>
+<li>在创建外键约束时，若不给外键约束命名，则将列名作为外键约束名</li>
+<li>若要在创建表时就指定外键，需要先创建主表（被引用），再创建从表（引用）</li>
+<li>删除表时，需要先删从表（引用），再删主表（被引用）</li>
+<li>一个表可以指定多个外键约束</li>
+<li>当创建外键约束时，系统默认会在所在的列上建立对应的索引，但是索引名是列名，不是外键的约束名</li>
+<li><span class="red">删除外键约束后，还需要手动删除对应的索引</span></li>
+</ul>
+<p><span class="red bold">定义约束：</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 表约束
+CREATE TABLE 表名 (
+    字段名 数据类型,
+    [CONSTRAINT 约束名] FOREIGN KEY (外键字段名) REFERENCES 主表名(被引用字段名)
+);</code></pre>
+
+<p><span class="red bold">修改约束：</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">ALTER TABLE 表名
+ADD [CONSTRAINT 约束名] FOREIGN KEY (外键字段名) REFERENCES 主表名(被引用字段名);</code></pre>
+
+<p><span class="red bold">约束等级：</span></p>
+<p>zszz，外键约束里面，主表和从表中的某个字段有依赖关系，指定依赖等级，即指定当主表（被引用表）中有数据变更或删除时，数据库应该做的操作。</p>
+<p>可以通过在声明外键语句后面加上<code>ON UPDATE 约束等级 ON DELETE 约束等级</code>设定当数据变更和删除时，数据库的操作，约束等级有以下几种：</p>
+<ul>
+<li><p><code>CASCADE</code>：在主表上更新/删除被引用记录时，同步更新/删除掉从表的数据</p>
+</li>
+<li><p><code>SET NULL</code>：在主表上更新/删除被引用记录时，将从表上对应的记录设为NULL</p>
+</li>
+<li><p><code>NO ACTION</code>：若从表中有匹配的记录，则不允许主表对应记录的更新和删除</p>
+</li>
+<li><p><code>RESTRICT</code>（默认）：同<code>NO ACTION</code></p>
+</li>
+<li><p><code>SET DEFAULT</code>：在主表上更新/删除被引用记录时，将从表上对应的记录设为默认值</p>
+</li>
+</ul>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 设定当主表数据修改时，从表数据也跟着改
+-- 当主表数据删除时，从表数据设为空
+CREATE TABLE 表名(
+    字段名 数据类型,
+    [CONSTRAINT 约束名] FOREIGN KEY (外键字段名) REFERENCES 主表名(被引用字段名) ON UPDATE CASCADE ON DELETE SET NULL;
+)</code></pre>
+
+<p><span class="red">外键约束建议使用：</span></p>
+<p><code>ON UPDATE CASCADE ON DELETE RESTRICT</code></p>
+<p><span class="red bold">删除约束：</span></p>
+<p>回顾：如何看约束名</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT * FROM information_schema.TABLE_CONSTRAINTS
+WHERE TABLE_NAME &#x3D; &#39;从表名&#39;;
+
+SHOW INDEX FROM 从表名 [FROM 数据库名]</code></pre>
+
+<p><span class="red">注意：</span>删的是<code>Key_name</code></p>
+<p>删除约束：</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">ALTER TABLE 从表名
+DROP FOREIGN KEY 外键约束名;</code></pre>
+
+<p>除此之外还需要手动删除索引：</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">ALTER TABLE 从表名
+DROP INDEX 约束名;</code></pre>
+
+<p><span class="red bold">总结：</span></p>
+<p><span class="red">实际开发中，不要使用外键和级联</span>，因为外键和级联适用于单机低并发，不适合分布式、高并发，级联更新为强阻塞，严重影响数据库的插入速度，<span class="red">所有的外键概念在Java后端应用层解决</span></p>
+<p><span class="red">级联更新：</span>就是说当主表外键依赖的字段数据被修改时，就会触发从表中相应数据的更新。</p>
+<hr>
+<p><strong>检查约束（CHECK）</strong></p>
+<p><span class="red">MySQL5.7不支持检查约束，8.0之后支持</span></p>
+<p>检查约束相当于给插入该字段的数据做一个限制，当插入的数据满足括号内的语句时才允许插入，否则报错</p>
+<p>使用以下代码给字段添加检查约束</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 列约束
+CREATE TABLE 表名(
+    字段名 数据类型 CHECK(条件语句)
+);
+
+-- 表约束
+CREATE TABLE 表名(
+    字段名 数据类型,
+    [CONSTRAINT 约束名] CHECK(条件语句)
+);
+
+-- 如：输入的工资必须大于2000
+CHECK(salary &gt; 2000)
+
+-- 如：插入的数据必须为男或女
+CHECK(sex IN (&#39;男&#39; OR &#39;女&#39;))</code></pre>
+
+<p><span class="red bold">如何查看已经定义的检查约束：</span></p>
+<p>检查约束不会创建索引，在<code>information_schema.TABLE_CONSTRAINTS</code>里查询也不会显示检查条件，使用<code>SHOW</code>查看表信息即可获得检查约束的信息，建议在控制台执行该语句，在MySQL执行出来的结果不会换行</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SHOW CREATE TABLE 表名;</code></pre>
+
+<p><span class="red bold">修改约束：</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">ALTER TABLE 表名
+MODIFY 字段名 数据类型 CHECK(条件语句);
+
+-- 不知道为什么，反正就是不要命名，命名会报错
+ALTER TABLE 表名
+ADD CHECK(条件语句);</code></pre>
+
+<p><span class="red bold">删除约束：</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">ALTER TABLE test
+DROP CONSTRAINT test_chk_1;</code></pre>
+
+<hr>
+<p><strong>默认值约束（DEFAULT）</strong></p>
+<p>若在插入数据时，该字段没有被赋值，则使用默认值</p>
+<p><span class="red bold">定义约束：</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">CREATE TABLE 表名(
+    字段名 数据类型 DEFAULT 值
+);</code></pre>
+
+<p><span class="red bold">修改约束：</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">ALTER TABLE 表名
+MODIFY 字段名 数据类型 DEFAULT 值;</code></pre>
+
+<p><span class="red bold">删除约束：</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">ALTER TABLE 表名
+MODIFY 字段名 数据类型;</code></pre>
+
+<p><span class="red bold">面试题：</span></p>
+<ol>
+<li><p>如何在建表时避免空值</p>
+<p> 加非空约束和默认值约束：<code>NOT NULL DEFAULT &#39;&#39;</code>或<code>NOT NULL DEFAULT 0</code></p>
+</li>
+<li><p>为什么要避免空值</p>
+<p> （1）NULL值遇到运算符会返回NULL，不好比较<br> （2）效率低，影响索引效果</p>
+</li>
+<li><p>AUTO_INCREMENT自增一定从1开始吗</p>
+<p> 默认的AUTO_INCREMENT自增值是1，当然我们可以自行设置自增值，这样插入的数据就会从设定的值开始递增</p>
+</li>
+<li><p>并不是每个表都可以任意选择存储引擎</p>
+<p> MySQL支持多种存储引擎，每个表都可以指定不同的存储引擎，但外键约束不可以跨引擎使用</p>
+</li>
+</ol>
+
     </div>
 
     

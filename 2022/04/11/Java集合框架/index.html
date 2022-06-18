@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -16,11 +15,12 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java集合框架">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java集合框架">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java集合框架">
 <meta property="og:url" content="https://loliconkelvin.github.io/2022/04/11/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/index.html">
@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/18/Ld6Aw8.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/19/L0hmU1.md.png">
 <meta property="article:published_time" content="2022-04-11T14:20:27.000Z">
-<meta property="article:modified_time" content="2022-05-08T14:44:26.462Z">
+<meta property="article:modified_time" content="2022-06-18T15:03:30.423Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -54,6 +54,7 @@
 
 
 
+
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -67,9 +68,6 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -77,7 +75,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">萝莉控的小窝</h1>
+      <p class="site-title">萝莉控的小窝</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -90,12 +88,6 @@
 
 
 
-<nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
-  </ul>
-</nav>
 
 
 
@@ -129,10 +121,7 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
-      src="/uploads/avatar.png">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -140,7 +129,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -156,18 +145,9 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:loliconkelvin@gmail.com" title="E-Mail → mailto:loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
 
 
 
-          </div>
         </div>
       </div>
     </div>
@@ -202,13 +182,18 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2022/04/11/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Loliconkelvin">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="萝莉控的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Java集合框架 | 萝莉控的小窝">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -225,13 +210,13 @@
 
       <time title="创建时间：2022-04-11 22:20:27" itemprop="dateCreated datePublished" datetime="2022-04-11T22:20:27+08:00">2022-04-11</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-05-08 22:44:26" itemprop="dateModified" datetime="2022-05-08T22:44:26+08:00">2022-05-08</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-06-18 23:03:30" itemprop="dateModified" datetime="2022-06-18T23:03:30+08:00">2022-06-18</time>
+    </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -266,7 +251,8 @@
 
 <h2 id="集合是什么"><a href="#集合是什么" class="headerlink" title="集合是什么"></a>集合是什么</h2><p>（java.util.*）集合类似于数组，数组是单个对象的容器，集合是多个对象的容器</p>
 <ul>
-<li>集合和数组的区别：<ol>
+<li><p>集合和数组的区别：</p>
+<ol>
 <li>数组长度固定，集合的长度不固定</li>
 <li>数组可以存储基本数据类型和引用类型（要存储基本类型可以使用装箱）</li>
 </ol>
@@ -425,11 +411,7 @@ while (listIterator.hasNext()) &#123;
 
 &#96;&#96;&#96;remove()&#96;&#96;&#96;：移除&#96;&#96;&#96;next()&#96;&#96;&#96;或&#96;&#96;&#96;previous()&#96;&#96;&#96;方法上一次返回的元素
 
-&#96;&#96;&#96;add(Object obj将对象存入到集合中，关联键值，key重复则覆盖原值
-
-&#96;&#96;&#96;get(Object key)&#96;&#96;&#96;：根据键获取对应的值
-
-&#96;&#96;&#96;Set&#96;&#96;&#96;)&#96;&#96;&#96;：
+&#96;&#96;&#96;add(Object obj)&#96;&#96;&#96;：将对象存入到集合中，关联键值，key重复则覆盖原值
 
 * 若前一次调用的是&#96;&#96;&#96;next()&#96;&#96;&#96;方法，则在目前指针位置的前面插入元素
 
@@ -471,7 +453,7 @@ list.remove((Object)20);</code></pre>
 </ul>
 <p><span class="red bold">LinkedList：</span></p>
 <ul>
-<li>链表结构实现（非连续空间），查询慢，增删快 </li>
+<li>链表结构实现（非连续空间），查询慢，增删快</li>
 </ul>
 <h2 id="实现对象内容相同移除方法（List）"><a href="#实现对象内容相同移除方法（List）" class="headerlink" title="实现对象内容相同移除方法（List）"></a>实现对象内容相同移除方法（List）</h2><p>在调用remove方法时实际上是先调用<code>传入参数的类里的equals方法</code>来遍历比较参数与集合对象的地址是否相同，并且移除第一个equals方法返回true的地方</p>
 <p>于是我们只需要在<code>传入的参数的类中</code>重写equals方法即可改变remove方法的判断条件</p>
@@ -583,6 +565,8 @@ private int newCapacity(int minCapacity) &#123;
 
 &#96;&#96;&#96;setElementAt(E obj, int index)&#96;&#96;&#96;：功能与&#96;&#96;&#96;set()&#96;&#96;&#96;方法相同，不同点是Vector中的&#96;&#96;&#96;set()&#96;&#96;&#96;方法会返回被替代的元素值
 
+
+
 ---
 **Elements枚举器**
 
@@ -677,7 +661,7 @@ void linkLast(E e) &#123;
 &lt;T&gt;</code></pre>
 
 <hr>
-<p><strong>&lt;? extneds T&gt;/&lt;? Super T&gt;</strong></p>
+<p><strong>&lt;? extneds T&gt;&#x2F;&lt;? Super T&gt;</strong></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014551778/article/details/115123047">Java 泛型 ＜? super T＞ ＜? extend T＞ 的通俗理解</a></p>
 <p><span class="red bold">&lt;? extneds T&gt;：</span>指定该泛型传入的类型只能继承T类</p>
 <p><span class="red bold">&lt;? super T&gt;：</span>指定该泛型传入的类型可以是T类或其父类</p>
@@ -1099,8 +1083,8 @@ HashMap和HashSet中存储的链表为单向链表，可查阅HashMap类的Node�
 <p><span class="red bold">构造方法：</span></p>
 <p>HashMap的构造方法中并不创建数组，只是设定了加载因子，在实例化对象之后，只会得到：</p>
 <ul>
-<li>tabel = null</li>
-<li>size = 0</li>
+<li>tabel &#x3D; null</li>
+<li>size &#x3D; 0</li>
 </ul>
 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public HashMap() &#123;
   this.loadFactor &#x3D; DEFAULT_LOAD_FACTOR;
@@ -1200,8 +1184,10 @@ HashMap和HashSet中存储的链表为单向链表，可查阅HashMap类的Node�
 <pre class="line-numbers language-setProperty(String" data-language="setProperty(String"><div class="caption"><span>key, String value)```：设置一个键值和其对应的参数</span></div><code class="language-setProperty(String">
 &#96;&#96;&#96;getProperty(String key)&#96;&#96;&#96;：获取键所对应的值
 
+
 ---
 **Properties遍历方法**
+
 
 除了keySet和entrySet外，Properties还提供了第三种遍历方法：
 
@@ -1315,21 +1301,21 @@ Collections类提供静态方法以实现对所有集合类的操作
   </span>
   <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
     </div>
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js" integrity="sha256-4mJNT2bMXxcc1GCJaxBmMPdmah5ji0Ldnd79DKd1hoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-dL6vkUiCn30lPTN9cVrmQHo5UQmEwDMrx2ppAk4IhVk=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
+
 
 
 

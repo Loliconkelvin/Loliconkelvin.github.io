@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -16,11 +15,12 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="初识网络编程">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="初识网络编程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java网络编程">
 <meta property="og:url" content="https://loliconkelvin.github.io/2021/11/07/Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/index.html">
@@ -47,6 +47,7 @@
 
 
 
+
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -60,9 +61,6 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -70,7 +68,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">萝莉控的小窝</h1>
+      <p class="site-title">萝莉控的小窝</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -83,12 +81,6 @@
 
 
 
-<nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
-  </ul>
-</nav>
 
 
 
@@ -122,10 +114,7 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
-      src="/uploads/avatar.png">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -133,7 +122,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -149,18 +138,9 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:loliconkelvin@gmail.com" title="E-Mail → mailto:loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
 
 
 
-          </div>
         </div>
       </div>
     </div>
@@ -195,13 +175,18 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/11/07/Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Loliconkelvin">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="萝莉控的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Java网络编程 | 萝莉控的小窝">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -218,13 +203,13 @@
 
       <time title="创建时间：2021-11-07 13:35:04" itemprop="dateCreated datePublished" datetime="2021-11-07T13:35:04+08:00">2021-11-07</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-03-25 13:01:06" itemprop="dateModified" datetime="2022-03-25T13:01:06+08:00">2022-03-25</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-25 13:01:06" itemprop="dateModified" datetime="2022-03-25T13:01:06+08:00">2022-03-25</time>
+    </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -272,9 +257,11 @@
 </ol>
 <h2 id="IP地址类（InetAddress）"><a href="#IP地址类（InetAddress）" class="headerlink" title="IP地址类（InetAddress）"></a>IP地址类（InetAddress）</h2><ul>
 <li><p>IP地址的用途：IP地址具有唯一性，用于定位网络上的一台或多台计算机</p>
-<br /></li>
+<br />
+</li>
 <li><p><span class="red">一个特殊的IP地址：127.0.0.1 localhost 指本机</span></p>
-<br /></li>
+<br />
+</li>
 <li><p>IP地址的分类：（两种分类方式）</p>
 <ol>
 <li><p>通过IP地址分类</p>
@@ -283,13 +270,16 @@
 <li>IPV6：由八个16位无符号整数组成（每组数字可取0000~FFFF），共128位，形如 <code>6562:8652:0aff:91cb:3d4e:1307:0000:abcd</code></li>
 </ul>
 </li>
-<li><p>通过公/私网分类<br> 公网：互联网，还下分ABCD类地址，他们的网段</p>
+<li><p>通过公&#x2F;私网分类<br> 公网：互联网，还下分ABCD类地址，他们的网段</p>
 <p> 私网：局域网（192.168.xxx.xxx）</p>
-<br /></li>
+</li>
 </ol>
 </li>
-<li><p>域名</p>
+</ul>
+<br />
+
 <ul>
+<li>域名<ul>
 <li>域名的意义：为解决IP地址难记的问题，相当于给IP地址起一个名字</li>
 </ul>
 </li>
@@ -319,15 +309,14 @@
 <li>Oracle：1521</li>
 </ul>
 </li>
-<li>动态端口/私有端口：（49152~65535）</li>
+<li>动态端口&#x2F;私有端口：（49152~65535）</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <h2 id="通信协议"><a href="#通信协议" class="headerlink" title="通信协议"></a>通信协议</h2><ul>
-<li><p>TCP/IP协议层</p>
-<ol>
+<li>TCP&#x2F;IP协议层<ol>
 <li><p>TCP：用户传输协议</p>
 <ul>
 <li>连接</li>
@@ -612,7 +601,9 @@ public class TcpClient &#123;
 </li>
 </ul>
 <h3 id="拓展——若多次传输"><a href="#拓展——若多次传输" class="headerlink" title="拓展——若多次传输"></a>拓展——若多次传输</h3><ul>
-<li>下面是一段有服务端确认传输完毕的TCP文件传输<h4 id="客户端-2"><a href="#客户端-2" class="headerlink" title="客户端"></a>客户端</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class TcpFileClient &#123;
+<li>下面是一段有服务端确认传输完毕的TCP文件传输</li>
+</ul>
+<h4 id="客户端-2"><a href="#客户端-2" class="headerlink" title="客户端"></a>客户端</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class TcpFileClient &#123;
     public static void main(String[] args) &#123;
         OutputStream os &#x3D; null;
         FileInputStream fis &#x3D; null;
@@ -650,8 +641,8 @@ public class TcpClient &#123;
             e.printStackTrace();
         &#125;
     &#125;
-&#125;</code></pre></li>
-</ul>
+&#125;</code></pre>
+
 <h4 id="服务端-2"><a href="#服务端-2" class="headerlink" title="服务端"></a>服务端</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class TcpFileServer &#123;
     public static void main(String[] args) &#123;
         ServerSocket server &#x3D; null;
@@ -716,7 +707,7 @@ public class TcpClient &#123;
 <h4 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h4><ul>
 <li>要点：<ol>
 <li>接收什么内容就用什么流接收</li>
-<li>若客户端/服务端在socket的流中传输完没有直接执行下面的close关闭流而是还有事要干，这时候接收方会因为流还存在而一直等待传输方，因此需要传输方调用<code>shutdownOutput()</code>关闭传输</li>
+<li>若客户端&#x2F;服务端在socket的流中传输完没有直接执行下面的close关闭流而是还有事要干，这时候接收方会因为流还存在而一直等待传输方，因此需要传输方调用<code>shutdownOutput()</code>关闭传输</li>
 </ol>
 </li>
 </ul>
@@ -758,8 +749,9 @@ public class TcpClient &#123;
         &#x2F;&#x2F; 关闭socket
         socket.close();
     &#125;
-&#125;</code></pre>
-<h4 id="接收端"><a href="#接收端" class="headerlink" title="接收端"></a>接收端</h4></li>
+&#125;</code></pre></li>
+</ul>
+<h4 id="接收端"><a href="#接收端" class="headerlink" title="接收端"></a>接收端</h4><ul>
 <li>总体思路：<ol>
 <li>需要一个端口</li>
 <li>需要一个缓冲区接收数据报包</li>
@@ -895,7 +887,8 @@ public class TcpClient &#123;
         &#125;
         socket.close();
     &#125;
-&#125;</code></pre></li>
+&#125;</code></pre>
+</li>
 <li><p>接收线程</p>
 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class ReceiveMsg implements Runnable &#123;
     private final DatagramSocket socket;
@@ -935,7 +928,7 @@ public class TcpClient &#123;
 </ul>
 <h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><ul>
 <li>URL组成部分：<blockquote>
-<p>协议://IP地址（域名）:端口/文件/参数</p>
+<p>协议:&#x2F;&#x2F;IP地址（域名）:端口&#x2F;文件&#x2F;参数</p>
 </blockquote>
 </li>
 <li>来一个熟悉的例子：<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">URL url &#x3D; new URL(&quot;http:&#x2F;&#x2F;localhost:8080&#x2F;helloworld&#x2F;index.jsp?username&#x3D;LK&amp;password&#x3D;123456&quot;);</code></pre></li>
@@ -1010,21 +1003,21 @@ public class TcpClient &#123;
   </span>
   <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
     </div>
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js" integrity="sha256-4mJNT2bMXxcc1GCJaxBmMPdmah5ji0Ldnd79DKd1hoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-dL6vkUiCn30lPTN9cVrmQHo5UQmEwDMrx2ppAk4IhVk=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
+
 
 
 

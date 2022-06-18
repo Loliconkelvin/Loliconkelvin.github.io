@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -16,11 +15,12 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   JavaGUI编程">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   JavaGUI编程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaGUI编程">
 <meta property="og:url" content="https://loliconkelvin.github.io/2022/03/25/JavaGUI%E7%BC%96%E7%A8%8B/index.html">
@@ -53,6 +53,7 @@
 
 
 
+
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -66,9 +67,6 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -76,7 +74,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">萝莉控的小窝</h1>
+      <p class="site-title">萝莉控的小窝</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -89,12 +87,6 @@
 
 
 
-<nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
-  </ul>
-</nav>
 
 
 
@@ -128,10 +120,7 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
-      src="/uploads/avatar.png">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -139,7 +128,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -155,18 +144,9 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:loliconkelvin@gmail.com" title="E-Mail → mailto:loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
 
 
 
-          </div>
         </div>
       </div>
     </div>
@@ -201,13 +181,18 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2022/03/25/JavaGUI%E7%BC%96%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Loliconkelvin">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="萝莉控的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="JavaGUI编程 | 萝莉控的小窝">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -224,13 +209,13 @@
 
       <time title="创建时间：2022-03-25 20:05:33" itemprop="dateCreated datePublished" datetime="2022-03-25T20:05:33+08:00">2022-03-25</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-04-04 19:52:48" itemprop="dateModified" datetime="2022-04-04T19:52:48+08:00">2022-04-04</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-04 19:52:48" itemprop="dateModified" datetime="2022-04-04T19:52:48+08:00">2022-04-04</time>
+    </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -558,9 +543,19 @@ if (e.getActionCommand() &#x3D;&#x3D; &quot;&quot;) &#123;&#125;</code></pre></l
 <li>事件处理<ul>
 <li>问题：事件处理的类访问不到组件</li>
 <li>解决：<ol>
-<li>提升组件的作用域</li>
-<li><span class="red bold">组合思想：</span>在事件处理类中组合另外一个类（使CounterOld对象存在于事件处理类中，并在事件处理类的构造方法中作为参数传入）<ul>
-<li>关于组合思想：继承和组合都是服用代码的方式，继承是白盒复用，父类代码暴露，破坏了封装性，组合是黑盒复用，被组合进来的对象只能调用其公开属性和方法，更符合面向对象思想<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">class OldListener implements ActionListener &#123;
+<li><p>提升组件的作用域</p>
+</li>
+<li><p><span class="red bold">组合思想：</span>在事件处理类中组合另外一个类（使CounterOld对象存在于事件处理类中，并在事件处理类的构造方法中作为参数传入）</p>
+<ul>
+<li>关于组合思想：继承和组合都是服用代码的方式，继承是白盒复用，父类代码暴露，破坏了封装性，组合是黑盒复用，被组合进来的对象只能调用其公开属性和方法，更符合面向对象思想</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+   <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">class OldListener implements ActionListener &#123;
 CounterOld counterOld &#x3D; null;
 
 public OldListener(CounterOld counterOld) &#123;
@@ -574,14 +569,7 @@ public void actionPerformed(ActionEvent e) &#123;
     counterOld.value.setText(String.valueOf(num1 + num2));
 &#125;
 &#125;</code></pre>
-至此，已经实现一个基本的加法计算窗口</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
+<p> 至此，已经实现一个基本的加法计算窗口</p>
 </li>
 </ol>
 <br />
@@ -589,13 +577,16 @@ public void actionPerformed(ActionEvent e) &#123;
 <ol start="2">
 <li><p>优化思想</p>
 <ol>
-<li><span class="red bold">面向对象思想：</span>一个类里面包含属性和方法<ul>
+<li><p><span class="red bold">面向对象思想：</span>一个类里面包含属性和方法</p>
+<ul>
 <li>尽量把变量（属性）往外提</li>
 <li>不使用构造方法构建窗体，使用新增的方法</li>
 </ul>
 </li>
-<li><span class="red bold">封装思想：</span>只使用一次的监听器类可以将其变成私有内部类，或者lambda表达式，这样做也省去了获取不到组件对象的问题</li>
-<li><span class="red bold">条理性：</span>构建窗体的方法中，代码块尽量分为下面三部分来写：<ul>
+<li><p><span class="red bold">封装思想：</span>只使用一次的监听器类可以将其变成私有内部类，或者lambda表达式，这样做也省去了获取不到组件对象的问题</p>
+</li>
+<li><p><span class="red bold">条理性：</span>构建窗体的方法中，代码块尽量分为下面三部分来写：</p>
+<ul>
 <li>组件设置</li>
 <li>事件设置</li>
 <li>布局设置</li>
@@ -975,7 +966,8 @@ class MyDialog &#123;
         jFrame.setBounds(100, 100, 300, 300);
         jFrame.setVisible(true);
     &#125;
-&#125;</code></pre></li>
+&#125;</code></pre>
+</li>
 <li><p>同理你也可以实现一个图片按钮</p>
 </li>
 </ul>
@@ -1011,7 +1003,7 @@ class MyDialog &#123;
 &#125;</code></pre></li>
 </ul>
 <hr>
-<p><strong>单/复选框</strong></p>
+<p><strong>单&#x2F;复选框</strong></p>
 <p><span class="red bold">单选框：</span>单选框使用到类JRadioButton</p>
 <p><span class="red">需要注意的是：</span>由于单选框只能选择一个，因此要使用类ButtonGroup对单选框进行分组</p>
 <ul>
@@ -1130,8 +1122,8 @@ class MyFrame &#123;
 &#125;</code></pre></li>
 </ul>
 <hr>
-<p><strong>文本/密码框和文本域</strong></p>
-<p>Swing的文本框/文本域和AWT的文本框操作方法基本相同</p>
+<p><strong>文本&#x2F;密码框和文本域</strong></p>
+<p>Swing的文本框&#x2F;文本域和AWT的文本框操作方法基本相同</p>
 <ul>
 <li>文本域通常配合滚动条使用</li>
 </ul>
@@ -1305,7 +1297,7 @@ for (int i &#x3D; 1; i &lt; length; i++) &#123;
 <p> <strong>游戏启停</strong></p>
 <ol>
 <li>定义一个用于标记游戏启停的变量</li>
-<li>在重写的绘画组件方法里加入判断<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 若游戏没有开始，则画上提示
+<li>在重写的绘画组件方法里加入判断 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 若游戏没有开始，则画上提示
 if (!isStart) &#123;
     g.setColor(Color.WHITE);
     g.setFont(new Font(&quot;微软雅黑&quot;, Font.BOLD, 40));
@@ -1350,7 +1342,7 @@ if (!isStart) &#123;
 
 <p> <span class="red bold">使用键盘监听改变运动方向：</span></p>
 <ul>
-<li>新建一个用于标志目前移动方向的变量，每次头部移动都进行一次判断<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 头部移动
+<li>新建一个用于标志目前移动方向的变量，每次头部移动都进行一次判断 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 头部移动
 switch (direction) &#123;
     case &#39;U&#39;:
         snakeY[0] -&#x3D; unitLength;
@@ -1366,8 +1358,7 @@ switch (direction) &#123;
         break;
 &#125;</code></pre></li>
 </ul>
-<p> <span class="red bold">边界判断：</span>可以实现小蛇碰到边界从另一边出来，也可以实现碰到边界即失败</p>
- <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 横向边界判断
+<p> <span class="red bold">边界判断：</span>可以实现小蛇碰到边界从另一边出来，也可以实现碰到边界即失败<br> <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 横向边界判断
 if (snakeX[0] &gt; 642) &#123;
     snakeX[0] &#x3D; 22;
 &#125; else if (snakeX[0] &lt; 22) &#123;
@@ -1378,8 +1369,7 @@ if (snakeY[0] &gt; 525) &#123;
     snakeY[0] &#x3D; 105;
 &#125; else if (snakeY[0] &lt; 105) &#123;
     snakeY[0] &#x3D; 525;
-&#125;</code></pre>
-
+&#125;</code></pre></p>
 <hr>
 <p> <strong>食物</strong></p>
 <p> <span class="red bold">利用随机数实现食物生成：</span>使用类Random的对象的<code>nextInt()</code>方法（传入参数以自定义随机数边界）</p>
@@ -1392,7 +1382,7 @@ private void initFood() &#123;
 
 <p> <span class="red bold">吃食物：</span>每次移动都判断小蛇头部坐标是否与食物坐标重合即可</p>
 <ul>
-<li><span class="red">注意：</span>判断是否吃到食物一定在身体移动前执行，因为身体移动会将坐标数组里的每个记录身体坐标的元素变成他前一个元素的值，因此只需要增加length即可<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 判断是否吃到食物
+<li><span class="red">注意：</span>判断是否吃到食物一定在身体移动前执行，因为身体移动会将坐标数组里的每个记录身体坐标的元素变成他前一个元素的值，因此只需要增加length即可 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 判断是否吃到食物
 if (snakeX[0] &#x3D;&#x3D; foodX &amp;&amp; snakeY[0] &#x3D;&#x3D; foodY) &#123;
     &#x2F;&#x2F; 吃到食物身体变长
     length++;
@@ -1455,21 +1445,21 @@ if (snakeX[0] &#x3D;&#x3D; foodX &amp;&amp; snakeY[0] &#x3D;&#x3D; foodY) &#123;
   </span>
   <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
     </div>
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js" integrity="sha256-4mJNT2bMXxcc1GCJaxBmMPdmah5ji0Ldnd79DKd1hoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-dL6vkUiCn30lPTN9cVrmQHo5UQmEwDMrx2ppAk4IhVk=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
+
 
 
 

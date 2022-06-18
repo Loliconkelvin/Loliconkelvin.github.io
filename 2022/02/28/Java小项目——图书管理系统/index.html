@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -16,11 +15,12 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content=".red {     color: red; }  .blue {     color: blue; }   图书管理系统">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content=".red {     color: red; }  .blue {     color: blue; }   图书管理系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java小项目——图书管理系统">
 <meta property="og:url" content="https://loliconkelvin.github.io/2022/02/28/Java%E5%B0%8F%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/index.html">
@@ -52,6 +52,7 @@
 
 
 
+
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -65,9 +66,6 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -75,7 +73,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">萝莉控的小窝</h1>
+      <p class="site-title">萝莉控的小窝</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -88,12 +86,6 @@
 
 
 
-<nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
-  </ul>
-</nav>
 
 
 
@@ -122,15 +114,12 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#22-02-28"><span class="nav-number">1.</span> <span class="nav-text">22&#x2F;02&#x2F;28</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-01"><span class="nav-number">2.</span> <span class="nav-text">22&#x2F;03&#x2F;01</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8D%89%E6%8B%9F%E5%90%97idea%E5%9D%91%E4%BA%86%E6%88%91%E4%B8%A4%E4%B8%AA%E6%99%9A%E4%B8%8A%EF%BC%88%E6%96%B0%E7%89%88idea%E5%88%9B%E5%BB%BAweb%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">草拟吗idea坑了我两个晚上（新版idea创建web项目的方法）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-02"><span class="nav-number">3.</span> <span class="nav-text">22&#x2F;03&#x2F;02</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-03"><span class="nav-number">4.</span> <span class="nav-text">22&#x2F;03&#x2F;03</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-04"><span class="nav-number">5.</span> <span class="nav-text">22&#x2F;03&#x2F;04</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-05"><span class="nav-number">6.</span> <span class="nav-text">22&#x2F;03&#x2F;05</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#datatable-js"><span class="nav-number">6.1.</span> <span class="nav-text">datatable.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-06"><span class="nav-number">7.</span> <span class="nav-text">22&#x2F;03&#x2F;06</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-07"><span class="nav-number">8.</span> <span class="nav-text">22&#x2F;03&#x2F;07</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-08"><span class="nav-number">9.</span> <span class="nav-text">22&#x2F;03&#x2F;08</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-09"><span class="nav-number">10.</span> <span class="nav-text">22&#x2F;03&#x2F;09</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-10"><span class="nav-number">11.</span> <span class="nav-text">22&#x2F;03&#x2F;10</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-11"><span class="nav-number">12.</span> <span class="nav-text">22&#x2F;03&#x2F;11</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-12"><span class="nav-number">13.</span> <span class="nav-text">22&#x2F;03&#x2F;12</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-13"><span class="nav-number">14.</span> <span class="nav-text">22&#x2F;03&#x2F;13</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-03-14"><span class="nav-number">15.</span> <span class="nav-text">22&#x2F;03&#x2F;14</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#22-x2F-02-x2F-28"><span class="nav-number">1.</span> <span class="nav-text">22&#x2F;02&#x2F;28</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-x2F-03-x2F-01"><span class="nav-number">2.</span> <span class="nav-text">22&#x2F;03&#x2F;01</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8D%89%E6%8B%9F%E5%90%97idea%E5%9D%91%E4%BA%86%E6%88%91%E4%B8%A4%E4%B8%AA%E6%99%9A%E4%B8%8A%EF%BC%88%E6%96%B0%E7%89%88idea%E5%88%9B%E5%BB%BAweb%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">草拟吗idea坑了我两个晚上（新版idea创建web项目的方法）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-x2F-03-x2F-02"><span class="nav-number">3.</span> <span class="nav-text">22&#x2F;03&#x2F;02</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-x2F-03-x2F-03"><span class="nav-number">4.</span> <span class="nav-text">22&#x2F;03&#x2F;03</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-x2F-03-x2F-04"><span class="nav-number">5.</span> <span class="nav-text">22&#x2F;03&#x2F;04</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-x2F-03-x2F-05"><span class="nav-number">6.</span> <span class="nav-text">22&#x2F;03&#x2F;05</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#datatable-js"><span class="nav-number">6.1.</span> <span class="nav-text">datatable.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-x2F-03-x2F-06"><span class="nav-number">7.</span> <span class="nav-text">22&#x2F;03&#x2F;06</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-x2F-03-x2F-07"><span class="nav-number">8.</span> <span class="nav-text">22&#x2F;03&#x2F;07</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-x2F-03-x2F-08"><span class="nav-number">9.</span> <span class="nav-text">22&#x2F;03&#x2F;08</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-x2F-03-x2F-09"><span class="nav-number">10.</span> <span class="nav-text">22&#x2F;03&#x2F;09</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-x2F-03-x2F-10"><span class="nav-number">11.</span> <span class="nav-text">22&#x2F;03&#x2F;10</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-x2F-03-x2F-11"><span class="nav-number">12.</span> <span class="nav-text">22&#x2F;03&#x2F;11</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-x2F-03-x2F-12"><span class="nav-number">13.</span> <span class="nav-text">22&#x2F;03&#x2F;12</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-x2F-03-x2F-13"><span class="nav-number">14.</span> <span class="nav-text">22&#x2F;03&#x2F;13</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-x2F-03-x2F-14"><span class="nav-number">15.</span> <span class="nav-text">22&#x2F;03&#x2F;14</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
-      src="/uploads/avatar.png">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -138,7 +127,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -154,18 +143,9 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:loliconkelvin@gmail.com" title="E-Mail → mailto:loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
 
 
 
-          </div>
         </div>
       </div>
     </div>
@@ -200,13 +180,18 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2022/02/28/Java%E5%B0%8F%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Loliconkelvin">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="萝莉控的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Java小项目——图书管理系统 | 萝莉控的小窝">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -223,13 +208,13 @@
 
       <time title="创建时间：2022-02-28 09:40:17" itemprop="dateCreated datePublished" datetime="2022-02-28T09:40:17+08:00">2022-02-28</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-03-29 20:13:15" itemprop="dateModified" datetime="2022-03-29T20:13:15+08:00">2022-03-29</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-29 20:13:15" itemprop="dateModified" datetime="2022-03-29T20:13:15+08:00">2022-03-29</time>
+    </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -263,7 +248,7 @@
 <p>图书管理系统</p>
 <span id="more"></span>
 
-<h2 id="22-02-28"><a href="#22-02-28" class="headerlink" title="22/02/28"></a>22/02/28</h2><ul>
+<h2 id="22-x2F-02-x2F-28"><a href="#22-x2F-02-x2F-28" class="headerlink" title="22&#x2F;02&#x2F;28"></a>22&#x2F;02&#x2F;28</h2><ul>
 <li><p>预选jar包</p>
 <ul>
 <li>c3p0-0.9.1.2</li>
@@ -293,7 +278,8 @@
 </ul>
 </li>
 <li><p>定下前端所使用的模板(支出 10)</p>
-<br /></li>
+<br />
+</li>
 <li><p>主页编辑</p>
 <ul>
 <li>确定index.jsp运行成功</li>
@@ -302,36 +288,37 @@
 </li>
 <li><p>主页素材相关：</p>
 <ul>
-<li>登录界面左蓝色色块 -》 style/style.css:1850</li>
+<li>登录界面左蓝色色块 -》 style&#x2F;style.css:1850</li>
 <li>蓝色色块处应有背景图，但无法显示（路径问题？）1851行（已注释）</li>
-<li>src=”xxx?method=xxxxx()”<br /></li>
+<li>src&#x3D;”xxx?method&#x3D;xxxxx()”<br /></li>
 </ul>
 </li>
 <li><p>已创建编辑404 500错误页面（<span class="red">页面素材未确定</span>）</p>
-<br /></li>
+<br />
+</li>
 <li><p>编辑index.jsp</p>
-<br /></li>
+<br />
+</li>
 <li><p>初试登录认证(LoginServlet.java)</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/http/HttpServlet.html">官方说明文档？</a></li>
 <li>serialVersionUID不知道有没有用 先留着</li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41007534/article/details/99696559">相关教程</a><br /></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41007534/article/details/99696559">相关教程</a>  <br /></li>
 </ul>
 <ol>
 <li>创建HttpServlet<br> 重写HttpServlet的doGet(),doPost()方法</li>
 <li>……</li>
 </ol>
 </li>
-<li><p>22/02/28 22:24 推倒重做</p>
+<li><p>22&#x2F;02&#x2F;28 22:24 推倒重做</p>
 </li>
 </ul>
-<h2 id="22-03-01"><a href="#22-03-01" class="headerlink" title="22/03/01"></a>22/03/01</h2><ul>
+<h2 id="22-x2F-03-x2F-01"><a href="#22-x2F-03-x2F-01" class="headerlink" title="22&#x2F;03&#x2F;01"></a>22&#x2F;03&#x2F;01</h2><ul>
 <li><p>新建数据库<br>  <a target="_blank" rel="noopener" href="https://imgtu.com/i/bQ8fO0"><img src="https://s4.ax1x.com/2022/03/01/bQ8fO0.png" alt="bQ8fO0.png"></a></p>
   <br />
 
 <ul>
-<li><p>新建表：</p>
-<ol>
+<li>新建表：<ol>
 <li><p><span class="blue">(已与视频同步)</span>user（用户表）：</p>
 <ul>
 <li>id</li>
@@ -409,7 +396,7 @@
 </li>
 <li><p>（13:11）已经成功通过java访问数据库</p>
 <ul>
-<li>数据库测试用代码：<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">import java.sql.*;
+<li>数据库测试用代码：  <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">import java.sql.*;
 
 public class Main &#123;
     public static void main(String[] args)&#123;
@@ -437,30 +424,35 @@ public class Main &#123;
 </ul>
 </li>
 <li><p>成功将模板部署到Tomcat，目前未见元素丢失</p>
-<br /></li>
+<br />
+</li>
 <li><p>通过idea连接数据库生成表实体类</p>
 <ul>
 <li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jpfss/p/11122023.html">相关教程</a></p>
 </li>
-<li><p>不同点：<br><img src="https://s4.ax1x.com/2022/03/01/bQgfjP.png" alt="bQgfjP.png"></p>
+<li><p>不同点：<br>  <img src="https://s4.ax1x.com/2022/03/01/bQgfjP.png" alt="bQgfjP.png"></p>
 </li>
 <li><p>JavaBean要求</p>
 <ol>
 <li>继承Serializable</li>
 <li>私有属性</li>
-<li>getter/setter</li>
-<li>默认构造方法<br /></li>
+<li>getter&#x2F;setter</li>
+<li>默认构造方法</li>
 </ol>
 </li>
 </ul>
 </li>
+</ul>
+<br />
+
+<ul>
 <li><p>实体类UserDao的编写（Data Access Objects数据库访问层）</p>
 <ul>
 <li>该类主要通过连接mysql的user表查询是否存在这样的数据</li>
 </ul>
 <ol>
 <li>连接mysql<ul>
-<li>注意：使用到的dbhelper连接数据库方法如下：<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 指定sql地址，密码，用户名
+<li>注意：使用到的dbhelper连接数据库方法如下： <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 指定sql地址，密码，用户名
 DBHelper.init(&quot;jdbc:mysql:&#x2F;&#x2F;127.0.0.1:3306&#x2F;bookdb?&amp;useSSL&#x3D;false&amp;serverTimezone&#x3D;UTC&quot;,&quot;123456&quot;,&quot;root&quot;);
 &#x2F;&#x2F; dbhelper的构造方法中含有连接mysql的方法，new对象即为连接
 DBHelper con &#x3D; new DBHelper();
@@ -495,7 +487,7 @@ con.conn</code></pre></li>
 <ul>
 <li>该类主要用于处理jsp页面发送过来的请求</li>
 <li>虚拟地址：（web3.0之后）<ul>
-<li>使用<code>@WebServlet()</code>注解完成该类的虚拟地址定义，定义过后，不需要在web.xml中指定servlet，如：<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 在web项目下‘&#x2F;’表示项目的根目录，指webapp目录
+<li>使用<code>@WebServlet()</code>注解完成该类的虚拟地址定义，定义过后，不需要在web.xml中指定servlet，如：  <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 在web项目下‘&#x2F;’表示项目的根目录，指webapp目录
 @WebServlet(&quot;&#x2F;user.let&quot;)</code></pre></li>
 </ul>
 </li>
@@ -506,7 +498,7 @@ con.conn</code></pre></li>
 <ol>
 <li>地址栏的请求</li>
 <li>超链接</li>
-<li>&lt;form method=’get’&gt;</li>
+<li>&lt;form method&#x3D;’get’&gt;</li>
 <li>跳转</li>
 <li>重定向</li>
 </ol>
@@ -515,7 +507,7 @@ con.conn</code></pre></li>
 <p>当jsp发送get请求至该servlet时，执行该方法</p>
 </blockquote>
 <ul>
-<li>&lt;form method=’post’&gt;<br /></li>
+<li>&lt;form method&#x3D;’post’&gt;  <br /></li>
 </ul>
 </li>
 </ul>
@@ -529,8 +521,8 @@ con.conn</code></pre></li>
 </li>
 <li>获取用户名和密码<ul>
 <li><span class="red">前端请注意表单提交数据：<ol>
-<li>用户名表单组件 必须指明 name=”username”</li>
-<li>密码表单组件 必须指明 name=”password”</span></li>
+<li>用户名表单组件 必须指明 name&#x3D;”username”</li>
+<li>密码表单组件 必须指明 name&#x3D;”password” </span></li>
 </ol>
 </li>
 </ul>
@@ -576,9 +568,9 @@ con.conn</code></pre></li>
 </ul>
 </li>
 </ul>
-<h2 id="22-03-02"><a href="#22-03-02" class="headerlink" title="22/03/02"></a>22/03/02</h2><ul>
+<h2 id="22-x2F-03-x2F-02"><a href="#22-x2F-03-x2F-02" class="headerlink" title="22&#x2F;03&#x2F;02"></a>22&#x2F;03&#x2F;02</h2><ul>
 <li>导入个人资料页面，准备完成修改密码功能<ul>
-<li><span class="red">前端注意：需要做一个js 实现新旧密码不能相同，新密码与密码的重复输入需要相同，密码不能为空（密码为空时仍有返回值 返回不是null<br>而是””）</span></li>
+<li><span class="red">前端注意：需要做一个js 实现新旧密码不能相同，新密码与密码的重复输入需要相同，密码不能为空（密码为空时仍有返回值 返回不是null<br>  而是””）</span></li>
 </ul>
 </li>
 <li>用户修改密码Dao的编写<ol>
@@ -605,7 +597,7 @@ con.conn</code></pre></li>
 </ol>
 </li>
 </ul>
-<h2 id="22-03-03"><a href="#22-03-03" class="headerlink" title="22/03/03"></a>22/03/03</h2><ul>
+<h2 id="22-x2F-03-x2F-03"><a href="#22-x2F-03-x2F-03" class="headerlink" title="22&#x2F;03&#x2F;03"></a>22&#x2F;03&#x2F;03</h2><ul>
 <li><p>图书类型bean已生成</p>
 </li>
 <li><p>图书类型Dao的编写：</p>
@@ -625,44 +617,38 @@ con.conn</code></pre></li>
 <li>sql插入语句<code>INSERT INTO type VALUES(值1, 值2, ...)</code><ul>
 <li>保证一个最大id的行被删除之后,下一个焙增加的行的id为最大id+1,需要使用:<blockquote>
 <p>这条语句可以保证新增的行id紧跟目前的最大id</p>
-</blockquote>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">ALTER TABLE type auto_increment &#x3D; 1;</code></pre></li>
+ <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">ALTER TABLE type auto_increment &#x3D; 1;</code></pre></blockquote>
+</li>
 </ul>
 </li>
 <li>对于设置了自增的列, 不传入该列的值,但要传入null占位,否则后面列的数据会传到前面的列</li>
-<li>增删改都可以用<code>runner.update();</code>方法,它不需要将修改的内容用一个handler接收<br /></li>
+<li>增删改都可以用<code>runner.update();</code>方法,它不需要将修改的内容用一个handler接收  <br /></li>
 </ol>
 </li>
 <li><p>自创方法–解决删除元素之后,新增加的元素id断层问题–在每次删除元素之后设置主键从最大数开始自增</p>
 </li>
 <li><p><span class="red">目前一条runner的方法执行一条语句,要执行多条可以将sql语句分开多次执行</span></p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">ALTER TABLE type auto_increment &#x3D; 1</code></pre></li>
+  <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">ALTER TABLE type auto_increment &#x3D; 1</code></pre></li>
 </ul>
 </li>
 <li><p>图书类型Biz类型的编写:</p>
 <ul>
-<li><p>都是调用Dao中的方法,捕获其错误,若有错误则返回null或0</p>
-</li>
-<li><p>唯一特殊的地方是:<span class="red">我们不能删除有书籍信息的类型</span></p>
-<br /></li>
-<li><p>实现不能删除含有书籍的类型信息:</p>
-<ul>
+<li>都是调用Dao中的方法,捕获其错误,若有错误则返回null或0</li>
+<li>唯一特殊的地方是:<span class="red">我们不能删除有书籍信息的类型</span>  <br /></li>
+<li>实现不能删除含有书籍的类型信息:<ul>
 <li><span class="blue">基本思路是当我们删除一个书籍类型的时候,需要先根据书籍类型id去book数据库表查询一下有没有这个类型id的书</span></li>
 </ul>
 <ol>
-<li><p>因为涉及到书本库表,提前将book导出到Bean</p>
-</li>
-<li><p>建立BookDao</p>
-</li>
-<li><p>根据思路,创建根据类型id查询书籍的方法,相关sql语句:</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">SELECT * FROM book WHERE typeId&#x3D;1;</code></pre>
+<li>因为涉及到书本库表,提前将book导出到Bean</li>
+<li>建立BookDao</li>
+<li>根据思路,创建根据类型id查询书籍的方法,相关sql语句:  <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">SELECT * FROM book WHERE typeId&#x3D;1;</code></pre>
 <blockquote>
 <p>查询结果:</p>
 </blockquote>
 <ul>
 <li><p>会输出一个Book类型的集合</p>
 </li>
-<li><p>有数据则这样输出:books = [Book{id=1, typeId=1, name=’呐喊’, price=114514.0, desc=’哼哼啊啊啊啊啊啊啊啊’, pic=’c://‘, publish=’恶臭出版社’, author=’野兽先辈’}]</p>
+<li><p>有数据则这样输出:books &#x3D; [Book{id&#x3D;1, typeId&#x3D;1, name&#x3D;’呐喊’, price&#x3D;114514.0, desc&#x3D;’哼哼啊啊啊啊啊啊啊啊’, pic&#x3D;’c:&#x2F;&#x2F;‘, publish&#x3D;’恶臭出版社’, author&#x3D;’野兽先辈’}]</p>
 </li>
 <li><p>即使没有数据,也会这样输出(此时集合不为null但长度为0):[]</p>
 </li>
@@ -672,12 +658,14 @@ con.conn</code></pre></li>
 </li>
 </ol>
 </li>
-<li><p>在Type的Biz层(<span class="red">Biz层的功能现在体现</span>)调用该方法,并且判断返回的集合长度是否为0,若是则向上抛出异常提示不能删除,若否则执行删除</p>
-<br /></li>
+<li>在Type的Biz层(<span class="red">Biz层的功能现在体现</span>)调用该方法,并且判断返回的集合长度是否为0,若是则向上抛出异常提示不能删除,若否则执行删除</li>
 </ul>
 </li>
-<li><p>TypeServlet的编写</p>
+</ul>
+<br />
+
 <ul>
+<li>TypeServlet的编写<ul>
 <li><p>TypeServlet需要处理的业务:</p>
 <ol>
 <li>类型的增加(有表单)</li>
@@ -694,7 +682,7 @@ con.conn</code></pre></li>
 <li><span class="red">servlet中可以存放数据的对象</span><ol>
 <li>request(同一个请求中传输信息)</li>
 <li>session(同一个会话中传输信息)</li>
-<li>application(同一个项目中传输信息)(通常用于存放一个项目中不太经常变化的数据)<br /></li>
+<li>application(同一个项目中传输信息)(通常用于存放一个项目中不太经常变化的数据)  <br /></li>
 </ol>
 </li>
 </ul>
@@ -702,7 +690,7 @@ con.conn</code></pre></li>
 <li><p>监听器(@WebListener)</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhizhuodewo6/article/details/82019409">监听器注解</a></li>
-<li>定义<code>@WebListener</code>,将该类注册为一个Application监听器, 当项目开始运行时,该类会自动执行<br /></li>
+<li>定义<code>@WebListener</code>,将该类注册为一个Application监听器, 当项目开始运行时,该类会自动执行  <br /></li>
 <li>要实现监听器,该类需要实现ServletContextListener接口,重写里面的两个方法</li>
 <li>contextInitialized是当项目部署时执行的方法<br>  通过其参数ServletContextEvent.getServletContext可以获得servlet运行环境信息application</li>
 <li>contextDestroyed是当项目摧毁时执行的方法</li>
@@ -711,20 +699,19 @@ con.conn</code></pre></li>
 <li><p>jstl(标准标签库)</p>
 <ul>
 <li>要展示一个动态的表格,需要很多表格标签,jstl可以帮我们完成这个工作</li>
-<li><a target="_blank" rel="noopener" href="https://www.runoob.com/jsp/jsp-jstl.html">jspl标准标签库</a><br /></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/jsp/jsp-jstl.html">jspl标准标签库</a>  <br /></li>
 </ul>
 </li>
 <li><p><span class="red">前端注意,此处增加图书类型,不做额外的页面,效果为在图书类型列表中弹出添加类型的悬浮框</span></p>
 </li>
 <li><p>书籍类型添加功能</p>
 <ul>
-<li><p>前端</p>
-<ul>
+<li>前端<ul>
 <li><p>使用jspl+EL表达式实现以表单的方式输出数据库内容</p>
 </li>
 <li><p>要点:</p>
 <ol>
-<li>要使用jspl,需要在jsp头下声明<pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;%@taglib prefix&#x3D;&quot;jspl&quot; uri&#x3D;&quot;http:&#x2F;&#x2F;java.sun.com&#x2F;jsp&#x2F;jstl&#x2F;core&quot; %&gt;</code></pre></li>
+<li>要使用jspl,需要在jsp头下声明  <pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;%@taglib prefix&#x3D;&quot;jspl&quot; uri&#x3D;&quot;http:&#x2F;&#x2F;java.sun.com&#x2F;jsp&#x2F;jstl&#x2F;core&quot; %&gt;</code></pre></li>
 <li>实现根据读取到的数据行数重复输出各种标签,使用forEach<br> items表示取到的对象名,可以通过’.’取到对象里面的某个属性的值<br> var表示取到的每个对象的名称,例如下面意思是,取到的每个对象都叫type,也可以通过’.’来取得对象的属性</li>
 </ol>
   <pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;jspl:forEach items&#x3D;&quot;$&#123;types&#125;&quot; var&#x3D;&quot;type&quot;&gt;
@@ -732,8 +719,7 @@ con.conn</code></pre></li>
 &lt;&#x2F;jspl:forEach&gt;</code></pre></li>
 </ul>
 </li>
-<li><p>后端</p>
-<ol>
+<li>后端<ol>
 <li>获取表单元素:<ul>
 <li>要点:<ul>
 <li>取过来的都是string类型,可以使用每个类型对应的类的<code>parseXXX</code>方法进行转换</li>
@@ -757,10 +743,12 @@ con.conn</code></pre></li>
 <li><p>书籍类型删除功能已实现</p>
 </li>
 <li><p>书籍类型修改功能</p>
-<h2 id="22-03-04"><a href="#22-03-04" class="headerlink" title="22/03/04"></a>22/03/04</h2></li>
+</li>
 </ul>
 </li>
-<li><p>出现错误<br>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/RonaldMH/article/details/116675297">java.lang.NoClassDefFoundError: javax/servlet/jsp/tagext/TagLibraryValidator</a></p>
+</ul>
+<h2 id="22-x2F-03-x2F-04"><a href="#22-x2F-03-x2F-04" class="headerlink" title="22&#x2F;03&#x2F;04"></a>22&#x2F;03&#x2F;04</h2><ul>
+<li><p>出现错误<br>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/RonaldMH/article/details/116675297">java.lang.NoClassDefFoundError: javax&#x2F;servlet&#x2F;jsp&#x2F;tagext&#x2F;TagLibraryValidator</a></p>
 <ul>
 <li>原因:Tomcat10之后不支持导入javax包</li>
 </ul>
@@ -786,7 +774,7 @@ con.conn</code></pre></li>
 <li>删除书籍</li>
 <li>通过ID获取一本书籍</li>
 <li>分页获取<ul>
-<li>sql语句：<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- 查询(分页)
+<li>sql语句： <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- 查询(分页)
 &#x2F;*语法:SELECT * FROM LIMIT [OFFSET,] ROW
 LIMIT可以被用于强制select语句返回指定的记录数
 若给定两个参数,第一个参数为偏移量,第二个参数为返回记录行的最大数量
@@ -802,7 +790,7 @@ SELECT * FROM book LIMIT 0,2;</code></pre></li>
 </ul>
 </li>
 <li>获取书籍总数，分页时使用<ul>
-<li>sql语句：<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">SELECT COUNT(id) FROM book;</code></pre></li>
+<li>sql语句： <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">SELECT COUNT(id) FROM book;</code></pre></li>
 <li>该方法主要为前端分页做准备</li>
 <li>因为该查询语句只会返回一行一列，因此可以使用<a target="_blank" rel="noopener" href="https://blog.csdn.net/boss_way/article/details/78407781">ScalarHandler</a>封装单个值，该数据以Object类型返回<ol>
 <li>并且返回的一定是数字，是一个<span class="blue">Long类</span>的值,可以将其强制转换为long类型并转为int类型</li>
@@ -828,22 +816,23 @@ SELECT * FROM book LIMIT 0,2;</code></pre></li>
 </ul>
 </li>
 <li>通过取得书籍总量计算页数的方法：<blockquote>
-<p>((总行数-1)/每页显示行数) + 1</p>
+<p>((总行数-1)&#x2F;每页显示行数) + 1</p>
 </blockquote>
 </li>
 </ul>
 </li>
 </ul>
-<h2 id="22-03-05"><a href="#22-03-05" class="headerlink" title="22/03/05"></a>22/03/05</h2><ul>
+<h2 id="22-x2F-03-x2F-05"><a href="#22-x2F-03-x2F-05" class="headerlink" title="22&#x2F;03&#x2F;05"></a>22&#x2F;03&#x2F;05</h2><ul>
 <li><p>书籍servlet的编写</p>
 <ul>
-<li>前端<br><span class="red">前端注意：目前添加书籍，修改书籍和书籍列表是分开的页面，届时请将增加书籍和修改书籍作为书籍列表页面的悬浮窗</span><br><span class="red">后端注意：做一个在书籍创建，选择书籍类型时也能增加新类型的业务</span><br><span class="blue">后端注意：在书籍列表做一个搜索功能（如果可以，做模糊查询）（已经通过dataTables实现）</span></li>
+<li>前端<br>  <span class="red">前端注意：目前添加书籍，修改书籍和书籍列表是分开的页面，届时请将增加书籍和修改书籍作为书籍列表页面的悬浮窗</span><br>  <span class="red">后端注意：做一个在书籍创建，选择书籍类型时也能增加新类型的业务</span><br>  <span class="blue">后端注意：在书籍列表做一个搜索功能（如果可以，做模糊查询）（已经通过dataTables实现）</span></li>
 </ul>
   <br />
 
 <ul>
 <li>后端<ul>
-<li>书籍servlet需要完成的业务：<ol>
+<li><p>书籍servlet需要完成的业务：</p>
+<ol>
 <li>增加书籍</li>
 <li>改变书籍属性（预备）</li>
 <li>改变书籍属性</li>
@@ -851,23 +840,27 @@ SELECT * FROM book LIMIT 0,2;</code></pre></li>
 <li>根据ID获取书籍</li>
 </ol>
 </li>
-<li>注意：新玩具datatable.js</li>
-<li><span class="red">后端注意：图书详情功能暂时放弃，有冗余代码</span></li>
-<li><span class="red">后端注意：修改书籍界面的书籍名称一栏为只读</span></li>
-<li><span class="red">前端注意：拿掉请求的空格</span><br>  <img src="https://s4.ax1x.com/2022/03/05/b0ou8O.png" alt="b0ou8O.png"><h3 id="datatable-js"><a href="#datatable-js" class="headerlink" title="datatable.js"></a>datatable.js</h3></li>
-</ul>
+<li><p>注意：新玩具datatable.js</p>
+</li>
+<li><p><span class="red">后端注意：图书详情功能暂时放弃，有冗余代码</span></p>
+</li>
+<li><p><span class="red">后端注意：修改书籍界面的书籍名称一栏为只读</span></p>
+</li>
+<li><p><span class="red">前端注意：拿掉请求的空格</span><br>  <img src="https://s4.ax1x.com/2022/03/05/b0ou8O.png" alt="b0ou8O.png"></p>
 </li>
 </ul>
 </li>
-<li><p>普天同庆分页不用管！！！！ohhhhhhhhhhhhhhhhh</p>
+</ul>
 </li>
-<li><p>原理未知</p>
-<ul>
+</ul>
+<h3 id="datatable-js"><a href="#datatable-js" class="headerlink" title="datatable.js"></a>datatable.js</h3><ul>
+<li>普天同庆分页不用管！！！！ohhhhhhhhhhhhhhhhh</li>
+<li>原理未知<ul>
 <li><span class="red">后端注意：因为自动排序所以会产生冗余代码，详见BookServlet中getByPage方法</span></li>
 </ul>
 </li>
 </ul>
-<h2 id="22-03-06"><a href="#22-03-06" class="headerlink" title="22/03/06"></a>22/03/06</h2><ul>
+<h2 id="22-x2F-03-x2F-06"><a href="#22-x2F-03-x2F-06" class="headerlink" title="22&#x2F;03&#x2F;06"></a>22&#x2F;03&#x2F;06</h2><ul>
 <li>今天研究新玩具dataTables的使用方法，首先献上<a target="_blank" rel="noopener" href="http://datatables.club/">datatables中文网</a></li>
 </ul>
 <br />
@@ -876,7 +869,7 @@ SELECT * FROM book LIMIT 0,2;</code></pre></li>
 <li>使用dataTables：<ol>
 <li>下载jquery库、基本的dataTables样式文件和dataTables的js并且引用到网页</li>
 <li>当然首先你得有个表格：(这里把官方例子搬了过来)<ul>
-<li><span class="red">注意：使用dataTables，必须指定表头</span><pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;table id&#x3D;&quot;example&quot; class&#x3D;&quot;display&quot; cellspacing&#x3D;&quot;0&quot; width&#x3D;&quot;100%&quot;&gt;
+<li><span class="red">注意：使用dataTables，必须指定表头</span>  <pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;table id&#x3D;&quot;example&quot; class&#x3D;&quot;display&quot; cellspacing&#x3D;&quot;0&quot; width&#x3D;&quot;100%&quot;&gt;
 &lt;thead&gt;
   &lt;tr&gt;
       &lt;!-- 这里是表头 --&gt;
@@ -896,7 +889,7 @@ SELECT * FROM book LIMIT 0,2;</code></pre></li>
 </ul>
 </li>
 <li>初始化表格（变个魔术）<ul>
-<li>在html页面添加如下代码<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;script&gt;
+<li>在html页面添加如下代码  <pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;script&gt;
     $(document).ready(function () &#123;
     $(&#39;#example&#39;).DataTable();
     &#125;);
@@ -912,11 +905,11 @@ SELECT * FROM book LIMIT 0,2;</code></pre></li>
 <br />
 
 <ul>
-<li><p>功能的启用/禁用</p>
+<li><p>功能的启用&#x2F;禁用</p>
 <ul>
 <li><p>功能设置</p>
 <ul>
-<li>在<code>DataTable()</code>中传入参数，格式如下：<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">DataTable(&#123;
+<li>在<code>DataTable()</code>中传入参数，格式如下：  <pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">DataTable(&#123;
     &quot;autoWidth&quot;: true,
     &quot;info&quot;: false
 &#125;);</code></pre></li>
@@ -945,7 +938,7 @@ SELECT * FROM book LIMIT 0,2;</code></pre></li>
 <li><p>国际化 language</p>
 <ul>
 <li>首先献上<a target="_blank" rel="noopener" href="https://datatables.net/plug-ins/i18n/Chinese.html">dataTable中文翻译下载</a></li>
-<li>在<code>DataTable()</code>中传入如下参数：<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">language: &#123;
+<li>在<code>DataTable()</code>中传入如下参数：  <pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">language: &#123;
     url: &#39;&#123;FileName&#125;.json&#39;
 &#125;</code></pre></li>
 </ul>
@@ -958,14 +951,14 @@ SELECT * FROM book LIMIT 0,2;</code></pre></li>
 <br />
 
 <ul>
-<li>管理员/用户个人主页，图书列表，图书类型列表已经基本修改完成</li>
+<li>管理员&#x2F;用户个人主页，图书列表，图书类型列表已经基本修改完成</li>
 </ul>
-<h2 id="22-03-07"><a href="#22-03-07" class="headerlink" title="22/03/07"></a>22/03/07</h2><ul>
+<h2 id="22-x2F-03-x2F-07"><a href="#22-x2F-03-x2F-07" class="headerlink" title="22&#x2F;03&#x2F;07"></a>22&#x2F;03&#x2F;07</h2><ul>
 <li><p>将MemberDao结合于用户管理Dao中</p>
 <ul>
 <li>当需要查询一个数据有没有外键时的第二种方法：<ul>
 <li>直接在UserDao查询（该案例没有用于代码 代码用第一种方法，见书籍类型Biz）</li>
-<li>直接在userDao新建一个方法，使用如下sql语句进行查询<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">SELECT COUNT(id) FROM record WHERE userid &#x3D; ?;</code></pre></li>
+<li>直接在userDao新建一个方法，使用如下sql语句进行查询  <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">SELECT COUNT(id) FROM record WHERE userid &#x3D; ?;</code></pre></li>
 <li>使用ScalerHandler接收，最终会传出一个数字，代表该ID在record表有几行数据</li>
 </ul>
 </li>
@@ -979,7 +972,7 @@ SELECT * FROM book LIMIT 0,2;</code></pre></li>
 </ul>
 </li>
 </ul>
-<h2 id="22-03-08"><a href="#22-03-08" class="headerlink" title="22/03/08"></a>22/03/08</h2><ul>
+<h2 id="22-x2F-03-x2F-08"><a href="#22-x2F-03-x2F-08" class="headerlink" title="22&#x2F;03&#x2F;08"></a>22&#x2F;03&#x2F;08</h2><ul>
 <li><p>已解决点击修改个人资料、修改书籍类型资料时 预备悬浮窗应该提前显示当前修改对象的值的问题</p>
 </li>
 <li><p>关于点击修改xx资料时，修改表单自动填入当前数据的实现方法：</p>
@@ -1028,7 +1021,7 @@ $(&quot;#changeParentType&quot;).val(changeParentId);</code></pre>
   <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">&#x2F;&#x2F; 根据获取到的当前书籍类型名，对比option中的选项名，在表单中默认选出
 $(&quot;#changeBookType&quot;).children(&quot;:contains(&#39;&quot; + changeBookType + &quot;&#39;)&quot;).attr(&quot;selected&quot;,true);</code></pre></li>
 </ul>
-<h2 id="22-03-09"><a href="#22-03-09" class="headerlink" title="22/03/09"></a>22/03/09</h2><ul>
+<h2 id="22-x2F-03-x2F-09"><a href="#22-x2F-03-x2F-09" class="headerlink" title="22&#x2F;03&#x2F;09"></a>22&#x2F;03&#x2F;09</h2><ul>
 <li><p>用户注册，新增管理员功能已完成</p>
 </li>
 <li><p>删除用户功能：前端会分为管理员删除与用户注销</p>
@@ -1042,7 +1035,7 @@ $(&quot;#changeBookType&quot;).children(&quot;:contains(&#39;&quot; + changeBook
 <li><p><span class="red">后端注意:用户自行更改个人信息未完成</span></p>
 </li>
 </ul>
-<h2 id="22-03-10"><a href="#22-03-10" class="headerlink" title="22/03/10"></a>22/03/10</h2><ul>
+<h2 id="22-x2F-03-x2F-10"><a href="#22-x2F-03-x2F-10" class="headerlink" title="22&#x2F;03&#x2F;10"></a>22&#x2F;03&#x2F;10</h2><ul>
 <li><p>把悬浮窗都实现一下，需要实现悬浮窗的页面有</p>
 <ol>
 <li>login：用户注册</li>
@@ -1065,16 +1058,14 @@ $(&quot;#changeBookType&quot;).children(&quot;:contains(&#39;&quot; + changeBook
 <li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xuerong/p/8710124.html">dataTables第二页事件失效问题</a></p>
 </li>
 </ul>
-<h2 id="22-03-11"><a href="#22-03-11" class="headerlink" title="22/03/11"></a>22/03/11</h2><ul>
+<h2 id="22-x2F-03-x2F-11"><a href="#22-x2F-03-x2F-11" class="headerlink" title="22&#x2F;03&#x2F;11"></a>22&#x2F;03&#x2F;11</h2><ul>
 <li>重磅：图书借阅功能今天开始</li>
 </ul>
 <br />
 
 <ul>
-<li><p>借书功能（ajax异步刷新）</p>
-<ul>
-<li><p>根据手机号获取用户信息</p>
-<ul>
+<li>借书功能（ajax异步刷新）<ul>
+<li>根据手机号获取用户信息<ul>
 <li><p>注意事项</p>
 <ul>
 <li>使用ajax异步获取数据，则不能将信息存储在req、session、application中，需要将数据转换成json字符串，将该字符串传回页面</li>
@@ -1083,14 +1074,17 @@ $(&quot;#changeBookType&quot;).children(&quot;:contains(&#39;&quot; + changeBook
 </li>
 <li><p>前端</p>
 <ol>
-<li>新建图书借阅功能界面</li>
-<li>前端导入jquary</li>
-<li>新建获取当前用户信息<ul>
+<li><p>新建图书借阅功能界面</p>
+</li>
+<li><p>前端导入jquary</p>
+</li>
+<li><p>新建获取当前用户信息</p>
+<ul>
 <li>从session中取得当前登录用户电话号码</li>
 <li>给按钮绑定事件，点击按钮时，将当前用户电话号码通过jquary的get方法发送到指定url处</li>
 <li>该方法会返回一个请求状态status和服务端返回来的数据data</li>
 <li>data为json字符串，使用parse方法将其转换为对象，即可提取对象属性内容，将需要的内容打印在表格上</li>
-<li>禁用获取按钮<pre class="line-numbers language-js" data-language="js"><code class="language-js">$(function () &#123;
+<li>禁用获取按钮 <pre class="line-numbers language-js" data-language="js"><code class="language-js">$(function () &#123;
         &#x2F;&#x2F; 先禁用书籍查询按钮&amp;借阅按钮（未定义）
         $(&quot;#unnamed&quot;).prop(&quot;disabled&quot;, &quot;disabled&quot;);
         $(&quot;#unnamed&quot;).prop(&quot;disabled&quot;, &quot;disabled&quot;);
@@ -1121,7 +1115,8 @@ $(&quot;#changeBookType&quot;).children(&quot;:contains(&#39;&quot; + changeBook
     &#125;);</code></pre></li>
 </ul>
 </li>
-<li>关于修改td（表格）里面的值<ul>
+<li><p>关于修改td（表格）里面的值</p>
+<ul>
 <li>使用html()修改</li>
 </ul>
 </li>
@@ -1140,7 +1135,7 @@ $(&quot;#changeBookType&quot;).children(&quot;:contains(&#39;&quot; + changeBook
 <ol start="2">
 <li>关于通过用户手机号获取用户借阅书籍信息：<ul>
 <li>明确：需要通过user表的tel字段，查询record表中该用户的数据行数</li>
-<li>子查询<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- SELECT * FROM record WHERE userid &#x3D; ?
+<li>子查询 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- SELECT * FROM record WHERE userid &#x3D; ?
 -- 合在一起（子查询）
 -- SELECT id FROM &#96;user&#96; WHERE tel &#x3D; &#39;56123456568&#39;;
 
@@ -1156,7 +1151,7 @@ SELECT * FROM record WHERE userid &#x3D; (SELECT id FROM &#96;user&#96; WHERE te
 </ul>
 </li>
 </ul>
-<h2 id="22-03-12"><a href="#22-03-12" class="headerlink" title="22/03/12"></a>22/03/12</h2><ul>
+<h2 id="22-x2F-03-x2F-12"><a href="#22-x2F-03-x2F-12" class="headerlink" title="22&#x2F;03&#x2F;12"></a>22&#x2F;03&#x2F;12</h2><ul>
 <li><p>完成书籍搜索功能</p>
 </li>
 <li><p>书籍搜索功能已实现</p>
@@ -1208,13 +1203,13 @@ $(&quot;#searchByBookName&quot;).click(function () &#123;
 </li>
 <li>前端接收字符串并转换为对象，在表格中新建行和列<ul>
 <li>使用<code>$(&quot;&quot;)</code>即可创建标签</li>
-<li>使用<code>append()</code>将括号内标签附加在调用append方法的标签中<br /></li>
+<li>使用<code>append()</code>将括号内标签附加在调用append方法的标签中  <br /></li>
 </ul>
 </li>
 </ol>
 <ul>
-<li><p>借阅时间/归还时间方法</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">&lt;%-- 获取当前时间  --%&gt;
+<li><p>借阅时间&#x2F;归还时间方法</p>
+  <pre class="line-numbers language-js" data-language="js"><code class="language-js">&lt;%-- 获取当前时间  --%&gt;
 function getBorrowDate() &#123;
     let date &#x3D; new Date();
     let year &#x3D; date.getFullYear();
@@ -1244,7 +1239,8 @@ function getReturnDate() &#123;
 
     let returnDate &#x3D; year + &quot;&#x2F;&quot; + month + &quot;&#x2F;&quot; + day;
     return returnDate;
-&#125;</code></pre></li>
+&#125;</code></pre>
+</li>
 <li><p>解决多次搜索同一本书方法</p>
 <ul>
 <li>新建一个数组，使用<code>push()</code>将成功查询到的书籍名存在数组里</li>
@@ -1280,7 +1276,7 @@ function getReturnDate() &#123;
 </li>
 <li><p>新错误（WDNMD睡一觉就报错？？？）</p>
 <ul>
-<li><span class="red">不要动jsp头里面的language=”java”！！！！</span><br><img src="https://s1.ax1x.com/2022/03/14/bL5Fw8.png" alt="bL5Fw8.png"></li>
+<li><span class="red">不要动jsp头里面的language&#x3D;”java”！！！！</span><br>  <img src="https://s1.ax1x.com/2022/03/14/bL5Fw8.png" alt="bL5Fw8.png"></li>
 </ul>
 </li>
 </ul>
@@ -1290,7 +1286,7 @@ function getReturnDate() &#123;
 <li><p>图书借阅功能已完成</p>
 </li>
 </ul>
-<h2 id="22-03-13"><a href="#22-03-13" class="headerlink" title="22/03/13"></a>22/03/13</h2><ul>
+<h2 id="22-x2F-03-x2F-13"><a href="#22-x2F-03-x2F-13" class="headerlink" title="22&#x2F;03&#x2F;13"></a>22&#x2F;03&#x2F;13</h2><ul>
 <li><p>时间对比实现</p>
 </li>
 <li><p>书籍归还实现了一半</p>
@@ -1298,7 +1294,7 @@ function getReturnDate() &#123;
 <li><p>获取当前时间和比较借阅时间的方法：</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"></code></pre></li>
 </ul>
-<h2 id="22-03-14"><a href="#22-03-14" class="headerlink" title="22/03/14"></a>22/03/14</h2>
+<h2 id="22-x2F-03-x2F-14"><a href="#22-x2F-03-x2F-14" class="headerlink" title="22&#x2F;03&#x2F;14"></a>22&#x2F;03&#x2F;14</h2>
     </div>
 
     
@@ -1348,21 +1344,21 @@ function getReturnDate() &#123;
   </span>
   <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
     </div>
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js" integrity="sha256-4mJNT2bMXxcc1GCJaxBmMPdmah5ji0Ldnd79DKd1hoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-dL6vkUiCn30lPTN9cVrmQHo5UQmEwDMrx2ppAk4IhVk=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
+
 
 
 

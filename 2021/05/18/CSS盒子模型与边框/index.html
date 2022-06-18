@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -16,11 +15,12 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="CSS盒子模型与边框">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="CSS盒子模型与边框">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS盒子模型与边框">
 <meta property="og:url" content="https://loliconkelvin.github.io/2021/05/18/CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%BE%B9%E6%A1%86/index.html">
@@ -49,6 +49,7 @@
 
 
 
+
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -62,9 +63,6 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -72,7 +70,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">萝莉控的小窝</h1>
+      <p class="site-title">萝莉控的小窝</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -85,12 +83,6 @@
 
 
 
-<nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
-  </ul>
-</nav>
 
 
 
@@ -119,15 +111,12 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">盒子模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">初始化操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%EF%BC%88margin%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">外边距（margin）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD"><span class="nav-number">4.</span> <span class="nav-text">使用外边距垂直居中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%EF%BC%88border%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">边框（border）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%E5%90%88%E5%B9%B6%E5%86%99%E6%B3%95"><span class="nav-number">5.1.</span> <span class="nav-text">边框合并写法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%E6%A0%B7%E5%BC%8F%EF%BC%88style%EF%BC%89"><span class="nav-number">5.2.</span> <span class="nav-text">边框样式（style）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86%EF%BC%88radius%EF%BC%89"><span class="nav-number">5.3.</span> <span class="nav-text">圆角边框（radius）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%86"><span class="nav-number">5.3.1.</span> <span class="nav-text">圆</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E7%9A%84%E8%AE%A1%E7%AE%97%E6%96%B9%E5%BC%8F%EF%BC%88%E8%BF%99%E4%B8%AA%E5%85%83%E7%B4%A0%E6%80%BB%E5%85%B1%E5%A4%9A%E5%A4%A7%EF%BC%9F%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">盒子的计算方式（这个元素总共多大？）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%E9%98%B4%E5%BD%B1-%E7%9B%92%E5%AD%90%E9%98%B4%E5%BD%B1%EF%BC%88box-shadow%EF%BC%89"><span class="nav-number">7.</span> <span class="nav-text">边框阴影&#x2F;盒子阴影（box-shadow）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E9%98%B4%E5%BD%B1%E5%90%88%E5%B9%B6%E5%86%99%E6%B3%95"><span class="nav-number">7.1.</span> <span class="nav-text">盒子阴影合并写法</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">盒子模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">初始化操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%EF%BC%88margin%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">外边距（margin）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD"><span class="nav-number">4.</span> <span class="nav-text">使用外边距垂直居中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%EF%BC%88border%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">边框（border）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%E5%90%88%E5%B9%B6%E5%86%99%E6%B3%95"><span class="nav-number">5.1.</span> <span class="nav-text">边框合并写法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%E6%A0%B7%E5%BC%8F%EF%BC%88style%EF%BC%89"><span class="nav-number">5.2.</span> <span class="nav-text">边框样式（style）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86%EF%BC%88radius%EF%BC%89"><span class="nav-number">5.3.</span> <span class="nav-text">圆角边框（radius）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%86"><span class="nav-number">5.3.1.</span> <span class="nav-text">圆</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E7%9A%84%E8%AE%A1%E7%AE%97%E6%96%B9%E5%BC%8F%EF%BC%88%E8%BF%99%E4%B8%AA%E5%85%83%E7%B4%A0%E6%80%BB%E5%85%B1%E5%A4%9A%E5%A4%A7%EF%BC%9F%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">盒子的计算方式（这个元素总共多大？）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86%E9%98%B4%E5%BD%B1-x2F-%E7%9B%92%E5%AD%90%E9%98%B4%E5%BD%B1%EF%BC%88box-shadow%EF%BC%89"><span class="nav-number">7.</span> <span class="nav-text">边框阴影&#x2F;盒子阴影（box-shadow）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E9%98%B4%E5%BD%B1%E5%90%88%E5%B9%B6%E5%86%99%E6%B3%95"><span class="nav-number">7.1.</span> <span class="nav-text">盒子阴影合并写法</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
-      src="/uploads/avatar.png">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -135,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -151,18 +140,9 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:loliconkelvin@gmail.com" title="E-Mail → mailto:loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
 
 
 
-          </div>
         </div>
       </div>
     </div>
@@ -197,13 +177,18 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/05/18/CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%BE%B9%E6%A1%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Loliconkelvin">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="萝莉控的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="CSS盒子模型与边框 | 萝莉控的小窝">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -220,13 +205,13 @@
 
       <time title="创建时间：2021-05-18 19:57:57" itemprop="dateCreated datePublished" datetime="2021-05-18T19:57:57+08:00">2021-05-18</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-05-25 01:01:44" itemprop="dateModified" datetime="2021-05-25T01:01:44+08:00">2021-05-25</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-05-25 01:01:44" itemprop="dateModified" datetime="2021-05-25T01:01:44+08:00">2021-05-25</time>
+    </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -259,10 +244,8 @@
 &#125;</code></pre></li>
 </ul>
 <h2 id="外边距（margin）"><a href="#外边距（margin）" class="headerlink" title="外边距（margin）"></a>外边距（margin）</h2><ul>
-<li><p>若不对body样式进行设置，body默认会有一个外边距</p>
-</li>
-<li><p>对多个边距合并设置：</p>
-<blockquote>
+<li>若不对body样式进行设置，body默认会有一个外边距</li>
+<li>对多个边距合并设置：<blockquote>
 <p>margin: top right bottom left;</p>
 </blockquote>
 <blockquote>
@@ -288,7 +271,7 @@
 </li>
 </ul>
 <h2 id="边框（border）"><a href="#边框（border）" class="headerlink" title="边框（border）"></a>边框（border）</h2><h3 id="边框合并写法"><a href="#边框合并写法" class="headerlink" title="边框合并写法"></a>边框合并写法</h3><blockquote>
-<p>border(-left/-right/-top/-bottom): border-width border-style border-color</p>
+<p>border(-left&#x2F;-right&#x2F;-top&#x2F;-bottom): border-width border-style border-color</p>
 </blockquote>
 <blockquote>
 <p>border: 1px solid red</p>
@@ -308,7 +291,7 @@
 <h2 id="盒子的计算方式（这个元素总共多大？）"><a href="#盒子的计算方式（这个元素总共多大？）" class="headerlink" title="盒子的计算方式（这个元素总共多大？）"></a>盒子的计算方式（这个元素总共多大？）</h2><ul>
 <li>这个元素的总大小为 外边距 + 边框宽度 + 内边距 + 内容宽度</li>
 </ul>
-<h2 id="边框阴影-盒子阴影（box-shadow）"><a href="#边框阴影-盒子阴影（box-shadow）" class="headerlink" title="边框阴影/盒子阴影（box-shadow）"></a>边框阴影/盒子阴影（box-shadow）</h2><h3 id="盒子阴影合并写法"><a href="#盒子阴影合并写法" class="headerlink" title="盒子阴影合并写法"></a>盒子阴影合并写法</h3><blockquote>
+<h2 id="边框阴影-x2F-盒子阴影（box-shadow）"><a href="#边框阴影-x2F-盒子阴影（box-shadow）" class="headerlink" title="边框阴影&#x2F;盒子阴影（box-shadow）"></a>边框阴影&#x2F;盒子阴影（box-shadow）</h2><h3 id="盒子阴影合并写法"><a href="#盒子阴影合并写法" class="headerlink" title="盒子阴影合并写法"></a>盒子阴影合并写法</h3><blockquote>
 <p>box- shadow: x y blur（模糊距离） color</p>
 </blockquote>
 
@@ -361,21 +344,21 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
     </div>
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js" integrity="sha256-4mJNT2bMXxcc1GCJaxBmMPdmah5ji0Ldnd79DKd1hoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-dL6vkUiCn30lPTN9cVrmQHo5UQmEwDMrx2ppAk4IhVk=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
+
 
 
 

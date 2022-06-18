@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -16,11 +15,12 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="重头戏！！！表单">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="重头戏！！！表单">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML表单">
 <meta property="og:url" content="https://loliconkelvin.github.io/2021/04/23/HTML%E8%A1%A8%E5%8D%95/index.html">
@@ -47,6 +47,7 @@
 
 
 
+
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -60,9 +61,6 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -70,7 +68,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">萝莉控的小窝</h1>
+      <p class="site-title">萝莉控的小窝</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -83,12 +81,6 @@
 
 
 
-<nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
-  </ul>
-</nav>
 
 
 
@@ -117,15 +109,12 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E7%88%B6%E6%A0%87%E7%AD%BE%EF%BC%88form%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">表单父标签（form）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#method%E5%B1%9E%E6%80%A7%EF%BC%88get-post%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">method属性（get&#x2F;post）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#action%E5%B1%9E%E6%80%A7"><span class="nav-number">1.2.</span> <span class="nav-text">action属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E5%AD%90%E6%A0%87%E7%AD%BE%E2%80%94%E2%80%94input%E6%A0%87%E7%AD%BE"><span class="nav-number">2.</span> <span class="nav-text">表单子标签——input标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#input%E6%A0%87%E7%AD%BE"><span class="nav-number">2.1.</span> <span class="nav-text">input标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#type%E5%B1%9E%E6%80%A7%EF%BC%88%E5%BF%85%E5%A1%AB%EF%BC%89"><span class="nav-number">2.1.1.</span> <span class="nav-text">type属性（必填）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#name%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.2.</span> <span class="nav-text">name属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#value%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.3.</span> <span class="nav-text">value属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#size%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.4.</span> <span class="nav-text">size属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxlength%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.5.</span> <span class="nav-text">maxlength属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#checked%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.6.</span> <span class="nav-text">checked属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E6%A1%86%E4%B8%8E%E5%AF%86%E7%A0%81%E6%A1%86"><span class="nav-number">2.2.</span> <span class="nav-text">文本框与密码框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E9%80%89%E6%A1%86%EF%BC%88radio%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">单选框（radio）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E9%80%89%E6%A1%86%EF%BC%88checkbox%EF%BC%89"><span class="nav-number">2.4.</span> <span class="nav-text">复选框（checkbox）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#checked%E5%B1%9E%E6%80%A7-1"><span class="nav-number">2.4.1.</span> <span class="nav-text">checked属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#label%E6%A0%87%E7%AD%BE"><span class="nav-number">2.5.</span> <span class="nav-text">label标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#for%E5%B1%9E%E6%80%A7"><span class="nav-number">2.5.1.</span> <span class="nav-text">for属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#label%E6%A0%87%E7%AD%BE%E4%B8%AD%E5%8C%85%E5%90%AB%E7%9A%84%E5%80%BC"><span class="nav-number">2.5.2.</span> <span class="nav-text">label标签中包含的值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%9F%9F%EF%BC%88file%EF%BC%89"><span class="nav-number">2.6.</span> <span class="nav-text">文件域（file）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E6%8C%89%E9%92%AE"><span class="nav-number">2.7.</span> <span class="nav-text">普通按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E6%8C%89%E9%92%AE"><span class="nav-number">2.8.</span> <span class="nav-text">图片按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E6%8C%89%E9%92%AE%E4%B8%8E%E8%A1%A8%E5%8D%95%E9%87%8D%E7%BD%AE%E6%8C%89%E9%92%AE"><span class="nav-number">2.9.</span> <span class="nav-text">表单提交按钮与表单重置按钮</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E5%AD%90%E6%A0%87%E7%AD%BE%E2%80%94%E2%80%94select%E6%A0%87%E7%AD%BE"><span class="nav-number">3.</span> <span class="nav-text">表单子标签——select标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E6%8B%89%E9%80%89%E9%A1%B9%E6%A1%86"><span class="nav-number">3.1.</span> <span class="nav-text">下拉选项框</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#name%E5%B1%9E%E6%80%A7-1"><span class="nav-number">3.1.1.</span> <span class="nav-text">name属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#option%E6%A0%87%E7%AD%BE"><span class="nav-number">3.1.2.</span> <span class="nav-text">option标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#value%E5%80%BC"><span class="nav-number">3.1.3.</span> <span class="nav-text">value值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#option%E6%A0%87%E7%AD%BE%E5%86%85%E5%8C%85%E5%90%AB%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">3.1.4.</span> <span class="nav-text">option标签内包含的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#selected%E5%80%BC%EF%BC%88%E5%BA%94%E7%94%A8%E4%BA%8Eoption%E6%A0%87%E7%AD%BE%EF%BC%89"><span class="nav-number">3.1.5.</span> <span class="nav-text">selected值（应用于option标签）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E5%AD%90%E6%A0%87%E7%AD%BE%E2%80%94%E2%80%94textarea%E6%A0%87%E7%AD%BE"><span class="nav-number">4.</span> <span class="nav-text">表单子标签——textarea标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E5%9F%9F"><span class="nav-number">4.1.</span> <span class="nav-text">文本域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#name%E5%80%BC"><span class="nav-number">4.1.1.</span> <span class="nav-text">name值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cols%E5%B1%9E%E6%80%A7%E4%B8%8Erows%E5%B1%9E%E6%80%A7"><span class="nav-number">4.1.2.</span> <span class="nav-text">cols属性与rows属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%A6%E9%AA%8C%E8%AF%81%E6%88%96%E7%89%B9%E6%AE%8A%E5%8A%9F%E8%83%BD%E7%9A%84%E8%A1%A8%E5%8D%95%E5%AD%90%E6%A0%87%E7%AD%BE%EF%BC%88%E5%8F%AA%E4%BB%8B%E7%BB%8D%E9%80%89%E5%A1%AB%E5%B1%9E%E6%80%A7%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">带验证或特殊功能的表单子标签（只介绍选填属性）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%AE%E7%AE%B1%E9%AA%8C%E8%AF%81"><span class="nav-number">5.1.</span> <span class="nav-text">邮箱验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#URL%E9%AA%8C%E8%AF%81"><span class="nav-number">5.2.</span> <span class="nav-text">URL验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E9%AA%8C%E8%AF%81"><span class="nav-number">5.3.</span> <span class="nav-text">数字验证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#max%E5%B1%9E%E6%80%A7%E4%B8%8Emin%E5%B1%9E%E6%80%A7"><span class="nav-number">5.3.1.</span> <span class="nav-text">max属性与min属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#step%E5%B1%9E%E6%80%A7"><span class="nav-number">5.3.2.</span> <span class="nav-text">step属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BB%91%E5%9D%97%E6%A0%87%E7%AD%BE"><span class="nav-number">5.4.</span> <span class="nav-text">滑块标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E6%A1%86"><span class="nav-number">5.5.</span> <span class="nav-text">搜索框</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8B%93%E5%B1%95%E4%B8%80%E4%BA%9B%E5%B1%9E%E6%80%A7"><span class="nav-number">6.</span> <span class="nav-text">拓展一些属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%90%E8%97%8F%E5%9F%9F"><span class="nav-number">6.1.</span> <span class="nav-text">隐藏域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A6%81%E7%94%A8"><span class="nav-number">6.2.</span> <span class="nav-text">禁用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AA%E8%AF%BB"><span class="nav-number">6.3.</span> <span class="nav-text">只读</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E7%88%B6%E6%A0%87%E7%AD%BE%EF%BC%88form%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">表单父标签（form）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#method%E5%B1%9E%E6%80%A7%EF%BC%88get-x2F-post%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">method属性（get&#x2F;post）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#action%E5%B1%9E%E6%80%A7"><span class="nav-number">1.2.</span> <span class="nav-text">action属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E5%AD%90%E6%A0%87%E7%AD%BE%E2%80%94%E2%80%94input%E6%A0%87%E7%AD%BE"><span class="nav-number">2.</span> <span class="nav-text">表单子标签——input标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#input%E6%A0%87%E7%AD%BE"><span class="nav-number">2.1.</span> <span class="nav-text">input标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#type%E5%B1%9E%E6%80%A7%EF%BC%88%E5%BF%85%E5%A1%AB%EF%BC%89"><span class="nav-number">2.1.1.</span> <span class="nav-text">type属性（必填）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#name%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.2.</span> <span class="nav-text">name属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#value%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.3.</span> <span class="nav-text">value属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#size%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.4.</span> <span class="nav-text">size属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maxlength%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.5.</span> <span class="nav-text">maxlength属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#checked%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.6.</span> <span class="nav-text">checked属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E6%A1%86%E4%B8%8E%E5%AF%86%E7%A0%81%E6%A1%86"><span class="nav-number">2.2.</span> <span class="nav-text">文本框与密码框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E9%80%89%E6%A1%86%EF%BC%88radio%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">单选框（radio）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E9%80%89%E6%A1%86%EF%BC%88checkbox%EF%BC%89"><span class="nav-number">2.4.</span> <span class="nav-text">复选框（checkbox）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#checked%E5%B1%9E%E6%80%A7-1"><span class="nav-number">2.4.1.</span> <span class="nav-text">checked属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#label%E6%A0%87%E7%AD%BE"><span class="nav-number">2.5.</span> <span class="nav-text">label标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#for%E5%B1%9E%E6%80%A7"><span class="nav-number">2.5.1.</span> <span class="nav-text">for属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#label%E6%A0%87%E7%AD%BE%E4%B8%AD%E5%8C%85%E5%90%AB%E7%9A%84%E5%80%BC"><span class="nav-number">2.5.2.</span> <span class="nav-text">label标签中包含的值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%9F%9F%EF%BC%88file%EF%BC%89"><span class="nav-number">2.6.</span> <span class="nav-text">文件域（file）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E6%8C%89%E9%92%AE"><span class="nav-number">2.7.</span> <span class="nav-text">普通按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E6%8C%89%E9%92%AE"><span class="nav-number">2.8.</span> <span class="nav-text">图片按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E6%8C%89%E9%92%AE%E4%B8%8E%E8%A1%A8%E5%8D%95%E9%87%8D%E7%BD%AE%E6%8C%89%E9%92%AE"><span class="nav-number">2.9.</span> <span class="nav-text">表单提交按钮与表单重置按钮</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E5%AD%90%E6%A0%87%E7%AD%BE%E2%80%94%E2%80%94select%E6%A0%87%E7%AD%BE"><span class="nav-number">3.</span> <span class="nav-text">表单子标签——select标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E6%8B%89%E9%80%89%E9%A1%B9%E6%A1%86"><span class="nav-number">3.1.</span> <span class="nav-text">下拉选项框</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#name%E5%B1%9E%E6%80%A7-1"><span class="nav-number">3.1.1.</span> <span class="nav-text">name属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#option%E6%A0%87%E7%AD%BE"><span class="nav-number">3.1.2.</span> <span class="nav-text">option标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#value%E5%80%BC"><span class="nav-number">3.1.3.</span> <span class="nav-text">value值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#option%E6%A0%87%E7%AD%BE%E5%86%85%E5%8C%85%E5%90%AB%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">3.1.4.</span> <span class="nav-text">option标签内包含的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#selected%E5%80%BC%EF%BC%88%E5%BA%94%E7%94%A8%E4%BA%8Eoption%E6%A0%87%E7%AD%BE%EF%BC%89"><span class="nav-number">3.1.5.</span> <span class="nav-text">selected值（应用于option标签）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E5%AD%90%E6%A0%87%E7%AD%BE%E2%80%94%E2%80%94textarea%E6%A0%87%E7%AD%BE"><span class="nav-number">4.</span> <span class="nav-text">表单子标签——textarea标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E5%9F%9F"><span class="nav-number">4.1.</span> <span class="nav-text">文本域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#name%E5%80%BC"><span class="nav-number">4.1.1.</span> <span class="nav-text">name值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cols%E5%B1%9E%E6%80%A7%E4%B8%8Erows%E5%B1%9E%E6%80%A7"><span class="nav-number">4.1.2.</span> <span class="nav-text">cols属性与rows属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%A6%E9%AA%8C%E8%AF%81%E6%88%96%E7%89%B9%E6%AE%8A%E5%8A%9F%E8%83%BD%E7%9A%84%E8%A1%A8%E5%8D%95%E5%AD%90%E6%A0%87%E7%AD%BE%EF%BC%88%E5%8F%AA%E4%BB%8B%E7%BB%8D%E9%80%89%E5%A1%AB%E5%B1%9E%E6%80%A7%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">带验证或特殊功能的表单子标签（只介绍选填属性）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%AE%E7%AE%B1%E9%AA%8C%E8%AF%81"><span class="nav-number">5.1.</span> <span class="nav-text">邮箱验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#URL%E9%AA%8C%E8%AF%81"><span class="nav-number">5.2.</span> <span class="nav-text">URL验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E9%AA%8C%E8%AF%81"><span class="nav-number">5.3.</span> <span class="nav-text">数字验证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#max%E5%B1%9E%E6%80%A7%E4%B8%8Emin%E5%B1%9E%E6%80%A7"><span class="nav-number">5.3.1.</span> <span class="nav-text">max属性与min属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#step%E5%B1%9E%E6%80%A7"><span class="nav-number">5.3.2.</span> <span class="nav-text">step属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BB%91%E5%9D%97%E6%A0%87%E7%AD%BE"><span class="nav-number">5.4.</span> <span class="nav-text">滑块标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E6%A1%86"><span class="nav-number">5.5.</span> <span class="nav-text">搜索框</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8B%93%E5%B1%95%E4%B8%80%E4%BA%9B%E5%B1%9E%E6%80%A7"><span class="nav-number">6.</span> <span class="nav-text">拓展一些属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%90%E8%97%8F%E5%9F%9F"><span class="nav-number">6.1.</span> <span class="nav-text">隐藏域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A6%81%E7%94%A8"><span class="nav-number">6.2.</span> <span class="nav-text">禁用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AA%E8%AF%BB"><span class="nav-number">6.3.</span> <span class="nav-text">只读</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
-      src="/uploads/avatar.png">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -133,7 +122,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -149,18 +138,9 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:loliconkelvin@gmail.com" title="E-Mail → mailto:loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
 
 
 
-          </div>
         </div>
       </div>
     </div>
@@ -195,13 +175,18 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/04/23/HTML%E8%A1%A8%E5%8D%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Loliconkelvin">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="萝莉控的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="HTML表单 | 萝莉控的小窝">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -218,13 +203,13 @@
 
       <time title="创建时间：2021-04-23 23:23:06" itemprop="dateCreated datePublished" datetime="2021-04-23T23:23:06+08:00">2021-04-23</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-05-17 20:13:02" itemprop="dateModified" datetime="2021-05-17T20:13:02+08:00">2021-05-17</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-05-17 20:13:02" itemprop="dateModified" datetime="2021-05-17T20:13:02+08:00">2021-05-17</time>
+    </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -251,7 +236,7 @@
 <h1 id="表单父标签（form）"><a href="#表单父标签（form）" class="headerlink" title="表单父标签（form）"></a>表单父标签（form）</h1><ul>
 <li><font color="red">以下所有标签必须包含在form标签内</font><pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;form method&#x3D;&quot;&quot; action&#x3D;&quot;&quot;&gt;&lt;&#x2F;form&gt;</code></pre></li>
 </ul>
-<h2 id="method属性（get-post）"><a href="#method属性（get-post）" class="headerlink" title="method属性（get/post）"></a>method属性（get/post）</h2><ul>
+<h2 id="method属性（get-x2F-post）"><a href="#method属性（get-x2F-post）" class="headerlink" title="method属性（get&#x2F;post）"></a>method属性（get&#x2F;post）</h2><ul>
 <li>定义表单的提交方式<ul>
 <li>get：可以在跳转的url中看到提交的信息，不安全，高效</li>
 <li>post：比较安全，并且可以传输大文件</li>
@@ -323,7 +308,7 @@
 </ul>
 <h3 id="value属性"><a href="#value属性" class="headerlink" title="value属性"></a>value属性</h3><ul>
 <li>表示元素的（初始）值（默认值）</li>
-<li><code>type=&quot;radio&quot;</code>和<code>type=&quot;checkbox&quot;</code>时必须指定一个value值，此时表示选择该单选/复选框返回的值</li>
+<li><code>type=&quot;radio&quot;</code>和<code>type=&quot;checkbox&quot;</code>时必须指定一个value值，此时表示选择该单选&#x2F;复选框返回的值</li>
 </ul>
 <h3 id="size属性"><a href="#size属性" class="headerlink" title="size属性"></a>size属性</h3><ul>
 <li>指定表单的初始宽度</li>
@@ -345,7 +330,7 @@
 <h2 id="单选框（radio）"><a href="#单选框（radio）" class="headerlink" title="单选框（radio）"></a><span id="radio">单选框（radio）</span></h2><pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;&quot; name&#x3D;&quot;&quot; id&#x3D;&quot;&quot;&#x2F;&gt;</code></pre>
 <ul>
 <li>单选框必须指定如下属性：<ol>
-<li>type=”radio”</li>
+<li>type&#x3D;”radio”</li>
 <li>value: 表示单选框的返回值</li>
 <li>name: 表示单选框从属的组，用于表单提交</li>
 <li>id: 若使用label标签，该项必填，作为该单选框唯一的标识</li>
@@ -356,7 +341,7 @@
 <h2 id="复选框（checkbox）"><a href="#复选框（checkbox）" class="headerlink" title="复选框（checkbox）"></a><span id="checkbox">复选框（checkbox）</span></h2><pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;input type&#x3D;&quot;checkbox&quot; value&#x3D;&quot;&quot; name&#x3D;&quot;&quot; id&#x3D;&quot;&quot;&#x2F;&gt;</code></pre>
 <ul>
 <li>单选框必须指定如下属性：<ol>
-<li>type=”checkbox”</li>
+<li>type&#x3D;”checkbox”</li>
 <li>value: 表示复选框的返回值</li>
 <li>name: 表示复选框从属的组，用于表单提交</li>
 <li>id: 若使用label标签，该项必填，作为该复选框唯一的标识</li>
@@ -370,11 +355,11 @@
 <h2 id="label标签"><a href="#label标签" class="headerlink" title="label标签"></a>label标签</h2><pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;label for&#x3D;&quot;&quot;&gt;&lt;&#x2F;label&gt;</code></pre>
 <ul>
 <li>通常在<font color="red">单选框</font>和<font color="red">复选框</font>的input标签前加入label标签</li>
-<li>效果：当鼠标指向与单选框/复选框相关的显示的值时，同样可以选到单选框/复选框，而不用刻意去点单选框/复选框</li>
+<li>效果：当鼠标指向与单选框&#x2F;复选框相关的显示的值时，同样可以选到单选框&#x2F;复选框，而不用刻意去点单选框&#x2F;复选框</li>
 </ul>
 <h3 id="for属性"><a href="#for属性" class="headerlink" title="for属性"></a>for属性</h3><ul>
-<li>表示这个label属性是与哪个单选框/复选框相关</li>
-<li>for的值必须是一个单选框/复选框的id值</li>
+<li>表示这个label属性是与哪个单选框&#x2F;复选框相关</li>
+<li>for的值必须是一个单选框&#x2F;复选框的id值</li>
 </ul>
 <h3 id="label标签中包含的值"><a href="#label标签中包含的值" class="headerlink" title="label标签中包含的值"></a>label标签中包含的值</h3><ul>
 <li>表示要显示的值</li>
@@ -382,7 +367,7 @@
 <h2 id="文件域（file）"><a href="#文件域（file）" class="headerlink" title="文件域（file）"></a><span id="file">文件域（file）</span></h2><pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;input type&#x3D;&quot;file&quot; name&#x3D;&quot;&quot;&#x2F;&gt;</code></pre>
 <ul>
 <li>文件域必须包含如下属性：<ol>
-<li>type=”file”</li>
+<li>type&#x3D;”file”</li>
 <li>name: 用于表单提交，一般定义为files</li>
 </ol>
 </li>
@@ -390,7 +375,7 @@
 <h2 id="普通按钮"><a href="#普通按钮" class="headerlink" title="普通按钮"></a><span id="button">普通按钮</span></h2><pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;input type&#x3D;&quot;button&quot; name&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&#x2F;&gt;</code></pre>
 <ul>
 <li>普通按钮必须包含如下属性：<ol>
-<li>type=”button”</li>
+<li>type&#x3D;”button”</li>
 <li>name: 用于表单提交</li>
 <li>value: 表示按钮上显示的文本</li>
 </ol>
@@ -399,7 +384,7 @@
 <h2 id="图片按钮"><a href="#图片按钮" class="headerlink" title="图片按钮"></a><span id="image">图片按钮</span></h2><pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;input type&#x3D;&quot;image&quot; src&#x3D;&quot;&quot;&#x2F;&gt;</code></pre>
 <ul>
 <li>图片按钮必须包含如下属性：<ol>
-<li>type=”image”</li>
+<li>type&#x3D;”image”</li>
 <li>src: 表示图片路径</li>
 </ol>
 </li>
@@ -461,7 +446,7 @@
 </ul>
 <h3 id="step属性"><a href="#step属性" class="headerlink" title="step属性"></a>step属性</h3><ul>
 <li>加入step属性可以使输入框右边多一个递增、递减箭头</li>
-<li>step的值指定箭头按一次增加/减少多少输入框内的值</li>
+<li>step的值指定箭头按一次增加&#x2F;减少多少输入框内的值</li>
 </ul>
 <h2 id="滑块标签"><a href="#滑块标签" class="headerlink" title="滑块标签"></a>滑块标签</h2><pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;input type&#x3D;&quot;range&quot; name&#x3D;&quot;&quot; min&#x3D;&quot;&quot; max&#x3D;&quot;&quot; step&#x3D;&quot;&quot;&#x2F;&gt;</code></pre>
 
@@ -541,21 +526,21 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
     </div>
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js" integrity="sha256-4mJNT2bMXxcc1GCJaxBmMPdmah5ji0Ldnd79DKd1hoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-dL6vkUiCn30lPTN9cVrmQHo5UQmEwDMrx2ppAk4IhVk=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
+
 
 
 

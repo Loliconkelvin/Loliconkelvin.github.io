@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -16,11 +15,12 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content=".blue{     color:blue; }  .red{     color:red; }   Java技巧">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content=".blue{     color:blue; }  .red{     color:red; }   Java技巧">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java技巧">
 <meta property="og:url" content="https://loliconkelvin.github.io/2021/06/02/Java%E6%8A%80%E5%B7%A7/index.html">
@@ -47,6 +47,7 @@
 
 
 
+
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -60,9 +61,6 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -70,7 +68,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">萝莉控的小窝</h1>
+      <p class="site-title">萝莉控的小窝</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -83,12 +81,6 @@
 
 
 
-<nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
-  </ul>
-</nav>
 
 
 
@@ -117,15 +109,12 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%B8%8B%E5%88%92%E7%BA%BF%E5%88%86%E9%9A%94%E8%B6%85%E5%A4%A7%E6%95%B0%E5%AD%97"><span class="nav-number">1.</span> <span class="nav-text">使用下划线分隔超大数字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E2%80%94%E2%80%94%E4%B8%8E%E6%88%96%E8%BF%90%E7%AE%97%E2%80%94%E2%80%94%E7%9F%AD%E8%B7%AF%E8%BF%90%E7%AE%97"><span class="nav-number">2.</span> <span class="nav-text">运算符——与或运算——短路运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E2%80%94%E2%80%94%E4%BD%8D%E8%BF%90%E7%AE%97%E2%80%94%E2%80%94%E5%B7%A6%E7%A7%BB%E5%8F%B3%E7%A7%BB"><span class="nav-number">3.</span> <span class="nav-text">运算符——位运算——左移右移</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%9E%E6%8E%A5%E7%AC%A6"><span class="nav-number">4.</span> <span class="nav-text">字符串连接符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8"><span class="nav-number">5.</span> <span class="nav-text">自动补全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E5%A3%B0%E6%98%8E"><span class="nav-number">6.</span> <span class="nav-text">快捷声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7for%E5%BE%AA%E7%8E%AF"><span class="nav-number">7.</span> <span class="nav-text">快捷for循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E5%A2%9E%E5%BC%BA%E5%9E%8Bfor%E5%BE%AA%E7%8E%AF"><span class="nav-number">8.</span> <span class="nav-text">快捷增强型for循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90%E6%9C%89%E5%8F%82-%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8"><span class="nav-number">9.</span> <span class="nav-text">快速生成有参&#x2F;无参构造器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90Getter-Setter%EF%BC%88%E9%9D%9Elombok%EF%BC%89"><span class="nav-number">10.</span> <span class="nav-text">快速生成Getter&#x2F;Setter（非lombok）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6%E4%B8%80%E8%A1%8C"><span class="nav-number">11.</span> <span class="nav-text">复制一行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E4%B8%80%E8%A1%8C"><span class="nav-number">12.</span> <span class="nav-text">删除一行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%87%E6%8D%A2%E7%BC%96%E8%BE%91%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">13.</span> <span class="nav-text">切换编辑的文件</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%B8%8B%E5%88%92%E7%BA%BF%E5%88%86%E9%9A%94%E8%B6%85%E5%A4%A7%E6%95%B0%E5%AD%97"><span class="nav-number">1.</span> <span class="nav-text">使用下划线分隔超大数字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E2%80%94%E2%80%94%E4%B8%8E%E6%88%96%E8%BF%90%E7%AE%97%E2%80%94%E2%80%94%E7%9F%AD%E8%B7%AF%E8%BF%90%E7%AE%97"><span class="nav-number">2.</span> <span class="nav-text">运算符——与或运算——短路运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E2%80%94%E2%80%94%E4%BD%8D%E8%BF%90%E7%AE%97%E2%80%94%E2%80%94%E5%B7%A6%E7%A7%BB%E5%8F%B3%E7%A7%BB"><span class="nav-number">3.</span> <span class="nav-text">运算符——位运算——左移右移</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%9E%E6%8E%A5%E7%AC%A6"><span class="nav-number">4.</span> <span class="nav-text">字符串连接符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8"><span class="nav-number">5.</span> <span class="nav-text">自动补全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E5%A3%B0%E6%98%8E"><span class="nav-number">6.</span> <span class="nav-text">快捷声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7for%E5%BE%AA%E7%8E%AF"><span class="nav-number">7.</span> <span class="nav-text">快捷for循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E5%A2%9E%E5%BC%BA%E5%9E%8Bfor%E5%BE%AA%E7%8E%AF"><span class="nav-number">8.</span> <span class="nav-text">快捷增强型for循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90%E6%9C%89%E5%8F%82-x2F-%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8"><span class="nav-number">9.</span> <span class="nav-text">快速生成有参&#x2F;无参构造器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90Getter-x2F-Setter%EF%BC%88%E9%9D%9Elombok%EF%BC%89"><span class="nav-number">10.</span> <span class="nav-text">快速生成Getter&#x2F;Setter（非lombok）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6%E4%B8%80%E8%A1%8C"><span class="nav-number">11.</span> <span class="nav-text">复制一行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E4%B8%80%E8%A1%8C"><span class="nav-number">12.</span> <span class="nav-text">删除一行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%87%E6%8D%A2%E7%BC%96%E8%BE%91%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">13.</span> <span class="nav-text">切换编辑的文件</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
-      src="/uploads/avatar.png">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -133,7 +122,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -149,18 +138,9 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:loliconkelvin@gmail.com" title="E-Mail → mailto:loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
 
 
 
-          </div>
         </div>
       </div>
     </div>
@@ -195,13 +175,18 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2021/06/02/Java%E6%8A%80%E5%B7%A7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Loliconkelvin">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="萝莉控的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Java技巧 | 萝莉控的小窝">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -218,13 +203,13 @@
 
       <time title="创建时间：2021-06-02 11:12:26" itemprop="dateCreated datePublished" datetime="2021-06-02T11:12:26+08:00">2021-06-02</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-11-01 19:29:36" itemprop="dateModified" datetime="2021-11-01T19:29:36+08:00">2021-11-01</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-01 19:29:36" itemprop="dateModified" datetime="2021-11-01T19:29:36+08:00">2021-11-01</time>
+    </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -277,6 +262,8 @@
 <p>与运算第一个就是假<br>或运算第一个就为真</p>
 </blockquote>
 <p>  运算符后面的指令不会执行（不会判断）</p>
+</li>
+</ul>
 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">int num1 &#x3D; 20;
 int num2 &#x3D; 10;
 int var &#x3D; 0;
@@ -286,11 +273,11 @@ System.out.println(var);
 
 System.out.println((num1 &gt; num2) || (var++ &lt; 3));
 System.out.println(var);
-&#x2F;&#x2F; 因为num1 &gt; num3为真，因此var不会自增</code></pre></li>
-</ul>
+&#x2F;&#x2F; 因为num1 &gt; num3为真，因此var不会自增</code></pre>
+
 <h2 id="运算符——位运算——左移右移"><a href="#运算符——位运算——左移右移" class="headerlink" title="运算符——位运算——左移右移"></a>运算符——位运算——左移右移</h2><ul>
 <li>位运算效率极高</li>
-<li>遇到要循环*2或者循环/2的时候可以使用位运算</li>
+<li>遇到要循环*2或者循环&#x2F;2的时候可以使用位运算</li>
 </ul>
 <h2 id="字符串连接符"><a href="#字符串连接符" class="headerlink" title="字符串连接符"></a>字符串连接符</h2><ul>
 <li>“ + ”可以用于字符串连接</li>
@@ -344,7 +331,7 @@ for (int number : numbers) &#123;
     
 &#125;</code></pre>
 
-<h2 id="快速生成有参-无参构造器"><a href="#快速生成有参-无参构造器" class="headerlink" title="快速生成有参/无参构造器"></a>快速生成有参/无参构造器</h2><ul>
+<h2 id="快速生成有参-x2F-无参构造器"><a href="#快速生成有参-x2F-无参构造器" class="headerlink" title="快速生成有参&#x2F;无参构造器"></a>快速生成有参&#x2F;无参构造器</h2><ul>
 <li>使用 <code>Alt + Insert -&gt; Constructor</code><ol>
 <li>选择 <code>Select None</code> 生成无参构造</li>
 <li>选择属性生成以该属性为参数的有参构造</li>
@@ -352,7 +339,7 @@ for (int number : numbers) &#123;
 </ol>
 </li>
 </ul>
-<h2 id="快速生成Getter-Setter（非lombok）"><a href="#快速生成Getter-Setter（非lombok）" class="headerlink" title="快速生成Getter/Setter（非lombok）"></a>快速生成Getter/Setter（非lombok）</h2><ul>
+<h2 id="快速生成Getter-x2F-Setter（非lombok）"><a href="#快速生成Getter-x2F-Setter（非lombok）" class="headerlink" title="快速生成Getter&#x2F;Setter（非lombok）"></a>快速生成Getter&#x2F;Setter（非lombok）</h2><ul>
 <li>使用 <code>Alt + Insert -&gt; Getter</code> 为选定的属性分别生成Getter，<span class="red">请注意在return返回值处修改为 <code>this.变量名</code> </span></li>
 <li>使用 <code>Alt + Insert -&gt; Setter</code> 为选定的属性分别生成Setter，无需修改</li>
 <li>使用 <code>Alt + Insert -&gt; Getter and Setter</code> 为选定的属性分别生成Getter和Setter，<span class="red">注意在Getter处修改 <code>this.属性名</code> </span></li>
@@ -416,21 +403,21 @@ for (int number : numbers) &#123;
   </span>
   <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
     </div>
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js" integrity="sha256-dz05jjFU9qYuMvQQlE6iWDtNAnEsmu6uMb1vWhKdkEM=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-sttoa+EIAvFFfeeIkmPn8ypyOOb6no2sZ2NbxtBXgqU=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js" integrity="sha256-4mJNT2bMXxcc1GCJaxBmMPdmah5ji0Ldnd79DKd1hoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-dL6vkUiCn30lPTN9cVrmQHo5UQmEwDMrx2ppAk4IhVk=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
+
 
 
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java常用类">
 <meta property="og:type" content="article">
@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/10/LkW5QS.md.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/10/LkIy59.md.png">
 <meta property="article:published_time" content="2022-04-08T12:37:49.000Z">
-<meta property="article:modified_time" content="2022-04-27T03:22:29.907Z">
+<meta property="article:modified_time" content="2022-06-19T01:54:08.514Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -67,6 +67,9 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -87,6 +90,10 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
 
 
 
@@ -115,12 +122,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB"><span class="nav-number">1.</span> <span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">Object类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">String类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String%E7%B1%BB%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">String类常用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">5.</span> <span class="nav-text">可变字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System%E7%B1%BB"><span class="nav-number">6.</span> <span class="nav-text">System类</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB"><span class="nav-number">1.</span> <span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">Object类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%85%E8%A3%85%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">包装类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String%E7%B1%BB"><span class="nav-number">4.</span> <span class="nav-text">String类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String%E7%B1%BB%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">String类常用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">6.</span> <span class="nav-text">可变字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BigDecimal"><span class="nav-number">7.</span> <span class="nav-text">BigDecimal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date%E7%B1%BB"><span class="nav-number">8.</span> <span class="nav-text">Date类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Calender%E7%B1%BB"><span class="nav-number">9.</span> <span class="nav-text">Calender类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SimpleDateFormat%E7%B1%BB"><span class="nav-number">10.</span> <span class="nav-text">SimpleDateFormat类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System%E7%B1%BB"><span class="nav-number">11.</span> <span class="nav-text">System类</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
+      src="/uploads/avatar.png">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -139,11 +148,19 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:Loliconkelvin@gmail.com" title="E-Mail → mailto:Loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -181,7 +198,7 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2022/04/08/Java%E5%B8%B8%E7%94%A8%E7%B1%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/avatar.png">
       <meta itemprop="name" content="Loliconkelvin">
     </span>
 
@@ -214,7 +231,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-27 11:22:29" itemprop="dateModified" datetime="2022-04-27T11:22:29+08:00">2022-04-27</time>
+      <time title="修改时间：2022-06-19 09:54:08" itemprop="dateModified" datetime="2022-06-19T09:54:08+08:00">2022-06-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -271,8 +288,8 @@
 <li>在创建内部类对象时，必须依赖外部类对象<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Outer outer &#x3D; new Outer();
 Outer.Inner inner &#x3D; outer.new Inner();</code></pre></li>
 </ul>
-<p><span class="red">注意：</span>当内部类和外部类有属性重名时，在内部类的方法会优先访问内部类的属性，要实现在内部类方法访问外部类属性，可以使用<code>外部类.this.属性名</code></p>
-<p>可以在内部类访问属性的时候在属性前面加上<code>this</code>更有条理性</p>
+<p><span class="red">注意：</span>当内部类和外部类有属性重名时，在内部类的方法会优先访问内部类的属性，要实现在内部类方法访问外部类属性，可以使用 <code>外部类.this.属性名</code></p>
+<p>可以在内部类访问属性的时候在属性前面加上 <code>this</code> 更有条理性</p>
 <p><span class="red">成员内部类内不可以包含静态属性，但可以包含静态常量</span></p>
 <hr>
 <p><strong>静态内部类</strong></p>
@@ -343,34 +360,27 @@ ActionListener actionListener &#x3D; (e) -&gt; &#123;
 
 <h2 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h2><p>Object类是所有类的直接或间接父类，所有对象都含有Object类中的方法，Object类可以存储任何对象</p>
 <p><span class="red bold">Object类常用方法：</span></p>
-<pre class="line-numbers language-getClass()```：获取一个对象的Class类对象，用于反射" data-language="getClass()```：获取一个对象的Class类对象，用于反射"><code class="language-getClass()```：获取一个对象的Class类对象，用于反射">
-&#96;&#96;&#96;hashCode()&#96;&#96;&#96;：返回该对象的哈希值
-* 哈希值是根据对象的地址或字符串或数字通过哈希算法计算出的int类型数值（&lt;span class&#x3D;&quot;red&quot;&gt;一般情况下相同对象返回相同的哈希值&lt;&#x2F;span&gt;）
-
-&#96;&#96;&#96;toString()&#96;&#96;&#96;：返回对象的字符串表示形式（想要一个类的对象展示他的属性值，需要重写toString方法）
-
-&#96;&#96;&#96;equals(Object obj)&#96;&#96;&#96;：在Object类中用于比较两个对象的地址是否相同（在String类中进行了重写，用于比较两个对象内容是否相同）
-
-&#96;&#96;&#96;finalize()&#96;&#96;&#96;：当对象被判定为垃圾对象时，由JVM自动调用此方法，用以标记该对象为垃圾对象，进入垃圾回收队列
-* 垃圾对象：没有有效引用指向此对象时，该对象视为垃圾对象
-* 垃圾回收：由gc销毁垃圾对象，释放存储空间
-* 手动垃圾回收：可以通过调用&#96;&#96;&#96;System.gc()&#96;&#96;&#96;方法通知JVM进行垃圾回收，但实际上回不回收要看虚拟机
-
-## 包装类
-为了扩展八个基本数据类型，Java提供了包装类，使基本数据类型可以使用方法
-
-使用包装类会使基本类型变为引用类型，在内存中存放地址从栈变为堆
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;默认值：&lt;&#x2F;span&gt;因为包装类是引用数据类型，因此声明为静态时默认值为null
-
----
-**装箱与拆箱**
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;装箱与拆箱：&lt;&#x2F;span&gt;使用包装类把栈中的基本数据类型变为堆中的引用数据类型，称为装箱，反之称为拆箱
-
-在JDK1.5之前需要程序员显式地装箱与拆箱：
-&#96;&#96;&#96;Java
-int num01 &#x3D; 18;
+<p><code>getClass()</code>：获取一个对象的Class类对象，用于反射</p>
+<p><code>hashCode()</code>：返回该对象的哈希值</p>
+<ul>
+<li>哈希值是根据对象的地址或字符串或数字通过哈希算法计算出的int类型数值（<span class="red">一般情况下相同对象返回相同的哈希值</span>）</li>
+</ul>
+<p><code>toString()</code>：返回对象的字符串表示形式（想要一个类的对象展示他的属性值，需要重写toString方法）</p>
+<p><code>equals(Object obj)</code>：在Object类中用于比较两个对象的地址是否相同（在String类中进行了重写，用于比较两个对象内容是否相同）</p>
+<p><code>finalize()</code>：当对象被判定为垃圾对象时，由JVM自动调用此方法，用以标记该对象为垃圾对象，进入垃圾回收队列</p>
+<ul>
+<li>垃圾对象：没有有效引用指向此对象时，该对象视为垃圾对象</li>
+<li>垃圾回收：由gc销毁垃圾对象，释放存储空间</li>
+<li>手动垃圾回收：可以通过调用 <code>System.gc()</code> 方法通知JVM进行垃圾回收，但实际上回不回收要看虚拟机</li>
+</ul>
+<h2 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h2><p>为了扩展八个基本数据类型，Java提供了包装类，使基本数据类型可以使用方法</p>
+<p>使用包装类会使基本类型变为引用类型，在内存中存放地址从栈变为堆</p>
+<p><span class="red bold">默认值：</span>因为包装类是引用数据类型，因此声明为静态时默认值为null</p>
+<hr>
+<p><strong>装箱与拆箱</strong></p>
+<p><span class="red bold">装箱与拆箱：</span>使用包装类把栈中的基本数据类型变为堆中的引用数据类型，称为装箱，反之称为拆箱</p>
+<p>在JDK1.5之前需要程序员显式地装箱与拆箱：</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">int num01 &#x3D; 18;
 &#x2F;&#x2F; 装箱
 Integer integer1 &#x3D; new Integer(num01);
 Integer integer2 &#x3D; Integer.valueOf(num01);
@@ -380,7 +390,7 @@ int i &#x3D; integer1.intValue();</code></pre>
 
 <p>而在JDK1.5之后则可以自动装箱与拆箱</p>
 <ul>
-<li>这一操作由编译器完成，编译器在编译Class文件时会在代码里加上<code>valueOf()</code> <code>intValue()</code>等方法进行装箱和拆箱</li>
+<li>这一操作由编译器完成，编译器在编译Class文件时会在代码里加上 <code>valueOf()</code> <code>intValue()</code> 等方法进行装箱和拆箱</li>
 </ul>
 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">int num01 &#x3D; 18;
 &#x2F;&#x2F; JDK1.5之后自动装箱
@@ -473,7 +483,7 @@ Inner2初始化
 ----------*&#x2F;</code></pre>
 
 <hr>
-<p><span class="red bold">缓冲区分析：</span>回到缓冲区，同样都是编译器调用<code>valueOf()</code>方法自动装箱，在<code>valueOf()</code>源码中我们可以看到：</p>
+<p><span class="red bold">缓冲区分析：</span>回到缓冲区，同样都是编译器调用 <code>valueOf()</code> 方法自动装箱，在 <code>valueOf()</code> 源码中我们可以看到：</p>
 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static Integer valueOf(int i) &#123;
     if (i &gt;&#x3D; IntegerCache.low &amp;&amp; i &lt;&#x3D; IntegerCache.high)
         return IntegerCache.cache[i + (-IntegerCache.low)];
@@ -505,15 +515,15 @@ Inner2初始化
 &#125;</code></pre>
 
 <ol>
-<li>在调用<code>valueOf()</code>方法时，因为访问了IntegerCache静态内部类中的数组，引起IntegerCache初始化</li>
-<li>IntegerCache初始化时，会创建一个cache数组用于存放 <code>new Integer(-128)</code>至<code>new Integer(127)</code>共256个Integer对象</li>
+<li>在调用 <code>valueOf()</code> 方法时，因为访问了IntegerCache静态内部类中的数组，引起IntegerCache初始化</li>
+<li>IntegerCache初始化时，会创建一个cache数组用于存放  <code>new Integer(-128)</code> 至 <code>new Integer(127)</code> 共256个Integer对象</li>
 <li>若自动装箱时传入的参数在-128~127内，则会直接返回cache数组中对应值的地址</li>
 <li>若参数在这个范围外，则另外new出Integer对象</li>
 </ol>
 <p><span class="red bold">所以：</span></p>
 <ul>
-<li><code>Integer integer1 = 100;</code>和<code>Integer integer2 = 100;</code>保存的都是cache数组中的同一个地址，使用“&#x3D;&#x3D;”判断返回true</li>
-<li><code>Integer integer3 = 200;</code>和<code>Integer integer4 = 200;</code>都是另外new出的对象，两者指向地址自然不相同，使用“&#x3D;&#x3D;”判断返回false</li>
+<li><code>Integer integer1 = 100;</code> 和 <code>Integer integer2 = 100;</code> 保存的都是cache数组中的同一个地址，使用“&#x3D;&#x3D;”判断返回true</li>
+<li><code>Integer integer3 = 200;</code> 和 <code>Integer integer4 = 200;</code> 都是另外new出的对象，两者指向地址自然不相同，使用“&#x3D;&#x3D;”判断返回false</li>
 </ul>
 <h2 id="String类"><a href="#String类" class="headerlink" title="String类"></a>String类</h2><p>字符串是常量，创建之后不可改变</p>
 <p>字符串字面值保存在字符串池中，可以共享</p>
@@ -552,7 +562,7 @@ Inner2初始化
 <hr>
 <p><strong>new与直接赋值</strong></p>
 <p><span class="red bold">直接赋值：</span>上面的例子演示的是直接赋值的情况，<span class="red">直接赋值会产生一个对象，在字符串池中存储，局部变量负责指向它</span></p>
-<p><span class="red bold">new出对象：</span>而使用<code>new String()</code>的情况下，则会产生两个对象，一个存储在字符串池中，一个存储在堆的其他空间中，局部变量的指向也不再是直接指向常量池中的对象</p>
+<p><span class="red bold">new出对象：</span>而使用 <code>new String()</code> 的情况下，则会产生两个对象，一个存储在字符串池中，一个存储在堆的其他空间中，局部变量的指向也不再是直接指向常量池中的对象</p>
 <p>当再执行下面的代码时，内存中发生了如下变化</p>
 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class Main &#123;
     public static void main(String[] args) &#123;
@@ -575,57 +585,43 @@ Inner2初始化
 <li>另局部变量s2指向新的<span class="red">堆中的“张三”</span></li>
 </ol>
 <p><span class="red bold">结论：</span>这也解释了为什么使用直接赋值创建的两个对象使用“&#x3D;&#x3D;”判断返回true，因为他们的地址都是在字符串池的同一个地址。<br /><br>而使用new创建出来的对象使用“&#x3D;&#x3D;”判断返回false，因为他们都在堆中各自生成对象，地址不同</p>
-<h2 id="String类常用方法"><a href="#String类常用方法" class="headerlink" title="String类常用方法"></a>String类常用方法</h2><pre class="line-numbers language-length()```：返回字符串的长度" data-language="length()```：返回字符串的长度"><code class="language-length()```：返回字符串的长度">
-&#96;&#96;&#96;charAt(int index)&#96;&#96;&#96;：根据传入的下标获取相应位置的字符
-
-&#96;&#96;&#96;contains(String str)&#96;&#96;&#96;：判断当前字符串中是否包含str
-
-&#96;&#96;&#96;toCharArray()&#96;&#96;&#96;：将字符串转换成字符数组
-
-&#96;&#96;&#96;indexOf(String str)&#96;&#96;&#96;：查找str首次出现的下标，存在的返回该下标，不存在则返回-1
-
-&#96;&#96;&#96;indexOf(String str, int fromIndex)&#96;&#96;&#96;：从fromIndex下标开始查找str首次出现的下标，不存在则返回-1
-
-&#96;&#96;&#96;lastIndexOf(String str)&#96;&#96;&#96;：查找str在当前字符串中最后一次出现的下标，不存在则返回-1
-
-&#96;&#96;&#96;trim()&#96;&#96;&#96;：去掉字符串前后的空格
-
-&#96;&#96;&#96;toUpperCase()&#96;&#96;&#96;：将所有字符转换为大写
-
-&#96;&#96;&#96;toLowerCase()&#96;&#96;&#96;：将所有字符转换为小写
-
-&#96;&#96;&#96;endsWith(String str)&#96;&#96;&#96;：判断字符串是否以str结尾
-
-&#96;&#96;&#96;startsWith(String str)&#96;&#96;&#96;；判断字符串是否以str开头
-
-&#96;&#96;&#96;replace(char oldChar, char newChar)&#96;&#96;&#96;：将字符串内的所有oldChar替换为newChar
-
-* 正则表达式：
-    1. []：表示或
-    2. +：表示可以出现多个
-
-&#96;&#96;&#96;split(String str)&#96;&#96;&#96;：根据str对字符串做拆分
-
-&#96;&#96;&#96;equals(String str)&#96;&#96;&#96;：对比两个字符串的内容
-
-&#96;&#96;&#96;equalsIgnoreCase()&#96;&#96;&#96;：忽略大小写比较两个字符串的内容
-
-&#96;&#96;&#96;compareTo(String str)&#96;&#96;&#96;：对两个字符串比较其在字典表里的大小，若在相同下标下有字符不相同，返回调用该方法的字符串该下标的字符 减去 str字符串该下标的字符 &lt;br &#x2F;&gt;
-若前面的字符都相同，但某个字符串多出一截，则比较长度（如 abc 与 abcde）。返回调用该方法的字符串长度 减去 str长度 &lt;br &#x2F;&gt;
-完全相同返回0
-
----
-**小案例**
-
-* 现有一个个字符串：&quot;this is a text&quot;
-   
-    1. 将字符串中的每个单词分割
-    2. 将text替换为practice
-    3. 在text前增加一个easy
-    4. 将所有单词的首字母变为大写
-
-&#96;&#96;&#96;Java
-public static void main(String[] args) &#123;
+<h2 id="String类常用方法"><a href="#String类常用方法" class="headerlink" title="String类常用方法"></a>String类常用方法</h2><p><code>length()</code>：返回字符串的长度</p>
+<p><code>charAt(int index)</code>：根据传入的下标获取相应位置的字符</p>
+<p><code>contains(String str)</code>：判断当前字符串中是否包含str</p>
+<p><code>toCharArray()</code>：将字符串转换成字符数组</p>
+<p><code>indexOf(String str)</code>：查找str首次出现的下标，存在的返回该下标，不存在则返回-1</p>
+<p><code>indexOf(String str, int fromIndex)</code>：从fromIndex下标开始查找str首次出现的下标，不存在则返回-1</p>
+<p><code>lastIndexOf(String str)</code>：查找str在当前字符串中最后一次出现的下标，不存在则返回-1</p>
+<p><code>trim()</code>：去掉字符串前后的空格</p>
+<p><code>toUpperCase()</code>：将所有字符转换为大写</p>
+<p><code>toLowerCase()</code>：将所有字符转换为小写</p>
+<p><code>endsWith(String str)</code>：判断字符串是否以str结尾</p>
+<p><code>startsWith(String str)</code>；判断字符串是否以str开头</p>
+<p><code>replace(char oldChar, char newChar)</code>：将字符串内的所有oldChar替换为newChar</p>
+<ul>
+<li>正则表达式：<ol>
+<li>[]：表示或</li>
+<li>+：表示可以出现多个</li>
+</ol>
+</li>
+</ul>
+<p><code>split(String str)</code>：根据str对字符串做拆分</p>
+<p><code>equals(String str)</code>：对比两个字符串的内容</p>
+<p><code>equalsIgnoreCase()</code>：忽略大小写比较两个字符串的内容</p>
+<p><code>compareTo(String str)</code>：对两个字符串比较其在字典表里的大小，若在相同下标下有字符不相同，返回调用该方法的字符串该下标的字符 减去 str字符串该下标的字符 <br /><br>若前面的字符都相同，但某个字符串多出一截，则比较长度（如 abc 与 abcde）。返回调用该方法的字符串长度 减去 str长度 <br /><br>完全相同返回0</p>
+<hr>
+<p><strong>小案例</strong></p>
+<ul>
+<li><p>现有一个个字符串：”this is a text”</p>
+<ol>
+<li>将字符串中的每个单词分割</li>
+<li>将text替换为practice</li>
+<li>在text前增加一个easy</li>
+<li>将所有单词的首字母变为大写</li>
+</ol>
+</li>
+</ul>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static void main(String[] args) &#123;
     String str &#x3D; &quot;this is a text&quot;;
 
     &#x2F;&#x2F;1.
@@ -658,15 +654,11 @@ public static void main(String[] args) &#123;
 <li>两个可变字符串类的效率都要比String类高，并且比String类节省内存</li>
 </ul>
 <p><span class="red bold">可变字符串常用方法：</span></p>
-<pre class="line-numbers language-append(Object" data-language="append(Object"><div class="caption"><span>obj)```：在当前缓冲区最后追加元素</span></div><code class="language-append(Object">
-&#96;&#96;&#96;insert(int offset, Object obj)&#96;&#96;&#96;：指定偏移量增加元素
-
-&#96;&#96;&#96;replace(int start, int end, Object obj)&#96;&#96;&#96;：使用指定元素替换缓冲区中&lt;span class&#x3D;&quot;red&quot;&gt;start至end-1&lt;&#x2F;span&gt;位置的字符串
-
-## BigDecimal
-先来看一个案例：
-&#96;&#96;&#96;Java
-public static void main(String[] args) &#123;
+<p><code>append(Object obj)</code>：在当前缓冲区最后追加元素</p>
+<p><code>insert(int offset, Object obj)</code>：指定偏移量增加元素</p>
+<p><code>replace(int start, int end, Object obj)</code>：使用指定元素替换缓冲区中<span class="red">start至end-1</span>位置的字符串</p>
+<h2 id="BigDecimal"><a href="#BigDecimal" class="headerlink" title="BigDecimal"></a>BigDecimal</h2><p>先来看一个案例：</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static void main(String[] args) &#123;
     double d1 &#x3D; 1.0;
     double d2 &#x3D; 0.9;
     System.out.println(d1 - d2);
@@ -692,119 +684,111 @@ public static void main(String[] args) &#123;
 <hr>
 <p><strong>BigDecimal类常用方法</strong></p>
 <p>使用了BigDecimal类的运算数不能使用运算符进行计算，需要使用类里面的方法</p>
-<pre class="line-numbers language-add(BigDecimal" data-language="add(BigDecimal"><div class="caption"><span>augend)```：实现两个高精度运算数的加法</span></div><code class="language-add(BigDecimal">
-&#96;&#96;&#96;subtract(BigDecimal subtrahend)&#96;&#96;&#96;：实现两个高精度运算数的减法
-
-&#96;&#96;&#96;multiply(BigDecimal multiplicand)&#96;&#96;&#96;：实现两个高精度运算数的乘法
-
-&#96;&#96;&#96;divide(BigDecimal divisor [, int scale, RoundingMode roundingMode])&#96;&#96;&#96;：实现两个高精度运算数的除法
-* &lt;span class&#x3D;&quot;red&quot;&gt;注意：&lt;&#x2F;span&gt;除法运算在两个数能除尽时可以只传入divisor参数 &lt;br &#x2F;&gt;
-在两数除不尽时只传入divisor参数会报错 &lt;br &#x2F;&gt;
-需要传入scale参数以指定保留几位小数 &lt;br &#x2F;&gt;
-还需要传入roundingMode参数指定近似方法
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;roundingMode：&lt;&#x2F;span&gt;用于指定近似方法，常用的近似方法有（存储于RoundingMode类RoundingMode枚举变量中）：
-
-1. &#96;&#96;&#96;UP&#96;&#96;&#96;：向0远离
-2. &#96;&#96;&#96;DOWN&#96;&#96;&#96;：向0靠近
-3. &#96;&#96;&#96;CEILING&#96;&#96;&#96;：向上取整
-4. &#96;&#96;&#96;FLOOR&#96;&#96;&#96;：向下取整
-5. &#96;&#96;&#96;HALF_UP&#96;&#96;&#96;：四舍五入
-6. &#96;&#96;&#96;HALF_DOWN&#96;&#96;&#96;：五舍六入
-7. &#96;&#96;&#96;HALF_EVEN&#96;&#96;&#96;：银行家算法（四舍六入五考虑 -&gt; 五后非零就进一，五后为零看奇偶，五前为偶应舍去，五前为奇要进一）
-
-## Date类
-Date类表示一个指定的瞬间，精确到毫秒，从JDK1.1开始Date中的大部分方法已经被Calendar类中的方法取代
-
----
-**构造方法**
-
-目前没有过时的构造方法有以下两个：
-
-&#96;&#96;&#96;Date()&#96;&#96;&#96;：返回当前时间精确到毫秒
-
-&#96;&#96;&#96;Date(long date)&#96;&#96;&#96;：传入一个毫秒数，该毫秒数表示1970年1月1日00:00:00至某个时间的毫秒数
-
----
-**Date类常用方法**
-
-&#96;&#96;&#96;after(Date date)&#96;&#96;&#96;：返回调用该方法的Date对象是否在date之后
-
-&#96;&#96;&#96;before(Date date)&#96;&#96;&#96;：返回调用该方法的Date对象是否在date之前
-
-&#96;&#96;&#96;compareTo(Date date)&#96;&#96;&#96;：比较两个日期
-
-&#96;&#96;&#96;equals(Date date)&#96;&#96;&#96;：比较两个日期是否相等
-
-## Calender类
-Calender类提供了获取或设置各种日历字段的方法
-
----
-**构造Calender对象**
-
-Calender类被设定为抽象类，无法被new出。Calender类提供了静态方法&#96;&#96;&#96;getInstance()&#96;&#96;&#96;用以获取Calender对象，该对象包含当前事件，精确到毫秒
-
----
-**Calender类常用方法**
-
-&#96;&#96;&#96;getTime()&#96;&#96;&#96;：获取对象中存储的时间
-
-&#96;&#96;&#96;getTimeInMillis()&#96;&#96;&#96;：获取对象中存储的时间的毫秒数表示形式
-
-&#96;&#96;&#96;get(int field)&#96;&#96;&#96;：根据传入的参数获取时间的一部分
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;field参数：&lt;&#x2F;span&gt;
-Calender类中定义了常量用于field参数
-
-1. &#96;&#96;&#96;YEAR&#96;&#96;&#96;
-2. &#96;&#96;&#96;MONTH&#96;&#96;&#96;：&lt;span class&#x3D;&quot;red&quot;&gt;注意月的取值为0~11，输出时可以手动+1&lt;&#x2F;span&gt;
-3. &#96;&#96;&#96;DAY_OF_MONTH&#96;&#96;&#96;：返回对象中存储的天数
-4. &#96;&#96;&#96;DATE&#96;&#96;&#96;：返回对象中存储的天数（这两个功能一样）
-5. &#96;&#96;&#96;HOUR&#96;&#96;&#96;：返回对象中存储的小时数（12小时制）
-6. &#96;&#96;&#96;HOUR_OF_DAY&#96;&#96;&#96;：返回对象中存储的小时数（24小时制）
-7. &#96;&#96;&#96;MINUTE&#96;&#96;&#96;
-8. &#96;&#96;&#96;SECOND&#96;&#96;&#96;
-
-&#96;&#96;&#96;set()&#96;&#96;&#96;：该方法有多个重载方法，可以传入field参数修改对象存储时间的指定内容（如年月日等），也可以直接传入年月日参数
-
-&#96;&#96;&#96;add(int field, int amount)&#96;&#96;&#96;：可以该对象的指定内容进行加减操作（如年份+1）
-
-&#96;&#96;&#96;getActualMinimum(int field)&#96;&#96;&#96;：获取指定内容的最大值（如获取当前月份的天数最大值，则传入DAY_OF_MONTH）
-
-&#96;&#96;&#96;getActualMaximum(int field)&#96;&#96;&#96;：获取指定内容的最小值
-
-## SimpleDateFormat类
-java.text.SimpleDateFormat类可以格式化和解析日期类 &lt;br &#x2F;&gt;
-
-他可以将日期对象转换为某种格式的字符串，反之已知某种格式的日期字符串转换为日期对象亦可
-
----
-**常用时间模式字母**
-| 字母  |           意义           |
-| :---: | :----------------------: |
-|   Y   |            年            |
-|   M   |         年中月份         |
-|   d   |         月中天数         |
-|   H   | 一天中小时数（24小时制） |
-|   h   | 一天中小时数（12小时制） |
-|   m   |           分钟           |
-|   s   |            秒            |
-|   S   |           毫秒           |
-
----
-**构造SimpleDateFormat对象**
-
-尽管SimpleDateFormat类提供一个无参构造，但使用无参构造之后还要设置一次时间格式，因此我们使用有参构造
-
-&#96;&#96;&#96;SimpleDateFormat(String patten)&#96;&#96;&#96;：传入一个时间格式（如：&#96;&#96;&#96;yyyy&#x2F;MM&#x2F;dd HH:mm:ss&#96;&#96;&#96; 或&#96;&#96;&#96; yyyy年MM月dd日 HH:mm:ss&#96;&#96;&#96; 等）
-
----
-**格式化时间对象**
-使用SimpleDateFormat对象的方法&#96;&#96;&#96;format(Date date)&#96;&#96;&#96;可以以当前对象设定的时间格式对date进行字符串格式化
-
-下面的代码实现对一个当前时间的Date对象进行字符串格式化
-&#96;&#96;&#96;Java
-public static void main(String[] args) &#123;
+<p><code>add(BigDecimal augend)</code>：实现两个高精度运算数的加法</p>
+<p><code>subtract(BigDecimal subtrahend)</code>：实现两个高精度运算数的减法</p>
+<p><code>multiply(BigDecimal multiplicand)</code>：实现两个高精度运算数的乘法</p>
+<p><code>divide(BigDecimal divisor [, int scale, RoundingMode roundingMode])</code>：实现两个高精度运算数的除法</p>
+<ul>
+<li><span class="red">注意：</span>除法运算在两个数能除尽时可以只传入divisor参数 <br /><br>在两数除不尽时只传入divisor参数会报错 <br /><br>需要传入scale参数以指定保留几位小数 <br /><br>还需要传入roundingMode参数指定近似方法</li>
+</ul>
+<p><span class="red bold">roundingMode：</span>用于指定近似方法，常用的近似方法有（存储于RoundingMode类RoundingMode枚举变量中）：</p>
+<ol>
+<li><code>UP</code>：向0远离</li>
+<li><code>DOWN</code>：向0靠近</li>
+<li><code>CEILING</code>：向上取整</li>
+<li><code>FLOOR</code>：向下取整</li>
+<li><code>HALF_UP</code>：四舍五入</li>
+<li><code>HALF_DOWN</code>：五舍六入</li>
+<li><code>HALF_EVEN</code>：银行家算法（四舍六入五考虑 -&gt; 五后非零就进一，五后为零看奇偶，五前为偶应舍去，五前为奇要进一）</li>
+</ol>
+<h2 id="Date类"><a href="#Date类" class="headerlink" title="Date类"></a>Date类</h2><p>Date类表示一个指定的瞬间，精确到毫秒，从JDK1.1开始Date中的大部分方法已经被Calendar类中的方法取代</p>
+<hr>
+<p><strong>构造方法</strong></p>
+<p>目前没有过时的构造方法有以下两个：</p>
+<p><code>Date()</code>：返回当前时间精确到毫秒</p>
+<p><code>Date(long date)</code>：传入一个毫秒数，该毫秒数表示1970年1月1日00:00:00至某个时间的毫秒数</p>
+<hr>
+<p><strong>Date类常用方法</strong></p>
+<p><code>after(Date date)</code>：返回调用该方法的Date对象是否在date之后</p>
+<p><code>before(Date date)</code>：返回调用该方法的Date对象是否在date之前</p>
+<p><code>compareTo(Date date)</code>：比较两个日期</p>
+<p><code>equals(Date date)</code>：比较两个日期是否相等</p>
+<h2 id="Calender类"><a href="#Calender类" class="headerlink" title="Calender类"></a>Calender类</h2><p>Calender类提供了获取或设置各种日历字段的方法</p>
+<hr>
+<p><strong>构造Calender对象</strong></p>
+<p>Calender类被设定为抽象类，无法被new出。Calender类提供了静态方法 <code>getInstance()</code> 用以获取Calender对象，该对象包含当前事件，精确到毫秒</p>
+<hr>
+<p><strong>Calender类常用方法</strong></p>
+<p><code>getTime()</code>：获取对象中存储的时间</p>
+<p><code>getTimeInMillis()</code>：获取对象中存储的时间的毫秒数表示形式</p>
+<p><code>get(int field)</code>：根据传入的参数获取时间的一部分</p>
+<p><span class="red bold">field参数：</span><br>Calender类中定义了常量用于field参数</p>
+<ol>
+<li><code>YEAR</code></li>
+<li><code>MONTH</code>：<span class="red">注意月的取值为0~11，输出时可以手动+1</span></li>
+<li><code>DAY_OF_MONTH</code>：返回对象中存储的天数</li>
+<li><code>DATE</code>：返回对象中存储的天数（这两个功能一样）</li>
+<li><code>HOUR</code>：返回对象中存储的小时数（12小时制）</li>
+<li><code>HOUR_OF_DAY</code>：返回对象中存储的小时数（24小时制）</li>
+<li><code>MINUTE</code></li>
+<li><code>SECOND</code></li>
+</ol>
+<p><code>set()</code>：该方法有多个重载方法，可以传入field参数修改对象存储时间的指定内容（如年月日等），也可以直接传入年月日参数</p>
+<p><code>add(int field, int amount)</code>：可以该对象的指定内容进行加减操作（如年份+1）</p>
+<p><code>getActualMinimum(int field)</code>：获取指定内容的最大值（如获取当前月份的天数最大值，则传入DAY_OF_MONTH）</p>
+<p><code>getActualMaximum(int field)</code>：获取指定内容的最小值</p>
+<h2 id="SimpleDateFormat类"><a href="#SimpleDateFormat类" class="headerlink" title="SimpleDateFormat类"></a>SimpleDateFormat类</h2><p>java.text.SimpleDateFormat类可以格式化和解析日期类 <br /></p>
+<p>他可以将日期对象转换为某种格式的字符串，反之已知某种格式的日期字符串转换为日期对象亦可</p>
+<hr>
+<p><strong>常用时间模式字母</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">字母</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Y</td>
+<td align="center">年</td>
+</tr>
+<tr>
+<td align="center">M</td>
+<td align="center">年中月份</td>
+</tr>
+<tr>
+<td align="center">d</td>
+<td align="center">月中天数</td>
+</tr>
+<tr>
+<td align="center">H</td>
+<td align="center">一天中小时数（24小时制）</td>
+</tr>
+<tr>
+<td align="center">h</td>
+<td align="center">一天中小时数（12小时制）</td>
+</tr>
+<tr>
+<td align="center">m</td>
+<td align="center">分钟</td>
+</tr>
+<tr>
+<td align="center">s</td>
+<td align="center">秒</td>
+</tr>
+<tr>
+<td align="center">S</td>
+<td align="center">毫秒</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>构造SimpleDateFormat对象</strong></p>
+<p>尽管SimpleDateFormat类提供一个无参构造，但使用无参构造之后还要设置一次时间格式，因此我们使用有参构造</p>
+<p><code>SimpleDateFormat(String patten)</code>：传入一个时间格式（如：<code>yyyy/MM/dd HH:mm:ss</code> 或<code> yyyy年MM月dd日 HH:mm:ss</code> 等）</p>
+<hr>
+<p><strong>格式化时间对象</strong><br>使用SimpleDateFormat对象的方法 <code>format(Date date)</code> 可以以当前对象设定的时间格式对date进行字符串格式化</p>
+<p>下面的代码实现对一个当前时间的Date对象进行字符串格式化</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static void main(String[] args) &#123;
   &#x2F;&#x2F; SimpleDateFormat format &#x3D; new SimpleDateFormat(&quot;yyyy年MM月dd日 HH:mm:ss&quot;);
   SimpleDateFormat format &#x3D; new SimpleDateFormat(&quot;yyyy&#x2F;MM&#x2F;dd HH:mm:ss&quot;);
 
@@ -820,10 +804,10 @@ public static void main(String[] args) &#123;
 
 <hr>
 <p><strong>复原时间对象</strong></p>
-<p>使用SimpleDateFormat对象的方法<code>parse(String source)</code>方法对传入的source按照当前SimpleDateFormat对象指定格式复原为Date对象</p>
+<p>使用SimpleDateFormat对象的方法 <code>parse(String source)</code> 方法对传入的source按照当前SimpleDateFormat对象指定格式复原为Date对象</p>
 <ul>
-<li><span class="red">注意1：</span>使用<code>parse(String source)</code>方法时，若不按照调用该方法的SimpleDateFormat对象所设定的时间格式传入字符串，则会抛出异常</li>
-<li><span class="red">注意2：</span>使用SimpleDateFormat对象的方法<code>parse(String source)</code>方法时，传入了什么类型的字符串，复原出来的Date对象就有多少数据（如：传入”2012&#x2F;5&#x2F;13”对应yyyy&#x2F;MM&#x2F;dd，则复原出来的对象 日期为2012年5月13日 时间会为00:00:00）</li>
+<li><span class="red">注意1：</span>使用 <code>parse(String source)</code> 方法时，若不按照调用该方法的SimpleDateFormat对象所设定的时间格式传入字符串，则会抛出异常</li>
+<li><span class="red">注意2：</span>使用SimpleDateFormat对象的方法 <code>parse(String source)</code> 方法时，传入了什么类型的字符串，复原出来的Date对象就有多少数据（如：传入”2012&#x2F;5&#x2F;13”对应yyyy&#x2F;MM&#x2F;dd，则复原出来的对象 日期为2012年5月13日 时间会为00:00:00）</li>
 </ul>
 <h2 id="System类"><a href="#System类" class="headerlink" title="System类"></a>System类</h2><p>Sytem系统类，主要用于获取系统属性数据和其他操作，该类禁止被new出（构造方法私有）</p>
 <p>System类内的可用方法都是静态公开的</p>
@@ -837,7 +821,7 @@ public static void main(String[] args) &#123;
 <li><code>length</code>：复制的长度</li>
 </ul>
 <p><code>static currentTimeMills()</code>：返回当前时间距离1970年1月1日 00:00:00的毫秒数（long）</p>
-<p><code>static gc()</code>：建议JVM尽快气动垃圾回收器回收垃圾（回不回收看JVM）</p>
+<p><code>static gc()</code>：建议JVM尽快启动垃圾回收器回收垃圾（回不回收看JVM）</p>
 <p><code>static exit(int status)</code>：退出JVM，若参数为0表示正常退出，非0表示异常退出</p>
 
     </div>
@@ -889,18 +873,19 @@ public static void main(String[] args) &#123;
   </span>
   <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
     </div>
   </footer>
 
   
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js" integrity="sha256-4mJNT2bMXxcc1GCJaxBmMPdmah5ji0Ldnd79DKd1hoM=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-dL6vkUiCn30lPTN9cVrmQHo5UQmEwDMrx2ppAk4IhVk=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java-IO流">
 <meta property="og:type" content="article">
@@ -28,7 +28,7 @@
 <meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java-IO流">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-22T01:02:43.000Z">
-<meta property="article:modified_time" content="2022-04-24T02:25:51.070Z">
+<meta property="article:modified_time" content="2022-06-19T01:43:19.488Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -61,6 +61,9 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -81,6 +84,10 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
 
 
 
@@ -109,12 +116,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#InputStream%EF%BC%88%E5%AD%97%E8%8A%82%E8%BE%93%E5%85%A5%E6%B5%81%E7%88%B6%E6%8E%A5%E5%8F%A3%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">InputStream（字节输入流父接口）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E7%BC%93%E5%86%B2%E6%B5%81"><span class="nav-number">2.</span> <span class="nav-text">字节缓冲流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E7%BC%93%E5%86%B2%E6%B5%81"><span class="nav-number">3.</span> <span class="nav-text">字符缓冲流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%8D%B0%E6%B5%81"><span class="nav-number">4.</span> <span class="nav-text">打印流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Filefilter%E6%96%87%E4%BB%B6%E8%BF%87%E6%BB%A4%E5%99%A8%E6%8E%A5%E5%8F%A3"><span class="nav-number">5.</span> <span class="nav-text">Filefilter文件过滤器接口</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#InputStream%EF%BC%88%E5%AD%97%E8%8A%82%E8%BE%93%E5%85%A5%E6%B5%81%E7%88%B6%E6%8E%A5%E5%8F%A3%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">InputStream（字节输入流父接口）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OutputStream%EF%BC%88%E5%AD%97%E8%8A%82%E8%BE%93%E5%87%BA%E6%B5%81%E7%88%B6%E6%8E%A5%E5%8F%A3%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">OutputStream（字节输出流父接口）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%AD%97%E8%8A%82%E6%B5%81"><span class="nav-number">3.</span> <span class="nav-text">文件字节流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E7%BC%93%E5%86%B2%E6%B5%81"><span class="nav-number">4.</span> <span class="nav-text">字节缓冲流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E6%B5%81"><span class="nav-number">5.</span> <span class="nav-text">对象流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81"><span class="nav-number">6.</span> <span class="nav-text">常见字符编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reader%EF%BC%88%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A5%E6%B5%81%E7%88%B6%E6%8A%BD%E8%B1%A1%E7%B1%BB%EF%BC%89"><span class="nav-number">7.</span> <span class="nav-text">reader（字符输入流父抽象类）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#writer%EF%BC%88%E5%AD%97%E7%AC%A6%E8%BE%93%E5%87%BA%E6%B5%81%E7%88%B6%E6%8A%BD%E8%B1%A1%E7%B1%BB%EF%BC%89"><span class="nav-number">8.</span> <span class="nav-text">writer（字符输出流父抽象类）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%AD%97%E7%AC%A6%E6%B5%81"><span class="nav-number">9.</span> <span class="nav-text">文件字符流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E7%BC%93%E5%86%B2%E6%B5%81"><span class="nav-number">10.</span> <span class="nav-text">字符缓冲流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%8D%B0%E6%B5%81"><span class="nav-number">11.</span> <span class="nav-text">打印流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E6%8D%A2%E6%B5%81"><span class="nav-number">12.</span> <span class="nav-text">转换流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File%E7%B1%BB"><span class="nav-number">13.</span> <span class="nav-text">File类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Filefilter%E6%96%87%E4%BB%B6%E8%BF%87%E6%BB%A4%E5%99%A8%E6%8E%A5%E5%8F%A3"><span class="nav-number">14.</span> <span class="nav-text">Filefilter文件过滤器接口</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
+      src="/uploads/avatar.png">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -133,11 +142,19 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:Loliconkelvin@gmail.com" title="E-Mail → mailto:Loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -175,7 +192,7 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2022/04/22/Java-IO%E6%B5%81/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/avatar.png">
       <meta itemprop="name" content="Loliconkelvin">
     </span>
 
@@ -208,7 +225,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-24 10:25:51" itemprop="dateModified" datetime="2022-04-24T10:25:51+08:00">2022-04-24</time>
+      <time title="修改时间：2022-06-19 09:43:19" itemprop="dateModified" datetime="2022-06-19T09:43:19+08:00">2022-06-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -246,55 +263,30 @@
 <h2 id="InputStream（字节输入流父接口）"><a href="#InputStream（字节输入流父接口）" class="headerlink" title="InputStream（字节输入流父接口）"></a>InputStream（字节输入流父接口）</h2><p>InputStream是所有字节输入流的父类</p>
 <hr>
 <p><strong>InputSream类常用方法</strong></p>
-<pre class="line-numbers language-close()```：关闭流" data-language="close()```：关闭流"><code class="language-close()```：关闭流">
-&#96;&#96;&#96;read()&#96;&#96;&#96;：从输入流中读取一个字节
-
-&#96;&#96;&#96;read(byte[] b)&#96;&#96;&#96;：从输入流中读取一定数量的字节，将其存储在缓冲区数组b中
-
-&#96;&#96;&#96;read(byte[] b, int off, int len)&#96;&#96;&#96;：将输入流中的len个字节读入到数组b中
-
-## OutputStream（字节输出流父接口）
-
-OutputStream是所有字节输出流的父类
-
----
-**outputSream类常用方法**
-
-&#96;&#96;&#96;close()&#96;&#96;&#96;：关闭流
-
-&#96;&#96;&#96;flush()&#96;&#96;&#96;：强制刷新输出流并写出所有缓冲的输出字节
-
-&#96;&#96;&#96;write(byte[] b)&#96;&#96;&#96;：将数组b写入到输出流
-
-&#96;&#96;&#96;write(byte[] b, int off, int len)&#96;&#96;&#96;：将数组b从偏移量off开始的len个字节写入输出流
-
-&#96;&#96;&#96;write(int b)&#96;&#96;&#96;：将指定的字节写入0输出流
-
-## 文件字节流
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;构造方法：&lt;&#x2F;span&gt;
-
-文件输入字节流主要用到两个构造方法（输出流同理）
-
-&#96;&#96;&#96;public FileInputStream(File file)&#96;&#96;&#96;：传入一个File类对象
-
-&#96;&#96;&#96;FileInputStream(String name)&#96;&#96;&#96;：传入文件路径
-
-文件输出流还有个构造方法
-
-&#96;&#96;&#96;public FileOutputStream(File file, boolean append)&#96;&#96;&#96;
-
-&#96;&#96;&#96;public FileOutputStream(String name, boolean append)&#96;&#96;&#96;：append设定追加模式，当append为true时，写入的内容会在旧内容之后
-
----
-**文件输入流读入数据的方式**
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;一次读一个字节&lt;&#x2F;span&gt;
-
-使用&#96;&#96;&#96;read()&#96;&#96;&#96;返回当前读取的字节值，若读完，返回-1
-
-&#96;&#96;&#96;Java
-public static void main(String[] args) throws IOException &#123;
+<p><code>close()</code>：关闭流</p>
+<p><code>read()</code>：从输入流中读取一个字节</p>
+<p><code>read(byte[] b)</code>：从输入流中读取一定数量的字节，将其存储在缓冲区数组b中</p>
+<p><code>read(byte[] b, int off, int len)</code>：将输入流中的len个字节读入到数组b中</p>
+<h2 id="OutputStream（字节输出流父接口）"><a href="#OutputStream（字节输出流父接口）" class="headerlink" title="OutputStream（字节输出流父接口）"></a>OutputStream（字节输出流父接口）</h2><p>OutputStream是所有字节输出流的父类</p>
+<hr>
+<p><strong>outputSream类常用方法</strong></p>
+<p><code>close()</code>：关闭流</p>
+<p><code>flush()</code>：强制刷新输出流并写出所有缓冲的输出字节</p>
+<p><code>write(byte[] b)</code>：将数组b写入到输出流</p>
+<p><code>write(byte[] b, int off, int len)</code>：将数组b从偏移量off开始的len个字节写入输出流</p>
+<p><code>write(int b)</code>：将指定的字节写入0输出流</p>
+<h2 id="文件字节流"><a href="#文件字节流" class="headerlink" title="文件字节流"></a>文件字节流</h2><p><span class="red bold">构造方法：</span></p>
+<p>文件输入字节流主要用到两个构造方法（输出流同理）</p>
+<p><code>public FileInputStream(File file)</code>：传入一个File类对象</p>
+<p><code>FileInputStream(String name)</code>：传入文件路径</p>
+<p>文件输出流还有个构造方法</p>
+<p><code>public FileOutputStream(File file, boolean append)</code></p>
+<p><code>public FileOutputStream(String name, boolean append)</code>：append设定追加模式，当append为true时，写入的内容会在旧内容之后</p>
+<hr>
+<p><strong>文件输入流读入数据的方式</strong></p>
+<p><span class="red bold">一次读一个字节</span></p>
+<p>使用 <code>read()</code> 返回当前读取的字节值，若读完，返回-1</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static void main(String[] args) throws IOException &#123;
     FileInputStream fis &#x3D; new FileInputStream(&quot;text.txt&quot;);
     int buffer &#x3D; 0;
 
@@ -306,7 +298,7 @@ public static void main(String[] args) throws IOException &#123;
 &#125;</code></pre>
 
 <p><span class="red bold">一次读多个字节并存入字节数组</span></p>
-<p>使用<code>read(byte b[])</code>将多个字节读取并存入字节数组直到数组填满，返回这次读取的字节数量</p>
+<p>使用 <code>read(byte b[])</code> 将多个字节读取并存入字节数组直到数组填满，返回这次读取的字节数量</p>
 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static void main(String[] args) throws IOException &#123;
     FileInputStream fis &#x3D; new FileInputStream(&quot;text.txt&quot;);
     byte[] buffer &#x3D; new byte[1024];
@@ -321,7 +313,7 @@ public static void main(String[] args) throws IOException &#123;
 
 <hr>
 <p><strong>文件输出流写文件的方式</strong></p>
-<p>使用<code>write(byte b[])</code>将字节数组里的内容全部写到流中</p>
+<p>使用 <code>write(byte b[])</code> 将字节数组里的内容全部写到流中</p>
 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static void main(String[] args) throws IOException &#123;
     FileOutputStream fos &#x3D; new FileOutputStream(&quot;text.txt&quot;);
 
@@ -367,17 +359,12 @@ public static void main(String[] args) throws IOException &#123;
 </ul>
 <hr>
 <p><strong>BufferedInputStream构造方法</strong></p>
-<p><code>BufferedInputStream(InputStream in)</code></p>
-<pre class="line-numbers language-BufferedInputStream(InputStream" data-language="BufferedInputStream(InputStream"><div class="caption"><span>in, int size)```：传入一个字节输入流，也可以传入size以自定义缓冲区大小</span></div><code class="language-BufferedInputStream(InputStream">
----
-**字节缓冲输入流常用方法**
-
-&#96;&#96;&#96;close()&#96;&#96;&#96;：关闭流，&lt;span class&#x3D;&quot;red&quot;&gt;注意：关闭缓冲流会顺带将传入的流也关闭&lt;&#x2F;span&gt;
-
-&#96;&#96;&#96;read()&#96;&#96;&#96;：读入一个字节
-
-&#96;&#96;&#96;JAVA
-public static void main(String[] args) throws IOException &#123;
+<p><code>BufferedInputStream(InputStream in)</code><br><code>BufferedInputStream(InputStream in, int size)</code>：传入一个字节输入流，也可以传入size以自定义缓冲区大小</p>
+<hr>
+<p><strong>字节缓冲输入流常用方法</strong></p>
+<p><code>close()</code>：关闭流，<span class="red">注意：关闭缓冲流会顺带将传入的流也关闭</span></p>
+<p><code>read()</code>：读入一个字节</p>
+<pre class="line-numbers language-JAVA" data-language="JAVA"><code class="language-JAVA">public static void main(String[] args) throws IOException &#123;
     FileInputStream fis &#x3D; new FileInputStream(&quot;text.dat&quot;);
 
     BufferedInputStream bis &#x3D; new BufferedInputStream(fis);
@@ -392,120 +379,79 @@ public static void main(String[] args) throws IOException &#123;
     bis.close();
 &#125;</code></pre>
 
-<pre class="line-numbers language-read(byte" data-language="read(byte"><div class="caption"><span>b[], int off, int len)```：读入len个字节存入字节数组b中的off偏移量处</span></div><code class="language-read(byte">
----
-**BufferedOutputStream构造方法**
-
-&#96;&#96;&#96;BufferedOutputStream(OutputStream out)&#96;&#96;&#96;
-&#96;&#96;&#96;BufferedOutputStream(OutputStream out, int size)&#96;&#96;&#96;：需要传入一个输出流，也可以传入size以自定义缓冲区大小
-
-&#96;&#96;&#96;write(byte b[])&#96;&#96;&#96;：将字节数组里的内容全部写到流中
-* &lt;span class&#x3D;&quot;red bold&quot;&gt;注意：&lt;&#x2F;span&gt;若字节数组的数据不足以填满缓冲区，则write之后数据还在流中，并不会写入到文件
-* 调用flush()方法或close()方法关闭流，都可以将缓冲区内的数据写入文件
-
-&#96;&#96;&#96;flush()&#96;&#96;&#96;：强制刷新缓冲区，将缓冲区内的数据写出
-
-## 对象流
-
-与对象流相关的流：ObjectOutputStream ObjectInputStream
-
-* 对象流增强了缓冲区功能
-* 增强了读写8种基本数据类型和字符串的功能
-* 增强了读写对象的功能
-
-使用流传输对象的过程称为序列化、反序列化
-
----
-**对象流的构造方法**
-
-&#96;&#96;&#96;ObjectInputStream(InputStream in)&#96;&#96;&#96;
-
-&#96;&#96;&#96;ObjectOutputStream(OutputStream out)&#96;&#96;&#96;
-
----
-**对象流常用方法**
-
-&#96;&#96;&#96;close()&#96;&#96;&#96;：关闭流
-
-&#96;&#96;&#96;flush()&#96;&#96;&#96;：清空流（对象流没有缓冲区）
-
-&#96;&#96;&#96;writeObject(Object obj)&#96;&#96;&#96;：将对象写入到文件中
-
-序列化多个成员可以借助集合
-
-&#96;&#96;&#96;readObject(Object obj)&#96;&#96;&#96;：将对象读入到流中
-
-* &lt;span class&#x3D;&quot;red bold&quot;&gt;注意1：&lt;&#x2F;span&gt;写入的对象需要标记为“可序列化”，&lt;span class&#x3D;&quot;red&quot;&gt;需要实现Serializable接口&lt;&#x2F;span&gt;
-* &lt;span class&#x3D;&quot;red bold&quot;&gt;注意2：&lt;&#x2F;span&gt;写入的对象的类中的属性的类型也需要实现Serializable接口
-
----
-**serialVersionUID**
-
-IDEA默认设置为：&lt;span class&#x3D;&quot;red&quot;&gt;允许可序列化类没有序列化UID&lt;&#x2F;span&gt;，开启序列化UID详见 &#96;&#96;&#96;Idea关于代码格式的设定&#96;&#96;&#96;
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;作用：&lt;&#x2F;span&gt;保证序列化和反序列化的对象是同一个对象
-
-* &lt;span class&#x3D;&quot;red bold&quot;&gt;注意：&lt;&#x2F;span&gt;这个值要在序列化（存入文件）之前决定，决定之后不要再改。若序列化之后改掉UID，然后反序列化，序列化前后的对象会被认为是两个不同的对象而报错
-
----
-**不序列化的属性**
-
-1. 静态属性不参与序列化
-2. &lt;span class&#x3D;&quot;red&quot;&gt;要想某个成员属性不被序列化，在属性声明中添加&#96;&#96;&#96;transient&#96;&#96;&#96;&lt;&#x2F;span&gt;
-
-## 常见字符编码
-
-* ISO-8859-1：包括ASCII、西欧、希腊语，泰语、阿拉伯语、希伯来语对应的文字符号（1个字节记录）
-* UTF-8：针对Unicode码表的可变长度字符编码
-* GB2312：简体中文（1或2或3个字节记录）
-* GBK：简体中文、扩充（1或2个字节记录）
-* BIG5：繁体中文
-
-## reader（字符输入流父抽象类）
-
-reader是所有字符输入流的父接口
-
----
-**reader常用方法**
-
-&#96;&#96;&#96;read()&#96;&#96;&#96;：读一个字符，返回读取的字符的值
-
-&#96;&#96;&#96;	read​(char[] cbuf)&#96;&#96;&#96;：读取多个字符直到将字符数组填满，返回这次读取的字节数量
-
-&#96;&#96;&#96;	read​(char[] cbuf, int off, int len)&#96;&#96;&#96;：读取len个字符存储到字符数组cbuf中off偏移量的位置
-
-## writer（字符输出流父抽象类）
-
-writer是所有字符输出流的父接口
-
----
-**writer常用方法**
-
-&#96;&#96;&#96;	write​(int c)&#96;&#96;&#96;：写一个字符，无返回值
-
-&#96;&#96;&#96;	write​(char[] cbuf)&#96;&#96;&#96;：写一个字符数组，无返回值
-
-&#96;&#96;&#96;write​(char[] cbuf, int off, int len)&#96;&#96;&#96;：写一个字符数组从偏移量off开始len个字符
-
-## 文件字符流
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;构造方法：&lt;&#x2F;span&gt;
-
-输出流同理
-
-&#96;&#96;&#96;FileReader(File file)&#96;&#96;&#96;
-
-&#96;&#96;&#96;FileReader(String fileName)&#96;&#96;&#96;
-
----
-**文件字符流读入数据的方式**
-
-跟字节流一样的
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;读入一个字符&lt;&#x2F;span&gt;
-
-&#96;&#96;&#96;JAVA
-public static void main(String[] args) throws IOException &#123;
+<p><code>read(byte b[], int off, int len)</code>：读入len个字节存入字节数组b中的off偏移量处</p>
+<hr>
+<p><strong>BufferedOutputStream构造方法</strong></p>
+<p><code>BufferedOutputStream(OutputStream out)</code><br><code>BufferedOutputStream(OutputStream out, int size)</code>：需要传入一个输出流，也可以传入size以自定义缓冲区大小</p>
+<p><code>write(byte b[])</code>：将字节数组里的内容全部写到流中</p>
+<ul>
+<li><span class="red bold">注意：</span>若字节数组的数据不足以填满缓冲区，则write之后数据还在流中，并不会写入到文件</li>
+<li>调用flush()方法或close()方法关闭流，都可以将缓冲区内的数据写入文件</li>
+</ul>
+<p><code>flush()</code>：强制刷新缓冲区，将缓冲区内的数据写出</p>
+<h2 id="对象流"><a href="#对象流" class="headerlink" title="对象流"></a>对象流</h2><p>与对象流相关的流：ObjectOutputStream ObjectInputStream</p>
+<ul>
+<li>对象流增强了缓冲区功能</li>
+<li>增强了读写8种基本数据类型和字符串的功能</li>
+<li>增强了读写对象的功能</li>
+</ul>
+<p>使用流传输对象的过程称为序列化、反序列化</p>
+<hr>
+<p><strong>对象流的构造方法</strong></p>
+<p><code>ObjectInputStream(InputStream in)</code></p>
+<p><code>ObjectOutputStream(OutputStream out)</code></p>
+<hr>
+<p><strong>对象流常用方法</strong></p>
+<p><code>close()</code>：关闭流</p>
+<p><code>flush()</code>：清空流（对象流没有缓冲区）</p>
+<p><code>writeObject(Object obj)</code>：将对象写入到文件中</p>
+<p>序列化多个成员可以借助集合</p>
+<p><code>readObject(Object obj)</code>：将对象读入到流中</p>
+<ul>
+<li><span class="red bold">注意1：</span>写入的对象需要标记为“可序列化”，<span class="red">需要实现Serializable接口</span></li>
+<li><span class="red bold">注意2：</span>写入的对象的类中的属性的类型也需要实现Serializable接口</li>
+</ul>
+<hr>
+<p><strong>serialVersionUID</strong></p>
+<p>IDEA默认设置为：<span class="red">允许可序列化类没有序列化UID</span>，开启序列化UID详见 <code>Idea关于代码格式的设定</code></p>
+<p><span class="red bold">作用：</span>保证序列化和反序列化的对象是同一个对象</p>
+<ul>
+<li><span class="red bold">注意：</span>这个值要在序列化（存入文件）之前决定，决定之后不要再改。若序列化之后改掉UID，然后反序列化，序列化前后的对象会被认为是两个不同的对象而报错</li>
+</ul>
+<hr>
+<p><strong>不序列化的属性</strong></p>
+<ol>
+<li>静态属性不参与序列化</li>
+<li><span class="red">要想某个成员属性不被序列化，在属性声明中添加 <code>transient</code></span></li>
+</ol>
+<h2 id="常见字符编码"><a href="#常见字符编码" class="headerlink" title="常见字符编码"></a>常见字符编码</h2><ul>
+<li>ISO-8859-1：包括ASCII、西欧、希腊语，泰语、阿拉伯语、希伯来语对应的文字符号（1个字节记录）</li>
+<li>UTF-8：针对Unicode码表的可变长度字符编码</li>
+<li>GB2312：简体中文（1或2或3个字节记录）</li>
+<li>GBK：简体中文、扩充（1或2个字节记录）</li>
+<li>BIG5：繁体中文</li>
+</ul>
+<h2 id="reader（字符输入流父抽象类）"><a href="#reader（字符输入流父抽象类）" class="headerlink" title="reader（字符输入流父抽象类）"></a>reader（字符输入流父抽象类）</h2><p>reader是所有字符输入流的父接口</p>
+<hr>
+<p><strong>reader常用方法</strong></p>
+<p><code>read()</code>：读一个字符，返回读取的字符的值</p>
+<p><code>read​(char[] cbuf)</code>：读取多个字符直到将字符数组填满，返回这次读取的字节数量</p>
+<p><code>read​(char[] cbuf, int off, int len)</code>：读取len个字符存储到字符数组cbuf中off偏移量的位置</p>
+<h2 id="writer（字符输出流父抽象类）"><a href="#writer（字符输出流父抽象类）" class="headerlink" title="writer（字符输出流父抽象类）"></a>writer（字符输出流父抽象类）</h2><p>writer是所有字符输出流的父接口</p>
+<hr>
+<p><strong>writer常用方法</strong></p>
+<p><code>write​(int c)</code>：写一个字符，无返回值</p>
+<p><code>write​(char[] cbuf)</code>：写一个字符数组，无返回值</p>
+<p><code>write​(char[] cbuf, int off, int len)</code>：写一个字符数组从偏移量off开始len个字符</p>
+<h2 id="文件字符流"><a href="#文件字符流" class="headerlink" title="文件字符流"></a>文件字符流</h2><p><span class="red bold">构造方法：</span></p>
+<p>输出流同理</p>
+<p><code>FileReader(File file)</code></p>
+<p><code>FileReader(String fileName)</code></p>
+<hr>
+<p><strong>文件字符流读入数据的方式</strong></p>
+<p>跟字节流一样的</p>
+<p><span class="red bold">读入一个字符</span></p>
+<pre class="line-numbers language-JAVA" data-language="JAVA"><code class="language-JAVA">public static void main(String[] args) throws IOException &#123;
     FileReader reader &#x3D; new FileReader(&quot;text.txt&quot;);
 
     int data;
@@ -560,15 +506,11 @@ public static void main(String[] args) throws IOException &#123;
 <h2 id="字符缓冲流"><a href="#字符缓冲流" class="headerlink" title="字符缓冲流"></a>字符缓冲流</h2><p><span class="red bold">构造方法：</span></p>
 <p>输出流同理</p>
 <p><code>BufferedReader(Reader in)</code></p>
-<pre class="line-numbers language-BufferedReader(Reader" data-language="BufferedReader(Reader"><div class="caption"><span>in, int sz)```：传入一个底层字符流，也可以传入sz以自定义缓冲区大小</span></div><code class="language-BufferedReader(Reader">
-&lt;span class&#x3D;&quot;red bold&quot;&gt;字符缓冲输入流方法：&lt;&#x2F;span&gt;
-
-&#96;&#96;&#96;close()&#96;&#96;&#96;：关闭流，&lt;span class&#x3D;&quot;red&quot;&gt;关闭缓冲流会顺带将传入的流也关闭&lt;&#x2F;span&gt;
-
-&#96;&#96;&#96;readLine()&#96;&#96;&#96;：读一行数据，读完则返回null
-
-&#96;&#96;&#96;JAVA
-public static void main(String[] args) throws IOException &#123;
+<p><code>BufferedReader(Reader in, int sz)</code>：传入一个底层字符流，也可以传入sz以自定义缓冲区大小</p>
+<p><span class="red bold">字符缓冲输入流方法：</span></p>
+<p><code>close()</code>：关闭流，<span class="red">关闭缓冲流会顺带将传入的流也关闭</span></p>
+<p><code>readLine()</code>：读一行数据，读完则返回null</p>
+<pre class="line-numbers language-JAVA" data-language="JAVA"><code class="language-JAVA">public static void main(String[] args) throws IOException &#123;
     FileReader fr &#x3D; new FileReader(&quot;text.txt&quot;);
     BufferedReader br &#x3D; new BufferedReader(fr);
 
@@ -584,9 +526,8 @@ public static void main(String[] args) throws IOException &#123;
 
 <p><span class="red bold">字符缓冲输出流方法：</span></p>
 <p>除了write()写出方法外，字符缓冲流还提供了以下方法：</p>
-<pre class="line-numbers language-newLine()```：写入一个换行符" data-language="newLine()```：写入一个换行符"><code class="language-newLine()```：写入一个换行符">
-&#96;&#96;&#96;JAVA
-public static void main(String[] args) throws IOException &#123;
+<p><code>newLine()</code>：写入一个换行符</p>
+<pre class="line-numbers language-JAVA" data-language="JAVA"><code class="language-JAVA">public static void main(String[] args) throws IOException &#123;
     FileWriter fw &#x3D; new FileWriter(&quot;text.txt&quot;);
     BufferedWriter bw &#x3D; new BufferedWriter(fw);
 
@@ -607,155 +548,108 @@ public static void main(String[] args) throws IOException &#123;
 <p><code>PrintWriter​(File file)</code></p>
 <p><code>PrintWriter​(OutputStream out)</code></p>
 <p><span class="red bold">打印流方法：</span></p>
-<p><code>	print​(Object obj)</code></p>
-<pre class="line-numbers language-println​(Object" data-language="println​(Object"><div class="caption"><span>x)```：这两个方法会将输入的数据原封不动的写入到流中（如：传入boolean类型true，则写入true）</span></div><code class="language-println​(Object">
-## 转换流
+<p><code>print​(Object obj)</code></p>
+<p><code>println​(Object x)</code>：这两个方法会将输入的数据原封不动的写入到流中（如：传入boolean类型true，则写入true）</p>
+<h2 id="转换流"><a href="#转换流" class="headerlink" title="转换流"></a>转换流</h2><p>转换流可以将字节流转换为字符流，并可以设置编码格式</p>
+<p>InputStreamReader是字节流通向字符流的桥梁，转换方向为 <code>字节 -&gt; 字符</code></p>
+<p>OutputStreamWriter是字符流通向字节流的桥梁，转换方向为 <code>字符 -&gt; 字节</code></p>
+<p><span class="red bold">构造方法：</span></p>
+<p>输出流同理</p>
+<p><code>InputStreamReader​(InputStream in)</code></p>
+<p><code>InputStreamReader​(InputStream in, String charsetName)</code>：不传入字符编码名则使用系统默认的编码</p>
+<p><span class="red bold">转换输入流方法：</span></p>
+<p><code>close()</code>：关闭流，<span class="red">关闭转换流会顺带将传入的流也关闭</span></p>
+<p><code>getEncoding()</code>：返回此流使用的字符编码名称</p>
+<p><code>read()</code>：读一个字符，返回读取的字符的值</p>
+<p><code>read​(char[] cbuf, int offset, int length)</code>：读入多个字符，返回读取的字符数量</p>
+<p><span class="red bold">转换输出流方法：</span></p>
+<p><code>close()</code>：关闭流，<span class="red">关闭转换流会顺带将传入的流也关闭</span></p>
+<p><code>getEncoding()</code>：返回此流使用的字符编码名称</p>
+<p><code>write(String str)</code>：写字符串（<span class="red">注意：</span>不刷新或关闭流，数据写不出去）</p>
+<h2 id="File类"><a href="#File类" class="headerlink" title="File类"></a>File类</h2><p>File类是一个 文件 或 文件夹 的抽象表示</p>
+<hr>
+<p><strong>分隔符</strong></p>
+<p>File类内置两种常量分隔符</p>
+<ol>
+<li>路径分隔符（pathSeparator）：<code>;</code></li>
+<li>名称分隔符（separator）：<code>\</code></li>
+</ol>
+<hr>
+<p><strong>文件操作</strong></p>
+<ol>
+<li><p>创建文件</p>
+<p> <span class="red">创建File对象并不代表创建文件</span></p>
+<p> <code>exists()</code>：判断当前文件或目录是否存在</p>
+<p> <code>createNewFile()</code>：根据该File对象的路径创建文件，返回创建成功（true）或失败（false）</p>
+<p> 因此创建文件时，可以这样：</p>
+ <pre class="line-numbers language-JAVA" data-language="JAVA"><code class="language-JAVA">public static void main(String[] args) throws IOException &#123;
+    File file &#x3D; new File(&quot;D:\\test.txt&quot;);
 
-转换流可以将字节流转换为字符流，并可以设置编码格式
-
-InputStreamReader是字节流通向字符流的桥梁，转换方向为&#96;&#96;&#96;字节 -&gt; 字符&#96;&#96;&#96;
-
-OutputStreamWriter是字符流通向字节流的桥梁，转换方向为&#96;&#96;&#96;字符 -&gt; 字节&#96;&#96;&#96;
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;构造方法：&lt;&#x2F;span&gt;
-
-输出流同理
-
-&#96;&#96;&#96;InputStreamReader​(InputStream in)&#96;&#96;&#96;
-
-&#96;&#96;&#96;InputStreamReader​(InputStream in, String charsetName)&#96;&#96;&#96;：不传入字符编码名则使用系统默认的编码
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;转换输入流方法：&lt;&#x2F;span&gt;
-
-&#96;&#96;&#96;close()&#96;&#96;&#96;：关闭流，&lt;span class&#x3D;&quot;red&quot;&gt;关闭转换流会顺带将传入的流也关闭&lt;&#x2F;span&gt;
-
-&#96;&#96;&#96;	getEncoding()&#96;&#96;&#96;：返回此流使用的字符编码名称
-
-&#96;&#96;&#96;	read()&#96;&#96;&#96;：读一个字符，返回读取的字符的值
-
-&#96;&#96;&#96;read​(char[] cbuf, int offset, int length)&#96;&#96;&#96;：读入多个字符，返回读取的字符数量
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;转换输出流方法：&lt;&#x2F;span&gt;
-
-&#96;&#96;&#96;close()&#96;&#96;&#96;：关闭流，&lt;span class&#x3D;&quot;red&quot;&gt;关闭转换流会顺带将传入的流也关闭&lt;&#x2F;span&gt;
-
-&#96;&#96;&#96;	getEncoding()&#96;&#96;&#96;：返回此流使用的字符编码名称
-
-&#96;&#96;&#96;write(String str)&#96;&#96;&#96;：写字符串（&lt;span class&#x3D;&quot;red&quot;&gt;注意：&lt;&#x2F;span&gt;不刷新或关闭流，数据写不出去）
-
-## File类
-
-File类是一个 文件 或 文件夹 的抽象表示
-
----
-**分隔符**
-
-File类内置两种常量分隔符
-1. 路径分隔符（pathSeparator）：&#96;&#96;&#96;;&#96;&#96;&#96;
-2. 名称分隔符（separator）：&#96;&#96;&#96;\&#96;&#96;&#96;
-
----
-**文件操作**
-
-1. 创建文件
-    
-    &lt;span class&#x3D;&quot;red&quot;&gt;创建File对象并不代表创建文件&lt;&#x2F;span&gt;
-
-    &#96;&#96;&#96;exists()&#96;&#96;&#96;：判断当前文件或目录是否存在
-
-    &#96;&#96;&#96;createNewFile()&#96;&#96;&#96;：根据该File对象的路径创建文件，返回创建成功（true）或失败（false）
-
-    因此创建文件时，可以这样：
-    &#96;&#96;&#96;JAVA
-    public static void main(String[] args) throws IOException &#123;
-        File file &#x3D; new File(&quot;D:\\test.txt&quot;);
-
-        if (!file.exists()) &#123;
-            boolean b &#x3D; file.createNewFile();
-            System.out.println(&quot;创建结果&quot; + b);
-        &#125;
-    &#125;</code></pre>
-
-<ol start="2">
+    if (!file.exists()) &#123;
+        boolean b &#x3D; file.createNewFile();
+        System.out.println(&quot;创建结果&quot; + b);
+    &#125;
+&#125;</code></pre>
+</li>
 <li><p>删除文件</p>
 <ol>
 <li>直接删除</li>
 </ol>
- <pre class="line-numbers language-delete()```：根据File对象的路径删除文件或文件夹" data-language="delete()```：根据File对象的路径删除文件或文件夹"><code class="language-delete()```：根据File对象的路径删除文件或文件夹">
-    2. 在JVM退出时删除
-
-    &#96;&#96;&#96;deleteOnExit()&#96;&#96;&#96;：根据File对象的路径在JVM退出时删除文件
-
-3. 获取文件信息
-
-    &#96;&#96;&#96;getAbsolutePath()&#96;&#96;&#96;：获取文件的绝对路径
-
-    &#96;&#96;&#96;getPath()&#96;&#96;&#96;：获取相对路径
-
-    &#96;&#96;&#96;getName()&#96;&#96;&#96;：获取文件名
-
-    &#96;&#96;&#96;getParent()&#96;&#96;&#96;：获取父目录路径
-
-    &#96;&#96;&#96;length()&#96;&#96;&#96;：获取文件字节数
-
-    &#96;&#96;&#96;lastModified()&#96;&#96;&#96;：获取文件最后修改日期，返回毫秒数，使用Date类构造函数接收
-
-    &#96;&#96;&#96;canWrite()&#96;&#96;&#96;：判断文件是否可写
-
-    &#96;&#96;&#96;isFile()&#96;&#96;&#96;：判断该对象是否为一个文件
-
-    &#96;&#96;&#96;isHidden()&#96;&#96;&#96;：判断该文件是否隐藏
-
----
-**文件夹操作** 
-
-1. 创建文件夹
-
-    &#96;&#96;&#96;mkdir()&#96;&#96;&#96;：创建文件夹，&lt;span class&#x3D;&quot;red&quot;&gt;只能创建单级目录&lt;&#x2F;span&gt;
-
-    &#96;&#96;&#96;mkdirs()&#96;&#96;&#96;：创建文件夹
-
-2. 删除文件夹
-
-    1. 直接删除
-
-    &#96;&#96;&#96;delete()&#96;&#96;&#96;：删除文件夹，&lt;span class&#x3D;&quot;red&quot;&gt;只会删除最后一级的目录，且只能删除空目录。&lt;&#x2F;span&gt;
-
-    2. 在JVM退出时删除
-
-    &#96;&#96;&#96;deleteOnExit()&#96;&#96;&#96;：退出JVM时删除文件，&lt;span class&#x3D;&quot;red&quot;&gt;只会删除最后一级的目录，且只能删除空目录。&lt;&#x2F;span&gt;
-
-3. 获取&lt;span class&#x3D;&quot;red&quot;&gt;最后一层&lt;&#x2F;span&gt;文件夹信息
-
-    &#96;&#96;&#96;getAbsolutePath()&#96;&#96;&#96;：获取最后一层文件夹的绝对路径
-
-    &#96;&#96;&#96;getPath()&#96;&#96;&#96;：获取相对路径
-
-    &#96;&#96;&#96;getName()&#96;&#96;&#96;：获取最后一层文件夹名
-
-    &#96;&#96;&#96;getParent()&#96;&#96;&#96;：获取最后一层文件夹的父目录路径
-
-    &#96;&#96;&#96;lastModified()&#96;&#96;&#96;：获取最后一层文件夹的最后修改时间
-
-4. 判断
-
-    &#96;&#96;&#96;isDirectory()&#96;&#96;&#96;：判断该对象是否为一个文件夹
-
-    &#96;&#96;&#96;isHidden()&#96;&#96;&#96;：判断该文件夹是否隐藏
-
-5. 遍历
-
-    &#96;&#96;&#96;list()&#96;&#96;&#96;：获取该目录下的所有 &lt;span class&#x3D;&quot;red&quot;&gt;文件名 和 文件夹名&lt;&#x2F;span&gt;，返回String[]
-
-    &#96;&#96;&#96;listFiles()&#96;&#96;&#96;：获取该目录下的所有 &lt;span class&#x3D;&quot;red&quot;&gt;文件 和 文件夹 对应的File类对象&lt;&#x2F;span&gt;
-
-    &#96;&#96;&#96;listFiles(FileFilter filter)&#96;&#96;&#96;：传入文件过滤器作为参数
-
----
-**实现递归遍历文件**
-
-&#96;&#96;&#96;JAVA
-public static void main(String[] args) &#123;
+<p> <code>delete()</code>：根据File对象的路径删除文件或文件夹</p>
+<ol start="2">
+<li>在JVM退出时删除</li>
+</ol>
+<p> <code>deleteOnExit()</code>：根据File对象的路径在JVM退出时删除文件</p>
+</li>
+<li><p>获取文件信息</p>
+<p> <code>getAbsolutePath()</code>：获取文件的绝对路径</p>
+<p> <code>getPath()</code>：获取相对路径</p>
+<p> <code>getName()</code>：获取文件名</p>
+<p> <code>getParent()</code>：获取父目录路径</p>
+<p> <code>length()</code>：获取文件字节数</p>
+<p> <code>lastModified()</code>：获取文件最后修改日期，返回毫秒数，使用Date类构造函数接收</p>
+<p> <code>canWrite()</code>：判断文件是否可写</p>
+<p> <code>isFile()</code>：判断该对象是否为一个文件</p>
+<p> <code>isHidden()</code>：判断该文件是否隐藏</p>
+</li>
+</ol>
+<hr>
+<p><strong>文件夹操作</strong> </p>
+<ol>
+<li><p>创建文件夹</p>
+<p> <code>mkdir()</code>：创建文件夹，<span class="red">只能创建单级目录</span></p>
+<p> <code>mkdirs()</code>：创建文件夹</p>
+</li>
+<li><p>删除文件夹</p>
+<ol>
+<li>直接删除</li>
+</ol>
+<p> <code>delete()</code>：删除文件夹，<span class="red">只会删除最后一级的目录，且只能删除空目录。</span></p>
+<ol start="2">
+<li>在JVM退出时删除</li>
+</ol>
+<p> <code>deleteOnExit()</code>：退出JVM时删除文件，<span class="red">只会删除最后一级的目录，且只能删除空目录。</span></p>
+</li>
+<li><p>获取<span class="red">最后一层</span>文件夹信息</p>
+<p> <code>getAbsolutePath()</code>：获取最后一层文件夹的绝对路径</p>
+<p> <code>getPath()</code>：获取相对路径</p>
+<p> <code>getName()</code>：获取最后一层文件夹名</p>
+<p> <code>getParent()</code>：获取最后一层文件夹的父目录路径</p>
+<p> <code>lastModified()</code>：获取最后一层文件夹的最后修改时间</p>
+</li>
+<li><p>判断</p>
+<p> <code>isDirectory()</code>：判断该对象是否为一个文件夹</p>
+<p> <code>isHidden()</code>：判断该文件夹是否隐藏</p>
+</li>
+<li><p>遍历</p>
+<p> <code>list()</code>：获取该目录下的所有 <span class="red">文件名 和 文件夹名</span>，返回String[]</p>
+<p> <code>listFiles()</code>：获取该目录下的所有 <span class="red">文件 和 文件夹 对应的File类对象</span></p>
+<p> <code>listFiles(FileFilter filter)</code>：传入文件过滤器作为参数</p>
+</li>
+</ol>
+<hr>
+<p><strong>实现递归遍历文件</strong></p>
+<pre class="line-numbers language-JAVA" data-language="JAVA"><code class="language-JAVA">public static void main(String[] args) &#123;
   File dir &#x3D; new File(&quot;F:\\LostLife_1.4_unc&quot;);
 
   show(dir);
@@ -773,8 +667,8 @@ public static void show(File dir) &#123;
           &#125;
       &#125; 
   &#125;
-&#125;</code></pre></li>
-</ol>
+&#125;</code></pre>
+
 <hr>
 <p><strong>实现递归删除文件</strong></p>
 <pre class="line-numbers language-JAVA" data-language="JAVA"><code class="language-JAVA">public static void main(String[] args) &#123;
@@ -864,18 +758,19 @@ File[] files &#x3D; dir.listFiles((pathname) -&gt; &#123;
   </span>
   <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
     </div>
   </footer>
 
   
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js" integrity="sha256-4mJNT2bMXxcc1GCJaxBmMPdmah5ji0Ldnd79DKd1hoM=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-dL6vkUiCn30lPTN9cVrmQHo5UQmEwDMrx2ppAk4IhVk=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java集合框架">
 <meta property="og:type" content="article">
@@ -28,13 +28,18 @@
 <meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Java集合框架">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/12/LedjFf.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/12/LnYW0x.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/13/LuOijK.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/13/LuOZAH.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/16/LtYwD0.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/16/Lt0LY6.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/16/Lt0zOH.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/18/Ld6Aw8.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/19/L0hmU1.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/20/Lrp7TA.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/20/LrpYon.md.png">
 <meta property="article:published_time" content="2022-04-11T14:20:27.000Z">
-<meta property="article:modified_time" content="2022-06-18T15:03:30.423Z">
+<meta property="article:modified_time" content="2022-06-19T02:00:47.643Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -68,6 +73,9 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -88,6 +96,10 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
 
 
 
@@ -116,12 +128,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">集合是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88"><span class="nav-number">2.</span> <span class="nav-text">Collection体系集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection%E7%88%B6%E6%8E%A5%E5%8F%A3"><span class="nav-number">3.</span> <span class="nav-text">Collection父接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List%E5%AD%90%E6%8E%A5%E5%8F%A3"><span class="nav-number">4.</span> <span class="nav-text">List子接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List%E5%AE%9E%E7%8E%B0%E7%B1%BB%E6%A6%82%E6%8B%AC"><span class="nav-number">5.</span> <span class="nav-text">List实现类概括</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AE%B9%E7%9B%B8%E5%90%8C%E7%A7%BB%E9%99%A4%E6%96%B9%E6%B3%95%EF%BC%88List%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">实现对象内容相同移除方法（List）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList"><span class="nav-number">7.</span> <span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vector"><span class="nav-number">8.</span> <span class="nav-text">Vector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%9B%E5%9E%8B"><span class="nav-number">9.</span> <span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set%E5%AD%90%E6%8E%A5%E5%8F%A3"><span class="nav-number">10.</span> <span class="nav-text">Set子接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashSet%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">11.</span> <span class="nav-text">HashSet（重点）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TreeSet"><span class="nav-number">12.</span> <span class="nav-text">TreeSet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map%E7%88%B6%E6%8E%A5%E5%8F%A3"><span class="nav-number">13.</span> <span class="nav-text">Map父接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap"><span class="nav-number">14.</span> <span class="nav-text">HashMap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashTable"><span class="nav-number">15.</span> <span class="nav-text">HashTable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Properties"><span class="nav-number">16.</span> <span class="nav-text">Properties</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">集合是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88"><span class="nav-number">2.</span> <span class="nav-text">Collection体系集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection%E7%88%B6%E6%8E%A5%E5%8F%A3"><span class="nav-number">3.</span> <span class="nav-text">Collection父接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List%E5%AD%90%E6%8E%A5%E5%8F%A3"><span class="nav-number">4.</span> <span class="nav-text">List子接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List%E5%AE%9E%E7%8E%B0%E7%B1%BB%E6%A6%82%E6%8B%AC"><span class="nav-number">5.</span> <span class="nav-text">List实现类概括</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AE%B9%E7%9B%B8%E5%90%8C%E7%A7%BB%E9%99%A4%E6%96%B9%E6%B3%95%EF%BC%88List%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">实现对象内容相同移除方法（List）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList"><span class="nav-number">7.</span> <span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vector"><span class="nav-number">8.</span> <span class="nav-text">Vector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LinkedList"><span class="nav-number">9.</span> <span class="nav-text">LinkedList</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%9B%E5%9E%8B"><span class="nav-number">10.</span> <span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set%E5%AD%90%E6%8E%A5%E5%8F%A3"><span class="nav-number">11.</span> <span class="nav-text">Set子接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashSet%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">12.</span> <span class="nav-text">HashSet（重点）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TreeSet"><span class="nav-number">13.</span> <span class="nav-text">TreeSet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map%E7%88%B6%E6%8E%A5%E5%8F%A3"><span class="nav-number">14.</span> <span class="nav-text">Map父接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap"><span class="nav-number">15.</span> <span class="nav-text">HashMap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashTable"><span class="nav-number">16.</span> <span class="nav-text">HashTable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Properties"><span class="nav-number">17.</span> <span class="nav-text">Properties</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TreeMap"><span class="nav-number">18.</span> <span class="nav-text">TreeMap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collections%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="nav-number">19.</span> <span class="nav-text">Collections工具类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E2%86%94%E6%95%B0%E7%BB%84"><span class="nav-number">20.</span> <span class="nav-text">集合↔数组</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
+      src="/uploads/avatar.png">
   <p class="site-author-name" itemprop="name">Loliconkelvin</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -140,11 +154,19 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:Loliconkelvin@gmail.com" title="E-Mail → mailto:Loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -182,7 +204,7 @@
     <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2022/04/11/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/avatar.png">
       <meta itemprop="name" content="Loliconkelvin">
     </span>
 
@@ -215,7 +237,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-18 23:03:30" itemprop="dateModified" datetime="2022-06-18T23:03:30+08:00">2022-06-18</time>
+      <time title="修改时间：2022-06-19 10:00:47" itemprop="dateModified" datetime="2022-06-19T10:00:47+08:00">2022-06-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -272,42 +294,28 @@
 <p>特点：有序，无下标，元素可重复</p>
 <hr>
 <p><strong>Collection接口常用方法</strong></p>
-<pre class="line-numbers language-add(Object" data-language="add(Object"><div class="caption"><span>obj)```：向集合中增加一个对象</span></div><code class="language-add(Object">
-* 添加方法是将元素的地址存储到集合中
-
-    ![LnYW0x.md.png](https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2022&#x2F;04&#x2F;12&#x2F;LnYW0x.md.png)
-
-&#96;&#96;&#96;addAll(Collection c)&#96;&#96;&#96;：将集合c中的所有对象增加到调用该方法的集合中
-
-&#96;&#96;&#96;clear()&#96;&#96;&#96;：清空集合中的所有对象
-
-&#96;&#96;&#96;contains(Object obj)&#96;&#96;&#96;：检查此集合中是否含有此对象
-
-&#96;&#96;&#96;containsAll(Collection c)&#96;&#96;&#96;：若调用该方法的集合包含集合c内的所有对象，返回true
-
-&#96;&#96;&#96;equals(Object obj)&#96;&#96;&#96;：比较此集合是否与指定对象相等
-
-&#96;&#96;&#96;iterator()&#96;&#96;&#96;：返回在此集合元素上进行迭代的迭代器
-
-&#96;&#96;&#96;isEmpty()&#96;&#96;&#96;：判断此集合是否为空
-
-&#96;&#96;&#96;remove(Object obj)&#96;&#96;&#96;：在集合中移除obj对象
-
-&#96;&#96;&#96;removeAll(Collection c)&#96;&#96;&#96;：在调用该方法的集合中移除集合c里的所有对象
-
-&#96;&#96;&#96;retainAll(Collection c)&#96;&#96;&#96;：仅保留集合c中的元素
-
-&#96;&#96;&#96;size()&#96;&#96;&#96;：返回该集合的元素个数
-
-&#96;&#96;&#96;toArray()&#96;&#96;&#96;：将此集合转换成数组
-
----
-**遍历集合**
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;增强for：&lt;&#x2F;span&gt;
-
-&#96;&#96;&#96;Java
-for (Object o : collection) &#123;
+<p><code>add(Object obj)</code>：向集合中增加一个对象</p>
+<ul>
+<li><p>添加方法是将元素的地址存储到集合中</p>
+<p>  <img src="https://s1.ax1x.com/2022/04/12/LnYW0x.md.png" alt="LnYW0x.md.png"></p>
+</li>
+</ul>
+<p><code>addAll(Collection c)</code>：将集合c中的所有对象增加到调用该方法的集合中</p>
+<p><code>clear()</code>：清空集合中的所有对象</p>
+<p><code>contains(Object obj)</code>：检查此集合中是否含有此对象</p>
+<p><code>containsAll(Collection c)</code>：若调用该方法的集合包含集合c内的所有对象，返回true</p>
+<p><code>equals(Object obj)</code>：比较此集合是否与指定对象相等</p>
+<p><code>iterator()</code>：返回在此集合元素上进行迭代的迭代器</p>
+<p><code>isEmpty()</code>：判断此集合是否为空</p>
+<p><code>remove(Object obj)</code>：在集合中移除obj对象</p>
+<p><code>removeAll(Collection c)</code>：在调用该方法的集合中移除集合c里的所有对象</p>
+<p><code>retainAll(Collection c)</code>：仅保留集合c中的元素</p>
+<p><code>size()</code>：返回该集合的元素个数</p>
+<p><code>toArray()</code>：将此集合转换成数组</p>
+<hr>
+<p><strong>遍历集合</strong></p>
+<p><span class="red bold">增强for：</span></p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">for (Object o : collection) &#123;
            System.out.println(o);
 &#125;</code></pre>
 
@@ -321,7 +329,7 @@ while (iterator.hasNext()) &#123;
 
 <hr>
 <p><strong>Iterator迭代器</strong></p>
-<p>迭代器是专门用来遍历集合的工具，可以通过<code>Conlection及其子类对象.Interator()</code>获取对象的迭代器</p>
+<p>迭代器是专门用来遍历集合的工具，可以通过 <code>Conlection及其子类对象.Interator()</code> 获取对象的迭代器</p>
 <p><span class="red bold">Iterator迭代器方法：</span></p>
 <p>迭代器被创建时会指向第一个元素</p>
 <ol>
@@ -347,31 +355,19 @@ while (iterator.hasNext()) &#123;
 <hr>
 <p><strong>List常用方法</strong></p>
 <p>除了Collection自带的方法外，List还有一些拓展的方法</p>
-<pre class="line-numbers language-add(int" data-language="add(int"><div class="caption"><span>index, Object obj)``：在制定下标index位置插入对象</span></div><code class="language-add(int">
-&#96;&#96;&#96;addAll（int index, Collection c）&#96;&#96;&#96;：将集合c中的所有对象增加到调用该方法的集合中的index位置
-
-&#96;&#96;&#96;get(int index)&#96;&#96;&#96;：返回集合中指定位置的元素
-
-&#96;&#96;&#96;set(int index, Object obj)&#96;&#96;&#96;：用指定元素obj替换集合中的index位置元素
-
-&#96;&#96;&#96;remove(int index)&#96;&#96;&#96;：移除集合中指定位置的元素
-
-&#96;&#96;&#96;indexOf(Object obj)&#96;&#96;&#96;：返回集合中第一次出现指定元素的索引，不包含元素则返回-1
-
-&#96;&#96;&#96;ListIterator()&#96;&#96;&#96;：返回此合集的列表迭代器
-
-&#96;&#96;&#96;ListIterator(int index)&#96;&#96;&#96;：返回此合集的列表迭代器，从合集指定位置开始
-
-&#96;&#96;&#96;subList(int fromIndex, int toIndex)&#96;&#96;&#96;：返回fromIndex和toIndex-1之间的集合元素
-
----
-**遍历集合**
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;普通for：&lt;&#x2F;span&gt;
-因为List有下标，所以可以使用普通for并使用&#96;&#96;&#96;get(int index)&#96;&#96;&#96;方法遍历元素
-
-&#96;&#96;&#96;Java
-for (int i &#x3D; 0; i &lt; list.size(); i++) &#123;
+<p><code>add(int index, Object obj)</code>：在制定下标index位置插入对象</p>
+<p><code>addAll（int index, Collection c）</code>：将集合c中的所有对象增加到调用该方法的集合中的index位置</p>
+<p><code>get(int index)</code>：返回集合中指定位置的元素</p>
+<p><code>set(int index, Object obj)</code>：用指定元素obj替换集合中的index位置元素</p>
+<p><code>remove(int index)</code>：移除集合中指定位置的元素</p>
+<p><code>indexOf(Object obj)</code>：返回集合中第一次出现指定元素的索引，不包含元素则返回-1</p>
+<p><code>ListIterator()</code>：返回此合集的列表迭代器</p>
+<p><code>ListIterator(int index)</code>：返回此合集的列表迭代器，从合集指定位置开始</p>
+<p><code>subList(int fromIndex, int toIndex)</code>：返回fromIndex和toIndex-1之间的集合元素</p>
+<hr>
+<p><strong>遍历集合</strong></p>
+<p><span class="red bold">普通for：</span><br>因为List有下标，所以可以使用普通for并使用 <code>get(int index)</code> 方法遍历元素</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">for (int i &#x3D; 0; i &lt; list.size(); i++) &#123;
     System.out.println(list.get(i));
 &#125;</code></pre>
 
@@ -401,40 +397,33 @@ while (listIterator.hasNext()) &#123;
 </ol>
 <p><span class="red bold">ListIterator迭代器方法：</span></p>
 <p>除了Iterator自带的方法外，ListIterator迭代器还有以下方法</p>
-<pre class="line-numbers language-hasPrevious()```：若当前指向存在元素则返回true（当然需要先使用```next()```方法把指针移到最后）" data-language="hasPrevious()```：若当前指向存在元素则返回true（当然需要先使用```next()```方法把指针移到最后）"><code class="language-hasPrevious()```：若当前指向存在元素则返回true（当然需要先使用```next()```方法把指针移到最后）">&#96;&#96;&#96;Java
-while (listIterator.hasNext()) &#123;
+<p><code>hasPrevious()</code>：若当前指向存在元素则返回true（当然需要先使用 <code>next()</code> 方法把指针移到最后）</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">while (listIterator.hasNext()) &#123;
     listIterator.next();
 &#125;</code></pre>
 
-<pre class="line-numbers language-previous()```：返回当前元素并且指针向前移动" data-language="previous()```：返回当前元素并且指针向前移动"><code class="language-previous()```：返回当前元素并且指针向前移动">
-&#96;&#96;&#96;nextIndex()&#96;&#96;&#96; &#96;&#96;&#96;previousIndex()&#96;&#96;&#96;：返回返回后续调用&#96;&#96;&#96;next()&#96;&#96;&#96;或&#96;&#96;&#96;previous()&#96;&#96;&#96;方法将返回的元素的索引，查询下标不会移动指针（&lt;span class&#x3D;&quot;red&quot;&gt;所以查询下标总是在查询元素之前，否则下标不是当前元素的下标&lt;&#x2F;span&gt;）
-
-&#96;&#96;&#96;remove()&#96;&#96;&#96;：移除&#96;&#96;&#96;next()&#96;&#96;&#96;或&#96;&#96;&#96;previous()&#96;&#96;&#96;方法上一次返回的元素
-
-&#96;&#96;&#96;add(Object obj)&#96;&#96;&#96;：将对象存入到集合中，关联键值，key重复则覆盖原值
-
-* 若前一次调用的是&#96;&#96;&#96;next()&#96;&#96;&#96;方法，则在目前指针位置的前面插入元素
-
-    ![LuOijK.png](https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2022&#x2F;04&#x2F;13&#x2F;LuOijK.png)
-
-* 若前一次调用的是&#96;&#96;&#96;previous()&#96;&#96;&#96;方法，则在目前指针位置的后面插入元素
-
-    ![LuOZAH.png](https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2022&#x2F;04&#x2F;13&#x2F;LuOZAH.png)
-
-&#96;&#96;&#96;set(Object obj)&#96;&#96;&#96;：用指定元素替换&#96;&#96;&#96;next()&#96;&#96;&#96;或&#96;&#96;&#96;previous()&#96;&#96;&#96;方法上一次返回的元素
-
----
-**当集合存储数字数据时**
-
-当集合存储数字数据（int）时，会进行自动装箱
-
-并且由于List支持下标操作，在调用一些可以传入下标或Obj参数的方法时要注意调用的是哪个方法，默认传入int类型的值会认为传入的是下标而不是对象，要传入对象，有两种方法：
-
-1. 使用装箱
-2. 使用强制类型转换
-
-&#96;&#96;&#96;Java
-&#x2F;&#x2F; 移除下标为20的元素
+<p><code>previous()</code>：返回当前元素并且指针向前移动</p>
+<p><code>nextIndex()</code> <code>previousIndex()</code>：返回返回后续调用 <code>next()</code> 或 <code>previous()</code> 方法将返回的元素的索引，查询下标不会移动指针（<span class="red">所以查询下标总是在查询元素之前，否则下标不是当前元素的下标</span>）</p>
+<p><code>remove()</code>：移除 <code>next()</code> 或 <code>previous()</code> 方法上一次返回的元素</p>
+<p><code>add(Object obj)</code>：将对象存入到集合中，关联键值，key重复则覆盖原值</p>
+<ul>
+<li><p>若前一次调用的是<code>next()</code>方法，则在目前指针位置的前面插入元素</p>
+<p>  <img src="https://s1.ax1x.com/2022/04/13/LuOijK.png" alt="LuOijK.png"></p>
+</li>
+<li><p>若前一次调用的是<code>previous()</code>方法，则在目前指针位置的后面插入元素</p>
+<p>  <img src="https://s1.ax1x.com/2022/04/13/LuOZAH.png" alt="LuOZAH.png"></p>
+</li>
+</ul>
+<p><code>set(Object obj)</code>：用指定元素替换 <code>next()</code> 或 <code>previous()</code> 方法上一次返回的元素</p>
+<hr>
+<p><strong>当集合存储数字数据时</strong></p>
+<p>当集合存储数字数据（int）时，会进行自动装箱</p>
+<p>并且由于List支持下标操作，在调用一些可以传入下标或Obj参数的方法时要注意调用的是哪个方法，默认传入int类型的值会认为传入的是下标而不是对象，要传入对象，有两种方法：</p>
+<ol>
+<li>使用装箱</li>
+<li>使用强制类型转换</li>
+</ol>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 移除下标为20的元素
 list.remove(20);
 
 &#x2F;&#x2F; 移除值为20的元素
@@ -455,8 +444,8 @@ list.remove((Object)20);</code></pre>
 <ul>
 <li>链表结构实现（非连续空间），查询慢，增删快</li>
 </ul>
-<h2 id="实现对象内容相同移除方法（List）"><a href="#实现对象内容相同移除方法（List）" class="headerlink" title="实现对象内容相同移除方法（List）"></a>实现对象内容相同移除方法（List）</h2><p>在调用remove方法时实际上是先调用<code>传入参数的类里的equals方法</code>来遍历比较参数与集合对象的地址是否相同，并且移除第一个equals方法返回true的地方</p>
-<p>于是我们只需要在<code>传入的参数的类中</code>重写equals方法即可改变remove方法的判断条件</p>
+<h2 id="实现对象内容相同移除方法（List）"><a href="#实现对象内容相同移除方法（List）" class="headerlink" title="实现对象内容相同移除方法（List）"></a>实现对象内容相同移除方法（List）</h2><p>在调用remove方法时实际上是先调用 <code>传入参数的类里的equals方法</code> 来遍历比较参数与集合对象的地址是否相同，并且移除第一个equals方法返回true的地方</p>
+<p>于是我们只需要在 <code>传入的参数的类中</code> 重写equals方法即可改变remove方法的判断条件</p>
 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">@Override
 public boolean equals(Object obj) &#123;
     if (this &#x3D;&#x3D; obj) &#123;
@@ -558,44 +547,30 @@ private int newCapacity(int minCapacity) &#123;
 <h2 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h2><p>Vector与List操作基本一致，由于Vector比较老，他会多出一种特有的遍历方法——枚举器（JDK1.2前使用 ）</p>
 <hr>
 <p><strong>Vecor部分特有方法</strong></p>
-<pre class="line-numbers language-firstElement()```：返回第一个元素" data-language="firstElement()```：返回第一个元素"><code class="language-firstElement()```：返回第一个元素">
-&#96;&#96;&#96;lastElement()&#96;&#96;&#96;：返回最后一个元素
-
-&#96;&#96;&#96;elementAt(int index)&#96;&#96;&#96;：返回第index个元素
-
-&#96;&#96;&#96;setElementAt(E obj, int index)&#96;&#96;&#96;：功能与&#96;&#96;&#96;set()&#96;&#96;&#96;方法相同，不同点是Vector中的&#96;&#96;&#96;set()&#96;&#96;&#96;方法会返回被替代的元素值
-
-
-
----
-**Elements枚举器**
-
-使用方法与迭代器相同，并且功能更弱
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;枚举器方法：&lt;&#x2F;span&gt;
-
-1. &#96;&#96;&#96;hasMoreElements()&#96;&#96;&#96;：测试此枚举是否包含更多元素
-2. &#96;&#96;&#96;nextElement()&#96;&#96;&#96;：如果此枚举对象至少还有一个要提供的元素，则返回此枚举的下一个元素
-
-## LinkedList
-
-LinkedList通过双向链表实现数据存储
-
-LinkedList使用方法与List基本相同
-
----
-**LinkedList源码分析**
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;实例变量：&lt;&#x2F;span&gt;
-
-1. &#96;&#96;&#96;size&#96;&#96;&#96;：链表长度
-2. &#96;&#96;&#96;first&#96;&#96;&#96;：第一个元素指针
-3. &#96;&#96;&#96;last&#96;&#96;&#96;：最后一个元素指针
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;方法：&lt;&#x2F;span&gt;
-
-&#96;&#96;&#96;Java
-private static class Node&lt;E&gt; &#123;
+<p><code>firstElement()</code>：返回第一个元素</p>
+<p><code>lastElement()</code>：返回最后一个元素</p>
+<p><code>elementAt(int index)</code>：返回第index个元素</p>
+<p><code>setElementAt(E obj, int index)</code>：功能与 <code>set()</code> 方法相同，不同点是Vector中的 <code>set()</code> 方法会返回被替代的元素值</p>
+<hr>
+<p><strong>Elements枚举器</strong></p>
+<p>使用方法与迭代器相同，并且功能更弱</p>
+<p><span class="red bold">枚举器方法：</span></p>
+<ol>
+<li><code>hasMoreElements()</code>：测试此枚举是否包含更多元素</li>
+<li><code>nextElement()</code>：如果此枚举对象至少还有一个要提供的元素，则返回此枚举的下一个元素</li>
+</ol>
+<h2 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h2><p>LinkedList通过双向链表实现数据存储</p>
+<p>LinkedList使用方法与List基本相同</p>
+<hr>
+<p><strong>LinkedList源码分析</strong></p>
+<p><span class="red bold">实例变量：</span></p>
+<ol>
+<li><code>size</code>：链表长度</li>
+<li><code>first</code>：第一个元素指针</li>
+<li><code>last</code>：最后一个元素指针</li>
+</ol>
+<p><span class="red bold">方法：</span></p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">private static class Node&lt;E&gt; &#123;
     &#x2F;&#x2F; 存储的元素
     E item;
     &#x2F;&#x2F; 该数据在链表中的后一个元素
@@ -736,7 +711,7 @@ public &lt;T&gt; T show(T t) &#123;
 <p>泛型的好处之一：提高代码重用性</p>
 <hr>
 <p><strong>泛型集合</strong></p>
-<p><span class="red bold">背景：</span>zszz，集合中可以存储各种数据，当我们写<code>ArrayList arrayList = new ArrayList();</code>（不往集合中传入泛型类型）时，实际上存入集合中的所有类型都将变为Object，当我们将其取出时，需要判断数据原本是什么类型，如果全部转成同一个类型，可能出现类型强制转换错误</p>
+<p><span class="red bold">背景：</span>zszz，集合中可以存储各种数据，当我们写 <code>ArrayList arrayList = new ArrayList();</code>（不往集合中传入泛型类型）时，实际上存入集合中的所有类型都将变为Object，当我们将其取出时，需要判断数据原本是什么类型，如果全部转成同一个类型，可能出现类型强制转换错误</p>
 <p><span class="red bold">解决：</span>使用泛型集合，指定集合内存储的类型，在编译时即可将 传入了不同类型的数据 的错误找出</p>
 <p>反省好处之二：防止类型转换异常，提高代码安全性</p>
 <h2 id="Set子接口"><a href="#Set子接口" class="headerlink" title="Set子接口"></a>Set子接口</h2><p><span class="red bold">特点：</span>无序（添加数据的顺序与遍历数据的顺序不一样），无下标，元素不可重复</p>
@@ -836,7 +811,7 @@ public int hashCode() &#123;
 
 <p>但即使这样，相同值的元素依然会被增加进来，并且会与那个值相同的元素形成链表，因为hashCode一样只会触发equals比较，equals返回true才会阻止后来元素加入，<span class="red">我们还需要重写equals方法，依然是根据两个元素的主键来判断</span></p>
 <p><span class="red">小技巧：</span>可以使用IDEA来一键重写</p>
-<p><span class="red bold">结论：</span>HashSet比较相同依据有两个，先是HashCode再是equals，只有哈希值相同，equals为true时，才会阻止值重复地址不同的元素加入，<span class="red">同样这个结论也适用于删除的<code>remove()</code>方法和查询的<code>contains()</code>方法</span></p>
+<p><span class="red bold">结论：</span>HashSet比较相同依据有两个，先是HashCode再是equals，只有哈希值相同，equals为true时，才会阻止值重复地址不同的元素加入，<span class="red">同样这个结论也适用于删除的 <code>remove()</code> 方法和查询的 <code>contains()</code> 方法</span></p>
 <hr>
 <p><strong>关于hashcode一点小知识</strong></p>
 <p>自动生成的根据对象的值计算hashcode的方法使用到了31这个数，并且用这个数做了一些乘法，这是因为：</p>
@@ -911,7 +886,7 @@ public int hashCode() &#123;
     &#125;
 &#125;</code></pre>
 
-<p><span class="red bold">结论：</span>TreeSet判断两个元素重复的基准就是传入类中的<code>compareTo()</code>方法，该方法返回0，则表示元素相同，阻止后来元素存入</p>
+<p><span class="red bold">结论：</span>TreeSet判断两个元素重复的基准就是传入类中的 <code>compareTo()</code> 方法，该方法返回0，则表示元素相同，阻止后来元素存入</p>
 <hr>
 <p><strong>Comparator比较器</strong></p>
 <p>上面提到除了保存到TreeSet中的类要实现Comparable接口外，还可以通过Comparator比较器的方式</p>
@@ -966,49 +941,39 @@ public int hashCode() &#123;
 <hr>
 <p><strong>Map基本方法</strong></p>
 <p><span class="red bold">注意：</span>这里开始就和Collection有点不同了，Map并不属于Collection，Map是一个单独的体系</p>
-<pre class="line-numbers language-put(K" data-language="put(K"><div class="caption"><span>key, V value)```：向Map对象中增加键值对，若key重复，则新的值会替代原值</span></div><code class="language-put(K">
-&#96;&#96;&#96;get(Object key)&#96;&#96;&#96;：根据键获取对应的值
-
-&#96;&#96;&#96;remove(Object key)&#96;&#96;&#96;：通过传入的键删除键值对
-
-&#96;&#96;&#96;size()&#96;&#96;&#96;：返回Map中的键值对数量
-
-&#96;&#96;&#96;containsKey(Object key)&#96;&#96;&#96;：判断Map内是否存在该键
-
-&#96;&#96;&#96;containsValue(Object value)&#96;&#96;&#96;：判断Map内是否存在该值
-
-&#96;&#96;&#96;values()&#96;&#96;&#96;：返回包含所有值的Collection集合
-
----
-**Map遍历方法**
-
-Map有两种遍历方法，分别是提取Map中所有的键 和 提取Map中所有的键值对并包装成entry
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;提取Map中所有的键&lt;&#x2F;span&gt;
-
-&#96;&#96;&#96;keySet()&#96;&#96;&#96;：该方法返回一个包含该对象所有&lt;span class&#x3D;&quot;red&quot;&gt;键值&lt;&#x2F;span&gt;的Set集合
-
-* 获取到所有键值之后可以通过增强for遍历，也可以通过迭代器遍历
-* 要获取对应的值，还需要在遍历过程中通过&#96;&#96;&#96;get()&#96;&#96;&#96;方法获取
-
-&#96;&#96;&#96;Java
-Set&lt;String&gt; set &#x3D; map.keySet();
+<p><code>put(K key, V value)</code>：向Map对象中增加键值对，若key重复，则新的值会替代原值</p>
+<p><code>get(Object key)</code>：根据键获取对应的值</p>
+<p><code>remove(Object key)</code>：通过传入的键删除键值对</p>
+<p><code>size()</code>：返回Map中的键值对数量</p>
+<p><code>containsKey(Object key)</code>：判断Map内是否存在该键</p>
+<p><code>containsValue(Object value)</code>：判断Map内是否存在该值</p>
+<p><code>values()</code>：返回包含所有值的Collection集合</p>
+<hr>
+<p><strong>Map遍历方法</strong></p>
+<p>Map有两种遍历方法，分别是提取Map中所有的键 和 提取Map中所有的键值对并包装成entry</p>
+<p><span class="red bold">提取Map中所有的键</span></p>
+<p><code>keySet()</code>：该方法返回一个包含该对象所有<span class="red">键值</span>的Set集合</p>
+<ul>
+<li>获取到所有键值之后可以通过增强for遍历，也可以通过迭代器遍历</li>
+<li>要获取对应的值，还需要在遍历过程中通过 <code>get()</code> 方法获取</li>
+</ul>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Set&lt;String&gt; set &#x3D; map.keySet();
 for (String s : set) &#123;
     System.out.println(s + &quot;----------&quot; + map.get(s));
 &#125;</code></pre>
 
 <p><span class="red bold">提取Map中所有的映射对（键值对）</span></p>
 <p><span class="red">相比于获取全部键，获取键值对的效率更高</span>（因为获取键之后要获取值还是要回去Map里根据键取到相应的值）</p>
-<pre class="line-numbers language-entrySet()```：该方法返回一个包含该对象所有键值对的Entry类型Set集合对象" data-language="entrySet()```：该方法返回一个包含该对象所有键值对的Entry类型Set集合对象"><code class="language-entrySet()```：该方法返回一个包含该对象所有键值对的Entry类型Set集合对象">
-* Entry类：Entry是Map接口中的一个内部接口，它是键值对的一种封装
-* Entry类方法：
-  
-    &#96;&#96;&#96;getKey()&#96;&#96;&#96;：获取当前entry的键
-
-    &#96;&#96;&#96;getValue()&#96;&#96;&#96;：获取当前entry的值
-
-&#96;&#96;&#96;Java
-Set&lt;Map.Entry&lt;String, String&gt;&gt; entries &#x3D; map.entrySet();
+<p><code>entrySet()</code>：该方法返回一个包含该对象所有键值对的Entry类型Set集合对象</p>
+<ul>
+<li><p>Entry类：Entry是Map接口中的一个内部接口，它是键值对的一种封装</p>
+</li>
+<li><p>Entry类方法：</p>
+<p>  <code>getKey()</code>：获取当前entry的键</p>
+<p>  <code>getValue()</code>：获取当前entry的值</p>
+</li>
+</ul>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Set&lt;Map.Entry&lt;String, String&gt;&gt; entries &#x3D; map.entrySet();
 for (Map.Entry&lt;String, String&gt; entry : entries) &#123;
     System.out.println(entry.getKey() + &quot;---------&quot; + entry.getValue());
 &#125;</code></pre>
@@ -1045,40 +1010,40 @@ for (Map.Entry&lt;String, String&gt; entry : entries) &#123;
 <hr>
 <p><strong>HashMap源码分析</strong></p>
 <p><span class="red bold">常量：</span> </p>
-<pre class="line-numbers language-DEFAULT_INITIAL_CAPACITY```：默认最小容量（当HashMap对象实例化时，创建的容量）" data-language="DEFAULT_INITIAL_CAPACITY```：默认最小容量（当HashMap对象实例化时，创建的容量）"><code class="language-DEFAULT_INITIAL_CAPACITY```：默认最小容量（当HashMap对象实例化时，创建的容量）">
-&#96;&#96;&#96;MAXIMUM_CAPACITY&#96;&#96;&#96;：最大容量
-
-&#96;&#96;&#96;DEFAULT_LOAD_FACTOR&#96;&#96;&#96;：加载因子（当存入的元素数量达到当前容量的0.75倍时开始扩容）
-
----
-
-&#96;&#96;&#96;TREEIFY_THRESHOLD&#96;&#96;&#96; &#x3D; 8 
-
-&#96;&#96;&#96;UNTREEIFY_THRESHOLD&#96;&#96;&#96; &#x3D; 6 
-
-&#96;&#96;&#96;MIN_TREEIFY_CAPACITY&#96;&#96;&#96; &#x3D; 64
-
-HashMap的红黑树存储方法并不是一开始就出现的，需要达到一定的数据存储量，才会将链表转换为红黑树，这三个变量就是转换为红黑树的条件，条件是：
-1. 该链表长度 &gt; 8
-2. 数组长度 &gt; 64
-
-当链表长度 &lt; 6 时，会将红黑树转换回链表
-
-|                        HashMap存储结构                         |
-| :------------------------------------------------------------: |
-| ![Lrp7TA.md.png](https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2022&#x2F;04&#x2F;20&#x2F;Lrp7TA.md.png) |
-| ![LrpYon.md.png](https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2022&#x2F;04&#x2F;20&#x2F;LrpYon.md.png) |
-
----
-
-HashMap和HashSet中存储的链表为单向链表，可查阅HashMap类的Node内部类，它只有向后一个元素指向的指针
-&#96;&#96;&#96;Java
-    static class Node&lt;K,V&gt; implements Map.Entry&lt;K,V&gt; &#123;
-        final int hash;
-        final K key;
-        V value;
-        Node&lt;K,V&gt; next;
-    &#125;</code></pre>
+<p><code>DEFAULT_INITIAL_CAPACITY</code>：默认最小容量（当HashMap对象实例化时，创建的容量）</p>
+<p><code>MAXIMUM_CAPACITY</code>：最大容量</p>
+<p><code>DEFAULT_LOAD_FACTOR</code>：加载因子（当存入的元素数量达到当前容量的0.75倍时开始扩容）</p>
+<hr>
+<p><code>TREEIFY_THRESHOLD</code> &#x3D; 8 </p>
+<p><code>UNTREEIFY_THRESHOLD</code> &#x3D; 6 </p>
+<p><code>MIN_TREEIFY_CAPACITY</code> &#x3D; 64</p>
+<p>HashMap的红黑树存储方法并不是一开始就出现的，需要达到一定的数据存储量，才会将链表转换为红黑树，这三个变量就是转换为红黑树的条件，条件是：</p>
+<ol>
+<li>该链表长度 &gt; 8</li>
+<li>数组长度 &gt; 64</li>
+</ol>
+<p>当链表长度 &lt; 6 时，会将红黑树转换回链表</p>
+<table>
+<thead>
+<tr>
+<th align="center">HashMap存储结构</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/20/Lrp7TA.md.png" alt="Lrp7TA.md.png"></td>
+</tr>
+<tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/04/20/LrpYon.md.png" alt="LrpYon.md.png"></td>
+</tr>
+</tbody></table>
+<hr>
+<p>HashMap和HashSet中存储的链表为单向链表，可查阅HashMap类的Node内部类，它只有向后一个元素指向的指针</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">static class Node&lt;K,V&gt; implements Map.Entry&lt;K,V&gt; &#123;
+    final int hash;
+    final K key;
+    V value;
+    Node&lt;K,V&gt; next;
+&#125;</code></pre>
 
 <p><span class="red bold">构造方法：</span></p>
 <p>HashMap的构造方法中并不创建数组，只是设定了加载因子，在实例化对象之后，只会得到：</p>
@@ -1181,77 +1146,46 @@ HashMap和HashSet中存储的链表为单向链表，可查阅HashMap类的Node�
 </ul>
 <hr>
 <p><strong>Properties基本方法</strong></p>
-<pre class="line-numbers language-setProperty(String" data-language="setProperty(String"><div class="caption"><span>key, String value)```：设置一个键值和其对应的参数</span></div><code class="language-setProperty(String">
-&#96;&#96;&#96;getProperty(String key)&#96;&#96;&#96;：获取键所对应的值
+<p><code>setProperty(String key, String value)</code>：设置一个键值和其对应的参数</p>
+<p><code>getProperty(String key)</code>：获取键所对应的值</p>
+<hr>
+<p><strong>Properties遍历方法</strong></p>
+<p>除了keySet和entrySet外，Properties还提供了第三种遍历方法：</p>
+<p><code>stringPropertyNames()</code>：返回String类型键值的Set集合</p>
+<hr>
+<p><strong>Properties流方法</strong></p>
+<p><code>list(PrintStream out)</code>：将数据输出到流</p>
+<p><code>list(PrintWriter out)</code>：将数据输出到打印流</p>
+<p><code>store(Writer writer, String comments)</code><br><code>store(OutputStream out, String comments)</code>：通过字节&#x2F;字符输出流将数据保存到文件，comments为注释（文件后缀通常为.properties）</p>
+<p><code>load(Reader reader)</code><br><code>load(InputStream inStream)</code>：通过字节&#x2F;字符输入流将文件中的数据读取回Properties对象中</p>
+<h2 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h2><p>TreeMap类比TreeSet，可以得知：</p>
+<p><span class="red bold">特点：</span></p>
+<ul>
+<li>存储结构：红黑树</li>
+<li><span class="red">通过比较key的值</span>，自动排序</li>
+</ul>
+<p>对于两个元素是否相同，与TreeSet规则相同，是通过Comparable里面的方法比较，或在构造方法时实现Comparator比较器</p>
+<h2 id="Collections工具类"><a href="#Collections工具类" class="headerlink" title="Collections工具类"></a>Collections工具类</h2><p>Collections类提供静态方法以实现对所有集合类的操作</p>
+<p><span class="red">注意：</span>Collection是集合父接口，Collections是对集合进行操作的工具类</p>
+<hr>
+<p><strong>Collections类常用方法</strong></p>
+<p><code>sort(List&lt;T&gt; list)</code>：对传入的集合进行升序排序，也可以在第二个参数继续传入Comparator比较器定制排序</p>
+<p><code>binarySearch(List list, T key)</code>：根据传入的key在list类进行二分查找</p>
+<p><code>copy(List dest, List src)</code>：复制src集合到desc集合中</p>
+<ul>
+<li><span class="red">注意：</span>要求两个集合长度一样，否则会报错，可以先用循环往新集合内添加默认元素</li>
+</ul>
+<p><code>reverse(List list)</code>：反转集合内元素顺序</p>
+<p><code>shuffle(List list)</code>：打乱集合内元素</p>
+<h2 id="集合↔数组"><a href="#集合↔数组" class="headerlink" title="集合↔数组"></a>集合↔数组</h2><p>使用Collection对象的方法可以将集合转换为数组</p>
+<p><code>toArray()</code>：可选一个数组作为参数传递，该数组作为存储集合的值的目标数组</p>
+<p>使用Arrays的静态方法也可以将数组转换为集合</p>
+<p><code>asList(T a)</code>：对传入的数组对象a，转换为集合</p>
+<ul>
+<li><span class="red">注意1：</span>转换后集合的不允许添加或删除操作</li>
+<li><span class="red">注意2：</span>基本类型数组转换为集合时，要先将数组转换为使用包装类对象接收  <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Integer[] arr &#x3D; &#123;100,50,320&#125;;</code></pre></li>
+</ul>
 
-
----
-**Properties遍历方法**
-
-
-除了keySet和entrySet外，Properties还提供了第三种遍历方法：
-
-&#96;&#96;&#96;stringPropertyNames()&#96;&#96;&#96;：返回String类型键值的Set集合
-
----
-**Properties流方法**
-
-&#96;&#96;&#96;list(PrintStream out)&#96;&#96;&#96;：将数据输出到流
-
-&#96;&#96;&#96;list(PrintWriter out)&#96;&#96;&#96;：将数据输出到打印流
-
-&#96;&#96;&#96;store(Writer writer, String comments)&#96;&#96;&#96; 
-&#96;&#96;&#96;store(OutputStream out, String comments)&#96;&#96;&#96;：通过字节&#x2F;字符输出流将数据保存到文件，comments为注释（文件后缀通常为.properties）
-
-&#96;&#96;&#96;load(Reader reader)&#96;&#96;&#96;
-&#96;&#96;&#96;load(InputStream inStream)&#96;&#96;&#96;：通过字节&#x2F;字符输入流将文件中的数据读取回Properties对象中
-
-## TreeMap
-
-TreeMap类比TreeSet，可以得知：
-
-&lt;span class&#x3D;&quot;red bold&quot;&gt;特点：&lt;&#x2F;span&gt;
-
-* 存储结构：红黑树
-* &lt;span class&#x3D;&quot;red&quot;&gt;通过比较key的值&lt;&#x2F;span&gt;，自动排序
-
-对于两个元素是否相同，与TreeSet规则相同，是通过Comparable里面的方法比较，或在构造方法时实现Comparator比较器
-
-## Collections工具类
-
-Collections类提供静态方法以实现对所有集合类的操作
-
-&lt;span class&#x3D;&quot;red&quot;&gt;注意：&lt;&#x2F;span&gt;Collection是集合父接口，Collections是对集合进行操作的工具类
-
----
-**Collections类常用方法**
-
-&#96;&#96;&#96;sort(List&lt;T&gt; list)&#96;&#96;&#96;：对传入的集合进行升序排序，也可以在第二个参数继续传入Comparator比较器定制排序
-
-&#96;&#96;&#96;binarySearch(List list, T key)&#96;&#96;&#96;：根据传入的key在list类进行二分查找
-
-&#96;&#96;&#96;copy(List dest, List src)&#96;&#96;&#96;：复制src集合到desc集合中
-
-* &lt;span class&#x3D;&quot;red&quot;&gt;注意：&lt;&#x2F;span&gt;要求两个集合长度一样，否则会报错，可以先用循环往新集合内添加默认元素
-
-&#96;&#96;&#96;reverse(List list)&#96;&#96;&#96;：反转集合内元素顺序
-
-&#96;&#96;&#96;shuffle(List list)&#96;&#96;&#96;：打乱集合内元素
-
-## 集合↔数组
-
-使用Collection对象的方法可以将集合转换为数组
-
-&#96;&#96;&#96;toArray()&#96;&#96;&#96;：可选一个数组作为参数传递，该数组作为存储集合的值的目标数组
-
-使用Arrays的静态方法也可以将数组转换为集合
-
-&#96;&#96;&#96;asList(T a)&#96;&#96;&#96;：对传入的数组对象a，转换为集合
-
-* &lt;span class&#x3D;&quot;red&quot;&gt;注意1：&lt;&#x2F;span&gt;转换后集合的不允许添加或删除操作
-* &lt;span class&#x3D;&quot;red&quot;&gt;注意2：&lt;&#x2F;span&gt;基本类型数组转换为集合时，要先将数组转换为使用包装类对象接收
-    &#96;&#96;&#96;Java
-    Integer[] arr &#x3D; &#123;100,50,320&#125;;</code></pre>
     </div>
 
     
@@ -1301,18 +1235,19 @@ Collections类提供静态方法以实现对所有集合类的操作
   </span>
   <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
     </div>
   </footer>
 
   
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js" integrity="sha256-4mJNT2bMXxcc1GCJaxBmMPdmah5ji0Ldnd79DKd1hoM=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-dL6vkUiCn30lPTN9cVrmQHo5UQmEwDMrx2ppAk4IhVk=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
 

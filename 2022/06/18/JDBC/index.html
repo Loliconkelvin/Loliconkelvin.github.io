@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2022/06/18/XLtqKS.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/06/18/XLtjEj.png">
 <meta property="article:published_time" content="2022-06-18T00:59:07.000Z">
-<meta property="article:modified_time" content="2022-06-19T02:27:22.277Z">
+<meta property="article:modified_time" content="2022-06-20T12:38:02.181Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="MySQL">
@@ -120,7 +120,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">一些概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC%E7%A8%8B%E5%BA%8F"><span class="nav-number">2.</span> <span class="nav-text">第一个JDBC程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDBC%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1%E8%AF%A6%E8%A7%A3"><span class="nav-number">3.</span> <span class="nav-text">JDBC常用对象详解</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">一些概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC%E7%A8%8B%E5%BA%8F"><span class="nav-number">2.</span> <span class="nav-text">第一个JDBC程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDBC%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1%E8%AF%A6%E8%A7%A3"><span class="nav-number">3.</span> <span class="nav-text">JDBC常用对象详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E5%8F%96%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="nav-number">4.</span> <span class="nav-text">提取工具类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PreparedStatement%E7%B1%BB"><span class="nav-number">5.</span> <span class="nav-text">PreparedStatement类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDBC%E4%B8%8E%E4%BA%8B%E5%8A%A1"><span class="nav-number">6.</span> <span class="nav-text">JDBC与事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="nav-number">7.</span> <span class="nav-text">数据库连接池</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -135,18 +135,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-count">50</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -229,7 +229,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-19 10:27:22" itemprop="dateModified" datetime="2022-06-19T10:27:22+08:00">2022-06-19</time>
+      <time title="修改时间：2022-06-20 20:38:02" itemprop="dateModified" datetime="2022-06-20T20:38:02+08:00">2022-06-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -302,6 +302,8 @@
 </ol>
 <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static void main(String[] args) &#123;
     Connection connection &#x3D; null;
+    Statement statement &#x3D; null;
+    ResultSet resultSet &#x3D; null;
 
     String url &#x3D; &quot;jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;test_db_for_jdbc?&quot; +
             &quot;&amp;useUnicode&#x3D;true&quot; +
@@ -313,6 +315,7 @@
 
     String sql &#x3D; &quot;SELECT * FROM users&quot;;
 
+    String sql2 &#x3D; &quot;SELECT * FROM users WHERE id &#x3D; 1&quot;;
 
     try &#123;
         &#x2F;&#x2F; 加载驱动
@@ -322,28 +325,32 @@
         connection &#x3D; DriverManager.getConnection(url, user, password);
 
         &#x2F;&#x2F; 获取执行SQL的对象
-        Statement statement &#x3D; connection.createStatement();
+        statement &#x3D; connection.createStatement();
 
         &#x2F;&#x2F; 执行SQL
-        statement.executeQuery(sql);
+        resultSet &#x3D; statement.executeQuery(sql);
 
-        &#x2F;&#x2F; 返回结果集
-        ResultSet set &#x3D; statement.getResultSet();
-
-        while (set.next()) &#123;
+        while (resultSet.next()) &#123;
             System.out.println(
-                    set.getObject(&quot;id&quot;).toString()
-                            + set.getObject(&quot;name&quot;)
-                            + set.getObject(&quot;password&quot;)
-                            + set.getObject(&quot;email&quot;)
-                            + set.getObject(&quot;birthday&quot;));
+                    resultSet.getObject(&quot;id&quot;).toString()
+                            + resultSet.getObject(&quot;name&quot;)
+                            + resultSet.getObject(&quot;password&quot;)
+                            + resultSet.getObject(&quot;email&quot;)
+                            + resultSet.getObject(&quot;birthday&quot;));
         &#125;
+
 
     &#125; catch (ClassNotFoundException | SQLException e) &#123;
         e.printStackTrace();
     &#125; finally &#123;
         &#x2F;&#x2F; 关闭连接
         try &#123;
+            if (resultSet !&#x3D; null) &#123;
+                resultSet.close();
+            &#125;
+            if (statement !&#x3D; null) &#123;
+                statement.close();
+            &#125;
             if (connection !&#x3D; null) &#123;
                 connection.close();
             &#125;
@@ -426,6 +433,350 @@ String url &#x3D; &quot;jdbc:orecle:thin@localhost:1521:sid&quot;;</code></pre>
 </li>
 </ul>
 <p><span class="red bold">结果集的遍历：</span></p>
+<p>还记得 List 吗，Iterator呢，对，就是那个迭代器，ResultSet自身就可以看成一个迭代器，它可以使用以下方法移动它的指针：</p>
+<p><code>beforeFirst()</code>：移动到最前面<br><code>afterLast()</code>：移动到最后面<br><code>next()</code>：移动到下一行数据<br><code>previous()</code>：移动到上一行数据<br><code>absolute(row)</code>：移动到指定行</p>
+<hr>
+<p><strong>关闭资源</strong></p>
+<p>需要关闭三个连接，分别是：</p>
+<ol>
+<li><p>代表结果集的对象 <code>ResultSet</code> 类的对象</p>
+</li>
+<li><p>执行SQL语句的对象 <code>statement</code> 类的对象</p>
+</li>
+<li><p>代表数据库的对象 <code>Connection</code> 类的对象</p>
+</li>
+</ol>
+<h2 id="提取工具类"><a href="#提取工具类" class="headerlink" title="提取工具类"></a>提取工具类</h2><p>因为在Java与数据库交互时只有SQL语句和结果在变，因此若每次执行语句都写一次连接数据库的代码，代码量就会很大，因此我们需要创造一个工具类</p>
+<hr>
+<p><strong>配置文件</strong></p>
+<p>若把连接数据库的信息直接写在代码里面，则连接数据库功能的耦合性就会很高，因此配置需要放在properties文件里面（properties类属于 Java集合框架-&gt;Properties），然后通过反射的方式读取文件，下面细说。</p>
+<p><span class="red bold">配置文件的写法：</span></p>
+<p>配置文件为 <code>Properties</code> 文件，其文件内容格式为：</p>
+<p><span class="red">注意不包含任何引号和分号</span></p>
+<pre class="line-numbers language-none"><code class="language-none">键名1&#x3D;值1
+键名2&#x3D;值2
+...</code></pre>
+
+<p><span class="red bold">获取配置文件：</span></p>
+<p>使用反射获取类加载器的方法获取配置文件：</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 返回一个输入流
+当前类.class.getClassLoader().
+getResourceAsStream(&quot;完整资源名&quot;);</code></pre>
+
+<p><span class="red">注意：</span></p>
+<p>若不是Maven项目，则类加载器加载的资源为 <code>当前项目src目录下的文件</code>，因此：</p>
+<ul>
+<li>若资源文件在src目录下，则资源名处直接写 文件名</li>
+<li>若资源文件在src目录的子目录下（也就是src下还有一个文件夹），则资源名处写 文件夹名&#x2F;文件名</li>
+<li>若资源在src目录外，则获取不到</li>
+</ul>
+<p>若是Maven项目，需要将资源文件丢到项目自带的 resources 目录下</p>
+<p><span class="red bold">读取配置文件：</span></p>
+<p>使用 <code>Properties</code> 类的对象中 <code>load(InputStream in)</code> 方法读取该输入流</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Properties properties &#x3D; new Properties();
+properties.load(in);</code></pre>
+
+<p>使用 <code>Properties</code> 类的对象中 <code>getProperty(String key)</code> 方法读取配置文件中的内容</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">driver &#x3D; properties.getProperty(&quot;driver&quot;);
+url &#x3D; properties.getProperty(&quot;url&quot;);
+user &#x3D; properties.getProperty(&quot;user&quot;);
+password &#x3D; properties.getProperty(&quot;password&quot;);</code></pre>
+
+<hr>
+<p><strong>工具类中的静态代码块</strong></p>
+<p>工具类的静态代码块要做的有两件事：</p>
+<ol>
+<li>读取配置文件</li>
+<li>加载驱动</li>
+</ol>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">static &#123;
+    try &#123;
+        &#x2F;&#x2F; 加载配置文件
+        InputStream in &#x3D; JdbcUtil.class.getClassLoader().getResourceAsStream(&quot;db.properties&quot;);
+
+        Properties properties &#x3D; new Properties();
+        properties.load(in);
+
+        driver &#x3D; properties.getProperty(&quot;driver&quot;);
+        url &#x3D; properties.getProperty(&quot;url&quot;);
+        user &#x3D; properties.getProperty(&quot;user&quot;);
+        password &#x3D; properties.getProperty(&quot;password&quot;);
+
+        &#x2F;&#x2F; 驱动只用加载一次
+        Class.forName(driver);
+    &#125; catch (IOException | ClassNotFoundException e) &#123;
+        e.printStackTrace();
+    &#125;
+&#125;</code></pre>
+
+<hr>
+<p><strong>获取连接方法</strong></p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 获取连接
+public static Connection getConnection() throws SQLException &#123;
+    return DriverManager.getConnection(url, user, password);
+&#125;</code></pre>
+
+<hr>
+<p><strong>释放连接方法</strong></p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; 释放连接
+public static void close(Connection conn, Statement st, ResultSet rs) &#123;
+    if (rs !&#x3D; null) &#123;
+        try &#123;
+            rs.close();
+        &#125; catch (SQLException e) &#123;
+            e.printStackTrace();
+        &#125;
+    &#125;
+    if (st !&#x3D; null) &#123;
+        try &#123;
+            st.close();
+        &#125; catch (SQLException e) &#123;
+            e.printStackTrace();
+        &#125;
+    &#125;
+    if (conn !&#x3D; null) &#123;
+        try &#123;
+            conn.close();
+        &#125; catch (SQLException e) &#123;
+            e.printStackTrace();
+        &#125;
+    &#125;
+&#125;</code></pre>
+
+<hr>
+<p><strong>SQL注入问题</strong></p>
+<p>上面这么多程序都只是SQL语句在变，结果在变，那我们可以不可以让用户传我们指定的字段的值，然后使用String拼接成一个SQL语句呢？如下：</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">&#x2F;&#x2F; SELECT * FROM users WHERE name &#x3D; &#39; &#39; AND password &#x3D; &#39; &#39;
+&#x2F;&#x2F;                                   ^                  ^
+String sql &#x3D; &quot;SELECT * FROM users WHERE name &#x3D; &#39;&quot; + name + &quot;&#39;&quot;
+        + &quot;AND password &#x3D; &#39;&quot; + pwd + &quot;&#39;&quot;;</code></pre>
+
+<p>可以是可以，但如果我输入的账号和密码分别是 <code>zs&#39; OR &#39;1=1</code> 和 <code>321&#39; OR &#39;1=1</code> 呢？那么SQL语句就会变成：</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT * FROM users WHERE name &#x3D; &#39;zs&#39; OR &#39;1&#x3D;1&#39;
+AND password &#x3D; &#39;321&#39; OR &#39;1&#x3D;1&#39;;</code></pre>
+
+<p>因为1&#x3D;1永远为真，所以所有数据都会被筛选出来</p>
+<br />
+
+<p>还有更牛逼的，输入账号为 <code>zs&#39; OR TRUE #</code>，密码随意，则SQL语句会变成：</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT * FROM users WHERE &#39;TRUE&#39; OR name &#x3D; &#39;zs&#39; OR TRUE #&#39; AND password &#x3D; &#39;321&#39;;</code></pre>
+
+<p>后面直接被注释，同样是可以筛选所有数据</p>
+<p>为了解决这个问题，我们将使用 <code>PreparedStatement</code> 类</p>
+<h2 id="PreparedStatement类"><a href="#PreparedStatement类" class="headerlink" title="PreparedStatement类"></a>PreparedStatement类</h2><p>PreparedStatement类相比于Statement类，可以有效防止SQL注入，并且效率更高</p>
+<hr>
+<p><strong>PreparedStatement对象</strong></p>
+<p>使用 <code>Connection</code> 类的对象中 <code>prepareStatement(sql)</code> 方法创建对象。</p>
+<p>怎么在这里就传SQL语句？因为SQL需要在这里先预编译（此时不执行），<span class="red">如果使用过commons-dbutils，那这个预编译需要写的SQL语句一定倍感亲切！</span></p>
+<hr>
+<p><strong>预编译SQL语句和传参</strong></p>
+<p><span class="red bold">SQL语句：</span></p>
+<p>预编译SQL语句的写法就是在需要传入参数的地方使用占位符 <code>?</code> 代替，如：</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">UPDATE users SET id &#x3D; 25 WHERE name &#x3D; ?</code></pre>
+
+<p><span class="red bold">参数传入：</span></p>
+<p>使用 <code>PreparedStatement</code> 类的对象中 <code>setXXX(int parameterIndex, XXX x)</code> （XXX代表数据类型）来给预编译的SQL语句赋值。</p>
+<ul>
+<li><code>parameterIndex</code> 代表参数下标，参数下标从1开始</li>
+</ul>
+<hr>
+<p><strong>执行语句</strong></p>
+<p>使用 <code>PreparedStatement</code> 类的对象中以下方法执行SQL语句</p>
+<p><code>executeQuery()</code>：执行查询</p>
+<p><code>executeUpdate()</code>：执行删除、更改、插入</p>
+<h2 id="JDBC与事务"><a href="#JDBC与事务" class="headerlink" title="JDBC与事务"></a>JDBC与事务</h2><hr>
+<p><strong>事务的概念（ACID原则）</strong></p>
+<p>（A）原子性：要么全部完成，要么全部不完成<br>（C）一致性：数据库处理前后的结果应该与其所抽象的客观世界中的真实情况保持一致（电脑处理的结果要和现实的结果一样<br>（I）隔离性：多个进程互不干扰<br>（D）持久性：一旦提交不可回滚，持久化到数据库中</p>
+<p>其中隔离性会导致以下几个问题：</p>
+<ul>
+<li>脏读：一个事物读取了另一个没有提交的事务</li>
+<li>不可重复读：在同一个事务内，重复读取表中的数据，表数据发生了改变</li>
+<li>虚读（幻读）：在一个事务内，读取到了别人插入的数据，导致前后读出的结果不一致</li>
+</ul>
+<hr>
+<p><strong>在IDEA实现事务的提交与回滚</strong></p>
+<p><span class="red bold">开启事务：</span></p>
+<p>使用 <code>Connection</code> 类的对象中 <code>setAutoCommit(false)</code> 方法关闭自动提交，<span class="red">关闭自动提交即为开启事务</span></p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">conn.setAutoCommit(false);</code></pre>
+
+<p><span class="red bold">提交与回滚：</span></p>
+<p>使用 <code>Connection</code> 类的对象中 <code>commit()</code> 方法进行事务提交</p>
+<p>使用 <code>Connection</code> 类的对象中 <code>rollback()</code> 方法进行事务回滚</p>
+<ul>
+<li><span class="red">注意：</span>你可以在异常捕获处显式定义事务回滚，但<span class="red">默认的设置是，在事务提交之前，若遇到任何错误，都会自动回滚</span></li>
+</ul>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">conn.commit();
+
+conn.rollback();</code></pre>
+
+<h2 id="数据库连接池"><a href="#数据库连接池" class="headerlink" title="数据库连接池"></a>数据库连接池</h2><hr>
+<p><strong>数据库连接池概念</strong></p>
+<p>还记得线程池（Java-JUC-&gt;线程池）吗，连接池与线程池的作用大体相同，都是利用池化技术，提前创建好需要使用的资源，当需要使用时，直接用池里面的资源。</p>
+<p>与线程池类似，数据库连接池一般包含如下设置：</p>
+<ul>
+<li>最小连接数（对应线程池的核心线程池大小）：表示初始就会有n条连接被创建，等待被使用</li>
+<li>最大连接数（对应线程池的最大线程池大小）：当初始denn条连接都被使用时，还有连接接入，则额外创建连接，但连接的数量不会超过最大连接数<br>  若连接达到了最大连接数，还有连接接入，则排队等待</li>
+<li>等待超时：指定排队等待的线程的等待时间</li>
+</ul>
+<p>目前常用的连接池有 DBCP2 C3P0</p>
+<hr>
+<p><strong>DBPC2连接池</strong></p>
+<p><span class="red bold">前期准备：</span></p>
+<p>使用DBCP2连接池，需要使用以下jar包</p>
+<p><code>commons-dbcp2-版本号.jar</code><br><code>commons-pool2-版本号.jar</code><br><code>commons-logging-版本号.jar</code>（<span class="red">注意DBCP2额外需要用到这个包，DBCP第一代不需要</span>）</p>
+<p>将他们复制到与src同级别的lib目录下（没有则创建）并 Add as library</p>
+<p><span class="red bold">配置文件：</span></p>
+<p>dbcp2使用读取properties的输入流的方式读取配置文件</p>
+<ol>
+<li><p>在src目录下创建一个properties文件，下面是一个properties文件内容的例子：</p>
+ <pre class="line-numbers language-none"><code class="language-none"># 连接设置
+driverClassName&#x3D;com.mysql.cj.jdbc.Driver
+url&#x3D;jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;test_db_for_jdbc?useUnicode&#x3D;true&amp;characterEncoding&#x3D;utf8&amp;useSSL&#x3D;false
+username&#x3D;root
+password&#x3D;123456
+
+# 最小连接数
+initialSize&#x3D;10
+
+# 最大连接数
+maxActive&#x3D;50
+
+# 最大空闲连接（当连接数被扩张并且使用完毕时，先不释放多余的空闲连接）
+maxIdle&#x3D;20
+
+# 最小空闲连接
+minIdle&#x3D;5
+
+# 超时等待时间&#x2F;毫秒（超过此时间才释放多余的空闲连接）
+maxWait&#x3D;6000
+
+# JDBC驱动连接时附带的连接属性[格式：属性名&#x3D;参数;]
+connectionProperties&#x3D;useUnicode&#x3D;true;characterEncoding&#x3D;utf8
+
+# 指定由连接池所创建的连接的自动提交状态
+defaultAutoCommit&#x3D;true
+
+# 指定由连接池所创建的连接的只读状态
+# 若没有设置该值，则‘setReadOnly’方法不会被调用
+defaultReadOnly&#x3D;
+
+# 指定由连接池所创建的连接的事务级别
+defaultTransactionIsolation&#x3D;READ_UNCOMMITTED</code></pre>
+</li>
+<li><p>同样在静态代码块中使用类加载器的方法获取配置文件</p>
+</li>
+<li><p>使用 <code>BasicDataSourceFactory</code> 类中的静态方法 <code>createDataSource(Properties properties)</code> 创建 <code>dataSource</code> 对象</p>
+</li>
+</ol>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">static &#123;
+    try &#123;
+        InputStream in &#x3D; JdbcUtil_DBCP.class.getClassLoader().getResourceAsStream(&quot;dbcpconfig.properties&quot;);
+        Properties properties &#x3D; new Properties();
+        properties.load(in);
+
+        dataSource &#x3D; BasicDataSourceFactory.createDataSource(properties);
+    &#125; catch (IOException e) &#123;
+        e.printStackTrace();
+    &#125; catch (Exception e) &#123;
+        e.printStackTrace();
+    &#125;
+&#125;</code></pre>
+
+<ol start="4">
+<li>使用 <code>dataSource</code> 对象中的 <code>getConnection()</code> 方法获取连接</li>
+</ol>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static Connection getConnection() throws SQLException &#123;
+    return dataSource.getConnection();
+&#125;</code></pre>
+
+<ol start="6">
+<li><p>获取到连接对象之后就和上面玩法一样了，创建 <code>PreparedStatement</code> 对象，执行SQL之后返回 <code>ResultSet</code> 然后遍历结果。</p>
+</li>
+<li><p>使用 <code>dataSource</code> 对象中的 <code>close()</code> 方法断开连接</p>
+</li>
+</ol>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public static void close() throws SQLException &#123;
+    dataSource.close();
+&#125;</code></pre>
+
+<hr>
+<p><strong>C3P0连接池</strong></p>
+<p>使用C3P0连接池，需要使用以下jar包：</p>
+<p><code>c3p0-版本号.jar</code><br><code>mchange-commons-java-版本号.jar</code></p>
+<p>将他们复制到与src同级别的lib目录下（没有则创建）并 Add as library</p>
+<p><span class="red bold">配置文件：</span></p>
+<p>dbcp2使用XML文件的方式读取配置文件</p>
+<ol>
+<li><p>在src目录下创建一个 <code>c3p0-config.xml</code> 文件，下面是一该文件内容的例子：</p>
+<p> <span class="red">注意：</span>XML文件可以实现自定义多个配置，看下面的 <code>named-config</code>，这将会在使用时通过传入参数的方式指定应用哪个配置，请看第2点</p>
+</li>
+</ol>
+<pre class="line-numbers language-XML" data-language="XML"><code class="language-XML">&lt;c3p0-config&gt;
+    &lt;default-config&gt;
+        &lt;property name&#x3D;&quot;automaticTestTable&quot;&gt;con_test&lt;&#x2F;property&gt;
+        &lt;property name&#x3D;&quot;checkoutTimeout&quot;&gt;30000&lt;&#x2F;property&gt;
+        &lt;property name&#x3D;&quot;idleConnectionTestPeriod&quot;&gt;30&lt;&#x2F;property&gt;
+        &lt;!--initialPoolSize: 连接线程池初始化时创建的连接数--&gt;
+        &lt;property name&#x3D;&quot;initialPoolSize&quot;&gt;10&lt;&#x2F;property&gt;
+        &lt;property name&#x3D;&quot;maxIdleTime&quot;&gt;30&lt;&#x2F;property&gt;
+        &lt;!--maxPoolSize: 连接池中拥有的最大连接数--&gt;
+        &lt;property name&#x3D;&quot;maxPoolSize&quot;&gt;100&lt;&#x2F;property&gt;
+        &lt;!--minPoolSize: 连接池中拥有的最小连接数--&gt;
+        &lt;property name&#x3D;&quot;minPoolSize&quot;&gt;10&lt;&#x2F;property&gt;
+        &lt;!--maxStatements: 连接池为数据源缓存PreparedStatement的总数--&gt;
+        &lt;property name&#x3D;&quot;maxStatements&quot;&gt;200&lt;&#x2F;property&gt;
+    &lt;&#x2F;default-config&gt;
+
+    &lt;!--配置mysql--&gt;
+    &lt;named-config name&#x3D;&quot;MySQL&quot;&gt;
+        &lt;!--mysql需要使用的驱动类--&gt;
+        &lt;property name&#x3D;&quot;driverClass&quot;&gt;com.mysql.cj.jdbc.Driver&lt;&#x2F;property&gt;
+        &lt;!--mysql连接语句--&gt;
+        &lt;property name&#x3D;&quot;jdbcUrl&quot;&gt;jdbc:mysql:&#x2F;&#x2F;127.0.0.1:3306&#x2F;test_db_for_jdbc?useUnicode&#x3D;true&amp;characterEncoding&#x3D;UTF-8&amp;useSSL&#x3D;false&lt;&#x2F;property&gt;
+        &lt;!--mysql用户名--&gt;
+        &lt;property name&#x3D;&quot;user&quot;&gt;root&lt;&#x2F;property&gt;
+        &lt;!--mysql密码--&gt;
+        &lt;property name&#x3D;&quot;password&quot;&gt;123456&lt;&#x2F;property&gt;
+        &lt;!--连接池初始化时创建的连接数:10--&gt;
+        &lt;property name&#x3D;&quot;initialPoolSize&quot;&gt;10&lt;&#x2F;property&gt;
+        &lt;!--连接的最大空闲时间，若超过这个时间某数据库连接还未被使用，断开连接--&gt;
+        &lt;property name&#x3D;&quot;maxIdleTme&quot;&gt;30&lt;&#x2F;property&gt;
+        &lt;!--连接池拥有的最大连接数--&gt;
+        &lt;property name&#x3D;&quot;maxPoolSize&quot;&gt;100&lt;&#x2F;property&gt;
+        &lt;!--连接池保持的最小连接数--&gt;
+        &lt;property name&#x3D;&quot;minPoolSize&quot;&gt;10&lt;&#x2F;property&gt;
+        &lt;!--连接池为数据源缓存的PreparedStatement--&gt;
+        &lt;property name&#x3D;&quot;maxStatements&quot;&gt;200&lt;&#x2F;property&gt;
+    &lt;&#x2F;named-config&gt;
+&lt;&#x2F;c3p0-config&gt;</code></pre>
+
+<ol start="2">
+<li><p>xml配置文件不需要通过任何类读取，它会在加载时自动匹配，以下是创建 <code>dataSource</code> 对象的方法：</p>
+<p> <span class="red">注意：</span>在 <code>ComboPooledDataSource()</code> 方法中不传入参数则使用默认配置，传入配置名则使用指定的配置</p>
+</li>
+</ol>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public class JdbcUtil_C3P0 &#123;
+    private static ComboPooledDataSource dataSource &#x3D; null;
+
+    static &#123;    
+        dataSource &#x3D; new ComboPooledDataSource(&quot;MySQL&quot;);
+    &#125;
+
+    public static Connection getConnection() throws SQLException &#123;
+        return dataSource.getConnection();
+    &#125;
+
+    public static void close() &#123;
+        dataSource.close();
+    &#125;
+&#125;</code></pre>
+
+<ol start="3">
+<li>拿到 <code>Connection</code> 对象之后就和前面的一样了，拿到 <code>PreparedStatement</code> 对象，执行SQL获得 <code>ResultSet</code> 遍历</li>
+</ol>
+<hr>
+<p><strong>连接池总结</strong></p>
+<p>连接池的类都是通过继承 DataSource 接口来实现的，因此变的就只是怎么去获取 DataSource 对象，而获取完之后怎么玩，都是一样的</p>
 
     </div>
 
@@ -448,6 +799,9 @@ String url &#x3D; &quot;jdbc:orecle:thin@localhost:1521:sid&quot;;</code></pre>
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2022/06/20/JavaWeb/" rel="next" title="JavaWeb">
+                  JavaWeb <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>

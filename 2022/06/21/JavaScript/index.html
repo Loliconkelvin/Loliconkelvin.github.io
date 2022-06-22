@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript">
+<meta property="og:url" content="https://loliconkelvin.github.io/2022/06/21/JavaScript/index.html">
+<meta property="og:site_name" content="萝莉控的小窝">
+<meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   JavaScript">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2022/06/21/jSFPFU.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/06/21/jSknjs.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/06/21/jSk1EV.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/06/22/j9DaLD.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/06/22/j9giZT.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/06/22/j9yZRI.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/06/22/j92d39.md.png">
+<meta property="article:published_time" content="2022-06-21T00:26:53.000Z">
+<meta property="article:modified_time" content="2022-06-22T14:29:59.648Z">
+<meta property="article:author" content="Loliconkelvin">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/06/21/jSFPFU.md.png">
+
+
+<link rel="canonical" href="https://loliconkelvin.github.io/2022/06/21/JavaScript/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://loliconkelvin.github.io/2022/06/21/JavaScript/","path":"2022/06/21/JavaScript/","title":"JavaScript"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>JavaScript | 萝莉控的小窝</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">萝莉控的小窝</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JS-%E5%9F%BA%E6%9C%AC%E6%A0%BC%E5%BC%8F%E3%80%81%E6%B3%A8%E9%87%8A%E4%B8%8E-Hello-World"><span class="nav-number">1.</span> <span class="nav-text">JS 基本格式、注释与 Hello World</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-%E8%B0%83%E8%AF%95"><span class="nav-number">2.</span> <span class="nav-text">JavaScript 调试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F"><span class="nav-number">3.</span> <span class="nav-text">JavaScript 变量与常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="nav-number">4.</span> <span class="nav-text">JavaScript 流程控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">5.</span> <span class="nav-text">数据类型与运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A5%E6%A0%BC%E6%A3%80%E6%9F%A5%E6%A8%A1%E5%BC%8F"><span class="nav-number">6.</span> <span class="nav-text">严格检查模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">7.</span> <span class="nav-text">函数</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
+      src="/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">Loliconkelvin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">50</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:Loliconkelvin@gmail.com" title="E-Mail → mailto:Loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2022/06/21/JavaScript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="Loliconkelvin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萝莉控的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="JavaScript | 萝莉控的小窝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JavaScript
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-06-21 08:26:53" itemprop="dateCreated datePublished" datetime="2022-06-21T08:26:53+08:00">2022-06-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-06-22 22:29:59" itemprop="dateModified" datetime="2022-06-22T22:29:59+08:00">2022-06-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <style>
+    .red {
+        color: red;
+    }
+    .bold {
+        font-weight: bold;
+    }
+</style>
+
+<p>JavaScript</p>
+<span id="more"></span>
+
+<h2 id="JS-基本格式、注释与-Hello-World"><a href="#JS-基本格式、注释与-Hello-World" class="headerlink" title="JS 基本格式、注释与 Hello World"></a>JS 基本格式、注释与 Hello World</h2><hr>
+<p><strong>JS 基本格式</strong></p>
+<p>JS 代码与 CSS 代码都可以独立分出去一个文件，也可以直接写在 HTML 文件内</p>
+<ul>
+<li><p>若要写在 HTML 文件内，JS 代码需要可以放在 <code>&lt;head&gt;</code> 标签或 <code>&lt;body&gt;</code> 标签内，<span class="red">不过通常是放在 <code>&lt;body&gt;</code> 标签内最后</span>，使用 <code>&lt;script&gt;</code> 标签包裹</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;html lang&#x3D;&quot;zh-Hans&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset&#x3D;&quot;UTF-8&quot; &#x2F;&gt;
+    &lt;title&gt;Document&lt;&#x2F;title&gt;
+  &lt;&#x2F;head&gt;
+
+  &lt;body&gt;
+    &lt;script&gt;
+      alert(&#39;hello world&#39;);
+    &lt;&#x2F;script&gt;
+  &lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;</code></pre>
+</li>
+<li><p>若要写成一个独立文件，则在 HTML 内使用 <code>&lt;script&gt;</code> 标签并且指定参数 <code>src</code> 进行进入。JS 文件内直接写 JS 语句，不需要额外的标签包围</p>
+<p><span class="red">注意：</span><code>&lt;script&gt;&lt;/script&gt;</code> 务必成对出现</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;html lang&#x3D;&quot;zh-Hans&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset&#x3D;&quot;UTF-8&quot; &#x2F;&gt;
+    &lt;title&gt;Document&lt;&#x2F;title&gt;
+  &lt;&#x2F;head&gt;
+
+  &lt;body&gt;
+    &lt;script src&#x3D;&quot;JS&#x2F;script.js&quot;&gt;&lt;&#x2F;script&gt;
+  &lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;</code></pre>
+
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">alert(&#39;hello world&#39;);</code></pre></li>
+</ul>
+<hr>
+<p><strong>JS 注释</strong></p>
+<ul>
+<li>行注释</li>
+</ul>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">&#x2F;&#x2F; 行注释</code></pre>
+
+<ul>
+<li>块注释</li>
+</ul>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">&#x2F;*
+    块注释
+*&#x2F;</code></pre>
+
+<h2 id="JavaScript-调试"><a href="#JavaScript-调试" class="headerlink" title="JavaScript 调试"></a>JavaScript 调试</h2><p>可以使用浏览器控制台进行调试，控制台目前所知有两个功能</p>
+<p><span class="red bold">使用控制台执行代码：</span></p>
+<p>如果你想知道当前某变量的值，可以直接在这里输入命令进行打印</p>
+<p><img src="https://s1.ax1x.com/2022/06/21/jSFPFU.md.png" alt="使用控制台执行代码.md.png"></p>
+<blockquote>
+<p>显示一个 undefined 是因为没有定义返回值</p>
+</blockquote>
+<p><span class="red bold">查看源代码并且打断点调试：</span></p>
+<p>可以使用控制台的源代码功能查看项目目录结构和源代码，点进任意前端文件，可以点击行号打断点，刷新页面，即可到达断点处。</p>
+<table>
+<thead>
+<tr>
+<th align="center">断点调试</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/06/21/jSknjs.md.png" alt="断点调试.md.png"></td>
+</tr>
+<tr>
+<td align="center">断点调试中</td>
+</tr>
+<tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/06/21/jSk1EV.md.png" alt="断点调试中.md.png"></td>
+</tr>
+</tbody></table>
+<h2 id="JavaScript-变量与常量"><a href="#JavaScript-变量与常量" class="headerlink" title="JavaScript 变量与常量"></a>JavaScript 变量与常量</h2><hr>
+<p><strong>变量</strong></p>
+<p>变量有两种声明方式，让我们看看他们的区别，在这里也能看到 JS 从乱玩到有些严谨的过程</p>
+<p><span class="red">规范：</span>通常我们会把要使用的变量在一开始就定义好，然后再一个个赋值，或者在一开始就赋值，<span class="red">通常不会在中途定义变量</span></p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">&#x2F;&#x2F; var
+var num_var &#x3D; 1;
+
+&#x2F;&#x2F; let
+let num_let &#x3D; 1;</code></pre>
+
+<p>但在此之前，我们先看看这里会出现的几个作用域：</p>
+<p><span class="red bold">作用域：</span></p>
+<ol>
+<li><code>window(Global)</code>：全局变量，在该 HTML 读取到的 JS 中通用<span class="red">（极不建议跨 JS 使用变量）</span></li>
+<li><code>Script</code>：大块，为了将属性与全局变量分离，在该 HTML 读取到的 JS 中通用<span class="red">（极不建议跨 JS 使用变量）</span></li>
+<li><code>window(Local)</code>：局部，在该函数中通用</li>
+<li><code>Block</code>：小块，在该代码块中通用</li>
+</ol>
+<p><span class="red bold">var：</span></p>
+<p>在 ES5 及以前，声明变量只能使用 <code>var</code> 定义，并且都为全局斌量，并且每个全局变量和全局方法都会挂载到 <code>window</code> 下（相当于 Java 的 Object 类，所有类都会继承它）</p>
+<p><img src="https://s1.ax1x.com/2022/06/22/j9DaLD.md.png" alt="window(Global).md.png"></p>
+<p>并且它还有几个离谱的特性：</p>
+<ul>
+<li><p>可以在变量定义之前访问</p>
+</li>
+<li><p>允许重复定义，后一次定义会覆盖前一次定义</p>
+</li>
+<li><p>可以突破代码块被访问（如 for 循环等），因为在 ES5 之前，没有 <code>Block</code> 作用域，在代码块内使用 <code>var</code> 声明的变量，依然放在 <code>window(Global)</code> 下</p>
+</li>
+<li><p>不可以突破函数作用域，因为在 ES5 之前，就已经有 <code>window(Local)</code> 作用域。一个在全局下定义的函数被认为是继承了 <code>window(Global)</code> 的一个子类 <code>window(Local)</code>，它自己有一个 <code>window</code> 用于存放该函数内声明的变量和函数，，函数走完则该 <code>window(Local)</code> 被清除，在里面的变量也就没了</p>
+<p><img src="https://s1.ax1x.com/2022/06/22/j9giZT.md.png" alt="window(Local).md.png"></p>
+</li>
+<li><p>可以被同级别或更低级的函数块访问</p>
+</li>
+</ul>
+<p><span class="red bold">let：</span></p>
+<p>在 ES6 时，增加了 <code>let</code> 和 <code>const</code> 分别是多了一种定义变量的方式和定义常量。<br>ES6 有个重要的改变就是将全局对象的属性（也就是在 window 里面声明的属性和函数）和全局变量分离，<code>let</code> 就用来做这一点。</p>
+<p><img src="https://s1.ax1x.com/2022/06/22/j9yZRI.md.png" alt="Script.md.png"></p>
+<p>并且它与 <code>var</code> 背道而驰，因为：</p>
+<ul>
+<li><p><code>let</code>定义的变量禁止在定义之前访问</p>
+</li>
+<li><p>禁止重复定义</p>
+</li>
+<li><p>不可以突破函数作用域访问，在函数内使用 <code>let</code> 定义的变量依然是放在 <code>window(Local)</code> 内，函数走完则该 <code>window(Local)</code> 被清除，在里面的变量也就没了</p>
+</li>
+<li><p>不可突破代码块被访问（如 for 循环等），因为在 ES6，在代码块内用 <code>let</code> 声明的变量，会被放在 <code>Block</code> 作用域，用完马上清除</p>
+<p><img src="https://s1.ax1x.com/2022/06/22/j92d39.md.png" alt="Block.md.png"></p>
+</li>
+<li><p>可以被同级别或更低级的函数块访问</p>
+</li>
+</ul>
+<p><span class="red bold">函数内外的变量冲突问题：</span></p>
+<p>若内部函数有变量与外部函数同名，即使两个都是用 <code>let</code> 声明，它们因为作用域完全不同而视为不同的变量。</p>
+<p><span class="red">就近原则：</span>函数要使用内外同名的变量时，会先从函数内查找</p>
+<p><span class="red bold">全局变量冲突问题：</span></p>
+<p>这也是建议使用 <code>let</code> 的原因，因为 <code>let</code> 是不允许重复定义的，这也是为什么上面 <code>window(Global)</code> 和 <code>Script</code> 写了 “在该 HTML 读取到的 JS 中通用”。</p>
+<ul>
+<li><p>当一个使用 <code>let</code> 定义的变量在其他 JS 文件中被重新声明，会报错</p>
+</li>
+<li><p>但是当一个使用 <code>var</code> 定义的变量在其他 JS 文件中被重新声明，它的值会被更改，这会造成该变量的值会同时被几个 JS 文件更改，导致该变量的值模糊。</p>
+</li>
+</ul>
+<p><span class="red">解决：</span>如果非要使用 <code>var</code> 可以使用将该变量使用一个全局对象包装的方式（没有什么是套一层不能解决的）解决：</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">var global_container &#x3D; &#123;
+
+&#125;
+
+global_container.name &#x3D; &#39;张三&#39;;
+global_container.add &#x3D; function(a, b) &#123;
+  return a + b;
+&#125;</code></pre>
+
+<hr>
+<p><strong>常量</strong></p>
+<p>常量使用 <code>const</code> 定义</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">const 常量名 &#x3D; 值;</code></pre>
+
+<h2 id="JavaScript-流程控制"><a href="#JavaScript-流程控制" class="headerlink" title="JavaScript 流程控制"></a>JavaScript 流程控制</h2><hr>
+<p><strong>判断</strong></p>
+<p>都是学过的东西</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">&#x2F;&#x2F; if
+if (条件语句) &#123;
+  代码块;
+&#125;
+
+&#x2F;&#x2F; if ...else
+if (条件语句) &#123;
+  代码块;
+&#125; else &#123;
+  代码块;
+&#125;
+
+&#x2F;&#x2F; if ...else if ...else
+if (条件语句) &#123;
+  代码块;
+&#125; else if (条件语句) &#123;
+  代码块;
+&#125; else &#123;
+  代码块;
+&#125;</code></pre>
+
+<p><strong>循环</strong></p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">&#x2F;&#x2F; for循环
+for(let i &#x3D; 0; i &lt; 10; i++) &#123;
+  console.log(i);
+&#125;
+
+&#x2F;&#x2F; while循环
+whlie(i &lt; 10) &#123;
+  i++;
+  console.log(i);
+&#125;
+
+do &#123;
+  i++;
+  console.log(i);
+&#125; while(i &lt; 10);
+
+&#x2F;&#x2F; 增强for（普通1）
+&#x2F;&#x2F; 使用 of 将arr中的每个元素赋给object
+for(let object of arr) &#123;
+  console.log(object);
+&#125;
+
+&#x2F;&#x2F; &#x2F;&#x2F; 增强for（普通1）
+&#x2F;&#x2F; 使用 in 将arr中的每个元素 的下标 赋给object
+
+for(let object in arr) &#123;
+  console.log(object);
+&#125;
+
+&#x2F;&#x2F; 增强for（流形式）
+arr.foreach(function(value) &#123;
+  console.log(value);
+&#125;);</code></pre>
+
+<h2 id="数据类型与运算符"><a href="#数据类型与运算符" class="headerlink" title="数据类型与运算符"></a>数据类型与运算符</h2><hr>
+<p><strong>number</strong></p>
+<p>js 不区分小数和整数</p>
+<p>下面这些例子就会涵盖所有包含在 number 类型的值</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">12 &#x2F;&#x2F; 整数
+1.2 &#x2F;&#x2F; 浮点数
+1.2e2 &#x2F;&#x2F; 科学计数法
+-12 &#x2F;&#x2F;负数
+NaN &#x2F;&#x2F;Not a number
+Infinity &#x2F;&#x2F; 无穷的</code></pre>
+
+<p><span class="red">注意 1：</span>尽量避免使用浮点数进行运算，存在精度问题</p>
+<p><span class="red">注意 2：</span> <code>NaN === NaN</code> 或 <code>NaN === 任意值</code> 永远为 false，判断是否为 <code>NaN</code> 使用 <code>isNaN()</code> 方法</p>
+<hr>
+<p><strong>字符串</strong></p>
+<p><span class="red bold">单行字符串：</span></p>
+<p>即便 JavaScript 再怎么夸张，它的字符串类型也是不可变的</p>
+<p>JavaScript 中的字符串可以使用单引号也可以使用双引号，建议使用单引号<br>当有两个字符串复合时，使用外单内双</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">&#x2F;&#x2F; 单引号
+&#39;A&#39;
+
+&#x2F;&#x2F; 双引号
+&quot;A&quot;
+
+&#x2F;&#x2F; 转义字符
+&#39;\&#39;&#39;
+&#39;\n&#39;
+&#39;\t&#39;
+
+&#x2F;&#x2F; Unicode
+&#39;\u4e2d&#39;
+
+&#x2F;&#x2F; AscII
+\x41</code></pre>
+
+<p><span class="red">离谱的取值方法：</span></p>
+<p>没错你甚至可以通过下标来取到字符串的每一位</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">console.log(str[2]);</code></pre>
+
+<p><span class="red bold">多行字符串：</span></p>
+<p>多行字符串使用反引号包围</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">var str &#x3D; &#96;hi
+hello
+123&#96;;</code></pre>
+
+<p><span class="red bold">模板字符串：</span></p>
+<p>模板字符串就是直接在字符串里面动态地变化一些值，而不是使用拼接，写过 EL 表达式的会很亲切</p>
+<p><span class="red">注意：</span>模板字符串必须使用反引号包围，别问，问就是试过单双引号没用</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">var i &#x3D; 1;
+
+console.log(&#96;i的值: $&#123;i&#125;&#96;);</code></pre>
+
+<p><span class="red bold">字符串常用属性和方法</span></p>
+<p><code>length</code>：（属性）长度<br><code>toUpperCase()</code>：转换大写<br><code>toLowerCase()</code>：转换小写<br><code>indexOf(String s)</code>：返回 s 在字符串第一次出现的地方<br><code>substr(int n)</code>：去除 str 的前 n 个字符，返回处理后的字符串<br><code>substr(int from, int to)</code>：截断字符串，结果包含原字符串下标为 [from,to) 的位置的字符</p>
+<hr>
+<p><strong>布尔值</strong></p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">true
+
+false</code></pre>
+
+<hr>
+<p><strong>逻辑运算符</strong></p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">&amp;&amp; &#x2F;&#x2F; 与
+
+|| &#x2F;&#x2F; 或
+
+! &#x2F;&#x2F; 非</code></pre>
+
+<hr>
+<p><strong>比较运算符</strong></p>
+<p>注意：绝对等于</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">&#x3D;&#x3D; &#x2F;&#x2F; 等于：（值一样但类型不一样也为true）
+&#x3D;&#x3D;&#x3D; &#x2F;&#x2F; 绝对等于（值和类型都一样才为true）</code></pre>
+
+<p><span class="red">注意：</span> <code>NaN === NaN</code> 或 <code>NaN === 任意值</code> 永远为 false，判断是否为 <code>NaN</code> 使用 <code>isNaN()</code> 方法</p>
+<hr>
+<p><strong>null 与 undefined</strong></p>
+<p>null 指空的，变量可以访问到</p>
+<p>undefined 是未定义的，虚空变量</p>
+<hr>
+<p><strong>数组</strong></p>
+<p><span class="red">JavaScript 中的数组什么都可以放，数组公交车！</span></p>
+<p><span class="red">它 TMD 还可以自由伸缩</span>（详见数组方法）</p>
+<p>并且当访问的下标超出数组最大下标时，只会返回 <code>undefined</code></p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">&#x2F;&#x2F; 建议使用这种方式
+var arr &#x3D; [1, 1.2, null, true];
+
+&#x2F;&#x2F; 这个明显就是从Java抄过来的
+new Array(1, 2.3, null);
+
+&#x2F;&#x2F; 取值
+console.log(arr);
+console.log(arr[2]);
+
+&#x2F;&#x2F; 赋值
+arr[0] &#x3D; 5;</code></pre>
+
+<p><span class="red bold">数组常用属性和方法：</span></p>
+<p><code>length</code>：（属性）长度</p>
+<ul>
+<li><span class="red">注意：</span>若给长度赋值，可以实现数组长度变更。若值大于原长度，后面的 n 个值为 <code>undefined</code>。若值小于原长度，会有数据丢失</li>
+</ul>
+<p><code>indexOf(Object o);</code>：通过元素获得下标信息（元素是严格区分字符串和数字的）<br><code>slice(int n)</code>：去除 Array 的前 n 个元素，返回处理后的数组<br><code>slice(int from, int to)</code>：截断数组，结果包含原数组下标为 [from,to) 的位置的元素<br><code>push(Object o, ...)</code>：将传入的元素加入到数组最后，加入后顺序和传入顺序一样（传入 a, b 加入后：…, a, b）<br><code>pop()</code>：将数组最后一个元素弹出，并返回该元素<br><code>shift(Object o, ...)</code>：将传入的元素加入到数组最前，加入后顺序和传入顺序一样（传入 a, b 加入后：a, b, …）<br><code>unshift()</code>：将数组最前一个元素弹出，并返回该元素<br><code>sort()</code>：排序<br><code>reverse()</code>：反转<br><code>concat(Array arr)</code>：将传入的数组拼接到原数组后面，并返回拼接后数组<br><code>join(String s)</code>：使用传入的字符串连接数组的每个元素，返回连接后字符串</p>
+<hr>
+<p><strong>对象</strong></p>
+<p>JavaScript 甚至可以凭空搞出来一个对象，不需要类，不需要 new！</p>
+<p>同样使用 <code>var</code> 来定义，使用大括号包围，使用点访问内部参数，熟悉的味道！</p>
+<p><span class="red">其本质是若干个键值对，其中键为字符串</span></p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">var person &#x3D; &#123;
+  name: &#39;张三&#39;,
+  age: 23,
+  tags: [&#39;js&#39;, &#39;html&#39;]
+&#125;;
+
+&#x2F;&#x2F; 取值
+console.log(person);
+console.log(person.name);
+console.log(person[&#39;name&#39;]);
+
+&#x2F;&#x2F; 赋值
+person.name &#x3D; 值;</code></pre>
+
+<p><span class="red">注意：</span>取一个不存在的属性并不会导致报错，只会返回 <code>undefined</code></p>
+<p><span class="red bold">离谱！动态增减对象属性：</span></p>
+<p>哪门编程语言可以做到在对象定义完之后还能删除对象的属性……</p>
+<p><code>delete 对象名.属性名</code>实现删除该对象的指定属性</p>
+<p><code>对象名.新的属性名 = 值;</code>给一个虚空属性赋值就可以实现给该对象增加一个属性并且赋值</p>
+<p><span class="red bold">常用方法？</span></p>
+<p><code>&#39;属性名&#39; in 对象名</code>：返回该属性（或叫这个名字的方法）是否存在于指定对象中</p>
+<p><code>hasOwnProperty(String s)</code>：返回该属性（或叫这个名字的方法）是否存在于指定对象中（仅自身拥有的属性和方法，排除继承的）</p>
+<hr>
+<p><strong>Map 和 Set （ES6 新特性）</strong></p>
+<p><span class="red bold">Map：</span></p>
+<p>使用以下代码创建一个 Map 键值对（其实是二维数组）</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">var map &#x3D; new Map([[&#39;key1&#39;, value1], [&#39;key2&#39;, value2], ...]);</code></pre>
+
+<p><code>get(String key)</code>：根据传入的键，返回其对应的值，找不到返回 <code>undefined</code></p>
+<p><code>set(String key, Object o)</code>：若键值不存在于 map 中，新建一个键值对并应用传入的值。若存在，修改它的值</p>
+<p><code>delete(String key)</code>：删除传入的键所对应的键值对</p>
+<p><span class="red bold">Set：</span></p>
+<p>使用以下代码创建一个 Set 集合，注意 Set 集合自动去重</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">var set &#x3D; new Set([1, 2, 3]);</code></pre>
+
+<p><code>add(Object o)</code>：在集合最后增加传入的元素（若原来就有则添加失败）</p>
+<p><code>delete(Object o)</code>：删除集合中为该值的元素</p>
+<p><code>has(Object o)</code>：返回集合中是否含有该元素</p>
+<p><span class="red bold">for 遍历方法：</span></p>
+<p><code>Map</code> 和 <code>Set</code> 都可以使用 <code>for ...of</code> 的方式进行遍历</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">for (let value of map) &#123;
+  console.log(value);
+&#125;</code></pre>
+
+<p><span class="red bold">Iterator 迭代器：</span></p>
+<p><code>Map</code> 和 <code>Set</code> 都内置了 Iterator 迭代器，通过以下代码显式定义迭代器：</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">var map &#x3D; new Map([[&#39;1&#39;, 10],[&#39;2&#39;, 20],[&#39;3&#39;, 30]]);
+
+&#x2F;&#x2F; 定义迭代器
+var iterator &#x3D; map[Symbol.iterator]();
+
+&#x2F;&#x2F; 定义值接收用变量
+var key_value &#x3D; iterator.next();
+
+whlie(!key_value.done) &#123;
+  console.log(key_value);
+  key_value &#x3D; iterator.next();
+&#125;</code></pre>
+
+<h2 id="严格检查模式"><a href="#严格检查模式" class="headerlink" title="严格检查模式"></a>严格检查模式</h2><p>严格检查模式用于不让你利用 JavaScript 的随意性玩得这么嗨，比如说变量一定要用 <code>var</code> 或 <code>let</code> 定义，禁止：</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">i &#x3D; 1;</code></pre>
+
+<p>要开启严格检查模式，只需要在 JavaScript 代码<span class="red">第一行</span>加上 <code>&#39;use strict&#39;;</code></p>
+<p>严格检查模式开启之后，在页面加载完后，若有触发严格监察模式的错误的代码，会在控制台报错（当然 IDEA 这种编译器在你加上<code>&#39;use strict&#39;;</code>那一刻就会在代码里标红）</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><hr>
+<p><strong>定义函数</strong></p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">&#x2F;&#x2F; 定义方式1
+function 方法名(参数) &#123;
+  方法体
+  [return ...;]
+&#125;
+
+&#x2F;&#x2F; 定义方式2
+var 方法名 &#x3D; function(参数) &#123;
+  方法体
+  [return ...;]
+&#125;</code></pre>
+
+<p><span class="red">注意：</span>若没有或没有执行 return 语句，函数执行完也会返回结果，返回 <code>undefined</code></p>
+<hr>
+<p><strong>调用函数</strong></p>
+<p>无论是用哪种方法定义的函数，都是用 <code>方法名(参数)</code> 来调用</p>
+<p><span class="red bold">参数问题：</span>JavaScript 的函数调用可以无视方法所规定的传参格式。你可以不传递参数（传入 <code>undefined</code>），也可以传递超过规定量的参数（只取前 n 个）。<span class="red">这么做都不会报错</span></p>
+<p><span class="red bold">规避参数问题（不传参）：</span></p>
+<p>可以使用 <code>typeof</code> 判断类型并手动抛出异常的方式</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">if (typeof x !&#x3D;&#x3D; &#39;number&#39;) &#123;
+  throw &#39;Not a number&#39;;
+&#125;</code></pre>
+
+<p><span class="red bold">规避参数问题（超量传参）：</span></p>
+<p>可以使用 <code>argument</code> 关键字，该关键字用于接收所有传入的参数，将他们变为一个类似数组的东西（但它不是真正的数组）。它有 <code>length</code> 属性，因此就可以遍历，下标取值：</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">for (let i &#x3D; 0; i &lt; arguments.length; i++) &#123;
+  console.log(arguments[i]);
+&#125;</code></pre>
+
+<p><span class="red bold">（ES6 新）获取所有多余参数：</span></p>
+<p>在定义的参数后面在多加一个可变参数 <code>...rest</code>（<span class="red">这个 <code>rest</code> 可以换成其他名字，它只是个参数名，不是关键字</span>），它会接收所有除定义以外的所有参数，并将它们组成一个真正的数组：</p>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">function test(num1, num2, ...args) &#123;
+  console.log(args);
+&#125;</code></pre>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/06/20/JavaWeb/" rel="prev" title="JavaWeb">
+                  <i class="fa fa-chevron-left"></i> JavaWeb
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/06/21/ScriptTest/firstJavaScript/" rel="next" title="">
+                   <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js" integrity="sha256-4mJNT2bMXxcc1GCJaxBmMPdmah5ji0Ldnd79DKd1hoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-dL6vkUiCn30lPTN9cVrmQHo5UQmEwDMrx2ppAk4IhVk=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

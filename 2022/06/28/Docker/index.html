@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   这里会记录一些在 openWRT 上折腾 Docker 的事">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker">
+<meta property="og:url" content="https://loliconkelvin.github.io/2022/06/28/Docker/index.html">
+<meta property="og:site_name" content="萝莉控的小窝">
+<meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   这里会记录一些在 openWRT 上折腾 Docker 的事">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/14/jfY1d1.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/14/jfY3Ix.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/14/jfYGi6.png">
+<meta property="article:published_time" content="2022-06-28T12:26:55.000Z">
+<meta property="article:modified_time" content="2022-07-14T08:53:12.074Z">
+<meta property="article:author" content="Loliconkelvin">
+<meta property="article:tag" content="Docker">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/07/14/jfY1d1.png">
+
+
+<link rel="canonical" href="https://loliconkelvin.github.io/2022/06/28/Docker/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://loliconkelvin.github.io/2022/06/28/Docker/","path":"2022/06/28/Docker/","title":"Docker"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Docker | 萝莉控的小窝</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">萝莉控的小窝</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">Docker 常用参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL"><span class="nav-number">2.</span> <span class="nav-text">MySQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat"><span class="nav-number">3.</span> <span class="nav-text">Tomcat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#qbittorrentEE"><span class="nav-number">4.</span> <span class="nav-text">qbittorrentEE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#heimdall"><span class="nav-number">5.</span> <span class="nav-text">heimdall</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gitea"><span class="nav-number">6.</span> <span class="nav-text">Gitea</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
+      src="/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">Loliconkelvin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">50</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:Loliconkelvin@gmail.com" title="E-Mail → mailto:Loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2022/06/28/Docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="Loliconkelvin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萝莉控的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Docker | 萝莉控的小窝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Docker
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-06-28 20:26:55" itemprop="dateCreated datePublished" datetime="2022-06-28T20:26:55+08:00">2022-06-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-07-14 16:53:12" itemprop="dateModified" datetime="2022-07-14T16:53:12+08:00">2022-07-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Docker/" itemprop="url" rel="index"><span itemprop="name">Docker</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <style>
+    .red {
+        color: red;
+    }
+    .bold {
+        font-weight: bold;
+    }
+</style>
+
+<p>这里会记录一些在 openWRT 上折腾 Docker 的事</p>
+<span id="more"></span>
+
+<h2 id="Docker-常用参数"><a href="#Docker-常用参数" class="headerlink" title="Docker 常用参数"></a>Docker 常用参数</h2><table>
+ <tbody><tr>
+  <td>参数</td>
+  <td>可选值</td>
+  <td>意义</td>
+ </tr>
+ <tr>
+  <td align="center">--name=</td>
+  <td align="center">-</td>
+  <td>指定容器名</td>
+ </tr>
+ <tr>
+  <td rowspan="4" align="center">--restart=</td>
+  <td align="center">no</td>
+  <td>手动启动与重启</td>
+ </tr>
+ <tr>
+  <td align="center" align="center">unless-stopped</td>
+  <td>不允许容器关闭，除非：<br />1.手动指定关闭（使用docker
+  stop）<br />2.容器在服务器或Docker重启之前就已经是手动关闭状态</td>
+ </tr>
+ <tr>
+  <td align="center">always</td>
+  <td>不允许容器关闭<br />除非手动指定关闭（使用docker stop）</td>
+ </tr>
+ <tr>
+  <td align="center">on failure:n</td>
+  <td>若程序退出代码非零，则重启<br />（n为尝试重启的最大次数）</td>
+ </tr>
+ <tr>
+  <td rowspan="3" align="center">--network=</td>
+  <td align="center">none</td>
+  <td>全封闭容器，不适用网络</td>
+ </tr>
+ <tr>
+  <td align="center">bridge</td>
+  <td>使用Docker内的独立网络并且通过端口映射将部分端口映射到宿主机</td>
+ </tr>
+ <tr>
+  <td align="center">host</td>
+  <td>使用宿主机网络</td>
+ </tr>
+ <tr>
+  <td rowspan="2" align="center">--privileged=</td>
+  <td align="center">true</td>
+  <td>给予root权限</td>
+ </tr>
+ <tr>
+  <td align="center" >false</td>
+  <td>给予普通用户权限</td>
+ </tr>
+ <tr >
+  <td align="center">-p 宿主机端口:容器端口/协议</td>
+  <td align="center">-</td>
+  <td>在bridge网络模式下使用，映射容器端口至宿主机</td>
+ </tr>
+ <tr>
+  <td align="center">-v /宿主机/路径:/容器/路径</td>
+  <td align="center">-</td>
+  <td>映射容器内文件夹至指定的宿主机文件夹</td>
+ </tr>
+ <tr>
+  <td align="center">-e 环境变量=值</td>
+  <td align="center">-</td>
+  <td>配置环境变量</td>
+ </tr>
+</tbody></table>
+
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><p>使用以下代码安装 MySQL</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -id \
+    --network&#x3D;host \
+    --name&#x3D;mysql-8028 \
+    -v &#x2F;root&#x2F;mysql8028&#x2F;conf:&#x2F;etc&#x2F;mysql&#x2F;conf.d \
+    -v &#x2F;root&#x2F;mysql8028&#x2F;logs:&#x2F;logs \
+    -v &#x2F;root&#x2F;mysql8028&#x2F;data:&#x2F;var&#x2F;lib&#x2F;mysql \
+    -e MYSQL_ROOT_PASSWORD&#x3D;123456 \
+    mysql:8.0.28</code></pre>
+
+<h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><p><span class="red">注意：</span>tomcat 要挂载配置文件夹需要先建立一个临时的容器然后将容器内的配置文件夹（<code>/usr/local/tomcat/conf</code>）先复制到需要挂载的目录才能挂载，否则闪退</p>
+<p>使用以下代码安装 Tomcat</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -id \
+    --network&#x3D;host \
+    --name&#x3D;tomcat \
+    -v &#x2F;root&#x2F;tomcat&#x2F;webapps:&#x2F;usr&#x2F;local&#x2F;tomcat&#x2F;webapps \
+    -v &#x2F;root&#x2F;tomcat&#x2F;conf:&#x2F;usr&#x2F;local&#x2F;tomcat&#x2F;conf \
+    -v &#x2F;root&#x2F;tomcat&#x2F;logs:&#x2F;usr&#x2F;local&#x2F;tomcat&#x2F;logs \
+    tomcat:latest</code></pre>
+
+<h2 id="qbittorrentEE"><a href="#qbittorrentEE" class="headerlink" title="qbittorrentEE"></a>qbittorrentEE</h2><p><span class="red">注意：</span>qbittorrentEE 需要给特权模式，否则可能读取&#x2F;写入不了文件</p>
+<p>使用以下代码安装 qbittorrentEE</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker create  -i \
+    --name&#x3D;qbittorrentEE  \
+    --privileged&#x3D;true \
+    --network&#x3D;host \
+    -e WEBUIPORT&#x3D;8081  \
+    -e PUID&#x3D;1026 \
+    -e PGID&#x3D;100 \
+    -e TZ&#x3D;Asia&#x2F;Shanghai \
+    -v &#x2F;root&#x2F;qbittorrentEE&#x2F;config:&#x2F;config  \
+    -v &#x2F;mnt&#x2F;sda1&#x2F;download:&#x2F;downloads  \
+    superng6&#x2F;qbittorrentee:4.3.9.10</code></pre>
+
+<h2 id="heimdall"><a href="#heimdall" class="headerlink" title="heimdall"></a>heimdall</h2><p>这是一个导航页</p>
+<p>使用以下代码安装 heimdall</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker create -i \
+    --name&#x3D;navigation-page-heimdall \
+    --network&#x3D;host \
+    -e TZ&#x3D;Asia&#x2F;Shanghai  \
+    -v &#x2F;root&#x2F;heimdall&#x2F;config:&#x2F;config \
+    linuxserver&#x2F;heimdall:latest</code></pre>
+
+<p><span class="red">注意：</span>heimdall 默认监听 80（http）和 443（https）端口，若端口已被占用，修改 <code>/PATH/TO/config/nginx/site-confs/default</code> 文件中的端口，重启容器<br>可以使用 <code>docker logs [-f] 容器名或容器ID</code> 查看容器是否成功启动</p>
+<h2 id="Gitea"><a href="#Gitea" class="headerlink" title="Gitea"></a>Gitea</h2><p>这个有一丢丢繁琐，因为他需要用数据库</p>
+<hr>
+<p><strong>一个新用户</strong></p>
+<p><span class="red bold">查看现有用户：</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">USE mysql;
+
+SELECT User, Host, authentication_string FROM user;</code></pre>
+
+<p><span class="red bold">创建一个新用户：</span></p>
+<p>若没有一个专门给 Gitea 使用的用户，使用以下代码创建一个新用户：</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 对于本地数据库
+CREATE USER &#39;用户名&#39; IDENTIFIED BY &#39;密码&#39;;
+-- 对于远程数据库（IP地址填写Gitea实例所在的IP地址）
+CREATE USER &#39;用户名&#39;@&#39;IP地址&#39; IDENTIFIED BY &#39;密码&#39;;</code></pre>
+
+<p><span class="red bold">删除一个用户：</span></p>
+<p>别急，搞错了就再来一次</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">&#x2F;* 对于本地数据库（默认删除 host&#x3D;&#39;%&#39; 的用户
+host可以在用户表看到，看上面 “查看现有用户”）*&#x2F;
+DROP USER &#39;用户名&#39;;
+-- 对于远程数据库
+DROP USER &#39;用户名&#39;@&#39;IP地址&#39;;</code></pre>
+
+<hr>
+<p><strong>一个新鲜的数据库</strong></p>
+<p><span class="red bold">创建一个一个一个新的数据库：</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 名字随意，后面要用
+CREATE DATABASE giteadb CHARACTER SET &#39;utf8mb4&#39; COLLATE &#39;utf8mb4_unicode_ci&#39;;</code></pre>
+
+<p><span class="red bold">将数据库权限给新用户：</span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- ON 后面的 &#39;giteadb&#39; 是数据库名
+-- TO 后面的 &#39;gitea&#39; 是新用户的用户名
+-- 对于本地数据库
+GRANT ALL PRIVILEGES ON giteadb.* TO &#39;gitea&#39;;
+FLUSH PRIVILEGES;
+
+-- 对于远程数据库
+GRANT ALL PRIVILEGES ON giteadb.* TO &#39;gitea&#39;@&#39;192.0.2.10&#39;;
+FLUSH PRIVILEGES;</code></pre>
+
+<hr>
+<p><strong>Gitea</strong></p>
+<p><span class="red bold">安装容器：</span></p>
+<p>准备好和一杯好茶了吗</p>
+<p>使用以下代码安装 Gitea</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker create -i \
+    --name&#x3D;gitea \
+    --network&#x3D;host \
+    -e DB_TYPE&#x3D;mysql \
+    -e DB_HOST&#x3D;localhost:3306 \
+    -e DB_USER&#x3D;gitea \
+    -e DB_PASSWD&#x3D;123456 \
+    -e DB_NAME&#x3D;giteadb \
+    -v &#x2F;root&#x2F;gitea&#x2F;data:&#x2F;data \
+    gitea&#x2F;gitea:dev</code></pre>
+
+<p><span class="red">以下这些环境变量可以在之后的安装页面填写，也可以现在通过传入环境变量的方法先行决定</span></p>
+<table>
+<thead>
+<tr>
+<th align="center">环境变量</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>DB_TYPE</code></td>
+<td align="center">Gitea 使用的数据库平台<br />（可选：mysql postgres）</td>
+</tr>
+<tr>
+<td align="center"><code>DB_HOST</code></td>
+<td align="center">数据库地址和端口<br />（本地填: localhost:端口）</td>
+</tr>
+<tr>
+<td align="center"><code>DB_USER</code></td>
+<td align="center">给 Gitea 使用的数据库用户的用户名</td>
+</tr>
+<tr>
+<td align="center"><code>DB_PASSWD</code></td>
+<td align="center">给 Gitea 使用的数据库用户的密码</td>
+</tr>
+<tr>
+<td align="center"><code>DB_NAME</code></td>
+<td align="center">给 Gitea 存放数据库的数据库名</td>
+</tr>
+</tbody></table>
+<p><span class="red bold">配置 Gitea：</span></p>
+<p>现在你可以连到 Gitea 的 WebUI 了，首次连接会进入配置界面：</p>
+<p>可以看到刚刚传入的全局变量已经自动填入</p>
+<p><span class="red">数据库设置：</span>看一下没问题就可以过了</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/jfY1d1"><img src="https://s1.ax1x.com/2022/07/14/jfY1d1.png" alt="Gitea配置界面.png"></a></p>
+<p><span class="red">⚠️ 一般设置：</span>注意设置基础 URL，不能填 localhost，要填你连接到这个页面的 IP 和端口，最直接的方式就是从现在这个页面的地址栏复制过来</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/jfY3Ix"><img src="https://s1.ax1x.com/2022/07/14/jfY3Ix.png" alt="Gitea一般设置.png"></a></p>
+<p><span class="red">可选设置——管理员账号设置：</span>这里主要是先注册一个用户并且定义他是管理员，这里就像注册账号一样就行，没有硬性要求用户名一定是什么 root 之类的</p>
+<blockquote>
+<p>注意：若这不是第一次配置（容器进行过重装），则若 Gitea 的数据库指向没有变，就不要管这里的管理员账号设置，因为数据库里面还有上一次的用户信息</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/jfYGi6"><img src="https://s1.ax1x.com/2022/07/14/jfYGi6.png" alt="Gitea可选设置.png"></a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Docker/" rel="tag"># Docker</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/06/28/Git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" rel="prev" title="Git版本控制">
+                  <i class="fa fa-chevron-left"></i> Git版本控制
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js" integrity="sha256-4mJNT2bMXxcc1GCJaxBmMPdmah5ji0Ldnd79DKd1hoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-dL6vkUiCn30lPTN9cVrmQHo5UQmEwDMrx2ppAk4IhVk=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

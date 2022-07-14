@@ -20,12 +20,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   MySQL基本">
+    <meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   MySQL 基本">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL基本">
 <meta property="og:url" content="https://loliconkelvin.github.io/2022/05/10/MySQL%E5%9F%BA%E6%9C%AC/index.html">
 <meta property="og:site_name" content="萝莉控的小窝">
-<meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   MySQL基本">
+<meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   MySQL 基本">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2022/05/10/ON1DoR.md.jpg">
 <meta property="og:image" content="https://s1.ax1x.com/2022/05/13/Os1aPU.md.png">
@@ -77,7 +77,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2022/06/16/XHOWct.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/06/16/XHjVRs.png">
 <meta property="article:published_time" content="2022-05-10T01:42:26.000Z">
-<meta property="article:modified_time" content="2022-06-19T02:42:54.995Z">
+<meta property="article:modified_time" content="2022-07-14T02:20:01.336Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
@@ -166,7 +166,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">一些概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1%E8%A7%84%E5%88%99"><span class="nav-number">2.</span> <span class="nav-text">关系型数据库的设计规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E8%81%94%E7%B3%BB%E5%85%B3%E7%B3%BB"><span class="nav-number">3.</span> <span class="nav-text">表之间的联系关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%91%BD%E4%BB%A4%E8%A1%8C%EF%BC%89%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%EF%BC%88%E9%9D%9E%E6%8C%87%E4%BB%A4%E7%BB%86%E5%88%99%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">（命令行）数据库基本操作（非指令细则）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9B%BE%E5%BD%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="nav-number">5.</span> <span class="nav-text">数据库图形管理工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E8%AF%AD%E8%A8%80%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">6.</span> <span class="nav-text">MySQL语言的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E4%BD%BF%E7%94%A8%E8%A7%84%E5%88%99%E4%B8%8E%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83"><span class="nav-number">7.</span> <span class="nav-text">SQL使用规则与格式规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E6%B3%A8%E9%87%8A"><span class="nav-number">8.</span> <span class="nav-text">SQL注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">9.</span> <span class="nav-text">SQL基本查询（重要）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E8%BF%87%E6%BB%A4%E6%9D%A1%E4%BB%B6%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">10.</span> <span class="nav-text">SQL过滤条件与运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E6%8E%92%E5%BA%8F%EF%BC%88ORDER-BY%EF%BC%89"><span class="nav-number">11.</span> <span class="nav-text">SQL排序（ORDER BY）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E5%88%86%E9%A1%B5%EF%BC%88LIMIT-OFFSET%EF%BC%89"><span class="nav-number">12.</span> <span class="nav-text">SQL分页（LIMIT OFFSET）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2%EF%BC%88SQL92%EF%BC%89"><span class="nav-number">13.</span> <span class="nav-text">SQL多表查询（SQL92）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2%EF%BC%88SQL99%EF%BC%89"><span class="nav-number">14.</span> <span class="nav-text">SQL多表查询（SQL99）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%EF%BC%88UNION-ALL%EF%BC%89"><span class="nav-number">15.</span> <span class="nav-text">SQL联合查询结果（UNION ALL）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%AE%9E%E7%8E%B07%E7%A7%8DJOIN%E6%9F%A5%E8%AF%A2%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">16.</span> <span class="nav-text">MySQL实现7种JOIN查询（重要）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL99%E6%96%B0%E7%89%B9%E6%80%A7-%E8%87%AA%E7%84%B6%E8%BF%9E%E6%8E%A5%EF%BC%88NATURAL-JOIN%EF%BC%89"><span class="nav-number">17.</span> <span class="nav-text">SQL99新特性-自然连接（NATURAL JOIN）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL99%E6%96%B0%E7%89%B9%E6%80%A7-%E6%8C%87%E5%AE%9A%E7%AD%89%E5%80%BC%E8%BF%9E%E6%8E%A5%E5%AD%97%E6%AE%B5%EF%BC%88USING%EF%BC%89"><span class="nav-number">18.</span> <span class="nav-text">SQL99新特性-指定等值连接字段（USING）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E6%97%B6%E9%97%B4"><span class="nav-number">19.</span> <span class="nav-text">MySQL单行函数——基本、字符串、时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%87%BD%E6%95%B0"><span class="nav-number">20.</span> <span class="nav-text">MySQL单行函数——流程控制函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86"><span class="nav-number">21.</span> <span class="nav-text">MySQL单行函数——加密与解密</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94MySQL%E5%BD%93%E5%89%8D%E4%BF%A1%E6%81%AF%E5%87%BD%E6%95%B0"><span class="nav-number">22.</span> <span class="nav-text">MySQL单行函数——MySQL当前信息函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E5%85%B6%E5%AE%83%E5%87%BD%E6%95%B0"><span class="nav-number">23.</span> <span class="nav-text">MySQL单行函数——其它函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0%EF%BC%88%E5%A4%9A%E8%A1%8C%E5%87%BD%E6%95%B0%EF%BC%89"><span class="nav-number">24.</span> <span class="nav-text">MySQL聚合函数（多行函数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%88%86%E7%BB%84%E4%B8%8E%E6%B1%87%E6%80%BB%EF%BC%88GROUP-BY-WITH-ROLLUP%EF%BC%89"><span class="nav-number">25.</span> <span class="nav-text">MySQL分组与汇总（GROUP BY WITH ROLLUP）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%88%86%E7%BB%84%E7%AD%9B%E9%80%89%EF%BC%88HAVING%EF%BC%89"><span class="nav-number">26.</span> <span class="nav-text">MySQL分组筛选（HAVING）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E5%9F%BA%E6%9C%AC%E5%AE%8C%E6%95%B4%E7%9A%84SELECT%E8%AF%AD%E5%8F%A5"><span class="nav-number">27.</span> <span class="nav-text">一个基本完整的SELECT语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="nav-number">28.</span> <span class="nav-text">SQL语句的执行顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%AD%90%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94%E5%8D%95%E8%A1%8C%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="nav-number">29.</span> <span class="nav-text">MySQL子查询——单行子查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%AD%90%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94%E5%A4%9A%E8%A1%8C%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="nav-number">30.</span> <span class="nav-text">MySQL子查询——多行子查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%AD%90%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC"><span class="nav-number">31.</span> <span class="nav-text">相关子查询——基本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%AD%90%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94-NOT-EXISTS"><span class="nav-number">32.</span> <span class="nav-text">相关子查询——(NOT) EXISTS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E7%AE%A1%E7%90%86"><span class="nav-number">33.</span> <span class="nav-text">数据库的创建和管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86"><span class="nav-number">34.</span> <span class="nav-text">表的创建与管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E8%AF%86%E4%BA%8B%E5%8A%A1%E2%80%94%E2%80%94%E6%8F%90%E4%BA%A4%E4%B8%8E%E5%9B%9E%E6%BB%9A"><span class="nav-number">35.</span> <span class="nav-text">初识事务——提交与回滚</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9"><span class="nav-number">36.</span> <span class="nav-text">数据的增删改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">37.</span> <span class="nav-text">MySQL数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E7%BA%A6%E6%9D%9F%EF%BC%88CONSTRAINT%EF%BC%89"><span class="nav-number">38.</span> <span class="nav-text">MySQL约束（CONSTRAINT）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%B9%E8%B1%A1"><span class="nav-number">39.</span> <span class="nav-text">数据库对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E8%A7%86%E5%9B%BE%EF%BC%88VIEW%EF%BC%89"><span class="nav-number">40.</span> <span class="nav-text">MySQL视图（VIEW）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%EF%BC%88PROCEDURE%EF%BC%89"><span class="nav-number">41.</span> <span class="nav-text">MySQL存储过程（PROCEDURE）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%AD%98%E5%82%A8%E5%87%BD%E6%95%B0%EF%BC%88FUNCTION%EF%BC%89"><span class="nav-number">42.</span> <span class="nav-text">MySQL存储函数（FUNCTION）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E4%B8%8E%E5%AD%98%E5%82%A8%E5%87%BD%E6%95%B0%E5%B1%9E%E6%80%A7%E7%9A%84%E6%9F%A5%E7%9C%8B%E3%80%81%E4%BF%AE%E6%94%B9%E3%80%81%E5%88%A0%E9%99%A4"><span class="nav-number">43.</span> <span class="nav-text">存储过程与存储函数属性的查看、修改、删除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E5%8F%98%E9%87%8F"><span class="nav-number">44.</span> <span class="nav-text">MySQL变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MyQSL%E5%AE%9A%E4%B9%89%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%A4%84%E7%90%86%E7%A8%8B%E5%BA%8F%EF%BC%88%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%EF%BC%89"><span class="nav-number">45.</span> <span class="nav-text">MyQSL定义条件与处理程序（异常处理）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="nav-number">46.</span> <span class="nav-text">MySQL流程控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E6%B8%B8%E6%A0%87%EF%BC%88CURSOR%EF%BC%89"><span class="nav-number">47.</span> <span class="nav-text">MySQL游标（CURSOR）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL%E8%A7%A6%E5%8F%91%E5%99%A8%EF%BC%88TRIGGER%EF%BC%89"><span class="nav-number">48.</span> <span class="nav-text">MySQL触发器（TRIGGER）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL8-0%E6%96%B0%E7%89%B9%E6%80%A7%E2%80%94%E2%80%94%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0"><span class="nav-number">49.</span> <span class="nav-text">MySQL8.0新特性——窗口函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL8-0%E6%96%B0%E7%89%B9%E6%80%A7%E2%80%94%E2%80%94%E5%85%AC%E7%94%A8%E8%A1%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">50.</span> <span class="nav-text">MySQL8.0新特性——公用表表达式</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">一些概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1%E8%A7%84%E5%88%99"><span class="nav-number">2.</span> <span class="nav-text">关系型数据库的设计规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E8%81%94%E7%B3%BB%E5%85%B3%E7%B3%BB"><span class="nav-number">3.</span> <span class="nav-text">表之间的联系关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%91%BD%E4%BB%A4%E8%A1%8C%EF%BC%89%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%EF%BC%88%E9%9D%9E%E6%8C%87%E4%BB%A4%E7%BB%86%E5%88%99%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">（命令行）数据库基本操作（非指令细则）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9B%BE%E5%BD%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="nav-number">5.</span> <span class="nav-text">数据库图形管理工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E8%AF%AD%E8%A8%80%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">6.</span> <span class="nav-text">MySQL 语言的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-%E4%BD%BF%E7%94%A8%E8%A7%84%E5%88%99%E4%B8%8E%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83"><span class="nav-number">7.</span> <span class="nav-text">SQL 使用规则与格式规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-%E6%B3%A8%E9%87%8A"><span class="nav-number">8.</span> <span class="nav-text">SQL 注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">9.</span> <span class="nav-text">SQL 基本查询（重要）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-%E8%BF%87%E6%BB%A4%E6%9D%A1%E4%BB%B6%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">10.</span> <span class="nav-text">SQL 过滤条件与运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-%E6%8E%92%E5%BA%8F%EF%BC%88ORDER-BY%EF%BC%89"><span class="nav-number">11.</span> <span class="nav-text">SQL 排序（ORDER BY）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-%E5%88%86%E9%A1%B5%EF%BC%88LIMIT-OFFSET%EF%BC%89"><span class="nav-number">12.</span> <span class="nav-text">SQL 分页（LIMIT OFFSET）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2%EF%BC%88SQL92%EF%BC%89"><span class="nav-number">13.</span> <span class="nav-text">SQL 多表查询（SQL92）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2%EF%BC%88SQL99%EF%BC%89"><span class="nav-number">14.</span> <span class="nav-text">SQL 多表查询（SQL99）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%EF%BC%88UNION-ALL%EF%BC%89"><span class="nav-number">15.</span> <span class="nav-text">SQL 联合查询结果（UNION ALL）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E5%AE%9E%E7%8E%B0-7-%E7%A7%8D-JOIN-%E6%9F%A5%E8%AF%A2%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">16.</span> <span class="nav-text">MySQL 实现 7 种 JOIN 查询（重要）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL99-%E6%96%B0%E7%89%B9%E6%80%A7-%E8%87%AA%E7%84%B6%E8%BF%9E%E6%8E%A5%EF%BC%88NATURAL-JOIN%EF%BC%89"><span class="nav-number">17.</span> <span class="nav-text">SQL99 新特性-自然连接（NATURAL JOIN）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL99-%E6%96%B0%E7%89%B9%E6%80%A7-%E6%8C%87%E5%AE%9A%E7%AD%89%E5%80%BC%E8%BF%9E%E6%8E%A5%E5%AD%97%E6%AE%B5%EF%BC%88USING%EF%BC%89"><span class="nav-number">18.</span> <span class="nav-text">SQL99 新特性-指定等值连接字段（USING）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E6%97%B6%E9%97%B4"><span class="nav-number">19.</span> <span class="nav-text">MySQL 单行函数——基本、字符串、时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%87%BD%E6%95%B0"><span class="nav-number">20.</span> <span class="nav-text">MySQL 单行函数——流程控制函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86"><span class="nav-number">21.</span> <span class="nav-text">MySQL 单行函数——加密与解密</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94MySQL-%E5%BD%93%E5%89%8D%E4%BF%A1%E6%81%AF%E5%87%BD%E6%95%B0"><span class="nav-number">22.</span> <span class="nav-text">MySQL 单行函数——MySQL 当前信息函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E5%85%B6%E5%AE%83%E5%87%BD%E6%95%B0"><span class="nav-number">23.</span> <span class="nav-text">MySQL 单行函数——其它函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0%EF%BC%88%E5%A4%9A%E8%A1%8C%E5%87%BD%E6%95%B0%EF%BC%89"><span class="nav-number">24.</span> <span class="nav-text">MySQL 聚合函数（多行函数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E5%88%86%E7%BB%84%E4%B8%8E%E6%B1%87%E6%80%BB%EF%BC%88GROUP-BY-WITH-ROLLUP%EF%BC%89"><span class="nav-number">25.</span> <span class="nav-text">MySQL 分组与汇总（GROUP BY WITH ROLLUP）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E5%88%86%E7%BB%84%E7%AD%9B%E9%80%89%EF%BC%88HAVING%EF%BC%89"><span class="nav-number">26.</span> <span class="nav-text">MySQL 分组筛选（HAVING）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E5%9F%BA%E6%9C%AC%E5%AE%8C%E6%95%B4%E7%9A%84-SELECT-%E8%AF%AD%E5%8F%A5"><span class="nav-number">27.</span> <span class="nav-text">一个基本完整的 SELECT 语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="nav-number">28.</span> <span class="nav-text">SQL 语句的执行顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E5%AD%90%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94%E5%8D%95%E8%A1%8C%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="nav-number">29.</span> <span class="nav-text">MySQL 子查询——单行子查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E5%AD%90%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94%E5%A4%9A%E8%A1%8C%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="nav-number">30.</span> <span class="nav-text">MySQL 子查询——多行子查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%AD%90%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC"><span class="nav-number">31.</span> <span class="nav-text">相关子查询——基本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%AD%90%E6%9F%A5%E8%AF%A2%E2%80%94%E2%80%94-NOT-EXISTS"><span class="nav-number">32.</span> <span class="nav-text">相关子查询——(NOT) EXISTS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E7%AE%A1%E7%90%86"><span class="nav-number">33.</span> <span class="nav-text">数据库的创建和管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86"><span class="nav-number">34.</span> <span class="nav-text">表的创建与管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E8%AF%86%E4%BA%8B%E5%8A%A1%E2%80%94%E2%80%94%E6%8F%90%E4%BA%A4%E4%B8%8E%E5%9B%9E%E6%BB%9A"><span class="nav-number">35.</span> <span class="nav-text">初识事务——提交与回滚</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9"><span class="nav-number">36.</span> <span class="nav-text">数据的增删改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">37.</span> <span class="nav-text">MySQL 数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E7%BA%A6%E6%9D%9F%EF%BC%88CONSTRAINT%EF%BC%89"><span class="nav-number">38.</span> <span class="nav-text">MySQL 约束（CONSTRAINT）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%B9%E8%B1%A1"><span class="nav-number">39.</span> <span class="nav-text">数据库对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E8%A7%86%E5%9B%BE%EF%BC%88VIEW%EF%BC%89"><span class="nav-number">40.</span> <span class="nav-text">MySQL 视图（VIEW）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%EF%BC%88PROCEDURE%EF%BC%89"><span class="nav-number">41.</span> <span class="nav-text">MySQL 存储过程（PROCEDURE）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E5%AD%98%E5%82%A8%E5%87%BD%E6%95%B0%EF%BC%88FUNCTION%EF%BC%89"><span class="nav-number">42.</span> <span class="nav-text">MySQL 存储函数（FUNCTION）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E4%B8%8E%E5%AD%98%E5%82%A8%E5%87%BD%E6%95%B0%E5%B1%9E%E6%80%A7%E7%9A%84%E6%9F%A5%E7%9C%8B%E3%80%81%E4%BF%AE%E6%94%B9%E3%80%81%E5%88%A0%E9%99%A4"><span class="nav-number">43.</span> <span class="nav-text">存储过程与存储函数属性的查看、修改、删除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E5%8F%98%E9%87%8F"><span class="nav-number">44.</span> <span class="nav-text">MySQL 变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MyQSL-%E5%AE%9A%E4%B9%89%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%A4%84%E7%90%86%E7%A8%8B%E5%BA%8F%EF%BC%88%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%EF%BC%89"><span class="nav-number">45.</span> <span class="nav-text">MyQSL 定义条件与处理程序（异常处理）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="nav-number">46.</span> <span class="nav-text">MySQL 流程控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E6%B8%B8%E6%A0%87%EF%BC%88CURSOR%EF%BC%89"><span class="nav-number">47.</span> <span class="nav-text">MySQL 游标（CURSOR）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-%E8%A7%A6%E5%8F%91%E5%99%A8%EF%BC%88TRIGGER%EF%BC%89"><span class="nav-number">48.</span> <span class="nav-text">MySQL 触发器（TRIGGER）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL8-0-%E6%96%B0%E7%89%B9%E6%80%A7%E2%80%94%E2%80%94%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0"><span class="nav-number">49.</span> <span class="nav-text">MySQL8.0 新特性——窗口函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL8-0-%E6%96%B0%E7%89%B9%E6%80%A7%E2%80%94%E2%80%94%E5%85%AC%E7%94%A8%E8%A1%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">50.</span> <span class="nav-text">MySQL8.0 新特性——公用表表达式</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -181,18 +181,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">48</span>
+          <span class="site-state-item-count">50</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -275,7 +275,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-19 10:42:54" itemprop="dateModified" datetime="2022-06-19T10:42:54+08:00">2022-06-19</time>
+      <time title="修改时间：2022-07-14 10:20:01" itemprop="dateModified" datetime="2022-07-14T10:20:01+08:00">2022-07-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -306,7 +306,7 @@
     }
 </style>
 
-<p>MySQL基本</p>
+<p>MySQL 基本</p>
 <span id="more"></span>
 
 <h2 id="一些概念"><a href="#一些概念" class="headerlink" title="一些概念"></a>一些概念</h2><hr>
@@ -315,7 +315,7 @@
 <hr>
 <p><strong>数据库与数据管理系统</strong></p>
 <p><span class="red bold">数据库（DB）：</span>指存储数据的仓库，其本质是文件系统，它保存一系列有组织的数据</p>
-<p><span class="red bold">数据库管理系统（DBMS）：</span>是一种操作和管理数据库的软件，用于建立、使用和维护数据库，用户可以通过数据库管理系统访问数据库中表内的数据（MySQL是一种数据库管理系统）</p>
+<p><span class="red bold">数据库管理系统（DBMS）：</span>是一种操作和管理数据库的软件，用于建立、使用和维护数据库，用户可以通过数据库管理系统访问数据库中表内的数据（MySQL 是一种数据库管理系统）</p>
 <p><span class="red bold">结构化查询语言（SQL）</span>：专门用于与数据库管理系统通信的语言，指定数据库管理系统对数据库的操作</p>
 <hr>
 <p><strong>关系型数据库与非关系型数据库</strong></p>
@@ -328,7 +328,7 @@
 <blockquote>
 <p>优势：</p>
 <ol>
-<li><p>复杂查询： 可以使用SQL语句在一个表和多个表之间做复杂的数据查询</p>
+<li><p>复杂查询： 可以使用 SQL 语句在一个表和多个表之间做复杂的数据查询</p>
 </li>
 <li><p>事务支持：当多个事务同时访问数据时，数据安全有保证</p>
 </li>
@@ -336,20 +336,20 @@
 </blockquote>
 <p><span class="red bold">非关系型数据库：</span>基于键值对存储数据，性能比关系型数据库高，非关系型数据库又分为以下几种：</p>
 <ul>
-<li><span class="red bold">键值型数据库：</span>基于像map一样的键值对存储数据，查找速度快，缺点是无法像关系型数据库一样使用条件过滤（如 WHERE）.键值型数据库常用于内存缓存。Radis是最流行的键值型数据库</li>
-<li><span class="red bold">文档型数据库：</span>可以存放和获取文档，常见于XML、JSON格式文档，它是将键值型数据库的值变成了文档。MongoDB是最流行的文档型数据库</li>
+<li><span class="red bold">键值型数据库：</span>基于像 map 一样的键值对存储数据，查找速度快，缺点是无法像关系型数据库一样使用条件过滤（如 WHERE）.键值型数据库常用于内存缓存。Radis 是最流行的键值型数据库</li>
+<li><span class="red bold">文档型数据库：</span>可以存放和获取文档，常见于 XML、JSON 格式文档，它是将键值型数据库的值变成了文档。MongoDB 是最流行的文档型数据库</li>
 <li><span class="red bold">搜索引擎数据库：</span>尽管关系型数据库采用了索引提升检索效率，关系型数据库对于全文索引的效率还是很低。搜索引擎数据库是应用于搜索引擎领域的数据存储形式。由于搜索引擎会爬取大量数据，并以特定格式存储，这样在检索的时候才能保证性能最优。核心原理：“倒排索引”。</li>
-<li><span class="red bold">列式数据库：</span>Oracle、MySQL和SQL server采用的都是<span class="red">行式存储</span>列式数据库是将数据按照列存储到数据库中，这样做可以大幅度降低IO，适用于分布文件系统，但功能有限 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%88%97%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93/4884515?fr=aladdin">（列式数据库（百科））</a></li>
+<li><span class="red bold">列式数据库：</span>Oracle、MySQL 和 SQL server 采用的都是<span class="red">行式存储</span>列式数据库是将数据按照列存储到数据库中，这样做可以大幅度降低 IO，适用于分布文件系统，但功能有限 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%88%97%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93/4884515?fr=aladdin">（列式数据库（百科））</a></li>
 <li><span class="red bold">图形数据库：</span>利用图片存储实体之间的关系，以节点和边来实现</li>
 </ul>
 <h2 id="关系型数据库的设计规则"><a href="#关系型数据库的设计规则" class="headerlink" title="关系型数据库的设计规则"></a>关系型数据库的设计规则</h2><ul>
 <li>关系型数据库的典型数结构就是数据表，这些表的组成都是结构化的</li>
 <li>将数据放到表中，再将表放到库中</li>
 <li>一个数据库中可以有多个表，每个表都有一个名字，用来标识自己，<code>表名具有唯一性</code></li>
-<li>表即有一些特性，这些特性定义了数据在表中如何存储，类似Java中“类”的设计</li>
+<li>表即有一些特性，这些特性定义了数据在表中如何存储，类似 Java 中“类”的设计</li>
 </ul>
 <hr>
-<p><strong>表、记录、字段与ORM思想</strong></p>
+<p><strong>表、记录、字段与 ORM 思想</strong></p>
 <table>
 <thead>
 <tr>
@@ -361,10 +361,10 @@
 </tr>
 </tbody></table>
 <p><span class="red bold">E-R（entity-relationship）模型：</span>即实体-联系模型，其中的三个主要概念是：<code>实体集</code>、<code>属性</code>、<code>联系集</code></p>
-<p><span class="red bold">ORM思想：</span>Object Relational Mapping, 即对象关系映射思想，指数据库中的元素与Java中的一些元素一一对应</p>
-<p><span class="red bold">表：</span>上图就是一张表，表是数据的集合，对应于Java中的类</p>
-<p><span class="red bold">记录：</span>表中的一行即为一个记录，对应Java中的对象（实例）</p>
-<p><span class="red bold">字段：</span>表中的任意一列的名称即为字段，字段规定这一列应该填什么，对应Java中的属性</p>
+<p><span class="red bold">ORM 思想：</span>Object Relational Mapping, 即对象关系映射思想，指数据库中的元素与 Java 中的一些元素一一对应</p>
+<p><span class="red bold">表：</span>上图就是一张表，表是数据的集合，对应于 Java 中的类</p>
+<p><span class="red bold">记录：</span>表中的一行即为一个记录，对应 Java 中的对象（实例）</p>
+<p><span class="red bold">字段：</span>表中的任意一列的名称即为字段，字段规定这一列应该填什么，对应 Java 中的属性</p>
 <table>
 <thead>
 <tr>
@@ -416,7 +416,7 @@
 <ul>
 <li>一张表拆成多张表：当一张表中的字段很多时，查询该表一行数据中的某一两个字段会造成大量冗余，因为其他字段的数据我不需要。</li>
 <li>把一些经常要查询的字段做成一张表，不怎么需要查询的字段做成另外一张表，就可以减少查询冗余</li>
-<li>缺点是当查询的字段同时涉及两个表时，多表查询的SQL语句会复杂</li>
+<li>缺点是当查询的字段同时涉及两个表时，多表查询的 SQL 语句会复杂</li>
 </ul>
 <p><span class="red bold">一对一建表规则：</span></p>
 <ul>
@@ -449,19 +449,19 @@
 
 <ul>
 <li>主机地址和端口号用于远程访问数据库</li>
-<li>端口号也适用于访问本机中占用不同端口号的mysql（一台机装有多个mysql）</li>
+<li>端口号也适用于访问本机中占用不同端口号的 mysql（一台机装有多个 mysql）</li>
 </ul>
 <hr>
 <p><strong>显示现有数据库</strong></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">show databases;</code></pre>
 
 <p><span class="red bold">自带数据库：</span></p>
-<p>MySQL自带四个数据库，其中有一个不显示在文件中</p>
+<p>MySQL 自带四个数据库，其中有一个不显示在文件中</p>
 <ul>
 <li><code>information_schema</code>：保存数据库服务器的系统信息（字段名、表名、存储权限）</li>
-<li><code>mysql</code>：MySQL运行时所需系统信息（输出文件夹、当前使用的字符集）</li>
-<li><code>performance_schema</code>：存储当前MySQL性能指标</li>
-<li><code>sys</code>：存储当前MySQL性能指标</li>
+<li><code>mysql</code>：MySQL 运行时所需系统信息（输出文件夹、当前使用的字符集）</li>
+<li><code>performance_schema</code>：存储当前 MySQL 性能指标</li>
+<li><code>sys</code>：存储当前 MySQL 性能指标</li>
 </ul>
 <hr>
 <p><strong>创建数据库</strong></p>
@@ -469,7 +469,7 @@
 
 <hr>
 <p><strong>导入数据库</strong></p>
-<p>向MySQL导入一个备份数据库文件，<span class="red">该命令仅限于命令行使用</span></p>
+<p>向 MySQL 导入一个备份数据库文件，<span class="red">该命令仅限于命令行使用</span></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">source 文件的绝对路径;</code></pre>
 
 <hr>
@@ -498,11 +498,11 @@
 
 <p><span class="red bold">版本差异：</span></p>
 <ul>
-<li>在5.7版本中，数据库默认字符集为latin1，导致输入字符串的列不能输入中文</li>
-<li>在8.0版本中，数据库默认字符集为utf8mb4</li>
+<li>在 5.7 版本中，数据库默认字符集为 latin1，导致输入字符串的列不能输入中文</li>
+<li>在 8.0 版本中，数据库默认字符集为 utf8mb4</li>
 </ul>
-<p><span class="red bold">5.7版本修复方法：</span></p>
-<p>配置my.ini，做如下修改：</p>
+<p><span class="red bold">5.7 版本修复方法：</span></p>
+<p>配置 my.ini，做如下修改：</p>
 <pre class="line-numbers language-ini" data-language="ini"><code class="language-ini">[mysql] # 在其下面增加一句
 ...
 default-charactor-set&#x3D;utf8 #默认字符集
@@ -514,13 +514,13 @@ collation-server&#x3D;utf8_general_ci</code></pre>
 
 <h2 id="数据库图形管理工具"><a href="#数据库图形管理工具" class="headerlink" title="数据库图形管理工具"></a>数据库图形管理工具</h2><p>这里不对图形化管理工具做说明，只说一个错误</p>
 <hr>
-<p><strong>图形化管理工具连接SQL失败</strong></p>
+<p><strong>图形化管理工具连接 SQL 失败</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">Plugin caching_sha2_password could not be loaded</code></pre>
 
-<p>由于8.0mysql增加了通过sha算法的加密规则，某些软件不支持这样的规则，解决方案：</p>
+<p>由于 8.0mysql 增加了通过 sha 算法的加密规则，某些软件不支持这样的规则，解决方案：</p>
 <ul>
 <li>将图形化管理工具升级为最新版或专业版</li>
-<li>将mysql的加密方式更改为原始加密方式，下面是方法：</li>
+<li>将 mysql 的加密方式更改为原始加密方式，下面是方法：</li>
 </ul>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">&#x2F;* 依次执行以下三条指令 *&#x2F;
 use mysql;
@@ -529,7 +529,7 @@ ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_passw
 
 FLUSH PRIVILEGES;</code></pre>
 
-<h2 id="MySQL语言的分类"><a href="#MySQL语言的分类" class="headerlink" title="MySQL语言的分类"></a>MySQL语言的分类</h2><p>SQL语句在功能上主要分为以下3类</p>
+<h2 id="MySQL-语言的分类"><a href="#MySQL-语言的分类" class="headerlink" title="MySQL 语言的分类"></a>MySQL 语言的分类</h2><p>SQL 语句在功能上主要分为以下 3 类</p>
 <p><span class="red bold">DDL（数据定义[define]语言）：</span>定义了不用的数据库、表、视图、索引等数据库对象，还可以用于创建、删除、修改数据库和数据表结构</p>
 <ul>
 <li>主要包括<code>CREATE</code>、<code>DROP</code>、<code>ALTER</code>等</li>
@@ -542,10 +542,10 @@ FLUSH PRIVILEGES;</code></pre>
 <ul>
 <li>主要的语句关键字包括<code>GRANT</code>、<code>REVOKE</code>、<code>COMMIT</code>、<code>ROLLBACK</code>、<code>SAVEPOINT</code>等</li>
 </ul>
-<h2 id="SQL使用规则与格式规范"><a href="#SQL使用规则与格式规范" class="headerlink" title="SQL使用规则与格式规范"></a>SQL使用规则与格式规范</h2><hr>
+<h2 id="SQL-使用规则与格式规范"><a href="#SQL-使用规则与格式规范" class="headerlink" title="SQL 使用规则与格式规范"></a>SQL 使用规则与格式规范</h2><hr>
 <p><strong>语句规则</strong></p>
 <ul>
-<li>SQL语句可以写在一行或多行。为提高可读性，各子句进行分行，必要时缩进</li>
+<li>SQL 语句可以写在一行或多行。为提高可读性，各子句进行分行，必要时缩进</li>
 <li>每条命令以“;”或“\g”或“\G”结束（<span class="red">注意：</span>“\G”和“\g”在控制台使用，不要在图形化管理系统使用）</li>
 <li>关键字不能被缩写和被分行</li>
 <li>关于标点符号：<ul>
@@ -565,8 +565,8 @@ FLUSH PRIVILEGES;</code></pre>
 <ul>
 <li><p>关于大小写：</p>
 <ul>
-<li>由于windows本身不对大小写作区分（即视A.txt和a.txt为同名文件），所以<span class="red">在windows环境下MySQL大小写不敏感</span></li>
-<li>同理由于linux严格区分大小写，<span class="red">在linux环境下MySQL大小写敏感</span>，但也分情况：<ul>
+<li>由于 windows 本身不对大小写作区分（即视 A.txt 和 a.txt 为同名文件），所以<span class="red">在 windows 环境下 MySQL 大小写不敏感</span></li>
+<li>同理由于 linux 严格区分大小写，<span class="red">在 linux 环境下 MySQL 大小写敏感</span>，但也分情况：<ul>
 <li>数据库名、表名、表的别名、变量名严格区分</li>
 <li>关键字、函数名、字段名、字段的别名不区分</li>
 </ul>
@@ -580,7 +580,7 @@ FLUSH PRIVILEGES;</code></pre>
 </ul>
 </li>
 </ul>
-<h2 id="SQL注释"><a href="#SQL注释" class="headerlink" title="SQL注释"></a>SQL注释</h2><hr>
+<h2 id="SQL-注释"><a href="#SQL-注释" class="headerlink" title="SQL 注释"></a>SQL 注释</h2><hr>
 <p><strong>单行注释（通用）</strong></p>
 <p>这种单行注释是数据库关系统通用的方式</p>
 <p><span class="red">注意：</span>使用“–”作为单行注释时，“–”后面必须跟一个空格</p>
@@ -588,7 +588,7 @@ FLUSH PRIVILEGES;</code></pre>
 
 <hr>
 <p><strong>单行注释（特有）</strong></p>
-<p>这种单行注释是MySQL通用的方式</p>
+<p>这种单行注释是 MySQL 通用的方式</p>
 <p><span class="red">注意：</span>使用“#”作为单行注释时，后面不需要跟空格</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL"># 这也是一行注释</code></pre>
 
@@ -601,8 +601,8 @@ FLUSH PRIVILEGES;</code></pre>
 注释
 *&#x2F;</code></pre>
 
-<h2 id="SQL基本查询（重要）"><a href="#SQL基本查询（重要）" class="headerlink" title="SQL基本查询（重要）"></a>SQL基本查询（重要）</h2><hr>
-<p><strong>基本SQL查询语句</strong></p>
+<h2 id="SQL-基本查询（重要）"><a href="#SQL-基本查询（重要）" class="headerlink" title="SQL 基本查询（重要）"></a>SQL 基本查询（重要）</h2><hr>
+<p><strong>基本 SQL 查询语句</strong></p>
 <p>字段可以是单纯的字段名，也可以规定一些运算（见列的别名例子）</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 其中，若字段中写 * ，则表示所有字段
 SELECT 字段1（列）, 字段2, ... FROM 表名;</code></pre>
@@ -613,7 +613,7 @@ SELECT 字段1（列）, 字段2, ... FROM 表名;</code></pre>
 <p><span class="red">意义：</span>指给选择的列再起一个另外的名称，该语句可以穿插在各种语句中，可以使用中文</p>
 <p><span class="red bold">规范：</span></p>
 <ul>
-<li>不建议常略AS（alias）</li>
+<li>不建议常略 AS（alias）</li>
 <li>字段的别名使用 双引号 引起</li>
 <li><span class="red">表的别名不要使用双引号和单引号，若有特殊字符，使用着重号引起</span></li>
 </ul>
@@ -635,14 +635,14 @@ SELECT DISTINCT &#96;name&#96;, pwd FROM &#96;user&#96;;</code></pre>
 
 <hr>
 <p><strong>空值参与运算</strong></p>
-<p><span class="red bold">空值：</span>即为NULL，需要注意的是空值并不等同于 数字0 或 空字符串’’</p>
+<p><span class="red bold">空值：</span>即为 NULL，需要注意的是空值并不等同于 数字 0 或 空字符串’’</p>
 <ul>
-<li><span class="red">NULL值参与任何运算，结果都会为NULL</span></li>
+<li><span class="red">NULL 值参与任何运算，结果都会为 NULL</span></li>
 </ul>
-<p><span class="red bold">解决方法：</span>涉及单行函数 <code>IFNULL(字段, 替换值)</code>，若当前行的该字段为NULL，则该函数会将其替换为后面的值</p>
+<p><span class="red bold">解决方法：</span>涉及单行函数 <code>IFNULL(字段, 替换值)</code>，若当前行的该字段为 NULL，则该函数会将其替换为后面的值</p>
 <hr>
 <p><strong>着重号</strong></p>
-<p>若出现字段名和表名与SQL的保留字（或称关键字）、函数名重名，则需要将字段名和表名使用 着重号 引起。着重号是数字键1左边那个点“&#96;” </p>
+<p>若出现字段名和表名与 SQL 的保留字（或称关键字）、函数名重名，则需要将字段名和表名使用 着重号 引起。着重号是数字键 1 左边那个点“&#96;”</p>
 <ul>
 <li><span class="red">注意：</span>若别名带有空格，在排序或其他场景再被引用时，应该使用<span class="red">着重号</span>将别名引起</li>
 </ul>
@@ -660,14 +660,14 @@ SELECT &#39;学生&#39;, &#96;name&#96;, &#96;age&#96; FROM student;</code></pre
 -- 缩写也行
 DESC 表名;</code></pre>
 
-<h2 id="SQL过滤条件与运算符"><a href="#SQL过滤条件与运算符" class="headerlink" title="SQL过滤条件与运算符"></a>SQL过滤条件与运算符</h2><hr>
+<h2 id="SQL-过滤条件与运算符"><a href="#SQL-过滤条件与运算符" class="headerlink" title="SQL 过滤条件与运算符"></a>SQL 过滤条件与运算符</h2><hr>
 <p><strong>过滤</strong></p>
 <p>要在表中过滤出满足某个条件的数据集，使用以下方法：</p>
 <p><span class="red bold">注意：</span></p>
 <ul>
-<li>在筛选条件中的字符串（如 <code>name</code> &#x3D; ‘Jeb’ 中的jeb）是区分大小写的（在MySQL中）</li>
-<li>WHERE语句 必须在 FROM语句 之后</li>
-<li><span class="red">字段的别名不能在过滤条件中出现（详见SQL语句的执行顺序）</span></li>
+<li>在筛选条件中的字符串（如 <code>name</code> &#x3D; ‘Jeb’ 中的 jeb）是区分大小写的（在 MySQL 中）</li>
+<li>WHERE 语句 必须在 FROM 语句 之后</li>
+<li><span class="red">字段的别名不能在过滤条件中出现（详见 SQL 语句的执行顺序）</span></li>
 </ul>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT * FROM student
 -- 筛选条件
@@ -696,7 +696,7 @@ WHERE 条件（如：&#96;name&#96; &#x3D; &#39;张三&#39;）;</code></pre>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">&#x2F;（带4位小数）</td>
+<td align="center">&#x2F;（带 4 位小数）</td>
 <td align="center">div（整除）</td>
 </tr>
 <tr>
@@ -706,18 +706,18 @@ WHERE 条件（如：&#96;name&#96; &#x3D; &#39;张三&#39;）;</code></pre>
 </tbody></table>
 <p><span class="red">注意：</span></p>
 <ul>
-<li>在SQL中，加号“+”只有相加的功能，没有连接的功能，因此 100 + ‘1’ 会将’1’转换为数值，其结果为101，而不是Java中的”1001”</li>
-<li>并且，若该值不能转换为数值，则视为0，因此 100 + ‘A’ 的结果是100。’A’ + ‘B’ 的结果也为 0。若要实现字符串拼接，涉及单行函数 <code>CONCAT()</code></li>
-<li>并且*2，上面已经说过NULL参与任何运算结果都是NULL，因此 100 + NULL 结果为NULL</li>
+<li>在 SQL 中，加号“+”只有相加的功能，没有连接的功能，因此 100 + ‘1’ 会将’1’转换为数值，其结果为 101，而不是 Java 中的”1001”</li>
+<li>并且，若该值不能转换为数值，则视为 0，因此 100 + ‘A’ 的结果是 100。’A’ + ‘B’ 的结果也为 0。若要实现字符串拼接，涉及单行函数 <code>CONCAT()</code></li>
+<li>并且*2，上面已经说过 NULL 参与任何运算结果都是 NULL，因此 100 + NULL 结果为 NULL</li>
 </ul>
 <p><span class="red">结果的类型转换：</span></p>
 <ul>
 <li>加减乘：整型与整型计算-&gt;整型；浮点型与任何类型计算-&gt;浮点型</li>
-<li>除：当分母为0时，结果为NULL</li>
+<li>除：当分母为 0 时，结果为 NULL</li>
 <li>取模：取模的结果的正负与运算符左边的数一致</li>
 </ul>
 <p><span class="red bold">比较运算符——符号：</span></p>
-<p>比较运算符用于对表达式左边的操作数和表达式右边的操作数进行比较，结果为真返回1，结果为假返回0，其他情况返回NULL</p>
+<p>比较运算符用于对表达式左边的操作数和表达式右边的操作数进行比较，结果为真返回 1，结果为假返回 0，其他情况返回 NULL</p>
 <table>
 <thead>
 <tr>
@@ -762,20 +762,20 @@ WHERE 条件（如：&#96;name&#96; &#x3D; &#39;张三&#39;）;</code></pre>
 <td align="center"></td>
 </tr>
 </tbody></table>
-<p><span class="red">安全等于：</span>安全等于专门用于解决“&#x3D;”无法对比NULL值的问题。</p>
+<p><span class="red">安全等于：</span>安全等于专门用于解决“&#x3D;”无法对比 NULL 值的问题。</p>
 <ul>
-<li>在没有NULL参与运算时，“&#x3D;”与“&lt;&#x3D;&gt;”的效果一样</li>
-<li>在有NULL参与运算时：<ul>
-<li>“&#x3D;”会返回NULL</li>
-<li>“&lt;&#x3D;&gt;”会对比两边是否都为NULL，是则返回1，否则返回0（因此：NULL &lt;&#x3D;&gt; NULL 的结果为1）</li>
+<li>在没有 NULL 参与运算时，“&#x3D;”与“&lt;&#x3D;&gt;”的效果一样</li>
+<li>在有 NULL 参与运算时：<ul>
+<li>“&#x3D;”会返回 NULL</li>
+<li>“&lt;&#x3D;&gt;”会对比两边是否都为 NULL，是则返回 1，否则返回 0（因此：NULL &lt;&#x3D;&gt; NULL 的结果为 1）</li>
 </ul>
 </li>
 </ul>
 <p><span class="red">注意：</span></p>
 <ul>
-<li>对于字符串与数值，SQL同样是会尝试把它转换成数值再进行比较，若转换不成功则视字符串为0</li>
-<li>对于字符串与字符串比较，那就是比较他们的ASCII码了，<span class="red">并且与长度无关</span>（如 ‘BC’ &gt; ‘BBC’ 的结果为 1）</li>
-<li>有NULL参与的运算，结果都为NULL<span class="red">（有个例外：安全等于）</span>（特别注意不要尝试使用 <code>WHERE 字段 = NULL</code> 的方法查询出字段为NULL的行，因为只有比较结果为1的行才会被过滤出来，结果为NULL的会被舍弃）</li>
+<li>对于字符串与数值，SQL 同样是会尝试把它转换成数值再进行比较，若转换不成功则视字符串为 0</li>
+<li>对于字符串与字符串比较，那就是比较他们的 ASCII 码了，<span class="red">并且与长度无关</span>（如 ‘BC’ &gt; ‘BBC’ 的结果为 1）</li>
+<li>有 NULL 参与的运算，结果都为 NULL<span class="red">（有个例外：安全等于）</span>（特别注意不要尝试使用 <code>WHERE 字段 = NULL</code> 的方法查询出字段为 NULL 的行，因为只有比较结果为 1 的行才会被过滤出来，结果为 NULL 的会被舍弃）</li>
 </ul>
 <p><span class="red bold">比较运算符——关键字</span></p>
 <table>
@@ -869,9 +869,12 @@ WHERE 条件（如：&#96;name&#96; &#x3D; &#39;张三&#39;）;</code></pre>
 </tbody></table>
 <p><span class="red">注意：</span></p>
 <ul>
-<li><code>AND</code> 和 <code>OR</code> 可以一起使用，<code>AND</code> 的优先级比 <code>OR</code> 高</li>
-<li><code>NOT</code> 加在任意完整语句前会有非&#x2F;取反的效果  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">id NOT BETWEEN </code></pre></li>
-<li>任何双目运算符如 <code>AND</code>、<code>OR</code> 和 <code>XOR</code> 及其符号表示，它们左右的表达式必须是完整的  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 错误写法
+<li><p><code>AND</code> 和 <code>OR</code> 可以一起使用，<code>AND</code> 的优先级比 <code>OR</code> 高</p>
+</li>
+<li><p><code>NOT</code> 加在任意完整语句前会有非&#x2F;取反的效果</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">id NOT BETWEEN</code></pre></li>
+<li><p>任何双目运算符如 <code>AND</code>、<code>OR</code> 和 <code>XOR</code> 及其符号表示，它们左右的表达式必须是完整的</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 错误写法
 id &#x3D; 10 OR 20;
 
 -- 正确写法
@@ -927,14 +930,14 @@ SELECT 姓名, 工种 FROM employees WHERE 部门编号 BETWEEN 80 AND 100;
 
 SELECT 姓名, 工资, 管理者ID FROM employees WHERE manager_id IN (100,101,110);</code></pre>
 
-<h2 id="SQL排序（ORDER-BY）"><a href="#SQL排序（ORDER-BY）" class="headerlink" title="SQL排序（ORDER BY）"></a>SQL排序（ORDER BY）</h2><hr>
+<h2 id="SQL-排序（ORDER-BY）"><a href="#SQL-排序（ORDER-BY）" class="headerlink" title="SQL 排序（ORDER BY）"></a>SQL 排序（ORDER BY）</h2><hr>
 <p><strong>一级排序</strong></p>
 <p><span class="red bold">注意：</span></p>
 <ul>
 <li>若不显式指定排序，结果集将按照数据加入到数据库的时间先后顺序进行排序</li>
 <li>排序必须在过滤之后（若存在过滤）</li>
 <li><span class="red">字段的别名可以在排序中使用</span></li>
-<li>虽然字段的别名在Navicat中不会提示，但别名在排序语句中<span class="red">不需要加任何引号</span>，字段的别名应该避免空格</li>
+<li>虽然字段的别名在 Navicat 中不会提示，但别名在排序语句中<span class="red">不需要加任何引号</span>，字段的别名应该避免空格</li>
 </ul>
 <p><span class="red bold">排序：</span>通过 <code>ORDER BY 字段名</code> 指定通过某字段的默认字典进行 <span class="red">升序（默认）</span> 排序</p>
 <p><span class="red bold">指定排序顺序：</span>通过在字段名后添加升序（ascend）或降序（descend）关键字，指定排序顺序</p>
@@ -956,7 +959,7 @@ SELECT 姓名, 工资, 管理者ID FROM employees WHERE manager_id IN (100,101,1
 </tbody></table>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 别名在排序
 SELECT &#96;name&#96;, salary * 12 AS &quot;annual_salary&quot;
-FROM employees 
+FROM employees
 WHERE manager_id IN (100,101,110)
 ORDER BY annual_salary DESC;</code></pre>
 
@@ -966,21 +969,21 @@ ORDER BY annual_salary DESC;</code></pre>
 <p><span class="red">注意：</span>不加排序规则，默认升序，建议写明规则</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 先按照ten_type降序，ten_type相同，则按照id降序
 SELECT id
-, typeId * 10 AS &quot;ten_type&quot; FROM book 
+, typeId * 10 AS &quot;ten_type&quot; FROM book
 ORDER BY ten_type DESC, id DESC;</code></pre>
 
-<h2 id="SQL分页（LIMIT-OFFSET）"><a href="#SQL分页（LIMIT-OFFSET）" class="headerlink" title="SQL分页（LIMIT OFFSET）"></a>SQL分页（LIMIT OFFSET）</h2><p>通常用户不需要一次性浏览太多的记录，因此实际上分页不必不可少的，使用 <code>LIMIT 偏移量, 每页数据量</code> 进行分页</p>
+<h2 id="SQL-分页（LIMIT-OFFSET）"><a href="#SQL-分页（LIMIT-OFFSET）" class="headerlink" title="SQL 分页（LIMIT OFFSET）"></a>SQL 分页（LIMIT OFFSET）</h2><p>通常用户不需要一次性浏览太多的记录，因此实际上分页不必不可少的，使用 <code>LIMIT 偏移量, 每页数据量</code> 进行分页</p>
 <p><span class="red bold">注意：</span></p>
 <ul>
 <li><code>LIMIT</code> 必须在排序之后</li>
-<li><code>LIMIT</code> 还有取前x条数据的功能，<code>LIMIT 0, x</code> 可以写成 <code>LIMIT x</code></li>
-<li><code>LIMIT</code> 关键字不适用于SQL server、DB2、Oracle</li>
+<li><code>LIMIT</code> 还有取前 x 条数据的功能，<code>LIMIT 0, x</code> 可以写成 <code>LIMIT x</code></li>
+<li><code>LIMIT</code> 关键字不适用于 SQL server、DB2、Oracle</li>
 </ul>
-<p><span class="red bold">公式：</span>当每页显示size条记录，此时显示第page页时，语句为：</p>
+<p><span class="red bold">公式：</span>当每页显示 size 条记录，此时显示第 page 页时，语句为：</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">LIMIT (page - 1) * size, size;</code></pre>
 
 <hr>
-<p><strong>MySQL8.0新排序关键字</strong></p>
+<p><strong>MySQL8.0 新排序关键字</strong></p>
 <p>加入 <code>OFFSET</code> 关键字，现在排序语句可以写成：</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">LIMIT 每页数据量 OFFSET 偏移量</code></pre>
 
@@ -988,7 +991,7 @@ ORDER BY ten_type DESC, id DESC;</code></pre>
 ORDER BY salary DESC
 LIMIT 1;</code></pre>
 
-<h2 id="SQL多表查询（SQL92）"><a href="#SQL多表查询（SQL92）" class="headerlink" title="SQL多表查询（SQL92）"></a>SQL多表查询（SQL92）</h2><table>
+<h2 id="SQL-多表查询（SQL92）"><a href="#SQL-多表查询（SQL92）" class="headerlink" title="SQL 多表查询（SQL92）"></a>SQL 多表查询（SQL92）</h2><table>
 <thead>
 <tr>
 <th align="center">多表查询</th>
@@ -1002,10 +1005,10 @@ LIMIT 1;</code></pre>
 <p><strong>为什么需要多表查询</strong></p>
 <p>下面四点根据这个网址的内容总结：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_57001006/article/details/123391618">为什么要使用多表查询</a></p>
 <ul>
-<li>减少数据冗余——原因1</li>
-<li>减少IO（将数据加载到内存的次数）——原因2</li>
+<li>减少数据冗余——原因 1</li>
+<li>减少 IO（将数据加载到内存的次数）——原因 2</li>
 <li>减少维护难度</li>
-<li>减少同步查询冲突——原因4</li>
+<li>减少同步查询冲突——原因 4</li>
 </ul>
 <hr>
 <p><strong>多表查询——笛卡尔积错误</strong></p>
@@ -1049,7 +1052,7 @@ SELECT employee_id, department_name
 FROM employees, departments
 WHERE employees.&#96;department_id&#96; &#x3D; departments.&#96;department_id&#96;</code></pre>
 
-<p><span class="red">注意：</span>若有n个表需要连接，则至少存在n-1个连接条件</p>
+<p><span class="red">注意：</span>若有 n 个表需要连接，则至少存在 n-1 个连接条件</p>
 <hr>
 <p><strong>多表查询注意事项</strong></p>
 <p><span class="red bold">模棱两可的字段：</span></p>
@@ -1097,11 +1100,11 @@ WHERE a.age BETWEEN b.lower_limit AND b.upper_limit</code></pre>
 <li>还包括了右表中不与连接条件匹配的记录，则称<span class="red">右外连接</span></li>
 <li>还包括了左表和右表中不与连接条件匹配的记录，则称<span class="red">满外连接</span></li>
 </ul>
-<p><span class="red">注意：</span>SQL92和SQL99语法分别有两种方式实现外连接</p>
+<p><span class="red">注意：</span>SQL92 和 SQL99 语法分别有两种方式实现外连接</p>
 <hr>
-<p><strong>SQL92语法实现外连接</strong></p>
-<p><span class="red">注意：</span>MySQL不支持SQL92中外连接写法（Oracle支持）</p>
-<p>SQL92的语法为“谁数据少，就给谁加点数据”</p>
+<p><strong>SQL92 语法实现外连接</strong></p>
+<p><span class="red">注意：</span>MySQL 不支持 SQL92 中外连接写法（Oracle 支持）</p>
+<p>SQL92 的语法为“谁数据少，就给谁加点数据”</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 这是个左外连接，它给右表增加了数据，完善了左表的链接匹配
 SELECT employee_id, department_name
 FROM employees e, departments database
@@ -1123,8 +1126,8 @@ WHERE e.department_id &#x3D; d.department_id(+);</code></pre>
 <td align="center"><img src="https://s1.ax1x.com/2022/05/13/Oyi2fP.md.png" alt="Oyi2fP.md.png"></td>
 </tr>
 </tbody></table>
-<h2 id="SQL多表查询（SQL99）"><a href="#SQL多表查询（SQL99）" class="headerlink" title="SQL多表查询（SQL99）"></a>SQL多表查询（SQL99）</h2><hr>
-<p><strong>SQL99语法实现内连接</strong></p>
+<h2 id="SQL-多表查询（SQL99）"><a href="#SQL-多表查询（SQL99）" class="headerlink" title="SQL 多表查询（SQL99）"></a>SQL 多表查询（SQL99）</h2><hr>
+<p><strong>SQL99 语法实现内连接</strong></p>
 <p><span class="red bold">规范和建议：</span></p>
 <ul>
 <li>超过三个表连接的情况，禁止使用 <code>JOIN</code></li>
@@ -1137,29 +1140,29 @@ SELECT last_name, department_name
 FROM employees e JOIN departments d
 ON e.department_id &#x3D; d.department_id;</code></pre>
 
-<p>这个就可以看成是一种合体（？）departments表要连接到employees表，并且声明一个条件，因此多表连接就是：每个要连接的表都对应一对 <code>JOIN ... ON ...</code>，如下：</p>
+<p>这个就可以看成是一种合体（？）departments 表要连接到 employees 表，并且声明一个条件，因此多表连接就是：每个要连接的表都对应一对 <code>JOIN ... ON ...</code>，如下：</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 多表连接
 SELECT last_name, department_name
-FROM employees e 
+FROM employees e
 JOIN departments d ON e.department_id &#x3D; d.department_id
 JOIN locations l ON d.location_id &#x3D; l.location_id;</code></pre>
 
 <p><span class="red">另一种有趣的理解：</span>一个表要加入（JOIN）到原表的团队中，他需要有一个联系人（指与原表有某种联系，对应 ON + 连接条件）</p>
 <p><img src="https://s1.ax1x.com/2022/05/13/OykhZQ.png" alt="OykhZQ.png"></p>
 <hr>
-<p><strong>SQL99语法实现外连接</strong></p>
+<p><strong>SQL99 语法实现外连接</strong></p>
 <p>左外连接就是 <code>LEFT OUTER JOIN</code> 或 <code>LEFT JOIN</code></p>
 <p>右外连接就是 <code>RIGHT OUTER JOIN</code> 或 <code>RIGHT JOIN</code></p>
-<p>满外连接肯定就是 <code>FULL OUTER JOIN</code> 或 <code>FULL JOIN</code> 啦，戳啦，MySQL又不支持嘛，焯！</p>
-<p><span class="red">注意：</span>Oracle支持上面六条（包括省略了 <code>OUTER</code> 的）连接语句</p>
-<h2 id="SQL联合查询结果（UNION-ALL）"><a href="#SQL联合查询结果（UNION-ALL）" class="headerlink" title="SQL联合查询结果（UNION ALL）"></a>SQL联合查询结果（UNION ALL）</h2><p><span class="red bold">联合查询结果：</span>使用 <code>UNION ALL</code> 将该关键字两边的查询结果取并集</p>
+<p>满外连接肯定就是 <code>FULL OUTER JOIN</code> 或 <code>FULL JOIN</code> 啦，戳啦，MySQL 又不支持嘛，焯！</p>
+<p><span class="red">注意：</span>Oracle 支持上面六条（包括省略了 <code>OUTER</code> 的）连接语句</p>
+<h2 id="SQL-联合查询结果（UNION-ALL）"><a href="#SQL-联合查询结果（UNION-ALL）" class="headerlink" title="SQL 联合查询结果（UNION ALL）"></a>SQL 联合查询结果（UNION ALL）</h2><p><span class="red bold">联合查询结果：</span>使用 <code>UNION ALL</code> 将该关键字两边的查询结果取并集</p>
 <p><span class="red bold">联合查询结果并去重：</span>使用 <code>UNION</code> 将该关键字两边的查询结果取并集<span class="red">并且去除重复记录</span></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT * FROM employees WHERE email LIKE &#39;%a%&#39;
 UNION
 SELECT * FROM employees WHERE department_id &gt; 90;</code></pre>
 
 <p><span class="red">注意：</span>因为 <code>UNION</code> 需要进行去重，因此其效率会比 <code>UNION ALL</code> 要慢，能用 <code>UNION ALL</code> 的地方不会使用 <code>UNION</code>，通常会在定下过滤条件时避免两个结果有重复</p>
-<h2 id="MySQL实现7种JOIN查询（重要）"><a href="#MySQL实现7种JOIN查询（重要）" class="headerlink" title="MySQL实现7种JOIN查询（重要）"></a>MySQL实现7种JOIN查询（重要）</h2><p><img src="https://bkimg.cdn.bcebos.com/pic/8c1001e93901213f5a0febf15fe736d12f2e95db?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2U4MA==,g_7,xp_5,yp_5/format,f_auto" alt="SQL joins"></p>
+<h2 id="MySQL-实现-7-种-JOIN-查询（重要）"><a href="#MySQL-实现-7-种-JOIN-查询（重要）" class="headerlink" title="MySQL 实现 7 种 JOIN 查询（重要）"></a>MySQL 实现 7 种 JOIN 查询（重要）</h2><p><img src="https://bkimg.cdn.bcebos.com/pic/8c1001e93901213f5a0febf15fe736d12f2e95db?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2U4MA==,g_7,xp_5,yp_5/format,f_auto" alt="SQL joins"></p>
 <hr>
 <p><strong>中图实现</strong></p>
 <p><img src="https://s1.ax1x.com/2022/05/13/OyMwlj.png" alt="OyMwlj.png"></p>
@@ -1239,20 +1242,20 @@ FROM employees e
 LEFT JOIN departments d ON e.department_id &#x3D; d.department_id
 WHERE d.department_id IS NULL;</code></pre>
 
-<h2 id="SQL99新特性-自然连接（NATURAL-JOIN）"><a href="#SQL99新特性-自然连接（NATURAL-JOIN）" class="headerlink" title="SQL99新特性-自然连接（NATURAL JOIN）"></a>SQL99新特性-自然连接（NATURAL JOIN）</h2><p>使用 <code>NATURAL JOIN</code>，则SQL将自动寻找两个表中的相同字段作为连接条件进行连接，从而可以不写连接条件</p>
+<h2 id="SQL99-新特性-自然连接（NATURAL-JOIN）"><a href="#SQL99-新特性-自然连接（NATURAL-JOIN）" class="headerlink" title="SQL99 新特性-自然连接（NATURAL JOIN）"></a>SQL99 新特性-自然连接（NATURAL JOIN）</h2><p>使用 <code>NATURAL JOIN</code>，则 SQL 将自动寻找两个表中的相同字段作为连接条件进行连接，从而可以不写连接条件</p>
 <p><span class="red">注意：</span>因为这是自动的，因此有几个相同的字段就会使用几个连接条件，在某些时候效率还是不如 <code>JOIN ON</code>，因此不建议使用</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT employee_id, department_id
 FROM employees e
 NATURAL JOIN departments d</code></pre>
 
-<h2 id="SQL99新特性-指定等值连接字段（USING）"><a href="#SQL99新特性-指定等值连接字段（USING）" class="headerlink" title="SQL99新特性-指定等值连接字段（USING）"></a>SQL99新特性-指定等值连接字段（USING）</h2><p><span class="red">注意：</span><code>USING</code> 不适用于自连接</p>
+<h2 id="SQL99-新特性-指定等值连接字段（USING）"><a href="#SQL99-新特性-指定等值连接字段（USING）" class="headerlink" title="SQL99 新特性-指定等值连接字段（USING）"></a>SQL99 新特性-指定等值连接字段（USING）</h2><p><span class="red">注意：</span><code>USING</code> 不适用于自连接</p>
 <p>若两个表中存在相同的字段时，使用 <code>USING (字段名)</code> 指定等值连接字段</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT employee_id, department_id
 FROM employees e
 LEFT JOIN departments d USING (department_id);</code></pre>
 
-<h2 id="MySQL单行函数——基本、字符串、时间"><a href="#MySQL单行函数——基本、字符串、时间" class="headerlink" title="MySQL单行函数——基本、字符串、时间"></a>MySQL单行函数——基本、字符串、时间</h2><p>不同DBMS之间的函数差异很大，大部分DBMS都有自己特定的函数，因此在使用不同DBMS时需要注意，这里写的是<span class="red">MySQL用函数</span></p>
-<p><span class="red bold">单行函数：</span>单行函数指的是该函数仅作用于一行（或一个）数据，<span class="red">一行（或一个）数据返回一个值</span>，并且当参数指定为一个字段名时，MySQL会将该函数循环作用于每一行的该字段，并不是指这个函数占一行</p>
+<h2 id="MySQL-单行函数——基本、字符串、时间"><a href="#MySQL-单行函数——基本、字符串、时间" class="headerlink" title="MySQL 单行函数——基本、字符串、时间"></a>MySQL 单行函数——基本、字符串、时间</h2><p>不同 DBMS 之间的函数差异很大，大部分 DBMS 都有自己特定的函数，因此在使用不同 DBMS 时需要注意，这里写的是<span class="red">MySQL 用函数</span></p>
+<p><span class="red bold">单行函数：</span>单行函数指的是该函数仅作用于一行（或一个）数据，<span class="red">一行（或一个）数据返回一个值</span>，并且当参数指定为一个字段名时，MySQL 会将该函数循环作用于每一行的该字段，并不是指这个函数占一行</p>
 <hr>
 <p><strong>数值函数——基本函数</strong></p>
 <p><span class="red bold">注意：</span>（包括所有数值函数）这些函数只用在字符串就太可惜了，这里的参数可以传入字段名，这是当然的</p>
@@ -1293,11 +1296,11 @@ LEFT JOIN departments d USING (department_id);</code></pre>
 </tr>
 <tr>
 <td align="center">RAND()</td>
-<td align="center">返回0~1之间的随机数</td>
+<td align="center">返回 0~1 之间的随机数</td>
 </tr>
 <tr>
 <td align="center">RAND(x)</td>
-<td align="center">返回0~1之间的随机数，x作为种子值<br />相同的x产生的随机数相同</td>
+<td align="center">返回 0~1 之间的随机数，x 作为种子值<br />相同的 x 产生的随机数相同</td>
 </tr>
 <tr>
 <td align="center">ROUND(x)</td>
@@ -1305,15 +1308,15 @@ LEFT JOIN departments d USING (department_id);</code></pre>
 </tr>
 <tr>
 <td align="center">ROUND(a, b)</td>
-<td align="center">将传入的a四舍五入并保留b位小数<br />（b可以是负数）</td>
+<td align="center">将传入的 a 四舍五入并保留 b 位小数<br />（b 可以是负数）</td>
 </tr>
 <tr>
 <td align="center">FORMAT(a, b)</td>
-<td align="center">同上（但若b&lt;&#x3D;0，则只保留整数位）</td>
+<td align="center">同上（但若 b&lt;&#x3D;0，则只保留整数位）</td>
 </tr>
 <tr>
 <td align="center">TRUNCATE(a,b)</td>
-<td align="center">截断函数，将传入的a不作任何舍入保留b位小数</td>
+<td align="center">截断函数，将传入的 a 不作任何舍入保留 b 位小数</td>
 </tr>
 <tr>
 <td align="center">SQRT(X)</td>
@@ -1340,8 +1343,8 @@ LEFT JOIN departments d USING (department_id);</code></pre>
 </tbody></table>
 <p><span class="red bold">注意：</span>以下三角函数参数</p>
 <ul>
-<li>rad表示弧度</li>
-<li>deg表示角度</li>
+<li>rad 表示弧度</li>
+<li>deg 表示角度</li>
 </ul>
 <table>
 <thead>
@@ -1394,7 +1397,7 @@ LEFT JOIN departments d USING (department_id);</code></pre>
 </thead>
 <tbody><tr>
 <td align="center">POW(a,b)</td>
-<td align="center">返回a的b次方</td>
+<td align="center">返回 a 的 b 次方</td>
 </tr>
 <tr>
 <td align="center">POWER(a, b)</td>
@@ -1402,11 +1405,11 @@ LEFT JOIN departments d USING (department_id);</code></pre>
 </tr>
 <tr>
 <td align="center">EXP(x)</td>
-<td align="center">返回e的x次方</td>
+<td align="center">返回 e 的 x 次方</td>
 </tr>
 <tr>
 <td align="center">LN(x)</td>
-<td align="center">返回以e为底x的对数</td>
+<td align="center">返回以 e 为底 x 的对数</td>
 </tr>
 <tr>
 <td align="center">LOG(x)</td>
@@ -1414,11 +1417,11 @@ LEFT JOIN departments d USING (department_id);</code></pre>
 </tr>
 <tr>
 <td align="center">LOG10(x)</td>
-<td align="center">返回以10为底x的对数</td>
+<td align="center">返回以 10 为底 x 的对数</td>
 </tr>
 <tr>
 <td align="center">LOG2(x)</td>
-<td align="center">返回以2为底x的对数</td>
+<td align="center">返回以 2 为底 x 的对数</td>
 </tr>
 </tbody></table>
 <hr>
@@ -1444,7 +1447,7 @@ LEFT JOIN departments d USING (department_id);</code></pre>
 </tr>
 <tr>
 <td align="center">CONV(x, a, b)</td>
-<td align="center">返回x在a进制的情况下转换为b进制的结果</td>
+<td align="center">返回 x 在 a 进制的情况下转换为 b 进制的结果</td>
 </tr>
 </tbody></table>
 <hr>
@@ -1459,11 +1462,11 @@ LEFT JOIN departments d USING (department_id);</code></pre>
 </thead>
 <tbody><tr>
 <td align="center">CONVERT(str USING encoding)</td>
-<td align="center">将str的编码格式变为encoding</td>
+<td align="center">将 str 的编码格式变为 encoding</td>
 </tr>
 <tr>
 <td align="center">ASCII(str)</td>
-<td align="center">返回字符串第一个字符的ASCII码</td>
+<td align="center">返回字符串第一个字符的 ASCII 码</td>
 </tr>
 <tr>
 <td align="center">CHAR_LENGTH(str)</td>
@@ -1471,7 +1474,7 @@ LEFT JOIN departments d USING (department_id);</code></pre>
 </tr>
 <tr>
 <td align="center">LENGTH(str)</td>
-<td align="center">返回字符串占用的<span class="red">字节个数</span><br />（utf8里面每个汉字占3个字节）</td>
+<td align="center">返回字符串占用的<span class="red">字节个数</span><br />（utf8 里面每个汉字占 3 个字节）</td>
 </tr>
 <tr>
 <td align="center">CONCAT(str1, str2, …)</td>
@@ -1479,14 +1482,18 @@ LEFT JOIN departments d USING (department_id);</code></pre>
 </tr>
 <tr>
 <td align="center">CONCAT_WS(s, str1, str2, …)</td>
-<td align="center">字符串分隔连接函数<br />并且使用分隔符s将他们隔开</td>
+<td align="center">字符串分隔连接函数<br />并且使用分隔符 s 将他们隔开</td>
+</tr>
+<tr>
+<td align="center">GROUP_CONCAT<br />([DISTINCT] 字段名 <br />[ORDER BY 字段名] <br />SEPARATOR “分隔符”)</td>
+<td align="center">将该字段下同一分组的值使用分隔符连接<br />（可选）去除同一分组下该字段重复的值<br />（可选）同一分组该字段的值按照指定方式排序</td>
 </tr>
 <tr>
 <td align="center">INSERT(str, index, len, replacestr)</td>
-<td align="center">字符串插入型替换函数<br />将str中从第index个字符开始的len个字符<br />替换为replacestr</td>
+<td align="center">字符串插入型替换函数<br />将 str 中从第 index 个字符开始的 len 个字符<br />替换为 replacestr</td>
 </tr>
 </tbody></table>
-<p><span class="red bold">注意！：</span>SQL的字符索引从1开始算，如：</p>
+<p><span class="red bold">注意！：</span>SQL 的字符索引从 1 开始算，如：</p>
 <pre><code>INSERT(&#39;hello&#39;, 2, 3, uuuuu)
 的结果为
 huuuuuo
@@ -1500,7 +1507,7 @@ huuuuuo
 </thead>
 <tbody><tr>
 <td align="center">REPLACE(str, a, b)</td>
-<td align="center">将字符串中所有a字符串替换为b字符串<br />若没有a字符串则不替换</td>
+<td align="center">将字符串中所有 a 字符串替换为 b 字符串<br />若没有 a 字符串则不替换</td>
 </tr>
 <tr>
 <td align="center">UPPER(str)</td>
@@ -1520,19 +1527,19 @@ huuuuuo
 </tr>
 <tr>
 <td align="center">LEFT(str, n)</td>
-<td align="center">从str左边取n个字符</td>
+<td align="center">从 str 左边取 n 个字符</td>
 </tr>
 <tr>
 <td align="center">RIGHT(str, n)</td>
-<td align="center">从str右边取n个字符</td>
+<td align="center">从 str 右边取 n 个字符</td>
 </tr>
 <tr>
 <td align="center">LPAD(str, len, pad)</td>
-<td align="center">左补齐函数<br />右对齐效果<br />若str不足len个字符，则在其左侧使用pad补齐</td>
+<td align="center">左补齐函数<br />右对齐效果<br />若 str 不足 len 个字符，则在其左侧使用 pad 补齐</td>
 </tr>
 <tr>
 <td align="center">RPAD(str, len, pad)</td>
-<td align="center">右补齐函数<br />左对齐效果<br />若str不足len个字符，则在其右侧使用pad补齐</td>
+<td align="center">右补齐函数<br />左对齐效果<br />若 str 不足 len 个字符，则在其右侧使用 pad 补齐</td>
 </tr>
 <tr>
 <td align="center">TRIM(str)</td>
@@ -1548,23 +1555,23 @@ huuuuuo
 </tr>
 <tr>
 <td align="center">TRIM(s FROM str)</td>
-<td align="center">去除str首尾的s字符</td>
+<td align="center">去除 str 首尾的 s 字符</td>
 </tr>
 <tr>
 <td align="center">TRIM(LEAIDNG s FROM str)</td>
-<td align="center">去除str开始处的s字符</td>
+<td align="center">去除 str 开始处的 s 字符</td>
 </tr>
 <tr>
 <td align="center">TRIM(TRAILING s FROM str)</td>
-<td align="center">去除str结尾处的s字符</td>
+<td align="center">去除 str 结尾处的 s 字符</td>
 </tr>
 <tr>
 <td align="center">REPEAT(str, n)</td>
-<td align="center">把str重复n次</td>
+<td align="center">把 str 重复 n 次</td>
 </tr>
 <tr>
 <td align="center">SPACE(n)</td>
-<td align="center">返回n个空格</td>
+<td align="center">返回 n 个空格</td>
 </tr>
 <tr>
 <td align="center">STRCMP(s1, s2)</td>
@@ -1572,23 +1579,27 @@ huuuuuo
 </tr>
 <tr>
 <td align="center">SUBSTR(str, index, len)</td>
-<td align="center">返回str从index开始共len个字符<br /><span class="red">注意index从1开始</span></td>
+<td align="center">返回 str 从 index 开始共 len 个字符<br /><span class="red">注意 index 从 1 开始</span></td>
+</tr>
+<tr>
+<td align="center">SUBSTR(str, index)</td>
+<td align="center">返回 str 从 index 开始到最后的所有字符</td>
 </tr>
 <tr>
 <td align="center">LOCAT(substr, str)</td>
-<td align="center">返回substr首次在str中出现的位置<br />未找到返回0</td>
+<td align="center">返回 substr 首次在 str 中出现的位置<br />未找到返回 0</td>
 </tr>
 <tr>
 <td align="center">ELT(n, s1, s2, …)</td>
-<td align="center">返回参数中后面的第n个字符串<br />即返回sn</td>
+<td align="center">返回参数中后面的第 n 个字符串<br />即返回 sn</td>
 </tr>
 <tr>
 <td align="center">FIELD(s, s1, s2, …)</td>
-<td align="center">返回s在参数中后面的字符串中首次出现的位置<br /><span class="red">注意位置从1开始</span></td>
+<td align="center">返回 s 在参数中后面的字符串中首次出现的位置<br /><span class="red">注意位置从 1 开始</span></td>
 </tr>
 <tr>
 <td align="center">FIND_IN_SET(s1, s2)</td>
-<td align="center">返回s1在s2中首次出现的位置<br />其中s2是以逗号分隔的字符串集<br />（如’11,22,33,44,55’）</td>
+<td align="center">返回 s1 在 s2 中首次出现的位置<br />其中 s2 是以逗号分隔的字符串集<br />（如’11,22,33,44,55’）</td>
 </tr>
 <tr>
 <td align="center">REVERSE(str)</td>
@@ -1596,7 +1607,7 @@ huuuuuo
 </tr>
 <tr>
 <td align="center">NULLIF(str1, str2)</td>
-<td align="center">比较两个字符串<br />若相等返回NULL，否则返回str1</td>
+<td align="center">比较两个字符串<br />若相等返回 NULL，否则返回 str1</td>
 </tr>
 </tbody></table>
 <hr>
@@ -1646,16 +1657,16 @@ huuuuuo
 </tr>
 <tr>
 <td align="center">UTC_DATE()</td>
-<td align="center">返回UTC（世界标准时间）日期</td>
+<td align="center">返回 UTC（世界标准时间）日期</td>
 </tr>
 <tr>
 <td align="center">UTC_TIME()</td>
-<td align="center">返回UTC（世界标准时间）时间</td>
+<td align="center">返回 UTC（世界标准时间）时间</td>
 </tr>
 </tbody></table>
 <hr>
 <p><strong>日期与时间函数——日期与时间戳转换</strong></p>
-<p><span class="red bold">注意：</span>这里的时间戳与Java中的不同，Java中的时间戳返回的是毫秒数，这里只返回秒数</p>
+<p><span class="red bold">注意：</span>这里的时间戳与 Java 中的不同，Java 中的时间戳返回的是毫秒数，这里只返回秒数</p>
 <table>
 <thead>
 <tr>
@@ -1665,20 +1676,20 @@ huuuuuo
 </thead>
 <tbody><tr>
 <td align="center">UNIX_TIMESTAMP()</td>
-<td align="center">以UNIX时间戳的形式返回当前时间</td>
+<td align="center">以 UNIX 时间戳的形式返回当前时间</td>
 </tr>
 <tr>
 <td align="center">UNIX_TIMESTAMP(DATE)</td>
-<td align="center">将DATE转换为时间戳</td>
+<td align="center">将 DATE 转换为时间戳</td>
 </tr>
 <tr>
 <td align="center">FROM_UNIXTIME(timestamp)</td>
-<td align="center">将timestamp时间戳转换为日期和时间</td>
+<td align="center">将 timestamp 时间戳转换为日期和时间</td>
 </tr>
 </tbody></table>
 <hr>
 <p><strong>日期与时间函数——获取月份、星期、星期数、天数</strong></p>
-<p><span class="red bold">注意：</span>日期和时间在SQL中的表现形式默认是 <code>YYYY-MM-dd HH-mm-ss</code>，若传入的字符串符合这种格式，SQL会将字符串隐式转换为日期和时间</p>
+<p><span class="red bold">注意：</span>日期和时间在 SQL 中的表现形式默认是 <code>YYYY-MM-dd HH-mm-ss</code>，若传入的字符串符合这种格式，SQL 会将字符串隐式转换为日期和时间</p>
 <table>
 <thead>
 <tr>
@@ -1720,11 +1731,11 @@ huuuuuo
 </tr>
 <tr>
 <td align="center">WEEKDAY(date)</td>
-<td align="center">返回传入的日期为星期几<br /><span class="red">周一为0, …周日为6 </span></td>
+<td align="center">返回传入的日期为星期几<br /><span class="red">周一为 0, …周日为 6 </span></td>
 </tr>
 <tr>
 <td align="center">QUARTER(date)</td>
-<td align="center">返回传入日期为所在年的第几季度<br /><span class="red">范围为1~4</span></td>
+<td align="center">返回传入日期为所在年的第几季度<br /><span class="red">范围为 1~4</span></td>
 </tr>
 <tr>
 <td align="center">WEEK(date)</td>
@@ -1744,7 +1755,7 @@ huuuuuo
 </tr>
 <tr>
 <td align="center">DAYOFWEEK(date)</td>
-<td align="center">返回传入日期为星期几<br /><span class="red">周日为1, … 周六为7</span></td>
+<td align="center">返回传入日期为星期几<br /><span class="red">周日为 1, … 周六为 7</span></td>
 </tr>
 </tbody></table>
 <hr>
@@ -1758,13 +1769,13 @@ huuuuuo
 </thead>
 <tbody><tr>
 <td align="center">EXTRACT(type FROM date)</td>
-<td align="center">获取date日期中的type部分</td>
+<td align="center">获取 date 日期中的 type 部分</td>
 </tr>
 </tbody></table>
 <table>
 <thead>
 <tr>
-<th align="center">type可用值</th>
+<th align="center">type 可用值</th>
 <th align="center">含义</th>
 </tr>
 </thead>
@@ -1869,9 +1880,9 @@ huuuuuo
 <p><span class="red bold">注意：</span></p>
 <ol>
 <li><code>INTERVAL</code> 是关键字</li>
-<li>type是值expr的类型（如增加一年就是 <code>INTERVAL 1 YEAR</code>）</li>
-<li>expr可以为负数</li>
-<li>若要操作两个参数，要注意expr传入的是字符串，并且两个参数之间要加上下划线（如增加1分钟和1秒就是 <code>INTERVAL &#39;1_1&#39; MINUTE_SECOND</code>）</li>
+<li>type 是值 expr 的类型（如增加一年就是 <code>INTERVAL 1 YEAR</code>）</li>
+<li>expr 可以为负数</li>
+<li>若要操作两个参数，要注意 expr 传入的是字符串，并且两个参数之间要加上下划线（如增加 1 分钟和 1 秒就是 <code>INTERVAL &#39;1_1&#39; MINUTE_SECOND</code>）</li>
 </ol>
 <table>
 <thead>
@@ -1882,7 +1893,7 @@ huuuuuo
 </thead>
 <tbody><tr>
 <td align="center">DATE_ADD(date, INTERVAL expr type)</td>
-<td align="center">返回date增加指定值的日期和时间</td>
+<td align="center">返回 date 增加指定值的日期和时间</td>
 </tr>
 <tr>
 <td align="center">ADDDATE(date, INTERVAL expr type)</td>
@@ -1890,7 +1901,7 @@ huuuuuo
 </tr>
 <tr>
 <td align="center">DATE_SUB(date, INTERVAL expr type)</td>
-<td align="center">返回date减少指定值的日期和时间</td>
+<td align="center">返回 date 减少指定值的日期和时间</td>
 </tr>
 <tr>
 <td align="center">SUBDATE(date, INTERVAL expr type)</td>
@@ -1898,27 +1909,27 @@ huuuuuo
 </tr>
 <tr>
 <td align="center">DATEDIFF(date1, date2)</td>
-<td align="center">返回date2-date1的绝对值，精确到天</td>
+<td align="center">返回 date2-date1 的绝对值，精确到天</td>
 </tr>
 <tr>
 <td align="center">FROM_DAYS(n)</td>
-<td align="center">返回从0000-01-01起，n天后的日期</td>
+<td align="center">返回从 0000-01-01 起，n 天后的日期</td>
 </tr>
 <tr>
 <td align="center">TO_DAYS(date)</td>
-<td align="center">返回date距离0000-01-01的天数</td>
+<td align="center">返回 date 距离 0000-01-01 的天数</td>
 </tr>
 <tr>
 <td align="center">LAST_DAY(date)</td>
-<td align="center">返回date所在月份的最后一天的日期</td>
+<td align="center">返回 date 所在月份的最后一天的日期</td>
 </tr>
 <tr>
 <td align="center">MAKEDATE(year, day)</td>
-<td align="center">返回year年中的第day天的日期</td>
+<td align="center">返回 year 年中的第 day 天的日期</td>
 </tr>
 <tr>
 <td align="center">PERIOD_ADD(time, n)</td>
-<td align="center">返回time加上n月后的时间<br /><span class="red">注意参数time的传入格式为YYYYMM，且传入的是数值</span></td>
+<td align="center">返回 time 加上 n 月后的时间<br /><span class="red">注意参数 time 的传入格式为 YYYYMM，且传入的是数值</span></td>
 </tr>
 </tbody></table>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT PERIOD_ADD(202205,2) FROM DUAL;</code></pre>
@@ -1990,15 +2001,15 @@ huuuuuo
 </thead>
 <tbody><tr>
 <td align="center">ADDTIME(time1, time2)</td>
-<td align="center">返回time1加上time2的时间<br />当time2只有一个数字时，默认代表秒<br />可以为负数</td>
+<td align="center">返回 time1 加上 time2 的时间<br />当 time2 只有一个数字时，默认代表秒<br />可以为负数</td>
 </tr>
 <tr>
 <td align="center">SUBTIME(time1, time2)</td>
-<td align="center">返回time1减去time2的时间<br />当time2只有一个数字时，默认代表秒<br />可以为负数</td>
+<td align="center">返回 time1 减去 time2 的时间<br />当 time2 只有一个数字时，默认代表秒<br />可以为负数</td>
 </tr>
 <tr>
 <td align="center">TIMEDIFF(date1&#x2F;time1, date2&#x2F;time2)</td>
-<td align="center">返回time2-time1的绝对值，返回的格式为时间</td>
+<td align="center">返回 time2-time1 的绝对值，返回的格式为时间</td>
 </tr>
 <tr>
 <td align="center">MAKETIME(hour, minute, second)</td>
@@ -2016,19 +2027,19 @@ huuuuuo
 </thead>
 <tbody><tr>
 <td align="center">DATE_FORMAT(date fmt)</td>
-<td align="center"><span class="red">（格式化）</span>按照字符串fmt格式化日期date值</td>
+<td align="center"><span class="red">（格式化）</span>按照字符串 fmt 格式化日期 date 值</td>
 </tr>
 <tr>
 <td align="center">TIME_FORMAT(time, fmt)</td>
-<td align="center"><span class="red">（格式化）</span>按照字符串fmt格式化时间time值</td>
+<td align="center"><span class="red">（格式化）</span>按照字符串 fmt 格式化时间 time 值</td>
 </tr>
 <tr>
 <td align="center">STR_TO_DATE(str, fmt)</td>
-<td align="center"><span class="red">（解析）</span>按照字符串fmt将str解析为一个日期</td>
+<td align="center"><span class="red">（解析）</span>按照字符串 fmt 将 str 解析为一个日期</td>
 </tr>
 <tr>
 <td align="center">GET_FORMAT(date_type, format_type)</td>
-<td align="center">返回以format_type标准表示的date_type的fmt格式</td>
+<td align="center">返回以 format_type 标准表示的 date_type 的 fmt 格式</td>
 </tr>
 </tbody></table>
 <p><span class="red bold">fmt—格式化形式的填写：</span></p>
@@ -2067,9 +2078,9 @@ huuuuuo
 </tr>
 <tr>
 <td align="center">%m</td>
-<td align="center">两位数字月份<br />（1月显示01）</td>
+<td align="center">两位数字月份<br />（1 月显示 01）</td>
 <td align="center">%c</td>
-<td align="center">最短个数数字月份<br />（1月显示1）</td>
+<td align="center">最短个数数字月份<br />（1 月显示 1）</td>
 </tr>
 <tr>
 <td align="center">&amp;nbsp;</td>
@@ -2097,21 +2108,21 @@ huuuuuo
 </tr>
 <tr>
 <td align="center">%H</td>
-<td align="center">两位数字小时<br />24小时制</td>
+<td align="center">两位数字小时<br />24 小时制</td>
 <td align="center">&amp;nbsp;</td>
 <td align="center">&amp;nbsp;</td>
 </tr>
 <tr>
 <td align="center">%h</td>
-<td align="center">两位数字小时<br />12小时制</td>
-<td align="center">%I（i大写）</td>
-<td align="center">两位数字小时<br />12小时制</td>
+<td align="center">两位数字小时<br />12 小时制</td>
+<td align="center">%I（i 大写）</td>
+<td align="center">两位数字小时<br />12 小时制</td>
 </tr>
 <tr>
 <td align="center">%k</td>
-<td align="center">最短数字小时<br />24小时制</td>
-<td align="center">%l（L小写）</td>
-<td align="center">最短数字数字小时<br />12小时制</td>
+<td align="center">最短数字小时<br />24 小时制</td>
+<td align="center">%l（L 小写）</td>
+<td align="center">最短数字数字小时<br />12 小时制</td>
 </tr>
 <tr>
 <td align="center">&amp;nbsp;</td>
@@ -2145,9 +2156,9 @@ huuuuuo
 </tr>
 <tr>
 <td align="center">%T</td>
-<td align="center">24小时制完整时间<br />（使用默认格式 00:00:00）</td>
+<td align="center">24 小时制完整时间<br />（使用默认格式 00:00:00）</td>
 <td align="center">%r</td>
-<td align="center">12小时制完整时间<br />（使用默认格式 00:00:00）</td>
+<td align="center">12 小时制完整时间<br />（使用默认格式 00:00:00）</td>
 </tr>
 <tr>
 <td align="center">&amp;nbsp;</td>
@@ -2163,7 +2174,7 @@ huuuuuo
 </tr>
 <tr>
 <td align="center">%w</td>
-<td align="center">数字星期<br />（周日为0, …, 周六为6）</td>
+<td align="center">数字星期<br />（周日为 0, …, 周六为 6）</td>
 <td align="center">&amp;nbsp;</td>
 <td align="center">&amp;nbsp;</td>
 </tr>
@@ -2193,15 +2204,15 @@ huuuuuo
 </tr>
 <tr>
 <td align="center">%p</td>
-<td align="center">AM或PM</td>
+<td align="center">AM 或 PM</td>
 <td align="center">%%</td>
 <td align="center">表示百分号</td>
 </tr>
 </tbody></table>
-<p><span class="red bold">date_type与format_type的填写：</span></p>
+<p><span class="red bold">date_type 与 format_type 的填写：</span></p>
 <ul>
-<li>每个date_type都可以对应五个format_type</li>
-<li>GET_FORMAT返回的是一个fmt（如%H:%i:%s）</li>
+<li>每个 date_type 都可以对应五个 format_type</li>
+<li>GET_FORMAT 返回的是一个 fmt（如%H:%i:%s）</li>
 </ul>
 <table>
 <thead>
@@ -2246,7 +2257,7 @@ huuuuuo
 DATE_FORMAT(hire_date, &#39;%Y&#39;) &gt;&#x3D; &#39;1997&#39;
 hire_date &gt;&#x3D; STR_TO_DATE(&#39;1997-01-01&#39;, &#39;%Y-%m-%d&#39;)</code></pre>
 
-<h2 id="MySQL单行函数——流程控制函数"><a href="#MySQL单行函数——流程控制函数" class="headerlink" title="MySQL单行函数——流程控制函数"></a>MySQL单行函数——流程控制函数</h2><p><span class="red bold">注意：</span>最下面两个流程控制的ELSE都是可选的</p>
+<h2 id="MySQL-单行函数——流程控制函数"><a href="#MySQL-单行函数——流程控制函数" class="headerlink" title="MySQL 单行函数——流程控制函数"></a>MySQL 单行函数——流程控制函数</h2><p><span class="red bold">注意：</span>最下面两个流程控制的 ELSE 都是可选的</p>
 <table>
 <thead>
 <tr>
@@ -2263,15 +2274,15 @@ hire_date &gt;&#x3D; STR_TO_DATE(&#39;1997-01-01&#39;, &#39;%Y-%m-%d&#39;)</code
 <td align="center">value1 &#x3D;&#x3D; NULL?value2:value1</td>
 </tr>
 <tr>
-<td align="center">CASE<br />WHEN 条件1 THEN 结果1<br />WHEN 条件2 THEN 结果2<br />[ELSE 结果n]<br />END</td>
-<td align="center">if(条件1){结果1}<br />else if(条件2){结果2}<br />else{结果n}</td>
+<td align="center">CASE<br />WHEN 条件 1 THEN 结果 1<br />WHEN 条件 2 THEN 结果 2<br />[ELSE 结果 n]<br />END</td>
+<td align="center">if(条件 1){结果 1}<br />else if(条件 2){结果 2}<br />else{结果 n}</td>
 </tr>
 <tr>
-<td align="center">CASE 字段名<br />WHEN 常量1 THEN 结果1<br />WHEN 常量2 THEN 结果2<br />[ELSE 结果n]<br />END</td>
-<td align="center">switch() {<br />case 常量1: 结果1<br />case 常量2: 结果2<br />default: 结果n }</td>
+<td align="center">CASE 字段名<br />WHEN 常量 1 THEN 结果 1<br />WHEN 常量 2 THEN 结果 2<br />[ELSE 结果 n]<br />END</td>
+<td align="center">switch() {<br />case 常量 1: 结果 1<br />case 常量 2: 结果 2<br />default: 结果 n }</td>
 </tr>
 </tbody></table>
-<h2 id="MySQL单行函数——加密与解密"><a href="#MySQL单行函数——加密与解密" class="headerlink" title="MySQL单行函数——加密与解密"></a>MySQL单行函数——加密与解密</h2><table>
+<h2 id="MySQL-单行函数——加密与解密"><a href="#MySQL-单行函数——加密与解密" class="headerlink" title="MySQL 单行函数——加密与解密"></a>MySQL 单行函数——加密与解密</h2><table>
 <thead>
 <tr>
 <th align="center">函数名</th>
@@ -2280,26 +2291,26 @@ hire_date &gt;&#x3D; STR_TO_DATE(&#39;1997-01-01&#39;, &#39;%Y-%m-%d&#39;)</code
 </thead>
 <tbody><tr>
 <td align="center">PASSWORD(str)</td>
-<td align="center">返回字符串的41位长加密版本，该过程不可逆<br /><span class="red">在MySQL8.0中失效</span></td>
+<td align="center">返回字符串的 41 位长加密版本，该过程不可逆<br /><span class="red">在 MySQL8.0 中失效</span></td>
 </tr>
 <tr>
 <td align="center">MD5(str)</td>
-<td align="center">返回字符串经过md5加密算法加密后的值<br />该过程不可逆<br />若参数NULL，返回为NULL</td>
+<td align="center">返回字符串经过 md5 加密算法加密后的值<br />该过程不可逆<br />若参数 NULL，返回为 NULL</td>
 </tr>
 <tr>
 <td align="center">SHA(str)</td>
-<td align="center">返回字符串经过SHA加密算法加密后的值<br />该过程不可逆<br />若参数NULL，返回为NULL</td>
+<td align="center">返回字符串经过 SHA 加密算法加密后的值<br />该过程不可逆<br />若参数 NULL，返回为 NULL</td>
 </tr>
 <tr>
 <td align="center">ENCODE(value, password_seed)</td>
-<td align="center">使用指定种子加密value<br /><span class="red">在MySQL8.0中失效</span></td>
+<td align="center">使用指定种子加密 value<br /><span class="red">在 MySQL8.0 中失效</span></td>
 </tr>
 <tr>
 <td align="center">DECODE(value, password_seed)</td>
-<td align="center">使用指定种子解密value<br /><span class="red">在MySQL8.0中失效</span></td>
+<td align="center">使用指定种子解密 value<br /><span class="red">在 MySQL8.0 中失效</span></td>
 </tr>
 </tbody></table>
-<h2 id="MySQL单行函数——MySQL当前信息函数"><a href="#MySQL单行函数——MySQL当前信息函数" class="headerlink" title="MySQL单行函数——MySQL当前信息函数"></a>MySQL单行函数——MySQL当前信息函数</h2><table>
+<h2 id="MySQL-单行函数——MySQL-当前信息函数"><a href="#MySQL-单行函数——MySQL-当前信息函数" class="headerlink" title="MySQL 单行函数——MySQL 当前信息函数"></a>MySQL 单行函数——MySQL 当前信息函数</h2><table>
 <thead>
 <tr>
 <th align="center">函数名</th>
@@ -2308,15 +2319,15 @@ hire_date &gt;&#x3D; STR_TO_DATE(&#39;1997-01-01&#39;, &#39;%Y-%m-%d&#39;)</code
 </thead>
 <tbody><tr>
 <td align="center">VERSION()</td>
-<td align="center">返回MySQL版本号</td>
+<td align="center">返回 MySQL 版本号</td>
 </tr>
 <tr>
 <td align="center">CONNECTION_ID()</td>
-<td align="center">返回当前客户端与MySQL服务器的连接ID</td>
+<td align="center">返回当前客户端与 MySQL 服务器的连接 ID</td>
 </tr>
 <tr>
 <td align="center">DATABASE()</td>
-<td align="center">返回MySQL命令行所在的数据库</td>
+<td align="center">返回 MySQL 命令行所在的数据库</td>
 </tr>
 <tr>
 <td align="center">SCHEMA()</td>
@@ -2324,7 +2335,7 @@ hire_date &gt;&#x3D; STR_TO_DATE(&#39;1997-01-01&#39;, &#39;%Y-%m-%d&#39;)</code
 </tr>
 <tr>
 <td align="center">USER()</td>
-<td align="center">返回当前连接MySQL的用户名<br />返回格式为“用户名@IP地址”</td>
+<td align="center">返回当前连接 MySQL 的用户名<br />返回格式为“用户名@IP 地址”</td>
 </tr>
 <tr>
 <td align="center">CURRENT_USER()</td>
@@ -2340,14 +2351,14 @@ hire_date &gt;&#x3D; STR_TO_DATE(&#39;1997-01-01&#39;, &#39;%Y-%m-%d&#39;)</code
 </tr>
 <tr>
 <td align="center">CHARSET(value)</td>
-<td align="center">返回字符串value的字符集</td>
+<td align="center">返回字符串 value 的字符集</td>
 </tr>
 <tr>
 <td align="center">COLLATION(value)</td>
-<td align="center">返回字符串value的比较规则</td>
+<td align="center">返回字符串 value 的比较规则</td>
 </tr>
 </tbody></table>
-<h2 id="MySQL单行函数——其它函数"><a href="#MySQL单行函数——其它函数" class="headerlink" title="MySQL单行函数——其它函数"></a>MySQL单行函数——其它函数</h2><table>
+<h2 id="MySQL-单行函数——其它函数"><a href="#MySQL-单行函数——其它函数" class="headerlink" title="MySQL 单行函数——其它函数"></a>MySQL 单行函数——其它函数</h2><table>
 <thead>
 <tr>
 <th align="center">函数名</th>
@@ -2356,24 +2367,24 @@ hire_date &gt;&#x3D; STR_TO_DATE(&#39;1997-01-01&#39;, &#39;%Y-%m-%d&#39;)</code
 </thead>
 <tbody><tr>
 <td align="center">INET_ATON(ipstr)</td>
-<td align="center">将一个ip地址字符串转换为一个数字</td>
+<td align="center">将一个 ip 地址字符串转换为一个数字</td>
 </tr>
 <tr>
 <td align="center">INET_NTOA(value)</td>
-<td align="center">将一个数字转换为IP地址</td>
+<td align="center">将一个数字转换为 IP 地址</td>
 </tr>
 <tr>
 <td align="center">BENCHMARK(n, expr)</td>
-<td align="center">将表达式expr重复执行n次<br />用于测试MySQL处理expr表达式所耗费的时间</td>
+<td align="center">将表达式 expr 重复执行 n 次<br />用于测试 MySQL 处理 expr 表达式所耗费的时间</td>
 </tr>
 </tbody></table>
-<h2 id="MySQL聚合函数（多行函数）"><a href="#MySQL聚合函数（多行函数）" class="headerlink" title="MySQL聚合函数（多行函数）"></a>MySQL聚合函数（多行函数）</h2><p><span class="red bold">聚合函数：</span>也称多行函数，是指该函数作用于一组数据，<span class="red bold">多个数据返回一个值</span></p>
+<h2 id="MySQL-聚合函数（多行函数）"><a href="#MySQL-聚合函数（多行函数）" class="headerlink" title="MySQL 聚合函数（多行函数）"></a>MySQL 聚合函数（多行函数）</h2><p><span class="red bold">聚合函数：</span>也称多行函数，是指该函数作用于一组数据，<span class="red bold">多个数据返回一个值</span></p>
 <hr>
 <p><strong>五个常用聚合函数</strong></p>
 <p><span class="red bold">注意：</span></p>
 <ul>
 <li>所有聚合函数都会受到 <code>GROUP BY</code> 分组影响</li>
-<li>MySQL不支持聚合函数嵌套使用，但Oracle可以</li>
+<li>MySQL 不支持聚合函数嵌套使用，但 Oracle 可以</li>
 </ul>
 <table>
 <thead>
@@ -2399,33 +2410,33 @@ hire_date &gt;&#x3D; STR_TO_DATE(&#39;1997-01-01&#39;, &#39;%Y-%m-%d&#39;)</code
 <td align="center">返回该字段的最小值</td>
 </tr>
 <tr>
-<td align="center">COUNT(field)</td>
-<td align="center">返回该字段在查询结构下数据的个数<br /><span class="red">（非NULL）</span></td>
+<td align="center">COUNT([DISTINCT] field)</td>
+<td align="center">返回该字段在查询结构下数据的个数<br /><span class="red">（非 NULL）</span><br />（可选）对于该字段的每个相同的值只计算一次</td>
 </tr>
 </tbody></table>
-<p><span class="red bold">AVG&#x2F;SUM：</span>可以实现a+b的都可以使用 <code>AVG</code> 和 <code>SUM</code> ，因此 <code>AVG</code> 和 <code>SUM</code> 仅适用于数值类型</p>
+<p><span class="red bold">AVG&#x2F;SUM：</span>可以实现 a+b 的都可以使用 <code>AVG</code> 和 <code>SUM</code> ，因此 <code>AVG</code> 和 <code>SUM</code> 仅适用于数值类型</p>
 <p><span class="red bold">MAX&#x2F;MIN：</span>可以实现对比或排序的都可以使用 <code>MAX</code> &#x2F; <code>MIN</code> ，因此 <code>MAX</code> 和 <code>MIN</code> 可以适用于数值、字符串和日期</p>
 <p><span class="red bold">COUNT：</span></p>
 <ul>
 <li><p><span class="red bold">重要：</span>当涉及到外连接时，谨慎使用 <code>COUNT(*)</code>，大多数情况下应使用 <code>COUNT(字段名)</code></p>
 </li>
-<li><p><span class="red"><code>COUNT(字段名)</code> 和 <code>COUNT(常量)</code> 不会将NULL值计入, <code>COUNT(*)</code> 会将NULL计入</span></p>
+<li><p><span class="red"><code>COUNT(字段名)</code> 和 <code>COUNT(常量)</code> 不会将 NULL 值计入, <code>COUNT(*)</code> 会将 NULL 计入</span></p>
 </li>
-<li><p><span class="red"><code>COUNT</code> 会受到WHERE筛选的影响</span></p>
+<li><p><span class="red"><code>COUNT</code> 会受到 WHERE 筛选的影响</span></p>
 </li>
 <li><p>若 <code>COUNT()</code> 中写了一个常量，因为常量会分配给表中的每一行，所以在筛选条件下有多少行就有多少个常量被挑选出来</p>
 </li>
 <li><p><code>COUNT(*)</code> 和 <code>COUNT(常量)</code> 都可以用于统计表中的记录个数</p>
 <ul>
 <li><span class="red">在字段非空的情况下</span>， <code>COUNT(*)</code> 、 <code>COUNT(常量)</code> 和 <code>COUNT(字段名)</code> 都可以用于统计表中的记录个数（行数），在效率方面，他们有这样的关系：<ul>
-<li>若数据库使用MyISAM存储引擎，每个表都有一个隐藏字段记录数据行数，因此三者效率相同</li>
-<li>若数据库使用InnoDB存储引擎，则三者效率关系为： <code>COUNT(*)</code> &#x3D; <code>COUNT(常量)</code> &gt; <code>COUNT(字段名)</code></li>
+<li>若数据库使用 MyISAM 存储引擎，每个表都有一个隐藏字段记录数据行数，因此三者效率相同</li>
+<li>若数据库使用 InnoDB 存储引擎，则三者效率关系为： <code>COUNT(*)</code> &#x3D; <code>COUNT(常量)</code> &gt; <code>COUNT(字段名)</code></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h2 id="MySQL分组与汇总（GROUP-BY-WITH-ROLLUP）"><a href="#MySQL分组与汇总（GROUP-BY-WITH-ROLLUP）" class="headerlink" title="MySQL分组与汇总（GROUP BY WITH ROLLUP）"></a>MySQL分组与汇总（GROUP BY WITH ROLLUP）</h2><hr>
+<h2 id="MySQL-分组与汇总（GROUP-BY-WITH-ROLLUP）"><a href="#MySQL-分组与汇总（GROUP-BY-WITH-ROLLUP）" class="headerlink" title="MySQL 分组与汇总（GROUP BY WITH ROLLUP）"></a>MySQL 分组与汇总（GROUP BY WITH ROLLUP）</h2><hr>
 <p><strong>分组（GROUP BY）</strong></p>
 <p>对于聚合函数，它是作用于多行的函数，而通常我们需要根据某个字段的内容分批执行多行函数（如统计每个部门的平均工资），这时就需要分组</p>
 <p><span class="red bold">注意：</span>聚合函数会受到分组的影响（正因如此分组才有意义）</p>
@@ -2437,11 +2448,11 @@ hire_date &gt;&#x3D; STR_TO_DATE(&#39;1997-01-01&#39;, &#39;%Y-%m-%d&#39;)</code
 FROM employees
 GROUP BY department_id;</code></pre>
 
-<p><span class="red bold">注意（重要）：</span>在使用分组时，<span class="red">SELECT中的非聚合函数字段，必须作为分组的依据出现在 <code>GROUP BY</code> 中</span>，若没有作为分组依据出现，<span class="red">虽然不会报错</span>，但会产生歧义：</p>
+<p><span class="red bold">注意（重要）：</span>在使用分组时，<span class="red">SELECT 中的非聚合函数字段，必须作为分组的依据出现在 <code>GROUP BY</code> 中</span>，若没有作为分组依据出现，<span class="red">虽然不会报错</span>，但会产生歧义：</p>
 <ul>
 <li><p>聚合函数会根据分组将聚合函数涉及的字段中的一组（多行）转变为一行，那么如何看待在一组中另一个要展示的字段存在不同的值并且它也要跟着将一组变为一行？</p>
 </li>
-<li><p>在MySQL中，由于其不严谨，默认将显示department_name的第一个值，但很明显这是没有意义的，在Orecle中这样做则直接报错</p>
+<li><p>在 MySQL 中，由于其不严谨，默认将显示 department_name 的第一个值，但很明显这是没有意义的，在 Orecle 中这样做则直接报错</p>
 </li>
 </ul>
 <p><img src="https://s1.ax1x.com/2022/05/23/XSlOpQ.md.png" alt="XSlOpQ.md.png"></p>
@@ -2450,9 +2461,9 @@ GROUP BY department_id;</code></pre>
 <p>在 <code>GOUP BY 字段名</code> 后面加上 <code>WITH ROLLUP</code> 会将<span class="red">分组后得到的结果在另起一行上做一个汇总（如：若求平均值，则将分组后的结果再一起求一次平均值）</span>（没有分组就没有汇总的必要了）</p>
 <p><span class="red bold">注意：</span>在使用了 <code>WITH ROLLUP</code> 之后，<span class="red">谨慎使用排序！</span></p>
 <ul>
-<li>对分立的结果和汇总的结果进行排序是没有意义的，MySQL在8.0之前会报错，在8.0之后若同时使用汇总和排序则会将汇总结果自动上升到第一位，无论汇总的结果大小</li>
+<li>对分立的结果和汇总的结果进行排序是没有意义的，MySQL 在 8.0 之前会报错，在 8.0 之后若同时使用汇总和排序则会将汇总结果自动上升到第一位，无论汇总的结果大小</li>
 </ul>
-<h2 id="MySQL分组筛选（HAVING）"><a href="#MySQL分组筛选（HAVING）" class="headerlink" title="MySQL分组筛选（HAVING）"></a>MySQL分组筛选（HAVING）</h2><p><span class="red bold">对分组后结果的筛选需求：</span></p>
+<h2 id="MySQL-分组筛选（HAVING）"><a href="#MySQL-分组筛选（HAVING）" class="headerlink" title="MySQL 分组筛选（HAVING）"></a>MySQL 分组筛选（HAVING）</h2><p><span class="red bold">对分组后结果的筛选需求：</span></p>
 <p><code>WHERE</code> 仅用于对行数未变化的（未经过聚合函数书里的）表进行筛选，也正因此它写在 <code>GROUP BY</code> 前面，<span class="red"> <code>WHERE</code> 条件中禁止出现聚合函数</span>，以下代码将会报错</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 顺便提一句，WHERE中禁止出现字段别名
 SELECT department_id, MAX(salary)
@@ -2469,16 +2480,16 @@ GROUP BY department_id
 HAVING MAX(salary) &gt; 10000;</code></pre>
 
 <hr>
-<p><strong>HAVING和WHERE</strong></p>
+<p><strong>HAVING 和 WHERE</strong></p>
 <p><code>HAVING</code> 和 <code>WHERE</code> 都可以写非聚合函数条件</p>
-<p><span class="red bold">效率：</span>在这两者共存的情况下，<span class="red">强烈建议将非聚合函数过滤条件写在 <code>WHERE</code> 里</span>，因为在分组前筛选掉没有用的数据可以提升分组和分组筛选的效率（见 SQL语句的执行顺序）</p>
+<p><span class="red bold">效率：</span>在这两者共存的情况下，<span class="red">强烈建议将非聚合函数过滤条件写在 <code>WHERE</code> 里</span>，因为在分组前筛选掉没有用的数据可以提升分组和分组筛选的效率（见 SQL 语句的执行顺序）</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT department_id, MAX(salary)
 FROM employee_id
 WHERE department_id IN (10,20,30,40)
 GROUP BY department_id
 HAVING MAX(salary) &gt; 10000;</code></pre>
 
-<h2 id="一个基本完整的SELECT语句"><a href="#一个基本完整的SELECT语句" class="headerlink" title="一个基本完整的SELECT语句"></a>一个基本完整的SELECT语句</h2><pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT （DISTINCT）..., ...（或存在聚合函数）,
+<h2 id="一个基本完整的-SELECT-语句"><a href="#一个基本完整的-SELECT-语句" class="headerlink" title="一个基本完整的 SELECT 语句"></a>一个基本完整的 SELECT 语句</h2><pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT （DISTINCT）..., ...（或存在聚合函数）,
     CASE （字段名） WHEN 条件 THEN 结果
     END AS &quot;别名&quot;
 
@@ -2493,10 +2504,10 @@ LIMIT 偏移量,一页的数据量 &#x2F; LIMIT 一页数据量 OFFSET 偏移量
 
 UNION WITH 第二次查询;</code></pre>
 
-<h2 id="SQL语句的执行顺序"><a href="#SQL语句的执行顺序" class="headerlink" title="SQL语句的执行顺序"></a>SQL语句的执行顺序</h2><table>
+<h2 id="SQL-语句的执行顺序"><a href="#SQL-语句的执行顺序" class="headerlink" title="SQL 语句的执行顺序"></a>SQL 语句的执行顺序</h2><table>
 <thead>
 <tr>
-<th align="center">SQL语句的执行顺序</th>
+<th align="center">SQL 语句的执行顺序</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -2512,7 +2523,7 @@ UNION WITH 第二次查询;</code></pre>
 <li>执行 <code>WHERE</code> 筛选（<span class="red">因此筛选禁止出现别名</span>）</li>
 <li>执行 <code>GROUP BY</code> 分组（<span class="red">因此分组禁止出现别名</span>）</li>
 <li>执行 <code>HAVING</code> 分组筛选<ul>
-<li><span class="red">注意：</span>MySQL中的 <code>HAVING</code> 允许使用别名，因为MySQL对其进行了拓展（见 <a target="_blank" rel="noopener" href="https://qastack.cn/dba/50391/why-does-mysql-allow-having-to-use-select-aliases">为什么MySQL允许HAVING使用SELECT别名？</a>）</li>
+<li><span class="red">注意：</span>MySQL 中的 <code>HAVING</code> 允许使用别名，因为 MySQL 对其进行了拓展（见 <a target="_blank" rel="noopener" href="https://qastack.cn/dba/50391/why-does-mysql-allow-having-to-use-select-aliases">为什么 MySQL 允许 HAVING 使用 SELECT 别名？</a>）</li>
 </ul>
 </li>
 </ol>
@@ -2531,9 +2542,9 @@ UNION WITH 第二次查询;</code></pre>
 <hr>
 <p><strong>最后（真的是最后）</strong></p>
 <p>合并选择结果</p>
-<h2 id="MySQL子查询——单行子查询"><a href="#MySQL子查询——单行子查询" class="headerlink" title="MySQL子查询——单行子查询"></a>MySQL子查询——单行子查询</h2><hr>
+<h2 id="MySQL-子查询——单行子查询"><a href="#MySQL-子查询——单行子查询" class="headerlink" title="MySQL 子查询——单行子查询"></a>MySQL 子查询——单行子查询</h2><hr>
 <p><strong>子查询的引入</strong></p>
-<p><span class="red bold">需求：</span><br>查询员工表中工资比Abel高的员工姓名</p>
+<p><span class="red bold">需求：</span><br>查询员工表中工资比 Abel 高的员工姓名</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 两次查询
 SELECT salary FROM employees
 WHERE last_name &#x3D; &#39;Abel&#39;;
@@ -2545,6 +2556,7 @@ WHERE salary &gt; 上面的查询结果;
 SELECT e1.last_name
 FROM employees e1
 JOIN employees e2 ON e1.salary &gt; e2.salary AND e2.last_name &#x3D; &#39;Abel&#39;;</code></pre>
+
 <table>
 <thead>
 <tr>
@@ -2621,7 +2633,7 @@ WHERE 字段名 单行操作符 (子查询);</code></pre>
 </tr>
 </tbody></table>
 <hr>
-<p><strong>子查询在WHERE</strong></p>
+<p><strong>子查询在 WHERE</strong></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">&#x2F;* 查询与141号的manager_id或department_id
 相同的其他员工的employee_id、manager_id、department_id
 *&#x2F;
@@ -2652,8 +2664,8 @@ AND (manager_id, department_id) &#x3D; (
 );</code></pre>
 
 <hr>
-<p><strong>子查询在HAVING</strong></p>
-<p>子查询能作为HAVING里面的一个条件，这是当然的</p>
+<p><strong>子查询在 HAVING</strong></p>
+<p>子查询能作为 HAVING 里面的一个条件，这是当然的</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 查询最低工资大于50号部门最低工资的部门ID和该部门最低工资
 
 SELECT department_id, MIN(salary)
@@ -2661,18 +2673,18 @@ FROM employees
 GROUP BY department_id
 HAVING MIN(salary) &gt; (
     SELECT MIN(salary)
-    FROM departments 
+    FROM departments
     WHERE department_id &#x3D; 50
 );</code></pre>
 
 <hr>
-<p><strong>子查询在CASE</strong></p>
+<p><strong>子查询在 CASE</strong></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">&#x2F;* 查询员工的employee_id, last_name和location（自定义字段）
  其中，若员工department_id与location_id为1800的department_id相同
 则location为‘Canada’，其余为‘USA’
 *&#x2F;
 
-SELECT employee_id, last_name, 
+SELECT employee_id, last_name,
     CASE e.department_id
      WHEN (
         SELECT d.department_id
@@ -2689,9 +2701,9 @@ FROM employees;</code></pre>
 <li>空值：查出来一条记录都没有，则需要检查子查询的查询结果是否为空</li>
 <li>非法单行子查询：使用单行操作符操作有多行结果的子查询</li>
 </ol>
-<h2 id="MySQL子查询——多行子查询"><a href="#MySQL子查询——多行子查询" class="headerlink" title="MySQL子查询——多行子查询"></a>MySQL子查询——多行子查询</h2><p><span class="red bold">多行子查询：</span>指子查询的结果为多行数据</p>
+<h2 id="MySQL-子查询——多行子查询"><a href="#MySQL-子查询——多行子查询" class="headerlink" title="MySQL 子查询——多行子查询"></a>MySQL 子查询——多行子查询</h2><p><span class="red bold">多行子查询：</span>指子查询的结果为多行数据</p>
 <hr>
-<p><strong>多行子查询在WHERE&#x2F;HAVING</strong></p>
+<p><strong>多行子查询在 WHERE&#x2F;HAVING</strong></p>
 <table>
 <thead>
 <tr>
@@ -2709,7 +2721,7 @@ FROM employees;</code></pre>
 </tr>
 <tr>
 <td align="center">SOME</td>
-<td align="center">与ANY作用相同</td>
+<td align="center">与 ANY 作用相同</td>
 </tr>
 <tr>
 <td align="center">ALL</td>
@@ -2740,7 +2752,7 @@ AND salary &lt; ALL (
 );</code></pre>
 
 <hr>
-<p><strong>多行子查询在FROM</strong></p>
+<p><strong>多行子查询在 FROM</strong></p>
 <p>多行子查询的结果可以看做一张单独的表，这样可以间接实现聚合函数的嵌套</p>
 <p><span class="red bold">注意：</span>当子查询被看做一张表时，它需要有一个别名</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 查询平均工资最低部门ID
@@ -2762,7 +2774,7 @@ HAVING AVG(salary) &#x3D; (
     FROM (
         SELECT AVG(salary) &quot;avg_sal&quot;
         FROM employees
-        GROUP BY department_id 
+        GROUP BY department_id
     ) t_avg_sal
 )
 
@@ -2796,12 +2808,12 @@ FROM (
     GROUP BY department_id
     ORDER BY avg_sal ASC
     LIMIT 1
-) t_avg_sal 
+) t_avg_sal
 JOIN departments d USING (department_id)
 WHERE d.salary &#x3D; t_avg_sal.avg_sal;</code></pre>
 
 <hr>
-<p><strong>子查询在SELECT</strong></p>
+<p><strong>子查询在 SELECT</strong></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 查询平均工资最低的部门信息 和 其平均工资
 -- 选择上面任意一个方法，将SELECT增加一个字段即可
 
@@ -2816,13 +2828,13 @@ FROM (
     GROUP BY department_id
     ORDER BY avg_sal ASC
     LIMIT 1
-) t_avg_sal 
+) t_avg_sal
 JOIN departments d USING (department_id)
 WHERE d.salary &#x3D; t_avg_sal.avg_sal;</code></pre>
 
 <hr>
 <p><strong>多行子查询的空值问题</strong></p>
-<p>若多行子查询的结果中出现了NULL值，则主查询与子查询运算的结果将可能为空，<span class="red">注意在子查询中排除掉NULL值</span></p>
+<p>若多行子查询的结果中出现了 NULL 值，则主查询与子查询运算的结果将可能为空，<span class="red">注意在子查询中排除掉 NULL 值</span></p>
 <h2 id="相关子查询——基本"><a href="#相关子查询——基本" class="headerlink" title="相关子查询——基本"></a>相关子查询——基本</h2><p><span class="red bold">相关子查询：</span>指的是子查询的结果会随主查询给的值变化，主查询每提交一个值，子查询都要重新查一遍</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 查询工资大于本部门平均工资的员工信息
 
@@ -2844,12 +2856,12 @@ JOIN (
 ) t_avg_sal
 ON t_avg_sal.department_id &#x3D; e.department_id AND e.salary &gt; t_avg_sal.salary;</code></pre>
 
-<p><span class="red bold">相关子查询为什么不需要分组：</span>因为SQL的执行顺序，在计算 <code>AVG(salary)</code> 之前我们已经把不满足 <code>e2.department_id = e1.department_id</code> 的行都去除了</p>
+<p><span class="red bold">相关子查询为什么不需要分组：</span>因为 SQL 的执行顺序，在计算 <code>AVG(salary)</code> 之前我们已经把不满足 <code>e2.department_id = e1.department_id</code> 的行都去除了</p>
 <blockquote>
-<p>也就是说当传入的行的department_id为10，则因为过滤条件，在e2表中，我们只提取出了department_id为10的行，然后再计算他们的平均值</p>
+<p>也就是说当传入的行的 department_id 为 10，则因为过滤条件，在 e2 表中，我们只提取出了 department_id 为 10 的行，然后再计算他们的平均值</p>
 </blockquote>
 <hr>
-<p><strong>子查询在ORDER BY</strong></p>
+<p><strong>子查询在 ORDER BY</strong></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 查询员工的id, salary，按照department_name排序
 
 -- 方法1（ORDER BY相关子查询）
@@ -2873,7 +2885,7 @@ ORDER BY department_name ASC;</code></pre>
 
 <hr>
 <p><strong>子查询可以写在哪里？</strong></p>
-<p>在SQL结构中，除了 <code>GROUP BY</code> 和 <code>LIMIT</code> 之外的地方都可以写子查询（是的SELECT都可以）</p>
+<p>在 SQL 结构中，除了 <code>GROUP BY</code> 和 <code>LIMIT</code> 之外的地方都可以写子查询（是的 SELECT 都可以）</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">&#x2F;* 若employee表中emokoyee_id与job_history表中employee_id相同的数目不小于2
 输出这些相同id的员工的employee_id, last_name和其job_id*&#x2F;
 
@@ -2896,7 +2908,7 @@ WHERE (
 <h2 id="相关子查询——-NOT-EXISTS"><a href="#相关子查询——-NOT-EXISTS" class="headerlink" title="相关子查询——(NOT) EXISTS"></a>相关子查询——(NOT) EXISTS</h2><p><span class="red bold">注意：</span>大部分使用到 <code>IN</code> 的地方都可以改写为 <code>EXISTS</code>, <code>NOT IN</code> 可以改为 <code>NOT EXISTS</code></p>
 <hr>
 <p><strong>EXISTS</strong></p>
-<p><span class="red bold">EXISTS：</span>当外查询传入的数据在相关子查询内满足条件而导致相关子查询能查出数据时，<span class="red">返回true（相关子查询的结果将被忽略）</span></p>
+<p><span class="red bold">EXISTS：</span>当外查询传入的数据在相关子查询内满足条件而导致相关子查询能查出数据时，<span class="red">返回 true（相关子查询的结果将被忽略）</span></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">WHERE EXISTS (相关子查询)</code></pre>
 
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 查询公司管理者的employee_id, last_name, job_id, department_id信息
@@ -2953,7 +2965,7 @@ WHERE NOT EXISTS (
 
 <h2 id="数据库的创建和管理"><a href="#数据库的创建和管理" class="headerlink" title="数据库的创建和管理"></a>数据库的创建和管理</h2><hr>
 <p><strong>数据库的创建</strong></p>
-<p><span class="red bold">使用默认字符集创建：</span><br>在创建数据库时不指定字符集，则使用该版本MySQL的默认字符集</p>
+<p><span class="red bold">使用默认字符集创建：</span><br>在创建数据库时不指定字符集，则使用该版本 MySQL 的默认字符集</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">CREATE DATABASE 数据库名;</code></pre>
 
 <p><span class="red bold">指定字符集创建：</span></p>
@@ -3000,22 +3012,22 @@ ALTER DATABASE 数据库名 CHARSET &#39;字符集名&#39;;</code></pre>
 <h2 id="表的创建与管理"><a href="#表的创建与管理" class="headerlink" title="表的创建与管理"></a>表的创建与管理</h2><hr>
 <p><strong>表的命名规则</strong></p>
 <ul>
-<li>数据库名、表名不得超过30个字符、变量名不得超过29个</li>
+<li>数据库名、表名不得超过 30 个字符、变量名不得超过 29 个</li>
 <li>只能包含：<code>A-Z</code> <code>a-z</code> <code>0-9</code> 和 <code>_</code></li>
 <li>数据库名、表名、字段名等对象名中不能包含空格</li>
-<li>在同一个MySQL软件中，数据库不得重名；</li>
+<li>在同一个 MySQL 软件中，数据库不得重名；</li>
 <li>同一个数据库中，表不得重名</li>
 <li>同一个表中、字段不得重名</li>
-<li>保证用户字段与SQL保留字、常用方法没有冲突。若坚持使用存在冲突的用户字段，将该字段在SQL语句中使用 着重号 括住</li>
+<li>保证用户字段与 SQL 保留字、常用方法没有冲突。若坚持使用存在冲突的用户字段，将该字段在 SQL 语句中使用 着重号 括住</li>
 <li>保证字段名和类型的一致性，当一个字段名存在于多张表中时，注意其在多张表中的类型应该是一致的</li>
 </ul>
 <hr>
 <p><strong>字段的命名规则</strong></p>
 <ul>
 <li>小写字母或数字，下滑线分割，禁止数字开头，禁止两个下划线之间只有数字</li>
-<li>禁止使用SQL保留字</li>
+<li>禁止使用 SQL 保留字</li>
 <li>表必备的三个字段：<ul>
-<li>id：主键，类型为BIGINT UNSIGNED，自增步长1</li>
+<li>id：主键，类型为 BIGINT UNSIGNED，自增步长 1</li>
 <li>gmt_create：存放记录的创建时间</li>
 <li>gmt_modified：存放记录的最新修改时间</li>
 </ul>
@@ -3028,7 +3040,7 @@ ALTER DATABASE 数据库名 CHARSET &#39;字符集名&#39;;</code></pre>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">CREATE TABLE [IF NOT EXISTS] 表名(
     -- 这里定义字段
     字段名 数据类型[(长度)] [约束条件] [DEFAULT 默认值],
-    字段名 数据类型[(长度)] [约束条件] [DEFAULT 默认值], 
+    字段名 数据类型[(长度)] [约束条件] [DEFAULT 默认值],
     ...
 );</code></pre>
 
@@ -3047,13 +3059,13 @@ FROM [另一个数据库.]另一张表;</code></pre>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 包括表数据
 CREATE TABLE employees_copy
 AS
-SELECT * 
+SELECT *
 FROM employees;
 
 -- 不包括表数据
 CREATE TABLE employees
 AS
-SELECT * 
+SELECT *
 FROM employees
 WHERE FALSE;</code></pre>
 
@@ -3062,7 +3074,7 @@ WHERE FALSE;</code></pre>
 
 <hr>
 <p><strong>计算列</strong></p>
-<p>类似于EXCEL中定义一格是另外两格的计算结果，MySQL也可以定义这样的“格”，严格意义上是将这一个字段的数据都定义为某种计算方式。</p>
+<p>类似于 EXCEL 中定义一格是另外两格的计算结果，MySQL 也可以定义这样的“格”，严格意义上是将这一个字段的数据都定义为某种计算方式。</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">CREATE TABLE [IF NOT EXISTS] 表名(
     字段名 数据类型[(长度)] [约束条件] [DEFAULT 默认值],
     字段名 数据类型[(长度)] [约束条件] [DEFAULT 默认值],
@@ -3116,11 +3128,11 @@ RENAME TO 新表名;</code></pre>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">TRUNCATE TABLE 表名;</code></pre>
 
 <hr>
-<p><strong>TRUNCATE TABLE与DELETE FROM</strong></p>
+<p><strong>TRUNCATE TABLE 与 DELETE FROM</strong></p>
 <p>相同：删除表数据，保留表结构<br>不同：</p>
 <ol>
 <li>TRUNCATE TABLE：自动提交（不受自动提交设置影响），不可回滚</li>
-<li>DELETE FROM：表数据可以选择性（使用WHERE）或全部删除（不使用WHERE），可以实现回滚</li>
+<li>DELETE FROM：表数据可以选择性（使用 WHERE）或全部删除（不使用 WHERE），可以实现回滚</li>
 </ol>
 <h2 id="初识事务——提交与回滚"><a href="#初识事务——提交与回滚" class="headerlink" title="初识事务——提交与回滚"></a>初识事务——提交与回滚</h2><hr>
 <p><strong>提交（COMMIT）</strong></p>
@@ -3134,15 +3146,15 @@ RENAME TO 新表名;</code></pre>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">ROLLBACK;</code></pre>
 
 <hr>
-<p><strong>关于DDL与DML的回滚</strong></p>
+<p><strong>关于 DDL 与 DML 的回滚</strong></p>
 <ol>
 <li>DDL（数据库定义）一旦执行不可回滚 <code>SET autocommit = false</code> 无效</li>
-<li>DML（数据库操作）：若执行DML之前执行 <code>SET autocommit = false</code> （默认开启自动提交）则可以实现回滚</li>
+<li>DML（数据库操作）：若执行 DML 之前执行 <code>SET autocommit = false</code> （默认开启自动提交）则可以实现回滚</li>
 </ol>
 <hr>
-<p><strong>MySQL8.0新特性DDL的原子性</strong></p>
-<p>在MySQL8.0之后，数据库定义语言（DDL）具有原子性，即<span class="red">当一条DDL语句对多个数据库或多张表操作时，若有一个操作失败，则会自动回滚</span></p>
-<p><span class="red bold">注意：</span>在MySQL8.0之前，DDL语句事务不会回滚</p>
+<p><strong>MySQL8.0 新特性 DDL 的原子性</strong></p>
+<p>在 MySQL8.0 之后，数据库定义语言（DDL）具有原子性，即<span class="red">当一条 DDL 语句对多个数据库或多张表操作时，若有一个操作失败，则会自动回滚</span></p>
+<p><span class="red bold">注意：</span>在 MySQL8.0 之前，DDL 语句事务不会回滚</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 若表book1存在，表book2不存在
 DROP TABLE book1, book2;
 
@@ -3188,12 +3200,12 @@ WHERE 筛选条件;</code></pre>
 <p><span class="red">多表删除：</span></p>
 <p>当一个数据同时存在于多张表，并且有将他们全部删除的需求时，可以使用多表连接进行删除：</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">DELETE m,U
-FROM my_employees m 
+FROM my_employees m
 JOIN users u USING (userid)
 WHERE m.userid &#x3D; &#39;Bbiri&#39;;</code></pre>
 
 <p><span class="red">注意：</span>数据的增加、修改和删除都有可能由于约束导致操作失败。</p>
-<h2 id="MySQL数据类型"><a href="#MySQL数据类型" class="headerlink" title="MySQL数据类型"></a>MySQL数据类型</h2><hr>
+<h2 id="MySQL-数据类型"><a href="#MySQL-数据类型" class="headerlink" title="MySQL 数据类型"></a>MySQL 数据类型</h2><hr>
 <p><strong>整数类型（INT）</strong></p>
 <table>
 <thead>
@@ -3236,7 +3248,7 @@ WHERE m.userid &#x3D; &#39;Bbiri&#39;;</code></pre>
 </tr>
 </tbody></table>
 <p><span class="red bold">整数类型的显式位数限制和补零（ZEROFILL）：</span></p>
-<p><span class="red">注意：</span>该功能在MySQL8.0之后不建议使用</p>
+<p><span class="red">注意：</span>该功能在 MySQL8.0 之后不建议使用</p>
 <ul>
 <li>整数类型也可以像浮点型一样做显式的位数限制，但其实并没有什么卵用，<span class="red">做这个显式的位数限制并不会使超过此位数但不超过数据类型取值范围的数不能输入到数据库中</span></li>
 <li>显式位数限制需要配合补零使用才有效果：</li>
@@ -3274,33 +3286,33 @@ WHERE m.userid &#x3D; &#39;Bbiri&#39;;</code></pre>
 </tr>
 </tbody></table>
 <ul>
-<li>REAL默认与DOUBLE相同，也可以通过设置将其默认与FLOAT相同</li>
+<li>REAL 默认与 DOUBLE 相同，也可以通过设置将其默认与 FLOAT 相同</li>
 </ul>
 <p><span class="red">注意：</span>浮点类型的无符号取值范围就是有符号取值范围去掉负数部分，因此声明一个浮点类型是无符号的并不会增加无符号浮点数的取值范围，也不会减少其占用空间。</p>
 <p><span class="red bold">浮点数精度设定：</span></p>
 <ul>
 <li><p>浮点数的精度设定不像整数位数限制那么鸡肋，它是确实能够起到限制插入数据的格式的作用的</p>
-  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">   -- 限制字段为总共五位，其中小数位两位的双精浮点数
-   CREATE TABLE test (
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 限制字段为总共五位，其中小数位两位的双精浮点数
+CREATE TABLE test (
 price DOUBLE(5, 2)
-   );
+);
 
-   INSERT INTO test VALUES(23.55);
-   -- --&gt;显示23.55
+INSERT INTO test VALUES(23.55);
+-- --&gt;显示23.55
 
-   INSERT INTO test VALUES(23.558);
-   -- --&gt;显示23.56（四舍五入）
+INSERT INTO test VALUES(23.558);
+-- --&gt;显示23.56（四舍五入）
 
-   INSERT INTO test VALUES(23.554);
-   -- --&gt;显示23.55（四舍五入）
+INSERT INTO test VALUES(23.554);
+-- --&gt;显示23.55（四舍五入）
 
-   INSERT INTO test VALUES(999.998);
-   -- --&gt;报错（四舍五入后超出范围）
+INSERT INTO test VALUES(999.998);
+-- --&gt;报错（四舍五入后超出范围）
 
-   INSERT INTO test VALUES(114514.00);
-   -- --&gt;报错</code></pre></li>
+INSERT INTO test VALUES(114514.00);
+-- --&gt;报错</code></pre></li>
 </ul>
-<p><span class="red">注意2：</span>其他数据库未必支持浮点数的精度设定，因此和整数类型一样，不建议使用这样的语法</p>
+<p><span class="red">注意 2：</span>其他数据库未必支持浮点数的精度设定，因此和整数类型一样，不建议使用这样的语法</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- FLOAT(M, D)
 -- DOUBLE(M, D)
 -- 精度（M）：表示小数位+整数位个数
@@ -3312,7 +3324,7 @@ CREATE TABLE test (
 
 <hr>
 <p><strong>定点数类型（DECIMAL）</strong></p>
-<p>为解决浮点数在计算时精度丢失的问题……（这句话Java说过了）</p>
+<p>为解决浮点数在计算时精度丢失的问题……（这句话 Java 说过了）</p>
 <table>
 <thead>
 <tr>
@@ -3350,9 +3362,9 @@ CREATE TABLE test (
 </tr>
 </tbody></table>
 <ul>
-<li><p>M：M为几就可以存储几位，不写默认一位</p>
+<li><p>M：M 为几就可以存储几位，不写默认一位</p>
 </li>
-<li><p>在控制台中查询位类型字段出来的默认显示的是十六进制，在MySQL中默认为二进制，如果需要将结果进行进制转换，可以这样做：</p>
+<li><p>在控制台中查询位类型字段出来的默认显示的是十六进制，在 MySQL 中默认为二进制，如果需要将结果进行进制转换，可以这样做：</p>
 </li>
 </ul>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 转换为16进制
@@ -3382,7 +3394,7 @@ SELECT BIN(B2) FROM bit_test;</code></pre>
 <tbody><tr>
 <td align="center">YEAR</td>
 <td align="center">1</td>
-<td align="center">YYYY或YY</td>
+<td align="center">YYYY 或 YY</td>
 <td align="center">1901</td>
 <td align="center">2155</td>
 </tr>
@@ -3415,16 +3427,16 @@ SELECT BIN(B2) FROM bit_test;</code></pre>
 <td align="center">1038-01-19 03:14:07 UTC</td>
 </tr>
 </tbody></table>
-<p><span class="red bold">关于两位YEAR：</span></p>
-<p><span class="red">两位YEAR在MySQL5.5开始不建议使用</span></p>
-<p>两位YEAR存储取值范围为00~99，并且遵循以下规则：</p>
+<p><span class="red bold">关于两位 YEAR：</span></p>
+<p><span class="red">两位 YEAR 在 MySQL5.5 开始不建议使用</span></p>
+<p>两位 YEAR 存储取值范围为 00~99，并且遵循以下规则：</p>
 <ul>
-<li>当取值为01<del>69时，表示2001</del>2069年</li>
-<li>当取值为70<del>99时，表示1970</del>1999年</li>
-<li>当取值为数值0或00时，表示0000年</li>
-<li>当取值为字符串’0’时，表示2000年</li>
+<li>当取值为 01<del>69 时，表示 2001</del>2069 年</li>
+<li>当取值为 70<del>99 时，表示 1970</del>1999 年</li>
+<li>当取值为数值 0 或 00 时，表示 0000 年</li>
+<li>当取值为字符串’0’时，表示 2000 年</li>
 </ul>
-<p><span class="red bold">关于DATETIME与TIMESTAMP：</span></p>
+<p><span class="red bold">关于 DATETIME 与 TIMESTAMP：</span></p>
 <ul>
 <li><code>TIMESTAMP</code>存储空间小，表示的日期时间范围小</li>
 <li>两个日期比较大小或日期计算时，<code>TIMESTAMP</code> 更快</li>
@@ -3465,16 +3477,16 @@ SELECT BIN(B2) FROM bit_test;</code></pre>
 </tbody></table>
 <p><span class="red bold">CHAR:</span></p>
 <ul>
-<li><code>CAHR</code> 类型一般需要指定字符串的长度，若不指定则默认长度为1</li>
-<li>若插入的数据长度比指定的长度要小，则会在右侧填充空格，但当MySQL检索该字段时，会把数据右侧的空格去掉，不管是它自己填充的还是插入数据时写的</li>
+<li><code>CAHR</code> 类型一般需要指定字符串的长度，若不指定则默认长度为 1</li>
+<li>若插入的数据长度比指定的长度要小，则会在右侧填充空格，但当 MySQL 检索该字段时，会把数据右侧的空格去掉，不管是它自己填充的还是插入数据时写的</li>
 </ul>
 <p><span class="red bold">VARCAHR:</span></p>
 <ul>
 <li><code>VARCAHR</code> 类型字段在声明时<span class="red">必须要指定长度</span></li>
-<li>在MySQL4.0版本以下时，指定的长度是字节数，当存储汉字时，需要考虑每个汉字需要占用3个字节。<br />在MySQL5.0版本以上时，指定的长度是字符数，不需要考虑中文占用多个字节的情况</li>
-<li>当然也因此，在声明长度时，最大允许声明长度不是65535，而是65535&#x2F;3&#x3D;21845</li>
+<li>在 MySQL4.0 版本以下时，指定的长度是字节数，当存储汉字时，需要考虑每个汉字需要占用 3 个字节。<br />在 MySQL5.0 版本以上时，指定的长度是字符数，不需要考虑中文占用多个字节的情况</li>
+<li>当然也因此，在声明长度时，最大允许声明长度不是 65535，而是 65535&#x2F;3&#x3D;21845</li>
 </ul>
-<p><span class="red bold">CHAR与VARCHAR相比：</span></p>
+<p><span class="red bold">CHAR 与 VARCHAR 相比：</span></p>
 <table>
 <thead>
 <tr>
@@ -3505,17 +3517,17 @@ SELECT BIN(B2) FROM bit_test;</code></pre>
 </ul>
 <p>从存储引擎方面：</p>
 <ul>
-<li>MySQL使用InnoDB存储引擎，其内部存储格式被没有区分定长与变长，其主要的性能影响因素是存储总量，<span class="red">因此推荐使用 <code>VARCHAR</code></span>，因为它家省空间。</li>
+<li>MySQL 使用 InnoDB 存储引擎，其内部存储格式被没有区分定长与变长，其主要的性能影响因素是存储总量，<span class="red">因此推荐使用 <code>VARCHAR</code></span>，因为它家省空间。</li>
 </ul>
-<p><span class="red bold">各种TEXT：</span></p>
+<p><span class="red bold">各种 TEXT：</span></p>
 <ul>
-<li>MySQL不允许各种TEXT类型做主键，因为TEXT类型的长度是不确定的</li>
-<li>TEXT可以存储很长的文本段，运行速度慢，因此若不是他别长的内容还是建议使用 <code>CHAR</code> 和 <code>VARCHAR</code></li>
-<li>TEXT与BLOB类型在数据删除后会出现很大的数据空洞，使文件碎片多，建议将其单独作为一个表（详见 BLOB -&gt; TEXT与BLOB使用注意事项）</li>
-<li><span class="red">TEXT不能定义默认值</span></li>
+<li>MySQL 不允许各种 TEXT 类型做主键，因为 TEXT 类型的长度是不确定的</li>
+<li>TEXT 可以存储很长的文本段，运行速度慢，因此若不是他别长的内容还是建议使用 <code>CHAR</code> 和 <code>VARCHAR</code></li>
+<li>TEXT 与 BLOB 类型在数据删除后会出现很大的数据空洞，使文件碎片多，建议将其单独作为一个表（详见 BLOB -&gt; TEXT 与 BLOB 使用注意事项）</li>
+<li><span class="red">TEXT 不能定义默认值</span></li>
 </ul>
 <p><span class="red bold">ENUM:</span></p>
-<p>定义枚举字段可以使该字段的值只在枚举的值和NULL（若没有指定非空）里面选择</p>
+<p>定义枚举字段可以使该字段的值只在枚举的值和 NULL（若没有指定非空）里面选择</p>
 <p><span class="red">注意：</span>在插入数据时，除了直接输入枚举的值，还可以使用枚举值的索引（或称下标）的数值或字符形式</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">CREATE TABLE enum_test(
     season(&#39;春&#39;, &#39;夏&#39;, &#39;秋&#39;, &#39;冬&#39;)
@@ -3525,8 +3537,8 @@ SELECT BIN(B2) FROM bit_test;</code></pre>
 INSERT INTO enum_test VALUES(1, &#39;3&#39;);</code></pre>
 
 <p><span class="red bold">SET:</span></p>
-<p>上面 <code>ENUM</code> 只能选一个作为数据的值，<code>SET</code> 可以选择0个（NULL）或多个作为数据的值</p>
-<p><span class="red">注意：</span>SET不允许重复</p>
+<p>上面 <code>ENUM</code> 只能选一个作为数据的值，<code>SET</code> 可以选择 0 个（NULL）或多个作为数据的值</p>
+<p><span class="red">注意：</span>SET 不允许重复</p>
 <hr>
 <p><strong>二进制字符串&#x2F;对象类型</strong></p>
 <p><code>BINARY</code> 与 <code>VARBINARY</code> 类似于 <code>CHAR</code> 和 <code>VARCHAR</code>，只是他们存储的是二进制字符串</p>
@@ -3546,8 +3558,8 @@ INSERT INTO enum_test VALUES(1, &#39;3&#39;);</code></pre>
 <td align="center">变长</td>
 </tr>
 </tbody></table>
-<p><span class="red bold">BINARY：</span>存储的是固定长度的二进制字符串，M表示最多能存储的字节数，若未指定则默认为1，若数据小于指定的字节，则在右边填充’\0’补齐</p>
-<p><span class="red bold">VARBINARY：</span>对于可变长二进制字符串，则必须指定最大长度M</p>
+<p><span class="red bold">BINARY：</span>存储的是固定长度的二进制字符串，M 表示最多能存储的字节数，若未指定则默认为 1，若数据小于指定的字节，则在右边填充’\0’补齐</p>
+<p><span class="red bold">VARBINARY：</span>对于可变长二进制字符串，则必须指定最大长度 M</p>
 <table>
 <thead>
 <tr>
@@ -3567,25 +3579,25 @@ INSERT INTO enum_test VALUES(1, &#39;3&#39;);</code></pre>
 <td align="center">LONGBLOB</td>
 </tr>
 </tbody></table>
-<p><span class="red bold">各种BLOB：</span><code>BLOB</code> 适用于存储二进制对象的，如图片、音视频等，但实际上数据库并不会用于存储二进制对象，而是存储二进制对象的访问途径</p>
-<p><span class="red bold">TEXT与BLOB使用注意事项：</span></p>
+<p><span class="red bold">各种 BLOB：</span><code>BLOB</code> 适用于存储二进制对象的，如图片、音视频等，但实际上数据库并不会用于存储二进制对象，而是存储二进制对象的访问途径</p>
+<p><span class="red bold">TEXT 与 BLOB 使用注意事项：</span></p>
 <ul>
 <li><code>TEXT</code> 和 <code>BLOB</code> 在尽进行大量数据删除或更新操作时，容易在数据表中留下空洞，以后填入这些空洞的记录长度也可能不同。为了提高性能，建议使用 <code>OPTIMIZE TABLE</code> 功能对表进行碎片整理。</li>
-<li>若需要对大文本字段进行模糊查询，MySQL提供了前缀索引，但依然要避免对 <code>TEXT</code> 和 <code>BLOB</code> 进行检索</li>
+<li>若需要对大文本字段进行模糊查询，MySQL 提供了前缀索引，但依然要避免对 <code>TEXT</code> 和 <code>BLOB</code> 进行检索</li>
 <li>将 <code>TEXT</code> 和 <code>BLOB</code> 分离到单独的表中，在某些环境下这样做可以让你把原数据表中数据列转换为固定长度的数据行，这会减少主表中的碎片，使你得到固定长度数据行的优势</li>
 </ul>
 <hr>
-<p><strong>JSON类型</strong></p>
-<p>JSON是一种轻量级的数据交换格式，JSON可以将Javascript对象中表示的一组数据转换为字符串，然后在网络和程序之间传递这个字符串，并在需要时将字符串还原为各编程语言所支持的格式</p>
+<p><strong>JSON 类型</strong></p>
+<p>JSON 是一种轻量级的数据交换格式，JSON 可以将 Javascript 对象中表示的一组数据转换为字符串，然后在网络和程序之间传递这个字符串，并在需要时将字符串还原为各编程语言所支持的格式</p>
 <p><span class="red bold">写入：</span></p>
-<p>在写入JSON数据时，其格式类似于在网页控制台中输出对象的格式：</p>
+<p>在写入 JSON 数据时，其格式类似于在网页控制台中输出对象的格式：</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">INSERT INTO test
 VALUES(&#39;&#123;&quot;name&quot;:&quot;lihua&quot;, &quot;age&quot;:18, &quot;address&quot;:&#123;&quot;city&quot;:&quot;beijing&quot;, &quot;province&quot;:&quot;beijing&quot;&#125;&#125;&#39;)</code></pre>
 
 <p>上面代码的结构类似于：</p>
 <p><img src="https://s1.ax1x.com/2022/06/07/XD9Wlt.png" alt="XD9Wlt.png"></p>
 <p><span class="red bold">提取：</span></p>
-<p>可以使用以下格式提取JSON数据中的数据：</p>
+<p>可以使用以下格式提取 JSON 数据中的数据：</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT 字段名 -&gt; &#39;$.数据名&#39; [AS 别名]
 FROM 表名;</code></pre>
 
@@ -3616,12 +3628,12 @@ FROM json_test;</code></pre>
 <hr>
 <p><strong>数据类型规范</strong></p>
 <ul>
-<li>任何字段若为非负数，必须指定为UNSIGNED</li>
-<li>小数类型使用DECIMAL</li>
-<li>若字符串长度几乎相等，使用CHAR</li>
-<li>VARCHAR中数据的长度不应该超过5000，若超过，使用TEXT并且另开一张表，使用主键进行对应</li>
+<li>任何字段若为非负数，必须指定为 UNSIGNED</li>
+<li>小数类型使用 DECIMAL</li>
+<li>若字符串长度几乎相等，使用 CHAR</li>
+<li>VARCHAR 中数据的长度不应该超过 5000，若超过，使用 TEXT 并且另开一张表，使用主键进行对应</li>
 </ul>
-<h2 id="MySQL约束（CONSTRAINT）"><a href="#MySQL约束（CONSTRAINT）" class="headerlink" title="MySQL约束（CONSTRAINT）"></a>MySQL约束（CONSTRAINT）</h2><p>为了保证数据的完整性，SQL规范以约束的方式对表数据进行额外的条件限制，从以下四个方面考虑：</p>
+<h2 id="MySQL-约束（CONSTRAINT）"><a href="#MySQL-约束（CONSTRAINT）" class="headerlink" title="MySQL 约束（CONSTRAINT）"></a>MySQL 约束（CONSTRAINT）</h2><p>为了保证数据的完整性，SQL 规范以约束的方式对表数据进行额外的条件限制，从以下四个方面考虑：</p>
 <ol>
 <li>实体完整性：同一个表中不能存在两条完全相同无法区分的记录</li>
 <li>域完整性：数据只能是指定的类型或枚举限定的值，不能出现无效的值</li>
@@ -3669,9 +3681,9 @@ MODIFY 字段名 数据类型 NULL;</code></pre>
 <ul>
 <li>同一张表可以有多个唯一性约束</li>
 <li>可以是列约束和组合约束（表约束）</li>
-<li><span class="red">唯一性约束默认允许列的值为空，并且多个NULL不视为重复</span></li>
+<li><span class="red">唯一性约束默认允许列的值为空，并且多个 NULL 不视为重复</span></li>
 <li>在创建唯一约束的时候，若不给唯一约束命名，则默认与字段名相同</li>
-<li><span class="red">MySQL会给有唯一性约束的字段创建一个唯一索引</span></li>
+<li><span class="red">MySQL 会给有唯一性约束的字段创建一个唯一索引</span></li>
 </ul>
 <p><span class="red bold">复合约束：</span>指将多个字段捆绑并定义唯一性，仅当这多个字段的数据同时相同时，才会增加失败，<span class="red">复合约束只能定义在表约束中</span></p>
 <p><span class="red bold">定义约束：</span></p>
@@ -3723,7 +3735,7 @@ DROP INDEX 索引名;</code></pre>
 <li>一个表中只能有一个主键约束，主键可以声明为列约束，也可以声明为表约束</li>
 <li>主键约束可以对应一张表中的一列或多列（复合主键）</li>
 <li>若声明了复合主键，则这些列<span class="red">都不允许空值</span>，且它们的值<span class="red">不允许同时重复</span></li>
-<li><span class="red">MySQL主键名总是PRIMARY</span></li>
+<li><span class="red">MySQL 主键名总是 PRIMARY</span></li>
 <li>当创建主键约束时，会在所在的列或组合列上建立对应的主键索引（<span class="red">因此可以使用主键查询的，尽量使用主键查询，效率更高</span>）</li>
 <li>不要修改主键字段的值</li>
 </ul>
@@ -3762,7 +3774,7 @@ DROP PRIMARY KEY;</code></pre>
 <li>当需要产生唯一标识符或顺序值时，可以设置自增长</li>
 <li>自增长约束的列必须是键列（主键&#x2F;唯一键）</li>
 <li>自增字段的数据类型必须为整型</li>
-<li>若自增列在插入数据时指定了0和NULL，则会在当前最大值基础上自增<br />若设置了具体值则直接使用该值</li>
+<li>若自增列在插入数据时指定了 0 和 NULL，则会在当前最大值基础上自增<br />若设置了具体值则直接使用该值</li>
 <li>在开发中，一旦字段上声明了自增，就不要再给该字段赋值</li>
 </ul>
 <p><span class="red bold">定义约束：</span></p>
@@ -3783,9 +3795,9 @@ AUTO_INCREMENT &#x3D; 值;</code></pre>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">ALTER TABLE 表名
 MODIFY 字段名 数据类型;</code></pre>
 
-<p><span class="red bold">MySQL8.0新特性——自增值持久化：</span></p>
-<p>在MySQL5.7中，表的自增值保存在内存中，一旦重启MySQL服务，内存中的自增值就会消失，在启动MySQL服务时，会重新使用表中的最大值作为自增值。</p>
-<p>而在MySQL8.0中，自增值放在日志中，每次计数器改变都会更新日志，重启MySQL服务后，InnoDB会从日志中重新读取自增值</p>
+<p><span class="red bold">MySQL8.0 新特性——自增值持久化：</span></p>
+<p>在 MySQL5.7 中，表的自增值保存在内存中，一旦重启 MySQL 服务，内存中的自增值就会消失，在启动 MySQL 服务时，会重新使用表中的最大值作为自增值。</p>
+<p>而在 MySQL8.0 中，自增值放在日志中，每次计数器改变都会更新日志，重启 MySQL 服务后，InnoDB 会从日志中重新读取自增值</p>
 <hr>
 <p><strong>外键约束（FOREIGN KEY）</strong></p>
 <p><span class="red">注意：</span>开发中基本不使用外键，数据耦合性过高</p>
@@ -3815,7 +3827,7 @@ ADD [CONSTRAINT 约束名] FOREIGN KEY (外键字段名) REFERENCES 主表名(�
 <ul>
 <li><p><code>CASCADE</code>：在主表上更新&#x2F;删除被引用记录时，同步更新&#x2F;删除掉从表的数据</p>
 </li>
-<li><p><code>SET NULL</code>：在主表上更新&#x2F;删除被引用记录时，将从表上对应的记录设为NULL</p>
+<li><p><code>SET NULL</code>：在主表上更新&#x2F;删除被引用记录时，将从表上对应的记录设为 NULL</p>
 </li>
 <li><p><code>NO ACTION</code>：若从表中有匹配的记录，则不允许主表对应记录的更新和删除</p>
 </li>
@@ -3850,11 +3862,11 @@ DROP FOREIGN KEY 外键约束名;</code></pre>
 DROP INDEX 约束名;</code></pre>
 
 <p><span class="red bold">总结：</span></p>
-<p><span class="red">实际开发中，不要使用外键和级联</span>，因为外键和级联适用于单机低并发，不适合分布式、高并发，级联更新为强阻塞，严重影响数据库的插入速度，<span class="red">所有的外键概念在Java后端应用层解决</span></p>
+<p><span class="red">实际开发中，不要使用外键和级联</span>，因为外键和级联适用于单机低并发，不适合分布式、高并发，级联更新为强阻塞，严重影响数据库的插入速度，<span class="red">所有的外键概念在 Java 后端应用层解决</span></p>
 <p><span class="red">级联更新：</span>就是说当主表外键依赖的字段数据被修改时，就会触发从表中相应数据的更新。</p>
 <hr>
 <p><strong>检查约束（CHECK）</strong></p>
-<p><span class="red">MySQL5.7不支持检查约束，8.0之后支持</span></p>
+<p><span class="red">MySQL5.7 不支持检查约束，8.0 之后支持</span></p>
 <p>检查约束相当于给插入该字段的数据做一个限制，当插入的数据满足括号内的语句时才允许插入，否则报错</p>
 <p>使用以下代码给字段添加检查约束</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 列约束
@@ -3875,7 +3887,7 @@ CHECK(salary &gt; 2000)
 CHECK(sex IN (&#39;男&#39; OR &#39;女&#39;))</code></pre>
 
 <p><span class="red bold">如何查看已经定义的检查约束：</span></p>
-<p>检查约束不会创建索引，在 <code>information_schema.TABLE_CONSTRAINTS</code> 里查询也不会显示检查条件，使用 <code>SHOW</code> 查看表信息即可获得检查约束的信息，建议在控制台执行该语句，在MySQL执行出来的结果不会换行</p>
+<p>检查约束不会创建索引，在 <code>information_schema.TABLE_CONSTRAINTS</code> 里查询也不会显示检查条件，使用 <code>SHOW</code> 查看表信息即可获得检查约束的信息，建议在控制台执行该语句，在 MySQL 执行出来的结果不会换行</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SHOW CREATE TABLE 表名;</code></pre>
 
 <p><span class="red bold">修改约束：</span></p>
@@ -3909,16 +3921,16 @@ MODIFY 字段名 数据类型;</code></pre>
 <p><span class="red bold">面试题：</span></p>
 <ol>
 <li><p>如何在建表时避免空值</p>
-<p> 加非空约束和默认值约束：<code>NOT NULL DEFAULT &#39;&#39;</code> 或 <code>NOT NULL DEFAULT 0</code></p>
+<p>加非空约束和默认值约束：<code>NOT NULL DEFAULT &#39;&#39;</code> 或 <code>NOT NULL DEFAULT 0</code></p>
 </li>
 <li><p>为什么要避免空值</p>
-<p> （1）NULL值遇到运算符会返回NULL，不好比较<br> （2）效率低，影响索引效果</p>
+<p>（1）NULL 值遇到运算符会返回 NULL，不好比较<br>（2）效率低，影响索引效果</p>
 </li>
-<li><p>AUTO_INCREMENT自增一定从1开始吗</p>
-<p> 默认的AUTO_INCREMENT自增值是1，当然我们可以自行设置自增值，这样插入的数据就会从设定的值开始递增</p>
+<li><p>AUTO_INCREMENT 自增一定从 1 开始吗</p>
+<p>默认的 AUTO_INCREMENT 自增值是 1，当然我们可以自行设置自增值，这样插入的数据就会从设定的值开始递增</p>
 </li>
 <li><p>并不是每个表都可以任意选择存储引擎</p>
-<p> MySQL支持多种存储引擎，每个表都可以指定不同的存储引擎，但外键约束不可以跨引擎使用</p>
+<p>MySQL 支持多种存储引擎，每个表都可以指定不同的存储引擎，但外键约束不可以跨引擎使用</p>
 </li>
 </ol>
 <h2 id="数据库对象"><a href="#数据库对象" class="headerlink" title="数据库对象"></a>数据库对象</h2><p>常见的数据库对象</p>
@@ -3962,7 +3974,7 @@ MODIFY 字段名 数据类型;</code></pre>
 <td align="center">相当于一个事件监听器，当数据库发生特定事件后，触发器被触发，完成相应的处理</td>
 </tr>
 </tbody></table>
-<h2 id="MySQL视图（VIEW）"><a href="#MySQL视图（VIEW）" class="headerlink" title="MySQL视图（VIEW）"></a>MySQL视图（VIEW）</h2><p><span class="red bold">视图人称小TABLE：</span>视图是某个表的某些字段及其记录的映射，被映射的表称为<span class="red">基表</span></p>
+<h2 id="MySQL-视图（VIEW）"><a href="#MySQL-视图（VIEW）" class="headerlink" title="MySQL 视图（VIEW）"></a>MySQL 视图（VIEW）</h2><p><span class="red bold">视图人称小 TABLE：</span>视图是某个表的某些字段及其记录的映射，被映射的表称为<span class="red">基表</span></p>
 <hr>
 <p><strong>视图概述</strong></p>
 <p><span class="red">视图的特点：</span></p>
@@ -3988,19 +4000,19 @@ MODIFY 字段名 数据类型;</code></pre>
 CREATE [OR REPLACE]
 [ALGORITHM &#x3D; &#123;UNDEFINED | MERGE | TEMPTABLE&#125;]
 VIEW 视图名称 [(字段列表)]
-AS 
+AS
 查询语句
 [WITH [CASCADED | LOCAL] CHECK OPTION];
 
 -- 精简版
 CREATE VIEW 视图名称 [(字段列表)]
-AS 
+AS
 查询语句;</code></pre>
 
 <p><span class="red">若想让视图的字段名与原表名不一样，起别名的方式有两种：</span></p>
 <ol>
 <li><p>在视图名称后面自定义视图的字段名：</p>
-<p> <span class="red">注意：括号中的别名与查询语句的字段要对应，数量要相同</span></p>
+<p><span class="red">注意：括号中的别名与查询语句的字段要对应，数量要相同</span></p>
 </li>
 </ol>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">视图名称 (字段列表)</code></pre>
@@ -4032,13 +4044,13 @@ SHOW CREATE VIEW 视图名;</code></pre>
 <ul>
 <li>视图中找不到基表的对应数据，有如下几种情况：<ul>
 <li>视图中的信息是一张基表的聚合查询，该视图不能更新</li>
-<li>视图中使用了DISTINCT，无论有没有有效去重，该视图不能更新，只能查询</li>
+<li>视图中使用了 DISTINCT，无论有没有有效去重，该视图不能更新，只能查询</li>
 <li>定义视图时使用了分组、聚合筛选（HAVING）、联合查询结果（UNION），则该视图不支持所有更新操作</li>
 <li>视图中的信息是多张查询（JOIN），则该视图不可 <code>INSERT</code> 和 <code>DELETE</code></li>
 <li>定义视图时指定了<code>ALGORITHM = TEMPTABLE</code>，该视图不支持 <code>INSERT</code> 和 <code>DELETE</code></li>
 <li>视图中不包括基表中所有被定义为非空又未指定默认值的列，该视图不支持<code>INSERT</code></li>
 <li>在定义视图时，字段列表中使用了数学表达式和子查询，该视图整体不支持 <code>UPDATE</code>，对于使用了数学表达式和子查询的字段不支持 <code>UPDATE</code></li>
-<li>定义视图时包含子查询，并且子查询使用了FROM后面的表，该视图不支持所有更新操作</li>
+<li>定义视图时包含子查询，并且子查询使用了 FROM 后面的表，该视图不支持所有更新操作</li>
 <li>视图的基表是一个不可更新视图</li>
 <li>常量视图</li>
 </ul>
@@ -4052,20 +4064,20 @@ AS
 
 <p><span class="red bold">删除视图：</span></p>
 <p>删除视图和删除表的操作一样</p>
-<p><span class="red">注意：</span>若存在一个视图A，是基于另一个视图B创建的，则若删除视图B，视图A失效</p>
+<p><span class="red">注意：</span>若存在一个视图 A，是基于另一个视图 B 创建的，则若删除视图 B，视图 A 失效</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 可以删除多个视图
 DROP VIEW [IF EXISTS] 视图名1[, 视图名2, ...];</code></pre>
 
-<h2 id="MySQL存储过程（PROCEDURE）"><a href="#MySQL存储过程（PROCEDURE）" class="headerlink" title="MySQL存储过程（PROCEDURE）"></a>MySQL存储过程（PROCEDURE）</h2><hr>
+<h2 id="MySQL-存储过程（PROCEDURE）"><a href="#MySQL-存储过程（PROCEDURE）" class="headerlink" title="MySQL 存储过程（PROCEDURE）"></a>MySQL 存储过程（PROCEDURE）</h2><hr>
 <p><strong>存储过程的分类</strong></p>
 <ol>
 <li>无参无返回</li>
-<li>有参无返回（仅IN）</li>
-<li>无参有返回（仅OUT）</li>
-<li>有参有返回（IN和OUT）</li>
+<li>有参无返回（仅 IN）</li>
+<li>无参有返回（仅 OUT）</li>
+<li>有参有返回（IN 和 OUT）</li>
 <li>有参有返回（INOUT）</li>
 </ol>
-<p><span class="red">注意：</span>IN、OUT、INOUT可以在一个存储中带多个</p>
+<p><span class="red">注意：</span>IN、OUT、INOUT 可以在一个存储中带多个</p>
 <hr>
 <p><strong>存储过程的优缺点</strong></p>
 <p><span class="red bold">优点：</span></p>
@@ -4085,17 +4097,17 @@ DROP VIEW [IF EXISTS] 视图名1[, 视图名2, ...];</code></pre>
 <hr>
 <p><strong>存储过程总体基本格式</strong></p>
 <ul>
-<li>关于begin_label，跳转到 MySQL流程控制-&gt;跳转结构——LEAVE 查看</li>
+<li>关于 begin_label，跳转到 MySQL 流程控制-&gt;跳转结构——LEAVE 查看</li>
 </ul>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">CREATE PROCEDURE 存储过程名(IN | OUT | INOUT 参数名 参数类型, ...)
 [CHARACTERISTICS ...]
 [begin_label:] BEGIN
-    存储过程体 
+    存储过程体
 END 结束符</code></pre>
 
 <p><span class="red bold">特征（CHARACTERISTICS）：</span></p>
 <p>特征是对存储过程的约束条件，它可以写以下这些值：</p>
-<p><code>LANGUAGE SQL</code>：说明存储过程的执行体是由SQL语句组成的</p>
+<p><code>LANGUAGE SQL</code>：说明存储过程的执行体是由 SQL 语句组成的</p>
 <p><code>[NOT] DETERMINISTIC</code>：说明存储过程的执行结果是否确定。</p>
 <ul>
 <li><span class="red">默认为不确定（NOT DETERMINISTIC）</span></li>
@@ -4105,13 +4117,13 @@ END 结束符</code></pre>
 <p><code>&#123; CONTAINS SQL | NO SQL |&#125;</code>：</p>
 <ul>
 <li><span class="red">默认为 <code>CONTAINS SQL</code></span></li>
-<li><code>CONTAINS SQL</code>：表示存储过程体包含SQL语句，但是没有读写数据的SQL语句</li>
-<li><code>NO SQL</code>：表示存储过程体没有SQL语句</li>
+<li><code>CONTAINS SQL</code>：表示存储过程体包含 SQL 语句，但是没有读写数据的 SQL 语句</li>
+<li><code>NO SQL</code>：表示存储过程体没有 SQL 语句</li>
 </ul>
 <p><code>&#123; READS SQL DATA | MODIFIES SQL DATA &#125;</code>：</p>
 <ul>
-<li><code>READS SQL DATA</code>：表示当前存储过程体包含读数据的SQL语句</li>
-<li><code>MODIFIES SQL DATA</code>：表示当前存储过程体包含写数据的SQL语句</li>
+<li><code>READS SQL DATA</code>：表示当前存储过程体包含读数据的 SQL 语句</li>
+<li><code>MODIFIES SQL DATA</code>：表示当前存储过程体包含写数据的 SQL 语句</li>
 </ul>
 <p><code>SQL SECURITY &#123; DEFINER | INVORKER &#125;</code>：表示允许执行当前存储过程的用户</p>
 <ul>
@@ -4121,7 +4133,7 @@ END 结束符</code></pre>
 </ul>
 <p><code>COMMENT &#39;这是存储过程或存储函数的注释&#39;</code>：注释</p>
 <p><span class="red bold">结束标记重定义（DELIMITER）：</span></p>
-<p>规定存储过程体中的每一句使用分号结尾，为避免和SQL中的结束符冲突，需要在定义存储过程的之前重新定义SQL的结束标记，淡然用完就给改回去，通常会将结束符重定义为 <code>$</code> 或 <code>//</code></p>
+<p>规定存储过程体中的每一句使用分号结尾，为避免和 SQL 中的结束符冲突，需要在定义存储过程的之前重新定义 SQL 的结束标记，淡然用完就给改回去，通常会将结束符重定义为 <code>$</code> 或 <code>//</code></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">DELIMITER 新的结束符</code></pre>
 
 <p>例子：</p>
@@ -4144,9 +4156,9 @@ DELIMITER ;</code></pre>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">CALL 存储过程名[(变量1, 变量2, ...)];</code></pre>
 
 <hr>
-<p><strong>通过OUT输出参数</strong></p>
+<p><strong>通过 OUT 输出参数</strong></p>
 <p><span class="red bold">将结果赋给参数：</span><br>使用 <code>INTO</code> 将查询到的字段赋给参数</p>
-<p><span class="red">注意：</span>参数的命名最好和字段名不一样.若一样，给表起别名，然后在SELECT后面的字段指明表名（表名.字段）</p>
+<p><span class="red">注意：</span>参数的命名最好和字段名不一样.若一样，给表起别名，然后在 SELECT 后面的字段指明表名（表名.字段）</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">DELIMITER $
 
 CREATE PROCEDURE 存储过程名(OUT 参数名 数据类型, ...)
@@ -4165,7 +4177,7 @@ CALL 存储过程名(@参数名);
 CELECT @参数名;</code></pre>
 
 <hr>
-<p><strong>通过IN传入参数</strong></p>
+<p><strong>通过 IN 传入参数</strong></p>
 <p><span class="red bold">基本格式：</span></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">DELIMITER $
 
@@ -4187,7 +4199,7 @@ SET @emp_name :&#x3D; &#39;Abel&#39;;
 CALL show_someone_salary(@emp_name);</code></pre>
 
 <hr>
-<p><strong>带IN和OUT</strong></p>
+<p><strong>带 IN 和 OUT</strong></p>
 <p>会用上面两个就会用这个了</p>
 <p><span class="red bold">基本格式：</span></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">DELIMITER $
@@ -4208,7 +4220,7 @@ CALL show_someone_salary2(@emp_name, @emp_salary);
 SELECT @emp_salary;</code></pre>
 
 <hr>
-<p><strong>使用INOUT</strong></p>
+<p><strong>使用 INOUT</strong></p>
 <p>适用于参数和返回的变量的类型一样，可以共用一个参数的情况</p>
 <p><span class="red bold">基本格式：</span></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">DELIMITER $
@@ -4233,7 +4245,7 @@ SELECT @emp_name;</code></pre>
 <hr>
 <p><strong>总结</strong></p>
 <p><span class="red bold">不建议使用存储过程！</span></p>
-<h2 id="MySQL存储函数（FUNCTION）"><a href="#MySQL存储函数（FUNCTION）" class="headerlink" title="MySQL存储函数（FUNCTION）"></a>MySQL存储函数（FUNCTION）</h2><p>存储函数相当于用户自定义的函数</p>
+<h2 id="MySQL-存储函数（FUNCTION）"><a href="#MySQL-存储函数（FUNCTION）" class="headerlink" title="MySQL 存储函数（FUNCTION）"></a>MySQL 存储函数（FUNCTION）</h2><p>存储函数相当于用户自定义的函数</p>
 <p><span class="red">存储过程与存储函数：</span></p>
 <table>
 <thead>
@@ -4266,7 +4278,7 @@ SELECT @emp_name;</code></pre>
 </ul>
 <hr>
 <p><strong>存储函数基本格式</strong></p>
-<p>关于begin_label，跳转到 MySQL流程控制-&gt;跳转结构——LEAVE 查看</p>
+<p>关于 begin_label，跳转到 MySQL 流程控制-&gt;跳转结构——LEAVE 查看</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">DELIMITER $
 
 CREATE FUNCTION 函数名(参数名 参数类型, ...)
@@ -4281,12 +4293,12 @@ DELIMITER ;</code></pre>
 
 <p><span class="red bold">注意：</span></p>
 <ul>
-<li>存储函数不支持定义IN OUT，存储函数的参数总为IN</li>
+<li>存储函数不支持定义 IN OUT，存储函数的参数总为 IN</li>
 <li>必须使用 <code>RETURNS</code> 指定返回值类型，在函数体必须使用 <code>RETURN</code> 返回值</li>
 </ul>
 <hr>
 <p><strong>存储函数的调用</strong></p>
-<p>存储函数和SQL自带的函数的调用方式一样，使用即调用：</p>
+<p>存储函数和 SQL 自带的函数的调用方式一样，使用即调用：</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT 存储函数名(参数)
 FROM ...;</code></pre>
 
@@ -4305,8 +4317,8 @@ DELIMITER ;</code></pre>
 <ul>
 <li><p><code>This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you *might* want to use the less safe log_bin_trust_function_creators variable)</code></p>
 <ul>
-<li>解决1：根据实际情况加上特征值 <code>CONTAINS SQL DETERMINISTIC READS SQL DATA</code></li>
-<li>解决2：定义不安全变量 <code>SET GLOBAL log_bin_trust_function_creators = 1;</code></li>
+<li>解决 1：根据实际情况加上特征值 <code>CONTAINS SQL DETERMINISTIC READS SQL DATA</code></li>
+<li>解决 2：定义不安全变量 <code>SET GLOBAL log_bin_trust_function_creators = 1;</code></li>
 </ul>
 </li>
 <li><p><code>You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &#39;函数名() ...</code></p>
@@ -4317,10 +4329,10 @@ DELIMITER ;</code></pre>
 </ul>
 <h2 id="存储过程与存储函数属性的查看、修改、删除"><a href="#存储过程与存储函数属性的查看、修改、删除" class="headerlink" title="存储过程与存储函数属性的查看、修改、删除"></a>存储过程与存储函数属性的查看、修改、删除</h2><hr>
 <p><strong>查看</strong></p>
-<p><span class="red bold">使用SHOW CREATE：</span></p>
+<p><span class="red bold">使用 SHOW CREATE：</span></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SHOW CREATE &#123;PROCEDURE | FUNCTION&#125; 存储过程名或存储函数名;</code></pre>
 
-<p><span class="red bold">使用SHOW STATUS：</span></p>
+<p><span class="red bold">使用 SHOW STATUS：</span></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 若不写LIKE则显示所有存储过程或存储函数
 SHOW &#123;PROCEDURE | FUNCTION&#125; STATUS [LIKE] &#39;存储过程名或存储函数名&#39;;</code></pre>
 
@@ -4347,14 +4359,14 @@ COMMENT &#39;&#39;</code></pre>
 <p>使用以下代码删除存储过程或存储函数</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">DROP &#123; PROCEDURE | FUNCTION &#125; 存储过程名或存储函数名;</code></pre>
 
-<h2 id="MySQL变量"><a href="#MySQL变量" class="headerlink" title="MySQL变量"></a>MySQL变量</h2><p>变量：分为系统变量（全局系统变量、会话系统变量）、用户自定义变量</p>
+<h2 id="MySQL-变量"><a href="#MySQL-变量" class="headerlink" title="MySQL 变量"></a>MySQL 变量</h2><p>变量：分为系统变量（全局系统变量、会话系统变量）、用户自定义变量</p>
 <hr>
 <p><strong>系统变量</strong></p>
-<p><span class="red bold">系统变量：</span>系统变量有系统定义，属于服务器层面。当启动MySQL服务，生成MySQL服务实例期间，MySQL将为服务器内存汇总的系统变量赋值。<br />这些系统变量定义了当前MySQL服务实例的属性和特征。<br />这些系统变量要么是编译MySQL时参数的默认值，要么是配置文件（my.ini）中的参数值<br />可以通过 <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html">Server System Variables</a> 查看MySQL的系统变量</p>
+<p><span class="red bold">系统变量：</span>系统变量有系统定义，属于服务器层面。当启动 MySQL 服务，生成 MySQL 服务实例期间，MySQL 将为服务器内存汇总的系统变量赋值。<br />这些系统变量定义了当前 MySQL 服务实例的属性和特征。<br />这些系统变量要么是编译 MySQL 时参数的默认值，要么是配置文件（my.ini）中的参数值<br />可以通过 <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html">Server System Variables</a> 查看 MySQL 的系统变量</p>
 <p><span class="red bold">系统变量的分类：</span></p>
 <ul>
-<li>全局系统变量（GLOBAL）：针对所有会话（连接）有效，但不能跨重启（<span class="red">MySQL8.0之后可以实现跨重启</span>，详见下面 全局变量持久化）。当前会话对全局系统变量的修改会导致其他会话的系统变量的值<ul>
-<li>静态变量：是特殊的全局系统变量，它不支持在MySQL运行期间对其进行修改</li>
+<li>全局系统变量（GLOBAL）：针对所有会话（连接）有效，但不能跨重启（<span class="red">MySQL8.0 之后可以实现跨重启</span>，详见下面 全局变量持久化）。当前会话对全局系统变量的修改会导致其他会话的系统变量的值<ul>
+<li>静态变量：是特殊的全局系统变量，它不支持在 MySQL 运行期间对其进行修改</li>
 </ul>
 </li>
 <li>会话系统变量（SESSION）（默认）：仅针对当前会话有效。会话期间，当前会话对会话系统变量进行修改，不会影响其他会话的系统变量的值</li>
@@ -4369,7 +4381,7 @@ COMMENT &#39;&#39;</code></pre>
 <td align="center"><img src="https://s1.ax1x.com/2022/06/12/X2QJtU.png" alt="全局系统变量与会话系统变量.png"></td>
 </tr>
 </tbody></table>
-<p><span class="red">注意：</span>在MySQL中有些系统变量只能是全局的，有些系统变量既可以是全局的也可以是会话的，在设置的时候需要指定是在哪个层面修改，有些系统变量的只能是会话的</p>
+<p><span class="red">注意：</span>在 MySQL 中有些系统变量只能是全局的，有些系统变量既可以是全局的也可以是会话的，在设置的时候需要指定是在哪个层面修改，有些系统变量的只能是会话的</p>
 <p><span class="red bold">查看全部或部分系统变量：</span></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 查看全局系统变量
 SHOW GLOBAL VARIABLES;
@@ -4384,7 +4396,7 @@ SHOW GLOBAL VARIABLES LIKE &#39;系统变量名&#39;;
 SHOW [SESSION] VARIABLES LIKE &#39;系统变量名&#39;;</code></pre>
 
 <p><span class="red bold">查看指定的系统变量：</span></p>
-<p>在MySQL中，系统变量以 <code>@@</code> 开头，其中 <code>@@globle</code> 仅用于标记</p>
+<p>在 MySQL 中，系统变量以 <code>@@</code> 开头，其中 <code>@@globle</code> 仅用于标记</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 查看指定的系统变量的值
 SELECT @@GLOBAL.变量名;
 
@@ -4396,8 +4408,8 @@ SELECT @@变量名;</code></pre>
 
 <p><span class="red bold">修改系统变量：</span></p>
 <ul>
-<li>方式1：直接修改配置文件my.ini，需要重启MySQL服务使其生效</li>
-<li>方式2：在MySQL运行期间使用 <code>SET</code> 修改系统变量的值，<span class="red">重启失效</span></li>
+<li>方式 1：直接修改配置文件 my.ini，需要重启 MySQL 服务使其生效</li>
+<li>方式 2：在 MySQL 运行期间使用 <code>SET</code> 修改系统变量的值，<span class="red">重启失效</span></li>
 </ul>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 为全局系统变量赋值
 SET @@global.变量名 &#x3D; 值;
@@ -4408,7 +4420,7 @@ SET @@session.变量名 &#x3D; 值;
 SET SESSION 变量名 &#x3D; 值;</code></pre>
 
 <p><span class="red bold">全局变量持久化：</span></p>
-<p>要想实现对全局变量的修改在重启后还生效，需要在GLOBAL前加上 <code>PERSIST</code>，使用该命令的参数会保存在 <code>mysqld-auto.cnf</code> 中，每次启动都会读取这些配置</p>
+<p>要想实现对全局变量的修改在重启后还生效，需要在 GLOBAL 前加上 <code>PERSIST</code>，使用该命令的参数会保存在 <code>mysqld-auto.cnf</code> 中，每次启动都会读取这些配置</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SET PERSIST GLOBAL 变量名 &#x3D; 变量值;</code></pre>
 
 <hr>
@@ -4423,7 +4435,7 @@ SET SESSION 变量名 &#x3D; 值;</code></pre>
 SET @用户变量 &#x3D; 值;
 SET @用户变量 :&#x3D; 值;
 
--- 方式2：使用 &quot;:&#x3D;&quot; 或 INTO 
+-- 方式2：使用 &quot;:&#x3D;&quot; 或 INTO
 SELECT @用户变量 :&#x3D; 表达式 [FROM ...]
 SELECT 表达式1[, 表达式2, ...] INTO @用户变量[, @用户变量2, ...] [FROM ...]</code></pre>
 
@@ -4466,7 +4478,7 @@ SET @num2 &#x3D; 6;
 DELIMITER $
 
 CREATE PROCEDURE sum_print()
-BEGIN 
+BEGIN
     DECLARE num1 TINYINT default 1;
     DECLARE num2 TINYINT default 2;
     DECLARE sum_num TINYINT;
@@ -4479,26 +4491,26 @@ END $
 DELIMITER ;
 </code></pre>
 
-<h2 id="MyQSL定义条件与处理程序（异常处理）"><a href="#MyQSL定义条件与处理程序（异常处理）" class="headerlink" title="MyQSL定义条件与处理程序（异常处理）"></a>MyQSL定义条件与处理程序（异常处理）</h2><p>定义条件和处理程序使用在存储过程、存储函数中</p>
+<h2 id="MyQSL-定义条件与处理程序（异常处理）"><a href="#MyQSL-定义条件与处理程序（异常处理）" class="headerlink" title="MyQSL 定义条件与处理程序（异常处理）"></a>MyQSL 定义条件与处理程序（异常处理）</h2><p>定义条件和处理程序使用在存储过程、存储函数中</p>
 <p><span class="red">注意：</span>它们都使用 <code>DECLARE</code> 定义，需要放在存储过程体和存储函数体的最前面</p>
 <hr>
 <p><strong>定义条件</strong></p>
-<p><span class="red bold">定义条件：</span>指事先定义程序在执行过程中可能遇到的问题。实质上就是给MYSQL中的错误码命名</p>
+<p><span class="red bold">定义条件：</span>指事先定义程序在执行过程中可能遇到的问题。实质上就是给 MYSQL 中的错误码命名</p>
 <p>使用以下代码定义条件</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">DECLARE 错误名称 CONDITION FOR &#123; 错误码 | SQLSTATE &#39;状态码&#39;&#125;;</code></pre>
 
 <ul>
 <li><p>错误码：错误码分为两种</p>
 <ul>
-<li><code>MySQL_error_code</code>：（错误码）数值型错误代码，在错误信息的ERROR后面</li>
-<li><code>sqlstate_value</code>：（状态码）5位字符串错误代码，在括号里面</li>
+<li><code>MySQL_error_code</code>：（错误码）数值型错误代码，在错误信息的 ERROR 后面</li>
+<li><code>sqlstate_value</code>：（状态码）5 位字符串错误代码，在括号里面</li>
 </ul>
 </li>
 </ul>
 <br />
 
 <p>例子：</p>
-<p>定义 “Field_Not_Be_Null” 错误名与MySQL中国违反非空约束的错误类型 “ERROR 1048 (23000)” 对应</p>
+<p>定义 “Field_Not_Be_Null” 错误名与 MySQL 中国违反非空约束的错误类型 “ERROR 1048 (23000)” 对应</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">DECLARE Field_Not_Be_Null CONDITION FOR 1048;
 DECLARE Field_Not_Be_Null CONDITION FOR SQLSTATE &#39;23000&#39;;</code></pre>
 
@@ -4517,16 +4529,16 @@ DECLARE command_not_allowed CONDITION FOR SQLSTATE &#39;42000&#39;;</code></pre>
 <li>处理方式：处理方式有三个取值<ul>
 <li><code>CONTINUE</code>：忽略错误，继续执行下面的语句</li>
 <li><code>EXIT</code>：遇到错误马上退出</li>
-<li><code>UNDO</code>：撤回之前的操作（<span class="red">注意：MySQL不支持该操作</span>）</li>
+<li><code>UNDO</code>：撤回之前的操作（<span class="red">注意：MySQL 不支持该操作</span>）</li>
 </ul>
 </li>
 <li>错误类型：指何时触发该处理程序，可以有以下取值<ul>
 <li><code>SQLSTATE &#39;状态码&#39;</code>：（根据需要填写）</li>
 <li><code>MySQL_error_code</code>：（根据需要填写）</li>
 <li><code>错误名称</code>：（根据需要填写）上面定义条件所定义的错误名称</li>
-<li><code>SQLWARING</code>：（写的就是这一串英文）匹配所有以01开头的SQLSTATE错误码</li>
-<li><code>NOT FOUND</code>：（写的就是这一串英文）匹配所有以02开头的SQLSTATE错误码</li>
-<li><code>SQLEXCEPTION</code>：（写的就是这一串英文）匹配所有没有被SQLWARING或NOT FOUND捕获的错误码</li>
+<li><code>SQLWARING</code>：（写的就是这一串英文）匹配所有以 01 开头的 SQLSTATE 错误码</li>
+<li><code>NOT FOUND</code>：（写的就是这一串英文）匹配所有以 02 开头的 SQLSTATE 错误码</li>
+<li><code>SQLEXCEPTION</code>：（写的就是这一串英文）匹配所有没有被 SQLWARING 或 NOT FOUND 捕获的错误码</li>
 </ul>
 </li>
 <li>处理语句：条件触发后所执行的语句，可以是简单的单条语句，也可以是 <code>BEGIN ... END</code> 这样的复合语句</li>
@@ -4536,7 +4548,7 @@ DECLARE command_not_allowed CONDITION FOR SQLSTATE &#39;42000&#39;;</code></pre>
 <p>例子：</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">DECLARE EXIT HANDLER FOR SQLWARNING SET @info &#x3D; &#39;ERROR&#39;;</code></pre>
 
-<h2 id="MySQL流程控制"><a href="#MySQL流程控制" class="headerlink" title="MySQL流程控制"></a>MySQL流程控制</h2><p><span class="red bold">注意：</span>在写语句时一定要注意使用 <code>WHERE</code> ，不要将数据全部改了！</p>
+<h2 id="MySQL-流程控制"><a href="#MySQL-流程控制" class="headerlink" title="MySQL 流程控制"></a>MySQL 流程控制</h2><p><span class="red bold">注意：</span>在写语句时一定要注意使用 <code>WHERE</code> ，不要将数据全部改了！</p>
 <hr>
 <p><strong>流程控制的分类</strong></p>
 <ul>
@@ -4552,12 +4564,12 @@ DECLARE command_not_allowed CONDITION FOR SQLSTATE &#39;42000&#39;;</code></pre>
 [ELSEIF 表达式2 THEN 语句2;]
 [ELSEIF ...]
 [ELSE 语句;]
-END IF; </code></pre>
+END IF;</code></pre>
 
 <hr>
 <p><strong>分支结构——CASE</strong></p>
 <p><span class="red bold">结构：</span></p>
-<p><span class="red">注意：</span>CASE结构使用在 <code>BEGIN... END</code> 中时，以 <code>END CASE;</code> 结尾<br />使用在SELECT中时，使用 <code>END</code> 结尾</p>
+<p><span class="red">注意：</span>CASE 结构使用在 <code>BEGIN... END</code> 中时，以 <code>END CASE;</code> 结尾<br />使用在 SELECT 中时，使用 <code>END</code> 结尾</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 写法1
 CASE &#123; 字段名（仅限SELECT中） | 变量名 | (表达式) &#125;
 WHEN 值1 THEN 结果1或语句1（若为语句需要加分号）
@@ -4567,7 +4579,7 @@ ELSE 结果n或语句n（若为语句需要加分号）
 END [CASE;]
 
 -- 写法2
-CASE 
+CASE
 WHEN 条件1 THEN 结果1或语句1（若为语句需要加分号）
 THEN 条件2 THEN 结果2或语句2（若为语句需要加分号）
 ...
@@ -4576,10 +4588,10 @@ END [CASE;]</code></pre>
 
 <hr>
 <p><strong>循环结构——LOOP、LEAVE</strong></p>
-<p>LOOP用于循环执行某些语句，但LOOP的基本结构并没有能让它跳出循环的语句，因此它需要结合分支结构和 <code>LEAVE</code> 使用</p>
+<p>LOOP 用于循环执行某些语句，但 LOOP 的基本结构并没有能让它跳出循环的语句，因此它需要结合分支结构和 <code>LEAVE</code> 使用</p>
 <p><span class="red bold">结构：</span></p>
 <ul>
-<li>label指循环结构的名称</li>
+<li>label 指循环结构的名称</li>
 </ul>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">[label:] LOOP
     语句;
@@ -4643,7 +4655,7 @@ END REPEAT [repeat_label];</code></pre>
 <p><span class="red bold">格式：</span></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">ITERATE 标记名;</code></pre>
 
-<h2 id="MySQL游标（CURSOR）"><a href="#MySQL游标（CURSOR）" class="headerlink" title="MySQL游标（CURSOR）"></a>MySQL游标（CURSOR）</h2><p>相当于Java集合里面的迭代器，游标可以使用户逐条读取结果集中的数据，<span class="red">但是，在使用游标期间，数据会被加锁，高并发情况下效率低下</span></p>
+<h2 id="MySQL-游标（CURSOR）"><a href="#MySQL-游标（CURSOR）" class="headerlink" title="MySQL 游标（CURSOR）"></a>MySQL 游标（CURSOR）</h2><p>相当于 Java 集合里面的迭代器，游标可以使用户逐条读取结果集中的数据，<span class="red">但是，在使用游标期间，数据会被加锁，高并发情况下效率低下</span></p>
 <hr>
 <p><strong>游标的使用</strong></p>
 <p><span class="red bold">声明游标：</span></p>
@@ -4658,7 +4670,7 @@ DECLARE 游标名 CURSOR FOR SELECT结果集;
 DECLARE 游标名 CURSOR IS SELECT结果集;</code></pre>
 
 <p><span class="red bold">打开游标：</span></p>
-<p>这一步会将SELECT结果集移到游标的工作内存中</p>
+<p>这一步会将 SELECT 结果集移到游标的工作内存中</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">OPEN 游标名;</code></pre>
 
 <p><span class="red bold">使用游标：</span></p>
@@ -4705,7 +4717,7 @@ END $
 
 DELIMITER ;</code></pre>
 
-<h2 id="MySQL触发器（TRIGGER）"><a href="#MySQL触发器（TRIGGER）" class="headerlink" title="MySQL触发器（TRIGGER）"></a>MySQL触发器（TRIGGER）</h2><p>触发器是由事件来触发某个操作，这些事件包括 <code>INSERT</code> <code>UPDATE</code> <code>DELETE</code> 事件</p>
+<h2 id="MySQL-触发器（TRIGGER）"><a href="#MySQL-触发器（TRIGGER）" class="headerlink" title="MySQL 触发器（TRIGGER）"></a>MySQL 触发器（TRIGGER）</h2><p>触发器是由事件来触发某个操作，这些事件包括 <code>INSERT</code> <code>UPDATE</code> <code>DELETE</code> 事件</p>
 <hr>
 <p><strong>触发器的优缺点</strong></p>
 <p><span class="red bold">触发器的优点：</span></p>
@@ -4736,14 +4748,14 @@ FOR EACH ROW
 <li>触发器语句：可以是单条，也可以是使用 <code>BEGIN ... END</code> 包裹的语句块</li>
 </ul>
 <p>例子：</p>
-<p>定义一个触发器，基于员工表“employees”的INSERT事件，在INSET之前检查将要添加的新员工的薪资是否大于他的领导的薪资，若大于，则报自定义异常：sqlstate_value 为‘HY000’，从而使添加失败</p>
+<p>定义一个触发器，基于员工表“employees”的 INSERT 事件，在 INSET 之前检查将要添加的新员工的薪资是否大于他的领导的薪资，若大于，则报自定义异常：sqlstate_value 为‘HY000’，从而使添加失败</p>
 <ul>
 <li><p>这里涉及两个新问题：</p>
 <ul>
 <li>如何对当前需要添加的数据进行读取（详见 OLD 与 NEW）</li>
 <li>如何自定义异常</li>
 </ul>
-<p>  这会在本章最后说明，当然也可以直接看这一段代码</p>
+<p>这会在本章最后说明，当然也可以直接看这一段代码</p>
 </li>
 </ul>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">DELIMITER $
@@ -4795,9 +4807,9 @@ SELECT * FROM information_schema.TRIGGERS;</code></pre>
 <p>使用以下格式在过程中抛出一个自定义异常</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SIGNAL SQLSTATE &#39;自定义状态码&#39; SET MESSAGE_TEXT &#x3D; &#39;异常信息&#39;;</code></pre>
 
-<h2 id="MySQL8-0新特性——窗口函数"><a href="#MySQL8-0新特性——窗口函数" class="headerlink" title="MySQL8.0新特性——窗口函数"></a>MySQL8.0新特性——窗口函数</h2><hr>
+<h2 id="MySQL8-0-新特性——窗口函数"><a href="#MySQL8-0-新特性——窗口函数" class="headerlink" title="MySQL8.0 新特性——窗口函数"></a>MySQL8.0 新特性——窗口函数</h2><hr>
 <p><strong>窗口函数</strong></p>
-<p>MySQL8.0开始支持窗口函数，窗口函数会在查询中将数据进行分组，但与 <code>GROUP BY</code> 不同的是，窗口函数不会将他们聚合为一条记录</p>
+<p>MySQL8.0 开始支持窗口函数，窗口函数会在查询中将数据进行分组，但与 <code>GROUP BY</code> 不同的是，窗口函数不会将他们聚合为一条记录</p>
 <p><span class="red bold">窗口函数的分类：</span></p>
 <ul>
 <li>静态窗口函数：窗口大小固定</li>
@@ -4839,12 +4851,12 @@ SELECT * FROM information_schema.TRIGGERS;</code></pre>
 <tr>
 <td align="center">前后函数</td>
 <td align="center">LAG(字段名, [n], [default])</td>
-<td align="center">返回当前行的前n行（不写则为1）的字段名对应的值<br />若没有对应的值，默认使用NULL<br />若定义了default值，则使用difault值</td>
+<td align="center">返回当前行的前 n 行（不写则为 1）的字段名对应的值<br />若没有对应的值，默认使用 NULL<br />若定义了 default 值，则使用 difault 值</td>
 </tr>
 <tr>
 <td align="center">前后函数</td>
 <td align="center">LEAD(字段名, [n], [default])</td>
-<td align="center">返回当前行的后n行（不写则为1）的字段名对应的值<br />若没有对应的值，默认使用NULL<br />若定义了default值，则使用difault值</td>
+<td align="center">返回当前行的后 n 行（不写则为 1）的字段名对应的值<br />若没有对应的值，默认使用 NULL<br />若定义了 default 值，则使用 difault 值</td>
 </tr>
 <tr>
 <td align="center">首尾函数</td>
@@ -4859,12 +4871,12 @@ SELECT * FROM information_schema.TRIGGERS;</code></pre>
 <tr>
 <td align="center">其它函数</td>
 <td align="center">NTH_VALUE(字段名, n)</td>
-<td align="center">返回当前行第n个应用到expr的值</td>
+<td align="center">返回当前行第 n 个应用到 expr 的值</td>
 </tr>
 <tr>
 <td align="center">其它函数</td>
 <td align="center">NTILE(n)</td>
-<td align="center">将分区中的有序数据分为n个桶，并记录桶的编号</td>
+<td align="center">将分区中的有序数据分为 n 个桶，并记录桶的编号</td>
 </tr>
 </tbody></table>
 <p><span class="red">并列排序：</span>指若排序依据中有相同的值，则他们的序号相同</p>
@@ -4879,7 +4891,7 @@ FROM ...;
 -- 需要注意的是：窗口的声明需要放在过滤条件后面，若没有过滤条件，则放FROM后面
 
 SELECT 窗口函数 OVER 窗口名 [AS 列的别名]
-FROM ... 
+FROM ...
 WINDOW 窗口名 AS (
     [PARTITION BY 字段名]
     [ORDER BY 字段名 &#123; ASC | DESC &#125;]
@@ -4899,7 +4911,7 @@ WINDOW 窗口名 AS (
 <hr>
 <p><strong>帧基本（FRAME）</strong></p>
 <blockquote>
-<p>参考资料1：<a target="_blank" rel="noopener" href="https://blog.csdn.net/georgelee954/article/details/105763302">https://blog.csdn.net/georgelee954/article/details/105763302</a><br>参考资料2：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/346876184">https://zhuanlan.zhihu.com/p/346876184</a></p>
+<p>参考资料 1：<a target="_blank" rel="noopener" href="https://blog.csdn.net/georgelee954/article/details/105763302">https://blog.csdn.net/georgelee954/article/details/105763302</a><br>参考资料 2：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/346876184">https://zhuanlan.zhihu.com/p/346876184</a></p>
 </blockquote>
 <p><span class="red bold">帧基本单位（frame_units）：</span></p>
 <p>帧基本单位取值有两种，分别是 <code>&#123; ROWS | RANGE &#125;</code></p>
@@ -4913,19 +4925,19 @@ WINDOW 窗口名 AS (
 <li><code>CURRENT ROW</code>：当前行</li>
 <li><code>UNBOUNDED PRECEDING</code>：当前行上侧所有行（不超过当前<code>PARTITION BY</code> 分组）</li>
 <li><code>UNBOUNDED FOLLOWING</code>：当前行下侧所有行（不超过当前<code>PARTITION BY</code> 分组）</li>
-<li><code>expr PRECEDING</code>：当前行上侧expr行(expr可以是数字，也可以是表达式)</li>
-<li><code>expr FOLLOWING</code>：当前行下侧expr行(expr可以是数字，也可以是表达式)</li>
+<li><code>expr PRECEDING</code>：当前行上侧 expr 行(expr 可以是数字，也可以是表达式)</li>
+<li><code>expr FOLLOWING</code>：当前行下侧 expr 行(expr 可以是数字，也可以是表达式)</li>
 </ul>
 <p>帧范围取值方法有两种，分别是：</p>
 <ul>
 <li><code>frame_start</code>：只指定开始行，结束行为默认值（当前行）<ul>
-<li>帧范围指定方法：  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 采用指定开始行，直接写帧范围语句即可
+<li>帧范围指定方法：<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 采用指定开始行，直接写帧范围语句即可
 -- 以下代码指定帧开始行为当前行上一行，结束行为默认值（当前行）
 ... OVER (PARTITION BY ... ORDER BY ... ROWS 1 PRECEDING)</code></pre></li>
 </ul>
 </li>
 <li><code>frame_between</code>：指定开始行和结束行<ul>
-<li>帧范围指定方法：  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 采用指定开始行和结束行，使用 BETWEEN ...AND ...
+<li>帧范围指定方法：<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 采用指定开始行和结束行，使用 BETWEEN ...AND ...
 -- 以下代码指定帧开始行为当前行上所有，结束行为当前行下所有行
 ... OVER (PARTITION BY ... ORDER BY ... RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING)</code></pre></li>
 </ul>
@@ -4938,59 +4950,60 @@ WINDOW 窗口名 AS (
 <p>在搭配帧范围语句时，将会有以下效果：</p>
 <ul>
 <li><p>（<span class="red">当前行</span>）搭配 <code>CURRENT ROW</code> （仅指定开始行，结束默认当前行）:</p>
-  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 ASC RANGE CURRENT ROW) AS wf_result
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 ASC RANGE CURRENT ROW) AS wf_result
 FROM t1
 WHERE id &#x3D; 1;</code></pre>
-<p>  <img src="https://s1.ax1x.com/2022/06/17/XqAk4I.png" alt="ROWS + CURRENT ROW.png"></p>
+
+<p><img src="https://s1.ax1x.com/2022/06/17/XqAk4I.png" alt="ROWS + CURRENT ROW.png"></p>
 <blockquote>
 <p>在当前分组下，每一行仅对当前行运算</p>
 </blockquote>
 </li>
 <li><p>（<span class="red">拓展上限</span>）搭配 <code>UNBOUNDED PRECEDING</code> （仅指定开始行，结束默认当前行）：</p>
-  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 ASC ROWS UNBOUNDED PRECEDING) AS wf_result
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 ASC ROWS UNBOUNDED PRECEDING) AS wf_result
 FROM t1
 WHERE id &#x3D; 1;</code></pre>
 
-<p>  <img src="https://s1.ax1x.com/2022/06/17/XqmA6x.png" alt="ROWS + UNBOUNDED PRECEDING.png"></p>
+<p><img src="https://s1.ax1x.com/2022/06/17/XqmA6x.png" alt="ROWS + UNBOUNDED PRECEDING.png"></p>
 <blockquote>
 <p>在当前分组下，每一行需要对其本身和其上面的所有行运算</p>
 </blockquote>
 </li>
 <li><p>（<span class="red">拓展上限</span>）搭配 <code>expr PRECEDING</code> （仅指定开始行，结束默认当前行）</p>
-  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 ASC ROWS 2 PRECEDING) AS wf_result
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 ASC ROWS 2 PRECEDING) AS wf_result
 FROM t1
 WHERE id &#x3D; 1;</code></pre>
 
-<p>  <img src="https://s1.ax1x.com/2022/06/17/XqnGG9.png" alt="ROWS + expr PRECEDING.png"></p>
+<p><img src="https://s1.ax1x.com/2022/06/17/XqnGG9.png" alt="ROWS + expr PRECEDING.png"></p>
 <blockquote>
-<p>在当前分组下，每一行需要对其本身和其上面的expr行运算</p>
+<p>在当前分组下，每一行需要对其本身和其上面的 expr 行运算</p>
 </blockquote>
 </li>
 <li><p>（<span class="red">拓展下限</span>）搭配 <code>UNBOUNDED FOLLOWING</code> （指定开始行与结束行）：</p>
-<p>  <span class="red">注意拓展下限必须使用 <code>BETWEEN AND</code> </span></p>
-  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id,
+<p><span class="red">注意拓展下限必须使用 <code>BETWEEN AND</code> </span></p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id,
     r1,
     SUM(r1)
         OVER (PARTITION BY id ORDER BY r1 ASC ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING) AS wf_result
 FROM t1
 WHERE id &#x3D; 1;</code></pre>
 
-<p>  <img src="https://s1.ax1x.com/2022/06/17/Xq2sYT.png" alt="ROWS + UNBOUNDED FOLLOWING.png"></p>
+<p><img src="https://s1.ax1x.com/2022/06/17/Xq2sYT.png" alt="ROWS + UNBOUNDED FOLLOWING.png"></p>
 <blockquote>
 <p>在当前分组下，每一行需要对其本身和其下面的所有行运算</p>
 </blockquote>
 </li>
 <li><p>（<span class="red">拓展下限</span>）搭配 <code>expr FOLLOWING</code> （指定开始行与结束行）：</p>
-  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id,
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id,
     r1,
     SUM(r1) OVER (PARTITION BY id ORDER BY r1 ASC ROWS BETWEEN CURRENT ROW AND 2 FOLLOWING)
         AS wf_result
 FROM t1
 WHERE id &#x3D; 1;</code></pre>
 
-<p>  <img src="https://s1.ax1x.com/2022/06/17/XqR8BR.png" alt="ROWS + expr FOLLOWING.png"></p>
+<p><img src="https://s1.ax1x.com/2022/06/17/XqR8BR.png" alt="ROWS + expr FOLLOWING.png"></p>
 <blockquote>
-<p>在当前分组下，每一行需要对其本身和其下面的expr行运算</p>
+<p>在当前分组下，每一行需要对其本身和其下面的 expr 行运算</p>
 </blockquote>
 </li>
 </ul>
@@ -4998,7 +5011,7 @@ WHERE id &#x3D; 1;</code></pre>
 <p><code>RANGE</code> 是以 值（内容） 为单位，无论它前面有没有 <code>PARTITION BY</code> ,但有无 <code>ORDER BY</code> 会影响其可搭配的帧范围语句</p>
 <br />
 
-<p>在没有 <code>ORDER BY</code> 时，可搭配 </p>
+<p>在没有 <code>ORDER BY</code> 时，可搭配</p>
 <ol>
 <li><code>CURRENT ROW</code></li>
 <li><code>UNBOUNDED PRECEDING</code></li>
@@ -5008,15 +5021,15 @@ WHERE id &#x3D; 1;</code></pre>
 <p>在没有排序情况下搭配帧范围语句时，将会有以下效果：</p>
 <ul>
 <li><p>（<span class="red">拓展上下限</span>）搭配 <code>CURRENT ROW</code> 、 <code>UNBOUNDED PRECEDING</code> 、 <code>BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING</code> ：</p>
-  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER
-(PARTITION BY id 
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER
+(PARTITION BY id
 RANGE &#123; CURRENT ROW | UNBOUNDED PRECEDING | BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING &#125;
 )
 AS wf_result
 FROM t1
 WHERE id IN (1, 2);</code></pre>
 
-<p>  <img src="https://s1.ax1x.com/2022/06/17/XqTcpq.png" alt="NO ORDER RANGE + any.png"></p>
+<p><img src="https://s1.ax1x.com/2022/06/17/XqTcpq.png" alt="NO ORDER RANGE + any.png"></p>
 <blockquote>
 <p>在当前分组下，每一行对当前组所有行运算</p>
 </blockquote>
@@ -5028,60 +5041,60 @@ WHERE id IN (1, 2);</code></pre>
 <p>在有排序情况下搭配帧范围语句时，将会有以下效果：</p>
 <ul>
 <li><p>（<span class="red">当前值</span>）搭配 <code>CURRENT ROW</code> （指定开始值，结束值默认当前行的值）:</p>
-  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 RANGE CURRENT ROW) AS wf_result
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 RANGE CURRENT ROW) AS wf_result
 FROM t1
 WHERE id &#x3D; 1;</code></pre>
 
-<p>  <img src="https://s1.ax1x.com/2022/06/17/XqOZfH.png" alt="WITH ORDER RANGE + CURRENT ROW.png"></p>
+<p><img src="https://s1.ax1x.com/2022/06/17/XqOZfH.png" alt="WITH ORDER RANGE + CURRENT ROW.png"></p>
 <blockquote>
 <p>在当前分组下，每一行需要对其本身和与其值（以排序字段的值为依据）相同的行进行运算</p>
 </blockquote>
 </li>
 <li><p>（<span class="red">无穷小于等于当前值</span>）搭配 <code>UNBOUNDED PRECEDING</code> （指定开始值，结束值默认当前行的值）：</p>
-  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 RANGE UNBOUNDED PRECEDING) AS wf_result
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 RANGE UNBOUNDED PRECEDING) AS wf_result
 FROM t1
 WHERE id &#x3D; 1;</code></pre>
 
-<p>  <img src="https://s1.ax1x.com/2022/06/17/XqOb3d.png" alt="WITH ORDER RANGE + UNBOUNDED PRECEDING.png"></p>
+<p><img src="https://s1.ax1x.com/2022/06/17/XqOb3d.png" alt="WITH ORDER RANGE + UNBOUNDED PRECEDING.png"></p>
 <blockquote>
 <p>在当前分组下，每一行需要对其本身和所有小于等于其值（以排序字段的值为依据）的行运算</p>
 </blockquote>
 </li>
 <li><p>（<span class="red">满足 距离当前值 ≤ expr，并小于当前值</span>）搭配 <code>expr PRECEDING</code> （指定开始值，结束值默认当前行的值）：</p>
-  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 RANGE 2 PRECEDING) AS wf_result
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 RANGE 2 PRECEDING) AS wf_result
 FROM t1
 WHERE id &#x3D; 1;</code></pre>
 
-<p>  <img src="https://s1.ax1x.com/2022/06/17/XqjawV.png" alt="WITH ORDER RANGE + expr PRECEDING.png"></p>
+<p><img src="https://s1.ax1x.com/2022/06/17/XqjawV.png" alt="WITH ORDER RANGE + expr PRECEDING.png"></p>
 <blockquote>
 <p>在当前分组下，每一行需要对其本身和满足以下条件的行运算：</p>
 <ol>
 <li>小于等于当前值</li>
-<li>与当前值的距离小于等于expr</li>
+<li>与当前值的距离小于等于 expr</li>
 </ol>
 </blockquote>
 </li>
 <li><p>（<span class="red">无穷大于等于当前值</span>）搭配 <code>UNBOUNDED FOLLOWING</code> （指定开始值与结束值）：</p>
-  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 ASC RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING) AS wf_result
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 ASC RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING) AS wf_result
 FROM t1
 WHERE id &#x3D; 1;</code></pre>
 
-<p>  <img src="https://s1.ax1x.com/2022/06/17/Xqvt9e.png" alt="WITH ORDER RANGE + UNBOUNDED FOLLOWING.png"></p>
+<p><img src="https://s1.ax1x.com/2022/06/17/Xqvt9e.png" alt="WITH ORDER RANGE + UNBOUNDED FOLLOWING.png"></p>
 <blockquote>
 <p>在当前分组下，每一行需要对其本身和所有大于等于其值（以排序字段的值为依据）的行运算</p>
 </blockquote>
 </li>
 <li><p>（<span class="red">满足 距离当前值 ≤ expr，并大于当前值</span>）搭配 <code>expr FOLLOWING</code> （指定开始值与结束值）：</p>
-  <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 ASC RANGE BETWEEN CURRENT ROW AND 2 FOLLOWING) AS wf_result
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT id, r1, SUM(r1) OVER (PARTITION BY id ORDER BY r1 ASC RANGE BETWEEN CURRENT ROW AND 2 FOLLOWING) AS wf_result
 FROM t1
 WHERE id &#x3D; 1;</code></pre>
 
-<p>  <img src="https://s1.ax1x.com/2022/06/17/XqxtaV.png" alt="WITH ORDER RANGE + expr FOLLOWING.png"></p>
+<p><img src="https://s1.ax1x.com/2022/06/17/XqxtaV.png" alt="WITH ORDER RANGE + expr FOLLOWING.png"></p>
 <blockquote>
 <p>在当前分组下，每一行需要对其本身和满足以下条件的行运算：</p>
 <ol>
 <li>大于等于当前值</li>
-<li>与当前值的距离小于等于expr</li>
+<li>与当前值的距离小于等于 expr</li>
 </ol>
 </blockquote>
 </li>
@@ -5116,7 +5129,7 @@ VALUES (1, &#39;女装&#x2F;女士精品&#39;, &#39;T恤&#39;, 39.90, 1000, &#39
 
 <p><span class="red bold">ROW_NUMBER()：</span></p>
 <ul>
-<li>需求：将goods表按照商品分类进行不合并分组，并且每个商品分类下的商品按照价格降序排列</li>
+<li>需求：将 goods 表按照商品分类进行不合并分组，并且每个商品分类下的商品按照价格降序排列</li>
 </ul>
 <p><img src="https://s1.ax1x.com/2022/06/16/X7QrKP.md.png" alt="X7QrKP.md.png"></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT ROW_NUMBER() OVER (PARTITION BY category_id ORDER BY price DESC) AS row_num,
@@ -5129,8 +5142,8 @@ VALUES (1, &#39;女装&#x2F;女士精品&#39;, &#39;T恤&#39;, 39.90, 1000, &#39
 FROM goods;</code></pre>
 
 <ul>
-<li><p>需求：查询每个商品分类下价格最高的3种商品</p>
-<p>  <span class="red">在上一个查询结果的基础上取row_num为1~3即可</span></p>
+<li><p>需求：查询每个商品分类下价格最高的 3 种商品</p>
+<p><span class="red">在上一个查询结果的基础上取 row_num 为 1~3 即可</span></p>
 </li>
 </ul>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT *
@@ -5153,7 +5166,7 @@ where row_num &lt;&#x3D; 3;</code></pre>
 <hr>
 <p><strong>各窗口函数详解——分布函数</strong></p>
 <p><span class="red bold">PERCENT_RANK()：</span></p>
-<p>这个就有点……它是上面排序函数的一个再处理版本，它表示当前排序状态下，每一行是（该分组的）总行数的百分比（如：你的高考成绩是在所有成绩降序的前百分之n，就是这个意思）</p>
+<p>这个就有点……它是上面排序函数的一个再处理版本，它表示当前排序状态下，每一行是（该分组的）总行数的百分比（如：你的高考成绩是在所有成绩降序的前百分之 n，就是这个意思）</p>
 <p>它的计算公式为：<br><code>(RANK - 1) / (TOTAL_ROWS - 1)</code></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT RANK() OVER w         AS simple_rank,
        PERCENT_RANK() OVER w AS p_rank,
@@ -5163,14 +5176,14 @@ where row_num &lt;&#x3D; 3;</code></pre>
        price
 FROM goods WINDOW w AS (PARTITION BY category_id ORDER BY price DESC);</code></pre>
 
-<p><span class="red">注意：</span> <code>PERCENT_RANK()</code> 的排序方式固定为 <code>RANK()</code> ，也就是并列排序且相同序号会占用下面的序号，跟我上一个字段使用RANK查询没有任何关系</p>
+<p><span class="red">注意：</span> <code>PERCENT_RANK()</code> 的排序方式固定为 <code>RANK()</code> ，也就是并列排序且相同序号会占用下面的序号，跟我上一个字段使用 RANK 查询没有任何关系</p>
 <p><img src="https://s1.ax1x.com/2022/06/16/X7YIfS.png" alt="PERCENT_RANK.png"></p>
 <p><span class="red bold">CUME_DIST()：</span></p>
 <p>用于查询小于或等于某个值（比较依据是排序依据，也就是窗口中 <code>ORDER BY</code> 的字段）的记录占（该分类）总记录的比例</p>
 <p>其计算公式为：</p>
 <p><code>COUNT( SELECT * WHERE 排序依据字段值 &lt;= 当前记录中排序依据字段的值 ) / TOTAL_ROWS</code></p>
 <ul>
-<li>需求：查询goods表中各商品分类下，小于或等于当前商品价格的商品数的比例（我在说什么？）</li>
+<li>需求：查询 goods 表中各商品分类下，小于或等于当前商品价格的商品数的比例（我在说什么？）</li>
 </ul>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT CUME_DIST() OVER (PARTITION BY category_id ORDER BY price ASC) AS cd,
        category_id,
@@ -5183,17 +5196,17 @@ FROM goods;</code></pre>
 <ul>
 <li>一些解释：<ul>
 <li>百褶裙只有它自己的价格满足 &lt;&#x3D; 29.9，因此是 (1 &#x2F; 6)</li>
-<li>T恤有百褶裙和T恤的价格满足 &lt;&#x3D; 39.9，因此是 (2 &#x2F; 6)</li>
-<li>卫衣有百褶裙、T恤、连衣裙和牛仔裤的价格满足 &lt;&#x3D; 89.9，因此是 (5 &#x2F; 6)</li>
+<li>T 恤有百褶裙和 T 恤的价格满足 &lt;&#x3D; 39.9，因此是 (2 &#x2F; 6)</li>
+<li>卫衣有百褶裙、T 恤、连衣裙和牛仔裤的价格满足 &lt;&#x3D; 89.9，因此是 (5 &#x2F; 6)</li>
 </ul>
 </li>
 </ul>
 <hr>
 <p><strong>各窗口函数详解——前后函数</strong></p>
 <p><span class="red bold">LAG(字段名, [n], [default])：</span></p>
-<p>在当前分组中，返回当前行的前n行（不写则为1）的字段名对应的值，</p>
+<p>在当前分组中，返回当前行的前 n 行（不写则为 1）的字段名对应的值，</p>
 <ul>
-<li>需求：使goods表按价格升序排列，并且查询每一件商品与它价格第一档次的商品的价格差值</li>
+<li>需求：使 goods 表按价格升序排列，并且查询每一件商品与它价格第一档次的商品的价格差值</li>
 </ul>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 获得上一个档次的价格
 SELECT category_id,
@@ -5215,7 +5228,7 @@ FROM (SELECT category_id,
 
 <p><img src="https://s1.ax1x.com/2022/06/16/X7DO0g.png" alt="LAG(2).png"></p>
 <p><span class="red bold">LEAD(字段名, [n], [default])：</span></p>
-<p>这个就是返回当前字段的后n行（不写则为1）的指定字段的值</p>
+<p>这个就是返回当前字段的后 n 行（不写则为 1）的指定字段的值</p>
 <p>将 <code>LAG</code> 换成 <code>LEAD</code> 的效果：</p>
 <p><img src="https://s1.ax1x.com/2022/06/16/X7rRg0.png" alt="LEAD.png"></p>
 <hr>
@@ -5246,7 +5259,7 @@ FROM (SELECT category_id,
 <p><img src="https://s1.ax1x.com/2022/06/16/X7691I.png" alt="FIRST_VALUE(2).png"></p>
 <p><span class="red bold">LAST_VALUE(字段名)：</span></p>
 <p>取当前组最后一行指定字段的值，并将其应用到该组全部行</p>
-<p><span class="red">注意：</span>若不指定框架范围（FRAME）则默认框架范围为当前分组下第一行至当前行，这样LAST_VALUE永远是当前行，<span class="red">因此 <code>LAST_VALUE</code> 必须指定框架</span></p>
+<p><span class="red">注意：</span>若不指定框架范围（FRAME）则默认框架范围为当前分组下第一行至当前行，这样 LAST_VALUE 永远是当前行，<span class="red">因此 <code>LAST_VALUE</code> 必须指定框架</span></p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 查询每组最高的价格
 SELECT category_id,
        category,
@@ -5259,7 +5272,7 @@ FROM goods;</code></pre>
 <hr>
 <p><strong>各窗口函数详解——其他函数</strong></p>
 <p><span class="red bold">NTH_VALUE(字段名, n)</span></p>
-<p>首尾函数的自定义版本，取当前组第n行指定字段的值，并将其应用到该组RANK() &gt;&#x3D; n 的行（也就是说当RANK()出现并列时，NULL会少几个）</p>
+<p>首尾函数的自定义版本，取当前组第 n 行指定字段的值，并将其应用到该组 RANK() &gt;&#x3D; n 的行（也就是说当 RANK()出现并列时，NULL 会少几个）</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 取价格排名第二商品名
 SELECT category_id,
        category,
@@ -5269,10 +5282,10 @@ SELECT category_id,
 FROM goods;</code></pre>
 
 <p><img src="https://s1.ax1x.com/2022/06/16/X7RlRJ.png" alt="NTH_VALUE.png"></p>
-<p>当n为3时，本应该是骑行设备的N0.3才能取到值，但由于自行车与骑行设备价格相同，视为并列，因此自行车也能取到值。<br /><br>相比之下T恤就因为与连衣裙价格不同而取不到值</p>
+<p>当 n 为 3 时，本应该是骑行设备的 N0.3 才能取到值，但由于自行车与骑行设备价格相同，视为并列，因此自行车也能取到值。<br /><br>相比之下 T 恤就因为与连衣裙价格不同而取不到值</p>
 <p><img src="https://s1.ax1x.com/2022/06/16/X7W4AK.png" alt="NTH_VALUE(特殊).png"></p>
 <p><span class="red bold">NTILE(n)：</span></p>
-<p>用于再分组，在目前分组的基础上，再分别在每一组内，分成n组，并且标上序号，序号相同代表同一组</p>
+<p>用于再分组，在目前分组的基础上，再分别在每一组内，分成 n 组，并且标上序号，序号相同代表同一组</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 在根据商品类别分类的基础上
 -- 再将每一个商品类别的商品分为三组
 SELECT NTILE(3) OVER (PARTITION BY category_id ORDER BY price) AS No,
@@ -5283,9 +5296,9 @@ SELECT NTILE(3) OVER (PARTITION BY category_id ORDER BY price) AS No,
 FROM goods;</code></pre>
 
 <p><img src="https://s1.ax1x.com/2022/06/16/X7hkxH.png" alt="NTILE.png"></p>
-<h2 id="MySQL8-0新特性——公用表表达式"><a href="#MySQL8-0新特性——公用表表达式" class="headerlink" title="MySQL8.0新特性——公用表表达式"></a>MySQL8.0新特性——公用表表达式</h2><hr>
+<h2 id="MySQL8-0-新特性——公用表表达式"><a href="#MySQL8-0-新特性——公用表表达式" class="headerlink" title="MySQL8.0 新特性——公用表表达式"></a>MySQL8.0 新特性——公用表表达式</h2><hr>
 <p><strong>公用表表达式</strong></p>
-<p>公用表表达式（CTE）可以理解为一个可以复用的子查询结果，复用范围是当前语句，当一次查询很复杂并且要使用很多次同一个子查询时，使用CTE</p>
+<p>公用表表达式（CTE）可以理解为一个可以复用的子查询结果，复用范围是当前语句，当一次查询很复杂并且要使用很多次同一个子查询时，使用 CTE</p>
 <p><span class="red">把它当成一张临时表看待，而不是一个单字段查询结果，它应该被使用在 FROM 后面，而不是 WHERE 后面</span></p>
 <p><span class="red bold">公用表表达式的分类：</span></p>
 <ul>
@@ -5300,7 +5313,7 @@ FROM goods;</code></pre>
 AS
 (子查询)
 
--- 不一定是SLECT, DELETE, UPDATE都行，反正就是调用 
+-- 不一定是SLECT, DELETE, UPDATE都行，反正就是调用
 SELECT * FROM CTE名 WHERE ...;
 
 
@@ -5335,7 +5348,7 @@ AS (
 SELECT | DELETE | UPDATE 语句;</code></pre>
 
 <ul>
-<li>例子1：查询族谱中指定的某个人及其所有后代</li>
+<li>例子 1：查询族谱中指定的某个人及其所有后代</li>
 </ul>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 表与数据
 CREATE TABLE member
@@ -5390,7 +5403,7 @@ DELIMITER ;</code></pre>
 
 <p><img src="https://s1.ax1x.com/2022/06/16/XHOWct.png" alt="公用表表达式例子1-2.png"></p>
 <ul>
-<li>例子2：查询族谱中身份为某个人的孙子的成员</li>
+<li>例子 2：查询族谱中身份为某个人的孙子的成员</li>
 </ul>
 <p><span class="red">思路：</span>这个例子其实是上一个例子的小扩展，从最年长的人开始，后面两代（包括）之后的人都是某个人的孙子。<br /><span class="red">也就是说需要记录代数</span></p>
 <p><img src="https://s1.ax1x.com/2022/06/16/XHjVRs.png" alt="公用表表达式例子2-1.png"></p>
@@ -5415,6 +5428,7 @@ BEGIN
 END $
 
 DELIMITER ;</code></pre>
+
     </div>
 
     

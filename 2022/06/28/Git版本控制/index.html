@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"loliconkelvin.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Git 版本控制">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git版本控制">
+<meta property="og:url" content="https://loliconkelvin.github.io/2022/06/28/Git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/index.html">
+<meta property="og:site_name" content="萝莉控的小窝">
+<meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   Git 版本控制">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2022/06/28/jeqmSU.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/06/28/jeXh0H.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/06/28/jeXH9P.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/06/29/jmy92V.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/11/jysVot.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/12/jcjPCq.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/12/jcjJqe.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/12/jcjNad.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/12/jgFM0P.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/12/jgF3tS.md.png">
+<meta property="article:published_time" content="2022-06-28T12:26:55.000Z">
+<meta property="article:modified_time" content="2022-07-13T03:06:51.956Z">
+<meta property="article:author" content="Loliconkelvin">
+<meta property="article:tag" content="Git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/06/28/jeqmSU.md.png">
+
+
+<link rel="canonical" href="https://loliconkelvin.github.io/2022/06/28/Git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://loliconkelvin.github.io/2022/06/28/Git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/","path":"2022/06/28/Git版本控制/","title":"Git版本控制"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Git版本控制 | 萝莉控的小窝</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">萝莉控的小窝</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-%E4%B8%8E%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="nav-number">1.</span> <span class="nav-text">Git 与版本控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">2.</span> <span class="nav-text">Git 常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%86%E8%AF%B4%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94%E7%94%A8%E6%88%B7%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%9C%AC%E5%9C%B0%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">细说常用命令——用户签名与本地库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%86%E8%AF%B4%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94%E4%BB%A3%E7%A0%81%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">细说常用命令——代码版本管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-%E5%88%86%E6%94%AF"><span class="nav-number">5.</span> <span class="nav-text">Git 分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%86%E8%AF%B4-Git-%E5%88%86%E6%94%AF"><span class="nav-number">6.</span> <span class="nav-text">细说 Git 分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C"><span class="nav-number">7.</span> <span class="nav-text">团队协作</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Loliconkelvin"
+      src="/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">Loliconkelvin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">50</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Loliconkelvin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Loliconkelvin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:Loliconkelvin@gmail.com" title="E-Mail → mailto:Loliconkelvin@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://loliconkelvin.github.io/2022/06/28/Git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="Loliconkelvin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萝莉控的小窝">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Git版本控制 | 萝莉控的小窝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Git版本控制
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-06-28 20:26:55" itemprop="dateCreated datePublished" datetime="2022-06-28T20:26:55+08:00">2022-06-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-07-13 11:06:51" itemprop="dateModified" datetime="2022-07-13T11:06:51+08:00">2022-07-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <style>
+    .red {
+        color: red;
+    }
+    .bold {
+        font-weight: bold;
+    }
+</style>
+
+<p>Git 版本控制</p>
+<span id="more"></span>
+
+<h2 id="Git-与版本控制"><a href="#Git-与版本控制" class="headerlink" title="Git 与版本控制"></a>Git 与版本控制</h2><p><span class="red bold">Git：</span>Git 是一个开源免费的<span class="red">分布式</span>版本控制系统</p>
+<p><span class="red bold">版本控制：</span>指记录文件内容变化，以便将来查阅特定版本修订情况的系统</p>
+<hr>
+<p><strong>集中式与分布式</strong></p>
+<p><span class="red bold">集中式版本控制：</span></p>
+<table>
+<thead>
+<tr>
+<th align="center">集中式版本控制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/06/28/jeqmSU.md.png" alt="集中式版本控制.md.png"></td>
+</tr>
+</tbody></table>
+<p>集中式版本控制有一个对代码集中管理的服务器，贡献者必须连接到该服务器以获取最新文件或提交更新</p>
+<ul>
+<li>优点：集中式版本控制可以使每个贡献者在一定程度上看到其他人对项目的操作。管理员也可以掌控每个贡献者的权限</li>
+<li>缺点：服务器是集中式版本控制的核心，服务器不能停机</li>
+</ul>
+<p><span class="red bold">分布式版本控制：</span></p>
+<table>
+<thead>
+<tr>
+<th align="center">分布式版本控制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/06/28/jeXh0H.md.png" alt="分布式版本控制.md.png"></td>
+</tr>
+</tbody></table>
+<p>分布式版本控制会将代码仓库的镜像完整地下载下来（而不是仅下载最新版本的快照），若代码仓库停机，在修复之后可以使用本地的镜像进行恢复，并且分布式版本控制允许贡献者在本地进行自己的版本控制</p>
+<hr>
+<p><strong>Git 工作机制</strong></p>
+<p><img src="https://s1.ax1x.com/2022/06/28/jeXH9P.png" alt="Git工作机制.png"></p>
+<ul>
+<li><p>工作区：指在本地存放被编写的代码文件，该文件未被</p>
+</li>
+<li><p>暂存区（临时存储）：指代码交由 Git 在本地暂时托管，相当于目前代码进度的一个备份，你可以将该备份拉回工作区也可以提交</p>
+</li>
+<li><p>版本库（生成历史版本）：当代码被提交到版本库时，会生成对应的版本号，并且代码的变化被持久化记录</p>
+</li>
+</ul>
+<hr>
+<p><strong>代码托管服务器</strong></p>
+<ul>
+<li>GitLab（用于局域网）</li>
+<li>GitHub（国外）</li>
+<li>Gitee（国内）</li>
+</ul>
+<h2 id="Git-常用命令"><a href="#Git-常用命令" class="headerlink" title="Git 常用命令"></a>Git 常用命令</h2><table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>git config --global user.name 用户名</code></td>
+<td align="center">设置用户签名</td>
+</tr>
+<tr>
+<td align="center"><code>git config --global user.email 邮箱</code></td>
+<td align="center">设置用户签名</td>
+</tr>
+<tr>
+<td align="center"><code>git init</code></td>
+<td align="center">初始化本地库</td>
+</tr>
+<tr>
+<td align="center"><code>git status</code></td>
+<td align="center">查看本地库状态</td>
+</tr>
+<tr>
+<td align="center"><code>git add 文件名</code></td>
+<td align="center">添加到暂存区</td>
+</tr>
+<tr>
+<td align="center"><code>git restore 文件名</code></td>
+<td align="center">将工作区内容还原为暂存区的内容</td>
+</tr>
+<tr>
+<td align="center"><code>git commit -a</code></td>
+<td align="center">（<span class="red">仅对修改和删除的文件有效</span><br />对于新增的文件，则一定要 <code>add</code>）<br />直接提交，不需要 <code>add</code></td>
+</tr>
+<tr>
+<td align="center"><code>git commit -m &quot;日志信息&quot; 文件名</code></td>
+<td align="center">提交到本地库</td>
+</tr>
+<tr>
+<td align="center"><code>git reflog</code></td>
+<td align="center">查看历史记录</td>
+</tr>
+<tr>
+<td align="center"><code>git log</code></td>
+<td align="center">查看详细历史记录</td>
+</tr>
+<tr>
+<td align="center"><code>git reset --hard 版本号</code></td>
+<td align="center">版本穿梭</td>
+</tr>
+</tbody></table>
+<h2 id="细说常用命令——用户签名与本地库"><a href="#细说常用命令——用户签名与本地库" class="headerlink" title="细说常用命令——用户签名与本地库"></a>细说常用命令——用户签名与本地库</h2><hr>
+<p><strong>用户签名</strong></p>
+<p>签名的作用是区分不同操作者的身份。用户签名信息在每一个笨笨的提交信息中都能看到。<span class="red">Git 首次安装必须设置用户签名，否则无法提交代码。并且用户签名与代码托管中心的账号没有任何联系。</span></p>
+<hr>
+<p><strong>初始化本地库</strong></p>
+<p>进入一个目录，运行 <code>git init</code> 将该目录指定为本地代码仓库</p>
+<hr>
+<p><strong>查看本地库状态</strong></p>
+<p>在已经定义为本地库的目录下，运行 <code>git status</code>，查看本地库状态</p>
+<h2 id="细说常用命令——代码版本管理"><a href="#细说常用命令——代码版本管理" class="headerlink" title="细说常用命令——代码版本管理"></a>细说常用命令——代码版本管理</h2><hr>
+<p><strong>代码追踪（添加到暂存区）</strong></p>
+<p>在定义为本地库的目录下创建任意文件，写入任意内容，保存。当再次查看本地库状态时，git 会显示检测到一个未追踪的文件，使用 <code>git add 文件名</code> 将该文件添加到暂存区（追踪该文件）</p>
+<p><span class="red">当文件被修改时，需要重新将其添加至暂存区</span>，也可以使用 <code>git restore 文件名</code> 将工作区内容还原为暂存区的内容</p>
+<hr>
+<p><strong>删除暂存区文件</strong></p>
+<p>使用 <code>git rm --cached 文件名</code> 删除暂存区文件</p>
+<p><span class="red">注意：</span>，若没写 <code>--cached</code> 会删除工作区里面的文件，<span class="red">慎重操作</span></p>
+<hr>
+<p><strong>提交到本地库</strong></p>
+<p>使用 <code>git commit -m &quot;日志信息&quot; 文件名</code>，将暂存区的文件提交到本地库，形成历史版本</p>
+<hr>
+<p><strong>查看历史记录</strong></p>
+<p>使用 <code>git reflog</code> 或 <code>git log</code> 查看提交历史记录</p>
+<hr>
+<p><strong>版本穿梭</strong></p>
+<p><img src="https://s1.ax1x.com/2022/06/29/jmy92V.md.png" alt="版本穿梭.md.png"><br>使用 <code>git reset --hard 精简版本号</code> 将指针移动到指定版本，将工作区的内容回溯到指定版本</p>
+<ul>
+<li>其中，精简版本号可以通过 <code>git reflog</code> 获取</li>
+</ul>
+<h2 id="Git-分支"><a href="#Git-分支" class="headerlink" title="Git 分支"></a>Git 分支</h2><hr>
+<p><strong>分支概述</strong></p>
+<p>分支就是将项目开发中的项目与 release 的项目分离，让开发不会影响到正在运行的版本。</p>
+<p>也可以将每个功能的开发分开，多个功能并行开发然后合并，提高效率。</p>
+<table>
+<thead>
+<tr>
+<th align="center">分支</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/07/11/jysVot.md.png" alt="分支.md.png"></td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>分支操作</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>git branch &quot;分支名&quot;</code></td>
+<td align="center">创建分支（引号可选）</td>
+</tr>
+<tr>
+<td align="center"><code>git branch -m 旧分支名 新分支名</code></td>
+<td align="center">重命名分支</td>
+</tr>
+<tr>
+<td align="center"><code>git branch -d 分支名</code></td>
+<td align="center">删除分支</td>
+</tr>
+<tr>
+<td align="center"><code>git branch [--list]</code></td>
+<td align="center">查看分支, <code>--list</code> 参数可选</td>
+</tr>
+<tr>
+<td align="center"><code>git branch -v</code></td>
+<td align="center">查看分支和目前它指向的版本</td>
+</tr>
+<tr>
+<td align="center"><code>git checkout 分支名</code></td>
+<td align="center">切换到指定分支</td>
+</tr>
+<tr>
+<td align="center"><code>git merge 分支名</code></td>
+<td align="center">将指定分支合并到当前分支</td>
+</tr>
+</tbody></table>
+<h2 id="细说-Git-分支"><a href="#细说-Git-分支" class="headerlink" title="细说 Git 分支"></a>细说 Git 分支</h2><hr>
+<p><strong>删除分支</strong></p>
+<p>在删除分支之前，切换到其他分支，然后使用 <code>git branch -d 分支名</code> 删除分支，删除分支不会产生记录，并且与该分支相关的记录会被删除</p>
+<p><span class="red">注意：</span>使用该命令后，Git 会检查该分支的文件是否被修改（<span class="red">提交了才算修改</span>）并且已经被合并到其它分支中</p>
+<ul>
+<li>若已修改已合并，则马上删除</li>
+<li>若未修改未合并，则马上删除</li>
+<li>若已修改未合并，则提示 <code>…… not fully merged</code>，若让要删除，使用 <code>git branch -D 分支名</code> 强制删除</li>
+</ul>
+<hr>
+<p><strong>切换到指定分支</strong></p>
+<p>使用 <code>git checkout 分支名</code> 切换到指定分支。但<span class="red">注意：</span></p>
+<ul>
+<li>每次切换分支操作会产生一次记录</li>
+</ul>
+<hr>
+<p><strong>分支合并——正常</strong></p>
+<p>分支合并就是直接将合并的分支的数据直接覆盖到被合并的分支上</p>
+<p><img src="https://s1.ax1x.com/2022/07/12/jcjPCq.md.png" alt="分支合并.md.png"></p>
+<p><span class="red">对于单个文件</span>，他在合并之前只在其中一个分支上有改动，则合并不会产生冲突</p>
+<hr>
+<p><strong>分支合并——冲突</strong></p>
+<p><span class="red bold">对于单个文件，若其在合并之前在多个分支上有改动，当将两个或以上改动过该文件的分支合并时，会产生冲突</span></p>
+<table>
+<thead>
+<tr>
+<th align="center">无冲突</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/07/12/jcjJqe.md.png" alt="分支合并——无冲突.md.png"></td>
+</tr>
+<tr>
+<td align="center"><strong>冲突</strong></td>
+</tr>
+<tr>
+<td align="center"><img src="https://s1.ax1x.com/2022/07/12/jcjNad.md.png" alt="分支合并——冲突.md.png"></td>
+</tr>
+</tbody></table>
+<p><span class="red bold">冲突解决：</span></p>
+<p>冲突发生后，相关文件会以以下格式呈现：</p>
+<pre class="line-numbers language-none"><code class="language-none">...（不冲突的行）
+
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; 发出合并指令的分支名
+发出合并分支中对冲突行的更改
+&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+被要求合并分支中对冲突行的更改
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 被要求合并过来的分支名
+
+...（不冲突的行）</code></pre>
+
+<p>要解决冲突，则删除其他符号，且保留一个更改</p>
+<p><span class="red bold">提交冲突修改：</span></p>
+<p>造成冲突后，命令行会变成 <code>(main|MERGING)</code>，使用 <code>git commit -a -m &quot;版本信息&quot;</code> 提交已经解决冲突的文件（<span class="red">注意：不能指定文件名</span>）</p>
+<h2 id="团队协作"><a href="#团队协作" class="headerlink" title="团队协作"></a>团队协作</h2><hr>
+<p><strong>团队协作的分类</strong></p>
+<p><span class="red bold">团队内协作：</span></p>
+<p><img src="https://s1.ax1x.com/2022/07/12/jgFM0P.md.png" alt="团队内协作.md.png"></p>
+<p><span class="red bold">跨团队协作：</span></p>
+<p><img src="https://s1.ax1x.com/2022/07/12/jgF3tS.md.png" alt="跨团队协作.md.png"></p>
+<hr>
+<p><strong>远程库操作——别名</strong></p>
+<p>当我们要访问一个远程仓库的时候，每次都是用这么长的网址属实不方便，为什么不给网址起个名字？</p>
+<table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>git remote [-v]</code></td>
+<td align="center">查看当前已经设定的别名</td>
+</tr>
+<tr>
+<td align="center"><code>git remote add 别名 网址</code></td>
+<td align="center">给网址添加一个别名</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>远程库操作——拉取、克隆和推送</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>git push 别名或地址 分支名</code></td>
+<td align="center">推送本地的指定分支到远端</td>
+</tr>
+<tr>
+<td align="center"><code>git pull 别名或地址 分支名</code></td>
+<td align="center">从远端拉取指定分支到本地</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Git/" rel="tag"># Git</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/06/21/JavaScript/" rel="prev" title="JavaScript">
+                  <i class="fa fa-chevron-left"></i> JavaScript
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/06/28/Docker/" rel="next" title="Docker">
+                  Docker <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Loliconkelvin</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js" integrity="sha256-4mJNT2bMXxcc1GCJaxBmMPdmah5ji0Ldnd79DKd1hoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-dL6vkUiCn30lPTN9cVrmQHo5UQmEwDMrx2ppAk4IhVk=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

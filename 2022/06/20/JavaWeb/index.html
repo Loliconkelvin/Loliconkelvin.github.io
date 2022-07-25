@@ -28,8 +28,18 @@
 <meta property="og:description" content=".red {         color: red;     }     .bold {         font-weight: bold;     }   JavaWeb">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2022/07/21/jqzrKx.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/24/jjdkJ1.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/25/jvekpn.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/25/jv5P9P.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/25/jv5i1f.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/25/jvI3Gt.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/25/jvIOdH.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/25/jvoR6f.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/25/jvTJHg.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/25/jvTBvV.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/25/jvTf81.png">
 <meta property="article:published_time" content="2022-06-20T11:18:26.000Z">
-<meta property="article:modified_time" content="2022-07-22T11:41:40.075Z">
+<meta property="article:modified_time" content="2022-07-25T09:42:47.422Z">
 <meta property="article:author" content="Loliconkelvin">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -118,7 +128,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BS-x2F-CS-%E6%9E%B6%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">BS&#x2F;CS 架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat"><span class="nav-number">2.</span> <span class="nav-text">Tomcat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet"><span class="nav-number">3.</span> <span class="nav-text">Servlet</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BS-x2F-CS-%E6%9E%B6%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">BS&#x2F;CS 架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat"><span class="nav-number">2.</span> <span class="nav-text">Tomcat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet"><span class="nav-number">3.</span> <span class="nav-text">Servlet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-%E5%8D%8F%E8%AE%AE"><span class="nav-number">4.</span> <span class="nav-text">HTTP 协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Session"><span class="nav-number">5.</span> <span class="nav-text">Session</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -227,7 +237,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-22 19:41:40" itemprop="dateModified" datetime="2022-07-22T19:41:40+08:00">2022-07-22</time>
+      <time title="修改时间：2022-07-25 17:42:47" itemprop="dateModified" datetime="2022-07-25T17:42:47+08:00">2022-07-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -313,8 +323,46 @@
 </ol>
 </li>
 </ul>
+<hr>
+<p><strong>导入库</strong></p>
+<p>若项目需要连接数据库，可能需要相关的库，这里比普通的 Java 项目要多一步操作：</p>
+<ol>
+<li>在项目文件夹下新建 lib，将 jar 包移入，右键 lib 文件夹，Add As Library。</li>
+<li>由于是网页项目，还需要将导入的 jar 包在做网页文件时导出，进入 <code>Project Structure -&gt; Artifacts</code> 将新增的 jar 包增加到导出文件。或注意 Project Structure 左侧菜单栏的 Problem，若有 jar 包没有增加到导出，会有一个提示，修复该提示即可</li>
+</ol>
 <h2 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h2><p><span class="red bold">什么是 Servlet：</span>Servlet 指 Server Applet，即服务端小程序，是负责（呈上）与网页端通信，（启下）与 Biz 层（业务层）通信的程序</p>
 <p><img src="https://s1.ax1x.com/2022/07/21/jqzrKx.png" alt="什么是servlet.png"></p>
+<p><span class="red bold">Servlet 继承关系：</span></p>
+<p><img src="https://s1.ax1x.com/2022/07/24/jjdkJ1.png" alt="Servlet继承关系.png"></p>
+<p>在前端有请求发送到后端时，由 Tomcat 自动调用 <code>service()</code> 方法，<code>service()</code> 方法可以获取前端发过来的请求类型（如请求是 Get 还是 Post）并且调用相应的方法，此时该方法有两条路可以走：</p>
+<ol>
+<li><p><span style="color:green">走绿线：</span>当在 xxxServlet 类中 <span style="color:green">存在</span> 与前端发送的请求相匹配的函数时，调用对应的方法，走里面用户写好的程序。</p>
+</li>
+<li><p><span class="red">走红线：</span>当在 xxxServlet 类中 <span class="red">不存在</span> 与前端发送的请求相匹配的函数时，调用父类（HttpServlet）中的对应方法，而父类中默认的方法是报 405 错误，因此会进入 405 页面。</p>
+</li>
+</ol>
+<p><span id="servlet-life-cycle" class="red bold">Servlet 的生命周期：</span></p>
+<p><img src="https://s1.ax1x.com/2022/07/25/jvekpn.png" alt="Servlet生命周期.png"></p>
+<p>在 Servlet 接口中，不止有前面说到的 service 方法，还有 <code>init()</code> 和 <code>destroy()</code> 方法（还记得 applet 程序吗？）</p>
+<br />
+
+<p>Tomcat 针对 servlet 有两种启动模式：</p>
+<ul>
+<li><p><span class="red">Tomcat 启动速度优先（默认）：</span><br>在默认情况下，如上图所示，servlet 将会在<span class="red">第一名用户调用时被实例化</span>，之后该对象一直保持到服务器关闭</p>
+<br />
+</li>
+<li><p><span class="red">首次 Servlet 响应速度优先（需配置）：</span></p>
+<p>在 web.xml 文件 &lt;servlet&gt; 标签内，添加 <code>&lt;load-on-startup&gt;0&lt;/load-on-startup&gt;</code> 标签，即可让该 servlet 在 Tomcat 启动时马上被实例化。中间的数字表示各 servlet 在 Tomcat 启动时的实例化优先级，<span class="red">数字越小越先启动</span></p>
+</li>
+</ul>
+<p><span class="red bold">Servlet 的 单例 和 线程不安全 性质：</span></p>
+<ul>
+<li><p>单例：从上面可以看出，单个 servlet 在一次 Tomcat 生命周期内只会被实例化一次，因此它是单例的</p>
+</li>
+<li><p>线程不安全：由于它是单例的，所有过来访问该 servlet 的线程都调用的同一个实例，当某个线程需要使用该 servlet 实例的成员变量做逻辑判断之前，该成员变量被其他线程修改，则会导致一开始的线程所走的程序执行路径发生变化</p>
+</li>
+</ul>
+<p><span class="red">因此不要在 servlet 中定义成员变量，若有需求，不要修改成员变量和不要有根据该成员变量所做的逻辑判断</span></p>
 <hr>
 <p><strong>创建一个 Servlet</strong></p>
 <p><span class="red bold">在当前项目下导入 jar 包库：</span>由于编写 Servlet 类中的一些对象和注解要使用来自 Tomcat 库的 jar 包。进行以下操作：<code>File -&gt; Project Structure -&gt; 项目名 -&gt; Dependencies -&gt; + -&gt; Library</code>，然后就能看到 Tomcat 的库，将其添加到本项目中</p>
@@ -327,20 +375,99 @@
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;servlet&gt;
     &lt;servlet-name&gt;addServlet&lt;&#x2F;servlet-name&gt;
     &lt;servlet-class&gt;com.example.servlet.AddServlet&lt;&#x2F;servlet-class&gt;
+    &lt;load-on-startup&gt;0&lt;&#x2F;load-on-startup&gt;
 &lt;&#x2F;servlet&gt;
 &lt;servlet-mapping&gt;
     &lt;servlet-name&gt;addServlet&lt;&#x2F;servlet-name&gt;
     &lt;url-pattern&gt;&#x2F;add.let&lt;&#x2F;url-pattern&gt;
 &lt;&#x2F;servlet-mapping&gt;</code></pre>
 
+<p><span class="red">注意虚拟地址要以斜线开头</span></p>
 <p><code>servlet-name</code>：使 <code>servlet</code> 标签中的路径和 <code>servlet-mapping</code> 中的路径映射一一对应</p>
 <p><code>servlet-class</code>：类所在的位置，以 src 目录开始</p>
+<p><code>load-on-startup</code>：<span class="red">（可选项）</span>配置 servlet 在 tomcat 启动时马上实例化，详情见上面 “<a href="#servlet-life-cycle">Servlet 的生命周期</a>”</p>
 <p><code>url-pattern</code>：虚拟地址，由于 java 后端文件与前端是分开的，我们需要让他们有一定的联系才能调用，配置虚拟地址就像我们将相应的 java 文件放到了前端一样。</p>
 <blockquote>
 <p>如上面的意思是，若网页端调用了其根目录下的 add.let，则去找 com.example.servlet.AddServlet 这个类，并将数据传给它</p>
 </blockquote>
+<p><span class="red">允许一个 servlet 对应多个 servlet-mapping，如：不管是从 add1.let 还是 add2.let 过来的请求都由同一个 servlet 进行响应</span></p>
 <p><span class="red bold">配置 Servlet（注解）：</span></p>
-<p>在类上面写一个注解 <code>@WebServlet(&quot;/add.let&quot;)</code>，参数直接传虚拟地址</p>
+<p>在类上面写一个注解 <code>@WebServlet(&quot;/add.let&quot;)</code>，参数直接传虚拟地址（<span class="red">注意虚拟地址要以斜线开头</span>）</p>
+<hr>
+<p><strong>Post 传入中文乱码问题</strong></p>
+<p>在前端传入中文时，后端使用 <code>getParameter()</code> 方法接收到的数据可能是乱码，因此需要一些操作来设定接收的字符的编码。</p>
+<p><span class="red bold">Tomcat8 之前：</span></p>
+<ul>
+<li><p>get 方式获取的数据需要将其打乱重组：</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">String fname &#x3D; req.getParameter(&quot;fname&quot;);
+byte[] bytes &#x3D; fname.getBytes(&quot;ISO-8859-1&quot;);
+fname &#x3D; new String(bytes, &quot;UTF-8&quot;);</code></pre>
+</li>
+<li><p>post 方式获取的数据需要在 <span class="red">所有获取数据代码之前</span>，使用以下代码设置编码：</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">req.setCharacterEncoding(&quot;UTF-8&quot;);</code></pre></li>
+</ul>
+<p><span class="red bold">Tomcat8 之后：</span></p>
+<ul>
+<li><p>get 方式获取的数据不需要设置编码</p>
+</li>
+<li><p>post 方式获取的数据需要在 <span class="red">所有获取数据代码之前</span>，使用以下代码设置编码：</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">req.setCharacterEncoding(&quot;UTF-8&quot;);</code></pre></li>
+</ul>
+<h2 id="HTTP-协议"><a href="#HTTP-协议" class="headerlink" title="HTTP 协议"></a>HTTP 协议</h2><hr>
+<p>HTTP 协议的两个性质：</p>
+<ul>
+<li>无状态（详见 <a href="#session">Session</a>）</li>
+<li>包含请求和相应<br>打开 F12 调试工具-&gt;网络，你将可看到从现在开始的请求和相应</li>
+</ul>
+<hr>
+<p><strong>HTTP 请求</strong><br>HTTP 请求包含：请求行，请求消息头，请求主体</p>
+<ul>
+<li><p>请求行：告知服务器请求方式（GET&#x2F;POST），请求 url，请求协议（HTTP1.0&#x2F;HTTP1.1）</p>
+<p><img src="https://s1.ax1x.com/2022/07/25/jv5P9P.png" alt="请求行.png"></p>
+</li>
+</ul>
+<ul>
+<li><p>请求消息头（请求头）：告知服务器当前浏览器支持接收的数据，编码，语言等信息</p>
+<p><img src="https://s1.ax1x.com/2022/07/25/jv5i1f.png" alt="请求头.png"></p>
+</li>
+<li><p>请求主体：</p>
+<p>请求主体分三种情况，分别是 Post、Get 和 Json</p>
+<ul>
+<li>Post —— Form Data<br><img src="https://s1.ax1x.com/2022/07/25/jvI3Gt.png" alt="请求主体（Post）.png"></li>
+</ul>
+<ul>
+<li><p>Get —— Query String<br><img src="https://s1.ax1x.com/2022/07/25/jvIOdH.png" alt="请求主体（Get）.png"></p>
+</li>
+<li><p>Json —— Request Payload<br><img src="https://s1.ax1x.com/2022/07/25/jvoR6f.png" alt="请求主体（Json）.png"></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>HTTP 响应</strong></p>
+<p>HTTP 响应包含：响应行，响应头，响应体</p>
+<ul>
+<li><p>响应行：包含响应协议（HPPT1.0&#x2F;HTTP1.1），响应状态码，响应状态</p>
+<p><img src="https://s1.ax1x.com/2022/07/25/jvTJHg.png" alt="响应行.png"></p>
+</li>
+<li><p>响应头：包含服务器相应的格式，相应的编码，响应长度和时间等</p>
+<p><img src="https://s1.ax1x.com/2022/07/25/jvTBvV.png" alt="响应头.png"></p>
+</li>
+<li><p>响应体：包含服务器响应到浏览器的具体内容<br><img src="https://s1.ax1x.com/2022/07/25/jvTf81.png" alt="响应体.png"></p>
+</li>
+</ul>
+<h2 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h2><p><span class="red bold">HTTP 无状态：</span>指的是 HTTP 请求无法让服务器分辨两次连接是否来自同一个客户端<span class="red">（电脑上的不同浏览器访问也相当于不同的客户端）</span>，这会导致请求混乱（如购买和支付一定要是同一个人）</p>
+<p><span class="red bold">Session：</span>Session 就是解决方法，在一个客户端初次访问一个网页时，若它请求了一个需要 session 的服务，则服务端会给它分配一个 session。<br>相同浏览器短时间内的下一次请求，就会带着 session 去请求，服务端就知道这个客户端是上一次访问过的，也就能获取到这个客户端所绑定的一些信息（如登录的账号）。</p>
+<hr>
+<p><strong>Session 常用方法</strong></p>
+<p><span class="red bold">获取 Session 对象</span></p>
+<p><code>req.getSession()</code>：获取 Session 对象，若没有则分配<br><code>req.getSession(true)</code>：获取 Session 对象，若没有则分配<br><code>req.getSession(false)</code>：获取 Session 对象，若没有则返回 null</p>
+<p><span class="red bold">激活时长</span></p>
+<p>Session 不会一直存在，超过一段时间不与服务端互动的客户端的 Session 会被失效</p>
+<p><code>getMaxInactiveInterval()</code>：获取非激活间隔时长，默认 1800 秒</p>
+<p><code>setMaxInactiveInterval()</code>：设置非激活间隔时长</p>
+<p><span class="red bold">使会话失效</span></p>
+<p><code>invalidate()</code>：强制使会话失效（通常用于登出）</p>
 
     </div>
 
